@@ -1293,6 +1293,7 @@ export enum OrganizerReportTypes {
     TaxSummary = 'tax_summary',
     CheckInSummary = 'check_in_summary',
     PlatformFees = 'platform_fees',
+    Accounting = 'accounting',
 }
 
 export interface Webhook {
