@@ -40,6 +40,7 @@ use HiEvents\Repository\Eloquent\OrganizerConfigurationRepository;
 use HiEvents\Repository\Eloquent\OrganizerRepository;
 use HiEvents\Repository\Eloquent\OrganizerSettingsRepository;
 use HiEvents\Repository\Eloquent\OrganizerStripePlatformRepository;
+use HiEvents\Repository\Eloquent\OrganizerSwishSettingsRepository;
 use HiEvents\Repository\Eloquent\OrganizerVatSettingRepository;
 use HiEvents\Repository\Eloquent\OutgoingMessageRepository;
 use HiEvents\Repository\Eloquent\PasswordResetRepository;
@@ -56,6 +57,7 @@ use HiEvents\Repository\Eloquent\QuestionRepository;
 use HiEvents\Repository\Eloquent\StripeCustomerRepository;
 use HiEvents\Repository\Eloquent\StripePaymentsRepository;
 use HiEvents\Repository\Eloquent\StripePayoutsRepository;
+use HiEvents\Repository\Eloquent\SwishPaymentsRepository;
 use HiEvents\Repository\Eloquent\TaxAndFeeRepository;
 use HiEvents\Repository\Eloquent\TicketLookupTokenRepository;
 use HiEvents\Repository\Eloquent\UserRepository;
@@ -98,6 +100,7 @@ use HiEvents\Repository\Interfaces\OrganizerConfigurationRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerSettingsRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerStripePlatformRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrganizerSwishSettingsRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerVatSettingRepositoryInterface;
 use HiEvents\Repository\Interfaces\OutgoingMessageRepositoryInterface;
 use HiEvents\Repository\Interfaces\PasswordResetRepositoryInterface;
@@ -114,6 +117,7 @@ use HiEvents\Repository\Interfaces\QuestionRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripeCustomerRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePaymentsRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePayoutsRepositoryInterface;
+use HiEvents\Repository\Interfaces\SwishPaymentsRepositoryInterface;
 use HiEvents\Repository\Interfaces\TaxAndFeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\TicketLookupTokenRepositoryInterface;
 use HiEvents\Repository\Interfaces\UserRepositoryInterface;
@@ -172,6 +176,8 @@ class RepositoryServiceProvider extends ServiceProvider
         OrganizerSettingsRepositoryInterface::class => OrganizerSettingsRepository::class,
         EmailTemplateRepositoryInterface::class => EmailTemplateRepository::class,
         OrganizerStripePlatformRepositoryInterface::class => OrganizerStripePlatformRepository::class,
+        OrganizerSwishSettingsRepositoryInterface::class => OrganizerSwishSettingsRepository::class,
+        SwishPaymentsRepositoryInterface::class => SwishPaymentsRepository::class,
         OrganizerVatSettingRepositoryInterface::class => OrganizerVatSettingRepository::class,
         OrganizerConfigurationRepositoryInterface::class => OrganizerConfigurationRepository::class,
         TicketLookupTokenRepositoryInterface::class => TicketLookupTokenRepository::class,

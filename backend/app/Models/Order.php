@@ -21,6 +21,11 @@ class Order extends BaseModel
         return $this->hasOne(StripePayment::class);
     }
 
+    public function swish_payment(): HasOne
+    {
+        return $this->hasOne(SwishPayment::class);
+    }
+
     public function order_items(): HasMany
     {
         return $this->hasMany(OrderItem::class);
