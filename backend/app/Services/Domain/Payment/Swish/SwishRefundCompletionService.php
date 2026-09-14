@@ -43,6 +43,8 @@ class SwishRefundCompletionService
     public function complete(SwishRefundDomainObject $refund, SwishRefundDTO $remote): SwishRefundDomainObject
     {
         $result = $this->databaseManager->transaction(function () use ($refund, $remote) {
+            $this->lockRefund($refund);
+
             /** @var SwishRefundDomainObject $fresh */
             $fresh = $this->swishRefundsRepository->findById($refund->getId());
 
@@ -132,6 +134,8 @@ class SwishRefundCompletionService
     public function fail(SwishRefundDomainObject $refund, SwishRefundDTO $remote): SwishRefundDomainObject
     {
         return $this->databaseManager->transaction(function () use ($refund, $remote) {
+            $this->lockRefund($refund);
+
             /** @var SwishRefundDomainObject $fresh */
             $fresh = $this->swishRefundsRepository->findById($refund->getId());
 
@@ -165,5 +169,10 @@ class SwishRefundCompletionService
 
             return $failed;
         });
+    }
+
+    private function lockRefund(SwishRefundDomainObject $refund): void
+    {
+        $this->databaseManager->statement('SELECT pg_advisory_xact_lock(hashtext(?))', ['swish-refund:'.$refund->getId()]);
     }
 }
