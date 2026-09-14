@@ -6,26 +6,27 @@ fallback (poller) and cancel-on-expiry. Everything runs against the local dev st
 
 ## 0. Prerequisites (once)
 
-1. Download the MSS test certificate bundle from
-   https://developer.swish.nu/documentation/environments#certificates and unpack it to
-   `~/swish-certs/test/`. The bundle contains PEM files and a `.p12`; the backend needs PEM:
-   - `Swish_Merchant_TestCertificate_1234679304.pem` (client certificate)
-   - `Swish_Merchant_TestCertificate_1234679304.key` (private key, password `swish`)
-   - `Swish_TLS_RootCA.pem` (Swish server root CA)
-   If the bundle only has the `.p12`, convert it:
-   ```bash
-   cd ~/swish-certs/test
-   openssl pkcs12 -in Swish_Merchant_TestCertificate_1234679304.p12 -clcerts -nokeys -out Swish_Merchant_TestCertificate_1234679304.pem -passin pass:swish
-   openssl pkcs12 -in Swish_Merchant_TestCertificate_1234679304.p12 -nocerts -out Swish_Merchant_TestCertificate_1234679304.key -passin pass:swish -passout pass:swish
-   ```
+1. The MSS test certificate bundle (`MSS_test_3.0.zip` from
+   https://developer.swish.nu/documentation/environments#certificates) is extracted at
+   `~/Biljettlösning/swish-certs/MSS_test_3.0/client_cert/`. It ships every certificate in `.pem`,
+   `.key`, `.csr` and `.p12` form, so **no conversion is needed**. The backend uses three files:
+   - `Swish_Merchant_TestCertificate_1234679304.pem` — merchant client certificate incl. the
+     Nordea issuing chain (3 certificates in one file), subject `CN=1234679304`, valid to 2027-09-11
+   - `Swish_Merchant_TestCertificate_1234679304.key` — matching private key, PKCS#8, **not encrypted**
+     (only the `.p12` bundles carry the password `swish`; leave `SWISH_KEY_PASSPHRASE` empty)
+   - `Swish_TLS_RootCA.pem` — DigiCert Global Root G2, the CA that issues the Swish server's TLS certificate
+   Ignore `Swish_Merchant_TestSigningCertificate_*` (payout payload signing only) and
+   `Swish_TechnicalSupplier_TestCertificate_*` (technical-supplier API user, alias 9870474641).
 2. Install ngrok and add the reserved domain `iodine-safeness-strainer.ngrok-free.dev` to your account.
-3. Mount the certificates into the backend container. The dev compose mounts `backend/` at
-   `/var/www/html`, so the simplest option is a git-ignored folder inside it:
+3. The three files are copied to `backend/storage/app/swish-certs/` (everything under
+   `backend/storage/app/` is git-ignored, so nothing can be committed by accident). The dev compose
+   mounts `backend/` at `/var/www/html`, so inside the container they are at
+   `/var/www/html/storage/app/swish-certs/…`. To refresh them:
    ```bash
-   mkdir -p backend/storage/swish-certs
-   cp ~/swish-certs/test/*.pem ~/swish-certs/test/*.key backend/storage/swish-certs/
+   mkdir -p backend/storage/app/swish-certs
+   cp ~/Biljettlösning/swish-certs/MSS_test_3.0/client_cert/Swish_Merchant_TestCertificate_1234679304.{pem,key} \
+      ~/Biljettlösning/swish-certs/MSS_test_3.0/client_cert/Swish_TLS_RootCA.pem backend/storage/app/swish-certs/
    ```
-   `backend/storage/` is ignored by git, so nothing can be committed by accident.
 
 4. Dev-stack quirks on this Windows host (all outside the repo):
    - Host port 5432 is taken by a local `postgres.exe`, so always run compose with
@@ -44,11 +45,22 @@ fallback (poller) and cancel-on-expiry. Everything runs against the local dev st
 SWISH_ENABLED=true
 SWISH_ENVIRONMENT=mss
 SWISH_PAYEE_ALIAS=1234679304
-SWISH_CERT_PATH=/var/www/html/storage/swish-certs/Swish_Merchant_TestCertificate_1234679304.pem
-SWISH_KEY_PATH=/var/www/html/storage/swish-certs/Swish_Merchant_TestCertificate_1234679304.key
-SWISH_KEY_PASSPHRASE=swish
-SWISH_CA_PATH=/var/www/html/storage/swish-certs/Swish_TLS_RootCA.pem
+SWISH_CERT_PATH=/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.pem
+SWISH_KEY_PATH=/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.key
+SWISH_KEY_PASSPHRASE=
+SWISH_CA_PATH=/var/www/html/storage/app/swish-certs/Swish_TLS_RootCA.pem
 SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api
+```
+
+Quick mTLS sanity check from inside the container (expects HTTP 404 — unknown id — which proves the
+certificate handshake and merchant identity are accepted by MSS):
+
+```bash
+$C exec backend curl -s -o /dev/null -w "%{http_code}\n" \
+  --cert /var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.pem \
+  --key  /var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.key \
+  --cacert /var/www/html/storage/app/swish-certs/Swish_TLS_RootCA.pem \
+  https://mss.cpc.getswish.net/swish-cpcapi/api/v1/paymentrequests/00000000000000000000000000000000
 ```
 
 Then, from `docker/development/`:
