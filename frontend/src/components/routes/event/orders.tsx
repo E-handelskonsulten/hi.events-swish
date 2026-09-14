@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useParams} from "react-router";
 import {Button, Group} from "@mantine/core";
-import {IconDownload} from "@tabler/icons-react";
+import {IconDownload, IconReceiptRefund} from "@tabler/icons-react";
 import {t} from "@lingui/macro";
 import {useGetEvent} from "../../../queries/useGetEvent";
 import {useGetEventOrders} from "../../../queries/useGetEventOrders";
@@ -21,6 +21,9 @@ import {withLoadingNotification} from "../../../utilites/withLoadingNotification
 import {useGetEventOccurrences} from "../../../queries/useGetEventOccurrences";
 import {SortSelector} from "../../common/SortSelector";
 import {OccurrenceSelect} from "../../common/OccurrenceSelect";
+import {useIsCurrentUserAdmin} from "../../../hooks/useIsCurrentUserAdmin";
+import {useGetSwishMassRefundRuns} from "../../../queries/useGetSwishMassRefundRuns";
+import {SwishMassRefundModal} from "../../modals/SwishMassRefundModal";
 
 const orderStatuses = [
     {label: t`Completed`, value: 'COMPLETED'},
@@ -43,6 +46,10 @@ export const Orders: React.FC = () => {
     const orders = ordersQuery?.data?.data;
     const pagination = ordersQuery?.data?.meta;
     const [downloadPending, setDownloadPending] = useState(false);
+    const isAdmin = useIsCurrentUserAdmin();
+    const massRefundRunsQuery = useGetSwishMassRefundRuns(eventId, isAdmin);
+    const activeMassRefundRun = massRefundRunsQuery.data?.find((run) => run.status !== 'COMPLETED');
+    const [massRefundModalOpen, setMassRefundModalOpen] = useState(false);
 
     const occurrences = occurrencesData?.data || [];
     const occurrenceFilter = searchParams.filterFields?.event_occurrence_id;
@@ -196,6 +203,20 @@ export const Orders: React.FC = () => {
                 resultCount={pagination?.total}
                 resultLabel={t`orders`}
             >
+                {isAdmin && (
+                    <Button
+                        onClick={() => setMassRefundModalOpen(true)}
+                        leftSection={<IconReceiptRefund size={14}/>}
+                        color="red"
+                        variant={activeMassRefundRun ? 'filled' : 'light'}
+                        size="sm"
+                        data-testid="swish-mass-refund-open-button"
+                    >
+                        {activeMassRefundRun
+                            ? t`Mass refund in progress (${activeMassRefundRun.succeeded_count}/${activeMassRefundRun.total_orders})`
+                            : t`Refund all orders`}
+                    </Button>
+                )}
                 <Button
                     onClick={() => handleExport(eventId)}
                     rightSection={<IconDownload size={14}/>}
@@ -206,6 +227,14 @@ export const Orders: React.FC = () => {
                     {t`Export`}
                 </Button>
             </ToolBar>
+
+            {massRefundModalOpen && (
+                <SwishMassRefundModal
+                    eventId={eventId}
+                    initialRunId={activeMassRefundRun?.id ?? null}
+                    onClose={() => setMassRefundModalOpen(false)}
+                />
+            )}
 
             <TableSkeleton isVisible={!orders || ordersQuery.isFetching}/>
 
