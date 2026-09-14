@@ -8,7 +8,6 @@ use HiEvents\DomainObjects\Enums\PaymentProviders;
 use HiEvents\DomainObjects\Status\OrderPaymentStatus;
 use HiEvents\DomainObjects\Status\OrderRefundStatus;
 use HiEvents\DomainObjects\Status\OrderStatus;
-use HiEvents\DomainObjects\Status\SwishPaymentStatus;
 use HiEvents\DomainObjects\Status\SwishRefundStatus;
 use Illuminate\Support\Facades\DB;
 
@@ -141,27 +140,6 @@ class SwishRefundFlowTest extends SwishFeatureTestCase
         ], $this->authHeaders())
             ->assertStatus(422)
             ->assertJsonValidationErrors(['amount']);
-    }
-
-    private function createPaidSwishOrder(): int
-    {
-        $orderId = $this->createReservedOrder();
-        [$paymentId, $instructionUuid] = $this->createPendingSwishPayment($orderId);
-
-        DB::table('orders')->where('id', $orderId)->update([
-            'status' => OrderStatus::COMPLETED->name,
-            'payment_status' => OrderPaymentStatus::PAYMENT_RECEIVED->name,
-            'payment_provider' => PaymentProviders::SWISH->value,
-        ]);
-
-        DB::table('swish_payments')->where('id', $paymentId)->update([
-            'status' => SwishPaymentStatus::PAID->value,
-            'payment_reference' => 'PAYREF123',
-            'payer_alias' => '46701234567',
-            'date_paid' => now()->toDateTimeString(),
-        ]);
-
-        return $orderId;
     }
 
     private function refundPayload(string $instructionUuid, int $orderId, string $status, array $overrides = []): array

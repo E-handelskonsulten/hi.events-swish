@@ -234,6 +234,30 @@ abstract class SwishFeatureTestCase extends TestCase
         return [$paymentId, $instructionUuid];
     }
 
+    protected function createPaidSwishOrder(
+        string $paymentReference = 'PAYREF123',
+        ?string $datePaid = null,
+        float $total = self::ORDER_TOTAL,
+    ): int {
+        $orderId = $this->createReservedOrder(total: $total);
+        [$paymentId] = $this->createPendingSwishPayment($orderId, $total);
+
+        DB::table('orders')->where('id', $orderId)->update([
+            'status' => OrderStatus::COMPLETED->name,
+            'payment_status' => OrderPaymentStatus::PAYMENT_RECEIVED->name,
+            'payment_provider' => PaymentProviders::SWISH->value,
+        ]);
+
+        DB::table('swish_payments')->where('id', $paymentId)->update([
+            'status' => SwishPaymentStatus::PAID->value,
+            'payment_reference' => $paymentReference,
+            'payer_alias' => '46701234567',
+            'date_paid' => $datePaid ?? now()->toDateTimeString(),
+        ]);
+
+        return $orderId;
+    }
+
     protected function swishPaymentPayload(string $instructionUuid, int $orderId, string $status, array $overrides = []): array
     {
         return array_merge([

@@ -19,4 +19,9 @@ return [
     'timeout_seconds' => (int) env('SWISH_TIMEOUT_SECONDS', 10),
     'connect_timeout_seconds' => (int) env('SWISH_CONNECT_TIMEOUT_SECONDS', 5),
     'status_poll_min_interval_seconds' => (int) env('SWISH_STATUS_POLL_MIN_INTERVAL_SECONDS', 3),
+
+    'mass_refund' => [
+        'batch_size' => (int) env('SWISH_MASS_REFUND_BATCH_SIZE', 5),
+        'stale_after_seconds' => (int) env('SWISH_MASS_REFUND_STALE_AFTER_SECONDS', 180),
+    ],
 ];
