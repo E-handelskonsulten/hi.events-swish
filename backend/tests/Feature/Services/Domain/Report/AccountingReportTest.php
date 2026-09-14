@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature\Services\Domain\Report;
 
 use HiEvents\DomainObjects\Enums\PaymentProviders;
+use HiEvents\DomainObjects\Status\OrderPaymentStatus;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\Models\User;
 use HiEvents\Services\Domain\Report\OrganizerReports\AccountingReport;
@@ -43,7 +44,7 @@ class AccountingReportTest extends TestCase
         $this->makeOrder(gross: 100, tax: 10.71, fee: 0, taxes: [['name' => 'Moms', 'rate' => 12, 'type' => 'PERCENTAGE', 'value' => 10.71]], createdAt: '2026-09-10 21:00:00');
         $this->makeOrder(gross: 50, tax: 2.83, fee: 0, taxes: [['name' => 'Moms', 'rate' => 0.06, 'type' => 'PERCENTAGE', 'value' => 2.83]], createdAt: '2026-09-11 01:00:00');
         $this->makeOrder(gross: 30, tax: 0, fee: 0, taxes: [], createdAt: '2026-09-10 12:00:00', provider: PaymentProviders::STRIPE);
-        $this->makeOrder(gross: 999, tax: 0, fee: 0, taxes: [], createdAt: '2026-09-10 22:00:00', status: OrderStatus::RESERVED);
+        $this->makeOrder(gross: 999, tax: 0, fee: 0, taxes: [], createdAt: '2026-09-10 22:00:00', status: OrderStatus::RESERVED, paymentStatus: OrderPaymentStatus::AWAITING_PAYMENT);
 
         $otherOrganizerEventId = $this->makeEvent($this->makeOrganizer(), 'Other Organizer Event');
         $this->makeOrder(gross: 777, tax: 0, fee: 0, taxes: [], createdAt: '2026-09-10 22:00:00', eventId: $otherOrganizerEventId);
@@ -101,6 +102,19 @@ class AccountingReportTest extends TestCase
         $this->assertMoney(-40, $refund->net_amount);
 
         $this->assertMoney(50, $rows->sum(fn (object $row) => (float) $row->gross_amount));
+    }
+
+    public function test_cancelled_orders_whose_payment_was_received_stay_in_sales_and_refunds(): void
+    {
+        $orderId = $this->makeOrder(gross: 150, tax: 30, fee: 0, taxes: [['name' => 'Moms', 'rate' => 25, 'type' => 'PERCENTAGE', 'value' => 30]], createdAt: '2026-09-10 12:00:00', status: OrderStatus::CANCELLED);
+        $this->makeRefund($orderId, 150, '2026-09-12 10:00:00');
+
+        $rows = $this->generate('2026-09-01', '2026-09-30');
+
+        $this->assertCount(2, $rows);
+        $this->assertMoney(150, $this->findRow($rows, '2026-09-10', PaymentProviders::SWISH->value, AccountingReport::LINE_TYPE_SALE)->gross_amount);
+        $this->assertMoney(-150, $this->findRow($rows, '2026-09-12', PaymentProviders::SWISH->value, AccountingReport::LINE_TYPE_REFUND)->gross_amount);
+        $this->assertMoney(0, $rows->sum(fn (object $row) => (float) $row->gross_amount));
     }
 
     public function test_date_range_and_currency_filters_are_applied(): void
@@ -174,6 +188,7 @@ class AccountingReportTest extends TestCase
         PaymentProviders $provider = PaymentProviders::SWISH,
         OrderStatus $status = OrderStatus::COMPLETED,
         ?int $eventId = null,
+        OrderPaymentStatus $paymentStatus = OrderPaymentStatus::PAYMENT_RECEIVED,
     ): int {
         $suffix = uniqid();
 
@@ -183,6 +198,7 @@ class AccountingReportTest extends TestCase
             'event_id' => $eventId ?? $this->eventId,
             'currency' => 'SEK',
             'status' => $status->name,
+            'payment_status' => $paymentStatus->name,
             'payment_provider' => $provider->value,
             'total_before_additions' => $gross - $tax - $fee,
             'total_tax' => $tax,

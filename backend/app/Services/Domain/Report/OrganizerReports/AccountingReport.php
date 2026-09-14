@@ -2,7 +2,7 @@
 
 namespace HiEvents\Services\Domain\Report\OrganizerReports;
 
-use HiEvents\DomainObjects\Status\OrderStatus;
+use HiEvents\DomainObjects\Status\OrderPaymentStatus;
 use HiEvents\Services\Domain\Report\AbstractOrganizerReportService;
 use Illuminate\Support\Carbon;
 
@@ -20,7 +20,7 @@ class AccountingReport extends AbstractOrganizerReportService
         $startUtc = $startDate->copy()->utc()->toDateTimeString();
         $endUtc = $endDate->copy()->utc()->toDateTimeString();
         $currencyFilter = $this->buildCurrencyFilter('e.currency', $currency);
-        $completed = OrderStatus::COMPLETED->name;
+        $paymentReceived = OrderPaymentStatus::PAYMENT_RECEIVED->name;
         $sale = self::LINE_TYPE_SALE;
         $refund = self::LINE_TYPE_REFUND;
         $succeeded = self::REFUND_SUCCEEDED_STATUS;
@@ -50,7 +50,7 @@ class AccountingReport extends AbstractOrganizerReportService
                 WHERE e.organizer_id = :organizer_id
                     AND e.deleted_at IS NULL
                     AND o.deleted_at IS NULL
-                    AND o.status = '$completed'
+                    AND o.payment_status = '$paymentReceived'
                     $currencyFilter
                 GROUP BY o.id
             ),
