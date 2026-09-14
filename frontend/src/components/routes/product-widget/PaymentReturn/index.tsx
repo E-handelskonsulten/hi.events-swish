@@ -1,7 +1,9 @@
 import {usePollGetOrderPublic} from "../../../../queries/usePollGetOrderPublic.ts";
-import {useNavigate, useParams} from "react-router";
+import {useNavigate, useParams, useSearchParams} from "react-router";
 import {useEffect, useRef, useState} from "react";
 import classes from './PaymentReturn.module.scss';
+import {SwishPaymentReturn} from "./SwishPaymentReturn.tsx";
+import {SWISH_PROVIDER_PARAM} from "../../../../utilites/swishPayment.ts";
 import {t} from "@lingui/macro";
 import {useGetOrderStripePaymentIntentPublic} from "../../../../queries/useGetOrderStripePaymentIntentPublic.ts";
 import {CheckoutContent} from "../../../layouts/Checkout/CheckoutContent";
@@ -17,7 +19,7 @@ import {trackEvent, AnalyticsEvents} from "../../../../utilites/analytics.ts";
  * This is a rare occurrence, but we should handle it gracefully.
  * It will also make local development easier in times when the webhook is not configured correctly.
  **/
-export const PaymentReturn = () => {
+const StripePaymentReturn = () => {
     const [shouldPoll, setShouldPoll] = useState(true);
     const {eventId, orderShortId} = useParams();
     const {data: order} = usePollGetOrderPublic(eventId, orderShortId, shouldPoll, ['event']);
@@ -104,5 +106,15 @@ export const PaymentReturn = () => {
         </CheckoutContent>
     );
 }
+
+export const PaymentReturn = () => {
+    const [searchParams] = useSearchParams();
+
+    if (searchParams.get('provider') === SWISH_PROVIDER_PARAM) {
+        return <SwishPaymentReturn/>;
+    }
+
+    return <StripePaymentReturn/>;
+};
 
 export default PaymentReturn;

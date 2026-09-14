@@ -39,6 +39,7 @@
         const returnEventId = topParams.get('hievents_event');
         const returnOrderId = topParams.get('hievents_order');
         const returnSession = topParams.get('hievents_session');
+        const returnProvider = topParams.get('hievents_provider');
         const isPaymentReturn = !!(returnEventId && returnOrderId);
 
         const stripParams = (keys) => {
@@ -51,7 +52,7 @@
             }
         };
 
-        const OWNED_PARAMS = ['hievents_event', 'hievents_order', 'hievents_session'];
+        const OWNED_PARAMS = ['hievents_event', 'hievents_order', 'hievents_session', 'hievents_provider'];
         const STRIPE_RETURN_PARAMS = ['payment_intent', 'payment_intent_client_secret', 'redirect_status'];
         const parentBaseUrl = stripParams(OWNED_PARAMS.concat(STRIPE_RETURN_PARAMS));
 
@@ -400,6 +401,9 @@
                     returnParams.set(key, value);
                 }
             });
+            if (returnProvider) {
+                returnParams.set('provider', returnProvider);
+            }
 
             const query = returnParams.toString();
             const path = `/checkout/${encodeURIComponent(returnEventId)}/${encodeURIComponent(returnOrderId)}/payment_return`
