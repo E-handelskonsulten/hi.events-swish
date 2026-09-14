@@ -81,6 +81,10 @@ msgstr "剩餘 {0}"
 msgid "{0} logo"
 msgstr "{0} 標誌"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:222
+msgid "{0} of {1} orders refunded, {2} of {3}. A summary has been emailed to the organizer."
+msgstr ""
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:272
 msgid "{0} of {1} seats are taken."
 msgstr "{1} 個座位中已佔用 {0} 個。"
@@ -964,7 +968,7 @@ msgstr "所有日期"
 
 #: src/components/common/CheckInListTable/index.tsx:107
 #: src/components/routes/event/attendees.tsx:235
-#: src/components/routes/event/orders.tsx:182
+#: src/components/routes/event/orders.tsx:189
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:104
 msgid "All Dates"
 msgstr "所有日期"
@@ -997,6 +1001,10 @@ msgstr "所有場次"
 #: src/components/common/ReportTable/index.tsx:279
 msgid "All Occurrences"
 msgstr "所有場次"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:262
+msgid "All orders in this run"
+msgstr ""
 
 #: src/components/common/PromoCodeTable/index.tsx:139
 msgid "All Products"
@@ -1088,6 +1096,9 @@ msgstr "令人驚歎, 活動, 關鍵詞..."
 
 #: src/components/common/OrdersTable/index.tsx:260
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/modals/SwishMassRefundModal/index.tsx:68
+#: src/components/modals/SwishMassRefundModal/index.tsx:121
+#: src/components/modals/SwishMassRefundModal/index.tsx:357
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:209
 msgid "Amount"
 msgstr "金額"
@@ -1687,7 +1698,7 @@ msgstr "等待中"
 msgid "Awaiting offline payment"
 msgstr "等待線下付款"
 
-#: src/components/routes/event/orders.tsx:28
+#: src/components/routes/event/orders.tsx:31
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
 msgid "Awaiting Offline Payment"
 msgstr "等待線下付款"
@@ -1711,6 +1722,11 @@ msgstr "等待付款"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
 msgid "Awaiting Payment"
 msgstr "等待付款"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:93
+#: src/components/modals/SwishMassRefundModal/index.tsx:198
+msgid "Awaiting Swish"
+msgstr ""
 
 #: src/components/forms/OrganizerForm/index.tsx:29
 msgid "Awesome Events Ltd."
@@ -1872,6 +1888,11 @@ msgstr "按鈕文字"
 msgid "Button URL"
 msgstr "按鈕連結"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:67
+#: src/components/modals/SwishMassRefundModal/index.tsx:120
+msgid "Buyer"
+msgstr ""
+
 #: src/components/common/PlatformFeesSettings/index.tsx:63
 msgid "Buyer pays"
 msgstr "買家支付"
@@ -1946,6 +1967,7 @@ msgstr "無法簽到"
 #: src/components/modals/ManageAttendeeModal/index.tsx:184
 #: src/components/modals/ManageOrderModal/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:208
+#: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
 #: src/components/routes/event/messages.tsx:80
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
@@ -2011,6 +2033,10 @@ msgstr "取消訂單"
 msgid "Cancel Order {0}"
 msgstr "取消訂單 {0}"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:392
+msgid "Cancel the orders and release the tickets"
+msgstr ""
+
 #: src/components/modals/CancelOrderModal/index.tsx:64
 msgid "Canceling will cancel all attendees associated with this order, and release the tickets back into the available pool."
 msgstr "取消將取消與此訂單關聯的所有參與者，並將門票釋放回可用池。"
@@ -2028,7 +2054,7 @@ msgstr "取消將取消與此訂單關聯的所有參與者，並將門票釋放
 #: src/components/routes/admin/Messages/index.tsx:126
 #: src/components/routes/event/attendees.tsx:30
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:210
-#: src/components/routes/event/orders.tsx:27
+#: src/components/routes/event/orders.tsx:30
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:21
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:120
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:425
@@ -2041,6 +2067,10 @@ msgstr "已取消"
 #: src/components/routes/event/OccurrencesTab/index.tsx:237
 msgid "Cancelling {0} date(s). This may take a moment to complete."
 msgstr "正在取消 {0} 個日期，可能需要一點時間。"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:376
+msgid "Cannot be refunded automatically"
+msgstr ""
 
 #: src/components/routes/admin/Configurations/index.tsx:36
 msgid "Cannot delete the system default configuration"
@@ -2148,6 +2178,10 @@ msgstr "收款紀錄"
 #: src/constants/eventCategories.ts:24
 msgid "Charity"
 msgstr "慈善"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:269
+msgid "Check for remaining orders"
+msgstr ""
 
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:307
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:82
@@ -2571,8 +2605,9 @@ msgstr "完成您的個人資料以加入團隊。"
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
 #: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
-#: src/components/routes/event/orders.tsx:26
+#: src/components/routes/event/orders.tsx:29
 #: src/components/routes/my-tickets/index.tsx:35
 msgid "Completed"
 msgstr "已完成"
@@ -2942,6 +2977,10 @@ msgstr "無法準備批次更新。"
 msgid "Could not retrieve address details"
 msgstr "無法取得地址詳情"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:170
+msgid "Could not retry the failed refunds."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:98
 msgid "Could not run the Swish connection test. Please try again."
 msgstr ""
@@ -2949,6 +2988,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:275
 msgid "Could not save date"
 msgstr "無法儲存日期"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:312
+msgid "Could not start the mass refund."
+msgstr ""
 
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:78
 msgid "Couldn't send verification email. Please try again."
@@ -3708,6 +3751,7 @@ msgstr "設計元素"
 #: src/components/common/ProgressStepper/index.tsx:23
 #: src/components/modals/ManageAttendeeModal/index.tsx:242
 #: src/components/modals/ManageOrderModal/index.tsx:268
+#: src/components/modals/SwishMassRefundModal/index.tsx:123
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:407
 #: src/components/routes/product-widget/CollectInformation/index.tsx:434
 #: src/components/routes/product-widget/SelectProducts/index.tsx:416
@@ -4214,6 +4258,10 @@ msgstr "重新發送電子郵件確認"
 msgid "Email confirmation resent successfully"
 msgstr "成功重新發送電子郵件確認"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:387
+msgid "Email each buyer a refund confirmation"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:67
 msgid "Email footer message"
 msgstr "電子郵件頁腳信息"
@@ -4717,6 +4765,10 @@ msgstr "每{cadenceUnit}"
 msgid "Every email template must include a call-to-action button that links to the appropriate page"
 msgstr "每個郵件範本都必須包含一個連結到相應頁面的行動號召按鈕"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:327
+msgid "Every refundable Swish order for this event will be refunded in full to the buyer's Swish number. Refunds cannot be undone."
+msgstr ""
+
 #: src/components/forms/ProductForm/index.tsx:392
 msgid "Everything else — tap to edit"
 msgstr "其餘所有內容 — 輕觸即可編輯"
@@ -4765,7 +4817,7 @@ msgstr "有效期"
 
 #: src/components/routes/event/Affiliates/index.tsx:94
 #: src/components/routes/event/attendees.tsx:262
-#: src/components/routes/event/orders.tsx:206
+#: src/components/routes/event/orders.tsx:227
 msgid "Export"
 msgstr "出口"
 
@@ -4801,7 +4853,7 @@ msgstr "正在導出與會者"
 msgid "Exporting complete. Downloading file..."
 msgstr "導出完成。正在下載文件..."
 
-#: src/components/routes/event/orders.tsx:122
+#: src/components/routes/event/orders.tsx:129
 msgid "Exporting Orders"
 msgstr "正在導出訂單"
 
@@ -4810,6 +4862,8 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:138
+#: src/components/modals/SwishMassRefundModal/index.tsx:97
+#: src/components/modals/SwishMassRefundModal/index.tsx:207
 #: src/components/routes/admin/Messages/index.tsx:127
 msgid "Failed"
 msgstr "失敗"
@@ -4823,6 +4877,14 @@ msgstr "失敗時間"
 #: src/components/routes/admin/FailedJobs/index.tsx:114
 msgid "Failed Jobs"
 msgstr "失敗任務"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:235
+msgid "Failed refunds"
+msgstr ""
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:169
+msgid "Failed refunds have been queued again."
+msgstr ""
 
 #: src/components/layouts/Checkout/index.tsx:209
 msgid "Failed to abandon order. Please try again."
@@ -4940,7 +5002,7 @@ msgstr "匯出推廣夥伴失敗"
 msgid "Failed to export attendees"
 msgstr "導出與會者失敗"
 
-#: src/components/routes/event/orders.tsx:131
+#: src/components/routes/event/orders.tsx:138
 msgid "Failed to export orders"
 msgstr "導出訂單失敗"
 
@@ -5193,7 +5255,7 @@ msgstr "按日期篩選"
 msgid "Filter by Event"
 msgstr "按活動篩選"
 
-#: src/components/routes/event/orders.tsx:192
+#: src/components/routes/event/orders.tsx:199
 msgid "Filter Orders"
 msgstr "篩選訂單"
 
@@ -6643,6 +6705,18 @@ msgstr "標記為已支付"
 msgid "Mark as validated (admin override)"
 msgstr "標示為已核實（管理員特批）"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:177
+msgid "Mass refund #{0}"
+msgstr ""
+
+#: src/components/routes/event/orders.tsx:216
+msgid "Mass refund in progress ({0}/{1})"
+msgstr ""
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:305
+msgid "Mass refund started. Refunds are now being sent to Swish."
+msgstr ""
+
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:210
 msgid "Max Messages / 24h"
 msgstr "最大訊息數 / 24小時"
@@ -7793,6 +7867,8 @@ msgstr "張訂單"
 #: src/components/common/QuestionsTable/index.tsx:448
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:261
 #: src/components/modals/ManageAttendeeModal/index.tsx:141
+#: src/components/modals/SwishMassRefundModal/index.tsx:66
+#: src/components/modals/SwishMassRefundModal/index.tsx:119
 #: src/components/routes/my-tickets/index.tsx:70
 msgid "Order"
 msgstr "訂購"
@@ -7915,7 +7991,7 @@ msgstr "訂購參考"
 msgid "Order Refunded"
 msgstr "訂單已退款"
 
-#: src/components/routes/event/orders.tsx:54
+#: src/components/routes/event/orders.tsx:61
 msgid "Order Status"
 msgstr "訂單狀態"
 
@@ -7949,7 +8025,7 @@ msgid "Order was cancelled"
 msgstr "訂單已被取消"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:415
-#: src/components/routes/event/orders.tsx:197
+#: src/components/routes/event/orders.tsx:204
 msgid "orders"
 msgstr "張訂單"
 
@@ -7957,10 +8033,11 @@ msgstr "張訂單"
 #: src/components/layouts/Admin/index.tsx:17
 #: src/components/layouts/Event/index.tsx:125
 #: src/components/modals/ManageOccurrenceModal/index.tsx:178
+#: src/components/modals/SwishMassRefundModal/index.tsx:355
 #: src/components/routes/admin/Attribution/index.tsx:138
 #: src/components/routes/admin/Orders/index.tsx:44
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:56
-#: src/components/routes/event/orders.tsx:154
+#: src/components/routes/event/orders.tsx:161
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:78
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:118
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:144
@@ -7974,7 +8051,7 @@ msgstr "訂單"
 msgid "Orders Completed"
 msgstr "已完成訂單"
 
-#: src/components/routes/event/orders.tsx:126
+#: src/components/routes/event/orders.tsx:133
 msgid "Orders Exported"
 msgstr "訂單已導出"
 
@@ -8161,7 +8238,7 @@ msgid "Partial refund"
 msgstr "部分退款"
 
 #: src/components/common/OrderStatusBadge/index.tsx:16
-#: src/components/routes/event/orders.tsx:33
+#: src/components/routes/event/orders.tsx:36
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
 msgid "Partially Refunded"
 msgstr "部分退款"
@@ -8342,6 +8419,8 @@ msgstr "付款不可用"
 msgid "Payouts"
 msgstr "收款"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:89
+#: src/components/modals/SwishMassRefundModal/index.tsx:194
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
@@ -8377,6 +8456,10 @@ msgstr "每件商品"
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:32
 msgid "Per ticket"
 msgstr "每張門票"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:350
+msgid "Per ticket type"
+msgstr ""
 
 #: src/components/forms/PromoCodeForm/index.tsx:98
 #: src/components/forms/TaxAndFeeForm/index.tsx:27
@@ -8587,7 +8670,7 @@ msgstr "請選擇至少一個產品"
 
 #: src/components/routes/event/Affiliates/index.tsx:53
 #: src/components/routes/event/attendees.tsx:169
-#: src/components/routes/event/orders.tsx:132
+#: src/components/routes/event/orders.tsx:139
 msgid "Please try again."
 msgstr "請再試一次。"
 
@@ -8612,7 +8695,7 @@ msgstr "請稍候，我們正在準備導出您的與會者..."
 msgid "Please wait while we prepare your invoice..."
 msgstr "請稍候，我們正在準備您的發票..."
 
-#: src/components/routes/event/orders.tsx:123
+#: src/components/routes/event/orders.tsx:130
 msgid "Please wait while we prepare your orders for export..."
 msgstr "請稍候，我們正在準備導出您的訂單..."
 
@@ -8662,6 +8745,10 @@ msgstr "預覽結帳表單"
 #: src/components/layouts/Event/index.tsx:280
 msgid "Preview Event page"
 msgstr "預覽活動頁面"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:427
+msgid "Previous mass refunds"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
@@ -8740,6 +8827,10 @@ msgstr ""
 #: src/components/modals/RefundOrderModal/index.tsx:158
 msgid "Process Refund"
 msgstr "處理退款"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:91
+msgid "Processing"
+msgstr ""
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:395
 msgid "Processing order"
@@ -9027,6 +9118,10 @@ msgstr "問題已重新排序"
 msgid "Queue"
 msgstr "隊列"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:106
+msgid "Queued"
+msgstr ""
+
 #: src/components/forms/PromoCodeForm/index.tsx:145
 msgid "Quick Tip"
 msgstr "小貼士"
@@ -9062,6 +9157,10 @@ msgstr "準備好發布了嗎？"
 #: src/components/layouts/AuthLayout/index.tsx:19
 msgid "Real-time analytics"
 msgstr "即時數據分析"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:69
+msgid "Reason"
+msgstr ""
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9167,6 +9266,14 @@ msgstr "刷新預覽"
 msgid "Refund"
 msgstr ""
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:413
+msgid "Refund {totalLabel}"
+msgstr ""
+
+#: src/components/routes/event/orders.tsx:217
+msgid "Refund all orders"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:218
 msgid "Refund all orders for these dates"
 msgstr "為這些日期的所有訂單退款"
@@ -9176,6 +9283,10 @@ msgstr "為這些日期的所有訂單退款"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:334
 msgid "Refund all orders for this date"
 msgstr "為此日期的所有訂單退款"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:455
+msgid "Refund all Swish orders"
+msgstr ""
 
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
@@ -9210,15 +9321,21 @@ msgstr "退款處理中"
 msgid "Refund recorded successfully."
 msgstr "退款記錄成功。"
 
-#: src/components/routes/event/orders.tsx:60
+#: src/components/routes/event/orders.tsx:67
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:278
 msgid "Refund Status"
 msgstr "退款狀態"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:332
+msgid "Refundable orders"
+msgstr ""
+
 #: src/components/common/OrderStatusBadge/index.tsx:15
 #: src/components/common/OrderSummary/index.tsx:92
 #: src/components/common/StatBoxes/index.tsx:87
-#: src/components/routes/event/orders.tsx:32
+#: src/components/modals/SwishMassRefundModal/index.tsx:95
+#: src/components/modals/SwishMassRefundModal/index.tsx:202
+#: src/components/routes/event/orders.tsx:35
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:428
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
 msgid "Refunded"
@@ -9232,6 +9349,10 @@ msgstr "已退款：{0}"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:42
 msgid "Refunds"
 msgstr "退款"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:228
+msgid "Refunds are sent to Swish a few at a time. You can close this window; the run continues in the background and can be reopened from the orders page."
+msgstr ""
 
 #: src/components/routes/profile/ManageProfile/index.tsx:179
 msgid "Regional Settings"
@@ -9322,6 +9443,11 @@ msgstr "要求賬單地址"
 #: src/components/common/QuestionsTable/index.tsx:118
 msgid "Required"
 msgstr "必填"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:255
+#: src/components/modals/SwishMassRefundModal/index.tsx:340
+msgid "Requires manual handling"
+msgstr ""
 
 #: src/components/routes/welcome/index.tsx:207
 msgid "Resend code"
@@ -9440,6 +9566,10 @@ msgstr "重試"
 msgid "Retry All"
 msgstr "全部重試"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:245
+msgid "Retry failed refunds"
+msgstr ""
+
 #: src/components/routes/admin/FailedJobs/index.tsx:290
 msgid "Retry Job"
 msgstr "重試任務"
@@ -9498,6 +9628,14 @@ msgstr "角色"
 
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:174
 msgid "Root CA path"
+msgstr ""
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:220
+msgid "Run completed"
+msgstr ""
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:108
+msgid "Running"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1053
@@ -9796,7 +9934,7 @@ msgstr "按姓名或電子郵件搜尋..."
 msgid "Search by name, email, or account..."
 msgstr "按姓名、電子郵件或帳戶搜索..."
 
-#: src/components/routes/event/orders.tsx:158
+#: src/components/routes/event/orders.tsx:165
 msgid "Search by name, email, or order #..."
 msgstr "按姓名、電子郵件或訂單號搜索..."
 
@@ -10471,6 +10609,11 @@ msgstr "略過手動編輯過的日期"
 msgid "Skip this step"
 msgstr "跳過此步驟"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:99
+#: src/components/modals/SwishMassRefundModal/index.tsx:211
+msgid "Skipped"
+msgstr ""
+
 #: src/components/common/LanguageSwitcher/index.tsx:44
 msgid "Slovak"
 msgstr "斯洛伐克語"
@@ -10644,6 +10787,10 @@ msgstr "開始時間"
 msgid "Start typing a venue or address..."
 msgstr "開始輸入場地或地址..."
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:179
+msgid "Started by {0} on {1}"
+msgstr ""
+
 #: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Starts collapsed"
 msgstr "預設收合"
@@ -10704,6 +10851,7 @@ msgstr "統計"
 #: src/components/modals/EditUserModal/index.tsx:104
 #: src/components/modals/ManageAttendeeModal/index.tsx:133
 #: src/components/modals/ManageOrderModal/index.tsx:121
+#: src/components/modals/SwishMassRefundModal/index.tsx:122
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:161
 #: src/components/routes/admin/Announcements/index.tsx:159
 #: src/components/routes/admin/Announcements/index.tsx:469
@@ -11417,6 +11565,10 @@ msgstr "此活動沒有可用產品"
 msgid "There are no products available in this category"
 msgstr "此類別中沒有可用產品"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:421
+msgid "There are no Swish orders left to refund automatically for this event."
+msgstr ""
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:636
 msgid "There are no upcoming dates for this event"
 msgstr "此活動沒有即將舉行的日期"
@@ -11448,6 +11600,10 @@ msgstr "這些詳情僅在訂單成功完成後顯示。"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:491
 msgid "These details will replace any existing location on the affected dates and show on attendee tickets."
 msgstr "這些資料會取代受影響日期上原有的地點，並顯示在參加者的門票上。"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:378
+msgid "These orders are excluded from the run and must be handled manually, for example by bank transfer."
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:359
 msgid "These prices apply across all dates in your schedule, and tier quantities limit total sales across all dates combined. Sale dates on tiers apply globally. You can override prices for individual dates on the <0>Occurrence Schedule page</0>."
@@ -11627,6 +11783,10 @@ msgstr "此信息將包含在本次活動發送的所有電子郵件的頁腳中
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:105
 msgid "This message will only be shown if order is completed successfully. Orders awaiting payment will not show this message"
 msgstr "此消息僅在訂單成功完成後顯示。等待付款的訂單不會顯示此消息。"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:326
+msgid "This moves real money"
+msgstr ""
 
 #: src/components/routes/admin/Configurations/index.tsx:221
 msgid "This name is visible to end users"
@@ -11849,6 +12009,10 @@ msgstr "門票重新發送成功"
 msgid "Ticket sales have ended for this event"
 msgstr "此活動的售票已結束"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:354
+msgid "Ticket type"
+msgstr ""
+
 #: src/components/routes/event/attendees.tsx:75
 msgid "Ticket Type"
 msgstr "門票類型"
@@ -11862,6 +12026,7 @@ msgid "tickets"
 msgstr "門票"
 
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
+#: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 msgid "Tickets"
 msgstr "門票"
@@ -12061,6 +12226,10 @@ msgstr "稅項總計"
 msgid "Total Tax"
 msgstr "總税額"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:336
+msgid "Total to refund"
+msgstr ""
+
 #: src/components/routes/admin/Dashboard/index.tsx:86
 msgid "Total Users"
 msgstr "總用戶數"
@@ -12142,10 +12311,18 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "類型"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:398
+msgid "Type \"{eventTitle}\" exactly to enable the refund button."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:100
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:106
 msgid "Type \"delete\" to confirm"
 msgstr "輸入\"刪除\"以確認"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:397
+msgid "Type the event name to confirm"
+msgstr ""
 
 #: src/components/routes/admin/Announcements/AnnouncementTargetPicker.tsx:54
 msgid "Type to search..."
@@ -12676,6 +12853,10 @@ msgstr "驗證緊..."
 msgid "Vietnamese"
 msgstr "越南語"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:442
+msgid "View"
+msgstr ""
+
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:70
 msgid "View All"
 msgstr "查看全部"
@@ -12762,7 +12943,7 @@ msgstr "查看訂單"
 msgid "View Order Details"
 msgstr "查看訂單詳情"
 
-#: src/components/routes/event/orders.tsx:153
+#: src/components/routes/event/orders.tsx:160
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "查看訂單詳情、退款和重新傳送確認。"
 
@@ -13601,7 +13782,7 @@ msgstr "您的訂單已被取消。"
 msgid "Your order is awaiting payment"
 msgstr "您的訂單正在等待付款"
 
-#: src/components/routes/event/orders.tsx:127
+#: src/components/routes/event/orders.tsx:134
 msgid "Your orders have been exported successfully."
 msgstr "您的訂單已成功導出。"
 

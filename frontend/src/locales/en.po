@@ -81,6 +81,10 @@ msgstr "{0} left"
 msgid "{0} logo"
 msgstr "{0} logo"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:222
+msgid "{0} of {1} orders refunded, {2} of {3}. A summary has been emailed to the organizer."
+msgstr "{0} of {1} orders refunded, {2} of {3}. A summary has been emailed to the organizer."
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:272
 msgid "{0} of {1} seats are taken."
 msgstr "{0} of {1} seats are taken."
@@ -964,7 +968,7 @@ msgstr "All dates"
 
 #: src/components/common/CheckInListTable/index.tsx:107
 #: src/components/routes/event/attendees.tsx:235
-#: src/components/routes/event/orders.tsx:182
+#: src/components/routes/event/orders.tsx:189
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:104
 msgid "All Dates"
 msgstr "All Dates"
@@ -997,6 +1001,10 @@ msgstr "All occurrences"
 #: src/components/common/ReportTable/index.tsx:279
 msgid "All Occurrences"
 msgstr "All Occurrences"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:262
+msgid "All orders in this run"
+msgstr "All orders in this run"
 
 #: src/components/common/PromoCodeTable/index.tsx:139
 msgid "All Products"
@@ -1088,6 +1096,9 @@ msgstr "Amazing, Event, Keywords..."
 
 #: src/components/common/OrdersTable/index.tsx:260
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/modals/SwishMassRefundModal/index.tsx:68
+#: src/components/modals/SwishMassRefundModal/index.tsx:121
+#: src/components/modals/SwishMassRefundModal/index.tsx:357
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:209
 msgid "Amount"
 msgstr "Amount"
@@ -1687,7 +1698,7 @@ msgstr "Awaiting"
 msgid "Awaiting offline payment"
 msgstr "Awaiting offline payment"
 
-#: src/components/routes/event/orders.tsx:28
+#: src/components/routes/event/orders.tsx:31
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
 msgid "Awaiting Offline Payment"
 msgstr "Awaiting Offline Payment"
@@ -1711,6 +1722,11 @@ msgstr "Awaiting payment"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
 msgid "Awaiting Payment"
 msgstr "Awaiting Payment"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:93
+#: src/components/modals/SwishMassRefundModal/index.tsx:198
+msgid "Awaiting Swish"
+msgstr "Awaiting Swish"
 
 #: src/components/forms/OrganizerForm/index.tsx:29
 msgid "Awesome Events Ltd."
@@ -1872,6 +1888,11 @@ msgstr "Button Text"
 msgid "Button URL"
 msgstr "Button URL"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:67
+#: src/components/modals/SwishMassRefundModal/index.tsx:120
+msgid "Buyer"
+msgstr "Buyer"
+
 #: src/components/common/PlatformFeesSettings/index.tsx:63
 msgid "Buyer pays"
 msgstr "Buyer pays"
@@ -1946,6 +1967,7 @@ msgstr "Can't check in"
 #: src/components/modals/ManageAttendeeModal/index.tsx:184
 #: src/components/modals/ManageOrderModal/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:208
+#: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
 #: src/components/routes/event/messages.tsx:80
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
@@ -2011,6 +2033,10 @@ msgstr "Cancel Order"
 msgid "Cancel Order {0}"
 msgstr "Cancel Order {0}"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:392
+msgid "Cancel the orders and release the tickets"
+msgstr "Cancel the orders and release the tickets"
+
 #: src/components/modals/CancelOrderModal/index.tsx:64
 msgid "Canceling will cancel all attendees associated with this order, and release the tickets back into the available pool."
 msgstr "Canceling will cancel all attendees associated with this order, and release the tickets back into the available pool."
@@ -2028,7 +2054,7 @@ msgstr "Canceling will cancel all attendees associated with this order, and rele
 #: src/components/routes/admin/Messages/index.tsx:126
 #: src/components/routes/event/attendees.tsx:30
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:210
-#: src/components/routes/event/orders.tsx:27
+#: src/components/routes/event/orders.tsx:30
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:21
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:120
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:425
@@ -2041,6 +2067,10 @@ msgstr "Cancelled"
 #: src/components/routes/event/OccurrencesTab/index.tsx:237
 msgid "Cancelling {0} date(s). This may take a moment to complete."
 msgstr "Cancelling {0} date(s). This may take a moment to complete."
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:376
+msgid "Cannot be refunded automatically"
+msgstr "Cannot be refunded automatically"
 
 #: src/components/routes/admin/Configurations/index.tsx:36
 msgid "Cannot delete the system default configuration"
@@ -2148,6 +2178,10 @@ msgstr "Charges"
 #: src/constants/eventCategories.ts:24
 msgid "Charity"
 msgstr "Charity"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:269
+msgid "Check for remaining orders"
+msgstr "Check for remaining orders"
 
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:307
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:82
@@ -2571,8 +2605,9 @@ msgstr "Complete your profile to join the team."
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
 #: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
-#: src/components/routes/event/orders.tsx:26
+#: src/components/routes/event/orders.tsx:29
 #: src/components/routes/my-tickets/index.tsx:35
 msgid "Completed"
 msgstr "Completed"
@@ -2942,6 +2977,10 @@ msgstr "Could not prepare the bulk update."
 msgid "Could not retrieve address details"
 msgstr "Could not retrieve address details"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:170
+msgid "Could not retry the failed refunds."
+msgstr "Could not retry the failed refunds."
+
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:98
 msgid "Could not run the Swish connection test. Please try again."
 msgstr "Could not run the Swish connection test. Please try again."
@@ -2949,6 +2988,10 @@ msgstr "Could not run the Swish connection test. Please try again."
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:275
 msgid "Could not save date"
 msgstr "Could not save date"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:312
+msgid "Could not start the mass refund."
+msgstr "Could not start the mass refund."
 
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:78
 msgid "Couldn't send verification email. Please try again."
@@ -3708,6 +3751,7 @@ msgstr "Design Elements"
 #: src/components/common/ProgressStepper/index.tsx:23
 #: src/components/modals/ManageAttendeeModal/index.tsx:242
 #: src/components/modals/ManageOrderModal/index.tsx:268
+#: src/components/modals/SwishMassRefundModal/index.tsx:123
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:407
 #: src/components/routes/product-widget/CollectInformation/index.tsx:434
 #: src/components/routes/product-widget/SelectProducts/index.tsx:416
@@ -4214,6 +4258,10 @@ msgstr "Email confirmation resent"
 msgid "Email confirmation resent successfully"
 msgstr "Email confirmation resent successfully"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:387
+msgid "Email each buyer a refund confirmation"
+msgstr "Email each buyer a refund confirmation"
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:67
 msgid "Email footer message"
 msgstr "Email footer message"
@@ -4717,6 +4765,10 @@ msgstr "Every {cadenceUnit}"
 msgid "Every email template must include a call-to-action button that links to the appropriate page"
 msgstr "Every email template must include a call-to-action button that links to the appropriate page"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:327
+msgid "Every refundable Swish order for this event will be refunded in full to the buyer's Swish number. Refunds cannot be undone."
+msgstr "Every refundable Swish order for this event will be refunded in full to the buyer's Swish number. Refunds cannot be undone."
+
 #: src/components/forms/ProductForm/index.tsx:392
 msgid "Everything else — tap to edit"
 msgstr "Everything else — tap to edit"
@@ -4765,7 +4817,7 @@ msgstr "Expiry Date"
 
 #: src/components/routes/event/Affiliates/index.tsx:94
 #: src/components/routes/event/attendees.tsx:262
-#: src/components/routes/event/orders.tsx:206
+#: src/components/routes/event/orders.tsx:227
 msgid "Export"
 msgstr "Export"
 
@@ -4801,7 +4853,7 @@ msgstr "Exporting Attendees"
 msgid "Exporting complete. Downloading file..."
 msgstr "Exporting complete. Downloading file..."
 
-#: src/components/routes/event/orders.tsx:122
+#: src/components/routes/event/orders.tsx:129
 msgid "Exporting Orders"
 msgstr "Exporting Orders"
 
@@ -4810,6 +4862,8 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:138
+#: src/components/modals/SwishMassRefundModal/index.tsx:97
+#: src/components/modals/SwishMassRefundModal/index.tsx:207
 #: src/components/routes/admin/Messages/index.tsx:127
 msgid "Failed"
 msgstr "Failed"
@@ -4823,6 +4877,14 @@ msgstr "Failed At"
 #: src/components/routes/admin/FailedJobs/index.tsx:114
 msgid "Failed Jobs"
 msgstr "Failed Jobs"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:235
+msgid "Failed refunds"
+msgstr "Failed refunds"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:169
+msgid "Failed refunds have been queued again."
+msgstr "Failed refunds have been queued again."
 
 #: src/components/layouts/Checkout/index.tsx:209
 msgid "Failed to abandon order. Please try again."
@@ -4940,7 +5002,7 @@ msgstr "Failed to export affiliates"
 msgid "Failed to export attendees"
 msgstr "Failed to export attendees"
 
-#: src/components/routes/event/orders.tsx:131
+#: src/components/routes/event/orders.tsx:138
 msgid "Failed to export orders"
 msgstr "Failed to export orders"
 
@@ -5193,7 +5255,7 @@ msgstr "Filter by date"
 msgid "Filter by Event"
 msgstr "Filter by Event"
 
-#: src/components/routes/event/orders.tsx:192
+#: src/components/routes/event/orders.tsx:199
 msgid "Filter Orders"
 msgstr "Filter Orders"
 
@@ -6643,6 +6705,18 @@ msgstr "Mark as paid"
 msgid "Mark as validated (admin override)"
 msgstr "Mark as validated (admin override)"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:177
+msgid "Mass refund #{0}"
+msgstr "Mass refund #{0}"
+
+#: src/components/routes/event/orders.tsx:216
+msgid "Mass refund in progress ({0}/{1})"
+msgstr "Mass refund in progress ({0}/{1})"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:305
+msgid "Mass refund started. Refunds are now being sent to Swish."
+msgstr "Mass refund started. Refunds are now being sent to Swish."
+
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:210
 msgid "Max Messages / 24h"
 msgstr "Max Messages / 24h"
@@ -7793,6 +7867,8 @@ msgstr "order"
 #: src/components/common/QuestionsTable/index.tsx:448
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:261
 #: src/components/modals/ManageAttendeeModal/index.tsx:141
+#: src/components/modals/SwishMassRefundModal/index.tsx:66
+#: src/components/modals/SwishMassRefundModal/index.tsx:119
 #: src/components/routes/my-tickets/index.tsx:70
 msgid "Order"
 msgstr "Order"
@@ -7915,7 +7991,7 @@ msgstr "Order Reference"
 msgid "Order Refunded"
 msgstr "Order Refunded"
 
-#: src/components/routes/event/orders.tsx:54
+#: src/components/routes/event/orders.tsx:61
 msgid "Order Status"
 msgstr "Order Status"
 
@@ -7949,7 +8025,7 @@ msgid "Order was cancelled"
 msgstr "Order was cancelled"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:415
-#: src/components/routes/event/orders.tsx:197
+#: src/components/routes/event/orders.tsx:204
 msgid "orders"
 msgstr "orders"
 
@@ -7957,10 +8033,11 @@ msgstr "orders"
 #: src/components/layouts/Admin/index.tsx:17
 #: src/components/layouts/Event/index.tsx:125
 #: src/components/modals/ManageOccurrenceModal/index.tsx:178
+#: src/components/modals/SwishMassRefundModal/index.tsx:355
 #: src/components/routes/admin/Attribution/index.tsx:138
 #: src/components/routes/admin/Orders/index.tsx:44
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:56
-#: src/components/routes/event/orders.tsx:154
+#: src/components/routes/event/orders.tsx:161
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:78
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:118
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:144
@@ -7974,7 +8051,7 @@ msgstr "Orders"
 msgid "Orders Completed"
 msgstr "Orders Completed"
 
-#: src/components/routes/event/orders.tsx:126
+#: src/components/routes/event/orders.tsx:133
 msgid "Orders Exported"
 msgstr "Orders Exported"
 
@@ -8161,7 +8238,7 @@ msgid "Partial refund"
 msgstr "Partial refund"
 
 #: src/components/common/OrderStatusBadge/index.tsx:16
-#: src/components/routes/event/orders.tsx:33
+#: src/components/routes/event/orders.tsx:36
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
 msgid "Partially Refunded"
 msgstr "Partially Refunded"
@@ -8342,6 +8419,8 @@ msgstr "Payments not available"
 msgid "Payouts"
 msgstr "Payouts"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:89
+#: src/components/modals/SwishMassRefundModal/index.tsx:194
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
@@ -8377,6 +8456,10 @@ msgstr "per product"
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:32
 msgid "Per ticket"
 msgstr "Per ticket"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:350
+msgid "Per ticket type"
+msgstr "Per ticket type"
 
 #: src/components/forms/PromoCodeForm/index.tsx:98
 #: src/components/forms/TaxAndFeeForm/index.tsx:27
@@ -8587,7 +8670,7 @@ msgstr "Please select at least one product"
 
 #: src/components/routes/event/Affiliates/index.tsx:53
 #: src/components/routes/event/attendees.tsx:169
-#: src/components/routes/event/orders.tsx:132
+#: src/components/routes/event/orders.tsx:139
 msgid "Please try again."
 msgstr "Please try again."
 
@@ -8612,7 +8695,7 @@ msgstr "Please wait while we prepare your attendees for export..."
 msgid "Please wait while we prepare your invoice..."
 msgstr "Please wait while we prepare your invoice..."
 
-#: src/components/routes/event/orders.tsx:123
+#: src/components/routes/event/orders.tsx:130
 msgid "Please wait while we prepare your orders for export..."
 msgstr "Please wait while we prepare your orders for export..."
 
@@ -8662,6 +8745,10 @@ msgstr "Preview checkout form"
 #: src/components/layouts/Event/index.tsx:280
 msgid "Preview Event page"
 msgstr "Preview Event page"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:427
+msgid "Previous mass refunds"
+msgstr "Previous mass refunds"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
@@ -8740,6 +8827,10 @@ msgstr "Private key path"
 #: src/components/modals/RefundOrderModal/index.tsx:158
 msgid "Process Refund"
 msgstr "Process Refund"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:91
+msgid "Processing"
+msgstr "Processing"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:395
 msgid "Processing order"
@@ -9027,6 +9118,10 @@ msgstr "Questions reordered"
 msgid "Queue"
 msgstr "Queue"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:106
+msgid "Queued"
+msgstr "Queued"
+
 #: src/components/forms/PromoCodeForm/index.tsx:145
 msgid "Quick Tip"
 msgstr "Quick Tip"
@@ -9062,6 +9157,10 @@ msgstr "Ready to go live?"
 #: src/components/layouts/AuthLayout/index.tsx:19
 msgid "Real-time analytics"
 msgstr "Real-time analytics"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:69
+msgid "Reason"
+msgstr "Reason"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9167,6 +9266,14 @@ msgstr "Refresh Preview"
 msgid "Refund"
 msgstr "Refund"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:413
+msgid "Refund {totalLabel}"
+msgstr "Refund {totalLabel}"
+
+#: src/components/routes/event/orders.tsx:217
+msgid "Refund all orders"
+msgstr "Refund all orders"
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:218
 msgid "Refund all orders for these dates"
 msgstr "Refund all orders for these dates"
@@ -9176,6 +9283,10 @@ msgstr "Refund all orders for these dates"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:334
 msgid "Refund all orders for this date"
 msgstr "Refund all orders for this date"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:455
+msgid "Refund all Swish orders"
+msgstr "Refund all Swish orders"
 
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
@@ -9210,15 +9321,21 @@ msgstr "Refund Pending"
 msgid "Refund recorded successfully."
 msgstr "Refund recorded successfully."
 
-#: src/components/routes/event/orders.tsx:60
+#: src/components/routes/event/orders.tsx:67
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:278
 msgid "Refund Status"
 msgstr "Refund Status"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:332
+msgid "Refundable orders"
+msgstr "Refundable orders"
+
 #: src/components/common/OrderStatusBadge/index.tsx:15
 #: src/components/common/OrderSummary/index.tsx:92
 #: src/components/common/StatBoxes/index.tsx:87
-#: src/components/routes/event/orders.tsx:32
+#: src/components/modals/SwishMassRefundModal/index.tsx:95
+#: src/components/modals/SwishMassRefundModal/index.tsx:202
+#: src/components/routes/event/orders.tsx:35
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:428
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
 msgid "Refunded"
@@ -9232,6 +9349,10 @@ msgstr "Refunded: {0}"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:42
 msgid "Refunds"
 msgstr "Refunds"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:228
+msgid "Refunds are sent to Swish a few at a time. You can close this window; the run continues in the background and can be reopened from the orders page."
+msgstr "Refunds are sent to Swish a few at a time. You can close this window; the run continues in the background and can be reopened from the orders page."
 
 #: src/components/routes/profile/ManageProfile/index.tsx:179
 msgid "Regional Settings"
@@ -9322,6 +9443,11 @@ msgstr "Require Billing Address"
 #: src/components/common/QuestionsTable/index.tsx:118
 msgid "Required"
 msgstr "Required"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:255
+#: src/components/modals/SwishMassRefundModal/index.tsx:340
+msgid "Requires manual handling"
+msgstr "Requires manual handling"
 
 #: src/components/routes/welcome/index.tsx:207
 msgid "Resend code"
@@ -9440,6 +9566,10 @@ msgstr "Retry"
 msgid "Retry All"
 msgstr "Retry All"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:245
+msgid "Retry failed refunds"
+msgstr "Retry failed refunds"
+
 #: src/components/routes/admin/FailedJobs/index.tsx:290
 msgid "Retry Job"
 msgstr "Retry Job"
@@ -9499,6 +9629,14 @@ msgstr "Role"
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:174
 msgid "Root CA path"
 msgstr "Root CA path"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:220
+msgid "Run completed"
+msgstr "Run completed"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:108
+msgid "Running"
+msgstr "Running"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1053
 msgid "Runs"
@@ -9796,7 +9934,7 @@ msgstr "Search by name or email..."
 msgid "Search by name, email, or account..."
 msgstr "Search by name, email, or account..."
 
-#: src/components/routes/event/orders.tsx:158
+#: src/components/routes/event/orders.tsx:165
 msgid "Search by name, email, or order #..."
 msgstr "Search by name, email, or order #..."
 
@@ -10471,6 +10609,11 @@ msgstr "Skip manually edited dates"
 msgid "Skip this step"
 msgstr "Skip this step"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:99
+#: src/components/modals/SwishMassRefundModal/index.tsx:211
+msgid "Skipped"
+msgstr "Skipped"
+
 #: src/components/common/LanguageSwitcher/index.tsx:44
 msgid "Slovak"
 msgstr "Slovak"
@@ -10644,6 +10787,10 @@ msgstr "Start time"
 msgid "Start typing a venue or address..."
 msgstr "Start typing a venue or address..."
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:179
+msgid "Started by {0} on {1}"
+msgstr "Started by {0} on {1}"
+
 #: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Starts collapsed"
 msgstr "Starts collapsed"
@@ -10704,6 +10851,7 @@ msgstr "Stats"
 #: src/components/modals/EditUserModal/index.tsx:104
 #: src/components/modals/ManageAttendeeModal/index.tsx:133
 #: src/components/modals/ManageOrderModal/index.tsx:121
+#: src/components/modals/SwishMassRefundModal/index.tsx:122
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:161
 #: src/components/routes/admin/Announcements/index.tsx:159
 #: src/components/routes/admin/Announcements/index.tsx:469
@@ -11417,6 +11565,10 @@ msgstr "There are no products available for this event"
 msgid "There are no products available in this category"
 msgstr "There are no products available in this category"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:421
+msgid "There are no Swish orders left to refund automatically for this event."
+msgstr "There are no Swish orders left to refund automatically for this event."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:636
 msgid "There are no upcoming dates for this event"
 msgstr "There are no upcoming dates for this event"
@@ -11448,6 +11600,10 @@ msgstr "These details will only be shown if the order is completed successfully.
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:491
 msgid "These details will replace any existing location on the affected dates and show on attendee tickets."
 msgstr "These details will replace any existing location on the affected dates and show on attendee tickets."
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:378
+msgid "These orders are excluded from the run and must be handled manually, for example by bank transfer."
+msgstr "These orders are excluded from the run and must be handled manually, for example by bank transfer."
 
 #: src/components/forms/ProductForm/index.tsx:359
 msgid "These prices apply across all dates in your schedule, and tier quantities limit total sales across all dates combined. Sale dates on tiers apply globally. You can override prices for individual dates on the <0>Occurrence Schedule page</0>."
@@ -11627,6 +11783,10 @@ msgstr "This message will be included in the footer of all emails sent from this
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:105
 msgid "This message will only be shown if order is completed successfully. Orders awaiting payment will not show this message"
 msgstr "This message will only be shown if order is completed successfully. Orders awaiting payment will not show this message"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:326
+msgid "This moves real money"
+msgstr "This moves real money"
 
 #: src/components/routes/admin/Configurations/index.tsx:221
 msgid "This name is visible to end users"
@@ -11849,6 +12009,10 @@ msgstr "Ticket resent successfully"
 msgid "Ticket sales have ended for this event"
 msgstr "Ticket sales have ended for this event"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:354
+msgid "Ticket type"
+msgstr "Ticket type"
+
 #: src/components/routes/event/attendees.tsx:75
 msgid "Ticket Type"
 msgstr "Ticket Type"
@@ -11862,6 +12026,7 @@ msgid "tickets"
 msgstr "tickets"
 
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
+#: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 msgid "Tickets"
 msgstr "Tickets"
@@ -12061,6 +12226,10 @@ msgstr "Total tax"
 msgid "Total Tax"
 msgstr "Total Tax"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:336
+msgid "Total to refund"
+msgstr "Total to refund"
+
 #: src/components/routes/admin/Dashboard/index.tsx:86
 msgid "Total Users"
 msgstr "Total Users"
@@ -12142,10 +12311,18 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "Type"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:398
+msgid "Type \"{eventTitle}\" exactly to enable the refund button."
+msgstr "Type \"{eventTitle}\" exactly to enable the refund button."
+
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:100
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:106
 msgid "Type \"delete\" to confirm"
 msgstr "Type \"delete\" to confirm"
+
+#: src/components/modals/SwishMassRefundModal/index.tsx:397
+msgid "Type the event name to confirm"
+msgstr "Type the event name to confirm"
 
 #: src/components/routes/admin/Announcements/AnnouncementTargetPicker.tsx:54
 msgid "Type to search..."
@@ -12676,6 +12853,10 @@ msgstr "Verifying..."
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
+#: src/components/modals/SwishMassRefundModal/index.tsx:442
+msgid "View"
+msgstr "View"
+
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:70
 msgid "View All"
 msgstr "View All"
@@ -12762,7 +12943,7 @@ msgstr "View Order"
 msgid "View Order Details"
 msgstr "View Order Details"
 
-#: src/components/routes/event/orders.tsx:153
+#: src/components/routes/event/orders.tsx:160
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "View order details, issue refunds, and resend confirmations."
 
@@ -13601,7 +13782,7 @@ msgstr "Your order has been cancelled."
 msgid "Your order is awaiting payment"
 msgstr "Your order is awaiting payment"
 
-#: src/components/routes/event/orders.tsx:127
+#: src/components/routes/event/orders.tsx:134
 msgid "Your orders have been exported successfully."
 msgstr "Your orders have been exported successfully."
 
