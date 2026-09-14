@@ -1,3 +1,5 @@
+> **Modified version of Hi.Events.** This repository is a fork of [HiEventsDev/Hi.Events](https://github.com/HiEventsDev/Hi.Events) with a custom [Swish](https://www.swish.nu/) payment integration for the Swedish market. It is not an official Hi.Events distribution and is not maintained by the Hi.Events team. Swish-specific design notes live in [`docs/PAYMENT_ARCHITECTURE.md`](docs/PAYMENT_ARCHITECTURE.md). The original README follows.
+
 <div align="center">
 
 <img src="https://hievents-public.s3.us-west-1.amazonaws.com/website/github-banner.png?v=1" alt="Hi.Events - Open Source Event Ticketing Platform" width="100%">
