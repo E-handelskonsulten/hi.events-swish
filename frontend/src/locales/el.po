@@ -374,6 +374,10 @@ msgstr "Πεδίο κειμένου πολλαπλών γραμμών"
 msgid "A new verification code has been sent to your email"
 msgstr "Νέος κωδικός επαλήθευσης στάλθηκε στο email σας"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:183
+msgid "A passphrase is stored. Leave blank to keep it."
+msgstr ""
+
 #: src/components/forms/TaxAndFeeForm/index.tsx:29
 msgid "A percentage of the product price. E.g., 3.5% of the product price"
 msgstr "Ένα ποσοστό της τιμής προϊόντος. Π.χ., 3,5% της τιμής προϊόντος"
@@ -431,6 +435,18 @@ msgstr "Εγκαταλειμμένο"
 msgid "About"
 msgstr "Σχετικά"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:161
+msgid "Absolute path on the server to the merchant certificate in PEM format."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:168
+msgid "Absolute path on the server to the private key in PEM format."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:175
+msgid "Absolute path on the server to the Swish root CA bundle in PEM format."
+msgstr ""
+
 #: src/components/common/PlatformFeesSettings/index.tsx:192
 msgid "Absorb fee"
 msgstr "Απορρόφηση χρέωσης"
@@ -448,7 +464,7 @@ msgstr "Χρώμα Τόνου"
 msgid "Accept"
 msgstr "Αποδοχή"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:97
 msgid "Accept bank transfers, checks, or other offline payment methods"
 msgstr "Αποδοχή τραπεζικών μεταφορών, επιταγών ή άλλων εκτός σύνδεσης μεθόδων πληρωμής"
 
@@ -463,6 +479,14 @@ msgstr "Αποδοχή πρόσκλησης"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:166
 msgid "Accept Invitation"
 msgstr "Αποδοχή Πρόσκλησης"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:114
+msgid "Accept Swish payments for this organizer's events. Certificate files must be placed on the server; only their paths are stored here."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
+msgid "Accept Swish payments. Requires Swish to be configured in the organizer settings."
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:596
 msgid "Access"
@@ -531,6 +555,11 @@ msgstr "Ο λογαριασμός ενημερώθηκε επιτυχώς"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:48
 msgid "Account verification revoked"
 msgstr "Η επαλήθευση του λογαριασμού ανακλήθηκε"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:103
+#: src/components/routes/organizer/Reports/index.tsx:47
+msgid "Accounting Report"
+msgstr ""
 
 #: src/components/common/AdminUsersTable/index.tsx:127
 #: src/components/layouts/Admin/index.tsx:14
@@ -679,7 +708,7 @@ msgstr "Προσθήκη στοιχείων"
 msgid "Add event details"
 msgstr "Προσθήκη στοιχείων εκδήλωσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:154
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:159
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "Προσθήκη οδηγιών για πληρωμές εκτός σύνδεσης (π.χ. στοιχεία τραπεζικής μεταφοράς, πού να στείλετε επιταγές, προθεσμίες πληρωμής)"
 
@@ -788,7 +817,7 @@ msgstr "Πρόσθετες Πληροφορίες"
 #: src/components/common/OrderDetails/index.tsx:116
 #: src/components/forms/QuestionForm/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:163
-#: src/components/routes/organizer/Settings/index.tsx:43
+#: src/components/routes/organizer/Settings/index.tsx:44
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:103
 msgid "Address"
 msgstr "Διεύθυνση"
@@ -986,7 +1015,7 @@ msgstr "Όλες οι Επερχόμενες Εκδηλώσεις"
 msgid "All users"
 msgstr "Όλοι οι χρήστες"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:167
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:172
 msgid "Allow attendees associated with unpaid orders to check in"
 msgstr "Να επιτρέπεται το check-in σε συμμετέχοντες με μη πληρωμένες παραγγελίες"
 
@@ -1721,7 +1750,7 @@ msgstr "Επιστροφή στα μηνύματα"
 msgid "Back to payment"
 msgstr ""
 
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:42
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:45
 msgid "Back to Reports"
 msgstr "Επιστροφή στις Αναφορές"
 
@@ -1765,7 +1794,7 @@ msgstr "Βασική τιμή"
 msgid "Based on the global sale period above, not per date"
 msgstr "Με βάση τη γενική περίοδο πώλησης παραπάνω, όχι ανά ημερομηνία"
 
-#: src/components/routes/organizer/Settings/index.tsx:31
+#: src/components/routes/organizer/Settings/index.tsx:32
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
 msgstr "Βασικές Πληροφορίες"
@@ -1779,7 +1808,7 @@ msgstr "Επειδή αυτός ο λογαριασμός έχει ολοκλη�
 msgid "Billing Address"
 msgstr "Διεύθυνση Χρέωσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:182
 msgid "Billing Settings"
 msgstr "Ρυθμίσεις Χρέωσης"
 
@@ -2079,6 +2108,10 @@ msgstr "Η Κατηγορία Δημιουργήθηκε Επιτυχώς"
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:48
 msgid "Category deleted successfully"
 msgstr "Η κατηγορία διαγράφηκε"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:160
+msgid "Certificate path"
+msgstr ""
 
 #: src/components/common/LocationPicker/index.tsx:201
 msgid "Change"
@@ -2611,6 +2644,10 @@ msgstr "Ρύθμιση Φόρων & Τελών"
 msgid "Configure which products are available for this occurrence and optionally adjust pricing."
 msgstr "Ορίστε ποια προϊόντα είναι διαθέσιμα για αυτή την ημερομηνία και, προαιρετικά, προσαρμόστε τις τιμές."
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:118
+msgid "Configured by the server"
+msgstr ""
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:35
 msgid "Configured Discount"
 msgstr "Ρυθμισμένη Έκπτωση"
@@ -2721,6 +2758,10 @@ msgstr "Τα στοιχεία σύνδεσης είναι υποχρεωτικά
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:41
 msgid "Connection details are required for online events"
 msgstr "Για διαδικτυακές εκδηλώσεις απαιτούνται στοιχεία σύνδεσης"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:130
+msgid "Connection verified"
+msgstr ""
 
 #: src/components/common/WaitlistTable/index.tsx:152
 #: src/components/layouts/EventHomepage/index.tsx:677
@@ -2900,6 +2941,10 @@ msgstr "Δεν ήταν δυνατή η προετοιμασία της μαζι
 #: src/components/common/LocationPicker/index.tsx:153
 msgid "Could not retrieve address details"
 msgstr "Δεν ήταν δυνατή η ανάκτηση των στοιχείων της διεύθυνσης"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:98
+msgid "Could not run the Swish connection test. Please try again."
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:275
 msgid "Could not save date"
@@ -3313,6 +3358,10 @@ msgstr "Καθημερινά"
 msgid "Daily revenue, taxes, fees, and refunds across all events"
 msgstr "Καθημερινά έσοδα, φόροι, τέλη και επιστροφές σε όλες τις εκδηλώσεις"
 
+#: src/components/routes/organizer/Reports/index.tsx:48
+msgid "Daily sales and refunds per event and payment method with VAT split by rate, for bank reconciliation"
+msgstr ""
+
 #: src/components/routes/event/Reports/index.tsx:25
 msgid "Daily Sales Report"
 msgstr "Καθημερινή Αναφορά Πωλήσεων"
@@ -3344,7 +3393,7 @@ msgstr "Επικίνδυνη ζώνη"
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:80
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:555
 #: src/components/routes/event/Settings/index.tsx:102
-#: src/components/routes/organizer/Settings/index.tsx:79
+#: src/components/routes/organizer/Settings/index.tsx:86
 msgid "Danger Zone"
 msgstr "Επικίνδυνη Ζώνη"
 
@@ -3365,6 +3414,7 @@ msgstr "Πίνακας Ελέγχου"
 #: src/components/common/WaitlistTable/index.tsx:184
 #: src/components/forms/QuestionForm/index.tsx:136
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:39
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:52
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:56
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:24
 msgid "Date"
@@ -3751,7 +3801,7 @@ msgstr "Εμφανίζει πόσες θέσεις απομένουν για κ�
 msgid "Display name"
 msgstr "Εμφανιζόμενο όνομα"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:200
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:205
 msgid "Document Label"
 msgstr "Ετικέτα Εγγράφου"
 
@@ -4183,7 +4233,7 @@ msgid "Email Preview"
 msgstr "Προεπισκόπηση Email"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:349
-#: src/components/routes/organizer/Settings/index.tsx:67
+#: src/components/routes/organizer/Settings/index.tsx:68
 msgid "Email Templates"
 msgstr "Πρότυπα Email"
 
@@ -4232,9 +4282,13 @@ msgstr "Ενεργοποίηση αυτοεξυπηρέτησης συμμετέ
 msgid "Enable attendee self-service by default"
 msgstr "Ενεργοποίηση αυτοεξυπηρέτησης συμμετέχοντα ως προεπιλογή"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:196
 msgid "Enable Invoicing"
 msgstr "Ενεργοποίηση Τιμολόγησης"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:139
+msgid "Enable Swish"
+msgstr ""
 
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:21
 msgid "Enable this capacity to stop product sales when the limit is reached"
@@ -4414,6 +4468,10 @@ msgstr "εγγραφές"
 msgid "Entries will appear here when customers join the waitlist for sold out products."
 msgstr "Οι εγγραφές θα εμφανίζονται εδώ όταν οι πελάτες εγγράφονται στη λίστα αναμονής για εξαντλημένα προϊόντα."
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:146
+msgid "Environment"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:149
 #: src/components/layouts/Checkout/index.tsx:194
 #: src/hooks/useOrderActions.tsx:84
@@ -4450,6 +4508,7 @@ msgstr "EUR"
 #: src/components/routes/admin/Messages/index.tsx:163
 #: src/components/routes/admin/Messages/index.tsx:278
 #: src/components/routes/events/Dashboard/index.tsx:184
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:58
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:19
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:41
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:43
@@ -4496,7 +4555,7 @@ msgid "Event date display"
 msgstr "Εμφάνιση ημερομηνίας εκδήλωσης"
 
 #: src/components/routes/account/ManageAccount/sections/EventDefaultsSettings/index.tsx:5
-#: src/components/routes/organizer/Settings/index.tsx:37
+#: src/components/routes/organizer/Settings/index.tsx:38
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:73
 msgid "Event Defaults"
 msgstr "Προεπιλογές Εκδήλωσης"
@@ -5175,7 +5234,7 @@ msgstr "Πρώτες 90 ημέρες"
 msgid "First attendee"
 msgstr "Πρώτος συμμετέχων"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:216
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:221
 msgid "First Invoice Number"
 msgstr "Πρώτος Αριθμός Τιμολογίου"
 
@@ -5459,6 +5518,10 @@ msgstr "Το κατάλαβα"
 msgid "Greek"
 msgstr "Ελληνικά"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:86
+msgid "Gross"
+msgstr ""
+
 #: src/components/common/EventCard/index.tsx:369
 msgid "Gross revenue"
 msgstr "Μεικτά έσοδα"
@@ -5717,6 +5780,10 @@ msgstr "Πόσα λεπτά έχει ο πελάτης να ολοκληρώσε
 msgid "How many times can this code be used?"
 msgstr "Πόσες φορές μπορεί να χρησιμοποιηθεί αυτός ο κωδικός;"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:98
+msgid "How to read this report"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:449
 msgid "How VAT is applied to the platform fees we charge you."
 msgstr "Πώς εφαρμόζεται ο ΦΠΑ στις χρεώσεις πλατφόρμας που σας χρεώνουμε."
@@ -5769,7 +5836,7 @@ msgstr "Εάν είναι κενό, η διεύθυνση θα χρησιμοπ�
 msgid "If checked, this category will be hidden from the public."
 msgstr "Εάν επιλεγεί, αυτή η κατηγορία θα είναι κρυφή από το κοινό."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:168
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:173
 msgid "If enabled, check-in staff can either mark attendees as checked in or mark the order as paid and check in the attendees. If disabled, attendees associated with unpaid orders cannot be checked in."
 msgstr "Εάν είναι ενεργό, το προσωπικό check-in μπορεί να επισημάνει τους συμμετέχοντες ως παρόντες ή να επισημάνει την παραγγελία ως πληρωμένη. Εάν είναι απενεργοποιημένο, οι συμμετέχοντες με μη πληρωμένες παραγγελίες δεν μπορούν να κάνουν check-in."
 
@@ -6007,15 +6074,15 @@ msgstr "Τιμολόγιο"
 msgid "Invoice downloaded successfully"
 msgstr "Το τιμολόγιο λήφθηκε επιτυχώς"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:262
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:267
 msgid "Invoice Notes"
 msgstr "Σημειώσεις Τιμολογίου"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:212
 msgid "Invoice Numbering"
 msgstr "Αρίθμηση Τιμολογίων"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:187
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:192
 msgid "Invoice Settings"
 msgstr "Ρυθμίσεις Τιμολογίων"
 
@@ -6207,6 +6274,10 @@ msgstr "Τελευταίες 7 ημέρες"
 msgid "Last 90 days"
 msgstr "Τελευταίες 90 ημέρες"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:124
+msgid "Last connection test failed"
+msgstr ""
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:160
 msgid "Last login"
 msgstr "Τελευταία σύνδεση"
@@ -6264,7 +6335,11 @@ msgstr "Πρόσφατα check-in"
 msgid "Leave “from” as today to start right away."
 msgstr "Αφήστε το «Από» στο σήμερα για να ξεκινήσετε αμέσως."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:184
+msgid "Leave blank if the private key is not encrypted."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:206
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Αφήστε κενό για χρήση της προεπιλεγμένης λέξης \"Τιμολόγιο\""
 
@@ -6447,7 +6522,7 @@ msgstr "Παράδειγμα κειμένου..."
 msgid "Main Office"
 msgstr "Κεντρικό γραφείο"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:180
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:185
 msgid "Make billing address mandatory during checkout"
 msgstr "Υποχρεωτική διεύθυνση χρέωσης κατά το checkout"
 
@@ -6497,7 +6572,7 @@ msgstr "Διαχείριση στο Stripe"
 msgid "Manage order"
 msgstr "Διαχείριση παραγγελίας"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:100
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
 msgid "Manage payment and invoicing settings for this event."
 msgstr "Διαχείριση ρυθμίσεων πληρωμής και τιμολόγησης για αυτή την εκδήλωση."
 
@@ -6839,6 +6914,10 @@ msgstr "Πλοήγηση σε Συμμετέχοντα"
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:455
 msgid "Need to switch Stripe accounts? Disconnect this one."
 msgstr "Θέλετε να αλλάξετε λογαριασμό Stripe; Αποσυνδέστε αυτόν."
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:93
+msgid "Net (excl. VAT)"
+msgstr ""
 
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:85
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:36
@@ -7354,11 +7433,11 @@ msgstr "Νοέμβριος"
 msgid "Number of dates to create"
 msgstr "Αριθμός ημερομηνιών προς δημιουργία"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:227
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:232
 msgid "Number of days allowed for payment (leave blank to omit payment terms from invoices)"
 msgstr "Αριθμός ημερών για πληρωμή (αφήστε κενό για παράλειψη όρων πληρωμής από τιμολόγια)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:209
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:214
 msgid "Number Prefix"
 msgstr "Πρόθεμα Αριθμού"
 
@@ -7451,7 +7530,7 @@ msgstr "Οι προσφορές λήγουν μετά από {timeoutHours} ώρ
 msgid "Offline"
 msgstr "Εκτός Σύνδεσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:146
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:151
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Οι παραγγελίες εκτός σύνδεσης δεν αντικατοπτρίζονται στα στατιστικά εκδήλωσης μέχρι να επισημανθούν ως πληρωμένες."
 
@@ -7459,19 +7538,19 @@ msgstr "Οι παραγγελίες εκτός σύνδεσης δεν αντι�
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Η πληρωμή εκτός σύνδεσης απέτυχε. Παρακαλώ δοκιμάστε ξανά ή επικοινωνήστε με τον διοργανωτή."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
 msgid "Offline Payment Instructions"
 msgstr "Οδηγίες Πληρωμής Εκτός Σύνδεσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:96
 msgid "Offline Payments"
 msgstr "Πληρωμές Εκτός Σύνδεσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:140
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:145
 msgid "Offline Payments Information"
 msgstr "Πληροφορίες Πληρωμών Εκτός Σύνδεσης"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:135
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:140
 msgid "Offline Payments Settings"
 msgstr "Ρυθμίσεις Πληρωμών Εκτός Σύνδεσης"
 
@@ -7523,6 +7602,10 @@ msgstr "Μόλις δημιουργήσετε εκδήλωση, θα εμφαν�
 #: src/components/common/ReportTable/index.tsx:260
 msgid "Once you start collecting data, you'll see it here."
 msgstr "Μόλις ξεκινήσετε να συλλέγετε δεδομένα, θα εμφανίζονται εδώ."
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:99
+msgid "One line per day, event and payment method. Sales are positive and refunds are separate negative lines, so the sum of the Gross column equals the amount settled to your bank account before payment provider fees. VAT is split by Swedish rate; service fees are included in Gross."
+msgstr ""
 
 #: src/components/common/EventStatusBadge/index.tsx:18
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:31
@@ -7662,7 +7745,7 @@ msgstr ""
 msgid "Option {i}"
 msgstr "Επιλογή {i}"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:268
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
 msgstr "Προαιρετικές πρόσθετες πληροφορίες για εμφάνιση σε όλα τα τιμολόγια (π.χ., όροι πληρωμής, τέλη καθυστέρησης, πολιτική επιστροφής)"
 
@@ -7674,7 +7757,7 @@ msgstr "Προαιρετική παρότρυνση για δράση"
 msgid "Optional nickname shown in pickers, e.g. \"HQ Conference Room\""
 msgstr "Προαιρετικό όνομα που εμφανίζεται στους επιλογείς, π.χ. \"Αίθουσα συνεδριάσεων\""
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:215
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
 msgstr "Προαιρετικό πρόθεμα αριθμών τιμολογίου (π.χ., ΤΙΜ-)"
 
@@ -7907,16 +7990,16 @@ msgstr "Παραγγελίες:"
 msgid "Organic Accounts"
 msgstr "Οργανικοί Λογαριασμοί"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:245
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:250
 msgid "Organization Address"
 msgstr "Διεύθυνση Οργανισμού"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:236
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:241
 msgid "Organization Details"
 msgstr "Στοιχεία Οργανισμού"
 
 #: src/components/forms/OrganizerForm/index.tsx:28
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:238
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
 msgid "Organization Name"
 msgstr "Όνομα Οργανισμού"
 
@@ -7964,7 +8047,7 @@ msgstr "Διοργανωτής Δεν Βρέθηκε"
 msgid "Organizer restored successfully"
 msgstr "Ο διοργανωτής αποκαταστάθηκε επιτυχώς"
 
-#: src/components/routes/organizer/Settings/index.tsx:158
+#: src/components/routes/organizer/Settings/index.tsx:165
 msgid "Organizer Settings"
 msgstr "Ρυθμίσεις Διοργανωτή"
 
@@ -8185,7 +8268,7 @@ msgstr "Πληρωμή"
 msgid "Payment & Invoicing"
 msgstr "Πληρωμή & Τιμολόγηση"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:99
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:104
 msgid "Payment & Invoicing Settings"
 msgstr "Ρυθμίσεις Πληρωμής & Τιμολόγησης"
 
@@ -8193,7 +8276,7 @@ msgstr "Ρυθμίσεις Πληρωμής & Τιμολόγησης"
 msgid "Payment Date"
 msgstr "Ημερομηνία Πληρωμής"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:226
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:231
 msgid "Payment Due Period"
 msgstr "Περίοδος Πληρωμής"
 
@@ -8211,7 +8294,11 @@ msgstr "Οδηγίες Πληρωμής"
 msgid "Payment method"
 msgstr "Μέθοδος πληρωμής"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:68
+msgid "Payment Method"
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:111
 msgid "Payment Methods"
 msgstr "Μέθοδοι Πληρωμής"
 
@@ -8241,7 +8328,7 @@ msgstr "Κατάσταση Πληρωμής"
 msgid "Payment succeeded!"
 msgstr "Η πληρωμή επιτεύχθηκε!"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:224
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:229
 msgid "Payment Terms"
 msgstr "Όροι Πληρωμής"
 
@@ -8249,7 +8336,7 @@ msgstr "Όροι Πληρωμής"
 msgid "Payments not available"
 msgstr "Οι πληρωμές δεν είναι διαθέσιμες"
 
-#: src/components/routes/organizer/Settings/index.tsx:90
+#: src/components/routes/organizer/Settings/index.tsx:97
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:407
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:463
 msgid "Payouts"
@@ -8394,7 +8481,7 @@ msgstr "Τέλος πλατφόρμας {0} αφαιρείται από την �
 #: src/components/routes/event/Settings/index.tsx:112
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:48
 #: src/components/routes/organizer/Reports/index.tsx:41
-#: src/components/routes/organizer/Settings/index.tsx:96
+#: src/components/routes/organizer/Settings/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/PlatformFeesSettings/index.tsx:42
 msgid "Platform Fees"
 msgstr "Τέλη Πλατφόρμας"
@@ -8642,6 +8729,14 @@ msgstr "Εκτύπωση σε PDF"
 msgid "Privacy Policy"
 msgstr "Πολιτική Απορρήτου"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:181
+msgid "Private key passphrase"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:167
+msgid "Private key path"
+msgstr ""
+
 #: src/components/modals/RefundOrderModal/index.tsx:158
 msgid "Process Refund"
 msgstr "Επεξεργασία Επιστροφής"
@@ -8720,6 +8815,10 @@ msgstr "Προϊόν Ενημερώθηκε"
 #: src/components/common/PromoCodeTable/index.tsx:156
 msgid "Product(s)"
 msgstr "Προϊόν(-τα)"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:105
+msgid "Production"
+msgstr ""
 
 #: src/components/common/PromoCodeTable/index.tsx:72
 #: src/components/modals/DuplicateEventModal/index.tsx:49
@@ -9064,6 +9163,10 @@ msgstr "Λογαριασμοί Παραπομπής"
 msgid "Refresh Preview"
 msgstr "Ανανέωση Προεπισκόπησης"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:46
+msgid "Refund"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:218
 msgid "Refund all orders for these dates"
 msgstr "Επιστροφή χρημάτων για όλες τις παραγγελίες αυτών των ημερομηνιών"
@@ -9189,14 +9292,14 @@ msgstr "Επανέναρξη πωλήσεων για αυτή την ημερο�
 msgid "Repeats"
 msgstr "Επανάληψη"
 
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:26
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:29
 msgid "Report not found"
 msgstr "Η αναφορά δεν βρέθηκε"
 
 #: src/components/layouts/Event/index.tsx:104
 #: src/components/layouts/OrganizerLayout/index.tsx:99
 #: src/components/routes/event/Reports/index.tsx:47
-#: src/components/routes/organizer/Reports/index.tsx:51
+#: src/components/routes/organizer/Reports/index.tsx:57
 msgid "Reports"
 msgstr "Αναφορές"
 
@@ -9212,7 +9315,7 @@ msgstr "Αιτήθηκε"
 msgid "Requested by"
 msgstr "Αιτήθηκε από"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:179
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:184
 msgid "Require Billing Address"
 msgstr "Υποχρεωτική Διεύθυνση Χρέωσης"
 
@@ -9393,9 +9496,17 @@ msgstr "Ανάκληση Προσφοράς"
 msgid "Role"
 msgstr "Ρόλος"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:174
+msgid "Root CA path"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1053
 msgid "Runs"
 msgstr "Διάρκεια"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:45
+msgid "Sale"
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:429
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:85
@@ -9493,7 +9604,7 @@ msgstr "Σάββατο"
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:141
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:193
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:94
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:275
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
@@ -9501,6 +9612,7 @@ msgstr "Σάββατο"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:86
@@ -9566,6 +9678,10 @@ msgstr "Αποθηκευμένες τοποθεσίες"
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:153
 msgid "Saving an override creates a dedicated configuration for this organizer if it's currently on the system default."
 msgstr "Η αποθήκευση μιας παράκαμψης δημιουργεί ξεχωριστή διαμόρφωση για αυτόν τον διοργανωτή, αν αυτή τη στιγμή χρησιμοποιεί την προεπιλογή του συστήματος."
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:204
+msgid "Saving with Swish enabled performs a live connection test against Swish before the settings are stored."
+msgstr ""
 
 #: src/components/layouts/CheckIn/BottomNav.tsx:15
 msgid "Scan"
@@ -10054,7 +10170,7 @@ msgid "Sent to each attendee with their ticket details"
 msgstr "Αποστέλλεται σε κάθε συμμετέχοντα με τα στοιχεία εισιτηρίου"
 
 #: src/components/routes/event/Settings/index.tsx:72
-#: src/components/routes/organizer/Settings/index.tsx:61
+#: src/components/routes/organizer/Settings/index.tsx:62
 msgid "SEO"
 msgstr "SEO"
 
@@ -10086,6 +10202,10 @@ msgstr "Σεπτέμβριος"
 msgid "Service Fee"
 msgstr "Χρέωση Υπηρεσίας"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
+msgid "Service Fees"
+msgstr ""
+
 #: src/components/layouts/CheckIn/index.tsx:498
 msgid "Session cancelled"
 msgstr "Η συνεδρία ακυρώθηκε"
@@ -10114,7 +10234,7 @@ msgstr "Ορισμός ή αφαίρεση της ετικέτας της ημε
 msgid "Set the end time of each date to be this long after its start time."
 msgstr "Ορίστε την ώρα λήξης κάθε ημερομηνίας τόσο μετά την ώρα έναρξής της."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:217
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:222
 msgid "Set the starting number for invoice numbering. This cannot be changed once invoices have been generated."
 msgstr "Ορίστε τον αρχικό αριθμό για την αρίθμηση τιμολογίων. Δεν μπορεί να αλλαχθεί μόλις δημιουργηθούν τιμολόγια."
 
@@ -10368,7 +10488,7 @@ msgstr "Snapchat"
 msgid "Social"
 msgstr "Κοινωνικά"
 
-#: src/components/routes/organizer/Settings/index.tsx:55
+#: src/components/routes/organizer/Settings/index.tsx:56
 msgid "Social Links"
 msgstr "Κοινωνικοί Σύνδεσμοι"
 
@@ -10872,6 +10992,16 @@ msgstr "Email Υποστήριξης"
 msgid "Swedish"
 msgstr "Σουηδικά"
 
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/organizer/Settings/index.tsx:80
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
+msgid "Swish"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:131
+msgid "Swish accepted this configuration on {0}."
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:51
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:54
 msgid "Swish could not complete the payment."
@@ -10881,12 +11011,28 @@ msgstr ""
 msgid "Swish could not start the payment. Please try again."
 msgstr ""
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:119
+msgid "Swish is currently configured through the server environment for Swish number {0}. Saving settings here overrides that configuration for this organizer."
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:150
 msgid "Swish is temporarily unavailable. Please try again in a moment."
 msgstr ""
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:153
+msgid "Swish number"
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:286
 msgid "Swish on this device"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:78
+msgid "Swish settings saved and the connection to Swish was verified."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:79
+msgid "Swish settings saved."
 msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:45
@@ -10957,11 +11103,11 @@ msgstr "Φόρος & Τέλη"
 msgid "Tax collected grouped by tax type and event"
 msgstr "Φόρος που συλλέχθηκε ανά τύπο φόρου και εκδήλωση"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:253
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:258
 msgid "Tax Details"
 msgstr "Λεπτομέρειες Φόρου"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:254
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:259
 msgid "Tax information to appear at the bottom of all invoices (e.g., VAT number, tax registration)"
 msgstr "Πληροφορίες φόρου για εμφάνιση στο κάτω μέρος όλων των τιμολογίων (π.χ., αριθμός ΦΠΑ, φορολογική εγγραφή)"
 
@@ -11048,6 +11194,14 @@ msgstr "Το πρότυπο αποθηκεύτηκε επιτυχώς"
 #: src/components/layouts/OrganizerHomepage/index.tsx:348
 msgid "Terms of Service"
 msgstr "Όροι Χρήσης"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:104
+msgid "Test (Merchant Swish Simulator)"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:198
+msgid "Test connection"
+msgstr ""
 
 #: src/components/common/ThemeColorControls/index.tsx:107
 msgid "Text may be hard to read"
@@ -11145,6 +11299,10 @@ msgstr "Ο σύνδεσμος που κάνατε κλικ δεν είναι έ�
 #: src/components/routes/product-widget/SelectProducts/index.tsx:800
 msgid "The maximum number of products for {0}is {1}"
 msgstr "Ο μέγιστος αριθμός προϊόντων για {0}είναι {1}"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:154
+msgid "The merchant Swish number (payee alias), 10 or 11 digits, for example 1234679304."
+msgstr ""
 
 #: src/components/modals/CancelOrderModal/index.tsx:75
 msgid "The order will be marked as refunded. You will need to return the payment to the customer yourself."
@@ -11425,7 +11583,7 @@ msgstr "Αυτή η εκδήλωση έχει εξαντληθεί"
 msgid "This event's dates and times are set on the occurrence schedule."
 msgstr "Οι ημερομηνίες και οι ώρες αυτής της εκδήλωσης ορίζονται στο πρόγραμμα ημερομηνιών."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:153
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:158
 msgid "This information will be shown on the payment page, order summary page, and order confirmation email."
 msgstr "Αυτές οι πληροφορίες θα εμφανίζονται στη σελίδα πληρωμής, στη σύνοψη παραγγελίας και στο email επιβεβαίωσης."
 
@@ -11919,10 +12077,14 @@ msgstr "Ξεναγήσεις"
 msgid "Track account growth and performance by attribution source"
 msgstr "Παρακολούθηση ανάπτυξης λογαριασμού και απόδοσης ανά πηγή"
 
-#: src/components/routes/organizer/Settings/index.tsx:73
+#: src/components/routes/organizer/Settings/index.tsx:74
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:172
 msgid "Tracking & Analytics"
 msgstr "Παρακολούθηση & Αναλυτικά"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:83
+msgid "Transactions"
+msgstr ""
 
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:176
 msgid "Try a different search term or filter"
@@ -11976,6 +12138,7 @@ msgstr "Twitch"
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:73
 msgid "Type"
 msgstr "Τύπος"
 
@@ -12367,6 +12530,18 @@ msgstr "Επαλήθευση αριθμού ΦΠΑ..."
 msgid "VAT"
 msgstr "ΦΠΑ"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:89
+msgid "VAT 12%"
+msgstr ""
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:88
+msgid "VAT 25%"
+msgstr ""
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:90
+msgid "VAT 6%"
+msgstr ""
+
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:195
 msgid "VAT country code"
 msgstr "Κωδικός χώρας ΦΠΑ"
@@ -12404,6 +12579,10 @@ msgstr "Η επαλήθευση αριθμού ΦΠΑ απέτυχε. Παρακ
 msgid "VAT on Fee"
 msgstr "ΦΠΑ στο Τέλος"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:91
+msgid "VAT Other"
+msgstr ""
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:81
 msgid "VAT Rate"
 msgstr "Συντελεστής ΦΠΑ"
@@ -12424,6 +12603,10 @@ msgstr "Οι ρυθμίσεις ΦΠΑ αποθηκεύτηκαν. Επαληθ�
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:85
 msgid "VAT settings updated"
 msgstr "Οι ρυθμίσεις ΦΠΑ ενημερώθηκαν"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:92
+msgid "VAT Total"
+msgstr ""
 
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:27
 msgid "VAT Treatment for Platform Fees"
@@ -12513,7 +12696,7 @@ msgstr "Προβολή όλων των λιστών check-in"
 msgid "View all messages sent across the platform"
 msgstr "Προβολή όλων των μηνυμάτων που εστάλησαν στην πλατφόρμα"
 
-#: src/components/routes/organizer/Reports/index.tsx:50
+#: src/components/routes/organizer/Reports/index.tsx:56
 msgid "View and download reports across all your events. Only completed orders are included."
 msgstr "Προβολή και λήψη αναφορών για όλες τις εκδηλώσεις. Περιλαμβάνονται μόνο ολοκληρωμένες παραγγελίες."
 
@@ -13027,7 +13210,7 @@ msgstr "Όταν οι πελάτες αγοράζουν εισιτήρια, οι
 msgid "When enabled, buyers can copy their own name and email onto all attendees at once. Turn this off to remove the \"All attendees\" option; buyers can still copy to the first attendee, and the rest must be entered individually."
 msgstr "Όταν είναι ενεργοποιημένο, οι αγοραστές μπορούν να αντιγράψουν το όνομα και το email τους σε όλους τους συμμετέχοντες ταυτόχρονα. Απενεργοποιήστε το για να αφαιρέσετε την επιλογή \"Όλοι οι συμμετέχοντες\"· οι αγοραστές μπορούν ακόμα να αντιγράψουν τα στοιχεία στον πρώτο συμμετέχοντα, ενώ οι υπόλοιποι πρέπει να εισαχθούν μεμονωμένα."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:192
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
 msgid "When enabled, invoices will be generated for ticket orders. Invoices will sent along with the order confirmation email. Attendees can also download their invoices from the order confirmation page."
 msgstr "Όταν είναι ενεργό, θα δημιουργούνται τιμολόγια για παραγγελίες εισιτηρίων. Τα τιμολόγια αποστέλλονται με το email επιβεβαίωσης."
 
@@ -13043,7 +13226,11 @@ msgstr "Όταν είναι ενεργό, νέες εκδηλώσεις θα ε�
 msgid "When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported."
 msgstr "Όταν είναι ενεργό, δεν θα χρεώνονται χρεώσεις εφαρμογής σε συναλλαγές Stripe Connect."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:142
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:140
+msgid "When enabled, Swish can be selected as a payment method in each event's payment settings."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:147
 msgid "When offline payments are enabled, users will be able to complete their orders and receive their tickets. Their tickets will clearly indicate the order is not paid, and the check-in tool will notify the check-in staff if an order requires payment."
 msgstr "Όταν οι πληρωμές εκτός σύνδεσης είναι ενεργές, οι χρήστες μπορούν να ολοκληρώσουν παραγγελίες και να λάβουν εισιτήρια με ένδειξη μη πληρωμένης παραγγελίας."
 
@@ -13278,7 +13465,7 @@ msgstr "Πρέπει να επαληθεύσετε το email λογαριασμ
 msgid "You receive"
 msgstr "Λαμβάνετε"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:144
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Θα πρέπει να σημάνετε χειροκίνητα παραγγελία ως πληρωμένη. Αυτό μπορεί να γίνει στη σελίδα διαχείρισης παραγγελίας."
 

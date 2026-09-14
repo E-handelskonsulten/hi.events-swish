@@ -374,6 +374,10 @@ msgstr "Uma entrada de texto multilinha"
 msgid "A new verification code has been sent to your email"
 msgstr "Um novo código de verificação foi enviado para o seu email"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:183
+msgid "A passphrase is stored. Leave blank to keep it."
+msgstr ""
+
 #: src/components/forms/TaxAndFeeForm/index.tsx:29
 msgid "A percentage of the product price. E.g., 3.5% of the product price"
 msgstr "Uma porcentagem do preço do produto. Ex: 3,5% do preço do produto"
@@ -431,6 +435,18 @@ msgstr "Abandonado"
 msgid "About"
 msgstr "Sobre"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:161
+msgid "Absolute path on the server to the merchant certificate in PEM format."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:168
+msgid "Absolute path on the server to the private key in PEM format."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:175
+msgid "Absolute path on the server to the Swish root CA bundle in PEM format."
+msgstr ""
+
 #: src/components/common/PlatformFeesSettings/index.tsx:192
 msgid "Absorb fee"
 msgstr "Absorver taxa"
@@ -448,7 +464,7 @@ msgstr "Cor de Destaque"
 msgid "Accept"
 msgstr "Aceitar"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:97
 msgid "Accept bank transfers, checks, or other offline payment methods"
 msgstr "Aceitar transferências bancárias, cheques ou outros métodos de pagamento offline"
 
@@ -463,6 +479,14 @@ msgstr "Aceitar convite"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:166
 msgid "Accept Invitation"
 msgstr "Aceitar convite"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:114
+msgid "Accept Swish payments for this organizer's events. Certificate files must be placed on the server; only their paths are stored here."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:92
+msgid "Accept Swish payments. Requires Swish to be configured in the organizer settings."
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:596
 msgid "Access"
@@ -531,6 +555,11 @@ msgstr "Conta atualizada com sucesso"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:48
 msgid "Account verification revoked"
 msgstr "Verificação da conta revogada"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:103
+#: src/components/routes/organizer/Reports/index.tsx:47
+msgid "Accounting Report"
+msgstr ""
 
 #: src/components/common/AdminUsersTable/index.tsx:127
 #: src/components/layouts/Admin/index.tsx:14
@@ -679,7 +708,7 @@ msgstr "Adicionar detalhes"
 msgid "Add event details"
 msgstr "Adicionar detalhes do evento"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:154
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:159
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "Adicione instruções para pagamentos offline (por exemplo, detalhes de transferência bancária, onde enviar cheques, prazos de pagamento)"
 
@@ -788,7 +817,7 @@ msgstr "Informações adicionais"
 #: src/components/common/OrderDetails/index.tsx:116
 #: src/components/forms/QuestionForm/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:163
-#: src/components/routes/organizer/Settings/index.tsx:43
+#: src/components/routes/organizer/Settings/index.tsx:44
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:103
 msgid "Address"
 msgstr "Endereço"
@@ -986,7 +1015,7 @@ msgstr "Todos os próximos eventos"
 msgid "All users"
 msgstr "Todos os utilizadores"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:167
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:172
 msgid "Allow attendees associated with unpaid orders to check in"
 msgstr "Permitir que participantes associados a pedidos não pagos façam check-in"
 
@@ -1721,7 +1750,7 @@ msgstr "Voltar às mensagens"
 msgid "Back to payment"
 msgstr ""
 
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:42
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:45
 msgid "Back to Reports"
 msgstr "Voltar aos Relatórios"
 
@@ -1765,7 +1794,7 @@ msgstr "Preço base"
 msgid "Based on the global sale period above, not per date"
 msgstr "Com base no período de venda global acima, não por data"
 
-#: src/components/routes/organizer/Settings/index.tsx:31
+#: src/components/routes/organizer/Settings/index.tsx:32
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
 msgstr "Informações básicas"
@@ -1779,7 +1808,7 @@ msgstr "Como esta conta tem encomendas concluídas, os registos de transações 
 msgid "Billing Address"
 msgstr "Endereço de cobrança"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:182
 msgid "Billing Settings"
 msgstr "Configurações de cobrança"
 
@@ -2079,6 +2108,10 @@ msgstr "Categoria Criada com Sucesso"
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:48
 msgid "Category deleted successfully"
 msgstr "Categoria eliminada com sucesso"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:160
+msgid "Certificate path"
+msgstr ""
 
 #: src/components/common/LocationPicker/index.tsx:201
 msgid "Change"
@@ -2611,6 +2644,10 @@ msgstr "Configurar impostos e taxas"
 msgid "Configure which products are available for this occurrence and optionally adjust pricing."
 msgstr "Defina que produtos estão disponíveis para esta data e, se quiser, ajuste os preços."
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:118
+msgid "Configured by the server"
+msgstr ""
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:35
 msgid "Configured Discount"
 msgstr "Desconto configurado"
@@ -2721,6 +2758,10 @@ msgstr "Os dados de ligação são obrigatórios para datas online"
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:41
 msgid "Connection details are required for online events"
 msgstr "Os detalhes de ligação são obrigatórios para eventos online"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:130
+msgid "Connection verified"
+msgstr ""
 
 #: src/components/common/WaitlistTable/index.tsx:152
 #: src/components/layouts/EventHomepage/index.tsx:677
@@ -2900,6 +2941,10 @@ msgstr "Não foi possível preparar a atualização em massa."
 #: src/components/common/LocationPicker/index.tsx:153
 msgid "Could not retrieve address details"
 msgstr "Não foi possível obter os detalhes da morada"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:98
+msgid "Could not run the Swish connection test. Please try again."
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:275
 msgid "Could not save date"
@@ -3313,6 +3358,10 @@ msgstr "Diário"
 msgid "Daily revenue, taxes, fees, and refunds across all events"
 msgstr "Receita diária, impostos, taxas e reembolsos em todos os eventos"
 
+#: src/components/routes/organizer/Reports/index.tsx:48
+msgid "Daily sales and refunds per event and payment method with VAT split by rate, for bank reconciliation"
+msgstr ""
+
 #: src/components/routes/event/Reports/index.tsx:25
 msgid "Daily Sales Report"
 msgstr "Relatório de vendas diárias"
@@ -3344,7 +3393,7 @@ msgstr "Zona de perigo"
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:80
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:555
 #: src/components/routes/event/Settings/index.tsx:102
-#: src/components/routes/organizer/Settings/index.tsx:79
+#: src/components/routes/organizer/Settings/index.tsx:86
 msgid "Danger Zone"
 msgstr "Zona de Perigo"
 
@@ -3365,6 +3414,7 @@ msgstr "Dashboard"
 #: src/components/common/WaitlistTable/index.tsx:184
 #: src/components/forms/QuestionForm/index.tsx:136
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:39
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:52
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:56
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:24
 msgid "Date"
@@ -3751,7 +3801,7 @@ msgstr "Mostra quantas vagas restam em cada data no widget de bilhetes. Pode sub
 msgid "Display name"
 msgstr "Nome a apresentar"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:200
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:205
 msgid "Document Label"
 msgstr "Etiqueta do documento"
 
@@ -4183,7 +4233,7 @@ msgid "Email Preview"
 msgstr "Visualização do e-mail"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:349
-#: src/components/routes/organizer/Settings/index.tsx:67
+#: src/components/routes/organizer/Settings/index.tsx:68
 msgid "Email Templates"
 msgstr "Modelos de e-mail"
 
@@ -4232,9 +4282,13 @@ msgstr "Ativar autoatendimento para participantes"
 msgid "Enable attendee self-service by default"
 msgstr "Ativar autoatendimento para participantes por padrão"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:196
 msgid "Enable Invoicing"
 msgstr "Habilitar faturamento"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:139
+msgid "Enable Swish"
+msgstr ""
 
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:21
 msgid "Enable this capacity to stop product sales when the limit is reached"
@@ -4414,6 +4468,10 @@ msgstr "registos"
 msgid "Entries will appear here when customers join the waitlist for sold out products."
 msgstr "As inscrições aparecerão aqui quando os clientes se juntarem à lista de espera de produtos esgotados."
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:146
+msgid "Environment"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:149
 #: src/components/layouts/Checkout/index.tsx:194
 #: src/hooks/useOrderActions.tsx:84
@@ -4450,6 +4508,7 @@ msgstr "EUR"
 #: src/components/routes/admin/Messages/index.tsx:163
 #: src/components/routes/admin/Messages/index.tsx:278
 #: src/components/routes/events/Dashboard/index.tsx:184
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:58
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:19
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:41
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:43
@@ -4496,7 +4555,7 @@ msgid "Event date display"
 msgstr "Apresentação da data do evento"
 
 #: src/components/routes/account/ManageAccount/sections/EventDefaultsSettings/index.tsx:5
-#: src/components/routes/organizer/Settings/index.tsx:37
+#: src/components/routes/organizer/Settings/index.tsx:38
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:73
 msgid "Event Defaults"
 msgstr "Padrões de eventos"
@@ -5175,7 +5234,7 @@ msgstr "Primeiros 90 dias"
 msgid "First attendee"
 msgstr "Primeiro participante"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:216
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:221
 msgid "First Invoice Number"
 msgstr "Primeiro número da fatura"
 
@@ -5459,6 +5518,10 @@ msgstr "Entendido"
 msgid "Greek"
 msgstr "Grego"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:86
+msgid "Gross"
+msgstr ""
+
 #: src/components/common/EventCard/index.tsx:369
 msgid "Gross revenue"
 msgstr "Receita bruta"
@@ -5717,6 +5780,10 @@ msgstr "Quantos minutos o cliente tem para concluir o pedido. Recomendamos pelo 
 msgid "How many times can this code be used?"
 msgstr "Quantas vezes esse código pode ser usado?"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:98
+msgid "How to read this report"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:449
 msgid "How VAT is applied to the platform fees we charge you."
 msgstr "Como o IVA é aplicado às taxas de plataforma que lhe cobramos."
@@ -5769,7 +5836,7 @@ msgstr "Se em branco, o endereço será utilizado para gerar um link do Google M
 msgid "If checked, this category will be hidden from the public."
 msgstr "Se selecionado, esta categoria ficará oculta do público."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:168
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:173
 msgid "If enabled, check-in staff can either mark attendees as checked in or mark the order as paid and check in the attendees. If disabled, attendees associated with unpaid orders cannot be checked in."
 msgstr "Se ativado, a equipe de check-in pode marcar os participantes como registrados ou marcar o pedido como pago e registrar os participantes. Se desativado, os participantes associados a pedidos não pagos não poderão ser registrados."
 
@@ -6007,15 +6074,15 @@ msgstr "Fatura"
 msgid "Invoice downloaded successfully"
 msgstr "Fatura baixada com sucesso"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:262
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:267
 msgid "Invoice Notes"
 msgstr "Notas da fatura"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:212
 msgid "Invoice Numbering"
 msgstr "Numeração da fatura"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:187
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:192
 msgid "Invoice Settings"
 msgstr "Configurações da fatura"
 
@@ -6207,6 +6274,10 @@ msgstr "Últimos 7 dias"
 msgid "Last 90 days"
 msgstr "Últimos 90 dias"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:124
+msgid "Last connection test failed"
+msgstr ""
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:160
 msgid "Last login"
 msgstr "Último Login"
@@ -6264,7 +6335,11 @@ msgstr "Últimos check-ins"
 msgid "Leave “from” as today to start right away."
 msgstr "Deixe «De» como hoje para começar de imediato."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:184
+msgid "Leave blank if the private key is not encrypted."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:206
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Deixe em branco para usar a palavra padrão \"Fatura\""
 
@@ -6447,7 +6522,7 @@ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat el
 msgid "Main Office"
 msgstr "Escritório principal"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:180
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:185
 msgid "Make billing address mandatory during checkout"
 msgstr "Tornar o endereço de cobrança obrigatório durante o checkout"
 
@@ -6497,7 +6572,7 @@ msgstr "Gerir no Stripe"
 msgid "Manage order"
 msgstr "Gerenciar pedido"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:100
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:105
 msgid "Manage payment and invoicing settings for this event."
 msgstr "Gerenciar as configurações de pagamento e faturamento para este evento."
 
@@ -6839,6 +6914,10 @@ msgstr "Navegue até o participante"
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:455
 msgid "Need to switch Stripe accounts? Disconnect this one."
 msgstr "Precisa de mudar de conta Stripe? Desligue esta."
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:93
+msgid "Net (excl. VAT)"
+msgstr ""
 
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:85
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:36
@@ -7354,11 +7433,11 @@ msgstr "Novembro"
 msgid "Number of dates to create"
 msgstr "Número de datas a criar"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:227
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:232
 msgid "Number of days allowed for payment (leave blank to omit payment terms from invoices)"
 msgstr "Número de dias permitidos para pagamento (deixe em branco para omitir os termos de pagamento nas faturas)"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:209
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:214
 msgid "Number Prefix"
 msgstr "Prefixo numérico"
 
@@ -7451,7 +7530,7 @@ msgstr "As ofertas expiram após {timeoutHours} horas."
 msgid "Offline"
 msgstr "Offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:146
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:151
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Pedidos offline não são refletidos nas estatísticas do evento até que sejam marcados como pagos."
 
@@ -7459,19 +7538,19 @@ msgstr "Pedidos offline não são refletidos nas estatísticas do evento até qu
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "O pagamento offline falhou. Por favor, tente novamente ou entre em contato com o organizador do evento."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:157
 msgid "Offline Payment Instructions"
 msgstr "Instruções de Pagamento Offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:96
 msgid "Offline Payments"
 msgstr "Pagamentos offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:140
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:145
 msgid "Offline Payments Information"
 msgstr "Informações sobre pagamentos offline"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:135
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:140
 msgid "Offline Payments Settings"
 msgstr "Configurações de pagamentos offline"
 
@@ -7523,6 +7602,10 @@ msgstr "Depois de criar um evento, você o verá aqui."
 #: src/components/common/ReportTable/index.tsx:260
 msgid "Once you start collecting data, you'll see it here."
 msgstr "Assim que você começar a coletar dados, eles aparecerão aqui."
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:99
+msgid "One line per day, event and payment method. Sales are positive and refunds are separate negative lines, so the sum of the Gross column equals the amount settled to your bank account before payment provider fees. VAT is split by Swedish rate; service fees are included in Gross."
+msgstr ""
 
 #: src/components/common/EventStatusBadge/index.tsx:18
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:31
@@ -7662,7 +7745,7 @@ msgstr ""
 msgid "Option {i}"
 msgstr "Opção {i}"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:268
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
 msgstr "Informações adicionais opcionais a serem exibidas em todas as faturas (ex.: condições de pagamento, taxas por atraso, política de devolução)"
 
@@ -7674,7 +7757,7 @@ msgstr "Chamada à ação opcional"
 msgid "Optional nickname shown in pickers, e.g. \"HQ Conference Room\""
 msgstr "Alcunha opcional mostrada nos seletores, p. ex. \"Sala de conferências\""
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:215
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
 msgstr "Prefixo opcional para os números das faturas (ex.: INV-)"
 
@@ -7907,16 +7990,16 @@ msgstr "Encomendas:"
 msgid "Organic Accounts"
 msgstr "Contas orgânicas"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:245
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:250
 msgid "Organization Address"
 msgstr "Endereço da organização"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:236
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:241
 msgid "Organization Details"
 msgstr "Detalhes da organização"
 
 #: src/components/forms/OrganizerForm/index.tsx:28
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:238
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:243
 msgid "Organization Name"
 msgstr "Nome da organização"
 
@@ -7964,7 +8047,7 @@ msgstr "Organizador não encontrado"
 msgid "Organizer restored successfully"
 msgstr "Organizador restaurado com sucesso"
 
-#: src/components/routes/organizer/Settings/index.tsx:158
+#: src/components/routes/organizer/Settings/index.tsx:165
 msgid "Organizer Settings"
 msgstr "Configurações do organizador"
 
@@ -8185,7 +8268,7 @@ msgstr "Pagamento"
 msgid "Payment & Invoicing"
 msgstr "Pagamento e faturamento"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:99
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:104
 msgid "Payment & Invoicing Settings"
 msgstr "Configurações de pagamento e faturamento"
 
@@ -8193,7 +8276,7 @@ msgstr "Configurações de pagamento e faturamento"
 msgid "Payment Date"
 msgstr "Data de pagamento"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:226
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:231
 msgid "Payment Due Period"
 msgstr "Prazo para pagamento"
 
@@ -8211,7 +8294,11 @@ msgstr "Instruções de pagamento"
 msgid "Payment method"
 msgstr "Método de pagamento"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:68
+msgid "Payment Method"
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:111
 msgid "Payment Methods"
 msgstr "Métodos de pagamento"
 
@@ -8241,7 +8328,7 @@ msgstr "Status do pagamento"
 msgid "Payment succeeded!"
 msgstr "Pagamento realizado com sucesso!"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:224
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:229
 msgid "Payment Terms"
 msgstr "Termos de pagamento"
 
@@ -8249,7 +8336,7 @@ msgstr "Termos de pagamento"
 msgid "Payments not available"
 msgstr "Pagamentos não disponíveis"
 
-#: src/components/routes/organizer/Settings/index.tsx:90
+#: src/components/routes/organizer/Settings/index.tsx:97
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:407
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:463
 msgid "Payouts"
@@ -8394,7 +8481,7 @@ msgstr "Taxa da plataforma de {0} deduzida do seu pagamento"
 #: src/components/routes/event/Settings/index.tsx:112
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:48
 #: src/components/routes/organizer/Reports/index.tsx:41
-#: src/components/routes/organizer/Settings/index.tsx:96
+#: src/components/routes/organizer/Settings/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/PlatformFeesSettings/index.tsx:42
 msgid "Platform Fees"
 msgstr "Taxas da plataforma"
@@ -8642,6 +8729,14 @@ msgstr "Imprimir para PDF"
 msgid "Privacy Policy"
 msgstr "Política de Privacidade"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:181
+msgid "Private key passphrase"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:167
+msgid "Private key path"
+msgstr ""
+
 #: src/components/modals/RefundOrderModal/index.tsx:158
 msgid "Process Refund"
 msgstr "Processar reembolso"
@@ -8720,6 +8815,10 @@ msgstr "Produto atualizado"
 #: src/components/common/PromoCodeTable/index.tsx:156
 msgid "Product(s)"
 msgstr "Produto(s)"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:105
+msgid "Production"
+msgstr ""
 
 #: src/components/common/PromoCodeTable/index.tsx:72
 #: src/components/modals/DuplicateEventModal/index.tsx:49
@@ -9064,6 +9163,10 @@ msgstr "Contas de referência"
 msgid "Refresh Preview"
 msgstr "Atualizar visualização"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:46
+msgid "Refund"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:218
 msgid "Refund all orders for these dates"
 msgstr "Reembolsar todos os pedidos destas datas"
@@ -9189,14 +9292,14 @@ msgstr "Reabrir esta data à venda? Os bilhetes cancelados anteriormente não se
 msgid "Repeats"
 msgstr "Repetição"
 
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:26
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:29
 msgid "Report not found"
 msgstr "Relatório não encontrado"
 
 #: src/components/layouts/Event/index.tsx:104
 #: src/components/layouts/OrganizerLayout/index.tsx:99
 #: src/components/routes/event/Reports/index.tsx:47
-#: src/components/routes/organizer/Reports/index.tsx:51
+#: src/components/routes/organizer/Reports/index.tsx:57
 msgid "Reports"
 msgstr "Relatórios"
 
@@ -9212,7 +9315,7 @@ msgstr "Pedido"
 msgid "Requested by"
 msgstr "Pedido por"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:179
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:184
 msgid "Require Billing Address"
 msgstr "Exigir endereço de cobrança"
 
@@ -9393,9 +9496,17 @@ msgstr "Revogar oferta"
 msgid "Role"
 msgstr "Papel"
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:174
+msgid "Root CA path"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1053
 msgid "Runs"
 msgstr "Duração"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:45
+msgid "Sale"
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:429
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:85
@@ -9493,7 +9604,7 @@ msgstr "Sábado"
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:141
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:193
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:94
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:275
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
@@ -9501,6 +9612,7 @@ msgstr "Sábado"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:86
@@ -9566,6 +9678,10 @@ msgstr "Localizações guardadas"
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:153
 msgid "Saving an override creates a dedicated configuration for this organizer if it's currently on the system default."
 msgstr "Guardar uma personalização cria uma configuração dedicada a este organizador, caso esteja a usar a predefinição do sistema."
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:204
+msgid "Saving with Swish enabled performs a live connection test against Swish before the settings are stored."
+msgstr ""
 
 #: src/components/layouts/CheckIn/BottomNav.tsx:15
 msgid "Scan"
@@ -10054,7 +10170,7 @@ msgid "Sent to each attendee with their ticket details"
 msgstr "Enviado a cada participante com os detalhes do seu ingresso"
 
 #: src/components/routes/event/Settings/index.tsx:72
-#: src/components/routes/organizer/Settings/index.tsx:61
+#: src/components/routes/organizer/Settings/index.tsx:62
 msgid "SEO"
 msgstr "SEO"
 
@@ -10086,6 +10202,10 @@ msgstr "Setembro"
 msgid "Service Fee"
 msgstr "Taxa de serviço"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
+msgid "Service Fees"
+msgstr ""
+
 #: src/components/layouts/CheckIn/index.tsx:498
 msgid "Session cancelled"
 msgstr "Sessão cancelada"
@@ -10114,7 +10234,7 @@ msgstr "Definir ou remover a etiqueta da data"
 msgid "Set the end time of each date to be this long after its start time."
 msgstr "Defina a hora de fim de cada data com este intervalo após a hora de início."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:217
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:222
 msgid "Set the starting number for invoice numbering. This cannot be changed once invoices have been generated."
 msgstr "Defina o número inicial para a numeração das faturas. Isso não poderá ser alterado depois que as faturas forem geradas."
 
@@ -10368,7 +10488,7 @@ msgstr "Snapchat"
 msgid "Social"
 msgstr "Social"
 
-#: src/components/routes/organizer/Settings/index.tsx:55
+#: src/components/routes/organizer/Settings/index.tsx:56
 msgid "Social Links"
 msgstr "Links sociais"
 
@@ -10872,6 +10992,16 @@ msgstr "E-mail de suporte"
 msgid "Swedish"
 msgstr "Sueco"
 
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
+#: src/components/routes/organizer/Settings/index.tsx:80
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
+msgid "Swish"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:131
+msgid "Swish accepted this configuration on {0}."
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:51
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:54
 msgid "Swish could not complete the payment."
@@ -10881,12 +11011,28 @@ msgstr ""
 msgid "Swish could not start the payment. Please try again."
 msgstr ""
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:119
+msgid "Swish is currently configured through the server environment for Swish number {0}. Saving settings here overrides that configuration for this organizer."
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:150
 msgid "Swish is temporarily unavailable. Please try again in a moment."
 msgstr ""
 
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:153
+msgid "Swish number"
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:286
 msgid "Swish on this device"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:78
+msgid "Swish settings saved and the connection to Swish was verified."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:79
+msgid "Swish settings saved."
 msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:45
@@ -10957,11 +11103,11 @@ msgstr "Impostos e taxas"
 msgid "Tax collected grouped by tax type and event"
 msgstr "Impostos cobrados agrupados por tipo de imposto e evento"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:253
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:258
 msgid "Tax Details"
 msgstr "Detalhes fiscais"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:254
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:259
 msgid "Tax information to appear at the bottom of all invoices (e.g., VAT number, tax registration)"
 msgstr "Informações fiscais que aparecerão na parte inferior de todas as faturas (ex.: número de IVA, registro fiscal)"
 
@@ -11048,6 +11194,14 @@ msgstr "Modelo salvo com sucesso"
 #: src/components/layouts/OrganizerHomepage/index.tsx:348
 msgid "Terms of Service"
 msgstr "Termos de serviço"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:104
+msgid "Test (Merchant Swish Simulator)"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:198
+msgid "Test connection"
+msgstr ""
 
 #: src/components/common/ThemeColorControls/index.tsx:107
 msgid "Text may be hard to read"
@@ -11145,6 +11299,10 @@ msgstr "O link que você clicou é inválido."
 #: src/components/routes/product-widget/SelectProducts/index.tsx:800
 msgid "The maximum number of products for {0}is {1}"
 msgstr "O número máximo de produtos para {0} é {1}"
+
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:154
+msgid "The merchant Swish number (payee alias), 10 or 11 digits, for example 1234679304."
+msgstr ""
 
 #: src/components/modals/CancelOrderModal/index.tsx:75
 msgid "The order will be marked as refunded. You will need to return the payment to the customer yourself."
@@ -11425,7 +11583,7 @@ msgstr "Este evento está esgotado"
 msgid "This event's dates and times are set on the occurrence schedule."
 msgstr "As datas e os horários deste evento são definidos no calendário de datas."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:153
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:158
 msgid "This information will be shown on the payment page, order summary page, and order confirmation email."
 msgstr "Essas informações serão exibidas na página de pagamento, no resumo do pedido e no e-mail de confirmação do pedido."
 
@@ -11919,10 +12077,14 @@ msgstr "Visitas guiadas"
 msgid "Track account growth and performance by attribution source"
 msgstr "Acompanhe o crescimento e desempenho da conta por fonte de atribuição"
 
-#: src/components/routes/organizer/Settings/index.tsx:73
+#: src/components/routes/organizer/Settings/index.tsx:74
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:172
 msgid "Tracking & Analytics"
 msgstr "Rastreamento e análise"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:83
+msgid "Transactions"
+msgstr ""
 
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:176
 msgid "Try a different search term or filter"
@@ -11976,6 +12138,7 @@ msgstr "Twitch"
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:73
 msgid "Type"
 msgstr "Tipo"
 
@@ -12367,6 +12530,18 @@ msgstr "A validar o seu número de IVA..."
 msgid "VAT"
 msgstr "CUBA"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:89
+msgid "VAT 12%"
+msgstr ""
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:88
+msgid "VAT 25%"
+msgstr ""
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:90
+msgid "VAT 6%"
+msgstr ""
+
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:195
 msgid "VAT country code"
 msgstr "Código do país de IVA"
@@ -12404,6 +12579,10 @@ msgstr "A validação do número de IVA falhou. Por favor, verifique o seu núme
 msgid "VAT on Fee"
 msgstr "IVA sobre taxa"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:91
+msgid "VAT Other"
+msgstr ""
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:81
 msgid "VAT Rate"
 msgstr "Taxa de IVA"
@@ -12424,6 +12603,10 @@ msgstr "Configurações de IVA guardadas. Estamos a validar o seu número de IVA
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:85
 msgid "VAT settings updated"
 msgstr "Definições de IVA atualizadas"
+
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:92
+msgid "VAT Total"
+msgstr ""
 
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:27
 msgid "VAT Treatment for Platform Fees"
@@ -12513,7 +12696,7 @@ msgstr "Ver todas as listas de check-in"
 msgid "View all messages sent across the platform"
 msgstr "Ver todas as mensagens enviadas na plataforma"
 
-#: src/components/routes/organizer/Reports/index.tsx:50
+#: src/components/routes/organizer/Reports/index.tsx:56
 msgid "View and download reports across all your events. Only completed orders are included."
 msgstr "Visualize e descarregue relatórios de todos os seus eventos. Apenas pedidos concluídos são incluídos."
 
@@ -13027,7 +13210,7 @@ msgstr "Quando os clientes comprarem ingressos, os pedidos aparecerão aqui."
 msgid "When enabled, buyers can copy their own name and email onto all attendees at once. Turn this off to remove the \"All attendees\" option; buyers can still copy to the first attendee, and the rest must be entered individually."
 msgstr "Quando ativado, os compradores podem copiar o seu nome e e-mail para todos os participantes de uma só vez. Desative para remover a opção \"Todos os participantes\"; os compradores podem ainda copiar para o primeiro participante, e os restantes têm de ser introduzidos individualmente."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:192
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:197
 msgid "When enabled, invoices will be generated for ticket orders. Invoices will sent along with the order confirmation email. Attendees can also download their invoices from the order confirmation page."
 msgstr "Quando ativado, as faturas serão geradas para os pedidos de ingressos. As faturas serão enviadas junto com o e-mail de confirmação do pedido. Os participantes também podem baixar suas faturas na página de confirmação do pedido."
 
@@ -13043,7 +13226,11 @@ msgstr "Quando ativado, novos eventos exibirão uma caixa de seleção de opt-in
 msgid "When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported."
 msgstr "Quando ativado, não serão cobradas taxas de aplicação nas transações Stripe Connect. Use isto para países onde as taxas de aplicação não são suportadas."
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:142
+#: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:140
+msgid "When enabled, Swish can be selected as a payment method in each event's payment settings."
+msgstr ""
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:147
 msgid "When offline payments are enabled, users will be able to complete their orders and receive their tickets. Their tickets will clearly indicate the order is not paid, and the check-in tool will notify the check-in staff if an order requires payment."
 msgstr "Quando os pagamentos offline estão ativados, os usuários poderão concluir seus pedidos e receber seus ingressos. Seus ingressos indicarão claramente que o pedido não foi pago, e a ferramenta de check-in notificará a equipe se um pedido exigir pagamento."
 
@@ -13278,7 +13465,7 @@ msgstr "Você precisa verificar o e-mail da sua conta antes de poder enviar mens
 msgid "You receive"
 msgstr "Você recebe"
 
-#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:144
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Você terá que marcar um pedido como pago manualmente. Isso pode ser feito na página de gerenciamento de pedidos."
 
