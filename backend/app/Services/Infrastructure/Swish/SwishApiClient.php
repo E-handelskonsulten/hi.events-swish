@@ -17,6 +17,7 @@ use HiEvents\Services\Infrastructure\Swish\DTO\SwishConnectionConfigDTO;
 use HiEvents\Services\Infrastructure\Swish\DTO\SwishCreatePaymentResponseDTO;
 use HiEvents\Services\Infrastructure\Swish\DTO\SwishPaymentRequestDTO;
 use HiEvents\Services\Infrastructure\Utlitiy\Retry\Retrier;
+use Illuminate\Support\Str;
 use JsonException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -160,7 +161,7 @@ class SwishApiClient
      */
     public function verifyConnection(SwishConnectionConfigDTO $connection): void
     {
-        $probeUuid = strtoupper(str_replace('-', '', (string) \Illuminate\Support\Str::uuid()));
+        $probeUuid = strtoupper(str_replace('-', '', (string) Str::uuid()));
 
         try {
             $this->send(

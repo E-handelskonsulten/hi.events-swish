@@ -32,7 +32,6 @@ use HiEvents\Services\Domain\Payment\Swish\SwishPaymentFailureService;
 use HiEvents\Services\Domain\Payment\Swish\SwishPaymentRequestService;
 use HiEvents\Services\Domain\Payment\Swish\SwishPaymentStatusReconciliationService;
 use HiEvents\Services\Infrastructure\Session\CheckoutSessionManagementService;
-use HiEvents\Services\Infrastructure\Swish\DTO\SwishConnectionConfigDTO;
 use HiEvents\Services\Infrastructure\Swish\SwishConfigurationService;
 use Illuminate\Database\DatabaseManager;
 use Psr\Log\LoggerInterface;
