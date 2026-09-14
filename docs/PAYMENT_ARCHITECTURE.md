@@ -302,6 +302,22 @@ Rejected alternative: editing `PaymentIntentSucceededHandler`/`GetPaymentIntentH
   `MockHandler` bound through `SwishClientFactory`), `tests/Feature/Http/Actions/Organizers/Swish/` and
   `tests/Feature/Services/Domain/Report/AccountingReportTest.php`.
 
+**Phase D – guarded mass refunds (implemented 2026-09-14)**
+
+- New tables `swish_mass_refund_runs` / `swish_mass_refund_items`; domain services under
+  `Services/Domain/Payment/Swish/MassRefund/` (`SwishMassRefundPreflightService`, `SwishMassRefundRunService`,
+  `SwishMassRefundProcessor`, `SwishMassRefundCompletionService`), handlers under
+  `Services/Application/Handlers/Event/Swish/MassRefund/`, actions under `Http/Actions/Events/Swish/MassRefund/`,
+  jobs `ProcessSwishMassRefundRunJob` (per-run batch, `WithoutOverlapping`), `ProcessActiveSwishMassRefundRunsJob`
+  (scheduler tick every 5 s = throttle) and `ResumeStalledSwishMassRefundRunsJob`, mail `SwishMassRefundCompletedMail`.
+- Upstream edits: `routes/api.php` (+5 routes), `Providers/RepositoryServiceProvider.php` (+2), `Console/Kernel.php`
+  (+2 schedules), `DomainObjects/Enums/OrderAuditAction.php` (+3 cases), frontend
+  `routes/event/orders.tsx` (button + modal mount). Everything else is additive (`modals/SwishMassRefundModal`,
+  `api/swish-mass-refund.client.ts`, queries/mutations).
+- Refunds reuse `RefundSwishOrderHandler` unchanged, so the Phase C callback/poller/ledger path is the single source of
+  truth; the run only tracks per-order outcome. See `docs/SWISH_MSS_VERIFICATION.md` §13 for the verification run and
+  the two Phase C fixes it produced.
+
 ### Cross-cutting constraints to respect while implementing
 
 - **Currency:** Swish is SEK-only; `CreateSwishPaymentHandler` must reject non-SEK orders with a translated `ResourceConflictException`, and the event `PaymentSettings` UI should warn when the event currency is not SEK.

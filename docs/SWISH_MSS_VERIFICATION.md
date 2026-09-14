@@ -281,6 +281,61 @@ One line per day (organizer timezone), event and payment method; refunds are sep
 Columns: transactions, gross, service fees, VAT 25/12/6/other, VAT total, net excl. VAT. The sum of the gross column
 over a period is the amount settled to the bank account before payment-provider fees.
 
+## 13. Mass refunds for cancelled events (Phase D)
+
+**Back office:** Event → Orders → red **Refund all orders** button (organizer admins only). The modal shows the pre-flight
+summary (refundable orders, total, per ticket type, orders that need manual handling with the reason), two options
+(email each buyer, cancel orders and release tickets) and a type-to-confirm field; the red button reads
+"Refund 25 500,00 kr" and only enables when the event title is typed exactly. After confirming, the same modal turns
+into the live progress view (pending / awaiting Swish / refunded / failed / skipped, failed list with retry, manual list).
+While a run is active the orders page button reads "Mass refund in progress (n/total)" and reopens the progress view.
+
+**API (all `Role::ADMIN`):**
+
+```bash
+curl -s "$API/events/$EVENT/swish-mass-refunds/preview" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"
+curl -s -X POST "$API/events/$EVENT/swish-mass-refunds" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json" \
+  -H "Content-Type: application/json" -d '{"confirmation":"<exact event title>","notify_buyers":true,"cancel_orders":true}'
+curl -s "$API/events/$EVENT/swish-mass-refunds" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"          # runs
+curl -s "$API/events/$EVENT/swish-mass-refunds/$RUN" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"     # run + items
+curl -s -X POST "$API/events/$EVENT/swish-mass-refunds/$RUN/retry" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"
+```
+
+**How it runs.** `swish_mass_refund_runs` is the audit record (who, when, event, counts, totals, options, completion
+summary); `swish_mass_refund_items` holds one row per order. `ProcessActiveSwishMassRefundRunsJob` runs every five
+seconds from the scheduler and processes one batch per active run: it syncs items whose Swish refund has settled
+(`PAID` → succeeded, `ERROR` → failed), claims up to `SWISH_MASS_REFUND_BATCH_SIZE` (default 5) pending items with
+`FOR UPDATE SKIP LOCKED` and requests each refund through the normal `RefundSwishOrderHandler` (so callbacks, poller
+and statuses are exactly Phase C). Throttle = batch size per 5 s. Individual failures mark the item failed and the run
+continues. When nothing is open the run completes, the organizer gets `SwishMassRefundCompletedMail` with the summary,
+failed list and manual list, and per-order `order_audit_logs` rows (`MASS_REFUND_REQUESTED/FAILED/SKIPPED`) exist.
+
+**Resumability / idempotency.** State lives only in the two tables, so a closed browser or a redeploy changes nothing:
+the next tick continues where it stopped. `ResumeStalledSwishMassRefundRunsJob` (every minute) releases items stuck in
+`PROCESSING` for longer than `SWISH_MASS_REFUND_STALE_AFTER_SECONDS` (default 180). Before each refund the order is
+re-checked: already refunded → skipped; an in-flight refund created by another path → adopted instead of duplicated.
+Re-running on the same event only picks up orders that are still refundable; a second run is refused (409) while one is
+active or when nothing is left.
+
+**Manual-handling rules.** Payment older than 12 months (Swish refund window), a previous failed refund
+(`refund_status = REFUND_FAILED` or a Swish refund in `ERROR`), a refund already pending, or no stored Swish payment
+reference.
+
+**Volume verification (2026-09-14, fake Swish).** 120 paid orders (90 × 150 kr + 30 × 400 kr = 25 500 kr) on a seeded
+event: run completed in ~2.5 min at 5 requests per 5 s window, 120/120 refunded, orders `CANCELLED`/`REFUNDED`,
+120 attendees cancelled, 120 audit rows, buyer refund + cancellation mails and the organizer summary mail in Mailpit,
+accounting report shows SALE 25 500 kr (Sep 11) and REFUND −25 500 kr (Sep 14) with VAT 5 100 kr on both lines.
+The run exposed and fixed two Phase C issues: concurrent refund callbacks could record the ledger twice
+(`SwishRefundCompletionService` now takes a per-refund advisory lock) and cancelled-then-refunded orders dropped out of
+the accounting report (sales are now keyed on `payment_status = PAYMENT_RECEIVED`, not order status).
+
+**Dev note.** With `QUEUE_CONNECTION=sync` the first batch runs inside the start request (a few seconds for 5 refunds);
+the scheduler drives the rest. `schedule:work` and `queue:work` are not started by the dev container — start them with
+`docker compose exec -d -u www-data backend php artisan schedule:work` and `… queue:work --queue=default,webhook-queue,occurrences`.
+The fake Swish server (appendix) now also serves `PUT/GET /swish-cpcapi/api/v{1,2}/refunds/{uuid}` (`CREATED → DEBITED → PAID`
+after `REFUND_DELAY_MS`, callbacks twice, message containing `RF07`/`RF08` → `ERROR`, `PA02` → 422) and logs the
+observed request rate.
+
 ## Appendix: running against a local fake Swish instead of MSS
 
 `config/swish.php` accepts `SWISH_MSS_BASE_URL` (and `SWISH_PRODUCTION_BASE_URL`) overrides. During Phase A the whole
