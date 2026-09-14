@@ -37,7 +37,19 @@ fallback (poller) and cancel-on-expiry. Everything runs against the local dev st
    - The `minio/minio` image cannot be pulled here; `backend/.env` uses `FILESYSTEM_PUBLIC_DISK=local`
      and `FILESYSTEM_PRIVATE_DISK=local` instead.
    - The backend container listens on 8080 internally (host port 1234 answers nothing); talk to it
-     through nginx (`https://localhost:8443/api`) or from inside the container (`http://localhost:8080`).
+     through nginx (`http://localhost:8080/api`) or from inside the container (`http://localhost:8080`).
+   - **Use the dev app over plain HTTP: `http://localhost:8080`.** The self-signed certificate on 8443 is
+     valid (CN=localhost, SAN, regenerated with `MSYS_NO_PATHCONV=1`), but Chrome still shows a
+     "not private" interstitial for it. Chrome treats `localhost` as a secure context, so the Secure
+     checkout cookie and login work over HTTP. For that, the frontend container must be started with the
+     API base pointed at 8080 (shell overrides, no tracked file changes):
+     ```bash
+     export FORWARD_DB_PORT=5434 API_URL_CLIENT=http://localhost:8080/api FRONTEND_URL=http://localhost:8080
+     docker compose -f docker-compose.dev.yml up -d frontend
+     ```
+     and `backend/.env` has `APP_FRONTEND_URL=http://localhost:8080` so email links open without the
+     interstitial. Account registration → organizer onboarding was verified in Chrome this way.
+     `https://localhost:8443` keeps working if you accept the interstitial once.
 
 ## 1. Configure the backend (`backend/.env`, git-ignored)
 
@@ -93,7 +105,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -X POST https://iodine-safeness-straine
 ## 3. Create a test order
 
 ```bash
-API=https://localhost:8443/api
+API=http://localhost:8080/api   # or https://localhost:8443/api with curl -k
 # token + ids come from: $C exec backend php artisan dev:bootstrap   (prints event/product ids and a Bearer token)
 TOKEN=<bearer token>
 EVENT=<single_event_id>
