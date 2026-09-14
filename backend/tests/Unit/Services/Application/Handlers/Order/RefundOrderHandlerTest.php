@@ -9,6 +9,7 @@ use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\DTO\RefundOrderDTO;
 use HiEvents\Services\Application\Handlers\Order\Payment\Offline\RefundOfflineOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\Payment\Stripe\RefundOrderHandler as RefundStripeOrderHandler;
+use HiEvents\Services\Application\Handlers\Order\Payment\Swish\RefundSwishOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\RefundOrderHandler;
 use Mockery;
 use Mockery\MockInterface;
@@ -27,6 +28,8 @@ class RefundOrderHandlerTest extends TestCase
 
     private RefundOfflineOrderHandler|MockInterface $refundOfflineOrderHandler;
 
+    private RefundSwishOrderHandler|MockInterface $refundSwishOrderHandler;
+
     private RefundOrderHandler $handler;
 
     protected function setUp(): void
@@ -36,11 +39,13 @@ class RefundOrderHandlerTest extends TestCase
         $this->orderRepository = Mockery::mock(OrderRepositoryInterface::class);
         $this->refundStripeOrderHandler = Mockery::mock(RefundStripeOrderHandler::class);
         $this->refundOfflineOrderHandler = Mockery::mock(RefundOfflineOrderHandler::class);
+        $this->refundSwishOrderHandler = Mockery::mock(RefundSwishOrderHandler::class);
 
         $this->handler = new RefundOrderHandler(
             $this->orderRepository,
             $this->refundStripeOrderHandler,
             $this->refundOfflineOrderHandler,
+            $this->refundSwishOrderHandler,
         );
     }
 
@@ -52,6 +57,20 @@ class RefundOrderHandlerTest extends TestCase
         $dto = $this->givenDTO();
         $this->refundOfflineOrderHandler->shouldReceive('handle')->once()->with($dto)->andReturn($refundedOrder);
         $this->refundStripeOrderHandler->shouldNotReceive('handle');
+        $this->refundSwishOrderHandler->shouldNotReceive('handle');
+
+        $this->assertSame($refundedOrder, $this->handler->handle($dto));
+    }
+
+    public function test_a_swish_order_is_refunded_by_the_swish_handler(): void
+    {
+        $this->givenOrderIsFound(PaymentProviders::SWISH->name);
+        $refundedOrder = new OrderDomainObject;
+
+        $dto = $this->givenDTO();
+        $this->refundSwishOrderHandler->shouldReceive('handle')->once()->with($dto)->andReturn($refundedOrder);
+        $this->refundStripeOrderHandler->shouldNotReceive('handle');
+        $this->refundOfflineOrderHandler->shouldNotReceive('handle');
 
         $this->assertSame($refundedOrder, $this->handler->handle($dto));
     }
@@ -64,6 +83,7 @@ class RefundOrderHandlerTest extends TestCase
         $dto = $this->givenDTO();
         $this->refundStripeOrderHandler->shouldReceive('handle')->once()->with($dto)->andReturn($refundedOrder);
         $this->refundOfflineOrderHandler->shouldNotReceive('handle');
+        $this->refundSwishOrderHandler->shouldNotReceive('handle');
 
         $this->assertSame($refundedOrder, $this->handler->handle($dto));
     }

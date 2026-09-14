@@ -88,6 +88,7 @@ use HiEvents\Http\Actions\CheckInLists\UpdateCheckInListAction;
 use HiEvents\Http\Actions\Common\GetColorThemesAction;
 use HiEvents\Http\Actions\Common\Webhooks\StripeIncomingWebhookAction;
 use HiEvents\Http\Actions\Common\Webhooks\SwishPaymentCallbackAction;
+use HiEvents\Http\Actions\Common\Webhooks\SwishRefundCallbackAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateEventEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateOrganizerEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\DeleteEventEmailTemplateAction;
@@ -187,6 +188,9 @@ use HiEvents\Http\Actions\Organizers\Stripe\CopyStripeConnectAccountAction;
 use HiEvents\Http\Actions\Organizers\Stripe\CreateStripeConnectAccountAction;
 use HiEvents\Http\Actions\Organizers\Stripe\DisconnectStripeConnectAccountAction;
 use HiEvents\Http\Actions\Organizers\Stripe\GetStripeConnectAccountsAction;
+use HiEvents\Http\Actions\Organizers\Swish\GetOrganizerSwishSettingsAction;
+use HiEvents\Http\Actions\Organizers\Swish\TestOrganizerSwishSettingsAction;
+use HiEvents\Http\Actions\Organizers\Swish\UpsertOrganizerSwishSettingsAction;
 use HiEvents\Http\Actions\Organizers\UpdateOrganizerLocationAction;
 use HiEvents\Http\Actions\Organizers\UpdateOrganizerStatusAction;
 use HiEvents\Http\Actions\Organizers\Vat\GetOrganizerVatSettingAction;
@@ -366,6 +370,10 @@ $router->middleware(['auth:api'])->group(
             ->where('stripeAccountId', '[A-Za-z0-9_]+');
 
         // VAT Settings - Organizer level
+        $router->get('/organizers/{organizerId}/swish-settings', GetOrganizerSwishSettingsAction::class);
+        $router->put('/organizers/{organizerId}/swish-settings', UpsertOrganizerSwishSettingsAction::class);
+        $router->post('/organizers/{organizerId}/swish-settings/test', TestOrganizerSwishSettingsAction::class);
+
         $router->get('/organizers/{organizerId}/vat-settings', GetOrganizerVatSettingAction::class);
         $router->post('/organizers/{organizerId}/vat-settings', UpsertOrganizerVatSettingAction::class);
 
@@ -650,6 +658,7 @@ $router->prefix('/public')->group(
         // Webhooks
         $router->post('/webhooks/stripe', StripeIncomingWebhookAction::class);
         $router->post('/webhooks/swish/payments', SwishPaymentCallbackAction::class);
+        $router->post('/webhooks/swish/refunds', SwishRefundCallbackAction::class);
 
         // Check-In
         $router->get('/check-in-lists/{check_in_list_short_id}', GetCheckInListPublicAction::class);

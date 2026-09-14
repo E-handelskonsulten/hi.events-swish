@@ -741,5 +741,22 @@
     "This mobile number is not connected to Swish.": "Det här mobilnumret är inte anslutet till Swish.",
     "This order does not require payment.": "Den här ordern kräver ingen betalning.",
     "This order has already been paid.": "Den här ordern är redan betald.",
-    "This order has expired or is no longer awaiting payment.": "Den här ordern har gått ut eller väntar inte längre på betalning."
+    "This order has expired or is no longer awaiting payment.": "Den här ordern har gått ut eller väntar inte längre på betalning.",
+    "A Swish number is required when Swish is enabled.": "Ett Swish-nummer krävs när Swish är aktiverat.",
+    "Could not reach Swish: :error": "Kunde inte nå Swish: :error",
+    "Refund": "Återbetalning",
+    "Swish accepted the certificate and the Swish number.": "Swish godkände certifikatet och Swish-numret.",
+    "Swish accepted the certificate but the Swish number does not belong to it.": "Swish godkände certifikatet men Swish-numret tillhör inte certifikatet.",
+    "Swish error: :message": "Swish-fel: :message",
+    "Swish refunds must be at least 1 SEK.": "Swish-återbetalningar måste vara minst 1 SEK.",
+    "Swish rejected the certificate. Check that the certificate, private key and passphrase belong together and match the selected environment.": "Swish avvisade certifikatet. Kontrollera att certifikatet, den privata nyckeln och lösenfrasen hör ihop och matchar den valda miljön.",
+    "The certificate path is required when Swish is enabled.": "Sökvägen till certifikatet krävs när Swish är aktiverat.",
+    "The private key path is required when Swish is enabled.": "Sökvägen till den privata nyckeln krävs när Swish är aktiverat.",
+    "The refund amount cannot exceed the amount available to refund.": "Återbetalningsbeloppet får inte överstiga det belopp som finns kvar att återbetala.",
+    "The root CA path is required when Swish is enabled.": "Sökvägen till rot-CA krävs när Swish är aktiverat.",
+    "The Swish number must be 10 or 11 digits, for example 1234679304.": "Swish-numret måste vara 10 eller 11 siffror, till exempel 1234679304.",
+    "There is already a refund pending for this order. Please wait for the refund to be processed before requesting another one.": "Det finns redan en pågående återbetalning för den här ordern. Vänta tills återbetalningen har behandlats innan du begär en ny.",
+    "There is no completed Swish payment associated with this order.": "Det finns ingen genomförd Swish-betalning kopplad till den här ordern.",
+    "This order has already been fully refunded.": "Den här ordern har redan återbetalats helt.",
+    "Organizer not found.": "Arrangören hittades inte."
 }

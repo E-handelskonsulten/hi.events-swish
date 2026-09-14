@@ -10,6 +10,7 @@ use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\DTO\RefundOrderDTO;
 use HiEvents\Services\Application\Handlers\Order\Payment\Offline\RefundOfflineOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\Payment\Stripe\RefundOrderHandler as RefundStripeOrderHandler;
+use HiEvents\Services\Application\Handlers\Order\Payment\Swish\RefundSwishOrderHandler;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Throwable;
 
@@ -19,6 +20,7 @@ class RefundOrderHandler
         private readonly OrderRepositoryInterface $orderRepository,
         private readonly RefundStripeOrderHandler $refundStripeOrderHandler,
         private readonly RefundOfflineOrderHandler $refundOfflineOrderHandler,
+        private readonly RefundSwishOrderHandler $refundSwishOrderHandler,
     ) {}
 
     /**
@@ -41,6 +43,10 @@ class RefundOrderHandler
 
         if ($order->getPaymentProvider() === PaymentProviders::OFFLINE->name) {
             return $this->refundOfflineOrderHandler->handle($refundOrderDTO);
+        }
+
+        if ($order->getPaymentProvider() === PaymentProviders::SWISH->name) {
+            return $this->refundSwishOrderHandler->handle($refundOrderDTO);
         }
 
         return $this->refundStripeOrderHandler->handle($refundOrderDTO);

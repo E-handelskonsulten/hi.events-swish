@@ -58,6 +58,7 @@ use HiEvents\Repository\Eloquent\StripeCustomerRepository;
 use HiEvents\Repository\Eloquent\StripePaymentsRepository;
 use HiEvents\Repository\Eloquent\StripePayoutsRepository;
 use HiEvents\Repository\Eloquent\SwishPaymentsRepository;
+use HiEvents\Repository\Eloquent\SwishRefundsRepository;
 use HiEvents\Repository\Eloquent\TaxAndFeeRepository;
 use HiEvents\Repository\Eloquent\TicketLookupTokenRepository;
 use HiEvents\Repository\Eloquent\UserRepository;
@@ -118,6 +119,7 @@ use HiEvents\Repository\Interfaces\StripeCustomerRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePaymentsRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePayoutsRepositoryInterface;
 use HiEvents\Repository\Interfaces\SwishPaymentsRepositoryInterface;
+use HiEvents\Repository\Interfaces\SwishRefundsRepositoryInterface;
 use HiEvents\Repository\Interfaces\TaxAndFeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\TicketLookupTokenRepositoryInterface;
 use HiEvents\Repository\Interfaces\UserRepositoryInterface;
@@ -178,6 +180,7 @@ class RepositoryServiceProvider extends ServiceProvider
         OrganizerStripePlatformRepositoryInterface::class => OrganizerStripePlatformRepository::class,
         OrganizerSwishSettingsRepositoryInterface::class => OrganizerSwishSettingsRepository::class,
         SwishPaymentsRepositoryInterface::class => SwishPaymentsRepository::class,
+        SwishRefundsRepositoryInterface::class => SwishRefundsRepository::class,
         OrganizerVatSettingRepositoryInterface::class => OrganizerVatSettingRepository::class,
         OrganizerConfigurationRepositoryInterface::class => OrganizerConfigurationRepository::class,
         TicketLookupTokenRepositoryInterface::class => TicketLookupTokenRepository::class,

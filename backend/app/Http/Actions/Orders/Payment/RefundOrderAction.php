@@ -4,6 +4,8 @@ namespace HiEvents\Http\Actions\Orders\Payment;
 
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\Exceptions\RefundNotPossibleException;
+use HiEvents\Exceptions\Swish\SwishApiException;
+use HiEvents\Exceptions\Swish\SwishConfigurationException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Http\Request\Order\RefundOrderRequest;
 use HiEvents\Resources\Order\OrderResource;
@@ -38,6 +40,10 @@ class RefundOrderAction extends BaseAction
                 'amount' => $exception instanceof ApiErrorException
                     ? 'Stripe error: '.$exception->getMessage()
                     : $exception->getMessage(),
+            ]);
+        } catch (SwishApiException|SwishConfigurationException $exception) {
+            throw ValidationException::withMessages([
+                'amount' => __('Swish error: :message', ['message' => $exception->getMessage()]),
             ]);
         }
 
