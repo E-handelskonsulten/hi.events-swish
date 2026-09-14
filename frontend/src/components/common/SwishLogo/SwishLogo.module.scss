@@ -1,0 +1,13 @@
+.logo {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.wordmark {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--checkout-text-primary, #111827);
+  vertical-align: middle;
+}
