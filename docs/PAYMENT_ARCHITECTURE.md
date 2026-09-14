@@ -245,7 +245,7 @@ Rejected alternative: editing `PaymentIntentSucceededHandler`/`GetPaymentIntentH
 - `frontend/src/api/swish.client.ts` (create/get/cancel Swish payment; keeps `order.client.ts` untouched).
 - `frontend/src/queries/useGetSwishPaymentPublic.ts` (polling, 2–3 s, `enabled` while non-terminal), `frontend/src/mutations/useCreateSwishPaymentPublic.ts`, `useCancelSwishPaymentPublic.ts`.
 - `frontend/src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx` + `Swish.module.scss` + subcomponents: `SwishFlowSwitch`, `SwishMobileFlow` ("Öppna Swish" → `swish://paymentrequest?token=…&callbackurl=<encoded return URL>`; on return show waiting state; falls back to a manual hint if the deeplink does not open), `SwishDesktopFlow` (phone input with `07x`/`+467x` validation, "Väntar på att du bekräftar i Swish-appen"), `SwishWaitingState`, `SwishErrorState` (declined / timed out / cancelled / unavailable, each with "Försök igen" that re-uses the order via cancel-and-recreate), `useIsMobileDevice.ts` hook (UA + `pointer:coarse`, SSR-safe).
-- `frontend/src/components/routes/product-widget/SwishReturn/index.tsx` (route `:orderShortId/swish_return` — deeplink return target that resolves via `useGetSwishPaymentPublic` then navigates to `summary`/`payment`).
+- `frontend/src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx` — rendered by the existing `PaymentReturn` page when `?provider=swish` is present; resolves via `useGetSwishPaymentPublic` then navigates to `summary`/`payment`. No new route: the deeplink returns to the existing `payment_return` step so the widget's return handling works unchanged (see §8.1).
 - `frontend/public/images/swish/` — Swish logo per brand guidelines (from the developer.swish.nu brand kit; not generated).
 - `frontend/src/types/swish.ts` (keeps `types.ts` edits to the union only).
 
@@ -255,7 +255,8 @@ Rejected alternative: editing `PaymentIntentSucceededHandler`/`GetPaymentIntentH
 |------|------|-----|
 | `frontend/src/types.ts` | `PaymentProvider = 'STRIPE' \| 'OFFLINE' \| 'SWISH'` | Shared type used by settings + order. |
 | `frontend/src/components/routes/product-widget/Payment/index.tsx` | `isSwishEnabled`, state union, default-method order (Swish first when enabled + mobile), one `<div>` mount + one selector tab with logo, submit branch delegating to the Swish component | Only place the method selector exists; no plugin registry. |
-| `frontend/src/router.tsx` | +1 child route `:orderShortId/swish_return` | Deeplink return page. |
+| `frontend/src/components/routes/product-widget/PaymentReturn/index.tsx` | branch on `?provider=swish` → render `SwishPaymentReturn`; otherwise unchanged Stripe behaviour | The deeplink lands on the existing `payment_return` step (§8.1). |
+| `frontend/src/embed/widget.js` | add `'hievents_provider'` to the forwarded return params (1 line) | Widget must pass the provider hint through when it reopens the checkout modal after the Swish app returns to the host page. |
 | `frontend/src/utilites/orderHelper.ts` | include `'SWISH'` in `isOrderRefundable` | Refund button in admin. |
 | `frontend/src/components/common/OrdersTable/index.tsx`, `common/OrderDetails/index.tsx` | provider badge/label for `SWISH` | Admin display (small). |
 | `frontend/src/components/layouts/Checkout/index.tsx` (optional) | cancel live Swish request on abandon | Only if `CancelSwishPaymentOnAbandonJob` isn't used server-side. |
@@ -304,3 +305,49 @@ Backend (9 + env/lang): `DomainObjects/Enums/PaymentProviders.php`, `routes/api.
 Frontend (7 + locales): `types.ts`, `router.tsx`, `routes/product-widget/Payment/index.tsx`, `utilites/orderHelper.ts`, `common/OrdersTable/index.tsx`, `routes/organizer/Settings/index.tsx`, `routes/event/Settings/Sections/PaymentSettings/index.tsx`, plus locale `.po` catalogs (regenerated) and optionally `common/OrderDetails`, `modals/PublishEventModal`, `layouts/Checkout/index.tsx`.
 
 Everything else is additive under `*/Swish/*` paths.
+
+---
+
+## 8. Fork-specific constraints (added 2026-09-14)
+
+### 8.1 M-commerce return must work inside the embedded widget
+
+How the widget handles a payment-provider return today (`frontend/src/embed/widget.js`):
+
+- `StripeCheckoutForm::buildReturnUrl` sets Stripe's `return_url` to the **host page URL** (from `getEmbedParentUrl()`, `utilites/iframeResize.ts`) with `hievents_event`, `hievents_order`, `hievents_session` appended.
+- On load, `widget.js` reads those params (`isPaymentReturn`), recovers the session from `localStorage` resume data if the param is missing, forwards `session_identifier` plus the whitelisted `STRIPE_RETURN_PARAMS`, reopens the checkout modal at `/checkout/{event}/{order}/payment_return?…`, and cleans the host URL with `history.replaceState`.
+- Outside the widget the return URL is simply `{origin}/checkout/{event}/{order}/payment_return?session_identifier=…`.
+
+Swish m-commerce design that satisfies both contexts:
+
+1. **Deeplink target:** `swish://paymentrequest?token=<PaymentRequestToken>&callbackurl=<encoded return URL>`. The return URL is built by the same function as Stripe's (`buildReturnUrl` logic moved into a shared helper or duplicated in the Swish component): host page URL + `hievents_event`, `hievents_order`, `hievents_session`, **`hievents_provider=swish`** when embedded; `/checkout/{event}/{order}/payment_return?provider=swish&session_identifier=…` when not embedded.
+2. **Opening the deeplink from inside the sandboxed iframe:** the widget's sandbox already grants `allow-top-navigation-by-user-activation`, so the "Öppna Swish" control must be a real user-activated `<a href="swish://…" target="_top">` (or `window.top.location.assign` inside the click handler). Never trigger it from an effect/timer — the browser will block it.
+3. **Return path:** the Swish app reopens the `callbackurl` in the phone's browser → host page loads `widget.js` → `isPaymentReturn` → modal reopens at `payment_return` with `session_identifier` and `provider=swish` → `PaymentReturn` renders `SwishPaymentReturn`, which polls `GET …/swish/payment` (server-side reconciliation, §7 Phase A item 8) and navigates to `summary` on `PAID` or back to `payment` with a Swedish error on `DECLINED/CANCELLED/ERROR/EXPIRED`.
+4. **Session survival:** the return may land in a different browser/tab than the one that started checkout (in-app browsers, Safari vs Chrome). Three layers cover it: `hievents_session` in the return URL, the widget's `localStorage` resume record (`readResume()`), and `GetOrderActionPublic` re-issuing the session cookie when `session_identifier` is in the query.
+5. **No user return at all:** if the buyer never comes back to the browser, the callback + poller still complete the order and the ticket email is sent; the checkout page they left keeps polling `GET …/swish/payment` and moves to `summary` on its own if it is still open.
+6. **Upstream edits this adds:** `widget.js` (+1 forwarded param) and `PaymentReturn/index.tsx` (provider branch), replacing the separate `swish_return` route originally planned in Phase B.
+
+E2E coverage: extend `e2e/tests/widget/` with a spec that loads the widget on a host page, starts a Swish m-commerce payment (mocked), and simulates the return by navigating the host page to `?hievents_event=…&hievents_order=…&hievents_session=…&hievents_provider=swish`.
+
+### 8.2 Callback testing with ngrok (test environment)
+
+Public base URL reserved for this project: `https://iodine-safeness-strainer.ngrok-free.dev`.
+
+Dev-stack topology (`docker/development/docker-compose.dev.yml`, `docker/development/nginx/nginx.conf`):
+
+| Host port | Container | Serves |
+|-----------|-----------|--------|
+| `8080` (HTTP) and `8443` (HTTPS, self-signed) | `nginx` | `/` → `frontend:5678` (SSR), `/api/` → `backend:8080` (Laravel, `/api` prefix stripped) |
+| `1234` | `backend` | Laravel directly, routes at root (no `/api` prefix) |
+| `5678`, `24678` | `frontend` | Vite SSR + HMR |
+
+Rules:
+
+- **Tunnel target: `nginx` on host port `8080`** (plain HTTP; ngrok terminates TLS). One tunnel then serves both the Swish callbacks (`/api/public/webhooks/swish/*`) and, when needed, the frontend for real-device deeplink tests. Do not tunnel `1234` — the callback URL would lose its `/api` prefix and the frontend would be unreachable.
+- Command: `ngrok http 8080 --domain=iodine-safeness-strainer.ngrok-free.dev`
+- Callback URLs Swish will receive:
+  `https://iodine-safeness-strainer.ngrok-free.dev/api/public/webhooks/swish/payments` and `…/api/public/webhooks/swish/refunds`.
+- Configuration: a dedicated `SWISH_CALLBACK_BASE_URL` (default = `config('app.url')`) in `backend/config/swish.php`, so only that one variable points at ngrok while `APP_URL`/`APP_FRONTEND_URL` stay on localhost. Set `SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api` in `backend/.env` (or `docker/development/.env`), then restart the queue worker so the job process picks up the new config.
+- **When to start the tunnel:** it is *not* needed for the automated test suites (Swish HTTP is mocked). Start it right before the first manual `POST …/swish/payment` in the Phase A verification — MSS fires the callback a few seconds after creation, so the tunnel must already be up. Order of operations: `start-dev.sh` (stack + queue worker + scheduler) → migrations → start ngrok → create order → create Swish payment → watch `docker compose … logs -f backend` / `queue:work` output.
+- **Real-device m-commerce test (Phase B):** the phone must reach the frontend through the same tunnel, so additionally set `APP_FRONTEND_URL`, `VITE_FRONTEND_URL` and `VITE_API_URL_CLIENT` to the ngrok domain and restart the `frontend` container. Expect ngrok's free-tier browser interstitial once per device; API callbacks from Swish are not affected by it.
+- MSS callback source: Swish's test environment calls back over HTTPS from Swish-owned IPs; our endpoint does not rely on the callback's authenticity (it re-fetches status over mTLS before acting), so no IP allow-listing is needed for the tunnel.
