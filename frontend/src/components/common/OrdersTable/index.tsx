@@ -23,6 +23,7 @@ import {ManageOrderModal} from "../../modals/ManageOrderModal";
 import {useClipboard, useDisclosure} from "@mantine/hooks";
 import {useMemo, useState} from "react";
 import {NoResultsSplash} from "../NoResultsSplash";
+import {SwishLogo} from "../SwishLogo";
 import classes from "./OrdersTable.module.scss";
 import {formatNumber} from "../../../utilites/helpers.ts";
 import {useUrlHash} from "../../../hooks/useUrlHash.ts";
@@ -298,6 +299,11 @@ export const OrdersTable = ({orders, event, compact}: OrdersTableProps) => {
                                 <>
                                     <IconCash size={16}/>
                                     <Text>{t`Offline`}</Text>
+                                </>
+                            ) : order.payment_provider === 'SWISH' ? (
+                                <>
+                                    <SwishLogo height={14}/>
+                                    <Text>Swish</Text>
                                 </>
                             ) : (
                                 <>
