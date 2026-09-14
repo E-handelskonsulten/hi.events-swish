@@ -287,6 +287,21 @@ Rejected alternative: editing `PaymentIntentSucceededHandler`/`GetPaymentIntentH
 | `frontend/src/components/modals/PublishEventModal/index.tsx` (optional) | treat `SWISH` as a valid paid-ticket method so publish is not blocked when Stripe isn't connected | Only matters in SaaS mode. |
 | `backend/lang/se.json` | Swedish strings for new backend messages (`__()` keys are English, so no `en.json` change) | i18n convention. |
 
+**Phase C outcome (implemented 2026-09-14)**
+
+- Delivered as planned with two deviations: `Models/Organizer.php` was not touched (settings are read through
+  `OrganizerSwishSettingsRepository::findByOrganizerId`, no eager loading needed) and `PublishEventModal` was left
+  unchanged (not required outside SaaS mode).
+- Additional upstream edits: `DomainObjects/OrderDomainObject::isRefundable` and `utilites/orderHelper.ts` whitelist
+  `SWISH`; `DomainObjects/Enums/OrganizerReportTypes`, `Services/Domain/Report/Factory/OrganizerReportServiceFactory`,
+  `Http/Actions/Reports/ExportOrganizerReportAction`, `types.ts`, `routes/organizer/Reports/index.tsx` and
+  `Reports/ReportLayout/index.tsx` gained the new `accounting` report (`Services/Domain/Report/OrganizerReports/AccountingReport.php`,
+  `routes/organizer/Reports/AccountingReport/index.tsx`): per day/event/provider sale and refund lines with VAT split
+  by Swedish rate from `orders.taxes_and_fees_rollup`, refunds prorated from `order_refunds`.
+- Tests live in `tests/Feature/Services/Domain/Payment/Swish/` (callbacks, reconciliation, refunds; Guzzle
+  `MockHandler` bound through `SwishClientFactory`), `tests/Feature/Http/Actions/Organizers/Swish/` and
+  `tests/Feature/Services/Domain/Report/AccountingReportTest.php`.
+
 ### Cross-cutting constraints to respect while implementing
 
 - **Currency:** Swish is SEK-only; `CreateSwishPaymentHandler` must reject non-SEK orders with a translated `ResourceConflictException`, and the event `PaymentSettings` UI should warn when the event currency is not SEK.

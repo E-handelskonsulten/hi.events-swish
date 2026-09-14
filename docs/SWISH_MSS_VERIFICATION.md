@@ -215,6 +215,72 @@ for i in 1 2; do curl -sk -X POST "$API/public/events/$EVENT/order/$SHORT/swish/
 ```
 Both responses must carry the **same** `instruction_uuid`; `select count(*) from swish_payments where order_id=…` = 1.
 
+## 10. Refunds (Phase C)
+
+Refunds use the normal back-office endpoint; the Swish branch is chosen from `orders.payment_provider`. The order must
+have a `swish_payments` row with status `PAID` and a `payment_reference` (MSS returns one on every paid request).
+
+```bash
+TOKEN=<bearer token>; ORDER_ID=<orders.id of a Swish-paid order>
+curl -s -X POST "$API/events/$EVENT/orders/$ORDER_ID/refund" \
+  -H "Authorization: Bearer $TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" \
+  -d '{"amount":10,"notify_buyer":false,"cancel_order":false}'
+```
+
+Expected:
+
+1. `200` with the order, `refund_status = REFUND_PENDING`. A `swish_refunds` row exists with status `CREATED`,
+   `payer_alias` = merchant number, `payee_alias` = the buyer's number, and `location_url` pointing at
+   `/swish-cpcapi/api/v1/refunds/<instruction uuid>`.
+2. MSS moves the refund to `DEBITED` and then `PAID` within a few seconds and posts the refund callback (twice) to
+   `$CALLBACK_BASE/public/webhooks/swish/refunds`. Each callback re-fetches the refund over mTLS before applying it.
+3. On `PAID`: `swish_refunds.status = PAID`, one `order_refunds` row (`payment_provider = SWISH`,
+   `refund_id` = instruction uuid, `status = succeeded`), `orders.total_refunded` incremented,
+   `refund_status = PARTIALLY_REFUNDED` or `REFUNDED`, event statistics updated, `ORDER_REFUNDED` domain event.
+4. Lost callback: `ReconcilePendingSwishRefundsJob` runs every 30 s and reconciles `CREATED`/`DEBITED` refunds.
+5. Simulated failure: MSS answers `ERROR` when the refund cannot be performed; the refund becomes `ERROR` with the
+   Swish `errorCode`, the order gets `refund_status = REFUND_FAILED` and no `order_refunds` row is written.
+   A synchronous rejection of the create call (`422` from Swish) is returned as a validation error on `amount`.
+
+Verified against MSS on 2026-09-14: 10 SEK partial refund of a 25 SEK order → `DEBITED` after 4 s, `PAID` after 8 s,
+order `PARTIALLY_REFUNDED` with `total_refunded = 10.00`.
+
+## 11. Organizer settings and connection test
+
+Organizer-level settings override the `SWISH_*` environment configuration for that organizer only.
+
+```bash
+curl -s "$API/organizers/$ORGANIZER/swish-settings" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"
+# data is null until saved; meta.environment_fallback_configured tells whether SWISH_* env is active
+
+curl -s -X POST "$API/organizers/$ORGANIZER/swish-settings/test" -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"
+# {"data":{"success":true,"message":"Swish accepted the certificate and the Swish number.","environment":"mss",...}}
+
+curl -s -X PUT "$API/organizers/$ORGANIZER/swish-settings" -H "Authorization: Bearer $TOKEN" \
+  -H "Accept: application/json" -H "Content-Type: application/json" -d '{
+    "enabled": true, "environment": "mss", "payee_alias": "1234679304",
+    "cert_path": "/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.pem",
+    "key_path": "/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.key",
+    "ca_path": "/var/www/html/storage/app/swish-certs/Swish_TLS_RootCA.pem",
+    "key_passphrase": ""
+  }'
+```
+
+Saving with `enabled = true` performs the mTLS probe first (`GET /api/v1/paymentrequests/<random uuid>`; a `404` from
+Swish proves the certificate and merchant identity). A rejected certificate returns `422` with the error on
+`cert_path` and nothing is saved. The passphrase is stored encrypted and never returned; `has_key_passphrase` tells
+whether one is stored and an omitted `key_passphrase` keeps the existing value.
+
+The same flow is available in the back office under **Organizer settings → Swish**, and Swish appears as a payment
+method checkbox under **Event settings → Payment & Invoicing**.
+
+## 12. Accounting report
+
+**Organizer → Reports → Accounting Report** (`GET /organizers/{id}/reports/accounting`, CSV at `…/accounting/export`).
+One line per day (organizer timezone), event and payment method; refunds are separate negative `REFUND` lines.
+Columns: transactions, gross, service fees, VAT 25/12/6/other, VAT total, net excl. VAT. The sum of the gross column
+over a period is the amount settled to the bank account before payment-provider fees.
+
 ## Appendix: running against a local fake Swish instead of MSS
 
 `config/swish.php` accepts `SWISH_MSS_BASE_URL` (and `SWISH_PRODUCTION_BASE_URL`) overrides. During Phase A the whole
