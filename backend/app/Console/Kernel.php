@@ -4,6 +4,7 @@ namespace HiEvents\Console;
 
 use HiEvents\Jobs\Account\ProcessScheduledAccountDeletionsJob;
 use HiEvents\Jobs\Message\SendScheduledMessagesJob;
+use HiEvents\Jobs\Order\Swish\ReconcilePendingSwishPaymentsJob;
 use HiEvents\Jobs\Waitlist\ProcessExpiredWaitlistOffersJob;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -17,6 +18,7 @@ class Kernel extends ConsoleKernel
         $schedule->job(new SendScheduledMessagesJob)->everyMinute()->withoutOverlapping();
         $schedule->job(new ProcessExpiredWaitlistOffersJob)->everyMinute()->withoutOverlapping();
         $schedule->job(new ProcessScheduledAccountDeletionsJob)->hourly()->withoutOverlapping();
+        $schedule->job(new ReconcilePendingSwishPaymentsJob)->everyFifteenSeconds()->withoutOverlapping();
 
         $schedule->call(function (): void {
             $count = DB::table('failed_jobs')->count();
