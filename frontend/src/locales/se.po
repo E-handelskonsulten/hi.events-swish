@@ -423,7 +423,7 @@ msgstr "En URL krävs när en knappetikett är angiven"
 msgid "A weekday pattern"
 msgstr "Ett veckodagsmönster"
 
-#: src/components/common/OrdersTable/index.tsx:347
+#: src/components/common/OrdersTable/index.tsx:353
 msgid "Abandoned"
 msgstr "Övergiven"
 
@@ -550,7 +550,7 @@ msgstr "Åtgärd krävs: Momsinformation krävs"
 #: src/components/common/AdminEventsTable/index.tsx:112
 #: src/components/common/AffiliateTable/index.tsx:167
 #: src/components/common/EntityActions/index.tsx:28
-#: src/components/common/OrdersTable/index.tsx:356
+#: src/components/common/OrdersTable/index.tsx:362
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:506
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
@@ -1016,7 +1016,7 @@ msgstr "Tillåt indexering av sökmotorer"
 msgid "Allow search engines to index this event"
 msgstr "Tillåt sökmotorer att indexera detta evenemang"
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:90
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:92
 msgid "Almost there! We're just waiting for your payment to be processed. This should only take a few seconds."
 msgstr "Snart klart! Vi väntar bara på att din betalning ska behandlas. Det tar bara några sekunder."
 
@@ -1057,7 +1057,7 @@ msgstr "Alltid till försäljning"
 msgid "Amazing, Event, Keywords..."
 msgstr "Fantastiskt, Evenemang, Nyckelord..."
 
-#: src/components/common/OrdersTable/index.tsx:259
+#: src/components/common/OrdersTable/index.tsx:260
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:209
 msgid "Amount"
@@ -1208,6 +1208,10 @@ msgstr "Tillämpa på alla biljetter"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "Godkänn meddelande"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:220
+msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
+msgstr "Godkänn betalningen på {amountLabel} i Swish-appen och kom sedan tillbaka hit. Sidan uppdateras automatiskt."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
 msgid "April"
@@ -1672,7 +1676,7 @@ msgstr "Väntar på betalning"
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:29
 #: src/components/common/AttendeeTable/index.tsx:266
-#: src/components/common/OrdersTable/index.tsx:335
+#: src/components/common/OrdersTable/index.tsx:341
 #: src/components/common/OrderStatusBadge/index.tsx:10
 #: src/components/routes/event/attendees.tsx:31
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
@@ -1712,6 +1716,10 @@ msgstr "Tillbaka till inloggning"
 #: src/components/routes/event/messages.tsx:54
 msgid "Back to messages"
 msgstr "Tillbaka till meddelanden"
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:58
+msgid "Back to payment"
+msgstr "Tillbaka till betalning"
 
 #: src/components/routes/organizer/Reports/ReportLayout/index.tsx:42
 msgid "Back to Reports"
@@ -1852,7 +1860,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Genom att lägga till spårningspixlar bekräftar du att du och denna plattform är gemensamt personuppgiftsansvariga för de insamlade uppgifterna. Du ansvarar för att säkerställa att du har en laglig grund för denna behandling enligt tillämpliga integritetslagar (GDPR, CCPA, etc.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:761
-#: src/components/routes/product-widget/Payment/index.tsx:157
+#: src/components/routes/product-widget/Payment/index.tsx:192
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Genom att fortsätta godkänner du <0>{0} användarvillkor</0>"
 
@@ -1934,6 +1942,10 @@ msgstr "Ställ in {count} datum"
 msgid "Cancel all products and release them back to the pool"
 msgstr "Avbryt alla produkter och släpp tillbaka dem till poolen"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:243
+msgid "Cancel and choose another option"
+msgstr "Avbryt och välj ett annat alternativ"
+
 #: src/components/routes/event/OccurrenceDetail/index.tsx:53
 #: src/components/routes/event/OccurrenceDetail/index.tsx:70
 #: src/components/routes/event/OccurrencesTab/cancelOccurrenceDialog.tsx:32
@@ -1977,7 +1989,7 @@ msgstr "Avbrytande kommer att avbryta alla deltagare som är kopplade till denna
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:272
 #: src/components/common/AttendeeTicket/index.tsx:92
-#: src/components/common/OrdersTable/index.tsx:341
+#: src/components/common/OrdersTable/index.tsx:347
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:28
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:114
@@ -2503,7 +2515,7 @@ msgid "Complete Order"
 msgstr "Slutför order"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:370
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:187
 msgid "Complete Payment"
 msgstr "Slutför betalning"
 
@@ -2523,7 +2535,7 @@ msgstr "Slutför din betalning för att säkra dina biljetter."
 msgid "Complete your profile to join the team."
 msgstr "Slutför din profil för att gå med i laget."
 
-#: src/components/common/OrdersTable/index.tsx:323
+#: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
 #: src/components/modals/SendMessageModal/index.tsx:424
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
@@ -2846,7 +2858,7 @@ msgid "Copy details to first attendee"
 msgstr "Kopiera uppgifter till första deltagaren"
 
 #: src/components/common/AttendeeTable/index.tsx:163
-#: src/components/common/OrdersTable/index.tsx:164
+#: src/components/common/OrdersTable/index.tsx:165
 msgid "Copy Email"
 msgstr "Kopiera e-post"
 
@@ -3223,7 +3235,7 @@ msgid "Custom template"
 msgstr "Anpassad mall"
 
 #: src/components/common/AdminOrdersTable/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:108
+#: src/components/common/OrdersTable/index.tsx:109
 msgid "Customer"
 msgstr "Kund"
 
@@ -3751,6 +3763,10 @@ msgstr "Glöm inte!"
 msgid "Don't have an account? <0>Sign up</0>"
 msgstr "Har du inget konto? <0>Registrera dig</0>"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:223
+msgid "Don't have Swish on this device? Enter your mobile number instead"
+msgstr "Har du inte Swish på den här enheten? Ange ditt mobilnummer i stället"
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:312
 #: src/components/forms/ProductForm/index.tsx:276
 msgid "Donation"
@@ -4117,7 +4133,7 @@ msgid "Email Address"
 msgstr "E-postadress"
 
 #: src/components/common/AttendeeTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:66
+#: src/components/common/OrdersTable/index.tsx:67
 msgid "Email address copied to clipboard"
 msgstr "E-postadress kopierad till urklipp"
 
@@ -4301,6 +4317,10 @@ msgstr "Ange ämne och innehåll för att se förhandsgranskningen"
 msgid "Enter a time to shift by."
 msgstr "Ange hur mycket tiderna ska förskjutas."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:135
+msgid "Enter a valid Swedish mobile number, for example 070-123 45 67."
+msgstr "Ange ett giltigt svenskt mobilnummer, till exempel 070-123 45 67."
+
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:29
 msgid "Enter a venue name or address"
 msgstr "Ange ett platsnamn eller en adress"
@@ -4351,6 +4371,10 @@ msgstr "Ange förnamn"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:61
 msgid "Enter last name"
 msgstr "Ange efternamn"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:295
+msgid "Enter mobile number"
+msgstr "Ange mobilnummer"
 
 #: src/components/routes/auth/ResetPassword/index.tsx:65
 msgid "Enter new password"
@@ -5063,7 +5087,7 @@ msgid "Fee override saved"
 msgstr "Avgiftsanpassning sparad"
 
 #: src/components/common/InlineOrderSummary/index.tsx:156
-#: src/components/common/OrdersTable/index.tsx:270
+#: src/components/common/OrdersTable/index.tsx:271
 #: src/components/forms/ProductForm/index.tsx:490
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:86
@@ -5251,6 +5275,10 @@ msgstr "För ett antal datum"
 #: src/components/routes/auth/Login/index.tsx:100
 msgid "Forgot password?"
 msgstr "Glömt lösenord?"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:306
+msgid "Formats accepted: 070-123 45 67, 0701234567 or +46701234567"
+msgstr "Godkända format: 070-123 45 67, 0701234567 eller +46701234567"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Fourth"
@@ -5749,6 +5777,10 @@ msgstr "Om detta är aktiverat kan incheckningspersonal antingen markera deltaga
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "Om detta är aktiverat får arrangören ett e-postmeddelande när en ny beställning görs"
 
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:56
+msgid "If you approved the payment, your tickets will be emailed as soon as Swish confirms it. You can also go back and check the payment status."
+msgstr "Om du godkände betalningen skickas dina biljetter via e-post så snart Swish bekräftar den. Du kan också gå tillbaka och kontrollera betalningsstatusen."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:133
 msgid "If you did not request this change, please immediately change your password."
 msgstr "Om du inte begärde denna ändring, ändra omedelbart ditt lösenord."
@@ -5966,7 +5998,7 @@ msgstr "Bjud in ditt team"
 msgid "Invited"
 msgstr "Inbjuden"
 
-#: src/components/common/OrdersTable/index.tsx:212
+#: src/components/common/OrdersTable/index.tsx:213
 msgid "Invoice"
 msgstr "Faktura"
 
@@ -6003,11 +6035,11 @@ msgstr "Italienska"
 msgid "Item"
 msgstr "Artikel"
 
-#: src/components/common/OrdersTable/index.tsx:251
+#: src/components/common/OrdersTable/index.tsx:252
 msgid "item(s)"
 msgstr "artikel(er)"
 
-#: src/components/common/OrdersTable/index.tsx:233
+#: src/components/common/OrdersTable/index.tsx:234
 #: src/components/modals/ManageOrderModal/index.tsx:117
 msgid "Items"
 msgstr "Artiklar"
@@ -6562,7 +6594,7 @@ msgstr "Medium"
 
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
-#: src/components/common/OrdersTable/index.tsx:155
+#: src/components/common/OrdersTable/index.tsx:156
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
@@ -6667,6 +6699,10 @@ msgstr "Övrigt"
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:70
 msgid "Miscellaneous Settings"
 msgstr "Övriga inställningar"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:305
+msgid "Mobile number connected to Swish"
+msgstr "Mobilnummer kopplat till Swish"
 
 #: src/components/routes/admin/Announcements/index.tsx:178
 #: src/components/routes/admin/Announcements/index.tsx:375
@@ -6860,7 +6896,7 @@ msgid "Next: payment"
 msgstr "Nästa: betalning"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:437
-#: src/components/routes/product-widget/Payment/index.tsx:98
+#: src/components/routes/product-widget/Payment/index.tsx:107
 msgid "Next: review your order"
 msgstr "Nästa: granska din order"
 
@@ -7045,7 +7081,7 @@ msgstr "Inga misslyckade jobb"
 msgid "No filters available"
 msgstr "Inga filter tillgängliga"
 
-#: src/components/common/OrdersTable/index.tsx:217
+#: src/components/common/OrdersTable/index.tsx:218
 msgid "No invoice"
 msgstr "Ingen faktura"
 
@@ -7086,7 +7122,7 @@ msgstr "Inga orderfrågor ännu"
 msgid "No orders found"
 msgstr "Inga ordrar hittades"
 
-#: src/components/common/OrdersTable/index.tsx:377
+#: src/components/common/OrdersTable/index.tsx:383
 msgid "No orders to show"
 msgstr "Inga ordrar att visa"
 
@@ -7118,7 +7154,7 @@ msgstr "Inga betalda beställningar"
 msgid "No past events"
 msgstr "Inga tidigare evenemang"
 
-#: src/components/routes/product-widget/Payment/index.tsx:89
+#: src/components/routes/product-widget/Payment/index.tsx:98
 msgid "No payment methods are currently available. Please contact the event organizer for assistance."
 msgstr "Inga betalningsmetoder är tillgängliga för närvarande. Kontakta arrangören för hjälp."
 
@@ -7408,10 +7444,10 @@ msgstr "Erbjuden"
 msgid "Offers expire after {timeoutHours} hours."
 msgstr "Erbjudanden löper ut efter {timeoutHours} timmar."
 
-#: src/components/common/OrdersTable/index.tsx:300
+#: src/components/common/OrdersTable/index.tsx:301
 #: src/components/layouts/CheckIn/index.tsx:573
 #: src/components/layouts/CheckIn/index.tsx:575
-#: src/components/routes/product-widget/Payment/index.tsx:135
+#: src/components/routes/product-widget/Payment/index.tsx:167
 msgid "Offline"
 msgstr "Offline"
 
@@ -7419,7 +7455,7 @@ msgstr "Offline"
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Offlineordrar återspeglas inte i evenemangsstatistiken förrän ordern markeras som betald."
 
-#: src/components/routes/product-widget/Payment/index.tsx:79
+#: src/components/routes/product-widget/Payment/index.tsx:88
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Offlinebetalningen misslyckades. Försök igen eller kontakta arrangören."
 
@@ -7501,7 +7537,7 @@ msgstr "Pågående"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:122
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:248
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:346
-#: src/components/routes/product-widget/Payment/index.tsx:127
+#: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "Online"
 msgstr "Online"
 
@@ -7614,6 +7650,14 @@ msgstr "Öppna datum"
 msgid "Open sidebar"
 msgstr "Öppna sidomeny"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:216
+msgid "Open Swish"
+msgstr "Öppna Swish"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:230
+msgid "Open the Swish app on the phone with number {phoneDisplay} and approve the payment of {amountLabel}. This page updates automatically."
+msgstr "Öppna Swish-appen på telefonen med nummer {phoneDisplay} och godkänn betalningen på {amountLabel}. Sidan uppdateras automatiskt."
+
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "Alternativ {i}"
@@ -7718,7 +7762,7 @@ msgstr "Orderdatum"
 msgid "Order details"
 msgstr "Orderdetaljer"
 
-#: src/components/common/OrdersTable/index.tsx:178
+#: src/components/common/OrdersTable/index.tsx:179
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:616
 msgid "Order Details"
 msgstr "Orderdetaljer"
@@ -7947,7 +7991,7 @@ msgstr "Arrangörer"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Arrangörer kan endast hantera evenemang och produkter. De kan inte hantera användare, kontoinställningar eller faktureringsinformation."
 
-#: src/components/common/OrdersTable/index.tsx:305
+#: src/components/common/OrdersTable/index.tsx:311
 #: src/constants/eventCategories.ts:31
 msgid "Other"
 msgstr "Övrigt"
@@ -8039,7 +8083,7 @@ msgstr "Delvis återbetalning"
 msgid "Partially Refunded"
 msgstr "Delvis återbetald"
 
-#: src/components/common/OrdersTable/index.tsx:275
+#: src/components/common/OrdersTable/index.tsx:276
 msgid "Partially refunded: {0}"
 msgstr "Delvis återbetald: {0}"
 
@@ -8110,9 +8154,17 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Pausad"
 
-#: src/components/routes/product-widget/Payment/index.tsx:151
+#: src/components/routes/product-widget/Payment/index.tsx:185
 msgid "Pay"
 msgstr "Betala"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:342
+msgid "Pay {amountLabel} with Swish"
+msgstr "Betala {amountLabel} med Swish"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:272
+msgid "Pay securely with the Swish app"
+msgstr "Betala tryggt med Swish-appen"
 
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:208
 msgid "Pay what you want"
@@ -8123,9 +8175,9 @@ msgstr "Betala vad du vill"
 msgid "Payload"
 msgstr "Payload"
 
-#: src/components/common/OrdersTable/index.tsx:286
+#: src/components/common/OrdersTable/index.tsx:287
 #: src/components/common/ProgressStepper/index.tsx:19
-#: src/components/routes/product-widget/Payment/index.tsx:98
+#: src/components/routes/product-widget/Payment/index.tsx:107
 msgid "Payment"
 msgstr "Betalning"
 
@@ -8155,13 +8207,17 @@ msgstr "Betalning misslyckades"
 msgid "Payment Instructions"
 msgstr "Betalningsinstruktioner"
 
-#: src/components/routes/product-widget/Payment/index.tsx:118
+#: src/components/routes/product-widget/Payment/index.tsx:137
 msgid "Payment method"
 msgstr "Betalningsmetod"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
 msgid "Payment Methods"
 msgstr "Betalningsmetoder"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:256
+msgid "Payment not completed"
+msgstr "Betalningen genomfördes inte"
 
 #: src/components/common/OrderDetails/index.tsx:96
 #: src/components/modals/ManageOrderModal/index.tsx:151
@@ -9022,7 +9078,7 @@ msgstr "Återbetala alla ordrar för det här datumet"
 msgid "Refund amount"
 msgstr "Återbetalningsbelopp"
 
-#: src/components/common/OrdersTable/index.tsx:277
+#: src/components/common/OrdersTable/index.tsx:278
 msgid "Refund failed"
 msgstr "Återbetalning misslyckades"
 
@@ -9038,7 +9094,7 @@ msgstr "Återbetala order"
 msgid "Refund Order {0}"
 msgstr "Återbetala order {0}"
 
-#: src/components/common/OrdersTable/index.tsx:276
+#: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund pending"
 msgstr "Återbetalning väntar"
 
@@ -9065,7 +9121,7 @@ msgstr "Återbetalningsstatus"
 msgid "Refunded"
 msgstr "Återbetald"
 
-#: src/components/common/OrdersTable/index.tsx:274
+#: src/components/common/OrdersTable/index.tsx:275
 msgid "Refunded: {0}"
 msgstr "Återbetald: {0}"
 
@@ -9209,11 +9265,11 @@ msgstr "Skicka biljettmail igen"
 msgid "Resending..."
 msgstr "Skickar igen..."
 
-#: src/components/common/OrdersTable/index.tsx:329
+#: src/components/common/OrdersTable/index.tsx:335
 msgid "Reserved"
 msgstr "Reserverad"
 
-#: src/components/common/OrdersTable/index.tsx:223
+#: src/components/common/OrdersTable/index.tsx:224
 msgid "Reserved until"
 msgstr "Reserverad till"
 
@@ -9956,6 +10012,10 @@ msgstr "Skicka e-postmeddelande om återbetalning"
 msgid "Send reset link"
 msgstr "Skicka återställningslänk"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:343
+msgid "Send Swish request for {amountLabel}"
+msgstr "Skicka Swish-förfrågan på {amountLabel}"
+
 #: src/components/modals/SendMessageModal/index.tsx:542
 msgid "Send Test"
 msgstr "Skicka test"
@@ -10514,7 +10574,7 @@ msgstr "Statistik"
 #: src/components/common/AttendeeTable/index.tsx:251
 #: src/components/common/CheckInListTable/index.tsx:158
 #: src/components/common/OrderDetails/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:314
+#: src/components/common/OrdersTable/index.tsx:320
 #: src/components/common/OrganizerWebhookTable/index.tsx:238
 #: src/components/common/WaitlistTable/index.tsx:205
 #: src/components/common/WebhookTable/index.tsx:238
@@ -10547,7 +10607,7 @@ msgstr "Behövs fortfarande"
 msgid "Stop Impersonating"
 msgstr "Sluta impersonera"
 
-#: src/components/common/OrdersTable/index.tsx:295
+#: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
 msgid "Stripe"
@@ -10812,6 +10872,27 @@ msgstr "Supportmejl"
 msgid "Swedish"
 msgstr "Svenska"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:51
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:54
+msgid "Swish could not complete the payment."
+msgstr "Swish kunde inte genomföra betalningen."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:154
+msgid "Swish could not start the payment. Please try again."
+msgstr "Swish kunde inte starta betalningen. Försök igen."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:150
+msgid "Swish is temporarily unavailable. Please try again in a moment."
+msgstr "Swish är tillfälligt otillgängligt. Försök igen om en stund."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:286
+msgid "Swish on this device"
+msgstr "Swish på den här enheten"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:45
+msgid "Swish timed out waiting for your approval."
+msgstr "Swish väntade för länge på ditt godkännande och avbröt betalningen."
+
 #: src/components/layouts/OrganizerLayout/index.tsx:75
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
@@ -10833,6 +10914,10 @@ msgstr "T-shirts, muggar och mycket mer"
 msgid "Tap dates like a calendar."
 msgstr "Tryck på datum som i en kalender."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:326
+msgid "Tap the button, approve the payment in the Swish app on this device, and you will be brought back here."
+msgstr "Tryck på knappen, godkänn betalningen i Swish-appen på den här enheten, så kommer du tillbaka hit."
+
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:59
 msgid "Tap this screen to resume scanning"
 msgstr "Tryck på skärmen för att fortsätta skanna"
@@ -10850,7 +10935,7 @@ msgid "Targeting attendees across {0} selected sessions."
 msgstr "Riktar sig till deltagare på {0} valda tillfällen."
 
 #: src/components/common/AdminOrdersTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:269
+#: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
@@ -10994,6 +11079,10 @@ msgstr "Då var det slut"
 msgid "The background color of the page. When using cover image, this is applied as an overlay."
 msgstr "Sidans bakgrundsfärg. När en omslagsbild används appliceras detta som en överlagring."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:47
+msgid "The BankID signing was cancelled."
+msgstr "BankID-signeringen avbröts."
+
 #: src/components/layouts/CheckIn/index.tsx:471
 msgid "The check-in list you are looking for does not exist."
 msgstr "Incheckningslistan du letar efter finns inte."
@@ -11074,6 +11163,11 @@ msgstr "Åsidosättandet registreras i orderns granskningslogg."
 msgid "The page you are looking for does not exist"
 msgstr "Sidan du letar efter finns inte"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:34
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:49
+msgid "The payment was declined in Swish."
+msgstr "Betalningen nekades i Swish."
+
 #: src/components/common/PlatformFeesSettings/index.tsx:212
 msgid "The platform fee is added to the ticket price. Buyers pay more, but you receive the full ticket price."
 msgstr "Plattformsavgiften läggs på biljettpriset. Köpare betalar mer, men du får hela biljettpriset."
@@ -11094,6 +11188,10 @@ msgstr "Den primära varumärkesfärgen som används för knappar och markeringa
 msgid "The quick brown fox jumps over the lazy dog."
 msgstr "Den snabba bruna räven hoppar över den lata hunden."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:348
+msgid "The request will be sent to {0}"
+msgstr "Förfrågan skickas till {0}"
+
 #: src/components/modals/SendMessageModal/index.tsx:208
 msgid "The scheduled time is required"
 msgstr "Den schemalagda tiden är obligatorisk"
@@ -11105,6 +11203,18 @@ msgstr "Den schemalagda tiden måste vara i framtiden"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "Tillfället för ”{title}”, ursprungligen planerat till {0}, har flyttats."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
+msgid "The Swish payment request expired before it was approved."
+msgstr "Swish-förfrågan gick ut innan den godkändes."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:36
+msgid "The Swish payment was cancelled."
+msgstr "Swish-betalningen avbröts."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:167
+msgid "The Swish request could not be cancelled. Please try again."
+msgstr "Swish-förfrågan kunde inte avbrytas. Försök igen."
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:155
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:186
@@ -11368,6 +11478,10 @@ msgstr "Det här namnet är synligt för slutanvändare"
 msgid "This occurrence is at capacity"
 msgstr "Det här datumet är fullbokat"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:152
+msgid "This order can no longer be paid. Please start a new order."
+msgstr "Den här ordern kan inte längre betalas. Påbörja en ny order."
+
 #: src/components/forms/StripeCheckoutForm/index.tsx:131
 msgid "This order has already been paid."
 msgstr "Den här ordern är redan betald."
@@ -11459,6 +11573,10 @@ msgstr "Den här biljetten skannades nyss. Vänta innan du skannar igen."
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Den här användaren är inte aktiv eftersom hen inte har accepterat sin inbjudan."
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:64
+msgid "This usually takes a few seconds. Keep this page open."
+msgstr "Det tar oftast bara några sekunder. Håll sidan öppen."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:368
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -11814,6 +11932,10 @@ msgstr "Prova en annan sökterm eller ett annat filter"
 msgid "Try adjusting your filters to see more dates."
 msgstr "Justera filtren för att se fler datum."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:261
+msgid "Try again"
+msgstr "Försök igen"
+
 #: src/components/routes/auth/Login/index.tsx:141
 #: src/components/routes/my-tickets/index.tsx:200
 msgid "Try another email"
@@ -12098,7 +12220,7 @@ msgstr "Platsen uppdaterad för {count} datum"
 msgid "Updates as you build the rule. Flip through months to sanity-check dates."
 msgstr "Uppdateras medan du bygger regeln. Bläddra genom månaderna för att kontrollera datumen."
 
-#: src/components/forms/ProductForm/ProductPreview.tsx:101
+#: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "Uppdateras medan du skriver."
 
@@ -12507,6 +12629,10 @@ msgstr "VK"
 msgid "Waiting"
 msgstr "Väntar"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:237
+msgid "Waiting for confirmation from Swish…"
+msgstr "Väntar på bekräftelse från Swish…"
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:367
 msgid "Waiting for payment"
 msgstr "Väntar på betalning"
@@ -12514,6 +12640,10 @@ msgstr "Väntar på betalning"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:64
 msgid "Waiting for scan…"
 msgstr "Väntar på skanning…"
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:63
+msgid "Waiting for Swish to confirm your payment…"
+msgstr "Väntar på att Swish ska bekräfta din betalning…"
 
 #: src/components/forms/ProductForm/index.tsx:460
 #: src/components/layouts/AuthLayout/index.tsx:17
@@ -12537,7 +12667,7 @@ msgstr "Väntelista-erbjudande har löpt ut"
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
 msgstr "Varning: Detta är systemets standardkonfiguration. Ändringar påverkar alla konton som inte har en specifik konfiguration tilldelad."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:89
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:91
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "Vi kunde inte behandla din betalning. Försök igen eller kontakta supporten."
 
@@ -12589,6 +12719,10 @@ msgstr "Vi når inte Stripe just nu. Försök igen om en stund."
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Vi kunde inte ändra ordningen på kategorierna. Försök igen."
 
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:55
+msgid "We have not received a confirmation from Swish yet."
+msgstr "Vi har inte fått någon bekräftelse från Swish ännu."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:417
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Det uppstod ett problem när sidan skulle laddas. Försök igen."
@@ -12618,7 +12752,7 @@ msgstr "Vi har skickat en verifieringslänk till {0}"
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "Vi använder cookies för att förstå hur webbplatsen används och för att förbättra din upplevelse."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:100
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:102
 msgid "We were unable to confirm your payment. Please try again or contact support."
 msgstr "Vi kunde inte bekräfta din betalning. Försök igen eller kontakta supporten."
 
@@ -12651,7 +12785,7 @@ msgstr "Vi skickar dina biljetter till den här e-postadressen"
 msgid "We'll validate your VAT number in the background. If there are any issues, we'll let you know."
 msgstr "Vi validerar ditt momsregistreringsnummer i bakgrunden. Om det uppstår problem hör vi av oss."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:91
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:93
 msgid "We're processing your order. Please wait..."
 msgstr "Vi behandlar din order. Vänta..."
 
@@ -13284,7 +13418,7 @@ msgstr "Din order väntar på betalning"
 msgid "Your orders have been exported successfully."
 msgstr "Dina ordrar har exporterats."
 
-#: src/components/common/OrdersTable/index.tsx:380
+#: src/components/common/OrdersTable/index.tsx:386
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Dina ordrar visas här när de börjar komma in."
 
@@ -13308,6 +13442,10 @@ msgstr "Din betalning skyddas med banknivå-kryptering"
 #: src/components/forms/StripeCheckoutForm/index.tsx:102
 msgid "Your payment was not successful, please try again."
 msgstr "Din betalning lyckades inte, försök igen."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:40
+msgid "Your payment was received, but the order could not be completed automatically. Please contact the event organizer."
+msgstr "Din betalning har tagits emot, men ordern kunde inte slutföras automatiskt. Kontakta arrangören."
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:163
 msgid "Your payment was unsuccessful. Please try again."
@@ -13370,3 +13508,4 @@ msgstr "Postnummer"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:590
 msgid "ZIP or Postal Code"
 msgstr "Postnummer"
+

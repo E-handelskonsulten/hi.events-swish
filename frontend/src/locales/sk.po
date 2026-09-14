@@ -423,7 +423,7 @@ msgstr "Pri nastavenom označení tlačidla je potrebná URL adresa"
 msgid "A weekday pattern"
 msgstr "Vzor dňa v týždni"
 
-#: src/components/common/OrdersTable/index.tsx:347
+#: src/components/common/OrdersTable/index.tsx:353
 msgid "Abandoned"
 msgstr "Opustené"
 
@@ -550,7 +550,7 @@ msgstr "Vyžaduje sa akcia: Potrebné informácie o DPH"
 #: src/components/common/AdminEventsTable/index.tsx:112
 #: src/components/common/AffiliateTable/index.tsx:167
 #: src/components/common/EntityActions/index.tsx:28
-#: src/components/common/OrdersTable/index.tsx:356
+#: src/components/common/OrdersTable/index.tsx:362
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:506
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
@@ -1016,7 +1016,7 @@ msgstr "Povoliť indexovanie vyhľadávačmi"
 msgid "Allow search engines to index this event"
 msgstr "Umožniť vyhľadávačom indexovať túto udalosť"
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:90
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:92
 msgid "Almost there! We're just waiting for your payment to be processed. This should only take a few seconds."
 msgstr "Takmer hotovo! Čakáme na spracovanie vašej platby. Malo by to trvať len niekoľko sekúnd."
 
@@ -1057,7 +1057,7 @@ msgstr "Vždy v predaji"
 msgid "Amazing, Event, Keywords..."
 msgstr "Úžasné, Udalosť, Kľúčové slová..."
 
-#: src/components/common/OrdersTable/index.tsx:259
+#: src/components/common/OrdersTable/index.tsx:260
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:209
 msgid "Amount"
@@ -1208,6 +1208,10 @@ msgstr "Použiť na všetky lístky"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "Schváliť správu"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:220
+msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
 msgid "April"
@@ -1672,7 +1676,7 @@ msgstr "Čaká na platbu"
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:29
 #: src/components/common/AttendeeTable/index.tsx:266
-#: src/components/common/OrdersTable/index.tsx:335
+#: src/components/common/OrdersTable/index.tsx:341
 #: src/components/common/OrderStatusBadge/index.tsx:10
 #: src/components/routes/event/attendees.tsx:31
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
@@ -1712,6 +1716,10 @@ msgstr "Späť na prihlásenie"
 #: src/components/routes/event/messages.tsx:54
 msgid "Back to messages"
 msgstr "Späť na správy"
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:58
+msgid "Back to payment"
+msgstr ""
 
 #: src/components/routes/organizer/Reports/ReportLayout/index.tsx:42
 msgid "Back to Reports"
@@ -1852,7 +1860,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Pridaním sledovacích pixelov potvrdzujete, že vy a táto platforma ste spoločnými správcami zhromaždených údajov. Ste zodpovední za zabezpečenie zákonného základu pre toto spracovanie podľa platných zákonov o ochrane súkromia (GDPR, CCPA atď.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:761
-#: src/components/routes/product-widget/Payment/index.tsx:157
+#: src/components/routes/product-widget/Payment/index.tsx:192
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Pokračovaním súhlasíte s <0>Podmienkami služby {0}</0>"
 
@@ -1934,6 +1942,10 @@ msgstr "Zrušiť {count} termín(ov)"
 msgid "Cancel all products and release them back to the pool"
 msgstr "Zrušiť všetky produkty a uvoľniť ich späť do zásoby"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:243
+msgid "Cancel and choose another option"
+msgstr ""
+
 #: src/components/routes/event/OccurrenceDetail/index.tsx:53
 #: src/components/routes/event/OccurrenceDetail/index.tsx:70
 #: src/components/routes/event/OccurrencesTab/cancelOccurrenceDialog.tsx:32
@@ -1977,7 +1989,7 @@ msgstr "Zrušením sa zrušia všetci účastníci spojení s touto objednávkou
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:272
 #: src/components/common/AttendeeTicket/index.tsx:92
-#: src/components/common/OrdersTable/index.tsx:341
+#: src/components/common/OrdersTable/index.tsx:347
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:28
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:114
@@ -2503,7 +2515,7 @@ msgid "Complete Order"
 msgstr "Dokončiť objednávku"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:370
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:187
 msgid "Complete Payment"
 msgstr "Dokončiť platbu"
 
@@ -2523,7 +2535,7 @@ msgstr "Dokončite platbu a zabezpečte si lístky."
 msgid "Complete your profile to join the team."
 msgstr "Dokončite svoj profil a pridajte sa k tímu."
 
-#: src/components/common/OrdersTable/index.tsx:323
+#: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
 #: src/components/modals/SendMessageModal/index.tsx:424
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
@@ -2846,7 +2858,7 @@ msgid "Copy details to first attendee"
 msgstr "Kopírovať údaje k prvému účastníkovi"
 
 #: src/components/common/AttendeeTable/index.tsx:163
-#: src/components/common/OrdersTable/index.tsx:164
+#: src/components/common/OrdersTable/index.tsx:165
 msgid "Copy Email"
 msgstr "Kopírovať e-mail"
 
@@ -3223,7 +3235,7 @@ msgid "Custom template"
 msgstr "Vlastná šablóna"
 
 #: src/components/common/AdminOrdersTable/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:108
+#: src/components/common/OrdersTable/index.tsx:109
 msgid "Customer"
 msgstr "Zákazník"
 
@@ -3751,6 +3763,10 @@ msgstr "Nezabudnite!"
 msgid "Don't have an account? <0>Sign up</0>"
 msgstr "Nemáte účet? <0>Zaregistrujte sa</0>"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:223
+msgid "Don't have Swish on this device? Enter your mobile number instead"
+msgstr ""
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:312
 #: src/components/forms/ProductForm/index.tsx:276
 msgid "Donation"
@@ -4117,7 +4133,7 @@ msgid "Email Address"
 msgstr "E-mailová adresa"
 
 #: src/components/common/AttendeeTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:66
+#: src/components/common/OrdersTable/index.tsx:67
 msgid "Email address copied to clipboard"
 msgstr "E-mailová adresa skopírovaná do schránky"
 
@@ -4301,6 +4317,10 @@ msgstr "Zadajte predmet a telo pre zobrazenie náhľadu"
 msgid "Enter a time to shift by."
 msgstr "Zadajte, o koľko sa má čas posunúť."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:135
+msgid "Enter a valid Swedish mobile number, for example 070-123 45 67."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:29
 msgid "Enter a venue name or address"
 msgstr "Zadajte názov miesta alebo adresu"
@@ -4351,6 +4371,10 @@ msgstr "Zadajte meno"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:61
 msgid "Enter last name"
 msgstr "Zadajte priezvisko"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:295
+msgid "Enter mobile number"
+msgstr ""
 
 #: src/components/routes/auth/ResetPassword/index.tsx:65
 msgid "Enter new password"
@@ -5063,7 +5087,7 @@ msgid "Fee override saved"
 msgstr "Vlastný poplatok uložený"
 
 #: src/components/common/InlineOrderSummary/index.tsx:156
-#: src/components/common/OrdersTable/index.tsx:270
+#: src/components/common/OrdersTable/index.tsx:271
 #: src/components/forms/ProductForm/index.tsx:490
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:86
@@ -5251,6 +5275,10 @@ msgstr "Na počet termínov"
 #: src/components/routes/auth/Login/index.tsx:100
 msgid "Forgot password?"
 msgstr "Zabudli ste heslo?"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:306
+msgid "Formats accepted: 070-123 45 67, 0701234567 or +46701234567"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Fourth"
@@ -5749,6 +5777,10 @@ msgstr "Ak je povolené, personál odbavenia môže označiť účastníkov ako 
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "Ak je povolené, organizátor dostane e-mailovú notifikáciu pri novej objednávke"
 
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:56
+msgid "If you approved the payment, your tickets will be emailed as soon as Swish confirms it. You can also go back and check the payment status."
+msgstr ""
+
 #: src/components/routes/profile/ManageProfile/index.tsx:133
 msgid "If you did not request this change, please immediately change your password."
 msgstr "Ak ste túto zmenu nepožadovali, okamžite zmeňte heslo."
@@ -5966,7 +5998,7 @@ msgstr "Pozvite svoj tím"
 msgid "Invited"
 msgstr "Pozvaný"
 
-#: src/components/common/OrdersTable/index.tsx:212
+#: src/components/common/OrdersTable/index.tsx:213
 msgid "Invoice"
 msgstr "Faktúra"
 
@@ -6003,11 +6035,11 @@ msgstr "Taliančina"
 msgid "Item"
 msgstr "Položka"
 
-#: src/components/common/OrdersTable/index.tsx:251
+#: src/components/common/OrdersTable/index.tsx:252
 msgid "item(s)"
 msgstr "položka/položky"
 
-#: src/components/common/OrdersTable/index.tsx:233
+#: src/components/common/OrdersTable/index.tsx:234
 #: src/components/modals/ManageOrderModal/index.tsx:117
 msgid "Items"
 msgstr "Položky"
@@ -6562,7 +6594,7 @@ msgstr "Stredné"
 
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
-#: src/components/common/OrdersTable/index.tsx:155
+#: src/components/common/OrdersTable/index.tsx:156
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
@@ -6667,6 +6699,10 @@ msgstr "Rôzne"
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:70
 msgid "Miscellaneous Settings"
 msgstr "Rôzne nastavenia"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:305
+msgid "Mobile number connected to Swish"
+msgstr ""
 
 #: src/components/routes/admin/Announcements/index.tsx:178
 #: src/components/routes/admin/Announcements/index.tsx:375
@@ -6860,7 +6896,7 @@ msgid "Next: payment"
 msgstr "Ďalej: platba"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:437
-#: src/components/routes/product-widget/Payment/index.tsx:98
+#: src/components/routes/product-widget/Payment/index.tsx:107
 msgid "Next: review your order"
 msgstr "Ďalej: skontrolujte objednávku"
 
@@ -7045,7 +7081,7 @@ msgstr "Žiadne neúspešné úlohy"
 msgid "No filters available"
 msgstr "Žiadne dostupné filtre"
 
-#: src/components/common/OrdersTable/index.tsx:217
+#: src/components/common/OrdersTable/index.tsx:218
 msgid "No invoice"
 msgstr "Žiadna faktúra"
 
@@ -7086,7 +7122,7 @@ msgstr "Zatiaľ žiadne otázky k objednávke"
 msgid "No orders found"
 msgstr "Nenašli sa žiadne objednávky"
 
-#: src/components/common/OrdersTable/index.tsx:377
+#: src/components/common/OrdersTable/index.tsx:383
 msgid "No orders to show"
 msgstr "Žiadne objednávky na zobrazenie"
 
@@ -7118,7 +7154,7 @@ msgstr "Žiadne zaplatené objednávky"
 msgid "No past events"
 msgstr "Žiadne minulé udalosti"
 
-#: src/components/routes/product-widget/Payment/index.tsx:89
+#: src/components/routes/product-widget/Payment/index.tsx:98
 msgid "No payment methods are currently available. Please contact the event organizer for assistance."
 msgstr "Momentálne nie sú dostupné žiadne platobné metódy. Kontaktujte organizátora udalosti."
 
@@ -7408,10 +7444,10 @@ msgstr "Ponúknuté"
 msgid "Offers expire after {timeoutHours} hours."
 msgstr "Ponuky vyprší po {timeoutHours} hodinách."
 
-#: src/components/common/OrdersTable/index.tsx:300
+#: src/components/common/OrdersTable/index.tsx:301
 #: src/components/layouts/CheckIn/index.tsx:573
 #: src/components/layouts/CheckIn/index.tsx:575
-#: src/components/routes/product-widget/Payment/index.tsx:135
+#: src/components/routes/product-widget/Payment/index.tsx:167
 msgid "Offline"
 msgstr "Offline"
 
@@ -7419,7 +7455,7 @@ msgstr "Offline"
 msgid "Offline orders are not reflected in event statistics until the order is marked as paid."
 msgstr "Offline objednávky sa neodrážajú v štatistikách udalosti, kým nie sú označené ako zaplatené."
 
-#: src/components/routes/product-widget/Payment/index.tsx:79
+#: src/components/routes/product-widget/Payment/index.tsx:88
 msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Offline platba zlyhala. Skúste to znovu alebo kontaktujte organizátora udalosti."
 
@@ -7501,7 +7537,7 @@ msgstr "Prebiehajúce"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:122
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:248
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:346
-#: src/components/routes/product-widget/Payment/index.tsx:127
+#: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "Online"
 msgstr "Online"
 
@@ -7614,6 +7650,14 @@ msgstr "Otvoriť termín"
 msgid "Open sidebar"
 msgstr "Otvoriť bočný panel"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:216
+msgid "Open Swish"
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:230
+msgid "Open the Swish app on the phone with number {phoneDisplay} and approve the payment of {amountLabel}. This page updates automatically."
+msgstr ""
+
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "Možnosť {i}"
@@ -7718,7 +7762,7 @@ msgstr "Dátum objednávky"
 msgid "Order details"
 msgstr "Podrobnosti objednávky"
 
-#: src/components/common/OrdersTable/index.tsx:178
+#: src/components/common/OrdersTable/index.tsx:179
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:616
 msgid "Order Details"
 msgstr "Podrobnosti objednávky"
@@ -7947,7 +7991,7 @@ msgstr "Organizátori"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Organizátori môžu spravovať iba udalosti a produkty. Nemôžu spravovať používateľov, nastavenia účtu ani fakturačné informácie."
 
-#: src/components/common/OrdersTable/index.tsx:305
+#: src/components/common/OrdersTable/index.tsx:311
 #: src/constants/eventCategories.ts:31
 msgid "Other"
 msgstr "Iné"
@@ -8039,7 +8083,7 @@ msgstr "Čiastočné vrátenie"
 msgid "Partially Refunded"
 msgstr "Čiastočne vrátené"
 
-#: src/components/common/OrdersTable/index.tsx:275
+#: src/components/common/OrdersTable/index.tsx:276
 msgid "Partially refunded: {0}"
 msgstr "Čiastočne vrátené: {0}"
 
@@ -8110,9 +8154,17 @@ msgstr "patrik@acme.com"
 msgid "Paused"
 msgstr "Pozastavené"
 
-#: src/components/routes/product-widget/Payment/index.tsx:151
+#: src/components/routes/product-widget/Payment/index.tsx:185
 msgid "Pay"
 msgstr "Zaplatiť"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:342
+msgid "Pay {amountLabel} with Swish"
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:272
+msgid "Pay securely with the Swish app"
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:208
 msgid "Pay what you want"
@@ -8123,9 +8175,9 @@ msgstr "Zaplaťte, koľko chcete"
 msgid "Payload"
 msgstr "Obsah požiadavky"
 
-#: src/components/common/OrdersTable/index.tsx:286
+#: src/components/common/OrdersTable/index.tsx:287
 #: src/components/common/ProgressStepper/index.tsx:19
-#: src/components/routes/product-widget/Payment/index.tsx:98
+#: src/components/routes/product-widget/Payment/index.tsx:107
 msgid "Payment"
 msgstr "Platba"
 
@@ -8155,13 +8207,17 @@ msgstr "Platba zlyhala"
 msgid "Payment Instructions"
 msgstr "Pokyny k platbe"
 
-#: src/components/routes/product-widget/Payment/index.tsx:118
+#: src/components/routes/product-widget/Payment/index.tsx:137
 msgid "Payment method"
 msgstr "Spôsob platby"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:106
 msgid "Payment Methods"
 msgstr "Spôsoby platby"
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:256
+msgid "Payment not completed"
+msgstr ""
 
 #: src/components/common/OrderDetails/index.tsx:96
 #: src/components/modals/ManageOrderModal/index.tsx:151
@@ -9022,7 +9078,7 @@ msgstr "Vrátiť platby za všetky objednávky tohto termínu"
 msgid "Refund amount"
 msgstr "Suma vrátenia"
 
-#: src/components/common/OrdersTable/index.tsx:277
+#: src/components/common/OrdersTable/index.tsx:278
 msgid "Refund failed"
 msgstr "Vrátenie zlyhalo"
 
@@ -9038,7 +9094,7 @@ msgstr "Vrátiť objednávku"
 msgid "Refund Order {0}"
 msgstr "Vrátiť objednávku {0}"
 
-#: src/components/common/OrdersTable/index.tsx:276
+#: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund pending"
 msgstr "Vrátenie čaká"
 
@@ -9065,7 +9121,7 @@ msgstr "Stav vrátenia"
 msgid "Refunded"
 msgstr "Vrátené"
 
-#: src/components/common/OrdersTable/index.tsx:274
+#: src/components/common/OrdersTable/index.tsx:275
 msgid "Refunded: {0}"
 msgstr "Vrátené: {0}"
 
@@ -9209,11 +9265,11 @@ msgstr "Znovu odoslať e-mail s lístkom"
 msgid "Resending..."
 msgstr "Opätovné odosielanie..."
 
-#: src/components/common/OrdersTable/index.tsx:329
+#: src/components/common/OrdersTable/index.tsx:335
 msgid "Reserved"
 msgstr "Rezervované"
 
-#: src/components/common/OrdersTable/index.tsx:223
+#: src/components/common/OrdersTable/index.tsx:224
 msgid "Reserved until"
 msgstr "Rezervované do"
 
@@ -9956,6 +10012,10 @@ msgstr "Odoslať notifikačný e-mail o vrátení"
 msgid "Send reset link"
 msgstr "Odoslať odkaz na obnovenie"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:343
+msgid "Send Swish request for {amountLabel}"
+msgstr ""
+
 #: src/components/modals/SendMessageModal/index.tsx:542
 msgid "Send Test"
 msgstr "Odoslať test"
@@ -10514,7 +10574,7 @@ msgstr "Štatistiky"
 #: src/components/common/AttendeeTable/index.tsx:251
 #: src/components/common/CheckInListTable/index.tsx:158
 #: src/components/common/OrderDetails/index.tsx:71
-#: src/components/common/OrdersTable/index.tsx:314
+#: src/components/common/OrdersTable/index.tsx:320
 #: src/components/common/OrganizerWebhookTable/index.tsx:238
 #: src/components/common/WaitlistTable/index.tsx:205
 #: src/components/common/WebhookTable/index.tsx:238
@@ -10547,7 +10607,7 @@ msgstr "Stále potrebné"
 msgid "Stop Impersonating"
 msgstr "Zastaviť zosobnenie"
 
-#: src/components/common/OrdersTable/index.tsx:295
+#: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
 msgid "Stripe"
@@ -10812,6 +10872,27 @@ msgstr "E-mail podpory"
 msgid "Swedish"
 msgstr "Švédčina"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:51
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:54
+msgid "Swish could not complete the payment."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:154
+msgid "Swish could not start the payment. Please try again."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:150
+msgid "Swish is temporarily unavailable. Please try again in a moment."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:286
+msgid "Swish on this device"
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:45
+msgid "Swish timed out waiting for your approval."
+msgstr ""
+
 #: src/components/layouts/OrganizerLayout/index.tsx:75
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
@@ -10833,6 +10914,10 @@ msgstr "Tričká, hrnčeky a ďalšie"
 msgid "Tap dates like a calendar."
 msgstr "Klikajte na dátumy ako v kalendári."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:326
+msgid "Tap the button, approve the payment in the Swish app on this device, and you will be brought back here."
+msgstr ""
+
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:59
 msgid "Tap this screen to resume scanning"
 msgstr "Ťuknite na obrazovku a skenovanie bude pokračovať"
@@ -10850,7 +10935,7 @@ msgid "Targeting attendees across {0} selected sessions."
 msgstr "Cielené na účastníkov z {0} vybraných termínov."
 
 #: src/components/common/AdminOrdersTable/index.tsx:84
-#: src/components/common/OrdersTable/index.tsx:269
+#: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
@@ -10994,6 +11079,10 @@ msgstr "To je všetko"
 msgid "The background color of the page. When using cover image, this is applied as an overlay."
 msgstr "Farba pozadia stránky. Pri použití obrázka obalu sa aplikuje ako prekrytie."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:47
+msgid "The BankID signing was cancelled."
+msgstr ""
+
 #: src/components/layouts/CheckIn/index.tsx:471
 msgid "The check-in list you are looking for does not exist."
 msgstr "Zoznam odbavení, ktorý hľadáte, neexistuje."
@@ -11074,6 +11163,11 @@ msgstr "Toto rozhodnutie sa zaznamená do auditného denníka objednávky."
 msgid "The page you are looking for does not exist"
 msgstr "Stránka, ktorú hľadáte, neexistuje"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:34
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:49
+msgid "The payment was declined in Swish."
+msgstr ""
+
 #: src/components/common/PlatformFeesSettings/index.tsx:212
 msgid "The platform fee is added to the ticket price. Buyers pay more, but you receive the full ticket price."
 msgstr "Poplatok platformy sa pripočíta k cene lístka. Kupujúci zaplatia viac, ale vy dostanete plnú cenu lístka."
@@ -11094,6 +11188,10 @@ msgstr "Primárna farba značky používaná pre tlačidlá a zvýraznenia"
 msgid "The quick brown fox jumps over the lazy dog."
 msgstr "Príliš žlutý kůň úpěl ďábelské ódy."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:348
+msgid "The request will be sent to {0}"
+msgstr ""
+
 #: src/components/modals/SendMessageModal/index.tsx:208
 msgid "The scheduled time is required"
 msgstr "Naplánovaný čas je povinný"
@@ -11105,6 +11203,18 @@ msgstr "Naplánovaný čas musí byť v budúcnosti"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "Termín podujatia „{title}“, pôvodne naplánovaný na {0}, bol presunutý."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
+msgid "The Swish payment request expired before it was approved."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:36
+msgid "The Swish payment was cancelled."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:167
+msgid "The Swish request could not be cancelled. Please try again."
+msgstr ""
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:155
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:186
@@ -11368,6 +11478,10 @@ msgstr "Tento názov je viditeľný pre koncových používateľov"
 msgid "This occurrence is at capacity"
 msgstr "Tento termín má naplnenú kapacitu"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:152
+msgid "This order can no longer be paid. Please start a new order."
+msgstr ""
+
 #: src/components/forms/StripeCheckoutForm/index.tsx:131
 msgid "This order has already been paid."
 msgstr "Táto objednávka už bola zaplatená."
@@ -11459,6 +11573,10 @@ msgstr "Tento lístok bol práve naskenovaný. Pred ďalším skenovaním počka
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Tento používateľ nie je aktívny, pretože neprijal pozvánku."
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:64
+msgid "This usually takes a few seconds. Keep this page open."
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:368
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -11814,6 +11932,10 @@ msgstr "Skúste iný výraz alebo iný filter"
 msgid "Try adjusting your filters to see more dates."
 msgstr "Upravte filtre, aby ste videli viac termínov."
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:261
+msgid "Try again"
+msgstr ""
+
 #: src/components/routes/auth/Login/index.tsx:141
 #: src/components/routes/my-tickets/index.tsx:200
 msgid "Try another email"
@@ -12098,7 +12220,7 @@ msgstr "Miesto aktualizované pre {count} termín(ov)"
 msgid "Updates as you build the rule. Flip through months to sanity-check dates."
 msgstr "Aktualizuje sa počas vytvárania pravidla. Prelistujte mesiace a skontrolujte termíny."
 
-#: src/components/forms/ProductForm/ProductPreview.tsx:101
+#: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "Aktualizuje sa počas písania."
 
@@ -12507,6 +12629,10 @@ msgstr "VK"
 msgid "Waiting"
 msgstr "Čakanie"
 
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:237
+msgid "Waiting for confirmation from Swish…"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:367
 msgid "Waiting for payment"
 msgstr "Čaká na platbu"
@@ -12514,6 +12640,10 @@ msgstr "Čaká na platbu"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:64
 msgid "Waiting for scan…"
 msgstr "Čaká sa na sken…"
+
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:63
+msgid "Waiting for Swish to confirm your payment…"
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
 #: src/components/layouts/AuthLayout/index.tsx:17
@@ -12537,7 +12667,7 @@ msgstr "Ponuka zo zoznamu čakateľov vypršala"
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
 msgstr "Upozornenie: Toto je predvolená konfigurácia systému. Zmeny ovplyvnia všetky účty, ktoré nemajú priradenú konkrétnu konfiguráciu."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:89
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:91
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "Nepodarilo sa spracovať vašu platbu. Skúste to znovu alebo kontaktujte podporu."
 
@@ -12589,6 +12719,10 @@ msgstr "Momentálne sa nevieme spojiť so Stripe. Skúste to o chvíľu znova."
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Nepodarilo sa preusporiadať kategórie. Skúste to znovu."
 
+#: src/components/routes/product-widget/PaymentReturn/SwishPaymentReturn.tsx:55
+msgid "We have not received a confirmation from Swish yet."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:417
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Nastala chyba pri načítaní tejto stránky. Skúste to znovu."
@@ -12618,7 +12752,7 @@ msgstr "Odoslali sme overovací odkaz na {0}"
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "Používame cookies na pochopenie používania stránky a zlepšenie vášho zážitku."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:100
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:102
 msgid "We were unable to confirm your payment. Please try again or contact support."
 msgstr "Nepodarilo sa potvrdiť vašu platbu. Skúste to znovu alebo kontaktujte podporu."
 
@@ -12651,7 +12785,7 @@ msgstr "Pošleme vaše lístky na tento e-mail"
 msgid "We'll validate your VAT number in the background. If there are any issues, we'll let you know."
 msgstr "Overíme číslo DPH na pozadí. Ak nastanú problémy, dáme vám vedieť."
 
-#: src/components/routes/product-widget/PaymentReturn/index.tsx:91
+#: src/components/routes/product-widget/PaymentReturn/index.tsx:93
 msgid "We're processing your order. Please wait..."
 msgstr "Spracovávame vašu objednávku. Čakajte prosím..."
 
@@ -13284,7 +13418,7 @@ msgstr "Vaša objednávka čaká na platbu"
 msgid "Your orders have been exported successfully."
 msgstr "Vaše objednávky boli úspešne exportované."
 
-#: src/components/common/OrdersTable/index.tsx:380
+#: src/components/common/OrdersTable/index.tsx:386
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Vaše objednávky sa zobrazia tu, keď začnú prichádzať."
 
@@ -13308,6 +13442,10 @@ msgstr "Vaša platba je chránená šifrovaním na bankovej úrovni"
 #: src/components/forms/StripeCheckoutForm/index.tsx:102
 msgid "Your payment was not successful, please try again."
 msgstr "Vaša platba nebola úspešná, skúste to znovu."
+
+#: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:40
+msgid "Your payment was received, but the order could not be completed automatically. Please contact the event organizer."
+msgstr ""
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:163
 msgid "Your payment was unsuccessful. Please try again."
