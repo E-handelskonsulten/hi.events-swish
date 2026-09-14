@@ -87,6 +87,7 @@ use HiEvents\Http\Actions\CheckInLists\Public\GetCheckInListStatsPublicAction;
 use HiEvents\Http\Actions\CheckInLists\UpdateCheckInListAction;
 use HiEvents\Http\Actions\Common\GetColorThemesAction;
 use HiEvents\Http\Actions\Common\Webhooks\StripeIncomingWebhookAction;
+use HiEvents\Http\Actions\Common\Webhooks\SwishPaymentCallbackAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateEventEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateOrganizerEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\DeleteEventEmailTemplateAction;
@@ -159,6 +160,9 @@ use HiEvents\Http\Actions\Orders\MessageOrderAction;
 use HiEvents\Http\Actions\Orders\Payment\RefundOrderAction;
 use HiEvents\Http\Actions\Orders\Payment\Stripe\CreatePaymentIntentActionPublic;
 use HiEvents\Http\Actions\Orders\Payment\Stripe\GetPaymentIntentActionPublic;
+use HiEvents\Http\Actions\Orders\Payment\Swish\CancelSwishPaymentActionPublic;
+use HiEvents\Http\Actions\Orders\Payment\Swish\CreateSwishPaymentActionPublic;
+use HiEvents\Http\Actions\Orders\Payment\Swish\GetSwishPaymentActionPublic;
 use HiEvents\Http\Actions\Orders\Public\AbandonOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CompleteOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CreateOrderActionPublic;
@@ -635,11 +639,17 @@ $router->prefix('/public')->group(
         $router->post('/events/{event_id}/order/{order_short_id}/stripe/payment_intent', CreatePaymentIntentActionPublic::class);
         $router->get('/events/{event_id}/order/{order_short_id}/stripe/payment_intent', GetPaymentIntentActionPublic::class);
 
+        // Swish payment gateway
+        $router->post('/events/{event_id}/order/{order_short_id}/swish/payment', CreateSwishPaymentActionPublic::class);
+        $router->get('/events/{event_id}/order/{order_short_id}/swish/payment', GetSwishPaymentActionPublic::class);
+        $router->delete('/events/{event_id}/order/{order_short_id}/swish/payment', CancelSwishPaymentActionPublic::class);
+
         // Questions
         $router->get('/events/{event_id}/questions', GetQuestionsPublicAction::class);
 
         // Webhooks
         $router->post('/webhooks/stripe', StripeIncomingWebhookAction::class);
+        $router->post('/webhooks/swish/payments', SwishPaymentCallbackAction::class);
 
         // Check-In
         $router->get('/check-in-lists/{check_in_list_short_id}', GetCheckInListPublicAction::class);
