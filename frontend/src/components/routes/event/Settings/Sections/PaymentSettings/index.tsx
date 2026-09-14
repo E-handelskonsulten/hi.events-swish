@@ -87,6 +87,11 @@ export const PaymentAndInvoicingSettings = () => {
             description: t`Accept credit card payments with Stripe`
         },
         {
+            value: "SWISH",
+            label: t`Swish`,
+            description: t`Accept Swish payments. Requires Swish to be configured in the organizer settings.`
+        },
+        {
             value: "OFFLINE",
             label: t`Offline Payments`,
             description: t`Accept bank transfers, checks, or other offline payment methods`
