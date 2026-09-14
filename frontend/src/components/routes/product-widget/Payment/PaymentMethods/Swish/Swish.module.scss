@@ -1,0 +1,55 @@
+$radius-sm: 10px;
+$transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+.container {
+  padding: 4px 0 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.flowSwitch {
+  :global(.mantine-SegmentedControl-label) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.flowOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.hint {
+  color: var(--checkout-text-secondary, #6B7280);
+}
+
+.waiting {
+  padding: 8px 0;
+}
+
+.pollingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payButton,
+.openSwishButton {
+  height: 48px;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+}
