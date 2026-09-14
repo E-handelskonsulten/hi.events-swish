@@ -61,7 +61,7 @@
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.8",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.4.2",
     "express": "^4.19.2",
     "invariant": "2.2.4",
     "lodash": "4.17.21",
