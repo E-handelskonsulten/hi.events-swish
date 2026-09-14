@@ -143,8 +143,10 @@ curl -sk -X PUT "$API/public/events/$EVENT/order/$SHORT?session_identifier=$SESS
 
 curl -sk -X POST "$API/public/events/$EVENT/order/$SHORT/swish/payment?session_identifier=$SESSION" \
   -H "Content-Type: application/json" -H "Accept: application/json" \
-  -d '{"flow":"ECOMMERCE","payer_alias":"4671234567"}'
-# expect 201 with status CREATED. Within ~5 s MSS posts the callback through ngrok.
+  -d '{"flow":"ECOMMERCE","payer_alias":"0701234567"}'
+# expect 201 with status CREATED. Within ~5-10 s MSS posts the callback through ngrok (source IP 89.46.83.171).
+# The payer number must be a real Swedish mobile format (07XXXXXXXX or 467XXXXXXXX, 11 digits international);
+# the 10-digit example number in the Swish docs is rejected by our validation. MSS accepts any number.
 
 # poll our status endpoint (this also reconciles server-side if the callback was lost):
 curl -sk -H "Accept: application/json" "$API/public/events/$EVENT/order/$SHORT/swish/payment?session_identifier=$SESSION"
@@ -169,24 +171,40 @@ curl -sk -X POST "$API/public/events/$EVENT/order/$SHORT/swish/payment?session_i
 
 ## 6. Lost callback → poller reconciles
 
-1. Stop ngrok (or run `ngrok` against a wrong port) so MSS cannot deliver the callback.
+1. Make the callback undeliverable. Either stop ngrok, or (without touching the tunnel) point the callback at a
+   dead path on our own API: `SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api/blackhole`
+   + `php artisan config:clear`. MSS then gets a 404 from nginx, which you can see in `docker compose logs nginx`.
 2. Create a new order (§3) and a payment (§4).
-3. Do **not** call the status endpoint. Watch the logs: the scheduler runs `ReconcilePendingSwishPaymentsJob`
-   every 15 s; within 15–30 s you should see `Swish payment completed order` triggered by the job and
-   the order is COMPLETED. (Requires `php artisan schedule:work` to be running.)
+3. Do **not** call the Swish status endpoint (it would reconcile on its own). Poll the plain order endpoint
+   `GET …/order/{short_id}?session_identifier=…` instead. The scheduler runs `ReconcilePendingSwishPaymentsJob`
+   every 15 s; within 15–30 s the order is COMPLETED. Proof it was the poller: the `swish_payments` row has
+   `poll_attempts > 0` and `callback_payload IS NULL`. (Requires `php artisan schedule:work` to be running;
+   its log lines go to that process's stderr, not to `docker compose logs`.)
+4. Restore `SWISH_CALLBACK_BASE_URL` and `config:clear` afterwards.
+
+Verified 2026-09-14: callback 404'd at the dead path, order completed by the poller after 2 poll attempts.
 
 ## 7. Simulated decline and error
 
 MSS simulates outcomes through the `message` field, which we derive from the event title. Temporarily rename
 the event title to `RF07` (declined) or `BANKIDCL` (payer cancelled BankID), create a payment, then poll:
-expect status `DECLINED`/`ERROR`, `order.payment_status = PAYMENT_FAILED`, order still RESERVED so the buyer can retry.
-Rename the title back afterwards.
+MSS reports these "payment result" simulations as status **`ERROR`** with `errorCode` `RF07`/`BANKIDCL` (not as
+`DECLINED`); either way our status is terminal, `order.payment_status = PAYMENT_FAILED`, and the order stays RESERVED
+so the buyer can retry. Rename the title back **before** the retry, otherwise the retry is declined too.
+
+Verified 2026-09-14: `ERROR`/`RF07` via callback 12 s after creation; a retry on the same order created a new request
+which MSS auto-paid, and the order completed.
 
 ## 8. Cancel-on-expiry
 
 Set the event's `order_timeout_in_minutes` to 1 (event settings), create an order + payment, wait ~90 s without paying.
 The poller cancels the Swish request (`PATCH … cancelled`) and marks the local payment `EXPIRED`;
 `GET …/swish/payment` then returns `status: EXPIRED`.
+
+**MSS caveat:** MSS auto-pays every request within seconds, so against MSS the request is already PAID when the
+reservation expires and the poller completes it as a late payment (`late_payment: true` in the log) instead of
+cancelling. The real cancel path (PATCH → `EXPIRED`, plus the public DELETE) was verified against the local fake
+Swish with a 120 s payout delay (see appendix); the flagged case (paid after expiry, no inventory) likewise.
 
 ## 9. Double-submit protection
 
