@@ -86,6 +86,7 @@ use HiEvents\Http\Actions\CheckInLists\Public\GetCheckInListPublicAction;
 use HiEvents\Http\Actions\CheckInLists\Public\GetCheckInListStatsPublicAction;
 use HiEvents\Http\Actions\CheckInLists\UpdateCheckInListAction;
 use HiEvents\Http\Actions\Common\GetColorThemesAction;
+use HiEvents\Http\Actions\Health\HealthCheckAction;
 use HiEvents\Http\Actions\Common\Webhooks\StripeIncomingWebhookAction;
 use HiEvents\Http\Actions\Common\Webhooks\SwishPaymentCallbackAction;
 use HiEvents\Http\Actions\Common\Webhooks\SwishRefundCallbackAction;
@@ -277,6 +278,8 @@ use Illuminate\Routing\Router;
 
 /** @var Router|Router $router */
 $router = app()->get('router');
+
+$router->get('/health', HealthCheckAction::class);
 
 $router->prefix('/auth')->group(
     function (Router $router): void {

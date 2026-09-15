@@ -36,7 +36,7 @@ class ScrambleServiceProvider extends ServiceProvider
 
         Scramble::configure()
             ->routes(static function (Route $route): bool {
-                if (Str::is(['mail-test', '*sitemap*', 'admin', 'admin/*'], $route->uri())) {
+                if (Str::is(['mail-test', 'health', '*sitemap*', 'admin', 'admin/*'], $route->uri())) {
                     return false;
                 }
 
