@@ -1063,5 +1063,11 @@
     "Error code": "Felkod",
     "Error message": "Felmeddelande",
     "Instruction reference": "Instruktionsreferens",
-    "The order is marked as refund failed. Retry the refund from the order page in the admin panel or refund the buyer manually.": "Ordern är markerad med misslyckad återbetalning. Gör om återbetalningen från ordersidan i adminpanelen eller återbetala köparen manuellt."
+    "The order is marked as refund failed. Retry the refund from the order page in the admin panel or refund the buyer manually.": "Ordern är markerad med misslyckad återbetalning. Gör om återbetalningen från ordersidan i adminpanelen eller återbetala köparen manuellt.",
+    "Hi :name!": "Hej :name!",
+    "Hi!": "Hej!",
+    "Your ticket for :event: :url": "Din biljett till :event: :url",
+    "Your order for :event has been refunded and the ticket is no longer valid.": "Din order för :event har återbetalats och biljetten gäller inte längre.",
+    "The SMS sender must be 3-11 letters or digits, start with a letter and contain no spaces.": "SMS-avsändaren måste vara 3–11 bokstäver eller siffror, börja med en bokstav och får inte innehålla mellanslag.",
+    "The phone number must be a Swedish mobile number, e.g. 070-123 45 67.": "Telefonnumret måste vara ett svenskt mobilnummer, t.ex. 070-123 45 67."
 }

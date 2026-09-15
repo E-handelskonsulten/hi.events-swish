@@ -33,6 +33,7 @@ class CompleteOrderActionPublic extends BaseAction
                     'first_name' => $request->validated('order.first_name'),
                     'last_name' => $request->validated('order.last_name'),
                     'email' => $request->validated('order.email'),
+                    'phone' => $request->validated('order.phone'),
                     'address' => $request->validated('order.address'),
                     'questions' => $request->has('order.questions')
                         ? $request->input('order.questions')

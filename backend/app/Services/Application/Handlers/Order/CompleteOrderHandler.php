@@ -344,6 +344,7 @@ class CompleteOrderHandler
                     OrderDomainObjectAbstract::FIRST_NAME => $orderDTO->first_name,
                     OrderDomainObjectAbstract::LAST_NAME => $orderDTO->last_name,
                     OrderDomainObjectAbstract::EMAIL => $orderDTO->email,
+                    OrderDomainObjectAbstract::PHONE => $orderDTO->phone,
                     OrderDomainObjectAbstract::PAYMENT_STATUS => $order->isPaymentRequired()
                         ? OrderPaymentStatus::AWAITING_PAYMENT->name
                         : OrderPaymentStatus::NO_PAYMENT_REQUIRED->name,

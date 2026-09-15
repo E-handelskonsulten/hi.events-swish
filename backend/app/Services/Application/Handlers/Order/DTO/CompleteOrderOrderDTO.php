@@ -18,6 +18,7 @@ class CompleteOrderOrderDTO extends BaseDTO
         #[CollectionOf(OrderQuestionsDTO::class)]
         public readonly ?Collection $questions,
         public readonly ?array $address = [],
+        public readonly ?string $phone = null,
         public readonly bool $opted_into_marketing = false,
     ) {}
 }

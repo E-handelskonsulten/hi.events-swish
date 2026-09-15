@@ -36,6 +36,7 @@ use HiEvents\Repository\Eloquent\OrderItemRepository;
 use HiEvents\Repository\Eloquent\OrderPaymentPlatformFeeRepository;
 use HiEvents\Repository\Eloquent\OrderRefundRepository;
 use HiEvents\Repository\Eloquent\OrderRepository;
+use HiEvents\Repository\Eloquent\OrganizerBillingSettingsRepository;
 use HiEvents\Repository\Eloquent\OrganizerConfigurationRepository;
 use HiEvents\Repository\Eloquent\OrganizerRepository;
 use HiEvents\Repository\Eloquent\OrganizerSettingsRepository;
@@ -54,6 +55,7 @@ use HiEvents\Repository\Eloquent\PromoCodeRepository;
 use HiEvents\Repository\Eloquent\QuestionAndAnswerViewRepository;
 use HiEvents\Repository\Eloquent\QuestionAnswerRepository;
 use HiEvents\Repository\Eloquent\QuestionRepository;
+use HiEvents\Repository\Eloquent\SmsMessagesRepository;
 use HiEvents\Repository\Eloquent\StripeCustomerRepository;
 use HiEvents\Repository\Eloquent\StripePaymentsRepository;
 use HiEvents\Repository\Eloquent\StripePayoutsRepository;
@@ -99,6 +101,7 @@ use HiEvents\Repository\Interfaces\OrderItemRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderPaymentPlatformFeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRefundRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrganizerBillingSettingsRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerConfigurationRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerSettingsRepositoryInterface;
@@ -117,6 +120,7 @@ use HiEvents\Repository\Interfaces\PromoCodeRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuestionAndAnswerViewRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuestionAnswerRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuestionRepositoryInterface;
+use HiEvents\Repository\Interfaces\SmsMessagesRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripeCustomerRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePaymentsRepositoryInterface;
 use HiEvents\Repository\Interfaces\StripePayoutsRepositoryInterface;
@@ -183,6 +187,8 @@ class RepositoryServiceProvider extends ServiceProvider
         EmailTemplateRepositoryInterface::class => EmailTemplateRepository::class,
         OrganizerStripePlatformRepositoryInterface::class => OrganizerStripePlatformRepository::class,
         OrganizerSwishSettingsRepositoryInterface::class => OrganizerSwishSettingsRepository::class,
+        OrganizerBillingSettingsRepositoryInterface::class => OrganizerBillingSettingsRepository::class,
+        SmsMessagesRepositoryInterface::class => SmsMessagesRepository::class,
         SwishPaymentsRepositoryInterface::class => SwishPaymentsRepository::class,
         SwishRefundsRepositoryInterface::class => SwishRefundsRepository::class,
         SwishMassRefundRunsRepositoryInterface::class => SwishMassRefundRunsRepository::class,

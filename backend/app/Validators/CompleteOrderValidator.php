@@ -74,6 +74,7 @@ class CompleteOrderValidator extends BaseValidator
             'order.last_name' => ['required', 'string', 'max:40'],
             'order.questions' => new OrderQuestionRule($orderQuestions, $products),
             'order.email' => 'required|email',
+            'order.phone' => ['nullable', 'string', 'regex:/^467\d{8}$/'],
             'order.email_confirmation' => 'required|email|same:order.email',
             'products' => new ProductQuestionRule(
                 $productQuestions,
@@ -94,6 +95,7 @@ class CompleteOrderValidator extends BaseValidator
             'order.email' => __('A valid email is required'),
             'order.email_confirmation.required' => __('Please confirm your email address'),
             'order.email_confirmation.same' => __('Email addresses do not match'),
+            'order.phone.regex' => __('The phone number must be a Swedish mobile number, e.g. 070-123 45 67.'),
             'order.address.address_line_1.required' => __('Address line 1 is required'),
             'order.address.city.required' => __('City is required'),
             'order.address.zip_or_postal_code.required' => __('Zip or postal code is required'),

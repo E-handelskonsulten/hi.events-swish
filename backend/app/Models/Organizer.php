@@ -18,6 +18,11 @@ class Organizer extends BaseModel
         return $this->hasMany(Event::class);
     }
 
+    public function organizer_billing_settings(): HasOne
+    {
+        return $this->hasOne(OrganizerBillingSetting::class);
+    }
+
     public function organizer_settings(): HasOne
     {
         return $this->hasOne(OrganizerSetting::class);

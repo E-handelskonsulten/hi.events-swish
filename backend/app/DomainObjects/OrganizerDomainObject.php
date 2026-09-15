@@ -17,6 +17,8 @@ class OrganizerDomainObject extends Generated\OrganizerDomainObjectAbstract
 
     private ?OrganizerSettingDomainObject $settings = null;
 
+    private ?OrganizerBillingSettingDomainObject $billingSettings = null;
+
     /** @var Collection<int, OrganizerStripePlatformDomainObject>|null */
     private ?Collection $stripePlatforms = null;
 
@@ -46,6 +48,18 @@ class OrganizerDomainObject extends Generated\OrganizerDomainObjectAbstract
     public function setEvents(?Collection $events): self
     {
         $this->events = $events;
+
+        return $this;
+    }
+
+    public function getOrganizerBillingSettings(): ?OrganizerBillingSettingDomainObject
+    {
+        return $this->billingSettings;
+    }
+
+    public function setOrganizerBillingSettings(?OrganizerBillingSettingDomainObject $billingSettings): self
+    {
+        $this->billingSettings = $billingSettings;
 
         return $this;
     }

@@ -34,6 +34,10 @@ class OrganizerResourcePublic extends JsonResource
                 condition: ! is_null($this->getEvents()),
                 value: fn () => EventResourcePublic::collection($this->getEvents())
             ),
+            'sms_delivery_enabled' => $this->when(
+                condition: $this->getOrganizerBillingSettings() !== null,
+                value: fn () => (bool) $this->getOrganizerBillingSettings()->getSmsEnabled(),
+            ),
             'settings' => $this->when(
                 condition: ! is_null($this->getOrganizerSettings()),
                 value: fn () => new OrganizerSettingsPublicResource($this->getOrganizerSettings())

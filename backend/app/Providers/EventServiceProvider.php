@@ -2,6 +2,7 @@
 
 namespace HiEvents\Providers;
 
+use HiEvents\Listeners\Sms\SendRefundSmsListener;
 use HiEvents\Listeners\Webhook\WebhookEventListener;
 use HiEvents\Services\Infrastructure\DomainEvents\Events\AttendeeEvent;
 use HiEvents\Services\Infrastructure\DomainEvents\Events\CheckinEvent;
@@ -22,6 +23,9 @@ class EventServiceProvider extends ServiceProvider
      * @var array<class-string, array<class-string>>
      */
     private static array $domainEventMap = [
+        SendRefundSmsListener::class => [
+            OrderEvent::class,
+        ],
         WebhookEventListener::class => [
             ProductEvent::class,
             OrderEvent::class,

@@ -5,10 +5,26 @@ declare(strict_types=1);
 namespace HiEvents\Http\Request\Order;
 
 use HiEvents\Http\Request\BaseRequest;
+use HiEvents\Services\Domain\Payment\Swish\SwishPayerAliasNormalizer;
 use HiEvents\Validators\CompleteOrderValidator;
 
 class CompleteOrderRequest extends BaseRequest
 {
+    protected function prepareForValidation(): void
+    {
+        $phone = $this->input('order.phone');
+
+        if (! is_string($phone)) {
+            return;
+        }
+
+        $this->merge([
+            'order' => array_merge($this->input('order', []), [
+                'phone' => trim($phone) === '' ? null : (SwishPayerAliasNormalizer::normalize($phone) ?? $phone),
+            ]),
+        ]);
+    }
+
     public function rules(): array
     {
         if ($this->route() === null) {
@@ -16,6 +32,7 @@ class CompleteOrderRequest extends BaseRequest
                 'order.first_name' => ['required', 'string', 'max:40'],
                 'order.last_name' => ['required', 'string', 'max:40'],
                 'order.email' => ['required', 'email'],
+                'order.phone' => ['nullable', 'string', 'max:20'],
                 'order.email_confirmation' => ['required', 'email', 'same:order.email'],
                 'order.questions' => ['array'],
                 'order.address' => ['array'],

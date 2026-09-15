@@ -1,0 +1,154 @@
+<?php
+
+declare(strict_types=1);
+
+namespace HiEvents\Services\Domain\Sms;
+
+use HiEvents\DomainObjects\Enums\SmsMessageType;
+use HiEvents\DomainObjects\EventDomainObject;
+use HiEvents\DomainObjects\Generated\OrganizerBillingSettingDomainObjectAbstract;
+use HiEvents\DomainObjects\Generated\SmsMessageDomainObjectAbstract;
+use HiEvents\DomainObjects\OrderDomainObject;
+use HiEvents\DomainObjects\OrganizerBillingSettingDomainObject;
+use HiEvents\DomainObjects\SmsMessageDomainObject;
+use HiEvents\DomainObjects\Status\SmsMessageStatus;
+use HiEvents\DomainObjects\Status\SwishPaymentStatus;
+use HiEvents\Exceptions\Sms\SmsDeliveryException;
+use HiEvents\Repository\Interfaces\EventRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrganizerBillingSettingsRepositoryInterface;
+use HiEvents\Repository\Interfaces\SmsMessagesRepositoryInterface;
+use HiEvents\Repository\Interfaces\SwishPaymentsRepositoryInterface;
+use HiEvents\Services\Infrastructure\Sms\ElksSmsClient;
+use Illuminate\Config\Repository;
+use Psr\Log\LoggerInterface;
+
+class OrderSmsService
+{
+    public function __construct(
+        private readonly OrderRepositoryInterface $orderRepository,
+        private readonly EventRepositoryInterface $eventRepository,
+        private readonly OrganizerBillingSettingsRepositoryInterface $organizerBillingSettingsRepository,
+        private readonly SwishPaymentsRepositoryInterface $swishPaymentsRepository,
+        private readonly SmsMessagesRepositoryInterface $smsMessagesRepository,
+        private readonly ElksSmsClient $smsClient,
+        private readonly SmsMessageBuilder $messageBuilder,
+        private readonly Repository $config,
+        private readonly LoggerInterface $logger,
+    ) {}
+
+    /**
+     * @throws SmsDeliveryException
+     */
+    public function send(int $orderId, SmsMessageType $type): void
+    {
+        if (! $this->config->get('sms.enabled')) {
+            return;
+        }
+
+        $order = $this->orderRepository->findById($orderId);
+        $event = $this->eventRepository->findById($order->getEventId());
+        $settings = $this->findSettings($event);
+
+        if ($settings === null || ! $settings->getSmsEnabled()) {
+            return;
+        }
+
+        if ($type === SmsMessageType::REFUND_NOTICE && ! $order->isFullyRefunded()) {
+            return;
+        }
+
+        $existing = $this->smsMessagesRepository->findFirstWhere([
+            SmsMessageDomainObjectAbstract::ORDER_ID => $orderId,
+            SmsMessageDomainObjectAbstract::TYPE => $type->name,
+        ]);
+
+        if ($existing?->getStatus() === SmsMessageStatus::SENT->name) {
+            return;
+        }
+
+        $recipient = $this->resolveRecipient($order);
+
+        if ($recipient === null) {
+            $this->logger->info('SMS skipped: order has no mobile number', [
+                'order_id' => $orderId,
+                'type' => $type->name,
+            ]);
+
+            return;
+        }
+
+        $sender = $settings->getSmsSenderName() ?: $this->config->get('sms.default_sender');
+        $message = $this->messageBuilder->build($type, $order, $event);
+
+        try {
+            $sent = $this->smsClient->send($recipient, $sender, $message);
+        } catch (SmsDeliveryException $exception) {
+            $this->record($existing, $event, $order, $type, [
+                SmsMessageDomainObjectAbstract::STATUS => SmsMessageStatus::FAILED->name,
+                SmsMessageDomainObjectAbstract::RECIPIENT => $recipient,
+                SmsMessageDomainObjectAbstract::SENDER => $sender,
+                SmsMessageDomainObjectAbstract::ERROR_MESSAGE => mb_substr($exception->getMessage(), 0, 1000),
+            ]);
+
+            throw $exception;
+        }
+
+        $this->record($existing, $event, $order, $type, [
+            SmsMessageDomainObjectAbstract::STATUS => SmsMessageStatus::SENT->name,
+            SmsMessageDomainObjectAbstract::RECIPIENT => $recipient,
+            SmsMessageDomainObjectAbstract::SENDER => $sender,
+            SmsMessageDomainObjectAbstract::PARTS => $sent->parts,
+            SmsMessageDomainObjectAbstract::PROVIDER_MESSAGE_ID => $sent->providerMessageId ?: null,
+            SmsMessageDomainObjectAbstract::ERROR_MESSAGE => null,
+            SmsMessageDomainObjectAbstract::SENT_AT => now()->toDateTimeString(),
+        ]);
+
+        $this->logger->info('SMS sent', [
+            'order_id' => $orderId,
+            'type' => $type->name,
+            'organizer_id' => $event->getOrganizerId(),
+            'parts' => $sent->parts,
+            'dry_run' => $sent->dryRun,
+        ]);
+    }
+
+    private function findSettings(EventDomainObject $event): ?OrganizerBillingSettingDomainObject
+    {
+        return $this->organizerBillingSettingsRepository->findFirstWhere([
+            OrganizerBillingSettingDomainObjectAbstract::ORGANIZER_ID => $event->getOrganizerId(),
+        ]);
+    }
+
+    private function resolveRecipient(OrderDomainObject $order): ?string
+    {
+        $payment = $this->swishPaymentsRepository->findLatestForOrder($order->getId());
+
+        if ($payment !== null && $payment->getStatus() === SwishPaymentStatus::PAID->value && $payment->getPayerAlias()) {
+            return '+'.$payment->getPayerAlias();
+        }
+
+        return $order->getPhone() ? '+'.$order->getPhone() : null;
+    }
+
+    private function record(
+        ?SmsMessageDomainObject $existing,
+        EventDomainObject $event,
+        OrderDomainObject $order,
+        SmsMessageType $type,
+        array $data,
+    ): void {
+        if ($existing !== null) {
+            $this->smsMessagesRepository->updateFromArray($existing->getId(), $data);
+
+            return;
+        }
+
+        $this->smsMessagesRepository->create($data + [
+            SmsMessageDomainObjectAbstract::ORGANIZER_ID => $event->getOrganizerId(),
+            SmsMessageDomainObjectAbstract::EVENT_ID => $event->getId(),
+            SmsMessageDomainObjectAbstract::ORDER_ID => $order->getId(),
+            SmsMessageDomainObjectAbstract::TYPE => $type->name,
+        ]);
+    }
+}
