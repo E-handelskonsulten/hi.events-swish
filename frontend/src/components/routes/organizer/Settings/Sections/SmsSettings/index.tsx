@@ -1,5 +1,5 @@
 import {t} from "@lingui/macro";
-import {Button, Stack, Switch, TextInput} from "@mantine/core";
+import {Button, NumberInput, Stack, Switch, TextInput} from "@mantine/core";
 import {useForm} from "@mantine/form";
 import {useParams} from "react-router";
 import {useEffect} from "react";
@@ -15,7 +15,10 @@ import {formatCurrency} from "../../../../../../utilites/currency.ts";
 interface SmsSettingsFormValues {
     sms_enabled: boolean;
     sms_sender_name: string;
+    sms_lead_hours: number;
 }
+
+const DEFAULT_LEAD_HOURS = 3;
 
 export const SmsSettings = () => {
     const {organizerId} = useParams();
@@ -32,6 +35,7 @@ export const SmsSettings = () => {
         initialValues: {
             sms_enabled: false,
             sms_sender_name: '',
+            sms_lead_hours: DEFAULT_LEAD_HOURS,
         },
     });
 
@@ -40,6 +44,7 @@ export const SmsSettings = () => {
             form.setValues({
                 sms_enabled: settings.sms_enabled,
                 sms_sender_name: settings.sms_sender_name ?? '',
+                sms_lead_hours: settings.sms_lead_hours ?? DEFAULT_LEAD_HOURS,
             });
         }
     }, [settingsQuery.isFetched, settings?.updated_at]);
@@ -48,6 +53,7 @@ export const SmsSettings = () => {
         updateMutation.mutate({
             sms_enabled: values.sms_enabled,
             sms_sender_name: values.sms_sender_name.trim() || null,
+            sms_lead_hours: Number(values.sms_lead_hours) || DEFAULT_LEAD_HOURS,
         }, {
             onSuccess: () => {
                 showSuccess(t`SMS delivery settings saved.`);
@@ -96,6 +102,16 @@ export const SmsSettings = () => {
                             placeholder={defaultSender}
                             maxLength={11}
                             {...form.getInputProps('sms_sender_name')}
+                        />
+
+                        <NumberInput
+                            label={t`Send ticket SMS this many hours before the event starts`}
+                            description={t`Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately.`}
+                            min={1}
+                            max={24}
+                            allowDecimal={false}
+                            suffix={' ' + t`hours`}
+                            {...form.getInputProps('sms_lead_hours')}
                         />
 
                         <div>

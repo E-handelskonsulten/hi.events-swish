@@ -4421,7 +4421,7 @@ msgstr "Enable attendee self-service by default"
 msgid "Enable Invoicing"
 msgstr "Enable Invoicing"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:84
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:92
 msgid "Enable SMS delivery"
 msgstr "Enable SMS delivery"
 
@@ -5937,6 +5937,10 @@ msgstr "Homepage Preview"
 #: src/components/modals/ManageOrderModal/index.tsx:230
 msgid "Homer"
 msgstr "Homer"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:113
+msgid "hours"
+msgstr "hours"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:387
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:411
@@ -8221,6 +8225,10 @@ msgstr "Orders Completed"
 msgid "Orders Exported"
 msgstr "Orders Exported"
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:109
+msgid "Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately."
+msgstr "Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately."
+
 #: src/components/routes/admin/Dashboard/index.tsx:207
 msgid "Orders Total"
 msgstr "Orders Total"
@@ -8404,7 +8412,7 @@ msgstr "Paid"
 msgid "Paid Accounts"
 msgstr "Paid Accounts"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:76
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:83
 msgid "Paid add-on"
 msgstr "Paid add-on"
 
@@ -9980,7 +9988,7 @@ msgstr "Saturday"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:101
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
@@ -10465,7 +10473,7 @@ msgstr "Send a message"
 msgid "Send as test"
 msgstr "Send as test"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:67
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:73
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 
@@ -10510,6 +10518,10 @@ msgstr "Send Swish request for {amountLabel}"
 msgid "Send Test"
 msgstr "Send Test"
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:108
+msgid "Send ticket SMS this many hours before the event starts"
+msgstr "Send ticket SMS this many hours before the event starts"
+
 #: src/components/modals/SendMessageModal/index.tsx:358
 msgid "Send to all occurrences, or choose a specific one"
 msgstr "Send to all occurrences, or choose a specific one"
@@ -10518,7 +10530,7 @@ msgstr "Send to all occurrences, or choose a specific one"
 msgid "Send your first message"
 msgstr "Send your first message"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:92
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:100
 msgid "Sender name"
 msgstr "Sender name"
 
@@ -10805,7 +10817,7 @@ msgstr "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:93
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:101
 msgid "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
 msgstr "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
 
@@ -10873,23 +10885,23 @@ msgid "Smith"
 msgstr "Smith"
 
 #: src/components/routes/organizer/Settings/index.tsx:87
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:66
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:72
 msgid "SMS delivery"
 msgstr "SMS delivery"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:77
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:84
 msgid "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
 msgstr "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:71
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:77
 msgid "SMS delivery is not available yet"
 msgstr "SMS delivery is not available yet"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:53
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:59
 msgid "SMS delivery settings saved."
 msgstr "SMS delivery settings saved."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:72
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:78
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 msgstr "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 
@@ -12265,7 +12277,7 @@ msgstr "Ticket Holders"
 msgid "Ticket ID"
 msgstr "Ticket ID"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:85
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:93
 msgid "Ticket links and refund notices are sent by SMS in addition to email."
 msgstr "Ticket links and refund notices are sent by SMS in addition to email."
 

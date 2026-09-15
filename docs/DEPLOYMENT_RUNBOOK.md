@@ -131,7 +131,9 @@ Env in `/srv/biljettera/.env`:
 | `SMS_DEFAULT_SENDER` | Alphanumeric sender shown on the phone when the organizer has not set one (`Biljettera`) |
 | `SMS_DRY_RUN` | `true` makes 46elks validate every message without sending or charging; use it for the first deploy, then set `false` |
 
-After changing any of them: `bc up -d app` (env is read at container start). The recipient is the Swish payer number when the order was paid with Swish, otherwise the optional mobile number from checkout; orders without a number are skipped and logged (`SMS skipped: order has no mobile number`). Sending runs as the queued `SendOrderSmsJob` (3 attempts, 30 s / 2 min / 10 min backoff) and never blocks the order or the ticket email; every attempt is stored in `sms_messages`.
+After changing any of them: `bc up -d app` (env is read at container start). The recipient is the Swish payer number when the order was paid with Swish, otherwise the optional mobile number from checkout; orders without a number are skipped and logged (`SMS skipped: order has no mobile number`). Sending runs as the queued `SendOrderSmsJob` (3 attempts, 30 s / 2 min / 10 min backoff) and never blocks the order or the ticket email; every attempt is stored in `sms_messages`. The link goes to the attendee's public ticket page (`/product/<eventId>/<attendeeShortId>`, no checkout session needed, first attendee for multi-ticket orders).
+
+Timing: the ticket SMS is held until N hours before the event start (N = the organizer's "hours before start" setting, 1-24, default 3, first occurrence for recurring/multi-day events). Orders completed closer to the start, or after it, get the SMS immediately; ticket emails always go out immediately. Held messages sit in `sms_messages` as `SCHEDULED` with `scheduled_for`, the scheduler's `ProcessDueSmsMessagesJob` sends them every minute, a change of the event or occurrence start (or of N) moves them, and a full refund cancels them. A held SMS is billed in the month it is actually sent.
 
 Per-organizer prices for the invoicing basis (defaults 6,00 kr per sold ticket and 0,50 kr per SMS):
 
