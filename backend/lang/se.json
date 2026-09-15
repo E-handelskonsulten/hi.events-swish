@@ -1069,5 +1069,20 @@
     "Your ticket for :event: :url": "Din biljett till :event: :url",
     "Your order for :event has been refunded and the ticket is no longer valid.": "Din order för :event har återbetalats och biljetten gäller inte längre.",
     "The SMS sender must be 3-11 letters or digits, start with a letter and contain no spaces.": "SMS-avsändaren måste vara 3–11 bokstäver eller siffror, börja med en bokstav och får inte innehålla mellanslag.",
-    "The phone number must be a Swedish mobile number, e.g. 070-123 45 67.": "Telefonnumret måste vara ett svenskt mobilnummer, t.ex. 070-123 45 67."
+    "The phone number must be a Swedish mobile number, e.g. 070-123 45 67.": "Telefonnumret måste vara ett svenskt mobilnummer, t.ex. 070-123 45 67.",
+    "Billing basis :month": "Faktureringsunderlag :month",
+    "nothing to invoice": "inget att fakturera",
+    "Period": "Period",
+    "No tickets were sold and no SMS were sent during this period. There is nothing to invoice.": "Inga biljetter såldes och inga SMS skickades under perioden. Det finns inget att fakturera.",
+    "Item": "Post",
+    "Quantity × price": "Antal × pris",
+    "Sold tickets": "Sålda biljetter",
+    "of which :count refunded — does not affect the fee": "varav :count återköpta — påverkar ej avgiften",
+    "SMS sent": "SMS skickade",
+    "Organizer total": "Summa arrangör",
+    "Gross ticket sales (not billable)": "Biljettförsäljning brutto (ej fakturerbart)",
+    ":count orders": ":count ordrar",
+    "Total to invoice": "Totalt att fakturera",
+    "The full basis is attached as CSV.": "Hela underlaget bifogas som CSV.",
+    "Fee per sold ticket, refunds do not affect it. SMS are charged per sent message.": "Avgift per såld biljett, återköp påverkar ej. SMS debiteras per skickat meddelande."
 }

@@ -25,6 +25,10 @@ class Kernel extends ConsoleKernel
         $schedule->job(new ReconcilePendingSwishRefundsJob)->everyThirtySeconds()->withoutOverlapping();
         $schedule->job(new ProcessActiveSwishMassRefundRunsJob)->everyFiveSeconds()->withoutOverlapping();
         $schedule->job(new ResumeStalledSwishMassRefundRunsJob)->everyMinute()->withoutOverlapping();
+        $schedule->command('billing:send-monthly-summary')
+            ->monthlyOn(1, '07:00')
+            ->timezone(config('billing.timezone'))
+            ->withoutOverlapping();
 
         $schedule->call(function (): void {
             $count = DB::table('failed_jobs')->count();

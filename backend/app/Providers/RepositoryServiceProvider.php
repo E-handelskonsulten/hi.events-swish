@@ -15,6 +15,7 @@ use HiEvents\Repository\Eloquent\AnnouncementRepository;
 use HiEvents\Repository\Eloquent\AnnouncementUserRepository;
 use HiEvents\Repository\Eloquent\AttendeeCheckInRepository;
 use HiEvents\Repository\Eloquent\AttendeeRepository;
+use HiEvents\Repository\Eloquent\BillingSummaryRunsRepository;
 use HiEvents\Repository\Eloquent\CapacityAssignmentRepository;
 use HiEvents\Repository\Eloquent\CheckInListRepository;
 use HiEvents\Repository\Eloquent\EmailTemplateRepository;
@@ -80,6 +81,7 @@ use HiEvents\Repository\Interfaces\AnnouncementRepositoryInterface;
 use HiEvents\Repository\Interfaces\AnnouncementUserRepositoryInterface;
 use HiEvents\Repository\Interfaces\AttendeeCheckInRepositoryInterface;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
+use HiEvents\Repository\Interfaces\BillingSummaryRunsRepositoryInterface;
 use HiEvents\Repository\Interfaces\CapacityAssignmentRepositoryInterface;
 use HiEvents\Repository\Interfaces\CheckInListRepositoryInterface;
 use HiEvents\Repository\Interfaces\EmailTemplateRepositoryInterface;
@@ -189,6 +191,7 @@ class RepositoryServiceProvider extends ServiceProvider
         OrganizerSwishSettingsRepositoryInterface::class => OrganizerSwishSettingsRepository::class,
         OrganizerBillingSettingsRepositoryInterface::class => OrganizerBillingSettingsRepository::class,
         SmsMessagesRepositoryInterface::class => SmsMessagesRepository::class,
+        BillingSummaryRunsRepositoryInterface::class => BillingSummaryRunsRepository::class,
         SwishPaymentsRepositoryInterface::class => SwishPaymentsRepository::class,
         SwishRefundsRepositoryInterface::class => SwishRefundsRepository::class,
         SwishMassRefundRunsRepositoryInterface::class => SwishMassRefundRunsRepository::class,
