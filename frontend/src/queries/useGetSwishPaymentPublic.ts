@@ -21,5 +21,6 @@ export const useGetSwishPaymentPublic = (eventId: IdParam, orderShortId: IdParam
         retry: (failureCount, error) => error.response?.status !== 404 && failureCount < 3,
         refetchOnWindowFocus: true,
         refetchInterval: (query) => query.state.data?.is_terminal ? false : SWISH_POLL_INTERVAL_MS,
+        refetchIntervalInBackground: true,
     });
 };
