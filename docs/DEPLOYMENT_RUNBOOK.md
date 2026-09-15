@@ -118,6 +118,38 @@ Resend over SMTP (`smtp.resend.com:587` with STARTTLS, user `resend`, password =
 
 Branding in mails: buyer-facing mails (ticket, order confirmation/cancellation/failure/refund, detail changes, occurrence cancellation, waitlist) show the organizer's uploaded logo (Organizer → Settings → logo) in the header and use the organizer's name as the From display name; the From address stays `MAIL_FROM_ADDRESS` so DKIM and DMARC keep aligning. Without an organizer logo, and for every organizer-facing mail (new order, flagged payment, refund failure, mass refund summary), the header shows `APP_EMAIL_LOGO_URL` (the Biljettera wordmark). The "Powered by Hi.Events" footer is the upstream licence notice and must stay as is.
 
+## SMS ticket delivery (46elks)
+
+Buyers get a text with a link to their tickets when an order completes and a notice when it is fully refunded. It is a per-organizer add-on (Organizer → Settings → SMS delivery, default off) on top of a platform master switch.
+
+Env in `/srv/biljettera/.env`:
+
+| Variable | Value |
+|---|---|
+| `SMS_ENABLED` | `true` to send at all; `false` keeps every organizer toggle inert (settings are still saved) |
+| `ELKS_USERNAME` / `ELKS_PASSWORD` | API credentials from the 46elks dashboard (never in the repo) |
+| `SMS_DEFAULT_SENDER` | Alphanumeric sender shown on the phone when the organizer has not set one (`Biljettera`) |
+| `SMS_DRY_RUN` | `true` makes 46elks validate every message without sending or charging; use it for the first deploy, then set `false` |
+
+After changing any of them: `bc up -d app` (env is read at container start). The recipient is the Swish payer number when the order was paid with Swish, otherwise the optional mobile number from checkout; orders without a number are skipped and logged (`SMS skipped: order has no mobile number`). Sending runs as the queued `SendOrderSmsJob` (3 attempts, 30 s / 2 min / 10 min backoff) and never blocks the order or the ticket email; every attempt is stored in `sms_messages`.
+
+Per-organizer prices for the invoicing basis (defaults 6,00 kr per sold ticket and 0,50 kr per SMS):
+
+```bash
+bc exec app php artisan billing:set-organizer-fees <organizerId> --platform-fee=6 --sms-fee=0.5
+```
+
+## Monthly billing summary
+
+On the 1st of every month at 07:00 Europe/Stockholm the scheduler runs `billing:send-monthly-summary`, which queues one mail with the invoicing basis for the previous calendar month (one section per organizer plus a CSV) to `BILLING_SUMMARY_EMAIL`. Organizers never receive it. Each month is recorded in `billing_summary_runs`, so a rerun of the scheduler does not send it twice.
+
+```bash
+bc exec app php artisan billing:send-monthly-summary --month=2026-09 --to=you@example.com --sync   # preview any month to another address, nothing recorded
+bc exec app php artisan billing:send-monthly-summary --month=2026-08 --force --sync                # resend a month to BILLING_SUMMARY_EMAIL
+```
+
+Billing is gross: every ticket on a paid order counts, refunds are listed as information only, and SMS are charged per sent message only for organizers with the add-on enabled. Ticket sales reconcile with the organizer's accounting report (paid orders by order date in the organizer's timezone).
+
 ## Monitoring
 
 - `GET https://demo.biljettera.se/api/health` returns `{"status":"ok","checks":{"database":"ok","redis":"ok"}}` with 200, or 503 with `"degraded"`. Point the uptime checker at it (interval 1 min, alert after 2 failures).
