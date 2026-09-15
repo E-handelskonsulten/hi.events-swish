@@ -22,6 +22,8 @@ use HiEvents\Services\Infrastructure\Swish\DTO\SwishRefundDTO;
 use HiEvents\Values\MoneyValue;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Str;
+use HiEvents\Mail\Swish\SwishRefundFailedMail;
+use Illuminate\Contracts\Mail\Mailer;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
@@ -35,6 +37,7 @@ class SwishRefundCompletionService
         private readonly EventStatisticsRefundService $eventStatisticsRefundService,
         private readonly DomainEventDispatcherService $domainEventDispatcherService,
         private readonly LoggerInterface $logger,
+        private readonly Mailer $mailer,
     ) {}
 
     /**
@@ -167,8 +170,26 @@ class SwishRefundCompletionService
                 'error_message' => $remote->errorMessage,
             ]);
 
+            $this->alertOnFailure($failed);
+
             return $failed;
         });
+    }
+
+    private function alertOnFailure(SwishRefundDomainObject $refund): void
+    {
+        $alertsEmail = config('app.alerts_email');
+
+        if (! $alertsEmail) {
+            return;
+        }
+
+        $order = $this->orderRepository->findById($refund->getOrderId());
+
+        $this->mailer
+            ->to($alertsEmail)
+            ->locale(config('app.locale'))
+            ->send(new SwishRefundFailedMail(order: $order, refund: $refund));
     }
 
     private function lockRefund(SwishRefundDomainObject $refund): void

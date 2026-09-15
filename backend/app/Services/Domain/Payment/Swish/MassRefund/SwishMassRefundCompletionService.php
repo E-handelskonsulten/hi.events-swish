@@ -74,6 +74,7 @@ class SwishMassRefundCompletionService
 
         $this->mailer
             ->to($recipient)
+            ->bcc($failedItems->isEmpty() ? [] : array_filter([config('app.alerts_email')]))
             ->locale(config('app.locale'))
             ->send(new SwishMassRefundCompletedMail(
                 run: $run,

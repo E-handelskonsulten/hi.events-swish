@@ -332,6 +332,7 @@ class SwishPaymentCompletionService
 
         $this->mailer
             ->to($recipient)
+            ->bcc(array_filter([config('app.alerts_email')]))
             ->locale(config('app.locale'))
             ->send(new SwishPaymentNeedsReviewMail(
                 order: $order,
