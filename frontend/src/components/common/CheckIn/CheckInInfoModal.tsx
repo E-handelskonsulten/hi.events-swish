@@ -22,7 +22,7 @@ export const CheckInInfoModal = ({
     const checkedIn = checkInList.checked_in_attendees;
     const percent = total > 0 ? (checkedIn / total) * 100 : 0;
     const appName = getConfig("VITE_APP_NAME", "Hi.Events");
-    const logoSrc = getConfig("VITE_APP_LOGO_LIGHT", "/logos/hi-events-text-light.svg");
+    const logoSrc = getConfig("VITE_APP_LOGO_LIGHT", "/images/biljettera/logo-dark.png");
 
     return (
         <Modal
