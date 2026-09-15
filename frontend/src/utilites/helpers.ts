@@ -1,6 +1,7 @@
 import {Event, Product} from "../types.ts";
 import {MantineColor} from "@mantine/core";
 import {getConfig} from "./config.ts";
+import {getIntlLocale} from "../locales.ts";
 
 export function isNumber(value: any): value is number {
     return typeof value === 'number'
@@ -88,7 +89,7 @@ export const formatNumber = (number: number) => {
         return 0;
     }
 
-    return new Intl.NumberFormat().format(number);
+    return new Intl.NumberFormat(getIntlLocale()).format(number);
 }
 
 export const isSsr = () => import.meta.env.SSR;

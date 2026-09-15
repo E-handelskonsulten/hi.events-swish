@@ -206,7 +206,7 @@ export const localeFormats: Record<SupportedLocales, {
         dayName: 'dddd D MMMM',
         timeOnly: 'HH:mm',
         timezone: 'z',
-        dateTimePicker: 'MMM DD, YYYY [at] h:mm A'
+        dateTimePicker: 'D MMM YYYY HH:mm'
     },
     'sk': {
         fullDateTime: 'ddd D. MMM YYYY HH:mm',

@@ -1,4 +1,6 @@
 import {i18n} from "@lingui/core";
+import dayjs from "dayjs";
+import {getConfig} from "./utilites/config.ts";
 
 export type SupportedLocales =
     "en"
@@ -20,6 +22,53 @@ export type SupportedLocales =
     | "el";
 
 export const availableLocales = ["en", "de", "fr", "it", "nl", "pt", "es", "zh-cn", "zh-hk", "pt-br", "vi", "tr", "hu", "pl", "se", "sk", "el"];
+
+/* eslint-disable lingui/no-unlocalized-strings */
+const localeAliases: Record<string, SupportedLocales> = {
+    sv: "se",
+    "sv-se": "se",
+    "sv-fi": "se",
+};
+
+const localeToIntlLocaleMap: Record<SupportedLocales, string> = {
+    en: "en-US",
+    de: "de-DE",
+    fr: "fr-FR",
+    it: "it-IT",
+    nl: "nl-NL",
+    pt: "pt-PT",
+    es: "es-ES",
+    "zh-cn": "zh-CN",
+    "zh-hk": "zh-HK",
+    "pt-br": "pt-BR",
+    vi: "vi-VN",
+    tr: "tr-TR",
+    hu: "hu-HU",
+    pl: "pl-PL",
+    se: "sv-SE",
+    sk: "sk-SK",
+    el: "el-GR",
+};
+
+export const getDefaultLocale = (): SupportedLocales => {
+    const configured = getConfig("VITE_DEFAULT_LOCALE")?.toLowerCase();
+    if (configured && availableLocales.includes(configured)) {
+        return configured as SupportedLocales;
+    }
+
+    return "en";
+};
+
+export const getIntlLocale = (locale?: string): string => {
+    const appLocale = getSupportedLocale(locale || i18n.locale || getDefaultLocale());
+
+    if (appLocale === "en" && typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("en")) {
+        return navigator.language;
+    }
+
+    return localeToIntlLocaleMap[appLocale as SupportedLocales] ?? "en-US";
+};
+/* eslint-enable lingui/no-unlocalized-strings */
 
 export const localeToFlagEmojiMap: Record<SupportedLocales, string> = {
     en: '🇬🇧',
@@ -80,7 +129,7 @@ export const getClientLocale = () => {
         return getSupportedLocale(window.navigator.language);
     }
 
-    return "en";
+    return getDefaultLocale();
 };
 
 const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown>>> = {
@@ -96,13 +145,17 @@ const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown
     "zh-hk": () => import("dayjs/locale/zh-hk"),
     tr: () => import("dayjs/locale/tr"),
     hu: () => import("dayjs/locale/hu"),
+    pl: () => import("dayjs/locale/pl"),
+    se: () => import("dayjs/locale/sv").then((module) => {
+        dayjs.locale({...module.default, name: "se"}, undefined, true);
+    }),
     sk: () => import("dayjs/locale/sk"),
     el: () => import("dayjs/locale/el"),
 };
 
 export async function dynamicActivateLocale(locale: string) {
     try {
-        locale = availableLocales.includes(locale) ? locale : "en";
+        locale = availableLocales.includes(locale) ? locale : getDefaultLocale();
         const [module] = await Promise.all([
             import(`./locales/${locale}.po`),
             dayjsLocaleLoaders[locale as SupportedLocales]?.().catch((error) => console.error("Error loading dayjs locale:", error)),
@@ -116,17 +169,26 @@ export async function dynamicActivateLocale(locale: string) {
 }
 
 export const getSupportedLocale = (userLocale: string) => {
-    const normalizedLocale = userLocale.toLowerCase();
+    const normalizedLocale = userLocale.toLowerCase().replace("_", "-");
+
+    if (localeAliases[normalizedLocale]) {
+        return localeAliases[normalizedLocale];
+    }
 
     if (availableLocales.includes(normalizedLocale)) {
         return normalizedLocale;
     }
 
     const mainLanguage = normalizedLocale.split('-')[0];
+
+    if (localeAliases[mainLanguage]) {
+        return localeAliases[mainLanguage];
+    }
+
     const mainLocale = availableLocales.find(locale => locale.startsWith(mainLanguage));
     if (mainLocale) {
         return mainLocale;
     }
 
-    return "en";
+    return getDefaultLocale();
 };

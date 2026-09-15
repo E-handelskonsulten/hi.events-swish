@@ -24,6 +24,7 @@ export const clientBuildEnv: { [K in ConfigKeys]: string } = {
     'VITE_API_URL_CLIENT': import.meta.env.VITE_API_URL_CLIENT,
     'VITE_COOKIE_CONSENT_ENABLED': import.meta.env.VITE_COOKIE_CONSENT_ENABLED,
     'VITE_COOKIE_CONSENT_TEXT': import.meta.env.VITE_COOKIE_CONSENT_TEXT,
+    'VITE_DEFAULT_LOCALE': import.meta.env.VITE_DEFAULT_LOCALE,
 }
 
 export const getConfig = (key: ConfigKeys, fallback?: string): string | undefined => {
