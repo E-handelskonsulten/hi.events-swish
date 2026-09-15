@@ -47,7 +47,7 @@ class CreateImageHandler
         }
 
         if ($imageData->entityId === null) {
-            throw new CouldNotUploadImageException('Entity ID is required for non-generic images.');
+            throw new CouldNotUploadImageException(__('Entity ID is required for non-generic images.'));
         }
 
         $entityType = $imageData->imageType->getEntityType();
@@ -74,14 +74,14 @@ class CreateImageHandler
             case OrganizerDomainObject::class:
                 $organizer = $this->organizerRepository->findById($entityId);
                 if ($organizer->getAccountId() !== $accountId) {
-                    throw new CouldNotUploadImageException('Organizer does not belong to the user.');
+                    throw new CouldNotUploadImageException(__('Organizer does not belong to the user.'));
                 }
                 break;
 
             case EventDomainObject::class:
                 $event = $this->eventRepository->findById($entityId);
                 if ($event->getAccountId() !== $accountId) {
-                    throw new CouldNotUploadImageException('Event does not belong to the user.');
+                    throw new CouldNotUploadImageException(__('Event does not belong to the user.'));
                 }
                 break;
         }

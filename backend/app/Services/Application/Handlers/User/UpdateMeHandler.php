@@ -74,7 +74,7 @@ readonly class UpdateMeHandler
     private function validateCurrentPassword(UpdateMeDTO $updateUserData, UserDomainObject $existingUser): void
     {
         if (! $this->hasher->check($updateUserData->current_password, $existingUser->getPassword())) {
-            throw new PasswordInvalidException('Current password is invalid');
+            throw new PasswordInvalidException(__('Current password is invalid'));
         }
     }
 

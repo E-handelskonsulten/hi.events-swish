@@ -43,7 +43,7 @@ class CancelOrderAction extends BaseAction
         } catch (ApiErrorException|RefundNotPossibleException $exception) {
             throw ValidationException::withMessages([
                 'refund' => $exception instanceof ApiErrorException
-                    ? 'Stripe error: '.$exception->getMessage()
+                    ? __('Stripe error: :message', ['message' => $exception->getMessage()])
                     : $exception->getMessage(),
             ]);
         }

@@ -25,7 +25,7 @@ class DeleteImageHandler
         ]);
 
         if ($image === null) {
-            throw new CannotDeleteEntityException('You do not have permission to delete this image.');
+            throw new CannotDeleteEntityException(__('You do not have permission to delete this image.'));
         }
 
         $this->imageRepository->deleteWhere([

@@ -42,7 +42,7 @@ class UpdateMeAction extends BaseAction
             return $this->resourceResponse(UserResource::class, $user);
         } catch (PasswordInvalidException) {
             throw ValidationException::withMessages([
-                'current_password' => 'The current password does not match our records.',
+                'current_password' => __('The current password does not match our records.'),
             ]);
         }
     }

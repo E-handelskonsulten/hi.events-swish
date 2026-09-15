@@ -23,7 +23,7 @@ class GetCapacityAssignmentHandler
             ]);
 
         if ($capacityAssignment === null) {
-            throw new ResourceNotFoundException('Capacity assignment not found');
+            throw new ResourceNotFoundException(__('Capacity assignment not found'));
         }
 
         return $capacityAssignment;

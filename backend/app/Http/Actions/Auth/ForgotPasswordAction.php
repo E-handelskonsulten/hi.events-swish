@@ -27,7 +27,7 @@ class ForgotPasswordAction extends BaseAction
 
         return $this->jsonResponse(
             data: [
-                'message' => 'If the email address is known, an email has been sent with further instructions.',
+                'message' => __('If the email address is known, an email has been sent with further instructions.'),
             ]
         );
     }

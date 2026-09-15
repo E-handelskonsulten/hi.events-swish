@@ -9,10 +9,10 @@ use Exception;
 class SelfServiceDisabledException extends Exception
 {
     public function __construct(
-        string $message = 'Self-service management is disabled for this event',
+        ?string $message = null,
         int $code = 403,
         ?Exception $previous = null
     ) {
-        parent::__construct($message, $code, $previous);
+        parent::__construct($message ?? __('Self-service management is disabled for this event'), $code, $previous);
     }
 }

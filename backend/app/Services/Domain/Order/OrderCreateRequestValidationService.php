@@ -375,7 +375,7 @@ class OrderCreateRequestValidationService
         /** @var ProductDomainObject $product */
         $product = $products->filter(fn ($t) => $t->getId() === $productId)->first();
         if (! $product) {
-            throw new NotFoundHttpException(sprintf('Product ID %d not found', $productId));
+            throw new NotFoundHttpException(__('Product ID :id not found', ['id' => $productId]));
         }
 
         $this->validateProductEvent(
@@ -427,12 +427,12 @@ class OrderCreateRequestValidationService
     private function validateProductVisibility(ProductDomainObject $product, ?PromoCodeDomainObject $promoCode): void
     {
         if ($product->getIsHidden()) {
-            throw new NotFoundHttpException(sprintf('Product ID %d not found', $product->getId()));
+            throw new NotFoundHttpException(__('Product ID :id not found', ['id' => $product->getId()]));
         }
 
         if ($product->getIsHiddenWithoutPromoCode()
             && ! ($promoCode && $promoCode->appliesToProduct($product))) {
-            throw new NotFoundHttpException(sprintf('Product ID %d not found', $product->getId()));
+            throw new NotFoundHttpException(__('Product ID :id not found', ['id' => $product->getId()]));
         }
     }
 
@@ -491,7 +491,7 @@ class OrderCreateRequestValidationService
     private function validateProductEvent(EventDomainObject $event, int $productId, ProductDomainObject $product): void
     {
         if ($product->getEventId() !== $event->getId()) {
-            throw new NotFoundHttpException(sprintf('Product ID %d not found for event ID %d', $productId, $event->getId()));
+            throw new NotFoundHttpException(__('Product ID :id not found for event ID :eventId', ['id' => $productId, 'eventId' => $event->getId()]));
         }
     }
 

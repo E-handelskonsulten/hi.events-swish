@@ -9,11 +9,11 @@ use Throwable;
 class UnauthorizedException extends AccessDeniedHttpException
 {
     public function __construct(
-        string $message = 'This action is unauthorized',
+        ?string $message = null,
         ?Throwable $previous = null,
         int $code = ResponseCodes::HTTP_FORBIDDEN,
         array $headers = []
     ) {
-        parent::__construct($message, $previous, $code, $headers);
+        parent::__construct($message ?? __('This action is unauthorized'), $previous, $code, $headers);
     }
 }

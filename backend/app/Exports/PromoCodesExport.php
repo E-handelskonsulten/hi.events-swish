@@ -30,16 +30,16 @@ class PromoCodesExport implements FromCollection, WithHeadings, WithMapping, Wit
     public function headings(): array
     {
         return [
-            'ID',
-            'Code',
-            'Discount',
-            'Discount Type',
-            'Discount Applies To',
-            'Max Allowed Uses',
-            'Expiry Date',
-            'Event ID',
-            'Created At',
-            'Updated At',
+            __('ID'),
+            __('Code'),
+            __('Discount'),
+            __('Discount Type'),
+            __('Discount Applies To'),
+            __('Max Allowed Uses'),
+            __('Expiry Date'),
+            __('Event ID'),
+            __('Created At'),
+            __('Updated At'),
         ];
     }
 

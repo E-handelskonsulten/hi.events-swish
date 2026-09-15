@@ -163,9 +163,6 @@ return [
     | Custom Validation Attributes
     |--------------------------------------------------------------------------
     |
-    | Readable Swedish names for the fields that buyers and organizers see
-    | most often. Anything not listed falls back to the raw field name.
-    |
     */
 
     'attributes' => [

@@ -39,7 +39,7 @@ class EditQuestionAnswerService
                 'question_answer_id' => $questionAnswerId,
             ]);
 
-            throw new ResourceNotFoundException('Question answer does not belong to the event');
+            throw new ResourceNotFoundException(__('Question answer does not belong to the event'));
         }
 
         if (! $question->isAnswerValid($answer)) {
@@ -48,7 +48,7 @@ class EditQuestionAnswerService
                 'answer' => $answer,
             ]);
 
-            throw new InvalidAnswerException('Please provide a valid answer');
+            throw new InvalidAnswerException(__('Please provide a valid answer'));
         }
 
         $this->questionAnswerRepository->updateWhere(

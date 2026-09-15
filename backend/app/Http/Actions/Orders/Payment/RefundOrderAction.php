@@ -38,7 +38,7 @@ class RefundOrderAction extends BaseAction
         } catch (ApiErrorException|RefundNotPossibleException $exception) {
             throw ValidationException::withMessages([
                 'amount' => $exception instanceof ApiErrorException
-                    ? 'Stripe error: '.$exception->getMessage()
+                    ? __('Stripe error: :message', ['message' => $exception->getMessage()])
                     : $exception->getMessage(),
             ]);
         } catch (SwishApiException|SwishConfigurationException $exception) {

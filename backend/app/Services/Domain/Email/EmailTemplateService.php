@@ -151,8 +151,8 @@ class EmailTemplateService
     {
         return [
             EmailTemplateType::ORDER_CONFIRMATION->value => [
-                'subject' => 'Your Order is Confirmed! 🎉',
-                'body' => <<<'LIQUID'
+                'subject' => __('Your Order is Confirmed! 🎉'),
+                'body' => __(<<<'LIQUID'
 <strong>Your Order is Confirmed! 🎉</strong><br>
 
 {% if order.is_awaiting_offline_payment %}
@@ -186,11 +186,11 @@ If you have any questions or need assistance, please contact <a href="mailto:{{ 
 
 Best regards,<br>
 {{ organizer.name }}
-LIQUID
+LIQUID),
             ],
             EmailTemplateType::OCCURRENCE_CANCELLATION->value => [
-                'subject' => '{{ event.title }} on {{ occurrence.start_date }} has been cancelled',
-                'body' => <<<'LIQUID'
+                'subject' => __('{{ event.title }} on {{ occurrence.start_date }} has been cancelled'),
+                'body' => __(<<<'LIQUID'
 Hello,<br>
 
 We're sorry to let you know that <strong>{{ event.title }}</strong> scheduled for <strong>{{ occurrence.start_date }}</strong> at <strong>{{ occurrence.start_time }}</strong> has been cancelled.<br>
@@ -203,11 +203,11 @@ If you have any questions about your order, please respond to this email or cont
 
 Best regards,<br>
 {{ organizer.name }}
-LIQUID
+LIQUID),
             ],
             EmailTemplateType::ATTENDEE_TICKET->value => [
-                'subject' => '🎟️ Your Ticket for {{ event.title }}',
-                'body' => <<<'LIQUID'
+                'subject' => __('🎟️ Your Ticket for {{ event.title }}'),
+                'body' => __(<<<'LIQUID'
 <strong>You're going to {{ event.title }}! 🎉</strong><br>
 
 {% if order.is_awaiting_offline_payment %}
@@ -234,7 +234,7 @@ Please find your ticket details below.<br>
 
 If you have any questions or need assistance, please reply to this email or contact the event organizer at <a href="mailto:{{ settings.support_email }}">{{ settings.support_email }}</a>.<br>
 
-LIQUID
+LIQUID),
             ],
         ];
     }

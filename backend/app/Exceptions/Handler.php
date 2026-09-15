@@ -85,7 +85,7 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof ResourceNotFoundException || $exception instanceof SymfonyResourceNotFoundException) {
             return response()->json([
-                'message' => $exception->getMessage() ?: 'Resource not found',
+                'message' => $exception->getMessage() ?: __('Resource not found'),
             ], 404);
         }
 

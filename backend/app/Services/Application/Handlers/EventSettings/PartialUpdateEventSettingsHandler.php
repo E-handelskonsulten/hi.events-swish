@@ -26,7 +26,7 @@ class PartialUpdateEventSettingsHandler
         ]);
 
         if (! $existingSettings) {
-            throw new RefundNotPossibleException('Event settings not found');
+            throw new RefundNotPossibleException(__('Event settings not found'));
         }
 
         return $this->eventSettingsHandler->handle(

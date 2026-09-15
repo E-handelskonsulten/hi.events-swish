@@ -9,9 +9,8 @@
 {{ __('Hello') }},
 
 <p>
-{{ __('A Swish payment of :amount :currency was received for order :order (:eventTitle), but the order could not be completed automatically.', [
-    'amount' => number_format((float) $payment->getAmount(), 2, '.', ' '),
-    'currency' => $payment->getCurrency(),
+{{ __('A Swish payment of :amount was received for order :order (:eventTitle), but the order could not be completed automatically.', [
+    'amount' => \HiEvents\Helper\Currency::format((float) $payment->getAmount(), $payment->getCurrency()),
     'order' => $order->getPublicId(),
     'eventTitle' => $event->getTitle(),
 ]) }}

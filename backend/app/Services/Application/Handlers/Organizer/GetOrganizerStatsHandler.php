@@ -20,7 +20,7 @@ class GetOrganizerStatsHandler
         ]);
 
         if ($organizer === null) {
-            throw new ResourceNotFoundException('Organizer not found');
+            throw new ResourceNotFoundException(__('Organizer not found'));
         }
 
         [$startDate, $endDate] = $this->resolveDateRange(
