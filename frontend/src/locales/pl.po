@@ -436,6 +436,7 @@ msgid "Abandoned"
 msgstr "Porzucony"
 
 #: src/components/layouts/EventHomepage/index.tsx:475
+#: src/components/modals/AboutModal/index.tsx:13
 msgid "About"
 msgstr "O"
 
@@ -575,6 +576,10 @@ msgstr "Konta"
 #: src/components/routes/admin/Announcements/index.tsx:71
 msgid "Accounts ({0})"
 msgstr "Konta ({0})"
+
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:40
+msgid "ACH Direct Debit"
+msgstr ""
 
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:36
 msgid "Action Required: VAT Information Needed"
@@ -812,6 +817,10 @@ msgstr "Doliczane przy płatności"
 #: src/components/common/PlatformFeesSettings/index.tsx:257
 msgid "Additional Fees"
 msgstr "Dodatkowe opłaty"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:13
+msgid "Additional ID verification"
+msgstr ""
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:403
 msgid "Additional Information"
@@ -1114,6 +1123,10 @@ msgstr "Kwota zapłacona ({0})"
 #: src/components/forms/AffiliateForm/index.tsx:90
 msgid "An email to associate with this affiliate. The affiliate will not be notified."
 msgstr "E-mail do powiązania z tym partnerem. Partner nie zostanie powiadomiony."
+
+#: src/queries/useGetOrdersByLookupToken.ts:22
+msgid "An error occurred"
+msgstr ""
 
 #: src/mutations/useExportAnswers.ts:45
 msgid "An error occurred while checking export status."
@@ -1766,6 +1779,7 @@ msgstr "Powrót do wiadomości"
 msgid "Back to payment"
 msgstr ""
 
+#: src/components/routes/event/Reports/ReportLayout/index.tsx:39
 #: src/components/routes/organizer/Reports/ReportLayout/index.tsx:45
 msgid "Back to Reports"
 msgstr "Powrót do raportów"
@@ -1783,6 +1797,14 @@ msgstr "Kolor tła"
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Background Type"
 msgstr "Typ tła"
+
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:41
+msgid "Bacs Direct Debit"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:11
+msgid "Bank account"
+msgstr ""
 
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:128
 msgid "Bank account connected"
@@ -1818,6 +1840,10 @@ msgstr "Podstawowe informacje"
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:126
 msgid "Because this account has completed orders, transaction records (amounts, dates, and invoice details) will be retained in an anonymized form for legal and tax purposes. All personal information will be permanently removed."
 msgstr "Ponieważ to konto ma zrealizowane zamówienia, zapisy transakcji (kwoty, daty i szczegóły faktur) zostaną zachowane w formie zanonimizowanej do celów prawnych i podatkowych. Wszystkie dane osobowe zostaną trwale usunięte."
+
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:42
+msgid "BECS Direct Debit"
+msgstr ""
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:554
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:292
@@ -1865,12 +1891,41 @@ msgid "Business"
 msgstr "Biznes"
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:190
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:30
 msgid "Business address"
 msgstr "Adres firmy"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:25
+msgid "Business category (MCC)"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:31
+msgid "Business city"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:26
+msgid "Business description"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:185
 msgid "Business name"
 msgstr "Nazwa firmy"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:32
+msgid "Business postal code"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:28
+msgid "Business tax ID"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:33
+msgid "Business verification document"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:24
+msgid "Business website"
+msgstr ""
 
 #: src/components/routes/admin/Announcements/index.tsx:455
 msgid "Button label"
@@ -2113,6 +2168,10 @@ msgstr "zmiany limitu miejsc"
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:66
 msgid "Capacity Used"
 msgstr "Wykorzystane miejsca"
+
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:9
+msgid "Card payments"
+msgstr ""
 
 #: src/components/modals/CreateProductCategoryModal/index.tsx:52
 msgid "Categories allow you to group products together. For example, you might have a category for \"Tickets\" and another for \"Merchandise\"."
@@ -2457,6 +2516,10 @@ msgstr "Kliknij, aby skopiować"
 msgid "Click to reopen for new sales"
 msgstr "Kliknij, aby wznowić sprzedaż"
 
+#: src/components/common/ImageUploadDropzone/index.tsx:180
+msgid "Click to upload"
+msgstr ""
+
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "Kliknij, aby zobaczyć notatki"
@@ -2617,6 +2680,7 @@ msgid "Completed orders"
 msgstr "Zakończone zamówienia"
 
 #: src/components/common/StatsCharts/index.tsx:53
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:49
 msgid "Completed Orders"
 msgstr "Zakończone zamówienia"
 
@@ -2812,6 +2876,10 @@ msgstr "Kontakt {0}"
 msgid "Contact Email"
 msgstr "E-mail kontaktowy"
 
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:56
+msgid "Container ID"
+msgstr ""
+
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 msgid "Content"
@@ -2824,6 +2892,7 @@ msgstr "Treść jest wymagana"
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:203
+#: src/components/layouts/ProductWidget/index.tsx:38
 #: src/components/routes/product-widget/SelectProducts/index.tsx:890
 msgid "Continue"
 msgstr "Kontynuuj"
@@ -3009,6 +3078,7 @@ msgstr "Kraj"
 msgid "Counts include all upcoming dates. Each person is offered a spot for the date they joined for."
 msgstr "Liczby obejmują wszystkie nadchodzące daty. Każda osoba otrzymuje ofertę miejsca na datę, na którą się zapisała."
 
+#: src/components/layouts/OrganizerHomepage/index.tsx:180
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:37
 msgid "Cover"
 msgstr "Okładka"
@@ -3036,6 +3106,7 @@ msgstr "Obejmuje wszystkie bilety"
 
 #: src/components/routes/event/attendees.tsx:253
 #: src/components/routes/event/products.tsx:77
+#: src/components/routes/event/promo-codes.tsx:58
 msgid "Create"
 msgstr "Utwórz"
 
@@ -3331,6 +3402,10 @@ msgstr "Klient"
 msgid "Customer link copied to clipboard"
 msgstr "Link klienta skopiowany do schowka"
 
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:27
+msgid "Customer support phone"
+msgstr ""
+
 #: src/components/modals/RefundOrderModal/index.tsx:133
 msgid "Customer will receive an email confirming the refund"
 msgstr "Klient otrzyma e-mail potwierdzający zwrot"
@@ -3405,6 +3480,7 @@ msgstr "Codzienne przychody, podatki, opłaty i zwroty we wszystkich wydarzeniac
 msgid "Daily sales and refunds per event and payment method with VAT split by rate, for bank reconciliation"
 msgstr ""
 
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:73
 #: src/components/routes/event/Reports/index.tsx:25
 msgid "Daily Sales Report"
 msgstr "Codzienny raport sprzedaży"
@@ -3456,6 +3532,7 @@ msgstr "Panel"
 #: src/components/common/OrderDetails/index.tsx:42
 #: src/components/common/WaitlistTable/index.tsx:184
 #: src/components/forms/QuestionForm/index.tsx:136
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:20
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:39
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:52
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:56
@@ -3495,6 +3572,10 @@ msgstr "Termin usunięty"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:368
 msgid "Date deleted successfully"
 msgstr "Termin został usunięty"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:17
+msgid "Date of birth"
+msgstr ""
 
 #: src/components/modals/ManageOccurrenceModal/index.tsx:75
 #: src/components/routes/event/OccurrenceDetail/index.tsx:99
@@ -3914,6 +3995,10 @@ msgstr "Pobieranie faktury"
 msgid "Draft"
 msgstr "Wersja robocza"
 
+#: src/components/common/ImageUploadDropzone/index.tsx:200
+msgid "Drag & drop or click to upload"
+msgstr ""
+
 #: src/components/forms/QuestionForm/index.tsx:124
 msgid "Dropdown selection"
 msgstr "Wybór z listy rozwijanej"
@@ -4216,6 +4301,7 @@ msgstr "E-mail i szablony"
 #: src/components/modals/CreateAttendeeModal/index.tsx:223
 #: src/components/modals/ManageAttendeeModal/index.tsx:208
 #: src/components/modals/ManageOrderModal/index.tsx:242
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:18
 msgid "Email address"
 msgstr "Adres e-mail"
 
@@ -4659,6 +4745,10 @@ msgstr "Wydarzenie niedostępne"
 msgid "Event Page"
 msgstr "Strona wydarzenia"
 
+#: src/components/routes/event/HomepageDesigner/index.tsx:317
+msgid "Event Preview"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:56
 msgid "Event restored successfully"
 msgstr "Wydarzenie zostało pomyślnie przywrócone"
@@ -4860,6 +4950,10 @@ msgstr "Eksportowanie zamówień"
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:46
 msgid "Facebook"
 msgstr "Facebook"
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:35
+msgid "Facebook Pixel"
+msgstr ""
 
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:138
 #: src/components/modals/SwishMassRefundModal/index.tsx:97
@@ -5303,6 +5397,7 @@ msgstr "Pierwszy numer faktury"
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:19
 #: src/components/routes/product-widget/CollectInformation/index.tsx:472
 #: src/components/routes/product-widget/CollectInformation/index.tsx:688
 msgid "First name"
@@ -5567,14 +5662,30 @@ msgstr "Przejdź do harmonogramu"
 msgid "Good readability"
 msgstr "Dobra czytelność"
 
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:44
+msgid "Google Analytics 4"
+msgstr ""
+
 #: src/components/common/CalendarOptionsPopover/index.tsx:30
 msgid "Google Calendar"
 msgstr "Kalendarz Google"
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:53
+msgid "Google Tag Manager"
+msgstr ""
 
 #: src/components/common/AnnouncementDisplay/AnnouncementModal.tsx:53
 #: src/components/common/CheckIn/CheckInDescriptionModal.tsx:40
 msgid "Got it"
 msgstr "Rozumiem"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:23
+msgid "Government ID number"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:12
+msgid "Government-issued photo ID"
+msgstr ""
 
 #: src/components/common/LanguageSwitcher/index.tsx:46
 msgid "Greek"
@@ -5602,6 +5713,7 @@ msgstr "Sprzedaż brutto"
 #: src/components/modals/ManageOccurrenceModal/index.tsx:182
 #: src/components/routes/admin/Dashboard/index.tsx:259
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:83
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:29
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:30
 msgid "Gross Sales"
 msgstr "Sprzedaż brutto"
@@ -5935,6 +6047,10 @@ msgstr "URL obrazu"
 msgid "Images"
 msgstr "Obrazy"
 
+#: src/components/common/ImageUploadDropzone/index.tsx:208
+msgid "Images only · Max 5MB"
+msgstr ""
+
 #: src/components/common/AdminAccountsTable/index.tsx:134
 #: src/components/common/AdminUsersTable/index.tsx:84
 #: src/components/common/AdminUsersTable/index.tsx:96
@@ -6042,6 +6158,11 @@ msgstr "Zwiększ ilość"
 msgid "Individual attendees"
 msgstr "Pojedynczy uczestnicy"
 
+#: src/components/common/Editor/Controls/InsertImageControl/index.tsx:91
+#: src/components/common/Editor/Controls/InsertImageControl/index.tsx:92
+msgid "Insert image"
+msgstr ""
+
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:104
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:125
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:148
@@ -6128,6 +6249,7 @@ msgid "Invited"
 msgstr "Zaproszony"
 
 #: src/components/common/OrdersTable/index.tsx:213
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:207
 msgid "Invoice"
 msgstr "Faktura"
 
@@ -6314,6 +6436,10 @@ msgstr "Ostatnie 24 godziny"
 msgid "Last 30 days"
 msgstr "Ostatnie 30 dni"
 
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:22
+msgid "Last 4 of SSN"
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:53
 #: src/components/common/ReportTable/index.tsx:48
 msgid "Last 48 hours"
@@ -6347,6 +6473,7 @@ msgstr "Ostatnie logowanie"
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:20
 msgid "Last name"
 msgstr "Nazwisko"
 
@@ -6416,6 +6543,10 @@ msgstr "Zostaw puste, aby ta lista check-in obejmowała wszystkie terminy"
 #: src/components/forms/CheckInListForm/index.tsx:106
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Zostaw włączone, aby objąć wszystkie bilety wydarzenia. Wyłącz, aby wybrać konkretne bilety."
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:29
+msgid "Legal business name"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:300
 msgid "Let them know about the change"
@@ -6546,6 +6677,7 @@ msgstr "Zaloguj się"
 msgid "Logging in"
 msgstr "Logowanie"
 
+#: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
@@ -6736,6 +6868,10 @@ msgstr "Maksimum na zamówienie"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "May"
 msgstr "Maj"
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:47
+msgid "Measurement ID"
+msgstr ""
 
 #: src/components/routes/admin/Attribution/index.tsx:108
 msgid "Medium"
@@ -6931,6 +7067,22 @@ msgstr "Wiele typów biletów"
 msgid "Music"
 msgstr "Muzyka"
 
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:67
+msgid "Must be 6-30 alphanumeric characters"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:40
+msgid "Must be 9-20 digits"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:49
+msgid "Must start with G- followed by 6-20 characters"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:58
+msgid "Must start with GTM- followed by 4-20 characters"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:71
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:71
 msgid "My amazing event description..."
@@ -6997,6 +7149,10 @@ msgstr ""
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:36
 msgid "Net Revenue"
 msgstr "Dochód netto"
+
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:38
+msgid "Net Sales"
+msgstr ""
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:266
 #: src/components/common/PromoCodeTable/index.tsx:166
@@ -7358,6 +7514,7 @@ msgstr "Nie znaleziono odbiorców"
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:174
 #: src/components/common/WebhookTable/index.tsx:174
+#: src/components/modals/WebhookLogsModal/index.tsx:80
 msgid "No response"
 msgstr "Brak odpowiedzi"
 
@@ -8107,6 +8264,10 @@ msgstr "Panel organizatora"
 msgid "Organizer deleted successfully"
 msgstr "Organizator został pomyślnie usunięty"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+msgid "Organizer Homepage Preview"
+msgstr ""
+
 #: src/components/modals/CreateEventModal/index.tsx:52
 msgid "Organizer is required"
 msgstr "Organizator jest wymagany"
@@ -8189,6 +8350,7 @@ msgid "Override removed"
 msgstr "Nadpisanie usunięte"
 
 #: src/components/layouts/Event/index.tsx:100
+#: src/components/layouts/OrganizerLayout/index.tsx:90
 msgid "Overview"
 msgstr "Przegląd"
 
@@ -8511,13 +8673,34 @@ msgstr "Trwale usuń tego organizatora i wszystkie jego wydarzenia."
 msgid "Permanently remove this date"
 msgstr "Trwale usuń ten termin"
 
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:14
+msgid "Personal address"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:15
+msgid "Personal city"
+msgstr ""
+
 #: src/components/routes/profile/ManageProfile/index.tsx:148
 msgid "Personal Information"
 msgstr "Informacje osobiste"
 
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:16
+msgid "Personal postal code"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:97
 msgid "Phone"
 msgstr "Telefon"
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:21
+msgid "Phone number"
+msgstr ""
+
+#: src/components/common/OrganizerReportTable/index.tsx:331
+#: src/components/common/ReportTable/index.tsx:300
+msgid "Pick a date range"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:530
 msgid "Pick an end date"
@@ -8538,6 +8721,14 @@ msgstr "Wybierz dni, aby zobaczyć terminy."
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
 msgstr "Pinterest"
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:65
+msgid "Pixel ID"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:38
+msgid "Pixel ID (numeric)"
+msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:259
 msgid "Place this in the <head> of your website."
@@ -8727,6 +8918,10 @@ msgstr "Obsługiwane przez"
 msgid "Pre Checkout message"
 msgstr "Wiadomość przed płatnością"
 
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:43
+msgid "Pre-authorized debit (Canada)"
+msgstr ""
+
 #: src/components/routes/event/CapacityAssignments/index.tsx:33
 msgid "Prevent overselling by sharing inventory across multiple ticket types."
 msgstr "Zapobiegaj nadmiernej sprzedaży, dzieląc zapasy między wieloma typami biletów."
@@ -8832,6 +9027,10 @@ msgstr "Przetwórz zwrot"
 msgid "Processing"
 msgstr ""
 
+#: src/components/common/ImageUploadDropzone/index.tsx:149
+msgid "Processing image..."
+msgstr ""
+
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:395
 msgid "Processing order"
 msgstr "Przetwarzanie zamówienia"
@@ -8878,6 +9077,10 @@ msgstr "Typ ceny produktu"
 msgid "Product Sales"
 msgstr "Sprzedaż produktów"
 
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:49
+msgid "Product Sales Report"
+msgstr ""
+
 #: src/components/routes/event/Reports/index.tsx:20
 msgid "Product sales, revenue, and tax breakdown"
 msgstr "Sprzedaż produktów, przychody i podział podatków"
@@ -8893,6 +9096,10 @@ msgstr "Ustawienia produktu zostały zapisane"
 #: src/components/common/ProductSelector/index.tsx:67
 msgid "Product Tier"
 msgstr "Poziom produktu"
+
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:19
+msgid "Product Title"
+msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:198
 #: src/components/forms/ProductForm/index.tsx:241
@@ -8925,6 +9132,7 @@ msgstr "Sprzedane produkty"
 #: src/components/common/StatsCharts/index.tsx:54
 #: src/components/routes/admin/Dashboard/index.tsx:258
 #: src/components/routes/admin/Dashboard/index.tsx:355
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:44
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:73
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:68
 msgid "Products Sold"
@@ -9413,6 +9621,11 @@ msgstr "Wznowić sprzedaż na ten termin? Wcześniej anulowane bilety nie zostan
 msgid "Repeats"
 msgstr "Powtarzanie"
 
+#: src/components/common/ImageUploadDropzone/index.tsx:168
+msgid "Replace Image"
+msgstr ""
+
+#: src/components/routes/event/Reports/ReportLayout/index.tsx:23
 #: src/components/routes/organizer/Reports/ReportLayout/index.tsx:29
 msgid "Report not found"
 msgstr "Raport nie znaleziony"
@@ -9698,6 +9911,10 @@ msgstr "Sprzedaż zakończona"
 #: src/components/common/ProductPriceAvailability/index.tsx:60
 msgid "Sales start"
 msgstr "Sprzedaż rozpoczyna się"
+
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:26
+msgid "Sales Total Gross"
+msgstr ""
 
 #: src/components/routes/event/Reports/index.tsx:38
 msgid "Sales, attendance, and check-in breakdown per occurrence"
@@ -10143,6 +10360,7 @@ msgstr "Wybierz poziom produktu"
 
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:49
 #: src/components/forms/PromoCodeForm/index.tsx:158
+#: src/components/forms/QuestionForm/index.tsx:160
 #: src/components/modals/SendMessageModal/index.tsx:414
 msgid "Select products"
 msgstr "Wybierz produkty"
@@ -10332,6 +10550,10 @@ msgstr "Ustawienia SEO"
 msgid "SEO Title"
 msgstr "Tytuł SEO"
 
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:19
+msgid "SEPA Direct Debit"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:73
 msgid "September"
 msgstr "Wrzesień"
@@ -10340,6 +10562,7 @@ msgstr "Wrzesień"
 msgid "Service Fee"
 msgstr "Opłata za usługę"
 
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:41
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
 msgstr ""
@@ -10723,6 +10946,14 @@ msgstr "Coś poszło nie tak. Spróbuj ponownie."
 msgid "Sorry, this promo code is not recognized"
 msgstr "Przepraszamy, ten kod promocyjny nie jest rozpoznany"
 
+#: src/components/common/SortArrows/index.tsx:29
+msgid "Sort ascending"
+msgstr ""
+
+#: src/components/common/SortArrows/index.tsx:37
+msgid "Sort descending"
+msgstr ""
+
 #: src/components/routes/admin/Attribution/index.tsx:106
 msgid "Source"
 msgstr "Źródło"
@@ -10912,6 +11143,11 @@ msgstr "Identyfikator płatności Stripe"
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:50
 msgid "Stripe payments are not enabled for this event."
 msgstr "Płatności Stripe nie są włączone dla tego wydarzenia."
+
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:34
+#: src/components/routes/organizer/Payments/RequirementsList.tsx:35
+msgid "Stripe terms acceptance"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:434
 msgid "Stripe will need a few more details soon"
@@ -11238,6 +11474,7 @@ msgstr "Odbiorcami będą uczestnicy z {0} wybranych sesji."
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:52
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:59
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
 msgid "Tax"
 msgstr "Podatek"
@@ -12065,6 +12302,10 @@ msgstr "Progi"
 msgid "TikTok"
 msgstr "TikTok"
 
+#: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:62
+msgid "TikTok Pixel"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:292
 msgid "Time"
 msgstr "Godzina"
@@ -12132,6 +12373,10 @@ msgstr "Dzisiaj"
 msgid "Toggle columns"
 msgstr "Przełącz kolumny"
 
+#: src/queries/useGetOrdersByLookupToken.ts:14
+msgid "Token is required"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/GroupedOccurrenceTable/index.tsx:46
 msgid "Tomorrow"
 msgstr "Jutro"
@@ -12178,6 +12423,7 @@ msgstr "Łączna kwota rabatu"
 msgid "Total Entries"
 msgstr "Łączna liczba wpisów"
 
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:54
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:93
 msgid "Total Fee"
 msgstr "Łączna opłata"
@@ -12214,6 +12460,7 @@ msgid "Total refunded"
 msgstr "Razem zwrócono"
 
 #: src/components/common/StatsCharts/index.tsx:81
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:60
 msgid "Total Refunded"
 msgstr "Razem zwrócono"
 
@@ -12222,6 +12469,7 @@ msgid "Total tax"
 msgstr "Podatek łącznie"
 
 #: src/components/common/StatsCharts/index.tsx:80
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:32
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:91
 msgid "Total Tax"
 msgstr "Razem podatek"
@@ -12235,6 +12483,7 @@ msgid "Total Users"
 msgstr "Razem użytkowników"
 
 #: src/components/routes/admin/Dashboard/index.tsx:307
+#: src/components/routes/event/Reports/DailySalesReport/index.tsx:66
 msgid "Total Views"
 msgstr "Razem wyświetleń"
 
@@ -12253,6 +12502,10 @@ msgstr "Śledzenie i analityka"
 
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:83
 msgid "Transactions"
+msgstr ""
+
+#: src/components/routes/organizer/Payments/CapabilityList.tsx:10
+msgid "Transfers"
 msgstr ""
 
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:176
@@ -12398,6 +12651,10 @@ msgstr "Unikalne klienty"
 #: src/components/modals/LocationEditModal/index.tsx:158
 msgid "United States"
 msgstr "Stany Zjednoczone"
+
+#: src/components/routes/event/Reports/ProductSalesReport/index.tsx:24
+msgid "Units Sold"
+msgstr ""
 
 #: src/components/common/MessageList/index.tsx:44
 #: src/components/common/MessageList/index.tsx:49
@@ -12576,6 +12833,11 @@ msgstr "Prześlij logo dla swojego organizatora"
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:163
 msgid "Upload Image"
 msgstr "Prześlij obraz"
+
+#: src/components/common/Editor/Controls/InsertImageControl/index.tsx:143
+#: src/components/common/ImageUploadDropzone/index.tsx:159
+msgid "Uploaded preview"
+msgstr ""
 
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:136
 msgid "Uploading image..."
@@ -13725,6 +13987,10 @@ msgstr "Twoja niesamowita strona internetowa 🎉"
 #: src/components/modals/CheckInListSuccessModal/index.tsx:23
 msgid "Your check-in list has been created successfully. Share the link below with your check-in staff."
 msgstr "Twoja lista odpraw została pomyślnie utworzona. Udostępnij poniższy link personelowi odprawy."
+
+#: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:244
+msgid "Your Company Ltd"
+msgstr ""
 
 #: src/components/layouts/Checkout/index.tsx:441
 msgid "Your current order will be lost."
