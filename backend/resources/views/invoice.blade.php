@@ -1,5 +1,6 @@
 @php use Carbon\Carbon; @endphp
 @php use HiEvents\Helper\Currency; @endphp
+@php use HiEvents\Helper\LocaleHelper; @endphp
 @php use HiEvents\DomainObjects\Status\InvoiceStatus; @endphp
 @php /** @var \HiEvents\DomainObjects\EventDomainObject $event */ @endphp
 @php /** @var \HiEvents\DomainObjects\EventSettingDomainObject $eventSettings */ @endphp
@@ -316,12 +317,12 @@
         </td>
         <td>
             <span class="info-label">{{ __('Date Issued') }}</span>
-            <span class="info-value">{{ Carbon::parse($invoice->getIssueDate())->format('d/m/Y') }}</span>
+            <span class="info-value">{{ LocaleHelper::formatNumericDate(Carbon::parse($invoice->getIssueDate())) }}</span>
         </td>
         @if(!$isPaid && $invoice->getDueDate())
             <td>
                 <span class="info-label">{{ __('Due Date') }}</span>
-                <span class="info-value">{{ Carbon::parse($invoice->getDueDate())->format('d/m/Y') }}</span>
+                <span class="info-value">{{ LocaleHelper::formatNumericDate(Carbon::parse($invoice->getDueDate())) }}</span>
             </td>
         @endif
         <td>

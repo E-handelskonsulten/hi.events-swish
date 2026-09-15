@@ -2,6 +2,7 @@
 
 namespace HiEvents\Services\Application\Locale;
 
+use HiEvents\Helper\LocaleHelper;
 use HiEvents\Locale;
 use Illuminate\Config\Repository;
 
@@ -13,7 +14,12 @@ class LocaleService
 
     public function getLocaleOrDefault(?string $locale): string
     {
+        if ($locale === null || $locale === '') {
+            return $this->config->get('app.locale');
+        }
+
         $supportedLocales = Locale::getSupportedLocales();
+        $locale = LocaleHelper::resolveAlias($locale);
 
         if (in_array($locale, $supportedLocales, true)) {
             return $locale;

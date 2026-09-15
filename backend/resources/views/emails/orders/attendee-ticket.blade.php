@@ -1,4 +1,4 @@
-@php use Carbon\Carbon; use HiEvents\Helper\DateHelper; @endphp
+@php use Carbon\Carbon; use HiEvents\Helper\DateHelper; use HiEvents\Helper\LocaleHelper; @endphp
 @php /** @var \HiEvents\DomainObjects\EventDomainObject $event */ @endphp
 @php /** @var \HiEvents\DomainObjects\EventSettingDomainObject $eventSettings */ @endphp
 @php /** @var \HiEvents\DomainObjects\OrganizerDomainObject $organizer */ @endphp
@@ -14,10 +14,10 @@
     $displayEnd = $occurrence?->getEndDate() ?? $event->getEndDate();
 
     $formatDateTime = static fn(?string $utc) => $utc
-        ? (new Carbon(DateHelper::convertFromUTC($utc, $tz)))->format('D, M j, Y · g:i A')
+        ? LocaleHelper::formatDateTimeShort(new Carbon(DateHelper::convertFromUTC($utc, $tz)))
         : null;
     $formatTime = static fn(?string $utc) => $utc
-        ? (new Carbon(DateHelper::convertFromUTC($utc, $tz)))->format('g:i A')
+        ? LocaleHelper::formatTime(new Carbon(DateHelper::convertFromUTC($utc, $tz)))
         : null;
 
     $startFormatted = $formatDateTime($displayStart);

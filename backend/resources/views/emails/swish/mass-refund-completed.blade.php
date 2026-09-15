@@ -5,7 +5,8 @@
 
 @php /** @see \HiEvents\Mail\Swish\SwishMassRefundCompletedMail */ @endphp
 
-@php $money = fn ($amount) => number_format((float) $amount, 2, ',', ' ').' '.$run->getCurrency(); @endphp
+@php use HiEvents\Helper\Currency; @endphp
+@php $money = fn ($amount) => Currency::format((float) $amount, $run->getCurrency()); @endphp
 
 <x-mail::message>
 {{ __('Hello') }},

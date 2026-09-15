@@ -7,6 +7,7 @@ use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
+use HiEvents\Helper\LocaleHelper;
 use HiEvents\Models\Event;
 use HiEvents\Models\Organizer;
 use HiEvents\Services\Infrastructure\CurrencyConversion\CurrencyConversionClientInterface;
@@ -19,6 +20,8 @@ use HiEvents\Services\Infrastructure\Stripe\StripeClientFactory;
 use HiEvents\Services\Infrastructure\Stripe\StripeConfigurationService;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Events\LocaleUpdated;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Support\Facades\DB;
@@ -49,6 +52,17 @@ class AppServiceProvider extends ServiceProvider
         $this->disableLazyLoading();
 
         $this->registerMorphMaps();
+
+        $this->syncCarbonLocale();
+    }
+
+    private function syncCarbonLocale(): void
+    {
+        Carbon::setLocale(LocaleHelper::toCarbonLocale($this->app->getLocale()));
+
+        $this->app['events']->listen(LocaleUpdated::class, static function (LocaleUpdated $localeUpdated): void {
+            Carbon::setLocale(LocaleHelper::toCarbonLocale($localeUpdated->locale));
+        });
     }
 
     private function bindDoctrineConnection(): void

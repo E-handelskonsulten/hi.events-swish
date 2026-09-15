@@ -1,4 +1,4 @@
-@php use Carbon\Carbon; use HiEvents\Helper\Currency; use HiEvents\Helper\DateHelper; @endphp
+@php use Carbon\Carbon; use HiEvents\Helper\Currency; use HiEvents\Helper\DateHelper; use HiEvents\Helper\LocaleHelper; @endphp
 @php /** @var \HiEvents\DomainObjects\OrderDomainObject $order */ @endphp
 @php /** @var \HiEvents\DomainObjects\EventDomainObject $event */ @endphp
 @php /** @var \HiEvents\DomainObjects\OrganizerDomainObject $organizer */ @endphp
@@ -10,8 +10,8 @@
 
 @php
     $displayStart = $occurrence?->getStartDate() ?? $event->getStartDate();
-    $displayDate = (new Carbon(DateHelper::convertFromUTC($displayStart, $event->getTimezone())))->format('F j, Y');
-    $displayTime = (new Carbon(DateHelper::convertFromUTC($displayStart, $event->getTimezone())))->format('g:i A');
+    $displayDate = LocaleHelper::formatDate(new Carbon(DateHelper::convertFromUTC($displayStart, $event->getTimezone())));
+    $displayTime = LocaleHelper::formatTime(new Carbon(DateHelper::convertFromUTC($displayStart, $event->getTimezone())));
 @endphp
 
 <x-mail::message>

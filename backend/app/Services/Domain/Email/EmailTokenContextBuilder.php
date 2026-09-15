@@ -17,6 +17,7 @@ use HiEvents\Helper\AddressHelper;
 use HiEvents\Helper\Currency;
 use HiEvents\Helper\DateHelper;
 use HiEvents\Helper\IdHelper;
+use HiEvents\Helper\LocaleHelper;
 use HiEvents\Helper\Url;
 use HiEvents\Locale;
 use HiEvents\Services\Infrastructure\Email\LiquidTemplateRenderer;
@@ -50,10 +51,10 @@ class EmailTokenContextBuilder
         $context = [
             'event' => [
                 'title' => $event->getTitle().($occurrence?->getLabel() ? ' - '.$occurrence->getLabel() : ''),
-                'date' => $eventStartDate?->format('F j, Y') ?? '',
-                'time' => $eventStartDate?->format('g:i A') ?? '',
-                'end_date' => $eventEndDate?->format('F j, Y') ?? '',
-                'end_time' => $eventEndDate?->format('g:i A') ?? '',
+                'date' => $eventStartDate ? LocaleHelper::formatDate($eventStartDate) : '',
+                'time' => $eventStartDate ? LocaleHelper::formatTime($eventStartDate) : '',
+                'end_date' => $eventEndDate ? LocaleHelper::formatDate($eventEndDate) : '',
+                'end_time' => $eventEndDate ? LocaleHelper::formatTime($eventEndDate) : '',
                 'full_address' => $structuredAddress ? AddressHelper::formatAddress($structuredAddress) : '',
                 'location_details' => $structuredAddress,
                 'description' => $event->getDescription() ?? '',
@@ -70,7 +71,7 @@ class EmailTokenContextBuilder
                 ),
                 'number' => $order->getPublicId(),
                 'total' => Currency::format($order->getTotalGross(), $event->getCurrency()),
-                'date' => (new Carbon($order->getCreatedAt()))->format('F j, Y'),
+                'date' => LocaleHelper::formatDate(new Carbon($order->getCreatedAt())),
                 'currency' => $order->getCurrency(),
                 'locale' => $order->getLocale(),
                 'first_name' => $order->getFirstName() ?? '',
@@ -92,10 +93,10 @@ class EmailTokenContextBuilder
             ],
 
             'occurrence' => [
-                'start_date' => $eventStartDate?->format('F j, Y') ?? '',
-                'start_time' => $eventStartDate?->format('g:i A') ?? '',
-                'end_date' => $eventEndDate?->format('F j, Y') ?? '',
-                'end_time' => $eventEndDate?->format('g:i A') ?? '',
+                'start_date' => $eventStartDate ? LocaleHelper::formatDate($eventStartDate) : '',
+                'start_time' => $eventStartDate ? LocaleHelper::formatTime($eventStartDate) : '',
+                'end_date' => $eventEndDate ? LocaleHelper::formatDate($eventEndDate) : '',
+                'end_time' => $eventEndDate ? LocaleHelper::formatTime($eventEndDate) : '',
                 'label' => $occurrence?->getLabel() ?? '',
             ],
         ];
@@ -175,10 +176,10 @@ class EmailTokenContextBuilder
         return [
             'event' => [
                 'title' => $event->getTitle().($occurrence->getLabel() ? ' - '.$occurrence->getLabel() : ''),
-                'date' => $eventStartDate?->format('F j, Y') ?? '',
-                'time' => $eventStartDate?->format('g:i A') ?? '',
-                'end_date' => $eventEndDate?->format('F j, Y') ?? '',
-                'end_time' => $eventEndDate?->format('g:i A') ?? '',
+                'date' => $eventStartDate ? LocaleHelper::formatDate($eventStartDate) : '',
+                'time' => $eventStartDate ? LocaleHelper::formatTime($eventStartDate) : '',
+                'end_date' => $eventEndDate ? LocaleHelper::formatDate($eventEndDate) : '',
+                'end_time' => $eventEndDate ? LocaleHelper::formatTime($eventEndDate) : '',
                 'full_address' => $structuredAddress ? AddressHelper::formatAddress($structuredAddress) : '',
                 'location_details' => $structuredAddress,
                 'description' => $event->getDescription() ?? '',
@@ -193,10 +194,10 @@ class EmailTokenContextBuilder
             'event_location' => $this->buildLocationContext($eventLocation, $structuredAddress),
 
             'occurrence' => [
-                'start_date' => $eventStartDate?->format('F j, Y') ?? '',
-                'start_time' => $eventStartDate?->format('g:i A') ?? '',
-                'end_date' => $eventEndDate?->format('F j, Y') ?? '',
-                'end_time' => $eventEndDate?->format('g:i A') ?? '',
+                'start_date' => $eventStartDate ? LocaleHelper::formatDate($eventStartDate) : '',
+                'start_time' => $eventStartDate ? LocaleHelper::formatTime($eventStartDate) : '',
+                'end_date' => $eventEndDate ? LocaleHelper::formatDate($eventEndDate) : '',
+                'end_time' => $eventEndDate ? LocaleHelper::formatTime($eventEndDate) : '',
                 'label' => $occurrence->getLabel() ?? '',
             ],
 

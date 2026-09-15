@@ -3,6 +3,7 @@
 namespace HiEvents\Mail\Waitlist;
 
 use Carbon\Carbon;
+use HiEvents\Helper\LocaleHelper;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventOccurrenceDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
@@ -65,7 +66,8 @@ class WaitlistOfferExpiredMail extends BaseMail
 
         return Carbon::parse($this->occurrence->getStartDate(), 'UTC')
             ->setTimezone($this->event->getTimezone())
-            ->isoFormat('dddd, MMMM D · h:mm A');
+            ->locale(LocaleHelper::toCarbonLocale())
+            ->isoFormat(LocaleHelper::pattern('dayAndTime'));
     }
 
     private function buildProductName(): ?string
