@@ -171,6 +171,10 @@ export async function dynamicActivateLocale(locale: string) {
 export const getSupportedLocale = (userLocale: string) => {
     const normalizedLocale = userLocale.toLowerCase().replace("_", "-");
 
+    if (!normalizedLocale) {
+        return getDefaultLocale();
+    }
+
     if (localeAliases[normalizedLocale]) {
         return localeAliases[normalizedLocale];
     }
