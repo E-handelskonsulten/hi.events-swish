@@ -44,6 +44,8 @@ for /f "tokens=*" %i in ('openssl rand -base64 32') do @echo JWT_SECRET=%i
 [Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::GetBytes(32))  # For JWT_SECRET
 ```
 
+The container runs a pre-flight check at startup and refuses to start if `APP_KEY` or `JWT_SECRET` is empty or equals any of the example values shipped in this repository, if the database password is an example value, or if `REDIS_PASSWORD` is empty. Generate `POSTGRES_PASSWORD` and `REDIS_PASSWORD` the same way (`openssl rand -hex 24`). See `docs/DEPLOYMENT_RUNBOOK.md`.
+
 ### Step 4: Update the `.env` File
 
 Update the `.env` file located in `./docker/all-in-one/.env` with the generated `APP_KEY` and `JWT_SECRET`:
