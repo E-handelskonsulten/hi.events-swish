@@ -1,5 +1,6 @@
 import {publicApi} from "./public-client.ts";
 import {
+    Attendee,
     GenericDataResponse,
     GenericPaginatedResponse,
     IdParam,
@@ -24,6 +25,17 @@ export interface AttendeeDetails extends OrderDetails {
 export interface FinaliseOrderPayload {
     order: OrderDetails,
     attendees: AttendeeDetails[],
+}
+
+export interface OrderTickets {
+    short_id: string;
+    public_id: string;
+    event_id: number;
+    first_name: string | null;
+    status: 'COMPLETED' | 'CANCELLED' | 'AWAITING_OFFLINE_PAYMENT';
+    is_fully_refunded: boolean;
+    is_valid: boolean;
+    attendees: Attendee[];
 }
 
 export interface EditOrderPayload {
@@ -119,6 +131,11 @@ export const orderClient = {
 export const orderClientPublic = {
     create: async (eventId: number, createOrderPayload: ProductFormPayload) => {
         const response = await publicApi.post<GenericDataResponse<Order>>('events/' + eventId + '/order', createOrderPayload);
+        return response.data;
+    },
+
+    findTicketsByShortId: async (orderShortId: string) => {
+        const response = await publicApi.get<GenericDataResponse<OrderTickets>>(`orders/${orderShortId}/tickets`);
         return response.data;
     },
 

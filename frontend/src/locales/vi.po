@@ -7209,6 +7209,10 @@ msgstr "Tháng sau"
 msgid "Next occurrence"
 msgstr "Ngày kế tiếp"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:100
+msgid "Next ticket"
+msgstr ""
+
 #: src/components/common/EventDateRange/index.tsx:61
 msgid "Next: {nextFormatted}"
 msgstr "Kế tiếp: {nextFormatted}"
@@ -8969,6 +8973,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
 msgstr "Tháng trước"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:85
+msgid "Previous ticket"
+msgstr ""
 
 #: src/components/common/AttendeeTicket/index.tsx:133
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:398
@@ -11435,6 +11443,10 @@ msgstr "Email hỗ trợ"
 msgid "Swedish"
 msgstr "Tiếng Thụy Điển"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:138
+msgid "Swipe or use the arrows to show the next ticket at the door."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 #: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
@@ -12108,6 +12120,14 @@ msgstr "Đơn hàng này đã được hoàn trả."
 msgid "This order has been cancelled."
 msgstr "Đơn hàng này đã bị hủy bỏ."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:76
+msgid "This order has been cancelled. The tickets are no longer valid."
+msgstr ""
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:75
+msgid "This order has been refunded. The tickets are no longer valid."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Đơn hàng này đã hết hạn. Vui lòng bắt đầu lại."
@@ -12244,6 +12264,10 @@ msgstr "vé"
 msgid "Ticket"
 msgstr "Vé"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:92
+msgid "Ticket {0} of {count}"
+msgstr ""
+
 #: src/components/routes/event/TicketDesigner/index.tsx:111
 msgid "Ticket Design"
 msgstr "Thiết kế vé"
@@ -12328,6 +12352,7 @@ msgstr "vé"
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
+#: src/components/routes/product-widget/OrderTickets/index.tsx:80
 msgid "Tickets"
 msgstr "Vé"
 
@@ -12343,6 +12368,10 @@ msgstr "Vé được tự động cung cấp cho khách hàng trong danh sách c
 #: src/components/routes/product-widget/PrintOrder/index.tsx:40
 msgid "Tickets for"
 msgstr "Vé cho"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:34
+msgid "Tickets Not Found"
+msgstr ""
 
 #: src/components/routes/admin/Dashboard/index.tsx:140
 msgid "Tickets Sold"
@@ -13391,6 +13420,10 @@ msgstr "Chúng tôi không thể tìm thấy đơn hàng bạn đang tìm kiếm
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Chúng tôi không thể tìm thấy vé bạn đang tìm kiếm. Liên kết có thể đã hết hạn hoặc chi tiết vé có thể đã thay đổi."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:35
+msgid "We couldn't find the tickets you're looking for. The link may have expired or the order details may have changed."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "Chúng tôi không thể tìm thấy đơn hàng này. Nó có thể đã bị xóa."
@@ -14178,6 +14211,10 @@ msgstr "Vé của bạn cho"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:54
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Vé của bạn vẫn còn hiệu lực — bạn không cần làm gì trừ khi giờ mới không phù hợp. Vui lòng trả lời email này nếu bạn có thắc mắc."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:70
+msgid "Your tickets for"
+msgstr ""
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."

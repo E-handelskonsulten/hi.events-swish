@@ -7209,6 +7209,10 @@ msgstr "Nasledujúci mesiac"
 msgid "Next occurrence"
 msgstr "Nasledujúci termín"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:100
+msgid "Next ticket"
+msgstr ""
+
 #: src/components/common/EventDateRange/index.tsx:61
 msgid "Next: {nextFormatted}"
 msgstr "Nasledujúci: {nextFormatted}"
@@ -8969,6 +8973,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
 msgstr "Predchádzajúci mesiac"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:85
+msgid "Previous ticket"
+msgstr ""
 
 #: src/components/common/AttendeeTicket/index.tsx:133
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:398
@@ -11435,6 +11443,10 @@ msgstr "E-mail podpory"
 msgid "Swedish"
 msgstr "Švédčina"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:138
+msgid "Swipe or use the arrows to show the next ticket at the door."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 #: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
@@ -12108,6 +12120,14 @@ msgstr "Táto objednávka už bola vrátená."
 msgid "This order has been cancelled."
 msgstr "Táto objednávka bola zrušená."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:76
+msgid "This order has been cancelled. The tickets are no longer valid."
+msgstr ""
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:75
+msgid "This order has been refunded. The tickets are no longer valid."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Táto objednávka vypršala. Začnite znovu."
@@ -12244,6 +12264,10 @@ msgstr "lístok"
 msgid "Ticket"
 msgstr "Lístok"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:92
+msgid "Ticket {0} of {count}"
+msgstr ""
+
 #: src/components/routes/event/TicketDesigner/index.tsx:111
 msgid "Ticket Design"
 msgstr "Dizajn lístka"
@@ -12328,6 +12352,7 @@ msgstr "lístky"
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
+#: src/components/routes/product-widget/OrderTickets/index.tsx:80
 msgid "Tickets"
 msgstr "Lístky"
 
@@ -12343,6 +12368,10 @@ msgstr "Lístky sú automaticky ponúkané zákazníkom v zozname čakateľov, k
 #: src/components/routes/product-widget/PrintOrder/index.tsx:40
 msgid "Tickets for"
 msgstr "Lístky pre"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:34
+msgid "Tickets Not Found"
+msgstr ""
 
 #: src/components/routes/admin/Dashboard/index.tsx:140
 msgid "Tickets Sold"
@@ -13391,6 +13420,10 @@ msgstr "Nenašla sa objednávka, ktorú hľadáte. Odkaz mohol vypršať alebo s
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Nenašiel sa lístok, ktorý hľadáte. Odkaz mohol vypršať alebo sa podrobnosti lístka mohli zmeniť."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:35
+msgid "We couldn't find the tickets you're looking for. The link may have expired or the order details may have changed."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "Nenašla sa táto objednávka. Mohla byť odstránená."
@@ -14178,6 +14211,10 @@ msgstr "Váš lístok pre"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:54
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Váš lístok zostáva platný — nemusíte robiť nič, pokiaľ vám nový čas nevyhovuje. Ak máte otázky, odpovedzte na tento e-mail."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:70
+msgid "Your tickets for"
+msgstr ""
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."

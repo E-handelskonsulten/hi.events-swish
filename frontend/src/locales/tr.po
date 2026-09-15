@@ -7209,6 +7209,10 @@ msgstr "Sonraki ay"
 msgid "Next occurrence"
 msgstr "Sonraki tarih"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:100
+msgid "Next ticket"
+msgstr ""
+
 #: src/components/common/EventDateRange/index.tsx:61
 msgid "Next: {nextFormatted}"
 msgstr "Sonraki: {nextFormatted}"
@@ -8969,6 +8973,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
 msgstr "Önceki ay"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:85
+msgid "Previous ticket"
+msgstr ""
 
 #: src/components/common/AttendeeTicket/index.tsx:133
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:398
@@ -11435,6 +11443,10 @@ msgstr "Destek E-postası"
 msgid "Swedish"
 msgstr "İsveççe"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:138
+msgid "Swipe or use the arrows to show the next ticket at the door."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 #: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
@@ -12108,6 +12120,14 @@ msgstr "Bu sipariş zaten iade edilmiş."
 msgid "This order has been cancelled."
 msgstr "Bu sipariş iptal edilmiş."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:76
+msgid "This order has been cancelled. The tickets are no longer valid."
+msgstr ""
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:75
+msgid "This order has been refunded. The tickets are no longer valid."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Bu siparişin süresi dolmuş. Lütfen tekrar başlayın."
@@ -12244,6 +12264,10 @@ msgstr "bilet"
 msgid "Ticket"
 msgstr "Bilet"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:92
+msgid "Ticket {0} of {count}"
+msgstr ""
+
 #: src/components/routes/event/TicketDesigner/index.tsx:111
 msgid "Ticket Design"
 msgstr "Bilet Tasarımı"
@@ -12328,6 +12352,7 @@ msgstr "bilet"
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
+#: src/components/routes/product-widget/OrderTickets/index.tsx:80
 msgid "Tickets"
 msgstr "Biletler"
 
@@ -12343,6 +12368,10 @@ msgstr "Kapasite uygun olduğunda biletler bekleme listesindeki müşterilere ot
 #: src/components/routes/product-widget/PrintOrder/index.tsx:40
 msgid "Tickets for"
 msgstr "Biletler"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:34
+msgid "Tickets Not Found"
+msgstr ""
 
 #: src/components/routes/admin/Dashboard/index.tsx:140
 msgid "Tickets Sold"
@@ -13391,6 +13420,10 @@ msgstr "Aradığınız siparişi bulamadık. Bağlantının süresi dolmuş veya
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Aradığınız bileti bulamadık. Bağlantının süresi dolmuş veya bilet detayları değişmiş olabilir."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:35
+msgid "We couldn't find the tickets you're looking for. The link may have expired or the order details may have changed."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "Bu siparişi bulamadık. Kaldırılmış olabilir."
@@ -14178,6 +14211,10 @@ msgstr "Biletiniz"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:54
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Biletiniz geçerliliğini koruyor — yeni saat size uymuyorsa dışında yapmanız gereken bir şey yok. Sorunuz varsa lütfen bu e-postayı yanıtlayın."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:70
+msgid "Your tickets for"
+msgstr ""
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."

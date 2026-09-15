@@ -7210,6 +7210,10 @@ msgstr "Volgende maand"
 msgid "Next occurrence"
 msgstr "Volgende datum"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:100
+msgid "Next ticket"
+msgstr ""
+
 #: src/components/common/EventDateRange/index.tsx:61
 msgid "Next: {nextFormatted}"
 msgstr "Volgende: {nextFormatted}"
@@ -8970,6 +8974,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
 msgstr "Vorige maand"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:85
+msgid "Previous ticket"
+msgstr ""
 
 #: src/components/common/AttendeeTicket/index.tsx:133
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:398
@@ -11436,6 +11444,10 @@ msgstr "Ondersteuning per e-mail"
 msgid "Swedish"
 msgstr "Zweeds"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:138
+msgid "Swipe or use the arrows to show the next ticket at the door."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 #: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
@@ -12109,6 +12121,14 @@ msgstr "Deze bestelling is al terugbetaald."
 msgid "This order has been cancelled."
 msgstr "Deze bestelling is geannuleerd."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:76
+msgid "This order has been cancelled. The tickets are no longer valid."
+msgstr ""
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:75
+msgid "This order has been refunded. The tickets are no longer valid."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Deze bestelling is verlopen. Begin opnieuw."
@@ -12245,6 +12265,10 @@ msgstr "ticket"
 msgid "Ticket"
 msgstr "Ticket"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:92
+msgid "Ticket {0} of {count}"
+msgstr ""
+
 #: src/components/routes/event/TicketDesigner/index.tsx:111
 msgid "Ticket Design"
 msgstr "Ticketontwerp"
@@ -12329,6 +12353,7 @@ msgstr "tickets"
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
+#: src/components/routes/product-widget/OrderTickets/index.tsx:80
 msgid "Tickets"
 msgstr "Tickets"
 
@@ -12344,6 +12369,10 @@ msgstr "Tickets worden automatisch aangeboden aan klanten op de wachtlijst wanne
 #: src/components/routes/product-widget/PrintOrder/index.tsx:40
 msgid "Tickets for"
 msgstr "Tickets voor"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:34
+msgid "Tickets Not Found"
+msgstr ""
 
 #: src/components/routes/admin/Dashboard/index.tsx:140
 msgid "Tickets Sold"
@@ -13392,6 +13421,10 @@ msgstr "We konden de bestelling die u zoekt niet vinden. De link is mogelijk ver
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "We konden het ticket dat u zoekt niet vinden. De link is mogelijk verlopen of de ticketgegevens zijn gewijzigd."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:35
+msgid "We couldn't find the tickets you're looking for. The link may have expired or the order details may have changed."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "We konden deze bestelling niet vinden. Mogelijk is deze verwijderd."
@@ -14179,6 +14212,10 @@ msgstr "Uw ticket voor"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:54
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Je ticket blijft geldig — je hoeft niets te doen, tenzij het nieuwe tijdstip je niet uitkomt. Beantwoord deze e-mail als je vragen hebt."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:70
+msgid "Your tickets for"
+msgstr ""
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."

@@ -7209,6 +7209,10 @@ msgstr "Nästa månad"
 msgid "Next occurrence"
 msgstr "Nästa datum"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:100
+msgid "Next ticket"
+msgstr "Nästa biljett"
+
 #: src/components/common/EventDateRange/index.tsx:61
 msgid "Next: {nextFormatted}"
 msgstr "Nästa: {nextFormatted}"
@@ -8969,6 +8973,10 @@ msgstr "Tidigare massåterbetalningar"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:420
 msgid "Previous month"
 msgstr "Föregående månad"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:85
+msgid "Previous ticket"
+msgstr "Föregående biljett"
 
 #: src/components/common/AttendeeTicket/index.tsx:133
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:398
@@ -11435,6 +11443,10 @@ msgstr "Supportmejl"
 msgid "Swedish"
 msgstr "Svenska"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:138
+msgid "Swipe or use the arrows to show the next ticket at the door."
+msgstr "Svep eller använd pilarna för att visa nästa biljett i entrén."
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
 #: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
@@ -12108,6 +12120,14 @@ msgstr "Den här ordern har redan återbetalats."
 msgid "This order has been cancelled."
 msgstr "Den här ordern har avbrutits."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:76
+msgid "This order has been cancelled. The tickets are no longer valid."
+msgstr "Ordern har avbokats. Biljetterna är inte längre giltiga."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:75
+msgid "This order has been refunded. The tickets are no longer valid."
+msgstr "Ordern har återbetalats. Biljetterna är inte längre giltiga."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Den här ordern har löpt ut. Börja om."
@@ -12244,6 +12264,10 @@ msgstr "biljett"
 msgid "Ticket"
 msgstr "Biljett"
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:92
+msgid "Ticket {0} of {count}"
+msgstr "Biljett {0} av {count}"
+
 #: src/components/routes/event/TicketDesigner/index.tsx:111
 msgid "Ticket Design"
 msgstr "Biljettdesign"
@@ -12328,6 +12352,7 @@ msgstr "biljetter"
 #: src/components/forms/ProductForm/buildPreviewEvent.ts:131
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
+#: src/components/routes/product-widget/OrderTickets/index.tsx:80
 msgid "Tickets"
 msgstr "Biljetter"
 
@@ -12343,6 +12368,10 @@ msgstr "Biljetter erbjuds automatiskt till kunder på väntelistan när kapacite
 #: src/components/routes/product-widget/PrintOrder/index.tsx:40
 msgid "Tickets for"
 msgstr "Biljetter för"
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:34
+msgid "Tickets Not Found"
+msgstr "Biljetterna hittades inte"
 
 #: src/components/routes/admin/Dashboard/index.tsx:140
 msgid "Tickets Sold"
@@ -13391,6 +13420,10 @@ msgstr "Vi kunde inte hitta ordern du letar efter. Länken kan ha löpt ut eller
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Vi kunde inte hitta biljetten du letar efter. Länken kan ha löpt ut eller så kan biljettuppgifterna ha ändrats."
 
+#: src/components/routes/product-widget/OrderTickets/index.tsx:35
+msgid "We couldn't find the tickets you're looking for. The link may have expired or the order details may have changed."
+msgstr "Vi kunde inte hitta biljetterna du letar efter. Länken kan ha gått ut eller så har orderuppgifterna ändrats."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "Vi kunde inte hitta den här ordern. Den kan ha tagits bort."
@@ -14178,6 +14211,10 @@ msgstr "Din biljett till"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:54
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Din biljett gäller fortfarande – du behöver inte göra något om inte den nya tiden krockar för dig. Svara gärna på det här mejlet om du har frågor."
+
+#: src/components/routes/product-widget/OrderTickets/index.tsx:70
+msgid "Your tickets for"
+msgstr "Dina biljetter till"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."
