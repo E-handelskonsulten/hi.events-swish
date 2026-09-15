@@ -1,11 +1,11 @@
 @use "mixins";
 
 :root {
-  --hi-text: var(--mantine-color-primary-9);
-  --hi-primary: var(--mantine-color-primary-9);
+  --hi-text: #262626;
+  --hi-primary: var(--mantine-color-primary-8);
   --hi-secondary:  var(--mantine-color-secondary-1);
   --hi-secondary-text: var(--mantine-color-primary-8);
-  --hi-color-gray: #f7f6f8;
+  --hi-color-gray: #faf9f8;
   --hi-color-gray-2: #e2e2e2;
   --hi-color-gray-dark: #838383;
   --hi-color-money-green: #00b894;
@@ -41,8 +41,8 @@
   --hi-accent-brand-soft: rgba(228, 70, 137, 0.12);
   --hi-accent-brand-soft: color-mix(in srgb, var(--mantine-color-primary-5) 12%, transparent);
   --hi-radius-card: 12px;
-  --hi-ink: color-mix(in srgb, var(--mantine-color-primary-9) 88%, black);
-  --hi-ink-deep: color-mix(in srgb, var(--mantine-color-primary-9) 70%, black);
+  --hi-ink: #262626;
+  --hi-ink-deep: #1a1a1a;
 }
 
 * {
