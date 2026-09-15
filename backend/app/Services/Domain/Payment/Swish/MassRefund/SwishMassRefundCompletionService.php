@@ -74,6 +74,7 @@ class SwishMassRefundCompletionService
 
         $this->mailer
             ->to($recipient)
+            ->locale(config('app.locale'))
             ->send(new SwishMassRefundCompletedMail(
                 run: $run,
                 event: $event,

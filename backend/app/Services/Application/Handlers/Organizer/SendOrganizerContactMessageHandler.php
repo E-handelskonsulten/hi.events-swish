@@ -31,6 +31,7 @@ class SendOrganizerContactMessageHandler
 
         $this->mailer
             ->to($organizer->getEmail(), $organizer->getName())
+            ->locale(config('app.locale'))
             ->send(new OrganizerContactEmail(
                 organizer: $organizer,
                 senderName: $dto->name,

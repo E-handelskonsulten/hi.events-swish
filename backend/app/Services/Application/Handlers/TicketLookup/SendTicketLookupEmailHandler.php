@@ -87,6 +87,7 @@ class SendTicketLookupEmailHandler
 
         $this->mailer
             ->to($email)
+            ->locale(app()->getLocale())
             ->queue(new TicketLookupEmail(
                 email: $email,
                 token: $token,

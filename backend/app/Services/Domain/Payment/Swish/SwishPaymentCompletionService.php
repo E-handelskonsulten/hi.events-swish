@@ -332,6 +332,7 @@ class SwishPaymentCompletionService
 
         $this->mailer
             ->to($recipient)
+            ->locale(config('app.locale'))
             ->send(new SwishPaymentNeedsReviewMail(
                 order: $order,
                 event: $event,

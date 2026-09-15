@@ -175,6 +175,7 @@ class SendOrderDetailsService
 
         $this->mailer
             ->to($event->getOrganizer()->getEmail())
+            ->locale(config('app.locale'))
             ->send(new OrderSummaryForOrganizer($order, $event));
     }
 }

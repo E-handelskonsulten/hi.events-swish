@@ -123,7 +123,7 @@ class AccountDeletionService
 
             $account = $this->accountRepository->findById($accountId);
 
-            Mail::to($account->getEmail())->queue(new AccountDeletionRequestedEmail($account, $deletionRequest));
+            Mail::to($account->getEmail())->locale(app()->getLocale())->queue(new AccountDeletionRequestedEmail($account, $deletionRequest));
 
             return $deletionRequest;
         });
@@ -164,7 +164,7 @@ class AccountDeletionService
 
             $account = $this->accountRepository->findById($accountId);
 
-            Mail::to($account->getEmail())->queue(new AccountDeletionCancelledEmail($account));
+            Mail::to($account->getEmail())->locale(app()->getLocale())->queue(new AccountDeletionCancelledEmail($account));
 
             return $cancelledRequest;
         });
@@ -216,7 +216,7 @@ class AccountDeletionService
 
         Cache::forget($this->getPendingDeletionCacheKey($accountId));
 
-        Mail::to($recipientEmail)->queue(new AccountDeletionCompletedEmail(
+        Mail::to($recipientEmail)->locale(config('app.locale'))->queue(new AccountDeletionCompletedEmail(
             accountName: $recipientName,
             wasAnonymized: $outcome === AccountDeletionOutcome::ANONYMIZE,
         ));

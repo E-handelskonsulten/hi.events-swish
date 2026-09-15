@@ -45,7 +45,7 @@ class ProcessScheduledAccountDeletionsJob implements ShouldQueue
             try {
                 $account = $accountRepository->findById($deletionRequest->getAccountId());
 
-                Mail::to($account->getEmail())->queue(new AccountDeletionReminderEmail(
+                Mail::to($account->getEmail())->locale(config('app.locale'))->queue(new AccountDeletionReminderEmail(
                     accountName: $account->getName(),
                     scheduledDeletionDate: Carbon::parse($deletionRequest->getScheduledDeletionAt())
                         ->setTimezone($account->getTimezone() ?? 'UTC')
