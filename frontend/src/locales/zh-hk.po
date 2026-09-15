@@ -77,7 +77,8 @@ msgid "{0} left"
 msgstr "剩餘 {0}"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:153
+#: src/components/layouts/AuthLayout/index.tsx:17
+#: src/components/layouts/AuthLayout/index.tsx:53
 msgid "{0} logo"
 msgstr "{0} 標誌"
 
@@ -902,8 +903,8 @@ msgid "Affiliate deleted successfully"
 msgstr "推廣夥伴刪除成功"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Affiliate program"
-msgstr "聯盟推廣計劃"
+#~ msgid "Affiliate program"
+#~ msgstr "聯盟推廣計劃"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -2150,8 +2151,8 @@ msgid "Capacity Assignments"
 msgstr "容量分配"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Capacity management"
-msgstr "容量管理"
+#~ msgid "Capacity management"
+#~ msgstr "容量管理"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -3365,8 +3366,8 @@ msgid "Currently available for purchase"
 msgstr "目前可供購買"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Custom branding"
-msgstr "自訂品牌形象"
+#~ msgid "Custom branding"
+#~ msgstr "自訂品牌形象"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3377,8 +3378,8 @@ msgid "Custom Maps URL"
 msgstr "自定義地圖 URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Custom questions"
-msgstr "自訂問題"
+#~ msgid "Custom questions"
+#~ msgstr "自訂問題"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4291,8 +4292,8 @@ msgid "Email & Notification Settings"
 msgstr "電子郵件和通知設置"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Email & scheduled messages"
-msgstr "電郵與排程訊息"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "電郵與排程訊息"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4397,8 +4398,8 @@ msgid "Embed Widget"
 msgstr "嵌入小工具"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Embeddable widget"
-msgstr "可嵌入小工具"
+#~ msgid "Embeddable widget"
+#~ msgstr "可嵌入小工具"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -5548,8 +5549,8 @@ msgid "from {start}, for {count} dates"
 msgstr "從{start}起，共{count}個日期"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Full data ownership"
-msgstr "資料完全屬於你"
+#~ msgid "Full data ownership"
+#~ msgstr "資料完全屬於你"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -6179,8 +6180,8 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Instant Stripe payouts"
-msgstr "Stripe 即時撥款"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Stripe 即時撥款"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:114
@@ -6383,8 +6384,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "讓我隨時了解來自 {0} 的新聞和活動"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Keep the profit."
-msgstr "利潤全歸你。"
+#~ msgid "Keep the profit."
+#~ msgstr "利潤全歸你。"
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:449
@@ -7060,8 +7061,8 @@ msgid "Multiple locations"
 msgstr "多個地點"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Multiple ticket types"
-msgstr "多種門票類型"
+#~ msgid "Multiple ticket types"
+#~ msgstr "多種門票類型"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
@@ -9184,8 +9185,8 @@ msgid "promo codes"
 msgstr "優惠碼"
 
 #: src/components/layouts/AuthLayout/index.tsx:18
-msgid "Promo codes"
-msgstr "優惠碼"
+#~ msgid "Promo codes"
+#~ msgstr "優惠碼"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9276,8 +9277,8 @@ msgid "QR Code"
 msgstr "二維碼"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "QR code check-in"
-msgstr "二維碼簽到"
+#~ msgid "QR code check-in"
+#~ msgstr "二維碼簽到"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9363,8 +9364,8 @@ msgid "Ready to go live?"
 msgstr "準備好發布了嗎？"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Real-time analytics"
-msgstr "即時數據分析"
+#~ msgid "Real-time analytics"
+#~ msgstr "即時數據分析"
 
 #: src/components/modals/SwishMassRefundModal/index.tsx:69
 msgid "Reason"
@@ -9451,8 +9452,8 @@ msgid "Recurring Event Settings"
 msgstr "重複活動設定"
 
 #: src/components/layouts/AuthLayout/index.tsx:13
-msgid "Recurring events"
-msgstr "重複活動"
+#~ msgid "Recurring events"
+#~ msgstr "重複活動"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -10427,8 +10428,8 @@ msgid "Selected"
 msgstr "已選擇"
 
 #: src/components/layouts/AuthLayout/index.tsx:41
-msgid "Sell out your event."
-msgstr "令你的活動座無虛席。"
+#~ msgid "Sell out your event."
+#~ msgstr "令你的活動座無虛席。"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:516
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
@@ -11528,8 +11529,8 @@ msgid "Taxes and Fees"
 msgstr "税費"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Team collaboration"
-msgstr "團隊協作"
+#~ msgid "Team collaboration"
+#~ msgstr "團隊協作"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -12843,6 +12844,10 @@ msgstr ""
 msgid "Uploading image..."
 msgstr "正在上傳圖片..."
 
+#: src/components/layouts/AuthLayout/index.tsx:20
+msgid "Upplevelser närmare dig"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:236
 #: src/components/common/WebhookTable/index.tsx:236
 msgid "URL"
@@ -13272,7 +13277,6 @@ msgid "Waiting for Swish to confirm your payment…"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
-#: src/components/layouts/AuthLayout/index.tsx:17
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13434,8 +13438,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook 刪除成功"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Webhook integrations"
-msgstr "Webhook 整合"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook 整合"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151

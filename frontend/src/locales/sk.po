@@ -77,7 +77,8 @@ msgid "{0} left"
 msgstr "{0} zostáva"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:153
+#: src/components/layouts/AuthLayout/index.tsx:17
+#: src/components/layouts/AuthLayout/index.tsx:53
 msgid "{0} logo"
 msgstr "logo {0}"
 
@@ -902,8 +903,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Partner bol úspešne vymazaný"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Affiliate program"
-msgstr "Partnerský program"
+#~ msgid "Affiliate program"
+#~ msgstr "Partnerský program"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -2150,8 +2151,8 @@ msgid "Capacity Assignments"
 msgstr "Priradenia kapacity"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Capacity management"
-msgstr "Správa kapacity"
+#~ msgid "Capacity management"
+#~ msgstr "Správa kapacity"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -3365,8 +3366,8 @@ msgid "Currently available for purchase"
 msgstr "Momentálne dostupné na nákup"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Custom branding"
-msgstr "Vlastný branding"
+#~ msgid "Custom branding"
+#~ msgstr "Vlastný branding"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3377,8 +3378,8 @@ msgid "Custom Maps URL"
 msgstr "Vlastná URL mapy"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Custom questions"
-msgstr "Vlastné otázky"
+#~ msgid "Custom questions"
+#~ msgstr "Vlastné otázky"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4291,8 +4292,8 @@ msgid "Email & Notification Settings"
 msgstr "Nastavenia e-mailu a notifikácií"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Email & scheduled messages"
-msgstr "E-maily a naplánované správy"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "E-maily a naplánované správy"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4397,8 +4398,8 @@ msgid "Embed Widget"
 msgstr "Vložiť widget"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Embeddable widget"
-msgstr "Vložiteľný widget"
+#~ msgid "Embeddable widget"
+#~ msgstr "Vložiteľný widget"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -5548,8 +5549,8 @@ msgid "from {start}, for {count} dates"
 msgstr "od {start}, {count} termínov"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Full data ownership"
-msgstr "Plné vlastníctvo údajov"
+#~ msgid "Full data ownership"
+#~ msgstr "Plné vlastníctvo údajov"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -6179,8 +6180,8 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Instant Stripe payouts"
-msgstr "Okamžité výplaty cez Stripe"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Okamžité výplaty cez Stripe"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:114
@@ -6383,8 +6384,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "Informujte ma o novinkách a udalostiach od {0}"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Keep the profit."
-msgstr "Zisk zostáva vám."
+#~ msgid "Keep the profit."
+#~ msgstr "Zisk zostáva vám."
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:449
@@ -7060,8 +7061,8 @@ msgid "Multiple locations"
 msgstr "Viacero miest"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Multiple ticket types"
-msgstr "Viacero typov lístkov"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Viacero typov lístkov"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
@@ -9184,8 +9185,8 @@ msgid "promo codes"
 msgstr "promo kódy"
 
 #: src/components/layouts/AuthLayout/index.tsx:18
-msgid "Promo codes"
-msgstr "Promo kódy"
+#~ msgid "Promo codes"
+#~ msgstr "Promo kódy"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9276,8 +9277,8 @@ msgid "QR Code"
 msgstr "QR kód"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "QR code check-in"
-msgstr "Check-in cez QR kód"
+#~ msgid "QR code check-in"
+#~ msgstr "Check-in cez QR kód"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9363,8 +9364,8 @@ msgid "Ready to go live?"
 msgstr "Pripravení zverejniť?"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Real-time analytics"
-msgstr "Analytika v reálnom čase"
+#~ msgid "Real-time analytics"
+#~ msgstr "Analytika v reálnom čase"
 
 #: src/components/modals/SwishMassRefundModal/index.tsx:69
 msgid "Reason"
@@ -9451,8 +9452,8 @@ msgid "Recurring Event Settings"
 msgstr "Nastavenia opakujúceho sa podujatia"
 
 #: src/components/layouts/AuthLayout/index.tsx:13
-msgid "Recurring events"
-msgstr "Opakujúce sa podujatia"
+#~ msgid "Recurring events"
+#~ msgstr "Opakujúce sa podujatia"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -10427,8 +10428,8 @@ msgid "Selected"
 msgstr "Vybrané"
 
 #: src/components/layouts/AuthLayout/index.tsx:41
-msgid "Sell out your event."
-msgstr "Vypredajte svoje podujatie."
+#~ msgid "Sell out your event."
+#~ msgstr "Vypredajte svoje podujatie."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:516
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
@@ -11528,8 +11529,8 @@ msgid "Taxes and Fees"
 msgstr "Dane a poplatky"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Team collaboration"
-msgstr "Tímová spolupráca"
+#~ msgid "Team collaboration"
+#~ msgstr "Tímová spolupráca"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -12843,6 +12844,10 @@ msgstr ""
 msgid "Uploading image..."
 msgstr "Nahrávanie obrázka..."
 
+#: src/components/layouts/AuthLayout/index.tsx:20
+msgid "Upplevelser närmare dig"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:236
 #: src/components/common/WebhookTable/index.tsx:236
 msgid "URL"
@@ -13272,7 +13277,6 @@ msgid "Waiting for Swish to confirm your payment…"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
-#: src/components/layouts/AuthLayout/index.tsx:17
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13434,8 +13438,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook bol úspešne odstránený"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Webhook integrations"
-msgstr "Integrácie webhookov"
+#~ msgid "Webhook integrations"
+#~ msgstr "Integrácie webhookov"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151

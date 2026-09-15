@@ -77,7 +77,8 @@ msgid "{0} left"
 msgstr "{0} kaldı"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:153
+#: src/components/layouts/AuthLayout/index.tsx:17
+#: src/components/layouts/AuthLayout/index.tsx:53
 msgid "{0} logo"
 msgstr "{0} logosu"
 
@@ -902,8 +903,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Bağlı kuruluş başarıyla silindi"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Affiliate program"
-msgstr "Ortaklık programı"
+#~ msgid "Affiliate program"
+#~ msgstr "Ortaklık programı"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -2150,8 +2151,8 @@ msgid "Capacity Assignments"
 msgstr "Kapasite Atamaları"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Capacity management"
-msgstr "Kapasite yönetimi"
+#~ msgid "Capacity management"
+#~ msgstr "Kapasite yönetimi"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -3365,8 +3366,8 @@ msgid "Currently available for purchase"
 msgstr "Şu anda satın alınabilir"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Custom branding"
-msgstr "Özel marka görünümü"
+#~ msgid "Custom branding"
+#~ msgstr "Özel marka görünümü"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3377,8 +3378,8 @@ msgid "Custom Maps URL"
 msgstr "Özel Harita URL'si"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Custom questions"
-msgstr "Özel sorular"
+#~ msgid "Custom questions"
+#~ msgstr "Özel sorular"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4291,8 +4292,8 @@ msgid "Email & Notification Settings"
 msgstr "E-posta ve Bildirim Ayarları"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Email & scheduled messages"
-msgstr "E-posta ve planlanmış mesajlar"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "E-posta ve planlanmış mesajlar"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4397,8 +4398,8 @@ msgid "Embed Widget"
 msgstr "Widget yerleştir"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Embeddable widget"
-msgstr "Yerleştirilebilir bileşen"
+#~ msgid "Embeddable widget"
+#~ msgstr "Yerleştirilebilir bileşen"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -5548,8 +5549,8 @@ msgid "from {start}, for {count} dates"
 msgstr "{start} itibarıyla {count} tarih"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Full data ownership"
-msgstr "Verileriniz tamamen sizin"
+#~ msgid "Full data ownership"
+#~ msgstr "Verileriniz tamamen sizin"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -6179,8 +6180,8 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Instant Stripe payouts"
-msgstr "Anında Stripe ödemeleri"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Anında Stripe ödemeleri"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:114
@@ -6383,8 +6384,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "{0} adresinden haberler ve etkinlikler hakkında beni bilgilendirin"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Keep the profit."
-msgstr "Kazanç sizde kalsın."
+#~ msgid "Keep the profit."
+#~ msgstr "Kazanç sizde kalsın."
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:449
@@ -7060,8 +7061,8 @@ msgid "Multiple locations"
 msgstr "Birden fazla konum"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Multiple ticket types"
-msgstr "Birden fazla bilet türü"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Birden fazla bilet türü"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
@@ -9184,8 +9185,8 @@ msgid "promo codes"
 msgstr "promosyon kodları"
 
 #: src/components/layouts/AuthLayout/index.tsx:18
-msgid "Promo codes"
-msgstr "Promosyon kodları"
+#~ msgid "Promo codes"
+#~ msgstr "Promosyon kodları"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9276,8 +9277,8 @@ msgid "QR Code"
 msgstr "QR Kod"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "QR code check-in"
-msgstr "QR kodla check-in"
+#~ msgid "QR code check-in"
+#~ msgstr "QR kodla check-in"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9363,8 +9364,8 @@ msgid "Ready to go live?"
 msgstr "Yayına hazır mısınız?"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Real-time analytics"
-msgstr "Gerçek zamanlı analiz"
+#~ msgid "Real-time analytics"
+#~ msgstr "Gerçek zamanlı analiz"
 
 #: src/components/modals/SwishMassRefundModal/index.tsx:69
 msgid "Reason"
@@ -9451,8 +9452,8 @@ msgid "Recurring Event Settings"
 msgstr "Tekrarlayan Etkinlik Ayarları"
 
 #: src/components/layouts/AuthLayout/index.tsx:13
-msgid "Recurring events"
-msgstr "Yinelenen etkinlikler"
+#~ msgid "Recurring events"
+#~ msgstr "Yinelenen etkinlikler"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -10427,8 +10428,8 @@ msgid "Selected"
 msgstr "Seçildi"
 
 #: src/components/layouts/AuthLayout/index.tsx:41
-msgid "Sell out your event."
-msgstr "Etkinliğinizi tüketin."
+#~ msgid "Sell out your event."
+#~ msgstr "Etkinliğinizi tüketin."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:516
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
@@ -11528,8 +11529,8 @@ msgid "Taxes and Fees"
 msgstr "Vergiler ve Ücretler"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Team collaboration"
-msgstr "Ekip işbirliği"
+#~ msgid "Team collaboration"
+#~ msgstr "Ekip işbirliği"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -12843,6 +12844,10 @@ msgstr ""
 msgid "Uploading image..."
 msgstr "Görsel yükleniyor..."
 
+#: src/components/layouts/AuthLayout/index.tsx:20
+msgid "Upplevelser närmare dig"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:236
 #: src/components/common/WebhookTable/index.tsx:236
 msgid "URL"
@@ -13272,7 +13277,6 @@ msgid "Waiting for Swish to confirm your payment…"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
-#: src/components/layouts/AuthLayout/index.tsx:17
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13434,8 +13438,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook başarıyla silindi"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Webhook integrations"
-msgstr "Webhook entegrasyonları"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook entegrasyonları"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151

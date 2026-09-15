@@ -77,7 +77,8 @@ msgid "{0} left"
 msgstr "{0} απομένουν"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:153
+#: src/components/layouts/AuthLayout/index.tsx:17
+#: src/components/layouts/AuthLayout/index.tsx:53
 msgid "{0} logo"
 msgstr "Λογότυπο {0}"
 
@@ -902,8 +903,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Ο συνεργάτης διαγράφηκε επιτυχώς"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Affiliate program"
-msgstr "Πρόγραμμα συνεργατών"
+#~ msgid "Affiliate program"
+#~ msgstr "Πρόγραμμα συνεργατών"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -2150,8 +2151,8 @@ msgid "Capacity Assignments"
 msgstr "Αναθέσεις Χωρητικότητας"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Capacity management"
-msgstr "Διαχείριση χωρητικότητας"
+#~ msgid "Capacity management"
+#~ msgstr "Διαχείριση χωρητικότητας"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -3365,8 +3366,8 @@ msgid "Currently available for purchase"
 msgstr "Διαθέσιμο για αγορά αυτή τη στιγμή"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Custom branding"
-msgstr "Προσαρμοσμένη ταυτότητα μάρκας"
+#~ msgid "Custom branding"
+#~ msgstr "Προσαρμοσμένη ταυτότητα μάρκας"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3377,8 +3378,8 @@ msgid "Custom Maps URL"
 msgstr "Προσαρμοσμένο URL Χάρτη"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Custom questions"
-msgstr "Προσαρμοσμένες ερωτήσεις"
+#~ msgid "Custom questions"
+#~ msgstr "Προσαρμοσμένες ερωτήσεις"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4291,8 +4292,8 @@ msgid "Email & Notification Settings"
 msgstr "Ρυθμίσεις Email & Ειδοποιήσεων"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Email & scheduled messages"
-msgstr "Email και προγραμματισμένα μηνύματα"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "Email και προγραμματισμένα μηνύματα"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4397,8 +4398,8 @@ msgid "Embed Widget"
 msgstr "Ενσωμάτωση Widget"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Embeddable widget"
-msgstr "Ενσωματώσιμο widget"
+#~ msgid "Embeddable widget"
+#~ msgstr "Ενσωματώσιμο widget"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -5548,8 +5549,8 @@ msgid "from {start}, for {count} dates"
 msgstr "από {start}, για {count} ημερομηνίες"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Full data ownership"
-msgstr "Πλήρης κυριότητα δεδομένων"
+#~ msgid "Full data ownership"
+#~ msgstr "Πλήρης κυριότητα δεδομένων"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -6179,8 +6180,8 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Instant Stripe payouts"
-msgstr "Άμεσες πληρωμές Stripe"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Άμεσες πληρωμές Stripe"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:114
@@ -6383,8 +6384,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "Ενημερώστε με για νέα και εκδηλώσεις από {0}"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Keep the profit."
-msgstr "Κρατήστε το κέρδος."
+#~ msgid "Keep the profit."
+#~ msgstr "Κρατήστε το κέρδος."
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:449
@@ -7060,8 +7061,8 @@ msgid "Multiple locations"
 msgstr "Πολλές τοποθεσίες"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Multiple ticket types"
-msgstr "Πολλοί τύποι εισιτηρίων"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Πολλοί τύποι εισιτηρίων"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
@@ -9184,8 +9185,8 @@ msgid "promo codes"
 msgstr "κωδικοί προσφοράς"
 
 #: src/components/layouts/AuthLayout/index.tsx:18
-msgid "Promo codes"
-msgstr "Κωδικοί προσφοράς"
+#~ msgid "Promo codes"
+#~ msgstr "Κωδικοί προσφοράς"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9276,8 +9277,8 @@ msgid "QR Code"
 msgstr "QR Code"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "QR code check-in"
-msgstr "Check-in με κωδικό QR"
+#~ msgid "QR code check-in"
+#~ msgstr "Check-in με κωδικό QR"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9363,8 +9364,8 @@ msgid "Ready to go live?"
 msgstr "Έτοιμοι να δημοσιεύσετε;"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Real-time analytics"
-msgstr "Αναλύσεις σε πραγματικό χρόνο"
+#~ msgid "Real-time analytics"
+#~ msgstr "Αναλύσεις σε πραγματικό χρόνο"
 
 #: src/components/modals/SwishMassRefundModal/index.tsx:69
 msgid "Reason"
@@ -9451,8 +9452,8 @@ msgid "Recurring Event Settings"
 msgstr "Ρυθμίσεις επαναλαμβανόμενης εκδήλωσης"
 
 #: src/components/layouts/AuthLayout/index.tsx:13
-msgid "Recurring events"
-msgstr "Επαναλαμβανόμενες εκδηλώσεις"
+#~ msgid "Recurring events"
+#~ msgstr "Επαναλαμβανόμενες εκδηλώσεις"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -10427,8 +10428,8 @@ msgid "Selected"
 msgstr "Επιλεγμένο"
 
 #: src/components/layouts/AuthLayout/index.tsx:41
-msgid "Sell out your event."
-msgstr "Εξαντλήστε τα εισιτήρια της εκδήλωσής σας."
+#~ msgid "Sell out your event."
+#~ msgstr "Εξαντλήστε τα εισιτήρια της εκδήλωσής σας."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:516
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
@@ -11528,8 +11529,8 @@ msgid "Taxes and Fees"
 msgstr "Φόροι και Τέλη"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Team collaboration"
-msgstr "Συνεργασία ομάδας"
+#~ msgid "Team collaboration"
+#~ msgstr "Συνεργασία ομάδας"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -12843,6 +12844,10 @@ msgstr ""
 msgid "Uploading image..."
 msgstr "Μεταφόρτωση εικόνας..."
 
+#: src/components/layouts/AuthLayout/index.tsx:20
+msgid "Upplevelser närmare dig"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:236
 #: src/components/common/WebhookTable/index.tsx:236
 msgid "URL"
@@ -13272,7 +13277,6 @@ msgid "Waiting for Swish to confirm your payment…"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
-#: src/components/layouts/AuthLayout/index.tsx:17
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13434,8 +13438,8 @@ msgid "Webhook deleted successfully"
 msgstr "Το webhook διαγράφηκε επιτυχώς"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Webhook integrations"
-msgstr "Ενσωματώσεις webhook"
+#~ msgid "Webhook integrations"
+#~ msgstr "Ενσωματώσεις webhook"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151

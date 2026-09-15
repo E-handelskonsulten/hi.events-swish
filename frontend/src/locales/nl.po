@@ -78,7 +78,8 @@ msgid "{0} left"
 msgstr "nog {0}"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:153
+#: src/components/layouts/AuthLayout/index.tsx:17
+#: src/components/layouts/AuthLayout/index.tsx:53
 msgid "{0} logo"
 msgstr "{0} logo"
 
@@ -903,8 +904,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Affiliate succesvol verwijderd"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Affiliate program"
-msgstr "Partnerprogramma"
+#~ msgid "Affiliate program"
+#~ msgstr "Partnerprogramma"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -2151,8 +2152,8 @@ msgid "Capacity Assignments"
 msgstr "Capaciteitstoewijzingen"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Capacity management"
-msgstr "Capaciteitsbeheer"
+#~ msgid "Capacity management"
+#~ msgstr "Capaciteitsbeheer"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -3366,8 +3367,8 @@ msgid "Currently available for purchase"
 msgstr "Momenteel beschikbaar voor aankoop"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Custom branding"
-msgstr "Eigen huisstijl"
+#~ msgid "Custom branding"
+#~ msgstr "Eigen huisstijl"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3378,8 +3379,8 @@ msgid "Custom Maps URL"
 msgstr "Aangepaste kaarten URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Custom questions"
-msgstr "Eigen vragen"
+#~ msgid "Custom questions"
+#~ msgstr "Eigen vragen"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4292,8 +4293,8 @@ msgid "Email & Notification Settings"
 msgstr "Instellingen voor e-mail en meldingen"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Email & scheduled messages"
-msgstr "E-mail en geplande berichten"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "E-mail en geplande berichten"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4398,8 +4399,8 @@ msgid "Embed Widget"
 msgstr "Widget insluiten"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Embeddable widget"
-msgstr "Insluitbare widget"
+#~ msgid "Embeddable widget"
+#~ msgstr "Insluitbare widget"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -5549,8 +5550,8 @@ msgid "from {start}, for {count} dates"
 msgstr "vanaf {start}, voor {count} datums"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Full data ownership"
-msgstr "Volledig eigenaar van je data"
+#~ msgid "Full data ownership"
+#~ msgstr "Volledig eigenaar van je data"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -6180,8 +6181,8 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Instant Stripe payouts"
-msgstr "Directe Stripe-uitbetalingen"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Directe Stripe-uitbetalingen"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:114
@@ -6384,8 +6385,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "Houd mij op de hoogte van nieuws en evenementen van {0}"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Keep the profit."
-msgstr "Hou de winst zelf."
+#~ msgid "Keep the profit."
+#~ msgstr "Hou de winst zelf."
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:449
@@ -7061,8 +7062,8 @@ msgid "Multiple locations"
 msgstr "Meerdere locaties"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Multiple ticket types"
-msgstr "Meerdere tickettypes"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Meerdere tickettypes"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
@@ -9185,8 +9186,8 @@ msgid "promo codes"
 msgstr "kortingscodes"
 
 #: src/components/layouts/AuthLayout/index.tsx:18
-msgid "Promo codes"
-msgstr "Kortingscodes"
+#~ msgid "Promo codes"
+#~ msgstr "Kortingscodes"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9277,8 +9278,8 @@ msgid "QR Code"
 msgstr "QR-code"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "QR code check-in"
-msgstr "Check-in met QR-code"
+#~ msgid "QR code check-in"
+#~ msgstr "Check-in met QR-code"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9364,8 +9365,8 @@ msgid "Ready to go live?"
 msgstr "Klaar om live te gaan?"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Real-time analytics"
-msgstr "Realtime analyses"
+#~ msgid "Real-time analytics"
+#~ msgstr "Realtime analyses"
 
 #: src/components/modals/SwishMassRefundModal/index.tsx:69
 msgid "Reason"
@@ -9452,8 +9453,8 @@ msgid "Recurring Event Settings"
 msgstr "Instellingen terugkerend evenement"
 
 #: src/components/layouts/AuthLayout/index.tsx:13
-msgid "Recurring events"
-msgstr "Terugkerende evenementen"
+#~ msgid "Recurring events"
+#~ msgstr "Terugkerende evenementen"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -10428,8 +10429,8 @@ msgid "Selected"
 msgstr "Geselecteerd"
 
 #: src/components/layouts/AuthLayout/index.tsx:41
-msgid "Sell out your event."
-msgstr "Verkoop je evenement uit."
+#~ msgid "Sell out your event."
+#~ msgstr "Verkoop je evenement uit."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:516
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
@@ -11529,8 +11530,8 @@ msgid "Taxes and Fees"
 msgstr "Belastingen en heffingen"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Team collaboration"
-msgstr "Samenwerken in teamverband"
+#~ msgid "Team collaboration"
+#~ msgstr "Samenwerken in teamverband"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -12844,6 +12845,10 @@ msgstr ""
 msgid "Uploading image..."
 msgstr "Afbeelding uploaden..."
 
+#: src/components/layouts/AuthLayout/index.tsx:20
+msgid "Upplevelser närmare dig"
+msgstr ""
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:236
 #: src/components/common/WebhookTable/index.tsx:236
 msgid "URL"
@@ -13273,7 +13278,6 @@ msgid "Waiting for Swish to confirm your payment…"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:460
-#: src/components/layouts/AuthLayout/index.tsx:17
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13435,8 +13439,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook succesvol verwijderd"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Webhook integrations"
-msgstr "Webhook-integraties"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook-integraties"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151
