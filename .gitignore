@@ -31,3 +31,11 @@ test_results/
 
 /release-notes/**
 /release-notes/
+
+# Certificates and private keys (Swish mTLS, TLS) must never be committed
+*.pem
+*.p12
+*.pfx
+*.key
+*.crt
+swish-certs/
