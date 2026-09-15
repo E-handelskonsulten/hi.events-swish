@@ -116,6 +116,8 @@ To move the whole installation to production instead, change `SWISH_ENVIRONMENT`
 
 Resend over SMTP (`smtp.resend.com:587` with STARTTLS, user `resend`, password = API key; the host blocks outbound 465, and 2587 is the fallback if 587 is ever blocked). The domain `biljettera.se` is verified in Resend with CNAME records (`rsend._domainkey` for DKIM and `send` for the bounce/SPF domain, both pointing at `forge.rmta.net` targets) plus our own DMARC record at the registrar. Ticket, order and refund mails go to buyers; flagged Swish payments and failed refunds also go to `APP_ALERTS_EMAIL`.
 
+Branding in mails: buyer-facing mails (ticket, order confirmation/cancellation/failure/refund, detail changes, occurrence cancellation, waitlist) show the organizer's uploaded logo (Organizer → Settings → logo) in the header and use the organizer's name as the From display name; the From address stays `MAIL_FROM_ADDRESS` so DKIM and DMARC keep aligning. Without an organizer logo, and for every organizer-facing mail (new order, flagged payment, refund failure, mass refund summary), the header shows `APP_EMAIL_LOGO_URL` (the Biljettera wordmark). The "Powered by Hi.Events" footer is the upstream licence notice and must stay as is.
+
 ## Monitoring
 
 - `GET https://demo.biljettera.se/api/health` returns `{"status":"ok","checks":{"database":"ok","redis":"ok"}}` with 200, or 503 with `"degraded"`. Point the uptime checker at it (interval 1 min, alert after 2 failures).
