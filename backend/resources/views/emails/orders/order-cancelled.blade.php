@@ -6,7 +6,7 @@
 
 @php /** @see \HiEvents\Mail\Order\OrderCancelled */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 {{ __('Hello') }},
 
 {{ __('Your order for') }} <b>{{$event->getTitle()}}</b> {{ __('has been cancelled.') }}

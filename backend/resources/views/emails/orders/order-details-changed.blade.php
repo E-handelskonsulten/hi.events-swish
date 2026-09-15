@@ -3,7 +3,7 @@
 @php /** @var \HiEvents\DomainObjects\EventSettingDomainObject $eventSettings */ @endphp
 @php /** @var array $changedFields */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ __('Order Details Changed') }}
 
 {{ __('The details on your order for **:eventName** have been updated.', ['eventName' => $event->getTitle()]) }}

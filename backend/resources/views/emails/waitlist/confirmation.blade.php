@@ -8,7 +8,7 @@
 
 @php /** @see \HiEvents\Mail\Waitlist\WaitlistConfirmationMail */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ __("You're on the waitlist!") }}
 
 {{ __('Hello') }},

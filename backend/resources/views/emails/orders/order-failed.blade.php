@@ -6,7 +6,7 @@
 
 @php /** @see \HiEvents\Mail\Order\OrderFailed */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 {{ __('Hello') }},
 
 {{ __('Your recent order for') }} <b>{{$event->getTitle()}}</b> {{ __('was not successful.') }}

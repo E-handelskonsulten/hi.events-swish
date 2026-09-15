@@ -6,6 +6,7 @@ use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 
@@ -14,6 +15,8 @@ use Illuminate\Mail\Mailables\Envelope;
  */
 class AttendeeDetailsChangedMail extends BaseMail
 {
+    use SendsAsOrganizer;
+
     public function __construct(
         private readonly string $ticketTitle,
         private readonly EventDomainObject $event,
@@ -27,6 +30,7 @@ class AttendeeDetailsChangedMail extends BaseMail
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: __('Your Ticket Details Have Been Changed'),
         );

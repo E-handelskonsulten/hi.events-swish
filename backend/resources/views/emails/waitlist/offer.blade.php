@@ -8,7 +8,7 @@
 
 @php /** @see \HiEvents\Mail\Waitlist\WaitlistOfferMail */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ __('A spot has opened up!') }}
 
 {{ __('Hello') }},

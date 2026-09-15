@@ -8,12 +8,15 @@ use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Helper\Url;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use HiEvents\Services\Domain\Email\DTO\RenderedEmailTemplateDTO;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 
 class OccurrenceCancellationMail extends BaseMail
 {
+    use SendsAsOrganizer;
+
     private readonly ?RenderedEmailTemplateDTO $renderedTemplate;
 
     public function __construct(
@@ -37,6 +40,7 @@ class OccurrenceCancellationMail extends BaseMail
         ]);
 
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: $subject,
         );

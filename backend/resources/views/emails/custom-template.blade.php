@@ -1,5 +1,5 @@
 {{-- Custom Liquid Template Wrapper --}}
-<x-mail::message>
+<x-mail::message :organizer="$organizer ?? null">
 {!! $renderedBody !!}
 
 @if(isset($renderedCta))

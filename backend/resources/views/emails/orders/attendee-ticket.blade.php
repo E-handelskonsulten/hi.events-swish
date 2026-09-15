@@ -33,7 +33,7 @@
     $productTitle = $attendee->getProduct()?->getTitle();
 @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ __('You\'re going to') }} {{ $event->getTitle() }}! 🎉
 
 @if($order->isOrderAwaitingOfflinePayment())

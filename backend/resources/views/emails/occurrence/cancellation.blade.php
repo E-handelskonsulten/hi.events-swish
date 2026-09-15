@@ -8,7 +8,7 @@
 
 @php /** @see \HiEvents\Mail\Occurrence\OccurrenceCancellationMail */ @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ $event->getTitle() }}
 
 {{ __('Hello') }},

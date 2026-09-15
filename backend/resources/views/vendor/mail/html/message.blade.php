@@ -1,11 +1,17 @@
+@props(['organizer' => null])
+@php
+    $organizerLogo = $organizer ? app(\HiEvents\Services\Domain\Mail\OrganizerEmailBrandingService::class)->logoUrl($organizer) : null;
+@endphp
 <x-mail::layout>
     {{-- Header --}}
     <x-slot:header>
         <x-mail::header :url="config('app.email_logo_link_url')">
-            @if($appLogo = config('app.email_logo_url'))
+            @if($organizerLogo)
+                <img src="{{ $organizerLogo }}" class="logo" alt="{{ $organizer->getName() }}">
+            @elseif($appLogo = config('app.email_logo_url'))
                 <img src="{{ $appLogo }}" class="logo" alt="{{ config('app.name') }}">
             @else
-                <img src="{{ config('app.frontend_url') }}/logos/hi-events-stacked-light.png" class="logo" alt="{{ config('app.name') }}">
+                <img src="{{ config('app.frontend_url') }}/images/biljettera/logo-dark.png" class="logo" alt="{{ config('app.name') }}">
             @endif
         </x-mail::header>
     </x-slot:header>

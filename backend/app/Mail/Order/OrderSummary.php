@@ -11,6 +11,7 @@ use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Helper\Url;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use HiEvents\Services\Domain\Email\DTO\RenderedEmailTemplateDTO;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
@@ -21,6 +22,8 @@ use Illuminate\Mail\Mailables\Envelope;
  */
 class OrderSummary extends BaseMail
 {
+    use SendsAsOrganizer;
+
     private readonly ?RenderedEmailTemplateDTO $renderedTemplate;
 
     public function __construct(
@@ -42,6 +45,7 @@ class OrderSummary extends BaseMail
         $subject = $this->renderedTemplate?->subject ?? __('Your Order is Confirmed!').'  🎉';
 
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: $subject,
         );
@@ -53,6 +57,7 @@ class OrderSummary extends BaseMail
             return new Content(
                 markdown: 'emails.custom-template',
                 with: [
+                    'organizer' => $this->organizer,
                     'renderedBody' => $this->renderedTemplate->body,
                     'renderedCta' => $this->renderedTemplate->cta,
                     'eventSettings' => $this->eventSettings,

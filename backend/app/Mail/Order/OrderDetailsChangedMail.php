@@ -6,6 +6,7 @@ use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 
@@ -14,6 +15,8 @@ use Illuminate\Mail\Mailables\Envelope;
  */
 class OrderDetailsChangedMail extends BaseMail
 {
+    use SendsAsOrganizer;
+
     public function __construct(
         private readonly EventDomainObject $event,
         private readonly OrganizerDomainObject $organizer,
@@ -26,6 +29,7 @@ class OrderDetailsChangedMail extends BaseMail
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: __('Your Order Details Have Been Changed'),
         );

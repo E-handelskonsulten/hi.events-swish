@@ -14,7 +14,7 @@
     $displayTime = LocaleHelper::formatTime(new Carbon(DateHelper::convertFromUTC($displayStart, $event->getTimezone())));
 @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 # {{ __('Your Order is Confirmed! ') }} 🎉
 
 @if($order->isOrderAwaitingOfflinePayment() === false)

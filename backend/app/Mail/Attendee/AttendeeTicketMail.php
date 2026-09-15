@@ -16,6 +16,7 @@ use HiEvents\Helper\AddressHelper;
 use HiEvents\Helper\StringHelper;
 use HiEvents\Helper\Url;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use HiEvents\Services\Domain\Email\DTO\RenderedEmailTemplateDTO;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
@@ -29,6 +30,8 @@ use Spatie\IcalendarGenerator\Components\Event;
  */
 class AttendeeTicketMail extends BaseMail
 {
+    use SendsAsOrganizer;
+
     private readonly ?RenderedEmailTemplateDTO $renderedTemplate;
 
     public function __construct(
@@ -51,6 +54,7 @@ class AttendeeTicketMail extends BaseMail
         ]);
 
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: $subject,
         );
@@ -62,6 +66,7 @@ class AttendeeTicketMail extends BaseMail
             return new Content(
                 markdown: 'emails.custom-template',
                 with: [
+                    'organizer' => $this->organizer,
                     'renderedBody' => $this->renderedTemplate->body,
                     'renderedCta' => $this->renderedTemplate->cta,
                     'eventSettings' => $this->eventSettings,

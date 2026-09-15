@@ -7,7 +7,7 @@
 @php /** @see \HiEvents\Mail\Order\OrderRefunded */ @endphp
 @php use HiEvents\Helper\Currency; @endphp
 
-<x-mail::message>
+<x-mail::message :organizer="$organizer">
 {{ __('Hello') }},
 
 {{ __('You have received a refund of :refundAmount for the following event: :eventTitle.', ['refundAmount' => Currency::format($refundAmount->toFloat(), $refundAmount->getMoney()->getCurrency()->getCurrencyCode()), 'eventTitle' => $event->getTitle()]) }}

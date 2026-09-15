@@ -13,11 +13,14 @@ use HiEvents\DomainObjects\ProductPriceDomainObject;
 use HiEvents\DomainObjects\WaitlistEntryDomainObject;
 use HiEvents\Helper\Url;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Mail\Concerns\SendsAsOrganizer;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 
 class WaitlistOfferExpiredMail extends BaseMail
 {
+    use SendsAsOrganizer;
+
     public function __construct(
         private readonly WaitlistEntryDomainObject $entry,
         private readonly EventDomainObject $event,
@@ -33,6 +36,7 @@ class WaitlistOfferExpiredMail extends BaseMail
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: $this->organizerFrom(),
             replyTo: $this->eventSettings->getSupportEmail(),
             subject: __('Your waitlist offer has expired'),
         );
