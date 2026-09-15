@@ -16,22 +16,7 @@ class LocaleHelper
 
     private const ICU_LOCALES = [
         'en' => 'en_US',
-        'de' => 'de_DE',
-        'fr' => 'fr_FR',
-        'it' => 'it_IT',
-        'nl' => 'nl_NL',
-        'hu' => 'hu_HU',
-        'es' => 'es_ES',
-        'pt' => 'pt_PT',
-        'pt-br' => 'pt_BR',
-        'zh-cn' => 'zh_CN',
         'se' => 'sv_SE',
-        'zh-hk' => 'zh_HK',
-        'vi' => 'vi_VN',
-        'tr' => 'tr_TR',
-        'pl' => 'pl_PL',
-        'sk' => 'sk_SK',
-        'el' => 'el_GR',
     ];
 
     private const DATE_FORMATS = [
@@ -50,14 +35,6 @@ class LocaleHelper
             'dayAndTime' => 'dddd D MMMM · HH:mm',
             'dateTimeWithZone' => 'D MMMM YYYY [kl.] HH:mm (z)',
             'numericDate' => 'YYYY-MM-DD',
-        ],
-        'default' => [
-            'date' => 'D MMMM YYYY',
-            'time' => 'HH:mm',
-            'dateTimeShort' => 'ddd D MMM YYYY · HH:mm',
-            'dayAndTime' => 'dddd D MMMM · HH:mm',
-            'dateTimeWithZone' => 'D MMMM YYYY, HH:mm (z)',
-            'numericDate' => 'DD/MM/YYYY',
         ],
     ];
 
@@ -118,7 +95,7 @@ class LocaleHelper
     public static function pattern(string $format, ?string $appLocale = null): string
     {
         $appLocale = $appLocale ?? App::getLocale();
-        $formats = self::DATE_FORMATS[$appLocale] ?? self::DATE_FORMATS['default'];
+        $formats = self::DATE_FORMATS[$appLocale] ?? self::DATE_FORMATS[Locale::EN->value];
 
         return $formats[$format];
     }

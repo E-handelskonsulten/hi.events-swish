@@ -30,26 +30,6 @@ const localeAliases: Record<string, SupportedLocales> = {
     "sv-fi": "se",
 };
 
-const localeToIntlLocaleMap: Record<SupportedLocales, string> = {
-    en: "en-US",
-    de: "de-DE",
-    fr: "fr-FR",
-    it: "it-IT",
-    nl: "nl-NL",
-    pt: "pt-PT",
-    es: "es-ES",
-    "zh-cn": "zh-CN",
-    "zh-hk": "zh-HK",
-    "pt-br": "pt-BR",
-    vi: "vi-VN",
-    tr: "tr-TR",
-    hu: "hu-HU",
-    pl: "pl-PL",
-    se: "sv-SE",
-    sk: "sk-SK",
-    el: "el-GR",
-};
-
 export const getDefaultLocale = (): SupportedLocales => {
     const configured = getConfig("VITE_DEFAULT_LOCALE")?.toLowerCase();
     if (configured && availableLocales.includes(configured)) {
@@ -62,11 +42,11 @@ export const getDefaultLocale = (): SupportedLocales => {
 export const getIntlLocale = (locale?: string): string => {
     const appLocale = getSupportedLocale(locale || i18n.locale || getDefaultLocale());
 
-    if (appLocale === "en" && typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("en")) {
-        return navigator.language;
+    if (appLocale === "se") {
+        return "sv-SE";
     }
 
-    return localeToIntlLocaleMap[appLocale as SupportedLocales] ?? "en-US";
+    return typeof navigator !== "undefined" ? navigator.language : "en-US";
 };
 /* eslint-enable lingui/no-unlocalized-strings */
 
@@ -145,7 +125,6 @@ const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown
     "zh-hk": () => import("dayjs/locale/zh-hk"),
     tr: () => import("dayjs/locale/tr"),
     hu: () => import("dayjs/locale/hu"),
-    pl: () => import("dayjs/locale/pl"),
     se: () => import("dayjs/locale/sv").then((module) => {
         dayjs.locale({...module.default, name: "se"}, undefined, true);
     }),

@@ -58,11 +58,13 @@ class LocaleHelperTest extends TestCase
         $this->assertSame('03/10/2026', LocaleHelper::formatNumericDate($date, 'en'));
     }
 
-    public function test_other_locales_fall_back_to_24_hour_day_first_formats(): void
+    public function test_other_locales_keep_the_upstream_english_formatting(): void
     {
         $date = Carbon::parse('2026-10-03 21:30:00');
 
-        $this->assertSame('3 Oktober 2026', LocaleHelper::formatDate($date, 'de'));
-        $this->assertSame('21:30', LocaleHelper::formatTime($date, 'de'));
+        $this->assertSame('en_US', LocaleHelper::toIcuLocale('de'));
+        $this->assertSame('en', LocaleHelper::toCarbonLocale('fr'));
+        $this->assertSame('October 3, 2026', LocaleHelper::formatDate($date, 'de'));
+        $this->assertSame('9:30 PM', LocaleHelper::formatTime($date, 'de'));
     }
 }

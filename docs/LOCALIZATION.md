@@ -13,8 +13,9 @@ Supported codes: `en, de, fr, it, nl, hu, es, pt, pt-br, zh-cn, se, zh-hk, vi, t
 
 ## Formatting
 
-- Backend money goes through `Currency::format()`, which now follows the active app locale (`sv_SE` → `1 234,50 kr`). Dates in mails, invoices and Liquid template tokens go through `LocaleHelper` (`3 oktober 2026`, `19:30`, `lör 3 okt 2026 · 19:30`). `Carbon::setLocale` is kept in sync with `App::setLocale` in `AppServiceProvider`, so per-recipient mail locales get Swedish month and day names.
+- Backend money goes through `Currency::format()`, which follows the active app locale (`sv_SE` → `1 234,50 kr`). Dates in mails, invoices and Liquid template tokens go through `LocaleHelper` (`3 oktober 2026`, `19:30`, `lör 3 okt 2026 · 19:30`). `Carbon::setLocale` is kept in sync with `App::setLocale` in `AppServiceProvider`, so per-recipient mail locales get Swedish month and day names.
 - Frontend money and numbers use `getIntlLocale()` (`se` → `sv-SE`), and dayjs registers the Swedish locale under the `se` code.
+- **Scope: only `se` is opted in.** `LocaleHelper::ICU_LOCALES` / `DATE_FORMATS` and `getIntlLocale()` only define `en` and `se`; every other locale keeps upstream's behaviour (US 12-hour dates, `en_US` money on the backend, browser-language money on the frontend). Extending the fix to another locale is one entry in each table plus a dayjs loader.
 - Tests pin `APP_LOCALE=en` in `phpunit.xml` so assertions on English messages are independent of the installation default.
 
 ## Catalogs
