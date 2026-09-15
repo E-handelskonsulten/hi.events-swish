@@ -1,6 +1,7 @@
 import {Modal} from "../../common/Modal";
 import {GenericModalProps} from "../../../types.ts";
 import classes from "./AboutModal.module.scss";
+import {t} from "@lingui/macro";
 
 export const AboutModal = ({onClose}: GenericModalProps) => {
     return (
@@ -9,7 +10,7 @@ export const AboutModal = ({onClose}: GenericModalProps) => {
                 <iframe src={'https://hi.' +
                     'events/about-embedded'}
                         className={classes.aboutIframe}
-                        title="About"
+                        title={t`About`}
                         allowFullScreen
                 />
             </div>

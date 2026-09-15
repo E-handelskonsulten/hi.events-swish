@@ -87,7 +87,7 @@ const OrganizerLayout = () => {
                 isActive: () => false,
             },
         ] as NavItem[] : []),
-        { label: 'Overview' },
+        { label: t`Overview` },
         {
             link: 'dashboard',
             label: t`Organizer Dashboard`,

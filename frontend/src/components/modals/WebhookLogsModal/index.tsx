@@ -77,7 +77,7 @@ const LogEntry = ({log}: { log: WebhookLog }) => {
                                 size="sm"
                                 radius="sm"
                             >
-                                {log.response_code || 'No Response'}
+                                {log.response_code || t`No response`}
                             </Badge>
                         </Group>
                         <Text size="xs" c="dimmed">

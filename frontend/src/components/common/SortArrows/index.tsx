@@ -1,5 +1,6 @@
 import {ActionIcon} from '@mantine/core';
 import {IconCaretDownFilled, IconCaretUpFilled} from '@tabler/icons-react';
+import {t} from '@lingui/macro';
 
 interface SortArrowsProps {
     upArrowEnabled: boolean;
@@ -25,7 +26,7 @@ export const SortArrows = ({
             <ActionIcon
                 onClick={upArrowEnabled ? onSortUp : undefined}
                 variant="transparent"
-                aria-label="Sort Up"
+                aria-label={t`Sort ascending`}
                 color={upArrowEnabled ? 'currentColor' : '#ddd'}
             >
                 <IconCaretUpFilled size={18}/>
@@ -33,7 +34,7 @@ export const SortArrows = ({
             <ActionIcon
                 onClick={downArrowEnabled ? onSortDown : undefined}
                 variant="transparent"
-                aria-label="Sort Down"
+                aria-label={t`Sort descending`}
                 color={downArrowEnabled ? 'currentColor' : '#ddd'}
             >
                 <IconCaretDownFilled size={18}/>

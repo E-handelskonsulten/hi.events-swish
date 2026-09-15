@@ -328,7 +328,7 @@ const OrganizerReportTable = <T extends Record<string, any>>({
                             style={{minWidth: '305px', marginBottom: '0'}}
                             leftSection={<IconCalendar stroke={1.5} size={20}/>}
                             type="range"
-                            placeholder="Pick dates range"
+                            placeholder={t`Pick a date range`}
                             value={dateRange}
                             onChange={handleDateRangeChange}
                             minDate={dayjs().subtract(1, 'year').tz(tz).toDate()}

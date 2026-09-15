@@ -350,8 +350,8 @@ export const PayoutsSettings = () => {
                             <Title order={4}>{t`Stripe connected`}</Title>
                             <Text c="dimmed" size="sm" className={classes.connectedMeta}>
                                 {account.country
-                                    ? t`Account · ${account.country} · ${account.account_type ?? "Standard"}`
-                                    : t`Account · ${account.account_type ?? "Standard"}`}
+                                    ? t`Account · ${account.country} · ${account.account_type ?? t`Standard`}`
+                                    : t`Account · ${account.account_type ?? t`Standard`}`}
                             </Text>
                             {stripeAccountId && (
                                 <Group gap={4} mt={2} wrap="nowrap" className={classes.accountIdRow}>

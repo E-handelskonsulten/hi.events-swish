@@ -204,7 +204,7 @@ export const PaymentAndInvoicingSettings = () => {
                                         <TextInput
                                             label={t`Document Label`}
                                             description={t`Leave blank to use the default word "Invoice"`}
-                                            placeholder="Invoice"
+                                            placeholder={t`Invoice`}
                                             {...form.getInputProps('invoice_label')}
                                         />
 
@@ -241,7 +241,7 @@ export const PaymentAndInvoicingSettings = () => {
                                             <h4 style={{margin: 0}}>{t`Organization Details`}</h4>
                                             <TextInput
                                                 label={t`Organization Name`}
-                                                placeholder="Your Company Ltd"
+                                                placeholder={t`Your Company Ltd`}
                                                 {...form.getInputProps('organization_name')}
                                             />
 

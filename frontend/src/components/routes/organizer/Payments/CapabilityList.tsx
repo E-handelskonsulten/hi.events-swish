@@ -5,9 +5,9 @@ interface CapabilityListProps {
     capabilities: Record<string, string>;
 }
 
-const CAPABILITY_LABELS: Record<string, string> = {
-    card_payments: "Card payments",
-    transfers: "Transfers",
+const getCapabilityLabels = (): Record<string, string> => ({
+    card_payments: t`Card payments`,
+    transfers: t`Transfers`,
     link_payments: "Link",
     klarna_payments: "Klarna",
     afterpay_clearpay_payments: "Afterpay / Clearpay",
@@ -16,7 +16,7 @@ const CAPABILITY_LABELS: Record<string, string> = {
     eps_payments: "EPS",
     ideal_payments: "iDEAL",
     sofort_payments: "SOFORT",
-    sepa_debit_payments: "SEPA Direct Debit",
+    sepa_debit_payments: t`SEPA Direct Debit`,
     p24_payments: "Przelewy24",
     blik_payments: "BLIK",
     mb_way_payments: "MB Way",
@@ -37,12 +37,12 @@ const CAPABILITY_LABELS: Record<string, string> = {
     promptpay_payments: "PromptPay",
     konbini_payments: "Konbini",
     oxxo_payments: "OXXO",
-    us_bank_account_ach_payments: "ACH Direct Debit",
-    bacs_debit_payments: "Bacs Direct Debit",
-    au_becs_debit_payments: "BECS Direct Debit",
-    acss_debit_payments: "Pre-authorized debit (Canada)",
+    us_bank_account_ach_payments: t`ACH Direct Debit`,
+    bacs_debit_payments: t`Bacs Direct Debit`,
+    au_becs_debit_payments: t`BECS Direct Debit`,
+    acss_debit_payments: t`Pre-authorized debit (Canada)`,
     multibanco_payments: "Multibanco",
-};
+});
 
 const humanize = (key: string): string =>
     key
@@ -50,7 +50,7 @@ const humanize = (key: string): string =>
         .replace(/_/g, " ")
         .replace(/\b\w/g, (c) => c.toUpperCase());
 
-const labelFor = (key: string): string => CAPABILITY_LABELS[key] ?? humanize(key);
+const labelFor = (key: string): string => getCapabilityLabels()[key] ?? humanize(key);
 
 const statusBadge = (status: string) => {
     if (status === "active") {

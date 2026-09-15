@@ -1,5 +1,16 @@
 /* eslint-disable lingui/no-unlocalized-strings */
 (function(scriptElement) {
+    var WIDGET_TEXT = {
+        en: {checkout: 'Checkout', closeCheckout: 'Close checkout', loading: 'Loading…', checkoutFrame: 'Hi.Events Checkout', widgetFrame: 'Hi.Events Widget'},
+        sv: {checkout: 'Kassan', closeCheckout: 'Stäng kassan', loading: 'Laddar…', checkoutFrame: 'Hi.Events kassa', widgetFrame: 'Hi.Events biljettwidget'}
+    };
+
+    function widgetText(key) {
+        var lang = (document.documentElement.lang || navigator.language || 'en').toLowerCase();
+        var table = lang.indexOf('sv') === 0 || lang === 'se' ? WIDGET_TEXT.sv : WIDGET_TEXT.en;
+        return table[key];
+    }
+
     const isScriptLoaded = () => !!window.hiEventWidgetLoaded;
 
     const logError = (e) => {
@@ -127,7 +138,7 @@
             const dialog = document.createElement('div');
             dialog.setAttribute('role', 'dialog');
             dialog.setAttribute('aria-modal', 'true');
-            dialog.setAttribute('aria-label', 'Checkout');
+            dialog.setAttribute('aria-label', widgetText('checkout'));
             const ds = dialog.style;
             ds.position = 'relative';
             ds.background = '#ffffff';
@@ -140,7 +151,7 @@
 
             const closeBtn = document.createElement('button');
             closeBtn.type = 'button';
-            closeBtn.setAttribute('aria-label', 'Close checkout');
+            closeBtn.setAttribute('aria-label', widgetText('closeCheckout'));
             closeBtn.textContent = '×';
             const cs = closeBtn.style;
             cs.position = 'absolute';
@@ -169,12 +180,12 @@
             sp.color = '#888888';
             sp.fontFamily = 'sans-serif';
             sp.fontSize = '14px';
-            spinner.textContent = 'Loading…';
+            spinner.textContent = widgetText('loading');
 
             const iframe = document.createElement('iframe');
             iframe.setAttribute('sandbox', SANDBOX);
             iframe.setAttribute('allow', ALLOW);
-            iframe.setAttribute('title', 'Hi.Events Checkout');
+            iframe.setAttribute('title', widgetText('checkoutFrame'));
             const ifs = iframe.style;
             ifs.border = 'none';
             ifs.width = '100%';
@@ -358,7 +369,7 @@
             const iframe = document.createElement('iframe');
             iframe.setAttribute('sandbox', SANDBOX);
             iframe.setAttribute('allow', ALLOW);
-            iframe.setAttribute('title', 'Hi.Events Widget');
+            iframe.setAttribute('title', widgetText('widgetFrame'));
             iframe.style.border = 'none';
             iframe.style.width = '100%';
 

@@ -35,7 +35,7 @@ const ProductWidget = () => {
                 secondaryText: searchParams.get("SecondaryTextColor") || '#ffffff',
                 bodyBackground: searchParams.get("BackgroundColor") || '#ffffff',
             },
-            continueButtonText: searchParams.get("ContinueButtonText") || 'Continue',
+            continueButtonText: searchParams.get("ContinueButtonText") || t`Continue`,
             padding: searchParams.get("Padding") || '10px',
         };
     }, [location.search]);

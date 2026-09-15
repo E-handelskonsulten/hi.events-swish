@@ -314,7 +314,7 @@ const HomepageDesigner = () => {
                         <iframe
                             ref={iframeRef}
                             src={iframeSrc}
-                            title="Event Preview"
+                            title={t`Event Preview`}
                             onLoad={() => setIframeLoaded(true)}
                         />
                     ) : (

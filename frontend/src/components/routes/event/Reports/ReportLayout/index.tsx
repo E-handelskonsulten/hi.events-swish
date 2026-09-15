@@ -7,6 +7,7 @@ import {ReportTypes} from "../../../../../types.ts";
 import {DailySalesReport} from "../DailySalesReport";
 import PromoCodesReport from "../PromoCodesReport";
 import OccurrenceSummaryReport from "../OccurrenceSummaryReport";
+import {t} from "@lingui/macro";
 
 const renderReport = (reportType: string) => {
     switch (reportType) {
@@ -19,7 +20,7 @@ const renderReport = (reportType: string) => {
         case ReportTypes.OccurrenceSummary:
             return <OccurrenceSummaryReport/>;
         default:
-            return <div>Report not found</div>;
+            return <div>{t`Report not found`}</div>;
     }
 };
 
@@ -35,7 +36,7 @@ const ReportLayout = () => {
                     to={`/manage/event/${eventId}/reports`}
                     pl={0}
             >
-                Back to Reports
+                {t`Back to Reports`}
             </Button>
             <div>
                 {renderReport(reportType as string)}

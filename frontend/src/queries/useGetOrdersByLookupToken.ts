@@ -2,6 +2,7 @@ import {useQuery} from "@tanstack/react-query";
 import {ticketLookupClient} from "../api/ticket-lookup.client.ts";
 import {Order} from "../types.ts";
 import {AxiosError} from "axios";
+import {t} from "@lingui/macro";
 
 export const GET_ORDERS_BY_LOOKUP_TOKEN_QUERY_KEY = "getOrdersByLookupToken";
 
@@ -10,7 +11,7 @@ export const useGetOrdersByLookupToken = (token: string | undefined) => {
         queryKey: [GET_ORDERS_BY_LOOKUP_TOKEN_QUERY_KEY, token],
         queryFn: async () => {
             if (!token) {
-                throw new Error("Token is required");
+                throw new Error(t`Token is required`);
             }
             try {
                 const {data} = await ticketLookupClient.getOrdersByToken(token);
@@ -18,7 +19,7 @@ export const useGetOrdersByLookupToken = (token: string | undefined) => {
             } catch (e) {
                 const axiosError = e as AxiosError<{ message?: string }>;
                 const message = axiosError.response?.data?.message;
-                throw new Error(message || "An error occurred");
+                throw new Error(message || t`An error occurred`);
             }
         },
         enabled: !!token,

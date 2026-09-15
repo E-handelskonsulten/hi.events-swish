@@ -146,7 +146,7 @@ export const ImageUploadDropzone = ({
                     <Loader size={displayMode === 'compact' ? 'sm' : 'md'}/>
                     {displayMode !== 'compact' && (
                         <Text size="sm" mt="xs" c="dimmed">
-                            Processing image...
+                            {t`Processing image...`}
                         </Text>
                     )}
                 </div>
@@ -156,7 +156,7 @@ export const ImageUploadDropzone = ({
         if (previewImage) {
             return (
                 <div className={classes.previewContainer}>
-                    <img src={previewImage} alt="Uploaded preview" className={classes.previewImage}/>
+                    <img src={previewImage} alt={t`Uploaded preview`} className={classes.previewImage}/>
                     <Button
                         variant="light"
                         color="blue"
@@ -165,7 +165,7 @@ export const ImageUploadDropzone = ({
                         onClick={handleReplace}
                         className={classes.replaceButton}
                     >
-                        Replace Image
+                        {t`Replace Image`}
                     </Button>
                 </div>
             );
@@ -177,7 +177,7 @@ export const ImageUploadDropzone = ({
                     <Group justify="center" gap="xs">
                         <IconUpload size={20} stroke={1.5}/>
                         <Text size="sm" fw={500}>
-                            Click to upload
+                            {t`Click to upload`}
                         </Text>
                     </Group>
                     {helpText && (
@@ -197,7 +197,7 @@ export const ImageUploadDropzone = ({
                     </div>
                 </Group>
                 <Text ta="center" fw={600} size="md" mt="md">
-                    Drag & drop or click to upload
+                    {t`Drag & drop or click to upload`}
                 </Text>
                 {helpText && (
                     <Text ta="center" c="dimmed" size="sm" mt="xs">
@@ -205,7 +205,7 @@ export const ImageUploadDropzone = ({
                     </Text>
                 )}
                 <Text ta="center" c="dimmed" size="xs" mt="xs">
-                    Images only · Max 5MB
+                    {t`Images only · Max 5MB`}
                 </Text>
             </div>
         );

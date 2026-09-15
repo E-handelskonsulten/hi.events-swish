@@ -177,7 +177,7 @@ export const OrganizerHomepage = ({
                                     )}
                                     <img
                                         src={organizerCover.url}
-                                        alt="Cover"
+                                        alt={t`Cover`}
                                         className={classes.coverImage}
                                     />
                                 </div>
@@ -190,7 +190,7 @@ export const OrganizerHomepage = ({
                                                 <div className={classes.logoWrapper}>
                                                     <img
                                                         src={organizerLogo.url}
-                                                        alt="Logo"
+                                                        alt={t`Logo`}
                                                         className={classes.logo}
                                                     />
                                                 </div>

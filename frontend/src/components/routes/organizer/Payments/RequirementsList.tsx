@@ -1,41 +1,43 @@
 import {List, ThemeIcon} from "@mantine/core";
 import {IconAlertCircle, IconClock} from "@tabler/icons-react";
+import {t} from "@lingui/macro";
 
 interface RequirementsListProps {
     items: string[];
     severity?: "due" | "eventually";
 }
 
-const REQUIREMENT_LABELS: Record<string, string> = {
-    external_account: "Bank account",
-    "individual.verification.document": "Government-issued photo ID",
-    "individual.verification.additional_document": "Additional ID verification",
-    "individual.address.line1": "Personal address",
-    "individual.address.city": "Personal city",
-    "individual.address.postal_code": "Personal postal code",
-    "individual.dob.day": "Date of birth",
-    "individual.email": "Email address",
-    "individual.first_name": "First name",
-    "individual.last_name": "Last name",
-    "individual.phone": "Phone number",
-    "individual.ssn_last_4": "Last 4 of SSN",
-    "individual.id_number": "Government ID number",
-    "business_profile.url": "Business website",
-    "business_profile.mcc": "Business category (MCC)",
-    "business_profile.product_description": "Business description",
-    "business_profile.support_phone": "Customer support phone",
-    "company.tax_id": "Business tax ID",
-    "company.name": "Legal business name",
-    "company.address.line1": "Business address",
-    "company.address.city": "Business city",
-    "company.address.postal_code": "Business postal code",
-    "company.verification.document": "Business verification document",
-    "tos_acceptance.date": "Stripe terms acceptance",
-    "tos_acceptance.ip": "Stripe terms acceptance",
-};
+const getRequirementLabels = (): Record<string, string> => ({
+    external_account: t`Bank account`,
+    "individual.verification.document": t`Government-issued photo ID`,
+    "individual.verification.additional_document": t`Additional ID verification`,
+    "individual.address.line1": t`Personal address`,
+    "individual.address.city": t`Personal city`,
+    "individual.address.postal_code": t`Personal postal code`,
+    "individual.dob.day": t`Date of birth`,
+    "individual.email": t`Email address`,
+    "individual.first_name": t`First name`,
+    "individual.last_name": t`Last name`,
+    "individual.phone": t`Phone number`,
+    "individual.ssn_last_4": t`Last 4 of SSN`,
+    "individual.id_number": t`Government ID number`,
+    "business_profile.url": t`Business website`,
+    "business_profile.mcc": t`Business category (MCC)`,
+    "business_profile.product_description": t`Business description`,
+    "business_profile.support_phone": t`Customer support phone`,
+    "company.tax_id": t`Business tax ID`,
+    "company.name": t`Legal business name`,
+    "company.address.line1": t`Business address`,
+    "company.address.city": t`Business city`,
+    "company.address.postal_code": t`Business postal code`,
+    "company.verification.document": t`Business verification document`,
+    "tos_acceptance.date": t`Stripe terms acceptance`,
+    "tos_acceptance.ip": t`Stripe terms acceptance`,
+});
 
 const labelFor = (key: string): string => {
-    if (REQUIREMENT_LABELS[key]) return REQUIREMENT_LABELS[key];
+    const labels = getRequirementLabels();
+    if (labels[key]) return labels[key];
     return key
         .replace(/_/g, " ")
         .replace(/\./g, " ‣ ")

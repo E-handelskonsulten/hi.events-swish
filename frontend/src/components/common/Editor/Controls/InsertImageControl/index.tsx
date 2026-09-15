@@ -88,8 +88,8 @@ export const InsertImageControl = () => {
         <>
             <RichTextEditor.Control
                 onClick={() => setModalOpen(true)}
-                aria-label="Insert image"
-                title="Insert image"
+                aria-label={t`Insert image`}
+                title={t`Insert image`}
             >
                 <IconPhotoPlus stroke={1.5} size="1rem"/>
             </RichTextEditor.Control>
@@ -140,7 +140,7 @@ export const InsertImageControl = () => {
                                     <>
                                         <Image
                                             src={uploadedImageUrl}
-                                            alt="Uploaded preview"
+                                            alt={t`Uploaded preview`}
                                             radius="md"
                                         />
                                         <Group grow>

@@ -29,48 +29,48 @@ interface ProviderDef {
     formatHint: string;
 }
 
-const PROVIDERS: ProviderDef[] = [
+const getProviders = (): ProviderDef[] => [
     {
         key: 'facebook_pixel',
-        label: 'Facebook Pixel',
+        label: t`Facebook Pixel`,
         icon: IconBrandFacebook,
         placeholder: '1234567890',
-        description: 'Pixel ID (numeric)',
+        description: t`Pixel ID (numeric)`,
         pattern: /^\d{9,20}$/,
-        formatHint: 'Must be 9-20 digits',
+        formatHint: t`Must be 9-20 digits`,
     },
     {
         key: 'google_analytics_4',
-        label: 'Google Analytics 4',
+        label: t`Google Analytics 4`,
         icon: IconBrandGoogle,
         placeholder: 'G-XXXXXXXXXX',
-        description: 'Measurement ID',
+        description: t`Measurement ID`,
         pattern: /^G-[a-zA-Z0-9]{6,20}$/,
-        formatHint: 'Must start with G- followed by 6-20 characters',
+        formatHint: t`Must start with G- followed by 6-20 characters`,
     },
     {
         key: 'google_tag_manager',
-        label: 'Google Tag Manager',
+        label: t`Google Tag Manager`,
         icon: IconTag,
         placeholder: 'GTM-XXXXXXX',
-        description: 'Container ID',
+        description: t`Container ID`,
         pattern: /^GTM-[a-zA-Z0-9]{4,20}$/,
-        formatHint: 'Must start with GTM- followed by 4-20 characters',
+        formatHint: t`Must start with GTM- followed by 4-20 characters`,
     },
     {
         key: 'tiktok_pixel',
-        label: 'TikTok Pixel',
+        label: t`TikTok Pixel`,
         icon: IconBrandTiktok,
         placeholder: 'CXXXXXXXXXX',
-        description: 'Pixel ID',
+        description: t`Pixel ID`,
         pattern: /^[a-zA-Z0-9]{6,30}$/,
-        formatHint: 'Must be 6-30 alphanumeric characters',
+        formatHint: t`Must be 6-30 alphanumeric characters`,
     },
 ];
 
 function pixelsToFormState(pixels: TrackingPixelConfig[] | undefined): Record<string, { enabled: boolean; pixel_id: string }> {
     const state: Record<string, { enabled: boolean; pixel_id: string }> = {};
-    for (const p of PROVIDERS) {
+    for (const p of getProviders()) {
         state[p.key] = {enabled: false, pixel_id: ''};
     }
     if (pixels) {
@@ -100,8 +100,8 @@ export const TrackingPixelSettings = () => {
     const {data: account} = useGetAccount();
     const isSaasMode = account?.is_saas_mode_enabled;
     const availableProviders = isSaasMode
-        ? PROVIDERS.filter(p => p.key !== GTM_PROVIDER_KEY)
-        : PROVIDERS;
+        ? getProviders().filter(p => p.key !== GTM_PROVIDER_KEY)
+        : getProviders();
     const organizerSettingsQuery = useGetOrganizerSettings(organizerId);
     const updateMutation = useUpdateOrganizerSettings();
     const formErrorHandle = useFormErrorResponseHandler();

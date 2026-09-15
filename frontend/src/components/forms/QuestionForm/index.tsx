@@ -157,7 +157,7 @@ export const QuestionForm = ({form, productCategories}: QuestionFormProps) => {
             {form.values.belongs_to === QuestionBelongsToType.PRODUCT && (
                 <ProductSelector
                     label={t`What products does this code apply to?`}
-                    placeholder="Select products"
+                    placeholder={t`Select products`}
                     icon={<IconTicket size="1rem"/>}
                     productCategories={productCategories ?? []}
                     form={form}

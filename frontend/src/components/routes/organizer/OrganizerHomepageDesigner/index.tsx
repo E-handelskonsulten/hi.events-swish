@@ -314,7 +314,7 @@ const OrganizerHomepageDesigner = () => {
                         <iframe
                             ref={iframeRef}
                             src={iframeSrc}
-                            title="Organizer Homepage Preview"
+                            title={t`Organizer Homepage Preview`}
                             onLoad={() => setIframeLoaded(true)}
                         />
                     ) : (

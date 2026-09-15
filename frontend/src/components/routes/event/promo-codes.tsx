@@ -55,7 +55,7 @@ export const PromoCodes = () => {
                     resultLabel={t`promo codes`}
                 >
                     <Button color={'green'} size={'sm'} onClick={openCreateModal} rightSection={<IconPlus/>} data-testid="promo-code-create-button">
-                        Create
+                        {t`Create`}
                     </Button>
                 </ToolBar>
 
