@@ -114,7 +114,7 @@ To move the whole installation to production instead, change `SWISH_ENVIRONMENT`
 
 ## Mail
 
-Resend over SMTP (`smtp.resend.com:465`, user `resend`, password = API key). The domain `biljettera.se` must be verified in Resend (DKIM, SPF via the `send` subdomain) and carry a DMARC record. Ticket, order and refund mails go to buyers; flagged Swish payments and failed refunds also go to `APP_ALERTS_EMAIL`.
+Resend over SMTP (`smtp.resend.com:587` with STARTTLS, user `resend`, password = API key; the host blocks outbound 465, and 2587 is the fallback if 587 is ever blocked). The domain `biljettera.se` is verified in Resend with CNAME records (`rsend._domainkey` for DKIM and `send` for the bounce/SPF domain, both pointing at `forge.rmta.net` targets) plus our own DMARC record at the registrar. Ticket, order and refund mails go to buyers; flagged Swish payments and failed refunds also go to `APP_ALERTS_EMAIL`.
 
 ## Monitoring
 
