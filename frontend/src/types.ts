@@ -655,6 +655,7 @@ export interface Organizer {
     stripe_connect_setup_complete?: boolean;
     stripe_account_id?: string | null;
     configuration?: AccountConfiguration;
+    sms_delivery_enabled?: boolean;
 }
 
 export interface OrganizerSettings {

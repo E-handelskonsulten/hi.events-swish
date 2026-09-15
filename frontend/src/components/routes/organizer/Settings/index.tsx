@@ -9,11 +9,12 @@ import { PlatformFeesSettings } from "./Sections/PlatformFeesSettings";
 import { DangerZoneSettings } from "./Sections/DangerZoneSettings";
 import { TrackingPixelSettings } from "./Sections/TrackingPixelSettings";
 import { SwishSettings } from "./Sections/SwishSettings";
+import { SmsSettings } from "./Sections/SmsSettings";
 import { PageBody } from "../../../common/PageBody";
 import { PageTitle } from "../../../common/PageTitle";
 import { t } from "@lingui/macro";
 import { Box, Group, NavLink as MantineNavLink, Stack } from "@mantine/core";
-import { IconAlertTriangle, IconBrandGoogleAnalytics, IconBrandStripe, IconDeviceMobile, IconInfoCircle, IconMapPin, IconShare, IconMail, IconCalendarEvent, IconPercentage, IconChartBar } from "@tabler/icons-react";
+import { IconAlertTriangle, IconBrandGoogleAnalytics, IconBrandStripe, IconDeviceMobile, IconInfoCircle, IconMessage, IconMapPin, IconShare, IconMail, IconCalendarEvent, IconPercentage, IconChartBar } from "@tabler/icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import { useEffect, useMemo, useState } from "react";
 import { Card } from "../../../common/Card";
@@ -80,6 +81,12 @@ const Settings = () => {
                 label: t`Swish`,
                 icon: IconDeviceMobile,
                 component: SwishSettings,
+            },
+            {
+                id: 'sms',
+                label: t`SMS delivery`,
+                icon: IconMessage,
+                component: SmsSettings,
             },
             {
                 id: 'danger-zone',

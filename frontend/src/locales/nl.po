@@ -95,7 +95,7 @@ msgstr "{0} van {1} plaatsen zijn bezet."
 msgid "{0} organizers"
 msgstr "{0} organisatoren"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:637
+#: src/components/routes/product-widget/CollectInformation/index.tsx:650
 msgid "{0} tickets"
 msgstr "{0} tickets"
 
@@ -298,7 +298,7 @@ msgstr "1 dag voor het evenement"
 msgid "1 hour before event"
 msgstr "1 uur voor het evenement"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:636
+#: src/components/routes/product-widget/CollectInformation/index.tsx:649
 msgid "1 ticket"
 msgstr "1 ticket"
 
@@ -832,7 +832,7 @@ msgstr "Aanvullende informatie"
 #: src/components/common/OrderDetails/index.tsx:116
 #: src/components/forms/QuestionForm/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:163
-#: src/components/routes/organizer/Settings/index.tsx:44
+#: src/components/routes/organizer/Settings/index.tsx:45
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:103
 msgid "Address"
 msgstr "Adres"
@@ -843,8 +843,8 @@ msgstr "Adresregel 1"
 
 #: src/components/common/LocationPicker/index.tsx:237
 #: src/components/modals/LocationEditModal/index.tsx:144
-#: src/components/routes/product-widget/CollectInformation/index.tsx:560
-#: src/components/routes/product-widget/CollectInformation/index.tsx:561
+#: src/components/routes/product-widget/CollectInformation/index.tsx:573
+#: src/components/routes/product-widget/CollectInformation/index.tsx:574
 msgid "Address Line 1"
 msgstr "Adresregel 1"
 
@@ -854,8 +854,8 @@ msgstr "Adresregel 2"
 
 #: src/components/common/LocationPicker/index.tsx:242
 #: src/components/modals/LocationEditModal/index.tsx:145
-#: src/components/routes/product-widget/CollectInformation/index.tsx:565
-#: src/components/routes/product-widget/CollectInformation/index.tsx:566
+#: src/components/routes/product-widget/CollectInformation/index.tsx:578
+#: src/components/routes/product-widget/CollectInformation/index.tsx:579
 msgid "Address Line 2"
 msgstr "Adresregel 2"
 
@@ -952,7 +952,7 @@ msgid "All Archived Events"
 msgstr "Alle gearchiveerde evenementen"
 
 #: src/components/common/MessageList/index.tsx:29
-#: src/components/routes/product-widget/CollectInformation/index.tsx:542
+#: src/components/routes/product-widget/CollectInformation/index.tsx:555
 msgid "All attendees"
 msgstr "Alle deelnemers"
 
@@ -1526,7 +1526,7 @@ msgstr "deelnemer"
 
 #: src/components/common/AttendeeTicket/index.tsx:101
 #: src/components/common/QuestionsTable/index.tsx:462
-#: src/components/routes/product-widget/CollectInformation/index.tsx:668
+#: src/components/routes/product-widget/CollectInformation/index.tsx:681
 msgid "Attendee"
 msgstr "Deelnemer"
 
@@ -1756,9 +1756,9 @@ msgid "Back to Accounts"
 msgstr "Terug naar Accounts"
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:144
-#: src/components/routes/product-widget/CollectInformation/index.tsx:360
-#: src/components/routes/product-widget/CollectInformation/index.tsx:390
-#: src/components/routes/product-widget/CollectInformation/index.tsx:419
+#: src/components/routes/product-widget/CollectInformation/index.tsx:361
+#: src/components/routes/product-widget/CollectInformation/index.tsx:391
+#: src/components/routes/product-widget/CollectInformation/index.tsx:420
 msgid "Back to Event"
 msgstr "Terug naar evenement"
 
@@ -1834,7 +1834,7 @@ msgstr "Basisprijs"
 msgid "Based on the global sale period above, not per date"
 msgstr "Op basis van de algemene verkoopperiode hierboven, niet per datum"
 
-#: src/components/routes/organizer/Settings/index.tsx:32
+#: src/components/routes/organizer/Settings/index.tsx:33
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
 msgstr "Basisinformatie"
@@ -1847,7 +1847,7 @@ msgstr "Omdat dit account voltooide bestellingen heeft, worden transactiegegeven
 msgid "BECS Direct Debit"
 msgstr ""
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:554
+#: src/components/routes/product-widget/CollectInformation/index.tsx:567
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:292
 msgid "Billing Address"
 msgstr "Factuuradres"
@@ -1966,7 +1966,7 @@ msgstr "Kopers zien een schone prijs. De platformkosten worden afgetrokken van u
 msgid "By adding tracking pixels, you acknowledge that you and this platform are joint controllers of the data collected. You are responsible for ensuring you have a lawful basis for this processing under applicable privacy laws (GDPR, CCPA, etc.)."
 msgstr "Door trackingpixels toe te voegen, erkent u dat u en dit platform gezamenlijke verwerkingsverantwoordelijken zijn van de verzamelde gegevens. U bent verantwoordelijk voor het waarborgen van een rechtmatige grondslag voor deze verwerking onder toepasselijke privacywetgeving (AVG, CCPA, enz.)."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:761
+#: src/components/routes/product-widget/CollectInformation/index.tsx:774
 #: src/components/routes/product-widget/Payment/index.tsx:192
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Door verder te gaan, gaat u akkoord met de <0>{0} Servicevoorwaarden</0>"
@@ -2480,8 +2480,8 @@ msgstr "Kies wie de platformkosten betaalt. Dit heeft geen invloed op extra kost
 #: src/components/common/CheckoutQuestion/index.tsx:162
 #: src/components/common/LocationPicker/index.tsx:249
 #: src/components/modals/LocationEditModal/index.tsx:148
-#: src/components/routes/product-widget/CollectInformation/index.tsx:574
-#: src/components/routes/product-widget/CollectInformation/index.tsx:575
+#: src/components/routes/product-widget/CollectInformation/index.tsx:587
+#: src/components/routes/product-widget/CollectInformation/index.tsx:588
 msgid "City"
 msgstr "Stad"
 
@@ -2642,11 +2642,11 @@ msgstr "Communicatievoorkeuren"
 msgid "complete"
 msgstr "voltooid"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:757
+#: src/components/routes/product-widget/CollectInformation/index.tsx:770
 msgid "Complete Order"
 msgstr "Volledige bestelling"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:370
+#: src/components/routes/product-widget/CollectInformation/index.tsx:371
 #: src/components/routes/product-widget/Payment/index.tsx:187
 msgid "Complete Payment"
 msgstr "Volledige betaling"
@@ -2655,11 +2655,11 @@ msgstr "Volledige betaling"
 msgid "Complete Stripe setup"
 msgstr "Stripe-installatie afronden"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:450
+#: src/components/routes/product-widget/CollectInformation/index.tsx:451
 msgid "Complete your order to secure your tickets. This offer is time-limited, so don't wait too long."
 msgstr "Voltooi je bestelling om je tickets veilig te stellen. Dit aanbod is tijdelijk, dus wacht niet te lang."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:368
+#: src/components/routes/product-widget/CollectInformation/index.tsx:369
 msgid "Complete your payment to secure your tickets."
 msgstr "Voltooi je betaling om je tickets veilig te stellen."
 
@@ -2757,10 +2757,10 @@ msgstr "Geconfigureerde korting"
 msgid "Confirm"
 msgstr "Bevestig"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:498
 #: src/components/routes/product-widget/CollectInformation/index.tsx:499
-#: src/components/routes/product-widget/CollectInformation/index.tsx:715
-#: src/components/routes/product-widget/CollectInformation/index.tsx:716
+#: src/components/routes/product-widget/CollectInformation/index.tsx:500
+#: src/components/routes/product-widget/CollectInformation/index.tsx:728
+#: src/components/routes/product-widget/CollectInformation/index.tsx:729
 msgid "Confirm Email Address"
 msgstr "Bevestig e-mailadres"
 
@@ -2922,7 +2922,7 @@ msgstr "Ga door naar evenement aanmaken"
 msgid "Continue to next step"
 msgstr "Ga door naar de volgende stap"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:757
+#: src/components/routes/product-widget/CollectInformation/index.tsx:770
 msgid "Continue to Payment"
 msgstr "Doorgaan naar betaling"
 
@@ -2952,7 +2952,7 @@ msgstr "Bepaal wie er binnenkomt, en wanneer"
 msgid "Copied"
 msgstr "Gekopieerd"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:677
+#: src/components/routes/product-widget/CollectInformation/index.tsx:690
 msgid "Copied from above"
 msgstr "Gekopieerd van boven"
 
@@ -3000,7 +3000,7 @@ msgstr "Kopieer code"
 msgid "Copy customer link"
 msgstr "Klantlink kopiëren"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:518
+#: src/components/routes/product-widget/CollectInformation/index.tsx:531
 msgid "Copy details to first attendee"
 msgstr "Kopieer gegevens naar eerste deelnemer"
 
@@ -3018,7 +3018,7 @@ msgstr "Link kopiëren"
 msgid "Copy Link"
 msgstr "Link kopiëren"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:528
+#: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "Copy my details to:"
 msgstr "Mijn gegevens kopiëren naar:"
 
@@ -3071,7 +3071,7 @@ msgstr "Verificatie-e-mail kon niet worden verzonden. Probeer het opnieuw."
 #: src/components/common/CheckoutQuestion/index.tsx:174
 #: src/components/common/LocationPicker/index.tsx:268
 #: src/components/modals/LocationEditModal/index.tsx:157
-#: src/components/routes/product-widget/CollectInformation/index.tsx:595
+#: src/components/routes/product-widget/CollectInformation/index.tsx:608
 msgid "Country"
 msgstr "Land"
 
@@ -3514,7 +3514,7 @@ msgstr "Gevarenzone"
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:80
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:555
 #: src/components/routes/event/Settings/index.tsx:102
-#: src/components/routes/organizer/Settings/index.tsx:86
+#: src/components/routes/organizer/Settings/index.tsx:93
 msgid "Danger Zone"
 msgstr "Gevarenzone"
 
@@ -3836,7 +3836,7 @@ msgstr "Ontwerpelementen"
 #: src/components/modals/ManageOrderModal/index.tsx:268
 #: src/components/modals/SwishMassRefundModal/index.tsx:123
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:407
-#: src/components/routes/product-widget/CollectInformation/index.tsx:434
+#: src/components/routes/product-widget/CollectInformation/index.tsx:435
 #: src/components/routes/product-widget/SelectProducts/index.tsx:416
 msgid "Details"
 msgstr "Details"
@@ -4307,10 +4307,10 @@ msgstr "E-mail & Sjablonen"
 msgid "Email address"
 msgstr "E-mailadres"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:489
 #: src/components/routes/product-widget/CollectInformation/index.tsx:490
-#: src/components/routes/product-widget/CollectInformation/index.tsx:705
-#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+#: src/components/routes/product-widget/CollectInformation/index.tsx:491
+#: src/components/routes/product-widget/CollectInformation/index.tsx:718
+#: src/components/routes/product-widget/CollectInformation/index.tsx:719
 msgid "Email Address"
 msgstr "E-mailadres"
 
@@ -4319,8 +4319,8 @@ msgstr "E-mailadres"
 msgid "Email address copied to clipboard"
 msgstr "E-mailadres gekopieerd naar klembord"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:121
-#: src/components/routes/product-widget/CollectInformation/index.tsx:128
+#: src/components/routes/product-widget/CollectInformation/index.tsx:122
+#: src/components/routes/product-widget/CollectInformation/index.tsx:129
 msgid "Email addresses do not match"
 msgstr "E-mailadressen komen niet overeen"
 
@@ -4369,7 +4369,7 @@ msgid "Email Preview"
 msgstr "E-mail Voorbeeld"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:349
-#: src/components/routes/organizer/Settings/index.tsx:68
+#: src/components/routes/organizer/Settings/index.tsx:69
 msgid "Email Templates"
 msgstr "E-mail Sjablonen"
 
@@ -4421,6 +4421,10 @@ msgstr "Zelfbediening voor deelnemers standaard inschakelen"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:196
 msgid "Enable Invoicing"
 msgstr "Facturering inschakelen"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:84
+msgid "Enable SMS delivery"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:139
 msgid "Enable Swish"
@@ -4691,7 +4695,7 @@ msgid "Event date display"
 msgstr "Weergave van de evenementdatum"
 
 #: src/components/routes/account/ManageAccount/sections/EventDefaultsSettings/index.tsx:5
-#: src/components/routes/organizer/Settings/index.tsx:38
+#: src/components/routes/organizer/Settings/index.tsx:39
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:73
 msgid "Event Defaults"
 msgstr "Evenement Standaarden"
@@ -5325,8 +5329,8 @@ msgstr "Festival"
 msgid "File is too large. Maximum size is 5MB."
 msgstr "Bestand is te groot. Maximale grootte is 5MB."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:510
-#: src/components/routes/product-widget/CollectInformation/index.tsx:530
+#: src/components/routes/product-widget/CollectInformation/index.tsx:523
+#: src/components/routes/product-widget/CollectInformation/index.tsx:543
 msgid "Fill in your details above first"
 msgstr "Vul eerst je gegevens hierboven in"
 
@@ -5388,7 +5392,7 @@ msgstr "Eerste 7 dagen"
 msgid "First 90 days"
 msgstr "Eerste 90 dagen"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:541
+#: src/components/routes/product-widget/CollectInformation/index.tsx:554
 msgid "First attendee"
 msgstr "Eerste deelnemer"
 
@@ -5400,8 +5404,8 @@ msgstr "Eerste factuurnummer"
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
 #: src/components/routes/organizer/Payments/RequirementsList.tsx:19
-#: src/components/routes/product-widget/CollectInformation/index.tsx:472
-#: src/components/routes/product-widget/CollectInformation/index.tsx:688
+#: src/components/routes/product-widget/CollectInformation/index.tsx:473
+#: src/components/routes/product-widget/CollectInformation/index.tsx:701
 msgid "First name"
 msgstr "Voornaam"
 
@@ -5411,8 +5415,8 @@ msgstr "Voornaam"
 #: src/components/modals/JoinWaitlistModal/index.tsx:179
 #: src/components/routes/auth/AcceptInvitation/index.tsx:97
 #: src/components/routes/auth/Register/index.tsx:90
-#: src/components/routes/product-widget/CollectInformation/index.tsx:471
-#: src/components/routes/product-widget/CollectInformation/index.tsx:687
+#: src/components/routes/product-widget/CollectInformation/index.tsx:472
+#: src/components/routes/product-widget/CollectInformation/index.tsx:700
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:53
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:53
 #: src/components/routes/profile/ManageProfile/index.tsx:153
@@ -5648,7 +5652,7 @@ msgstr "Terug"
 msgid "Go back to profile"
 msgstr "Ga terug naar profiel"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:407
+#: src/components/routes/product-widget/CollectInformation/index.tsx:408
 msgid "Go to Event Page"
 msgstr "Ga naar evenementpagina"
 
@@ -6284,7 +6288,7 @@ msgstr "Mogelijk is het van publicatie gehaald of verwijderd. Controleer de link
 msgid "Italian"
 msgstr "Italiaans"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:668
+#: src/components/routes/product-widget/CollectInformation/index.tsx:681
 msgid "Item"
 msgstr "Item"
 
@@ -6380,7 +6384,7 @@ msgstr "Verder bewerken"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "Houd het kort — banners tonen één regel. {0}/200"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:608
+#: src/components/routes/product-widget/CollectInformation/index.tsx:621
 msgid "Keep me updated on news and events from {0}"
 msgstr "Houd mij op de hoogte van nieuws en evenementen van {0}"
 
@@ -6485,10 +6489,10 @@ msgstr "Achternaam"
 #: src/components/modals/JoinWaitlistModal/index.tsx:184
 #: src/components/routes/auth/AcceptInvitation/index.tsx:102
 #: src/components/routes/auth/Register/index.tsx:96
-#: src/components/routes/product-widget/CollectInformation/index.tsx:478
 #: src/components/routes/product-widget/CollectInformation/index.tsx:479
-#: src/components/routes/product-widget/CollectInformation/index.tsx:694
-#: src/components/routes/product-widget/CollectInformation/index.tsx:695
+#: src/components/routes/product-widget/CollectInformation/index.tsx:480
+#: src/components/routes/product-widget/CollectInformation/index.tsx:707
+#: src/components/routes/product-widget/CollectInformation/index.tsx:708
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:60
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:60
 #: src/components/routes/profile/ManageProfile/index.tsx:155
@@ -6987,6 +6991,10 @@ msgstr "Diverse"
 msgid "Miscellaneous Settings"
 msgstr "Diverse instellingen"
 
+#: src/components/routes/product-widget/CollectInformation/index.tsx:511
+msgid "Mobile number (optional)"
+msgstr ""
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:305
 msgid "Mobile number connected to Swish"
 msgstr ""
@@ -7202,11 +7210,11 @@ msgstr "Volgende datum"
 msgid "Next: {nextFormatted}"
 msgstr "Volgende: {nextFormatted}"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:436
+#: src/components/routes/product-widget/CollectInformation/index.tsx:437
 msgid "Next: payment"
 msgstr "Volgende: betaling"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:437
+#: src/components/routes/product-widget/CollectInformation/index.tsx:438
 #: src/components/routes/product-widget/Payment/index.tsx:107
 msgid "Next: review your order"
 msgstr "Volgende: bestelling controleren"
@@ -7607,7 +7615,7 @@ msgstr "niet bewerkt"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:132
-#: src/components/routes/product-widget/CollectInformation/index.tsx:540
+#: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "Geen"
 
@@ -8044,7 +8052,7 @@ msgstr "Bestelnr."
 msgid "Order answers"
 msgstr "Bestelantwoorden"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:387
+#: src/components/routes/product-widget/CollectInformation/index.tsx:388
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:376
 msgid "Order cancelled"
 msgstr "Bestelling geannuleerd"
@@ -8054,7 +8062,7 @@ msgid "Order Cancelled"
 msgstr "Bestelling geannuleerd"
 
 #: src/components/layouts/Checkout/index.tsx:322
-#: src/components/routes/product-widget/CollectInformation/index.tsx:377
+#: src/components/routes/product-widget/CollectInformation/index.tsx:378
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:386
 msgid "Order complete"
 msgstr "Bestelling voltooid"
@@ -8114,7 +8122,7 @@ msgstr "Bestelling gemarkeerd als betaald"
 msgid "Order Marked as Paid"
 msgstr "Bestelling gemarkeerd als betaald"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:402
+#: src/components/routes/product-widget/CollectInformation/index.tsx:403
 msgid "Order not found"
 msgstr "Bestelling niet gevonden"
 
@@ -8179,7 +8187,7 @@ msgstr "Bijgewerkte bestelling"
 msgid "Order updated successfully"
 msgstr "Bestelling succesvol bijgewerkt"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:357
+#: src/components/routes/product-widget/CollectInformation/index.tsx:358
 msgid "Order was cancelled"
 msgstr "Bestelling is geannuleerd"
 
@@ -8287,7 +8295,7 @@ msgstr "Organisator niet gevonden"
 msgid "Organizer restored successfully"
 msgstr "Organisator succesvol hersteld"
 
-#: src/components/routes/organizer/Settings/index.tsx:165
+#: src/components/routes/organizer/Settings/index.tsx:172
 msgid "Organizer Settings"
 msgstr "Instellingen van organisator"
 
@@ -8396,6 +8404,10 @@ msgstr "Betaald"
 #: src/components/routes/admin/Attribution/index.tsx:51
 msgid "Paid Accounts"
 msgstr "Betaalde accounts"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:76
+msgid "Paid add-on"
+msgstr ""
 
 #: src/components/modals/RefundOrderModal/index.tsx:117
 msgid "Partial refund"
@@ -8577,7 +8589,7 @@ msgstr "Betalingsvoorwaarden"
 msgid "Payments not available"
 msgstr "Betalingen niet beschikbaar"
 
-#: src/components/routes/organizer/Settings/index.tsx:97
+#: src/components/routes/organizer/Settings/index.tsx:104
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:407
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:463
 msgid "Payouts"
@@ -8757,7 +8769,7 @@ msgstr "Platformkosten van {0} afgetrokken van uw uitbetaling"
 #: src/components/routes/event/Settings/index.tsx:112
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:48
 #: src/components/routes/organizer/Reports/index.tsx:41
-#: src/components/routes/organizer/Settings/index.tsx:103
+#: src/components/routes/organizer/Settings/index.tsx:110
 #: src/components/routes/organizer/Settings/Sections/PlatformFeesSettings/index.tsx:42
 msgid "Platform Fees"
 msgstr "Platformkosten"
@@ -9969,6 +9981,7 @@ msgstr "Zaterdag"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:101
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
@@ -10453,6 +10466,10 @@ msgstr "Stuur een bericht"
 msgid "Send as test"
 msgstr "Verzenden als test"
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:67
+msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
+msgstr ""
+
 #: src/components/routes/event/messages.tsx:325
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "Stuur e-mails naar deelnemers, tickethouders of bestelingseigenaren. Berichten kunnen direct worden verzonden of worden ingepland voor later."
@@ -10502,6 +10519,10 @@ msgstr "Verstuur naar alle datums, of kies er één"
 msgid "Send your first message"
 msgstr "Verstuur uw eerste bericht"
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:92
+msgid "Sender name"
+msgstr ""
+
 #: src/components/routes/auth/ForgotPassword/index.tsx:70
 msgid "Sending..."
 msgstr "Verzenden..."
@@ -10528,7 +10549,7 @@ msgid "Sent to each attendee with their ticket details"
 msgstr "Verzonden naar elke deelnemer met hun ticketgegevens"
 
 #: src/components/routes/event/Settings/index.tsx:72
-#: src/components/routes/organizer/Settings/index.tsx:62
+#: src/components/routes/organizer/Settings/index.tsx:63
 msgid "SEO"
 msgstr "SEO"
 
@@ -10785,6 +10806,10 @@ msgstr "{MAX_VISIBLE} van {totalAvailable} datums worden getoond. Typ om te zoek
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "De eerste {0} worden getoond — de overige {1} sessie(s) worden bij het verzenden alsnog meegenomen."
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:93
+msgid "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
+msgstr ""
+
 #: src/components/routes/admin/Announcements/index.tsx:410
 msgid "Shown bouncing at the top of the modal"
 msgstr "Wordt stuiterend bovenaan de modal getoond"
@@ -10848,6 +10873,27 @@ msgstr "Slowaaks"
 msgid "Smith"
 msgstr "Jansen"
 
+#: src/components/routes/organizer/Settings/index.tsx:87
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:66
+msgid "SMS delivery"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:77
+msgid "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:71
+msgid "SMS delivery is not available yet"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:53
+msgid "SMS delivery settings saved."
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:72
+msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:73
 msgid "Snapchat"
 msgstr "Snapchat"
@@ -10856,7 +10902,7 @@ msgstr "Snapchat"
 msgid "Social"
 msgstr "Sociaal"
 
-#: src/components/routes/organizer/Settings/index.tsx:56
+#: src/components/routes/organizer/Settings/index.tsx:57
 msgid "Social Links"
 msgstr "Sociale links"
 
@@ -10903,7 +10949,7 @@ msgstr "Sommige gegevens zijn niet openbaar toegankelijk. Log in om alles te zie
 
 #: src/components/common/ErrorDisplay/index.tsx:15
 #: src/components/routes/auth/AcceptInvitation/index.tsx:48
-#: src/components/routes/product-widget/CollectInformation/index.tsx:416
+#: src/components/routes/product-widget/CollectInformation/index.tsx:417
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:64
 msgid "Something went wrong"
 msgstr "Er is iets misgegaan"
@@ -11051,8 +11097,8 @@ msgstr "Begint morgen"
 #: src/components/common/CheckoutQuestion/index.tsx:165
 #: src/components/common/LocationPicker/index.tsx:254
 #: src/components/modals/LocationEditModal/index.tsx:149
-#: src/components/routes/product-widget/CollectInformation/index.tsx:580
-#: src/components/routes/product-widget/CollectInformation/index.tsx:581
+#: src/components/routes/product-widget/CollectInformation/index.tsx:593
+#: src/components/routes/product-widget/CollectInformation/index.tsx:594
 msgid "State or Region"
 msgstr "Staat of regio"
 
@@ -11379,7 +11425,7 @@ msgid "Swedish"
 msgstr "Zweeds"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:91
-#: src/components/routes/organizer/Settings/index.tsx:80
+#: src/components/routes/organizer/Settings/index.tsx:81
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:113
 msgid "Swish"
 msgstr ""
@@ -12051,7 +12097,7 @@ msgstr "Deze bestelling is al terugbetaald."
 msgid "This order has been cancelled."
 msgstr "Deze bestelling is geannuleerd."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:345
+#: src/components/routes/product-widget/CollectInformation/index.tsx:346
 msgid "This order has expired. Please start again."
 msgstr "Deze bestelling is verlopen. Begin opnieuw."
 
@@ -12067,11 +12113,11 @@ msgstr "Deze bestelling is compleet."
 msgid "This order page is no longer available."
 msgstr "Deze bestelpagina is niet langer beschikbaar."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:358
+#: src/components/routes/product-widget/CollectInformation/index.tsx:359
 msgid "This order was abandoned. You can start a new order anytime."
 msgstr "Deze bestelling is verlaten. U kunt op elk moment een nieuwe bestelling starten."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:388
+#: src/components/routes/product-widget/CollectInformation/index.tsx:389
 msgid "This order was cancelled. You can start a new order anytime."
 msgstr "Deze bestelling is geannuleerd. Je kunt op elk moment een nieuwe bestelling plaatsen."
 
@@ -12219,6 +12265,10 @@ msgstr "Tickethouders"
 #: src/components/common/AttendeeTicket/index.tsx:162
 msgid "Ticket ID"
 msgstr "Ticket-ID"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:85
+msgid "Ticket links and refund notices are sent by SMS in addition to email."
+msgstr ""
 
 #: src/components/modals/DuplicateEventModal/index.tsx:56
 msgid "Ticket Logo"
@@ -12497,7 +12547,7 @@ msgstr "Rondleidingen"
 msgid "Track account growth and performance by attribution source"
 msgstr "Volg accountgroei en prestaties per attributiebron"
 
-#: src/components/routes/organizer/Settings/index.tsx:74
+#: src/components/routes/organizer/Settings/index.tsx:75
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:172
 msgid "Tracking & Analytics"
 msgstr "Tracking & Analyse"
@@ -13207,7 +13257,7 @@ msgid "View Order"
 msgstr "Bestelling Bekijken"
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:132
-#: src/components/routes/product-widget/CollectInformation/index.tsx:380
+#: src/components/routes/product-widget/CollectInformation/index.tsx:381
 msgid "View Order Details"
 msgstr "Bekijk bestelgegevens"
 
@@ -13265,7 +13315,7 @@ msgstr "Wachtend"
 msgid "Waiting for confirmation from Swish…"
 msgstr ""
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:367
+#: src/components/routes/product-widget/CollectInformation/index.tsx:368
 msgid "Waiting for payment"
 msgstr "Wachten op betaling"
 
@@ -13290,7 +13340,7 @@ msgstr "Wachtlijst"
 msgid "Waitlist Enabled"
 msgstr "Wachtlijst ingeschakeld"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:402
+#: src/components/routes/product-widget/CollectInformation/index.tsx:403
 msgid "Waitlist offer expired"
 msgstr "Wachtlijstaanbod verlopen"
 
@@ -13330,7 +13380,7 @@ msgstr "We konden de bestelling die u zoekt niet vinden. De link is mogelijk ver
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "We konden het ticket dat u zoekt niet vinden. De link is mogelijk verlopen of de ticketgegevens zijn gewijzigd."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:405
+#: src/components/routes/product-widget/CollectInformation/index.tsx:406
 msgid "We couldn't find this order. It may have been removed."
 msgstr "We konden deze bestelling niet vinden. Mogelijk is deze verwijderd."
 
@@ -13354,7 +13404,7 @@ msgstr "We konden de categorieën niet opnieuw ordenen. Probeer het opnieuw."
 msgid "We have not received a confirmation from Swish yet."
 msgstr ""
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:417
+#: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Er is een probleem opgetreden bij het laden van deze pagina. Probeer het opnieuw."
 
@@ -13408,9 +13458,13 @@ msgstr "We sturen u een e-mail als er een plek beschikbaar komt voor {productDis
 msgid "We'll open a message composer with a pre-filled template after saving. You review and send it — nothing is sent automatically."
 msgstr "Na het opslaan openen we een berichteneditor met een vooraf ingevuld sjabloon. Jij controleert en verstuurt — er wordt niets automatisch verzonden."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:464
+#: src/components/routes/product-widget/CollectInformation/index.tsx:465
 msgid "We'll send your tickets to this email"
 msgstr "We sturen je tickets naar dit e-mailadres"
+
+#: src/components/routes/product-widget/CollectInformation/index.tsx:512
+msgid "We'll text you a link to your tickets."
+msgstr ""
 
 #: src/components/routes/organizer/Payments/Vat/VatSettingsForm.tsx:71
 msgid "We'll validate your VAT number in the background. If there are any issues, we'll let you know."
@@ -13949,7 +14003,7 @@ msgstr "U meldt zich aan voor de wachtlijst voor {occurrenceDate}."
 msgid "You're on the waitlist!"
 msgstr "Je staat op de wachtlijst!"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:447
+#: src/components/routes/product-widget/CollectInformation/index.tsx:448
 msgid "You've been offered a spot!"
 msgstr "Je hebt een plek aangeboden gekregen!"
 
@@ -14001,7 +14055,7 @@ msgstr ""
 msgid "Your current order will be lost."
 msgstr "Uw huidige bestelling gaat verloren."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:461
+#: src/components/routes/product-widget/CollectInformation/index.tsx:462
 msgid "Your Details"
 msgstr "Uw gegevens"
 
@@ -14114,7 +14168,7 @@ msgstr "Uw ticket voor"
 msgid "Your ticket is still valid — no action is needed unless the new time doesn't work for you. Please reply to this email if you have any questions."
 msgstr "Je ticket blijft geldig — je hoeft niets te doen, tenzij het nieuwe tijdstip je niet uitkomt. Beantwoord deze e-mail als je vragen hebt."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:378
+#: src/components/routes/product-widget/CollectInformation/index.tsx:379
 msgid "Your tickets have been confirmed."
 msgstr "Je tickets zijn bevestigd."
 
@@ -14126,7 +14180,7 @@ msgstr "Uw BTW-nummer staat in de wachtrij voor validatie"
 msgid "Your VAT number will be validated when you save"
 msgstr "Uw BTW-nummer wordt gevalideerd wanneer u opslaat"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:404
+#: src/components/routes/product-widget/CollectInformation/index.tsx:405
 msgid "Your waitlist offer has expired and we were unable to complete your order. Please rejoin the waitlist to be notified when more spots become available."
 msgstr "Uw wachtlijstaanbod is verlopen en we konden uw bestelling niet voltooien. Meld u opnieuw aan voor de wachtlijst om op de hoogte te worden gebracht wanneer er meer plekken beschikbaar komen."
 
@@ -14134,7 +14188,7 @@ msgstr "Uw wachtlijstaanbod is verlopen en we konden uw bestelling niet voltooie
 msgid "YouTube"
 msgstr "YouTube"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:589
+#: src/components/routes/product-widget/CollectInformation/index.tsx:602
 msgid "ZIP / Postal Code"
 msgstr "Postcode"
 
@@ -14144,6 +14198,6 @@ msgstr "Postcode"
 msgid "Zip or Postal Code"
 msgstr "Postcode"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:590
+#: src/components/routes/product-widget/CollectInformation/index.tsx:603
 msgid "ZIP or Postal Code"
 msgstr "Postcode"

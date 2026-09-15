@@ -14,6 +14,7 @@ export interface OrderDetails {
     first_name: string,
     last_name: string,
     email: string,
+    phone?: string,
 }
 
 export interface AttendeeDetails extends OrderDetails {

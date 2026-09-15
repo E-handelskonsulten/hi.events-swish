@@ -101,6 +101,7 @@ export const CollectInformation = () => {
                 last_name: "",
                 email: "",
                 email_confirmation: "",
+                phone: "",
                 address: {},
                 questions: {},
                 opted_into_marketing: false,
@@ -502,6 +503,18 @@ export const CollectInformation = () => {
                             {...form.getInputProps("order.email_confirmation")}
                         />
                     </InputGroup>
+
+                    {event?.organizer?.sms_delivery_enabled && (
+                        <InputGroup>
+                            <TextInput
+                                type={"tel"}
+                                label={t`Mobile number (optional)`}
+                                description={t`We'll text you a link to your tickets.`}
+                                placeholder="070-123 45 67"
+                                {...form.getInputProps("order.phone")}
+                            />
+                        </InputGroup>
+                    )}
 
                     {orderRequiresAttendeeDetails && !isPerOrderCollection && totalTicketAttendees > 0 && !lock && (
                         <div className={classes.copyDetailsSection}>
