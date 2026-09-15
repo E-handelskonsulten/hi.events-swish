@@ -72,6 +72,7 @@ class SelfServiceEditOrderServiceTest extends TestCase
         $mockEventSettings = Mockery::mock(EventSettingDomainObject::class);
         $mockEventSettings->shouldReceive('getSupportEmail')->andReturn('support@example.com');
         $mockOrganizer = Mockery::mock(OrganizerDomainObject::class);
+        $mockOrganizer->shouldReceive('getName')->andReturn('Test Organizer');
         $mockEvent = Mockery::mock(EventDomainObject::class);
         $mockEvent->shouldReceive('getEventSettings')->andReturn($mockEventSettings);
         $mockEvent->shouldReceive('getOrganizer')->andReturn($mockOrganizer);
@@ -151,6 +152,7 @@ class SelfServiceEditOrderServiceTest extends TestCase
 
         $mockEventSettings = Mockery::mock(EventSettingDomainObject::class);
         $mockOrganizer = Mockery::mock(OrganizerDomainObject::class);
+        $mockOrganizer->shouldReceive('getName')->andReturn('Test Organizer');
         $mockEvent = Mockery::mock(EventDomainObject::class);
         $mockEvent->shouldReceive('getEventSettings')->andReturn($mockEventSettings);
         $mockEvent->shouldReceive('getOrganizer')->andReturn($mockOrganizer);
@@ -265,6 +267,7 @@ class SelfServiceEditOrderServiceTest extends TestCase
 
         $mockEventSettings = Mockery::mock(EventSettingDomainObject::class);
         $mockOrganizer = Mockery::mock(OrganizerDomainObject::class);
+        $mockOrganizer->shouldReceive('getName')->andReturn('Test Organizer');
         $mockEvent = Mockery::mock(EventDomainObject::class);
         $mockEvent->shouldReceive('getEventSettings')->andReturn($mockEventSettings);
         $mockEvent->shouldReceive('getOrganizer')->andReturn($mockOrganizer);
@@ -351,6 +354,7 @@ class SelfServiceEditOrderServiceTest extends TestCase
 
         $mockEventSettings = Mockery::mock(EventSettingDomainObject::class);
         $mockOrganizer = Mockery::mock(OrganizerDomainObject::class);
+        $mockOrganizer->shouldReceive('getName')->andReturn('Test Organizer');
         $mockEvent = Mockery::mock(EventDomainObject::class);
         $mockEvent->shouldReceive('getEventSettings')->andReturn($mockEventSettings);
         $mockEvent->shouldReceive('getOrganizer')->andReturn($mockOrganizer);
@@ -409,6 +413,7 @@ class SelfServiceEditOrderServiceTest extends TestCase
         $mockEventSettings = Mockery::mock(EventSettingDomainObject::class);
         $mockEventSettings->shouldReceive('getSupportEmail')->andReturn('support@example.com');
         $mockOrganizer = Mockery::mock(OrganizerDomainObject::class);
+        $mockOrganizer->shouldReceive('getName')->andReturn('Test Organizer');
         $mockEvent = Mockery::mock(EventDomainObject::class);
         $mockEvent->shouldReceive('getEventSettings')->andReturn($mockEventSettings);
         $mockEvent->shouldReceive('getOrganizer')->andReturn($mockOrganizer);
