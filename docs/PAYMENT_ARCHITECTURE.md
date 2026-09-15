@@ -362,7 +362,7 @@ E2E coverage: extend `e2e/tests/widget/` with a spec that loads the widget on a 
 
 ### 8.2 Callback testing with ngrok (test environment)
 
-Public base URL reserved for this project: `https://iodine-safeness-strainer.ngrok-free.dev`.
+Public base URL reserved for this project: `https://<your-reserved-domain>.ngrok-free.dev`.
 
 Dev-stack topology (`docker/development/docker-compose.dev.yml`, `docker/development/nginx/nginx.conf`):
 
@@ -375,10 +375,10 @@ Dev-stack topology (`docker/development/docker-compose.dev.yml`, `docker/develop
 Rules:
 
 - **Tunnel target: `nginx` on host port `8080`** (plain HTTP; ngrok terminates TLS). One tunnel then serves both the Swish callbacks (`/api/public/webhooks/swish/*`) and, when needed, the frontend for real-device deeplink tests. Do not tunnel `1234` — the callback URL would lose its `/api` prefix and the frontend would be unreachable.
-- Command: `ngrok http 8080 --domain=iodine-safeness-strainer.ngrok-free.dev`
+- Command: `ngrok http 8080 --domain=<your-reserved-domain>.ngrok-free.dev`
 - Callback URLs Swish will receive:
-  `https://iodine-safeness-strainer.ngrok-free.dev/api/public/webhooks/swish/payments` and `…/api/public/webhooks/swish/refunds`.
-- Configuration: a dedicated `SWISH_CALLBACK_BASE_URL` (default = `config('app.url')`) in `backend/config/swish.php`, so only that one variable points at ngrok while `APP_URL`/`APP_FRONTEND_URL` stay on localhost. Set `SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api` in `backend/.env` (or `docker/development/.env`), then restart the queue worker so the job process picks up the new config.
+  `https://<your-reserved-domain>.ngrok-free.dev/api/public/webhooks/swish/payments` and `…/api/public/webhooks/swish/refunds`.
+- Configuration: a dedicated `SWISH_CALLBACK_BASE_URL` (default = `config('app.url')`) in `backend/config/swish.php`, so only that one variable points at ngrok while `APP_URL`/`APP_FRONTEND_URL` stay on localhost. Set `SWISH_CALLBACK_BASE_URL=https://<your-reserved-domain>.ngrok-free.dev/api` in `backend/.env` (or `docker/development/.env`), then restart the queue worker so the job process picks up the new config.
 - **When to start the tunnel:** it is *not* needed for the automated test suites (Swish HTTP is mocked). Start it right before the first manual `POST …/swish/payment` in the Phase A verification — MSS fires the callback a few seconds after creation, so the tunnel must already be up. Order of operations: `start-dev.sh` (stack + queue worker + scheduler) → migrations → start ngrok → create order → create Swish payment → watch `docker compose … logs -f backend` / `queue:work` output.
 - **Real-device m-commerce test (Phase B):** the phone must reach the frontend through the same tunnel, so additionally set `APP_FRONTEND_URL`, `VITE_FRONTEND_URL` and `VITE_API_URL_CLIENT` to the ngrok domain and restart the `frontend` container. Expect ngrok's free-tier browser interstitial once per device; API callbacks from Swish are not affected by it.
 - MSS callback source: Swish's test environment calls back over HTTPS from Swish-owned IPs; our endpoint does not rely on the callback's authenticity (it re-fetches status over mTLS before acting), so no IP allow-listing is needed for the tunnel.

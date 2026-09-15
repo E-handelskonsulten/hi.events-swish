@@ -17,7 +17,7 @@ fallback (poller) and cancel-on-expiry. Everything runs against the local dev st
    - `Swish_TLS_RootCA.pem` — DigiCert Global Root G2, the CA that issues the Swish server's TLS certificate
    Ignore `Swish_Merchant_TestSigningCertificate_*` (payout payload signing only) and
    `Swish_TechnicalSupplier_TestCertificate_*` (technical-supplier API user, alias 9870474641).
-2. Install ngrok and add the reserved domain `iodine-safeness-strainer.ngrok-free.dev` to your account.
+2. Install ngrok and add the reserved domain `<your-reserved-domain>.ngrok-free.dev` to your account.
 3. The three files are copied to `backend/storage/app/swish-certs/` (everything under
    `backend/storage/app/` is git-ignored, so nothing can be committed by accident). The dev compose
    mounts `backend/` at `/var/www/html`, so inside the container they are at
@@ -61,7 +61,7 @@ SWISH_CERT_PATH=/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertifi
 SWISH_KEY_PATH=/var/www/html/storage/app/swish-certs/Swish_Merchant_TestCertificate_1234679304.key
 SWISH_KEY_PASSPHRASE=
 SWISH_CA_PATH=/var/www/html/storage/app/swish-certs/Swish_TLS_RootCA.pem
-SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api
+SWISH_CALLBACK_BASE_URL=https://<your-reserved-domain>.ngrok-free.dev/api
 ```
 
 Quick mTLS sanity check from inside the container (expects HTTP 404 — unknown id — which proves the
@@ -91,13 +91,13 @@ MSS fires the callback a few seconds after the payment request is created, so th
 Target is the dev nginx on host port 8080 (it serves `/api/` → backend and `/` → frontend):
 
 ```bash
-ngrok http 8080 --domain=iodine-safeness-strainer.ngrok-free.dev
+ngrok http 8080 --domain=<your-reserved-domain>.ngrok-free.dev
 ```
 
 Sanity check from any machine:
 
 ```bash
-curl -s -o /dev/null -w "%{http_code}\n" -X POST https://iodine-safeness-strainer.ngrok-free.dev/api/public/webhooks/swish/payments \
+curl -s -o /dev/null -w "%{http_code}\n" -X POST https://<your-reserved-domain>.ngrok-free.dev/api/public/webhooks/swish/payments \
   -H "Content-Type: application/json" -d '{"status":"PAID"}'
 # expect 400 (payload without id is rejected) — proves the route is reachable through the tunnel
 ```
@@ -172,7 +172,7 @@ curl -sk -X POST "$API/public/events/$EVENT/order/$SHORT/swish/payment?session_i
 ## 6. Lost callback → poller reconciles
 
 1. Make the callback undeliverable. Either stop ngrok, or (without touching the tunnel) point the callback at a
-   dead path on our own API: `SWISH_CALLBACK_BASE_URL=https://iodine-safeness-strainer.ngrok-free.dev/api/blackhole`
+   dead path on our own API: `SWISH_CALLBACK_BASE_URL=https://<your-reserved-domain>.ngrok-free.dev/api/blackhole`
    + `php artisan config:clear`. MSS then gets a 404 from nginx, which you can see in `docker compose logs nginx`.
 2. Create a new order (§3) and a payment (§4).
 3. Do **not** call the Swish status endpoint (it would reconcile on its own). Poll the plain order endpoint
