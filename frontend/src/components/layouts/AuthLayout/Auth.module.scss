@@ -61,7 +61,13 @@
 }
 
 .logo {
-  align-self: flex-start;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+
+  @include mixins.respond-below(sm) {
+    max-width: 100%;
+  }
 
   img {
     height: 40px;

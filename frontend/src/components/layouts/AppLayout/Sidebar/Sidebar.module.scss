@@ -18,16 +18,16 @@
   .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     z-index: 1;
-    padding: 16px 18px 12px;
+    padding: 16px 20px 12px;
     margin-bottom: 4px;
     flex-shrink: 0;
 
     a {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     img {
