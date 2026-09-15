@@ -20,6 +20,7 @@ class OrganizerBillingSettingsResource extends BaseResource
             'organizer_id' => $this->getOrganizerId(),
             'sms_enabled' => (bool) $this->getSmsEnabled(),
             'sms_sender_name' => $this->getSmsSenderName(),
+            'sms_lead_hours' => (int) $this->getSmsLeadHours(),
             'sms_fee_per_message' => (float) $this->getSmsFeePerMessage(),
             'updated_at' => $this->getUpdatedAt(),
         ];

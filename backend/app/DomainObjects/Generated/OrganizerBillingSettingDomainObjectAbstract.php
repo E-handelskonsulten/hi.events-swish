@@ -19,6 +19,7 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
     final public const DELETED_AT = 'deleted_at';
+    final public const SMS_LEAD_HOURS = 'sms_lead_hours';
 
     protected int $id;
     protected int $organizer_id;
@@ -29,6 +30,7 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
     protected ?string $deleted_at = null;
+    protected int $sms_lead_hours = 3;
 
     public function toArray(): array
     {
@@ -42,6 +44,7 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
                     'deleted_at' => $this->deleted_at ?? null,
+                    'sms_lead_hours' => $this->sms_lead_hours ?? null,
                 ];
     }
 
@@ -142,5 +145,16 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
     public function getDeletedAt(): ?string
     {
         return $this->deleted_at;
+    }
+
+    public function setSmsLeadHours(int $sms_lead_hours): self
+    {
+        $this->sms_lead_hours = $sms_lead_hours;
+        return $this;
+    }
+
+    public function getSmsLeadHours(): int
+    {
+        return $this->sms_lead_hours;
     }
 }

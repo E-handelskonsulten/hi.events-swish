@@ -9,6 +9,7 @@ use HiEvents\DomainObjects\SmsMessageDomainObject;
 use HiEvents\DomainObjects\Status\SmsMessageStatus;
 use HiEvents\Models\SmsMessage;
 use HiEvents\Repository\Interfaces\SmsMessagesRepositoryInterface;
+use Illuminate\Support\Collection;
 
 /**
  * @extends BaseRepository<SmsMessageDomainObject>
@@ -37,5 +38,15 @@ class SmsMessagesRepository extends BaseRepository implements SmsMessagesReposit
             ->pluck('sent_count', 'organizer_id')
             ->map(static fn ($count) => (int) $count)
             ->all());
+    }
+
+    public function findDueScheduled(CarbonInterface $now): Collection
+    {
+        return $this->runQuery(fn () => $this->handleResults($this->model
+            ->where('status', SmsMessageStatus::SCHEDULED->value)
+            ->where('scheduled_for', '<=', $now)
+            ->orderBy('scheduled_for')
+            ->limit(200)
+            ->get()));
     }
 }

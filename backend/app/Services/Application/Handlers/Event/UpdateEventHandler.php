@@ -15,6 +15,7 @@ use HiEvents\Exceptions\CannotChangeCurrencyException;
 use HiEvents\Helper\DateHelper;
 use HiEvents\Helper\StringHelper;
 use HiEvents\Jobs\Event\Webhook\DispatchEventWebhookJob;
+use HiEvents\Jobs\Sms\RescheduleTicketSmsJob;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
@@ -99,6 +100,8 @@ readonly class UpdateEventHandler
         }
 
         $this->updateSingleOccurrenceDates($eventData, $existingEvent);
+
+        dispatch(RescheduleTicketSmsJob::forEvent($eventData->id));
     }
 
     private function updateSingleOccurrenceDates(UpdateEventDTO $eventData, EventDomainObject $existingEvent): void

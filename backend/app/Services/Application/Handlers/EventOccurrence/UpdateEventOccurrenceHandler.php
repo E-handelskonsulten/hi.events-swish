@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use HiEvents\DomainObjects\EventOccurrenceDomainObject;
 use HiEvents\DomainObjects\Generated\EventOccurrenceDomainObjectAbstract;
 use HiEvents\Exceptions\ResourceNotFoundException;
+use HiEvents\Jobs\Sms\RescheduleTicketSmsJob;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Services\Application\Handlers\EventOccurrence\DTO\UpsertEventOccurrenceDTO;
@@ -33,7 +34,7 @@ class UpdateEventOccurrenceHandler
      */
     public function handle(int $occurrenceId, UpsertEventOccurrenceDTO $dto): EventOccurrenceDomainObject
     {
-        return $this->databaseManager->transaction(function () use ($occurrenceId, $dto) {
+        $updated = $this->databaseManager->transaction(function () use ($occurrenceId, $dto) {
             $occurrence = $this->occurrenceRepository->findFirstWhere([
                 EventOccurrenceDomainObjectAbstract::ID => $occurrenceId,
                 EventOccurrenceDomainObjectAbstract::EVENT_ID => $dto->event_id,
@@ -113,6 +114,10 @@ class UpdateEventOccurrenceHandler
 
             return $updated;
         });
+
+        dispatch(RescheduleTicketSmsJob::forEvent($dto->event_id));
+
+        return $updated;
     }
 
     private function datesDiffer(?string $a, ?string $b): bool

@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Domain\Sms;
 
+use HiEvents\DomainObjects\AttendeeDomainObject;
 use HiEvents\DomainObjects\Enums\SmsMessageType;
 use HiEvents\DomainObjects\EventDomainObject;
+use HiEvents\DomainObjects\Generated\AttendeeDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\OrganizerBillingSettingDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\SmsMessageDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
@@ -14,6 +16,7 @@ use HiEvents\DomainObjects\SmsMessageDomainObject;
 use HiEvents\DomainObjects\Status\SmsMessageStatus;
 use HiEvents\DomainObjects\Status\SwishPaymentStatus;
 use HiEvents\Exceptions\Sms\SmsDeliveryException;
+use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerBillingSettingsRepositoryInterface;
@@ -28,11 +31,14 @@ class OrderSmsService
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
         private readonly EventRepositoryInterface $eventRepository,
+        private readonly AttendeeRepositoryInterface $attendeeRepository,
         private readonly OrganizerBillingSettingsRepositoryInterface $organizerBillingSettingsRepository,
         private readonly SwishPaymentsRepositoryInterface $swishPaymentsRepository,
         private readonly SmsMessagesRepositoryInterface $smsMessagesRepository,
         private readonly ElksSmsClient $smsClient,
         private readonly SmsMessageBuilder $messageBuilder,
+        private readonly TicketSmsSendTimeResolver $sendTimeResolver,
+        private readonly TicketSmsScheduleService $scheduleService,
         private readonly Repository $config,
         private readonly LoggerInterface $logger,
     ) {}
@@ -48,13 +54,18 @@ class OrderSmsService
 
         $order = $this->orderRepository->findById($orderId);
         $event = $this->eventRepository->findById($order->getEventId());
+
+        if ($type === SmsMessageType::REFUND_NOTICE) {
+            if (! $order->isFullyRefunded()) {
+                return;
+            }
+
+            $this->scheduleService->cancelForOrder($orderId);
+        }
+
         $settings = $this->findSettings($event);
 
         if ($settings === null || ! $settings->getSmsEnabled()) {
-            return;
-        }
-
-        if ($type === SmsMessageType::REFUND_NOTICE && ! $order->isFullyRefunded()) {
             return;
         }
 
@@ -63,7 +74,7 @@ class OrderSmsService
             SmsMessageDomainObjectAbstract::TYPE => $type->name,
         ]);
 
-        if ($existing?->getStatus() === SmsMessageStatus::SENT->name) {
+        if (in_array($existing?->getStatus(), [SmsMessageStatus::SENT->name, SmsMessageStatus::CANCELLED->name], true)) {
             return;
         }
 
@@ -79,7 +90,29 @@ class OrderSmsService
         }
 
         $sender = $settings->getSmsSenderName() ?: $this->config->get('sms.default_sender');
-        $message = $this->messageBuilder->build($type, $order, $event);
+
+        if ($type === SmsMessageType::TICKET) {
+            $sendAt = $this->sendTimeResolver->resolve($orderId, $event->getId(), (int) $settings->getSmsLeadHours());
+
+            if ($sendAt !== null && $sendAt->isFuture()) {
+                $this->record($existing, $event, $order, $type, [
+                    SmsMessageDomainObjectAbstract::STATUS => SmsMessageStatus::SCHEDULED->name,
+                    SmsMessageDomainObjectAbstract::RECIPIENT => $recipient,
+                    SmsMessageDomainObjectAbstract::SENDER => $sender,
+                    SmsMessageDomainObjectAbstract::SCHEDULED_FOR => $sendAt->toDateTimeString(),
+                ]);
+
+                $this->logger->info('Ticket SMS scheduled', [
+                    'order_id' => $orderId,
+                    'scheduled_for' => $sendAt->toIso8601String(),
+                    'lead_hours' => $settings->getSmsLeadHours(),
+                ]);
+
+                return;
+            }
+        }
+
+        $message = $this->messageBuilder->build($type, $order, $event, $this->firstAttendee($order));
 
         try {
             $sent = $this->smsClient->send($recipient, $sender, $message);
@@ -118,6 +151,14 @@ class OrderSmsService
         return $this->organizerBillingSettingsRepository->findFirstWhere([
             OrganizerBillingSettingDomainObjectAbstract::ORGANIZER_ID => $event->getOrganizerId(),
         ]);
+    }
+
+    private function firstAttendee(OrderDomainObject $order): ?AttendeeDomainObject
+    {
+        return $this->attendeeRepository
+            ->findWhere([AttendeeDomainObjectAbstract::ORDER_ID => $order->getId()])
+            ->sortBy(fn (AttendeeDomainObject $attendee) => $attendee->getId())
+            ->first();
     }
 
     private function resolveRecipient(OrderDomainObject $order): ?string

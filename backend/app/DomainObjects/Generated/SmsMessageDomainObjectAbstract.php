@@ -24,6 +24,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const SENT_AT = 'sent_at';
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
+    final public const SCHEDULED_FOR = 'scheduled_for';
 
     protected int $id;
     protected int $organizer_id;
@@ -39,6 +40,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected ?string $sent_at = null;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
+    protected ?string $scheduled_for = null;
 
     public function toArray(): array
     {
@@ -57,6 +59,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'sent_at' => $this->sent_at ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
+                    'scheduled_for' => $this->scheduled_for ?? null,
                 ];
     }
 
@@ -212,5 +215,16 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getUpdatedAt(): ?string
     {
         return $this->updated_at;
+    }
+
+    public function setScheduledFor(?string $scheduled_for): self
+    {
+        $this->scheduled_for = $scheduled_for;
+        return $this;
+    }
+
+    public function getScheduledFor(): ?string
+    {
+        return $this->scheduled_for;
     }
 }

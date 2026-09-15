@@ -17,6 +17,7 @@ use HiEvents\DomainObjects\Status\WaitlistEntryStatus;
 use HiEvents\Exceptions\InvalidOccurrenceDatesException;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Jobs\Occurrence\BulkCancelOccurrencesJob;
+use HiEvents\Jobs\Sms\RescheduleTicketSmsJob;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
@@ -51,7 +52,7 @@ class BulkUpdateOccurrencesHandler
      */
     public function handle(BulkUpdateOccurrencesDTO $dto): BulkUpdateOccurrencesResultDTO
     {
-        return $this->databaseManager->transaction(function () use ($dto) {
+        $result = $this->databaseManager->transaction(function () use ($dto) {
             $event = $this->eventRepository->findById($dto->event_id);
             if ($event === null) {
                 throw new ResourceNotFoundException(__('Event :id not found', ['id' => $dto->event_id]));
@@ -71,6 +72,12 @@ class BulkUpdateOccurrencesHandler
                 BulkOccurrenceAction::UPDATE => $this->handleUpdate($dto, $eligible, $event->getAccountId()),
             };
         });
+
+        if ($dto->action === BulkOccurrenceAction::UPDATE) {
+            dispatch(RescheduleTicketSmsJob::forEvent($dto->event_id));
+        }
+
+        return $result;
     }
 
     private function filterEligible(Collection $occurrences, BulkUpdateOccurrencesDTO $dto): Collection

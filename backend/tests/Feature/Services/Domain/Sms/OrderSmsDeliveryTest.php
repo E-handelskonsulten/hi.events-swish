@@ -57,12 +57,12 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         $orderId = $this->completeOrderThroughSwishCallback();
 
         Http::assertSent(function (Request $request) use ($orderId) {
-            $shortId = DB::table('orders')->where('id', $orderId)->value('short_id');
+            $attendeeShortId = DB::table('attendees')->where('order_id', $orderId)->value('short_id');
 
             return $request->url() === self::ELKS_URL
                 && $request['to'] === '+46701234567'
                 && $request['from'] === 'Biljettera'
-                && $request['message'] === "Hi Test! Your ticket for Swish Test Event: https://demo.test/checkout/{$this->eventId}/{$shortId}/summary"
+                && $request['message'] === "Hi Test! Your ticket for Swish Test Event: https://demo.test/product/{$this->eventId}/{$attendeeShortId}"
                 && ! isset($request['dryrun']);
         });
 
@@ -214,6 +214,7 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
             'organizer_id' => $this->organizerId,
             'sms_enabled' => $enabled,
             'sms_sender_name' => $sender,
+            'sms_lead_hours' => 3,
             'platform_fee_per_ticket' => 6.00,
             'sms_fee_per_message' => 0.50,
             'created_at' => now(),

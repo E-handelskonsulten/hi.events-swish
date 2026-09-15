@@ -34,6 +34,7 @@ class UpsertOrganizerBillingSettingsAction extends BaseAction
                 accountId: $this->getAuthenticatedAccountId(),
                 smsEnabled: $request->boolean('sms_enabled'),
                 smsSenderName: $request->validated('sms_sender_name'),
+                smsLeadHours: (int) $request->validated('sms_lead_hours'),
             ));
         } catch (ResourceNotFoundException $exception) {
             return $this->errorResponse($exception->getMessage(), Response::HTTP_NOT_FOUND);

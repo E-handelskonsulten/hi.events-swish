@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Services\Domain\Sms;
 
+use HiEvents\DomainObjects\AttendeeDomainObject;
 use HiEvents\DomainObjects\Enums\SmsMessageType;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\OrderDomainObject;
@@ -20,11 +21,20 @@ class SmsMessageBuilderTest extends TestCase
         Config::set('app.frontend_url', 'https://demo.test');
     }
 
-    public function test_swedish_ticket_message_links_to_the_order_page(): void
+    public function test_swedish_ticket_message_links_to_the_attendee_ticket_page(): void
     {
-        $message = (new SmsMessageBuilder)->build(SmsMessageType::TICKET, $this->order('Lucas', 'se'), $this->event());
+        $attendee = (new AttendeeDomainObject)->setId(9)->setShortId('a_first');
 
-        $this->assertSame('Hej Lucas! Din biljett till Lördagsklubben: https://demo.test/checkout/7/O-ABC123/summary', $message);
+        $message = (new SmsMessageBuilder)->build(SmsMessageType::TICKET, $this->order('Lucas', 'se'), $this->event(), $attendee);
+
+        $this->assertSame('Hej Lucas! Din biljett till Lördagsklubben: https://demo.test/product/7/a_first', $message);
+    }
+
+    public function test_ticket_message_falls_back_to_the_order_page_without_an_attendee(): void
+    {
+        $message = (new SmsMessageBuilder)->build(SmsMessageType::TICKET, $this->order('Lucas', 'en'), $this->event());
+
+        $this->assertSame('Hi Lucas! Your ticket for Lördagsklubben: https://demo.test/checkout/7/O-ABC123/summary', $message);
     }
 
     public function test_english_refund_notice(): void

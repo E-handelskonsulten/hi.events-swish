@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Http\Actions\Organizers\Billing;
 
+use HiEvents\Jobs\Sms\RescheduleTicketSmsJob;
 use HiEvents\Models\Account;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -31,10 +33,12 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
         $response = $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
             'sms_enabled' => true,
             'sms_sender_name' => 'Klubben',
+            'sms_lead_hours' => 5,
         ], $this->authHeaders());
 
         $response->assertOk();
         $this->assertTrue($response->json('data.sms_enabled'));
+        $this->assertSame(5, $response->json('data.sms_lead_hours'));
         $this->assertSame('Klubben', $response->json('data.sms_sender_name'));
         $this->assertSame(0.5, $response->json('data.sms_fee_per_message'));
         $this->assertArrayNotHasKey('platform_fee_per_ticket', $response->json('data'));
@@ -48,6 +52,7 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
         $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
             'sms_enabled' => true,
             'sms_sender_name' => 'Klubben',
+            'sms_lead_hours' => 3,
         ], $this->authHeaders())->assertOk();
 
         DB::table('organizer_billing_settings')->where('organizer_id', $this->organizerId)->update(['platform_fee_per_ticket' => 4.50]);
@@ -55,6 +60,7 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
         $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
             'sms_enabled' => false,
             'sms_sender_name' => '',
+            'sms_lead_hours' => 3,
         ], $this->authHeaders())->assertOk();
 
         $rows = DB::table('organizer_billing_settings')->where('organizer_id', $this->organizerId)->get();
@@ -70,6 +76,7 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
         $response = $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
             'sms_enabled' => true,
             'sms_sender_name' => $sender,
+            'sms_lead_hours' => 3,
         ], $this->authHeaders());
 
         $response->assertUnprocessable();
@@ -85,6 +92,42 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
             'contains space' => ['Min Klubb'],
             'contains swedish letter' => ['Lördag'],
         ];
+    }
+
+    #[DataProvider('invalidLeadHours')]
+    public function test_lead_hours_must_be_between_1_and_24(mixed $hours): void
+    {
+        $response = $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
+            'sms_enabled' => true,
+            'sms_sender_name' => null,
+            'sms_lead_hours' => $hours,
+        ], $this->authHeaders());
+
+        $response->assertUnprocessable();
+        $response->assertJsonValidationErrors(['sms_lead_hours']);
+    }
+
+    public static function invalidLeadHours(): array
+    {
+        return [
+            'zero' => [0],
+            'too many' => [25],
+            'fraction' => [2.5],
+            'missing' => [null],
+        ];
+    }
+
+    public function test_changing_the_lead_time_reschedules_pending_ticket_sms(): void
+    {
+        Bus::fake([RescheduleTicketSmsJob::class]);
+        $payload = ['sms_enabled' => true, 'sms_sender_name' => null, 'sms_lead_hours' => 3];
+
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", $payload, $this->authHeaders())->assertOk();
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", $payload, $this->authHeaders())->assertOk();
+        Bus::assertNotDispatched(RescheduleTicketSmsJob::class);
+
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", ['sms_lead_hours' => 8] + $payload, $this->authHeaders())->assertOk();
+        Bus::assertDispatched(RescheduleTicketSmsJob::class, fn (RescheduleTicketSmsJob $job) => $job->where === ['organizer_id' => $this->organizerId]);
     }
 
     public function test_other_accounts_are_forbidden_from_reading_the_settings(): void

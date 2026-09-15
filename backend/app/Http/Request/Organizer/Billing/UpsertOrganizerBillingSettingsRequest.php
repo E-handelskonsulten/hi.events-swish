@@ -14,6 +14,7 @@ class UpsertOrganizerBillingSettingsRequest extends BaseRequest
         return [
             'sms_enabled' => ['required', 'boolean'],
             'sms_sender_name' => ['nullable', 'string', 'regex:'.SmsSenderName::PATTERN],
+            'sms_lead_hours' => ['required', 'integer', 'min:1', 'max:24'],
         ];
     }
 

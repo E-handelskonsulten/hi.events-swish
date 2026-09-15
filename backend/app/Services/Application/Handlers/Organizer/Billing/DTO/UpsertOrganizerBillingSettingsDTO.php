@@ -13,5 +13,6 @@ class UpsertOrganizerBillingSettingsDTO extends BaseDataObject
         public readonly int $accountId,
         public readonly bool $smsEnabled,
         public readonly ?string $smsSenderName,
+        public readonly int $smsLeadHours,
     ) {}
 }
