@@ -24,6 +24,7 @@ use HiEvents\Repository\Interfaces\SmsMessagesRepositoryInterface;
 use HiEvents\Repository\Interfaces\SwishPaymentsRepositoryInterface;
 use HiEvents\Services\Infrastructure\Sms\ElksSmsClient;
 use Illuminate\Config\Repository;
+use Illuminate\Support\Collection;
 use Psr\Log\LoggerInterface;
 
 class OrderSmsService
@@ -112,7 +113,7 @@ class OrderSmsService
             }
         }
 
-        $message = $this->messageBuilder->build($type, $order, $event, $this->firstAttendee($order));
+        $message = $this->messageBuilder->build($type, $order, $event, $this->attendees($order));
 
         try {
             $sent = $this->smsClient->send($recipient, $sender, $message);
@@ -153,12 +154,15 @@ class OrderSmsService
         ]);
     }
 
-    private function firstAttendee(OrderDomainObject $order): ?AttendeeDomainObject
+    /**
+     * @return Collection<int, AttendeeDomainObject>
+     */
+    private function attendees(OrderDomainObject $order): Collection
     {
         return $this->attendeeRepository
             ->findWhere([AttendeeDomainObjectAbstract::ORDER_ID => $order->getId()])
             ->sortBy(fn (AttendeeDomainObject $attendee) => $attendee->getId())
-            ->first();
+            ->values();
     }
 
     private function resolveRecipient(OrderDomainObject $order): ?string

@@ -175,6 +175,7 @@ use HiEvents\Http\Actions\Orders\Public\CompleteOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CreateOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\DownloadOrderInvoicePublicAction;
 use HiEvents\Http\Actions\Orders\Public\GetOrderActionPublic;
+use HiEvents\Http\Actions\Orders\Public\GetOrderTicketsActionPublic;
 use HiEvents\Http\Actions\Orders\Public\TransitionOrderToOfflinePaymentPublicAction;
 use HiEvents\Http\Actions\Orders\ResendOrderConfirmationAction;
 use HiEvents\Http\Actions\Organizers\Billing\GetOrganizerBillingSettingsAction;
@@ -649,6 +650,7 @@ $router->prefix('/public')->group(
 
         // Attendees
         $router->get('/events/{event_id}/attendees/{attendee_short_id}', GetAttendeeActionPublic::class);
+        $router->get('/orders/{order_short_id}/tickets', GetOrderTicketsActionPublic::class);
 
         // Waitlist
         $router->post('/events/{event_id}/waitlist', CreateWaitlistEntryActionPublic::class)

@@ -74,12 +74,21 @@ class OrderSummary extends BaseMail
                 'order' => $this->order,
                 'organizer' => $this->organizer,
                 'occurrence' => $this->occurrence ?? null,
-                'orderUrl' => sprintf(
-                    Url::getFrontEndUrlFromConfig(Url::ORDER_SUMMARY),
-                    $this->event->getId(),
-                    $this->order->getShortId(),
-                ),
+                'orderUrl' => $this->orderUrl(),
             ]
+        );
+    }
+
+    private function orderUrl(): string
+    {
+        if ($this->order->getAttendees()?->count() > 1) {
+            return sprintf(Url::getFrontEndUrlFromConfig(Url::ORDER_TICKETS), $this->order->getShortId());
+        }
+
+        return sprintf(
+            Url::getFrontEndUrlFromConfig(Url::ORDER_SUMMARY),
+            $this->event->getId(),
+            $this->order->getShortId(),
         );
     }
 

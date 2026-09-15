@@ -78,6 +78,34 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         $this->assertNotNull($row->sent_at);
     }
 
+    public function test_an_order_with_several_attendees_links_to_the_order_tickets_page(): void
+    {
+        $this->enableSms();
+        $orderId = $this->createReservedOrder();
+        $shortId = $this->orderRow($orderId)->short_id;
+        DB::table('attendees')->insert([
+            'short_id' => 'a_second_'.uniqid(),
+            'public_id' => 'A-'.strtoupper(uniqid()),
+            'email' => 'buyer@swish.test',
+            'first_name' => 'Erik',
+            'last_name' => 'Buyer',
+            'order_id' => $orderId,
+            'product_id' => $this->productId,
+            'product_price_id' => $this->productPriceId,
+            'event_id' => $this->eventId,
+            'status' => 'AWAITING_PAYMENT',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        [, $instructionUuid] = $this->createPendingSwishPayment($orderId);
+        $paid = $this->swishPaymentPayload($instructionUuid, $orderId, 'PAID');
+        $this->queueSwishJson($paid);
+
+        $this->postPaymentCallback($paid)->assertOk();
+
+        Http::assertSent(fn (Request $request) => $request['message'] === "Hi Test! Your tickets for Swish Test Event: https://demo.test/t/{$shortId}");
+    }
+
     public function test_custom_sender_name_is_used(): void
     {
         $this->enableSms(sender: 'Klubben');
