@@ -10,8 +10,9 @@ import CheckInSummaryReport from "../CheckInSummaryReport";
 import PlatformFeesReport from "../PlatformFeesReport";
 import AccountingReport from "../AccountingReport";
 import {t} from "@lingui/macro";
+import {useGetAccount} from "../../../../../queries/useGetAccount.ts";
 
-const renderReport = (reportType: string) => {
+const renderReport = (reportType: string, isSaasMode: boolean) => {
     switch (reportType) {
         case OrganizerReportTypes.RevenueSummary:
             return <RevenueSummaryReport/>;
@@ -22,7 +23,7 @@ const renderReport = (reportType: string) => {
         case OrganizerReportTypes.CheckInSummary:
             return <CheckInSummaryReport/>;
         case OrganizerReportTypes.PlatformFees:
-            return <PlatformFeesReport/>;
+            return isSaasMode ? <PlatformFeesReport/> : <div>{t`Report not found`}</div>;
         case OrganizerReportTypes.Accounting:
             return <AccountingReport/>;
         default:
@@ -32,6 +33,7 @@ const renderReport = (reportType: string) => {
 
 const OrganizerReportLayout = () => {
     const {organizerId, reportType} = useParams();
+    const {data: account} = useGetAccount();
 
     return (
         <PageBody>
@@ -45,7 +47,7 @@ const OrganizerReportLayout = () => {
                 {t`Back to Reports`}
             </Button>
             <div>
-                {renderReport(reportType as string)}
+                {renderReport(reportType as string, !!account?.is_saas_mode_enabled)}
             </div>
         </PageBody>
     );
