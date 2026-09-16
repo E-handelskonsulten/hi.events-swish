@@ -967,6 +967,10 @@ msgstr "Az esemény összes résztvevője"
 msgid "All attendees of this occurrence"
 msgstr "Ennek az időpontnak az összes résztvevője"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "Minden pénznem"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "Háttérszín"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "Háttér típusa"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "Kínai (hagyományos)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "Válasszon színt a háttérhez"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "Adatok gyűjtése jegyenként"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "Szín"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "Borító"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "Borítókép"
 
@@ -3097,7 +3101,7 @@ msgstr "Borítókép hozzáadva"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "A borítókép az eseményoldal tetején jelenik meg"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "A borítókép a szervezői oldal tetején jelenik meg"
 
@@ -3464,7 +3468,7 @@ msgstr "Testreszabhatja az e-mail sablonját Liquid sablonok használatával"
 msgid "Customize your event page"
 msgstr "Testreszabhatja eseményoldalát"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "Testreszabhatja szervezői oldalának megjelenését."
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "Hobbik"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "Honlaptervezés"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "Honlaptervező"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "Honlap előnézet"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "Kép URL-címe"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "Képek"
 
@@ -6688,7 +6692,7 @@ msgstr "Bejelentkezés..."
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logó"
@@ -6701,7 +6705,7 @@ msgstr "Logó és borítókép"
 msgid "Logo and cover image for your organizer"
 msgstr "Logó és borítókép a szervezőjéhez"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "A logó a fejlécben jelenik meg"
 
@@ -8285,7 +8289,7 @@ msgstr "Szervezői irányítópult"
 msgid "Organizer deleted successfully"
 msgstr "A szervező sikeresen törölve"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "Mentés"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "Változások mentése"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Esemény alapértelmezések sikeresen frissítve"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "Honlapterv sikeresen frissítve"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "Színház"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "Téma és színek"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "Írjon a kereséshez..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "Tipográfia"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Használjon <0>Liquid sablonokat</0> az e-mailek személyre szabásához"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Használja a borítókép elmosódott változatát háttérként."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "Borítókép használata"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Négyzet alakú logót javasolunk minimum 200x200px mérettel"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Javasolt méretek: 1950px x 650px, 3:1 arány, maximális fájlméret: 5MB."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Javasolt méretek: 400px x 400px, maximális fájlméret: 5MB."
 
@@ -13966,6 +13970,10 @@ msgstr "Adók és díjak vannak hozzáadva egy ingyenes termékhez. Szeretné el
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Nem mentett módosításai vannak. Biztosan elveti őket?"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"

@@ -192,6 +192,12 @@ export class ApiClient {
     );
   }
 
+  updateOrganizerStatus(organizerId: number, status: 'LIVE' | 'DRAFT'): Promise<Organizer> {
+    return unwrap<Organizer>(
+      this.request.put(`organizers/${organizerId}/status`, { headers: jsonHeaders, data: { status } }),
+    );
+  }
+
   createCheckInList(eventId: number, payload: CreateCheckInListPayload): Promise<CheckInList> {
     return unwrap<CheckInList>(
       this.request.post(`events/${eventId}/check-in-lists`, { headers: jsonHeaders, data: payload }),

@@ -967,6 +967,10 @@ msgstr "Todos los asistentes a este evento."
 msgid "All attendees of this occurrence"
 msgstr "Todos los asistentes de esta fecha"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "Todas las monedas"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "Color de fondo"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "Tipo de fondo"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "Chino (Tradicional)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "Elige un color para tu fondo"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "Recopilar datos por entrada"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "Color"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "Cubrir"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "Imagen de portada"
 
@@ -3097,7 +3101,7 @@ msgstr "Imagen de portada añadida"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "La imagen de portada se mostrará en la parte superior de la página del evento"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "La imagen de portada se mostrará en la parte superior de tu página de organizador"
 
@@ -3464,7 +3468,7 @@ msgstr "Personalice su plantilla de correo usando plantillas Liquid"
 msgid "Customize your event page"
 msgstr "Personaliza la página de tu evento"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "Personaliza la apariencia de tu página de organizador"
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "Aficiones"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "Diseño de página de inicio"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "Diseñador de página de inicio"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "Vista previa de la página de inicio"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "URL de imagen"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "Imágenes"
 
@@ -6688,7 +6692,7 @@ msgstr "Iniciando sesión"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -6701,7 +6705,7 @@ msgstr "Logo y portada"
 msgid "Logo and cover image for your organizer"
 msgstr "Logo e imagen de portada para tu organizador"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "El logo se mostrará en el encabezado"
 
@@ -8285,7 +8289,7 @@ msgstr "Panel del organizador"
 msgid "Organizer deleted successfully"
 msgstr "Organizador eliminado correctamente"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "Guardar"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Valores Predeterminados del Evento Actualizados con Éxito"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "Diseño de página de inicio actualizado con éxito"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "Teatro"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "Tema y colores"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "Escribe para buscar..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "Tipografía"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Use <0>plantillas Liquid</0> para personalizar sus correos electrónicos"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Utilice una versión borrosa de la imagen de portada como fondo"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "Usar imagen de portada"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Recomendamos un logo cuadrado con dimensiones mínimas de 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Recomendamos dimensiones de 2160 px por 1080 px y un tamaño de archivo máximo de 5 MB."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Recomendamos dimensiones de 400px por 400px y un tamaño máximo de archivo de 5MB"
 
@@ -13966,6 +13970,10 @@ msgstr "Has añadido impuestos y tarifas a un producto gratuito. ¿Te gustaría 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Tienes cambios sin guardar. ¿Seguro que quieres descartarlos?"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"

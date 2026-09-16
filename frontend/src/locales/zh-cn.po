@@ -967,6 +967,10 @@ msgstr "本次活动的所有与会者"
 msgid "All attendees of this occurrence"
 msgstr "本场次的全部参与者"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "所有货币"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "背景颜色"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "背景类型"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "中文（繁体）"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "选择背景颜色"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "按门票收集信息"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "颜色"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "封面"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "封面图像"
 
@@ -3097,7 +3101,7 @@ msgstr "封面图已添加"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "封面图片将显示在活动页面顶部"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "封面图像将显示在您的组织者页面顶部"
 
@@ -3464,7 +3468,7 @@ msgstr "使用Liquid模板自定义您的邮件模板"
 msgid "Customize your event page"
 msgstr "定制您的活动页面"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "自定义主办方页面外观"
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "兴趣爱好"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "主页设计"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "主页设计器"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "主页预览"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "图片网址"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "图片"
 
@@ -6688,7 +6692,7 @@ msgstr "登录"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "标志"
@@ -6701,7 +6705,7 @@ msgstr "标志和封面"
 msgid "Logo and cover image for your organizer"
 msgstr "您的组织者的标志和封面图像"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "标志将显示在页面头部"
 
@@ -8285,7 +8289,7 @@ msgstr "组织者仪表板"
 msgid "Organizer deleted successfully"
 msgstr "主办方已成功删除"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "节省"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "保存更改"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "成功更新活动默认设置"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "成功更新主页设计"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "戏剧"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "主题与颜色"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "输入以搜索..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "排版"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "使用 <0>Liquid 模板</0> 个性化您的邮件"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "使用封面图片的模糊版本作为背景"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "使用封面图片"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "我们建议使用最小尺寸为200x200像素的方形标志"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "我们建议尺寸为 2160px x 1080px，文件大小不超过 5MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "建议尺寸为 400x400 像素，文件大小不超过 5MB"
 
@@ -13966,6 +13970,10 @@ msgstr "您已向免费产品添加了税费。您想要删除它们吗？"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "你有未保存的更改，确定要放弃吗？"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"

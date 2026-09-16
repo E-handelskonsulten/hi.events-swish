@@ -967,6 +967,10 @@ msgstr "Όλοι οι συμμετέχοντες αυτής της εκδήλω�
 msgid "All attendees of this occurrence"
 msgstr "Όλοι οι συμμετέχοντες αυτής της ημερομηνίας"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "Όλα τα Νομίσματα"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "Χρώμα Φόντου"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "Τύπος Φόντου"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "Κινεζικά (Παραδοσιακά)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "Επιλέξτε χρώμα για το φόντο σας"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "Συλλογή στοιχείων ανά εισιτήριο"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "Χρώμα"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "Εξώφυλλο"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "Εικόνα Εξωφύλλου"
 
@@ -3097,7 +3101,7 @@ msgstr "Η εικόνα εξωφύλλου προστέθηκε"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Η εικόνα εξωφύλλου θα εμφανίζεται στην κορυφή της σελίδας εκδήλωσης"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Η εικόνα εξωφύλλου θα εμφανίζεται στην κορυφή της σελίδας διοργανωτή"
 
@@ -3464,7 +3468,7 @@ msgstr "Προσαρμόστε το πρότυπο email χρησιμοποιώ�
 msgid "Customize your event page"
 msgstr "Προσαρμόστε τη σελίδα εκδήλωσης"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "Προσαρμογή εμφάνισης σελίδας διοργανωτή"
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "Χόμπι"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "Σχεδιασμός Αρχικής Σελίδας"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "Σχεδιαστής Αρχικής Σελίδας"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "Προεπισκόπηση Αρχικής Σελίδας"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "URL Εικόνας"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "Εικόνες"
 
@@ -6688,7 +6692,7 @@ msgstr "Σύνδεση σε εξέλιξη"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Λογότυπο"
@@ -6701,7 +6705,7 @@ msgstr "Λογότυπο & Εξώφυλλο"
 msgid "Logo and cover image for your organizer"
 msgstr "Λογότυπο και εικόνα εξωφύλλου για τον διοργανωτή"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "Το λογότυπο θα εμφανίζεται στην κεφαλίδα"
 
@@ -8285,7 +8289,7 @@ msgstr "Πίνακας Διοργανωτή"
 msgid "Organizer deleted successfully"
 msgstr "Ο διοργανωτής διαγράφηκε επιτυχώς"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "Αποθήκευση"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "Αποθήκευση Αλλαγών"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Επιτυχής Ενημέρωση Προεπιλογών Εκδήλωσης"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "Επιτυχής Ενημέρωση Σχεδιασμού Αρχικής"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "Θέατρο"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "Θέμα & Χρώματα"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "Πληκτρολογήστε για αναζήτηση..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "Τυπογραφία"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Χρησιμοποιήστε <0>Liquid templating</0> για εξατομίκευση email"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Χρήση θολής εκδοχής εικόνας εξωφύλλου ως φόντο"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "Χρήση εικόνας εξωφύλλου"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Προτείνουμε τετράγωνο λογότυπο με ελάχιστες διαστάσεις 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Προτείνουμε διαστάσεις 1950px x 650px, αναλογία 3:1, μέγιστο μέγεθος 5MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Προτείνουμε διαστάσεις 400px x 400px, μέγιστο μέγεθος 5MB"
 
@@ -13966,6 +13970,10 @@ msgstr "Έχετε φόρους και τέλη σε Δωρεάν Προϊόν. 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Έχετε μη αποθηκευμένες αλλαγές. Σίγουρα θέλετε να τις απορρίψετε;"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"

@@ -69,6 +69,9 @@ const OrganizerHomepageDesigner = () => {
             form.setValues({
                 homepage_theme_settings: themeSettings,
             });
+            form.resetDirty({
+                homepage_theme_settings: themeSettings,
+            });
         }
     }, [organizerSettingsQuery.isFetched, organizerSettingsQuery.data]);
 
@@ -92,6 +95,7 @@ const OrganizerHomepageDesigner = () => {
             },
             {
                 onSuccess: () => {
+                    form.resetDirty({homepage_theme_settings: validatedTheme});
                     showSuccess(t`Successfully Updated Homepage Design`);
                 },
                 onError: (error) => {
@@ -295,15 +299,22 @@ const OrganizerHomepageDesigner = () => {
                         </Accordion.Item>
                     </Accordion>
 
-                    <Button
-                        loading={updateMutation.isPending}
-                        type={'submit'}
-                        fullWidth
-                        mt="md"
-                        onClick={() => form.onSubmit(handleSubmit)()}
-                    >
-                        {t`Save Changes`}
-                    </Button>
+                    <div className={classes.saveBar}>
+                        <Text size="sm" c={form.isDirty() ? 'orange.8' : 'dimmed'} data-testid="homepage-designer-save-status">
+                            {form.isDirty()
+                                ? t`You have unsaved changes. Publishing the page does not save them.`
+                                : t`All changes are saved.`}
+                        </Text>
+                        <Button
+                            loading={updateMutation.isPending}
+                            type={'submit'}
+                            fullWidth
+                            onClick={() => form.onSubmit(handleSubmit)()}
+                            data-testid="homepage-designer-save-button"
+                        >
+                            {t`Save Changes`}
+                        </Button>
+                    </div>
                 </div>
             </div>
 

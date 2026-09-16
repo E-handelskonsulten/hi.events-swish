@@ -967,6 +967,10 @@ msgstr "Bu etkinliğin tüm katılımcıları"
 msgid "All attendees of this occurrence"
 msgstr "Bu tarihin tüm katılımcıları"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "Tüm Para Birimleri"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "Arkaplan Rengi"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "Arkaplan Türü"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "Çince (Geleneksel)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "Arkaplanınız için bir renk seçin"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "Bilet başına bilgi toplayın"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "Renk"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "Kapak"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "Kapak Görseli"
 
@@ -3097,7 +3101,7 @@ msgstr "Kapak görseli eklendi"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Kapak görseli etkinlik sayfanızın üstünde gösterilecektir"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Kapak görseli organizatör sayfanızın üstünde gösterilecektir"
 
@@ -3464,7 +3468,7 @@ msgstr "Liquid şablonu kullanarak e-posta şablonunuzu özelleştirin"
 msgid "Customize your event page"
 msgstr "Etkinlik sayfanızı özelleştirin"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "Organizatör sayfanızın görünümünü özelleştirin"
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "Hobiler"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "Ana Sayfa Tasarımı"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "Ana Sayfa Tasarımcısı"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "Ana Sayfa Önizlemesi"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "Resim URL'si"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "Görseller"
 
@@ -6688,7 +6692,7 @@ msgstr "Giriş yapılıyor"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -6701,7 +6705,7 @@ msgstr "Logo ve Kapak"
 msgid "Logo and cover image for your organizer"
 msgstr "Organizatörünüz için logo ve kapak görseli"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "Logo başlıkta görüntülenecektir"
 
@@ -8285,7 +8289,7 @@ msgstr "Organizatör Paneli"
 msgid "Organizer deleted successfully"
 msgstr "Organizatör başarıyla silindi"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "Kaydet"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "Değişiklikleri Kaydet"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Etkinlik Varsayılanları Başarıyla Güncellendi"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "Ana Sayfa Tasarımı Başarıyla Güncellendi"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "Tiyatro"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "Tema ve Renkler"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "Aramak için yazın..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "Tipografi"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "E-postalarınızı kişiselleştirmek için <0>Liquid şablonunu</0> kullanın"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Kapak resminin bulanıklaştırılmış halini arkaplan olarak kullan"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "Kapak resmini kullan"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Minimum 200x200px boyutunda kare bir logo öneriyoruz"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "1950px x 650px boyutlarında, 3:1 oranında ve maksimum 5MB dosya boyutunda olmasını öneriyoruz"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "400px x 400px boyutlarını ve maksimum 5MB dosya boyutunu öneriyoruz"
 
@@ -13966,6 +13970,10 @@ msgstr "Ücretsiz Bir Ürüne eklenen vergiler ve ücretleriniz var. Bunları ka
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Kaydedilmemiş değişiklikleriniz var. Bunları atmak istediğinize emin misiniz?"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"

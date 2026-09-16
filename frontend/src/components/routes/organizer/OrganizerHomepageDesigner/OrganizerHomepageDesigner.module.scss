@@ -46,6 +46,19 @@
       top: 0;
     }
 
+    .saveBar {
+      position: sticky;
+      bottom: calc(var(--hi-spacing-lg) * -1);
+      margin: var(--hi-spacing-md) calc(var(--hi-spacing-lg) * -1) calc(var(--hi-spacing-lg) * -1);
+      padding: var(--hi-spacing-md) var(--hi-spacing-lg);
+      background: #ffffff;
+      border-top: 1px solid var(--mantine-color-gray-2);
+      display: flex;
+      flex-direction: column;
+      gap: var(--hi-spacing-xs);
+      z-index: 2;
+    }
+
     .header {
       margin-bottom: var(--hi-spacing-lg);
       padding-bottom: var(--hi-spacing-md);

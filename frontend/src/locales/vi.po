@@ -967,6 +967,10 @@ msgstr "Tất cả những người tham dự sự kiện này"
 msgid "All attendees of this occurrence"
 msgstr "Toàn bộ người tham dự của ngày này"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
+msgid "All changes are saved."
+msgstr ""
+
 #: src/components/common/OrganizerReportTable/index.tsx:291
 msgid "All Currencies"
 msgstr "Tất cả tiền tệ"
@@ -1795,7 +1799,7 @@ msgid "Background Color"
 msgstr "Màu nền"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
 msgid "Background Type"
 msgstr "Loại nền"
 
@@ -2428,7 +2432,7 @@ msgid "Chinese (Traditional)"
 msgstr "Tiếng Trung (Phồn thể)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
 msgid "Choose a color for your background"
 msgstr "Chọn một màu cho nền của bạn"
 
@@ -2600,7 +2604,7 @@ msgid "Collect details per ticket"
 msgstr "Thu thập thông tin theo vé"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Color"
 msgstr "Màu sắc"
 
@@ -3085,7 +3089,7 @@ msgid "Cover"
 msgstr "Bìa"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:196
 msgid "Cover Image"
 msgstr "Ảnh bìa"
 
@@ -3097,7 +3101,7 @@ msgstr "Đã thêm ảnh bìa"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Ảnh bìa sẽ được hiển thị ở đầu trang sự kiện của bạn"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:211
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Ảnh bìa sẽ hiển thị ở đầu trang của nhà tổ chức"
 
@@ -3464,7 +3468,7 @@ msgstr "Tùy chỉnh mẫu email của bạn bằng mẫu Liquid"
 msgid "Customize your event page"
 msgstr "Tùy chỉnh trang sự kiện của bạn"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:178
 msgid "Customize your organizer page appearance"
 msgstr "Tùy chỉnh giao diện trang tổ chức của bạn"
 
@@ -5919,7 +5923,7 @@ msgid "Hobbies"
 msgstr "Sở thích"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:177
 msgid "Homepage Design"
 msgstr "Thiết kế trang sự kiện"
 
@@ -5929,7 +5933,7 @@ msgid "Homepage Designer"
 msgstr "Thiết kế trang chủ"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Homepage Preview"
 msgstr "Xem trước trang chủ"
 
@@ -6052,7 +6056,7 @@ msgid "Image URL"
 msgstr "URL hình ảnh"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:190
 msgid "Images"
 msgstr "Hình ảnh"
 
@@ -6688,7 +6692,7 @@ msgstr "Đăng nhập"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:193
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:218
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -6701,7 +6705,7 @@ msgstr "Logo & Ảnh bìa"
 msgid "Logo and cover image for your organizer"
 msgstr "Logo và ảnh bìa cho nhà tổ chức của bạn"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:232
 msgid "Logo will be displayed in the header"
 msgstr "Logo sẽ được hiển thị trong phần đầu trang"
 
@@ -8285,7 +8289,7 @@ msgstr "Bảng điều khiển nhà tổ chức"
 msgid "Organizer deleted successfully"
 msgstr "Ban tổ chức đã được xóa thành công"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Organizer Homepage Preview"
 msgstr ""
 
@@ -10012,7 +10016,7 @@ msgstr "Lưu"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:546
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:266
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:315
 msgid "Save Changes"
 msgstr "Lưu thay đổi"
 
@@ -11337,7 +11341,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Đã cập nhật mặc định sự kiện thành công"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:99
 msgid "Successfully Updated Homepage Design"
 msgstr "Thiết kế trang sự kiện được cập nhật thành công"
 
@@ -11857,7 +11861,7 @@ msgid "Theater"
 msgstr "Sân khấu"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:242
 msgid "Theme & Colors"
 msgstr "Chủ đề & Màu sắc"
 
@@ -12674,7 +12678,7 @@ msgid "Type to search..."
 msgstr "Nhập để tìm kiếm..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:284
 msgid "Typography"
 msgstr "Kiểu chữ"
 
@@ -12982,12 +12986,12 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Sử dụng <0>mẫu Liquid</0> để cá nhân hóa email của bạn"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Sử dụng phiên bản làm mờ của ảnh bìa làm nền"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Use cover image"
 msgstr "Sử dụng hình ảnh bìa"
 
@@ -13461,11 +13465,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Chúng tôi khuyến nghị logo hình vuông với kích thước tối thiểu 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:198
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Chúng tôi đề xuất kích thước 2160px bằng 1080px và kích thước tệp tối đa là 5MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:219
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Chúng tôi khuyến nghị kích thước 400px x 400px và dung lượng tối đa 5MB"
 
@@ -13966,6 +13970,10 @@ msgstr "Bạn có thuế và phí được thêm vào một sản phẩm miễn 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:728
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Bạn có thay đổi chưa lưu. Bạn có chắc muốn bỏ chúng không?"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+msgid "You have unsaved changes. Publishing the page does not save them."
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
