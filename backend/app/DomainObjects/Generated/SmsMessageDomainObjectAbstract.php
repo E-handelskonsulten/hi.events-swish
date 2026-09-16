@@ -14,6 +14,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const ORGANIZER_ID = 'organizer_id';
     final public const EVENT_ID = 'event_id';
     final public const ORDER_ID = 'order_id';
+    final public const MESSAGE_ID = 'message_id';
     final public const TYPE = 'type';
     final public const STATUS = 'status';
     final public const RECIPIENT = 'recipient';
@@ -30,6 +31,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected int $organizer_id;
     protected int $event_id;
     protected int $order_id;
+    protected ?int $message_id = null;
     protected string $type;
     protected string $status;
     protected string $recipient;
@@ -49,6 +51,7 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'organizer_id' => $this->organizer_id ?? null,
                     'event_id' => $this->event_id ?? null,
                     'order_id' => $this->order_id ?? null,
+                    'message_id' => $this->message_id ?? null,
                     'type' => $this->type ?? null,
                     'status' => $this->status ?? null,
                     'recipient' => $this->recipient ?? null,
@@ -105,6 +108,17 @@ abstract class SmsMessageDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getOrderId(): int
     {
         return $this->order_id;
+    }
+
+    public function setMessageId(?int $message_id): self
+    {
+        $this->message_id = $message_id;
+        return $this;
+    }
+
+    public function getMessageId(): ?int
+    {
+        return $this->message_id;
     }
 
     public function setType(string $type): self

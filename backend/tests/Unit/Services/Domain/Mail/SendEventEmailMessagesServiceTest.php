@@ -9,6 +9,7 @@ use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\UserRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Message\DTO\SendMessageDTO;
 use HiEvents\Services\Domain\Mail\SendEventEmailMessagesService;
+use HiEvents\Services\Domain\Message\MessageRecipientResolver;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Mockery;
 use ReflectionClass;
@@ -30,6 +31,7 @@ class SendEventEmailMessagesServiceTest extends TestCase
             Mockery::mock(UserRepositoryInterface::class),
             Mockery::mock(Logger::class),
             Mockery::mock(Dispatcher::class),
+            Mockery::mock(MessageRecipientResolver::class),
         );
 
         $occurrenceWhere = new ReflectionMethod($service, 'occurrenceWhere');

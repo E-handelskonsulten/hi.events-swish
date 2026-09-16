@@ -29,6 +29,11 @@ abstract class MessageDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     final public const DELETED_AT = 'deleted_at';
     final public const ELIGIBILITY_FAILURES = 'eligibility_failures';
     final public const SCHEDULED_AT = 'scheduled_at';
+    final public const CHANNEL = 'channel';
+    final public const PURPOSE = 'purpose';
+    final public const SMS_BODY = 'sms_body';
+    final public const RECIPIENT_COUNT = 'recipient_count';
+    final public const SMS_COST = 'sms_cost';
 
     protected int $id;
     protected int $event_id;
@@ -49,6 +54,11 @@ abstract class MessageDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     protected ?string $deleted_at = null;
     protected array|string|null $eligibility_failures = null;
     protected ?string $scheduled_at = null;
+    protected string $channel = 'EMAIL';
+    protected string $purpose = 'SERVICE';
+    protected ?string $sms_body = null;
+    protected ?int $recipient_count = null;
+    protected ?float $sms_cost = null;
 
     public function toArray(): array
     {
@@ -72,6 +82,11 @@ abstract class MessageDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
                     'deleted_at' => $this->deleted_at ?? null,
                     'eligibility_failures' => $this->eligibility_failures ?? null,
                     'scheduled_at' => $this->scheduled_at ?? null,
+                    'channel' => $this->channel ?? null,
+                    'purpose' => $this->purpose ?? null,
+                    'sms_body' => $this->sms_body ?? null,
+                    'recipient_count' => $this->recipient_count ?? null,
+                    'sms_cost' => $this->sms_cost ?? null,
                 ];
     }
 
@@ -282,5 +297,60 @@ abstract class MessageDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     public function getScheduledAt(): ?string
     {
         return $this->scheduled_at;
+    }
+
+    public function setChannel(string $channel): self
+    {
+        $this->channel = $channel;
+        return $this;
+    }
+
+    public function getChannel(): string
+    {
+        return $this->channel;
+    }
+
+    public function setPurpose(string $purpose): self
+    {
+        $this->purpose = $purpose;
+        return $this;
+    }
+
+    public function getPurpose(): string
+    {
+        return $this->purpose;
+    }
+
+    public function setSmsBody(?string $sms_body): self
+    {
+        $this->sms_body = $sms_body;
+        return $this;
+    }
+
+    public function getSmsBody(): ?string
+    {
+        return $this->sms_body;
+    }
+
+    public function setRecipientCount(?int $recipient_count): self
+    {
+        $this->recipient_count = $recipient_count;
+        return $this;
+    }
+
+    public function getRecipientCount(): ?int
+    {
+        return $this->recipient_count;
+    }
+
+    public function setSmsCost(?float $sms_cost): self
+    {
+        $this->sms_cost = $sms_cost;
+        return $this;
+    }
+
+    public function getSmsCost(): ?float
+    {
+        return $this->sms_cost;
     }
 }

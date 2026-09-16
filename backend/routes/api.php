@@ -152,9 +152,12 @@ use HiEvents\Http\Actions\Locations\GeoPlaceDetailsAction;
 use HiEvents\Http\Actions\Locations\GetGeoStatusAction;
 use HiEvents\Http\Actions\Locations\GetLocationsAction;
 use HiEvents\Http\Actions\Locations\UpdateLocationAction;
+use HiEvents\Http\Actions\Marketing\Public\GetMarketingOptOutStatusActionPublic;
+use HiEvents\Http\Actions\Marketing\Public\MarketingOptOutActionPublic;
 use HiEvents\Http\Actions\Messages\CancelMessageAction;
 use HiEvents\Http\Actions\Messages\GetMessageRecipientsAction;
 use HiEvents\Http\Actions\Messages\GetMessagesAction;
+use HiEvents\Http\Actions\Messages\PreviewMessageAction;
 use HiEvents\Http\Actions\Messages\SendMessageAction;
 use HiEvents\Http\Actions\Orders\CancelOrderAction;
 use HiEvents\Http\Actions\Orders\DownloadOrderInvoiceAction;
@@ -501,6 +504,7 @@ $router->middleware(['auth:api'])->group(
 
         // Messages
         $router->post('/events/{event_id}/messages', SendMessageAction::class);
+        $router->post('/events/{event_id}/messages/preview', PreviewMessageAction::class);
         $router->get('/events/{event_id}/messages', GetMessagesAction::class);
         $router->post('/events/{event_id}/messages/{message_id}/cancel', CancelMessageAction::class);
         $router->get('/events/{event_id}/messages/{message_id}/recipients', GetMessageRecipientsAction::class);
@@ -651,6 +655,8 @@ $router->prefix('/public')->group(
         // Attendees
         $router->get('/events/{event_id}/attendees/{attendee_short_id}', GetAttendeeActionPublic::class);
         $router->get('/orders/{order_short_id}/tickets', GetOrderTicketsActionPublic::class);
+        $router->get('/marketing/opt-out/{token}', GetMarketingOptOutStatusActionPublic::class);
+        $router->post('/marketing/opt-out/{token}', MarketingOptOutActionPublic::class);
 
         // Waitlist
         $router->post('/events/{event_id}/waitlist', CreateWaitlistEntryActionPublic::class)

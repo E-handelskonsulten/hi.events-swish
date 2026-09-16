@@ -18,7 +18,9 @@ use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Repository\Interfaces\MessageRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
+use HiEvents\Services\Application\Handlers\Message\DTO\MessagePreviewDTO;
 use HiEvents\Services\Application\Handlers\Message\DTO\SendMessageDTO;
+use HiEvents\Services\Application\Handlers\Message\PreviewMessageHandler;
 use HiEvents\Services\Application\Handlers\Message\SendMessageHandler;
 use HiEvents\Services\Domain\Message\MessagingEligibilityService;
 use HiEvents\Services\Infrastructure\HtmlPurifier\HtmlPurifierService;
@@ -47,6 +49,8 @@ class SendMessageHandlerTest extends TestCase
 
     private EventRepositoryInterface $eventRepository;
 
+    private PreviewMessageHandler $previewHandler;
+
     private SendMessageHandler $handler;
 
     protected function setUp(): void
@@ -63,6 +67,26 @@ class SendMessageHandlerTest extends TestCase
         $this->eligibilityService = m::mock(MessagingEligibilityService::class);
         $this->eventRepository = m::mock(EventRepositoryInterface::class);
 
+        $this->previewHandler = m::mock(PreviewMessageHandler::class);
+        $this->previewHandler->shouldReceive('handle')->byDefault()->andReturn(new MessagePreviewDTO(
+            emailRecipients: 3,
+            smsRecipients: 0,
+            excludedWithoutConsent: 0,
+            excludedWithoutPhone: 0,
+            smsAvailable: true,
+            smsSender: 'Biljettera',
+            smsCharacters: 0,
+            smsEncoding: 'GSM-7',
+            smsParts: 0,
+            smsSinglePartLimit: 160,
+            smsOptOutSuffixLength: 0,
+            smsCostPerRecipient: 0.0,
+            smsTotalCost: 0.0,
+            currency: 'SEK',
+            requiresConfirmation: false,
+            confirmationWord: 'Event',
+        ));
+
         $this->handler = new SendMessageHandler(
             orderRepository: $this->orderRepository,
             attendeeRepository: $this->attendeeRepository,
@@ -72,7 +96,8 @@ class SendMessageHandlerTest extends TestCase
             eventRepository: $this->eventRepository,
             purifier: $this->purifier,
             config: $this->config,
-            eligibilityService: $this->eligibilityService
+            eligibilityService: $this->eligibilityService,
+            previewHandler: $this->previewHandler,
         );
     }
 
@@ -184,6 +209,7 @@ class SendMessageHandlerTest extends TestCase
         $message->shouldReceive('getOrderId')->andReturn(5);
         $message->shouldReceive('getAttendeeIds')->andReturn([10]);
         $message->shouldReceive('getProductIds')->andReturn([20]);
+        $message->shouldReceive('getSmsBody')->andReturn(null);
         $message->shouldReceive('getStatus')->andReturn('PROCESSING');
 
         $this->messageRepository->shouldReceive('create')->andReturn($message);
@@ -243,6 +269,7 @@ class SendMessageHandlerTest extends TestCase
         $message->shouldReceive('getOrderId')->andReturn(null);
         $message->shouldReceive('getAttendeeIds')->andReturn([]);
         $message->shouldReceive('getProductIds')->andReturn([]);
+        $message->shouldReceive('getSmsBody')->andReturn(null);
         $this->messageRepository
             ->shouldReceive('create')
             ->once()

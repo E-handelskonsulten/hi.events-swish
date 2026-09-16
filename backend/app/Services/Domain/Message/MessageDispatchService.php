@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Domain\Message;
 
+use HiEvents\DomainObjects\Enums\MessageChannel;
+use HiEvents\DomainObjects\Enums\MessagePurpose;
 use HiEvents\DomainObjects\Enums\MessageTypeEnum;
 use HiEvents\DomainObjects\MessageDomainObject;
 use HiEvents\DomainObjects\Status\MessageStatus;
 use HiEvents\Jobs\Event\SendMessagesJob;
+use HiEvents\Jobs\Event\SendSmsMessagesJob;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\MessageRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Message\DTO\SendMessageDTO;
@@ -63,7 +66,7 @@ class MessageDispatchService
         }
 
         try {
-            SendMessagesJob::dispatch(new SendMessageDTO(
+            $dto = new SendMessageDTO(
                 account_id: $sendDataArray['account_id'],
                 event_id: $message->getEventId(),
                 subject: $message->getSubject(),
@@ -79,7 +82,18 @@ class MessageDispatchService
                 product_ids: $message->getProductIds() ?? [],
                 event_occurrence_id: $message->getEventOccurrenceId(),
                 event_occurrence_ids: $sendDataArray['event_occurrence_ids'] ?? null,
-            ));
+                channel: MessageChannel::fromName($message->getChannel() ?? MessageChannel::EMAIL->name),
+                purpose: MessagePurpose::fromName($message->getPurpose() ?? MessagePurpose::SERVICE->name),
+                sms_body: $message->getSmsBody(),
+            );
+
+            if ($dto->channel->includesEmail()) {
+                SendMessagesJob::dispatch($dto);
+            }
+
+            if ($dto->channel->includesSms()) {
+                SendSmsMessagesJob::dispatch($dto);
+            }
         } catch (Throwable $e) {
             Log::error('Failed to dispatch SendMessagesJob, reverting status', [
                 'message_id' => $message->getId(),

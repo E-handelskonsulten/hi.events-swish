@@ -4,12 +4,14 @@ namespace HiEvents\Services\Application\Handlers\Message;
 
 use Carbon\Carbon;
 use HiEvents\DomainObjects\Enums\MessageTypeEnum;
+use Illuminate\Support\Str;
 use HiEvents\DomainObjects\MessageDomainObject;
 use HiEvents\DomainObjects\Status\MessageStatus;
 use HiEvents\Exceptions\AccountNotVerifiedException;
 use HiEvents\Exceptions\MessagingTierLimitExceededException;
 use HiEvents\Helper\DateHelper;
 use HiEvents\Jobs\Event\SendMessagesJob;
+use HiEvents\Jobs\Event\SendSmsMessagesJob;
 use HiEvents\Jobs\Message\MessagePendingReviewJob;
 use HiEvents\Repository\Interfaces\AccountRepositoryInterface;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
@@ -36,6 +38,7 @@ class SendMessageHandler
         private readonly HtmlPurifierService $purifier,
         private readonly Repository $config,
         private readonly MessagingEligibilityService $eligibilityService,
+        private readonly PreviewMessageHandler $previewHandler,
     ) {}
 
     /**
@@ -77,6 +80,16 @@ class SendMessageHandler
 
         $isScheduled = $messageData->scheduled_at !== null && ! $messageData->is_test;
 
+        $preview = $this->previewHandler->handle($messageData);
+
+        if ($messageData->channel->includesSms() && ! $preview->smsAvailable) {
+            throw ValidationException::withMessages(['channel' => [__('SMS delivery is not enabled for this organizer.')]]);
+        }
+
+        if ($preview->requiresConfirmation && ! $messageData->is_test && trim((string) $messageData->confirmation) !== trim($preview->confirmationWord)) {
+            throw ValidationException::withMessages(['confirmation' => [__('Type the event name exactly as shown to confirm sending to more than :count recipients.', ['count' => PreviewMessageHandler::CONFIRMATION_THRESHOLD])]]);
+        }
+
         $event = $this->eventRepository->findById($messageData->event_id);
 
         $scheduledAtUtc = $messageData->scheduled_at
@@ -97,11 +110,24 @@ class SendMessageHandler
             $status = MessageStatus::PROCESSING;
         }
 
+        $smsText = trim((string) $messageData->sms_body);
+        $subject = trim($messageData->subject) !== ''
+            ? $messageData->subject
+            : Str::limit(preg_replace('/\s+/u', ' ', $smsText), 80, '');
+        $body = trim($messageData->message) !== ''
+            ? $this->purifier->purify($messageData->message)
+            : $this->purifier->purify(nl2br(e($smsText)));
+
         $message = $this->messageRepository->create([
             'event_id' => $messageData->event_id,
-            'subject' => $messageData->subject,
-            'message' => $this->purifier->purify($messageData->message),
+            'subject' => $subject,
+            'message' => $body,
             'type' => $messageData->type->name,
+            'channel' => $messageData->channel->name,
+            'purpose' => $messageData->purpose->name,
+            'sms_body' => $messageData->channel->includesSms() ? trim((string) $messageData->sms_body) : null,
+            'recipient_count' => max($preview->emailRecipients, $preview->smsRecipients),
+            'sms_cost' => $messageData->channel->includesSms() ? $preview->smsTotalCost : null,
             'order_id' => $this->getOrderId($messageData),
             'event_occurrence_id' => $messageData->event_occurrence_id,
             'attendee_ids' => $this->getAttendeeIds($messageData)->toArray(),
@@ -128,8 +154,8 @@ class SendMessageHandler
             $updatedData = SendMessageDTO::fromArray([
                 'account_id' => $messageData->account_id,
                 'event_id' => $messageData->event_id,
-                'subject' => $messageData->subject,
-                'message' => $this->purifier->purify($messageData->message),
+                'subject' => $subject,
+                'message' => $body,
                 'type' => $messageData->type,
                 'is_test' => $messageData->is_test,
                 'send_copy_to_current_user' => $messageData->send_copy_to_current_user,
@@ -141,9 +167,18 @@ class SendMessageHandler
                 'product_ids' => $message->getProductIds(),
                 'event_occurrence_id' => $messageData->event_occurrence_id,
                 'event_occurrence_ids' => $messageData->event_occurrence_ids,
+                'channel' => $messageData->channel,
+                'purpose' => $messageData->purpose,
+                'sms_body' => $message->getSmsBody(),
             ]);
 
-            SendMessagesJob::dispatch($updatedData);
+            if ($messageData->channel->includesEmail()) {
+                SendMessagesJob::dispatch($updatedData);
+            }
+
+            if ($messageData->channel->includesSms()) {
+                SendSmsMessagesJob::dispatch($updatedData);
+            }
         }
 
         return $message;

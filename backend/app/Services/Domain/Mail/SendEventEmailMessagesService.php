@@ -3,6 +3,7 @@
 namespace HiEvents\Services\Domain\Mail;
 
 use HiEvents\DomainObjects\AttendeeDomainObject;
+use HiEvents\DomainObjects\Enums\MessagePurpose;
 use HiEvents\DomainObjects\Enums\MessageTypeEnum;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
@@ -20,6 +21,7 @@ use HiEvents\Repository\Interfaces\MessageRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\UserRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Message\DTO\SendMessageDTO;
+use HiEvents\Services\Domain\Message\MessageRecipientResolver;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\Collection;
 use Symfony\Component\HttpKernel\Log\Logger;
@@ -27,6 +29,8 @@ use Symfony\Component\HttpKernel\Log\Logger;
 class SendEventEmailMessagesService
 {
     private array $sentEmails = [];
+
+    private ?array $consentedEmails = null;
 
     public function __construct(
         private readonly OrderRepositoryInterface $orderRepository,
@@ -36,6 +40,7 @@ class SendEventEmailMessagesService
         private readonly UserRepositoryInterface $userRepository,
         private readonly Logger $logger,
         private readonly Dispatcher $dispatcher,
+        private readonly MessageRecipientResolver $recipientResolver,
     ) {}
 
     /**
@@ -63,6 +68,10 @@ class SendEventEmailMessagesService
 
             throw new UnableToSendMessageException($message);
         }
+
+        $this->consentedEmails = $messageData->purpose === MessagePurpose::MARKETING
+            ? $this->recipientResolver->resolve($messageData)->consentedEmails
+            : null;
 
         switch ($messageData->type) {
             case MessageTypeEnum::INDIVIDUAL_ATTENDEES:
@@ -123,6 +132,10 @@ class SendEventEmailMessagesService
     ): void {
         $this->sendEmailToMessageSender($messageData, $event);
 
+        if (! $this->mayReceive($order->getEmail())) {
+            return;
+        }
+
         $this->sendMessage(
             emailAddress: $order->getEmail(),
             fullName: $order->getFullName(),
@@ -144,7 +157,7 @@ class SendEventEmailMessagesService
 
         $sentEmails = [];
         $attendees->each(function (AttendeeDomainObject $attendee) use (&$sentEmails, $event, $messageData) {
-            if (in_array($attendee->getEmail(), $sentEmails, true)) {
+            if (in_array($attendee->getEmail(), $sentEmails, true) || ! $this->mayReceive($attendee->getEmail())) {
                 return;
             }
 
@@ -240,6 +253,10 @@ class SendEventEmailMessagesService
         $this->sendEmailToMessageSender($messageData, $event);
 
         $orders->each(function (OrderDomainObject $order) use ($messageData, $event) {
+            if (! $this->mayReceive($order->getEmail())) {
+                return;
+            }
+
             $this->sendMessage(
                 emailAddress: $order->getEmail(),
                 fullName: $order->getFullName(),
@@ -247,6 +264,11 @@ class SendEventEmailMessagesService
                 event: $event,
             );
         });
+    }
+
+    private function mayReceive(?string $emailAddress): bool
+    {
+        return $this->consentedEmails === null || in_array(strtolower((string) $emailAddress), $this->consentedEmails, true);
     }
 
     private function sendMessage(

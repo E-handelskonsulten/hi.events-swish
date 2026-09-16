@@ -33,8 +33,12 @@ class SendMessageAction extends BaseAction
 
             $message = $this->messageHandler->handle(SendMessageDTO::fromArray([
                 'event_id' => $eventId,
-                'subject' => $validated['subject'],
-                'message' => $validated['message'],
+                'subject' => $validated['subject'] ?? '',
+                'message' => $validated['message'] ?? '',
+                'channel' => $validated['channel'] ?? 'EMAIL',
+                'purpose' => $validated['purpose'] ?? 'SERVICE',
+                'sms_body' => $validated['sms_body'] ?? null,
+                'confirmation' => $validated['confirmation'] ?? null,
                 'type' => $validated['message_type'],
                 'is_test' => (bool) ($validated['is_test'] ?? false),
                 'order_id' => $validated['order_id'] ?? null,

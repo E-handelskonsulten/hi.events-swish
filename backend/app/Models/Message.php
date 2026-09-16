@@ -30,6 +30,7 @@ class Message extends BaseModel
     {
         return [
             'attendee_ids' => 'array',
+            'sms_cost' => 'float',
             'product_ids' => 'array',
             'send_data' => 'array',
             'eligibility_failures' => 'array',

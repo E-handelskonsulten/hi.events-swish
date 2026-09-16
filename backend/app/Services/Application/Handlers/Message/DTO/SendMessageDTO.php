@@ -3,6 +3,8 @@
 namespace HiEvents\Services\Application\Handlers\Message\DTO;
 
 use HiEvents\DataTransferObjects\BaseDTO;
+use HiEvents\DomainObjects\Enums\MessageChannel;
+use HiEvents\DomainObjects\Enums\MessagePurpose;
 use HiEvents\DomainObjects\Enums\MessageTypeEnum;
 
 class SendMessageDTO extends BaseDTO
@@ -24,5 +26,9 @@ class SendMessageDTO extends BaseDTO
         public readonly ?string $scheduled_at = null,
         public readonly ?int $event_occurrence_id = null,
         public readonly ?array $event_occurrence_ids = null,
+        public readonly MessageChannel $channel = MessageChannel::EMAIL,
+        public readonly MessagePurpose $purpose = MessagePurpose::SERVICE,
+        public readonly ?string $sms_body = null,
+        public readonly ?string $confirmation = null,
     ) {}
 }

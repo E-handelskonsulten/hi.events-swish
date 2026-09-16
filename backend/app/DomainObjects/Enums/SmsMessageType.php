@@ -8,4 +8,11 @@ enum SmsMessageType: string
 
     case TICKET = 'TICKET';
     case REFUND_NOTICE = 'REFUND_NOTICE';
+    case SERVICE = 'SERVICE';
+    case MARKETING = 'MARKETING';
+
+    public static function forPurpose(MessagePurpose $purpose): self
+    {
+        return $purpose === MessagePurpose::MARKETING ? self::MARKETING : self::SERVICE;
+    }
 }

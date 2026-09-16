@@ -35,6 +35,8 @@ interface OrderRepositoryInterface extends RepositoryInterface
         ?array $eventOccurrenceIds = null,
     ): Collection;
 
+    public function revokeMarketingConsent(int $organizerId, ?string $email, ?string $phone): int;
+
     public function countOrdersAssociatedWithProducts(
         int $eventId,
         array $productIds,

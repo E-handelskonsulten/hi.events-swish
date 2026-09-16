@@ -18,7 +18,9 @@ use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Repository\Interfaces\MessageRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
+use HiEvents\Services\Application\Handlers\Message\DTO\MessagePreviewDTO;
 use HiEvents\Services\Application\Handlers\Message\DTO\SendMessageDTO;
+use HiEvents\Services\Application\Handlers\Message\PreviewMessageHandler;
 use HiEvents\Services\Application\Handlers\Message\SendMessageHandler;
 use HiEvents\Services\Domain\Message\MessagingEligibilityService;
 use HiEvents\Services\Infrastructure\HtmlPurifier\HtmlPurifierService;
@@ -63,6 +65,14 @@ class SendMessageHandlerScheduledTest extends TestCase
         $this->config = m::mock(Repository::class);
         $this->eligibilityService = m::mock(MessagingEligibilityService::class);
 
+        $previewHandler = m::mock(PreviewMessageHandler::class);
+        $previewHandler->shouldReceive('handle')->byDefault()->andReturn(new MessagePreviewDTO(
+            emailRecipients: 3, smsRecipients: 0, excludedWithoutConsent: 0, excludedWithoutPhone: 0,
+            smsAvailable: true, smsSender: 'Biljettera', smsCharacters: 0, smsEncoding: 'GSM-7', smsParts: 0,
+            smsSinglePartLimit: 160, smsOptOutSuffixLength: 0, smsCostPerRecipient: 0.0, smsTotalCost: 0.0,
+            currency: 'SEK', requiresConfirmation: false, confirmationWord: 'Event',
+        ));
+
         $this->handler = new SendMessageHandler(
             $this->orderRepository,
             $this->attendeeRepository,
@@ -72,7 +82,8 @@ class SendMessageHandlerScheduledTest extends TestCase
             $this->eventRepository,
             $this->purifier,
             $this->config,
-            $this->eligibilityService
+            $this->eligibilityService,
+            $previewHandler,
         );
     }
 
@@ -123,6 +134,7 @@ class SendMessageHandlerScheduledTest extends TestCase
         $message->shouldReceive('getOrderId')->andReturn(5);
         $message->shouldReceive('getAttendeeIds')->andReturn([10]);
         $message->shouldReceive('getProductIds')->andReturn([20]);
+        $message->shouldReceive('getSmsBody')->andReturn(null);
         $message->shouldReceive('getStatus')->andReturn(MessageStatus::SCHEDULED->name);
 
         $this->messageRepository->shouldReceive('create')
@@ -168,6 +180,7 @@ class SendMessageHandlerScheduledTest extends TestCase
         $message->shouldReceive('getOrderId')->andReturn(5);
         $message->shouldReceive('getAttendeeIds')->andReturn([10]);
         $message->shouldReceive('getProductIds')->andReturn([20]);
+        $message->shouldReceive('getSmsBody')->andReturn(null);
         $message->shouldReceive('getStatus')->andReturn(MessageStatus::PROCESSING->name);
 
         $this->messageRepository->shouldReceive('create')
@@ -211,6 +224,7 @@ class SendMessageHandlerScheduledTest extends TestCase
         $message->shouldReceive('getOrderId')->andReturn(5);
         $message->shouldReceive('getAttendeeIds')->andReturn([10]);
         $message->shouldReceive('getProductIds')->andReturn([20]);
+        $message->shouldReceive('getSmsBody')->andReturn(null);
         $message->shouldReceive('getStatus')->andReturn(MessageStatus::PROCESSING->name);
 
         $this->messageRepository->shouldReceive('create')

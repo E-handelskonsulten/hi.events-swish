@@ -182,6 +182,23 @@ class OrderRepository extends BaseRepository implements OrderRepositoryInterface
         return $this->handleResults($query->get());
     }
 
+    public function revokeMarketingConsent(int $organizerId, ?string $email, ?string $phone): int
+    {
+        return $this->runQuery(fn () => $this->model
+            ->whereNotNull('opted_into_marketing_at')
+            ->whereHas('event', static fn (Builder $query) => $query->where('organizer_id', $organizerId))
+            ->where(static function (Builder $query) use ($email, $phone) {
+                $query->whereRaw('1 = 0');
+                if ($email) {
+                    $query->orWhereRaw('lower(email) = ?', [strtolower($email)]);
+                }
+                if ($phone) {
+                    $query->orWhere('phone', $phone);
+                }
+            })
+            ->update(['opted_into_marketing_at' => null]));
+    }
+
     public function countOrdersAssociatedWithProducts(
         int $eventId,
         array $productIds,

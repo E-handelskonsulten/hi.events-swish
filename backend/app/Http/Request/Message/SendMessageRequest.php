@@ -2,6 +2,8 @@
 
 namespace HiEvents\Http\Request\Message;
 
+use HiEvents\DomainObjects\Enums\MessageChannel;
+use HiEvents\DomainObjects\Enums\MessagePurpose;
 use HiEvents\DomainObjects\Enums\MessageTypeEnum;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use Illuminate\Foundation\Http\FormRequest;
@@ -15,8 +17,12 @@ class SendMessageRequest extends FormRequest
         $eventId = $this->route('event_id');
 
         return [
-            'subject' => 'required|string|max:100',
-            'message' => 'required|string|max:8000',
+            'subject' => 'required_unless:channel,'.MessageChannel::SMS->name.'|nullable|string|max:100',
+            'message' => 'required_unless:channel,'.MessageChannel::SMS->name.'|nullable|string|max:8000',
+            'channel' => ['nullable', new In(MessageChannel::valuesArray())],
+            'purpose' => ['nullable', new In(MessagePurpose::valuesArray())],
+            'sms_body' => 'required_if:channel,'.MessageChannel::SMS->name.','.MessageChannel::BOTH->name.'|nullable|string|max:1000',
+            'confirmation' => 'nullable|string|max:255',
             'message_type' => [new In(MessageTypeEnum::valuesArray()), 'required'],
             'is_test' => 'boolean',
             'send_copy_to_current_user' => 'boolean',

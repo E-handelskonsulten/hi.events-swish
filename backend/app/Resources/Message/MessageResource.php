@@ -20,6 +20,14 @@ class MessageResource extends JsonResource
             'subject' => $this->getSubject(),
             'message' => $this->getMessage(),
             'type' => $this->getType(),
+            /** @var 'EMAIL'|'SMS'|'BOTH' */
+            'channel' => $this->getChannel(),
+            /** @var 'SERVICE'|'MARKETING' */
+            'purpose' => $this->getPurpose(),
+            'sms_body' => $this->getSmsBody(),
+            'recipient_count' => $this->getRecipientCount(),
+            'sms_cost' => $this->getSmsCost() === null ? null : (float) $this->getSmsCost(),
+            'sms_currency' => $this->getSmsCost() === null ? null : (string) config('billing.currency'),
             'attendee_ids' => $this->getAttendeeIds(),
             'order_id' => $this->getOrderId(),
             'product_ids' => $this->getProductIds(),
