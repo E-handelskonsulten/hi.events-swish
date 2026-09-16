@@ -6,7 +6,7 @@ export interface OrganizerBillingSettings {
     organizer_id: number;
     sms_enabled: boolean;
     sms_sender_name: string | null;
-    sms_lead_hours: number;
+    sms_lead_hours: number | null;
     sms_fee_per_message: number;
     updated_at: string;
 }
@@ -23,7 +23,7 @@ export interface OrganizerBillingSettingsResponse {
 export interface UpsertOrganizerBillingSettingsRequest {
     sms_enabled: boolean;
     sms_sender_name: string | null;
-    sms_lead_hours: number;
+    sms_lead_hours: number | null;
 }
 
 export const organizerBillingClient = {

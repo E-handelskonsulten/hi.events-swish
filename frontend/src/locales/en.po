@@ -139,7 +139,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr "{completedCount} of {totalCount} steps complete"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:126
+#: src/components/forms/ProductForm/ledgerSummaries.ts:125
 msgid "{count} add-ons"
 msgstr "{count} add-ons"
 
@@ -164,9 +164,13 @@ msgstr "{diffSec}s ago"
 msgid "{eventCount} events"
 msgstr "{eventCount} events"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:102
+#: src/components/forms/ProductForm/ledgerSummaries.ts:101
 msgid "{first} + {additionalCount} more"
 msgstr "{first} + {additionalCount} more"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+msgid "{hours} hours before"
+msgstr "{hours} hours before"
 
 #: src/components/common/Countdown/index.tsx:70
 msgid "{hours} hours, {minutes} minutes, and {seconds} seconds"
@@ -176,7 +180,7 @@ msgstr "{hours} hours, {minutes} minutes, and {seconds} seconds"
 msgid "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 msgstr "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:111
+#: src/components/forms/ProductForm/ledgerSummaries.ts:110
 msgid "{min}–{max} per order"
 msgstr "{min}–{max} per order"
 
@@ -269,7 +273,7 @@ msgid "1 Active Webhook"
 msgstr "1 Active Webhook"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:126
+#: src/components/forms/ProductForm/ledgerSummaries.ts:125
 msgid "1 add-on"
 msgstr "1 add-on"
 
@@ -292,6 +296,10 @@ msgstr "1 day after start date"
 #: src/components/modals/SendMessageModal/index.tsx:120
 msgid "1 day before event"
 msgstr "1 day before event"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+msgid "1 hour before"
+msgstr "1 hour before"
 
 #: src/components/modals/SendMessageModal/index.tsx:121
 msgid "1 hour before event"
@@ -802,7 +810,7 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr "Add your social media handles and website URL. These will be displayed on your public organizer page."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:344
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "Add-on only"
 msgstr "Add-on only"
 
@@ -1103,7 +1111,7 @@ msgstr "Also refund this order"
 msgid "Always available"
 msgstr "Always available"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:54
+#: src/components/forms/ProductForm/ledgerSummaries.ts:53
 msgid "Always on sale"
 msgstr "Always on sale"
 
@@ -3678,7 +3686,7 @@ msgstr "Default Fee Handling"
 msgid "Default template will be used"
 msgstr "Default template will be used"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:67
+#: src/components/forms/ProductForm/ledgerSummaries.ts:66
 msgid "Defaults"
 msgstr "Defaults"
 
@@ -4433,7 +4441,7 @@ msgstr "Enable attendee self-service by default"
 msgid "Enable Invoicing"
 msgstr "Enable Invoicing"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:92
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:95
 msgid "Enable SMS delivery"
 msgstr "Enable SMS delivery"
 
@@ -5560,7 +5568,7 @@ msgstr "From"
 msgid "From {0}"
 msgstr "From {0}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:47
+#: src/components/forms/ProductForm/ledgerSummaries.ts:46
 msgid "From {start}"
 msgstr "From {start}"
 
@@ -5827,7 +5835,7 @@ msgstr "Hidden — sales ended {end}."
 msgid "Hidden from attendees - only visible to organizers"
 msgstr "Hidden from attendees - only visible to organizers"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:150
+#: src/components/forms/ProductForm/ledgerSummaries.ts:149
 msgid "Hidden from everyone"
 msgstr "Hidden from everyone"
 
@@ -5905,7 +5913,7 @@ msgstr "Hide this question"
 msgid "Hide this tier from users"
 msgstr "Hide this tier from users"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:62
+#: src/components/forms/ProductForm/ledgerSummaries.ts:61
 msgid "Hides sold out"
 msgstr "Hides sold out"
 
@@ -5926,7 +5934,7 @@ msgid "Highlight this product"
 msgstr "Highlight this product"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:374
-#: src/components/forms/ProductForm/ledgerSummaries.ts:143
+#: src/components/forms/ProductForm/ledgerSummaries.ts:142
 msgid "Highlighted"
 msgstr "Highlighted"
 
@@ -5959,8 +5967,8 @@ msgid "Homer"
 msgstr "Homer"
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:113
-msgid "hours"
-msgstr "hours"
+#~ msgid "hours"
+#~ msgstr "hours"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:387
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:411
@@ -6079,6 +6087,10 @@ msgstr "Images"
 #: src/components/common/ImageUploadDropzone/index.tsx:208
 msgid "Images only · Max 5MB"
 msgstr "Images only · Max 5MB"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:116
+msgid "Immediately at purchase"
+msgstr "Immediately at purchase"
 
 #: src/components/common/AdminAccountsTable/index.tsx:134
 #: src/components/common/AdminUsersTable/index.tsx:84
@@ -6985,7 +6997,7 @@ msgstr "Messaging Tier"
 msgid "Messaging tier updated successfully"
 msgstr "Messaging tier updated successfully"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:114
+#: src/components/forms/ProductForm/ledgerSummaries.ts:113
 msgid "Min {min} per order"
 msgstr "Min {min} per order"
 
@@ -7431,7 +7443,7 @@ msgstr "No filters available"
 msgid "No invoice"
 msgstr "No invoice"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:120
+#: src/components/forms/ProductForm/ledgerSummaries.ts:119
 msgid "No limits"
 msgstr "No limits"
 
@@ -7640,13 +7652,13 @@ msgid "non-edited"
 msgstr "non-edited"
 
 #: src/components/common/PromoCodeTable/index.tsx:82
-#: src/components/forms/ProductForm/ledgerSummaries.ts:91
-#: src/components/forms/ProductForm/ledgerSummaries.ts:131
+#: src/components/forms/ProductForm/ledgerSummaries.ts:90
+#: src/components/forms/ProductForm/ledgerSummaries.ts:130
 #: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "None"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:30
+#: src/components/forms/ProductForm/ledgerSummaries.ts:29
 msgid "None yet"
 msgstr "None yet"
 
@@ -7756,8 +7768,8 @@ msgstr "of"
 msgid "of every month"
 msgstr "of every month"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:78
-#: src/components/forms/ProductForm/ledgerSummaries.ts:139
+#: src/components/forms/ProductForm/ledgerSummaries.ts:77
+#: src/components/forms/ProductForm/ledgerSummaries.ts:138
 msgid "Off"
 msgstr "Off"
 
@@ -7828,7 +7840,7 @@ msgstr "Offline Payments Settings"
 msgid "on"
 msgstr "on"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:75
+#: src/components/forms/ProductForm/ledgerSummaries.ts:74
 msgid "On"
 msgstr "On"
 
@@ -8249,7 +8261,7 @@ msgstr "Orders Completed"
 msgid "Orders Exported"
 msgstr "Orders Exported"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:109
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:114
 msgid "Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately."
 msgstr "Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately."
 
@@ -8436,7 +8448,7 @@ msgstr "Paid"
 msgid "Paid Accounts"
 msgstr "Paid Accounts"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:83
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:86
 msgid "Paid add-on"
 msgstr "Paid add-on"
 
@@ -9224,7 +9236,7 @@ msgstr "Promo Code"
 msgid "Promo Code page"
 msgstr "Promo Code page"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:153
+#: src/components/forms/ProductForm/ledgerSummaries.ts:152
 msgid "Promo code required"
 msgstr "Promo code required"
 
@@ -9279,7 +9291,7 @@ msgstr "Provide at least one address field (venue, street, city, or country)."
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "Provide the following before Stripe's next review to keep payouts flowing."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:156
+#: src/components/forms/ProductForm/ledgerSummaries.ts:155
 msgid "Public"
 msgstr "Public"
 
@@ -10020,7 +10032,7 @@ msgstr "Saturday"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:129
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
@@ -10505,7 +10517,7 @@ msgstr "Send a message"
 msgid "Send as test"
 msgstr "Send as test"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:73
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:76
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 
@@ -10550,7 +10562,7 @@ msgstr "Send Swish request for {amountLabel}"
 msgid "Send Test"
 msgstr "Send Test"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:108
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:111
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr "Send ticket SMS this many hours before the event starts"
 
@@ -10562,7 +10574,7 @@ msgstr "Send to all occurrences, or choose a specific one"
 msgid "Send your first message"
 msgstr "Send your first message"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:100
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
 msgstr "Sender name"
 
@@ -10849,7 +10861,7 @@ msgstr "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:101
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:104
 msgid "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
 msgstr "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
 
@@ -10873,7 +10885,7 @@ msgstr "Shown to the customer before they checkout"
 msgid "Shows common address fields, including country"
 msgstr "Shows common address fields, including country"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:61
+#: src/components/forms/ProductForm/ledgerSummaries.ts:60
 msgid "Shows remaining"
 msgstr "Shows remaining"
 
@@ -10917,23 +10929,23 @@ msgid "Smith"
 msgstr "Smith"
 
 #: src/components/routes/organizer/Settings/index.tsx:87
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:72
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
 msgstr "SMS delivery"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:84
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:87
 msgid "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
 msgstr "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:77
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:80
 msgid "SMS delivery is not available yet"
 msgstr "SMS delivery is not available yet"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:59
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:62
 msgid "SMS delivery settings saved."
 msgstr "SMS delivery settings saved."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:78
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 msgstr "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 
@@ -11113,7 +11125,7 @@ msgstr "Start typing a venue or address..."
 msgid "Started by {0} on {1}"
 msgstr "Started by {0} on {1}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:63
+#: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Starts collapsed"
 msgstr "Starts collapsed"
 
@@ -11859,6 +11871,10 @@ msgstr "The Swish request could not be cancelled. Please try again."
 msgid "The template body contains invalid Liquid syntax. Please correct it and try again."
 msgstr "The template body contains invalid Liquid syntax. Please correct it and try again."
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:113
+msgid "The ticket SMS is sent as soon as the order is paid."
+msgstr "The ticket SMS is sent as soon as the order is paid."
+
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:147
 msgid "The timezone used for this event's dates and times."
 msgstr "The timezone used for this event's dates and times."
@@ -12325,7 +12341,7 @@ msgstr "Ticket Holders"
 msgid "Ticket ID"
 msgstr "Ticket ID"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:93
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:96
 msgid "Ticket links and refund notices are sent by SMS in addition to email."
 msgstr "Ticket links and refund notices are sent by SMS in addition to email."
 
@@ -12825,7 +12841,7 @@ msgstr "Unpaid Order"
 msgid "until"
 msgstr "until"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:50
+#: src/components/forms/ProductForm/ledgerSummaries.ts:49
 msgid "Until {end}"
 msgstr "Until {end}"
 
@@ -12849,7 +12865,7 @@ msgstr "Untrusted"
 msgid "Unverified"
 msgstr "Unverified"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:117
+#: src/components/forms/ProductForm/ledgerSummaries.ts:116
 msgid "Up to {max} per order"
 msgstr "Up to {max} per order"
 

@@ -139,7 +139,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr "Hoàn tất {completedCount} trong số {totalCount} bước"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:126
+#: src/components/forms/ProductForm/ledgerSummaries.ts:125
 msgid "{count} add-ons"
 msgstr "{count} sản phẩm bổ sung"
 
@@ -164,9 +164,13 @@ msgstr "{diffSec} giây trước"
 msgid "{eventCount} events"
 msgstr "{EventCount} Sự kiện"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:102
+#: src/components/forms/ProductForm/ledgerSummaries.ts:101
 msgid "{first} + {additionalCount} more"
 msgstr "{first} + {additionalCount} mục nữa"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+msgid "{hours} hours before"
+msgstr ""
 
 #: src/components/common/Countdown/index.tsx:70
 msgid "{hours} hours, {minutes} minutes, and {seconds} seconds"
@@ -176,7 +180,7 @@ msgstr "{giờ} giờ, {phút} phút và {giây} giây"
 msgid "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 msgstr "Có {loadedAffectedAttendees} người tham dự đã đăng ký cho các buổi bị ảnh hưởng."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:111
+#: src/components/forms/ProductForm/ledgerSummaries.ts:110
 msgid "{min}–{max} per order"
 msgstr "{min}–{max} mỗi đơn"
 
@@ -269,7 +273,7 @@ msgid "1 Active Webhook"
 msgstr "1 Webhook đang hoạt động"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:126
+#: src/components/forms/ProductForm/ledgerSummaries.ts:125
 msgid "1 add-on"
 msgstr "1 sản phẩm bổ sung"
 
@@ -292,6 +296,10 @@ msgstr "1 ngày sau ngày bắt đầu"
 #: src/components/modals/SendMessageModal/index.tsx:120
 msgid "1 day before event"
 msgstr "1 ngày trước sự kiện"
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+msgid "1 hour before"
+msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:121
 msgid "1 hour before event"
@@ -802,7 +810,7 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr "Thêm tài khoản mạng xã hội và URL trang web của bạn. Chúng sẽ được hiển thị trên trang công khai của nhà tổ chức."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:344
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "Add-on only"
 msgstr "Chỉ dưới dạng bổ sung"
 
@@ -1103,7 +1111,7 @@ msgstr "Cũng hoàn tiền đơn hàng này"
 msgid "Always available"
 msgstr "Luôn có sẵn"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:54
+#: src/components/forms/ProductForm/ledgerSummaries.ts:53
 msgid "Always on sale"
 msgstr "Luôn mở bán"
 
@@ -3678,7 +3686,7 @@ msgstr "Xử lý phí mặc định"
 msgid "Default template will be used"
 msgstr "Mẫu mặc định sẽ được sử dụng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:67
+#: src/components/forms/ProductForm/ledgerSummaries.ts:66
 msgid "Defaults"
 msgstr "Giá trị mặc định"
 
@@ -4433,7 +4441,7 @@ msgstr "Bật tự phục vụ cho người tham dự theo mặc định"
 msgid "Enable Invoicing"
 msgstr "Bật hóa đơn"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:92
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:95
 msgid "Enable SMS delivery"
 msgstr ""
 
@@ -5560,7 +5568,7 @@ msgstr "Từ"
 msgid "From {0}"
 msgstr "Từ {0}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:47
+#: src/components/forms/ProductForm/ledgerSummaries.ts:46
 msgid "From {start}"
 msgstr "Từ {start}"
 
@@ -5827,7 +5835,7 @@ msgstr "Đã ẩn — việc bán kết thúc vào {end}."
 msgid "Hidden from attendees - only visible to organizers"
 msgstr "Ẩn với người tham dự - chỉ hiển thị với người tổ chức"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:150
+#: src/components/forms/ProductForm/ledgerSummaries.ts:149
 msgid "Hidden from everyone"
 msgstr "Ẩn với mọi người"
 
@@ -5905,7 +5913,7 @@ msgstr "Ẩn câu hỏi này"
 msgid "Hide this tier from users"
 msgstr "Ẩn tầng này khỏi người dùng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:62
+#: src/components/forms/ProductForm/ledgerSummaries.ts:61
 msgid "Hides sold out"
 msgstr "Ẩn các mục đã bán hết"
 
@@ -5926,7 +5934,7 @@ msgid "Highlight this product"
 msgstr "Làm nổi bật sản phẩm này"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:374
-#: src/components/forms/ProductForm/ledgerSummaries.ts:143
+#: src/components/forms/ProductForm/ledgerSummaries.ts:142
 msgid "Highlighted"
 msgstr "Nổi bật"
 
@@ -5959,8 +5967,8 @@ msgid "Homer"
 msgstr "Homer"
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:113
-msgid "hours"
-msgstr ""
+#~ msgid "hours"
+#~ msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:387
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:411
@@ -6078,6 +6086,10 @@ msgstr "Hình ảnh"
 
 #: src/components/common/ImageUploadDropzone/index.tsx:208
 msgid "Images only · Max 5MB"
+msgstr ""
+
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:116
+msgid "Immediately at purchase"
 msgstr ""
 
 #: src/components/common/AdminAccountsTable/index.tsx:134
@@ -6985,7 +6997,7 @@ msgstr "Cấp độ nhắn tin"
 msgid "Messaging tier updated successfully"
 msgstr "Cấp độ nhắn tin cập nhật thành công"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:114
+#: src/components/forms/ProductForm/ledgerSummaries.ts:113
 msgid "Min {min} per order"
 msgstr "Tối thiểu {min} mỗi đơn"
 
@@ -7431,7 +7443,7 @@ msgstr "Không có bộ lọc có sẵn"
 msgid "No invoice"
 msgstr "Không có hóa đơn"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:120
+#: src/components/forms/ProductForm/ledgerSummaries.ts:119
 msgid "No limits"
 msgstr "Không giới hạn"
 
@@ -7640,13 +7652,13 @@ msgid "non-edited"
 msgstr "chưa sửa"
 
 #: src/components/common/PromoCodeTable/index.tsx:82
-#: src/components/forms/ProductForm/ledgerSummaries.ts:91
-#: src/components/forms/ProductForm/ledgerSummaries.ts:131
+#: src/components/forms/ProductForm/ledgerSummaries.ts:90
+#: src/components/forms/ProductForm/ledgerSummaries.ts:130
 #: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "Không"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:30
+#: src/components/forms/ProductForm/ledgerSummaries.ts:29
 msgid "None yet"
 msgstr "Chưa có"
 
@@ -7756,8 +7768,8 @@ msgstr "của"
 msgid "of every month"
 msgstr "của mỗi tháng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:78
-#: src/components/forms/ProductForm/ledgerSummaries.ts:139
+#: src/components/forms/ProductForm/ledgerSummaries.ts:77
+#: src/components/forms/ProductForm/ledgerSummaries.ts:138
 msgid "Off"
 msgstr "Tắt"
 
@@ -7828,7 +7840,7 @@ msgstr "Cài đặt thanh toán offline"
 msgid "on"
 msgstr "vào"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:75
+#: src/components/forms/ProductForm/ledgerSummaries.ts:74
 msgid "On"
 msgstr "Bật"
 
@@ -8249,7 +8261,7 @@ msgstr "Đơn hàng đã hoàn thành"
 msgid "Orders Exported"
 msgstr "Đơn hàng đã được xuất"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:109
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:114
 msgid "Orders placed closer to the start than this, or after it, get their SMS right away. Ticket emails are always sent immediately."
 msgstr ""
 
@@ -8436,7 +8448,7 @@ msgstr "Đã thanh toán"
 msgid "Paid Accounts"
 msgstr "Tài khoản trả phí"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:83
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:86
 msgid "Paid add-on"
 msgstr ""
 
@@ -9224,7 +9236,7 @@ msgstr "Mã khuyến mãi"
 msgid "Promo Code page"
 msgstr "Trang mã khuyến mãi"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:153
+#: src/components/forms/ProductForm/ledgerSummaries.ts:152
 msgid "Promo code required"
 msgstr "Cần mã khuyến mãi"
 
@@ -9279,7 +9291,7 @@ msgstr "Cung cấp ít nhất một trường địa chỉ (địa điểm, đư
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "Hãy cung cấp những mục sau trước lần rà soát tiếp theo của Stripe để việc chi trả không bị gián đoạn."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:156
+#: src/components/forms/ProductForm/ledgerSummaries.ts:155
 msgid "Public"
 msgstr "Công khai"
 
@@ -10020,7 +10032,7 @@ msgstr "Thứ Bảy"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:85
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:119
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:129
 #: src/components/routes/organizer/Settings/Sections/SwishSettings/index.tsx:190
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:262
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:86
@@ -10505,7 +10517,7 @@ msgstr "Gửi tin nhắn"
 msgid "Send as test"
 msgstr "Gửi thử"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:73
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:76
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr ""
 
@@ -10550,7 +10562,7 @@ msgstr ""
 msgid "Send Test"
 msgstr "Gửi Test"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:108
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:111
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr ""
 
@@ -10562,7 +10574,7 @@ msgstr "Gửi tới tất cả các ngày, hoặc chọn một ngày cụ thể"
 msgid "Send your first message"
 msgstr "Gửi tin nhắn đầu tiên của bạn"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:100
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
 msgstr ""
 
@@ -10849,7 +10861,7 @@ msgstr "Đang hiển thị {MAX_VISIBLE} trong số {totalAvailable} ngày. Nh�
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Đang hiển thị {0} mục đầu — {1} buổi còn lại vẫn nằm trong phạm vi khi tin nhắn được gửi."
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:101
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:104
 msgid "Shown as the sender on the buyer's phone. 3-11 letters or digits, no spaces or Swedish characters. Leave blank to use {defaultSender}."
 msgstr ""
 
@@ -10873,7 +10885,7 @@ msgstr "Hiển thị cho khách hàng trước khi họ thanh toán"
 msgid "Shows common address fields, including country"
 msgstr "Hiển thị các trường địa chỉ chung, bao gồm quốc gia"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:61
+#: src/components/forms/ProductForm/ledgerSummaries.ts:60
 msgid "Shows remaining"
 msgstr "Hiển thị số chỗ còn lại"
 
@@ -10917,23 +10929,23 @@ msgid "Smith"
 msgstr "Smith"
 
 #: src/components/routes/organizer/Settings/index.tsx:87
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:72
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
 msgstr ""
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:84
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:87
 msgid "SMS delivery is billed at {feeLabel} per sent message and is added to your monthly invoice. Messages are only sent to buyers who pay with Swish or enter a Swedish mobile number at checkout."
 msgstr ""
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:77
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:80
 msgid "SMS delivery is not available yet"
 msgstr ""
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:59
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:62
 msgid "SMS delivery settings saved."
 msgstr ""
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:78
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 msgstr ""
 
@@ -11113,7 +11125,7 @@ msgstr "Bắt đầu nhập địa điểm hoặc địa chỉ..."
 msgid "Started by {0} on {1}"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:63
+#: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Starts collapsed"
 msgstr "Mặc định thu gọn"
 
@@ -11859,6 +11871,10 @@ msgstr ""
 msgid "The template body contains invalid Liquid syntax. Please correct it and try again."
 msgstr "Nội dung template chứa cú pháp Liquid không hợp lệ. Vui lòng sửa và thử lại."
 
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:113
+msgid "The ticket SMS is sent as soon as the order is paid."
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:147
 msgid "The timezone used for this event's dates and times."
 msgstr "Múi giờ dùng cho ngày và giờ của sự kiện này."
@@ -12325,7 +12341,7 @@ msgstr "Người giữ vé"
 msgid "Ticket ID"
 msgstr "ID vé"
 
-#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:93
+#: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:96
 msgid "Ticket links and refund notices are sent by SMS in addition to email."
 msgstr ""
 
@@ -12825,7 +12841,7 @@ msgstr "Đơn hàng chưa thanh toán"
 msgid "until"
 msgstr "đến"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:50
+#: src/components/forms/ProductForm/ledgerSummaries.ts:49
 msgid "Until {end}"
 msgstr "Đến {end}"
 
@@ -12849,7 +12865,7 @@ msgstr "Không đáng tin cậy"
 msgid "Unverified"
 msgstr "Chưa xác minh"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:117
+#: src/components/forms/ProductForm/ledgerSummaries.ts:116
 msgid "Up to {max} per order"
 msgstr "Tối đa {max} mỗi đơn"
 
