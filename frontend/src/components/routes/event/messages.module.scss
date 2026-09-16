@@ -375,3 +375,18 @@
     }
   }
 }
+
+.previewSmsLabel {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mantine-color-dimmed);
+  margin-bottom: 8px;
+}
+
+.previewSms {
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.5;
+}

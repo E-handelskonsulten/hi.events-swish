@@ -1101,12 +1101,21 @@ export interface QuestionRequestData {
     belongs_to: string;
 }
 
+export type MessageChannel = 'EMAIL' | 'SMS' | 'BOTH';
+export type MessagePurpose = 'SERVICE' | 'MARKETING';
+
 export interface Message {
     id?: IdParam;
     subject: string;
     message: string;
     message_preview: string;
     type: MessageType;
+    channel?: MessageChannel;
+    purpose?: MessagePurpose;
+    sms_body?: string | null;
+    recipient_count?: number | null;
+    sms_cost?: number | null;
+    sms_currency?: string | null;
     is_test: boolean;
     order_id?: number;
     attendee_ids?: IdParam[];

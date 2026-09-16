@@ -72,6 +72,10 @@ msgstr "{0}可用"
 msgid "{0} created successfully"
 msgstr "成功創建 {0}"
 
+#: src/components/modals/SendMessageModal/index.tsx:528
+msgid "{0} excluded without marketing consent"
+msgstr ""
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:437
 msgid "{0} left"
 msgstr "剩餘 {0}"
@@ -94,6 +98,10 @@ msgstr "{1} 個座位中已佔用 {0} 個。"
 msgid "{0} organizers"
 msgstr "{0} 位主辦單位"
 
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "{0} part(s)"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:650
 msgid "{0} tickets"
 msgstr "{0}張門票"
@@ -101,6 +109,10 @@ msgstr "{0}張門票"
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0}更新成功"
+
+#: src/components/modals/SendMessageModal/index.tsx:527
+msgid "{0} without a mobile number"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:417
 msgid "{activeCount} enabled"
@@ -285,15 +297,15 @@ msgstr "受影響的場次共有 1 位參加者已登記。"
 msgid "1 attendee is registered for this session."
 msgstr "本場次有 1 位參加者已登記。"
 
-#: src/components/modals/SendMessageModal/index.tsx:128
+#: src/components/modals/SendMessageModal/index.tsx:135
 msgid "1 day after end date"
 msgstr "結束日期後1天"
 
-#: src/components/modals/SendMessageModal/index.tsx:122
+#: src/components/modals/SendMessageModal/index.tsx:129
 msgid "1 day after start date"
 msgstr "開始日期後1天"
 
-#: src/components/modals/SendMessageModal/index.tsx:120
+#: src/components/modals/SendMessageModal/index.tsx:127
 msgid "1 day before event"
 msgstr "活動前1天"
 
@@ -301,7 +313,7 @@ msgstr "活動前1天"
 msgid "1 hour before"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:121
+#: src/components/modals/SendMessageModal/index.tsx:128
 msgid "1 hour before event"
 msgstr "活動前1小時"
 
@@ -322,7 +334,7 @@ msgstr "已設定 1 種門票類型"
 msgid "1 time available"
 msgstr "有 1 個可選時間"
 
-#: src/components/modals/SendMessageModal/index.tsx:119
+#: src/components/modals/SendMessageModal/index.tsx:126
 msgid "1 week before event"
 msgstr "活動前1週"
 
@@ -967,15 +979,15 @@ msgstr "所有已封存活動"
 msgid "All attendees"
 msgstr "所有參與者"
 
-#: src/components/modals/SendMessageModal/index.tsx:378
+#: src/components/modals/SendMessageModal/index.tsx:427
 msgid "All attendees of the selected sessions"
 msgstr "所選場次的全部參加者"
 
-#: src/components/modals/SendMessageModal/index.tsx:381
+#: src/components/modals/SendMessageModal/index.tsx:430
 msgid "All attendees of this event"
 msgstr "本次活動的所有與會者"
 
-#: src/components/modals/SendMessageModal/index.tsx:380
+#: src/components/modals/SendMessageModal/index.tsx:429
 msgid "All attendees of this occurrence"
 msgstr "本場次的全部參加者"
 
@@ -1020,7 +1032,7 @@ msgid "All matching dates"
 msgstr "所有符合的日期"
 
 #: src/components/forms/CheckInListForm/index.tsx:132
-#: src/components/modals/SendMessageModal/index.tsx:359
+#: src/components/modals/SendMessageModal/index.tsx:408
 msgid "All occurrences"
 msgstr "所有場次"
 
@@ -1281,6 +1293,10 @@ msgstr "批准訊息"
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:220
 msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "approx. {0} per recipient"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
@@ -1646,7 +1662,7 @@ msgstr "已註冊參加者"
 msgid "Attendees Registered"
 msgstr "註冊的參會者"
 
-#: src/components/modals/SendMessageModal/index.tsx:373
+#: src/components/modals/SendMessageModal/index.tsx:422
 msgid "Attendees with a specific ticket"
 msgstr "持有特定門票的與會者"
 
@@ -1724,7 +1740,7 @@ msgid "Awaiting"
 msgstr "等待中"
 
 #: src/components/common/OrderStatusBadge/index.tsx:11
-#: src/components/modals/SendMessageModal/index.tsx:425
+#: src/components/modals/SendMessageModal/index.tsx:474
 msgid "Awaiting offline payment"
 msgstr "等待線下付款"
 
@@ -1765,6 +1781,10 @@ msgstr "Awesome Events 有限公司"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
+
+#: src/components/modals/SendMessageModal/index.tsx:686
+msgid "Back"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:106
 msgid "Back to Accounts"
@@ -1878,6 +1898,10 @@ msgstr "正文是必需的"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:206
 msgid "Bookmark this page to manage your order anytime."
 msgstr "收藏此頁面，隨時管理您的訂單。"
+
+#: src/components/modals/SendMessageModal/index.tsx:513
+msgid "Both"
+msgstr ""
 
 #: src/components/routes/event/TicketDesigner/index.tsx:112
 msgid "Brand your tickets with a custom logo, colors, and footer message."
@@ -2041,7 +2065,7 @@ msgstr "無法簽到"
 #: src/components/modals/PublishEventModal/index.tsx:208
 #: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
-#: src/components/routes/event/messages.tsx:80
+#: src/components/routes/event/messages.tsx:86
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:272
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:306
@@ -2246,6 +2270,14 @@ msgstr "更改等候名單設定"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "已更改 {count} 個日期的時長"
+
+#: src/components/modals/SendMessageModal/index.tsx:507
+msgid "Channel"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "characters"
+msgstr ""
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:84
 msgid "Charged once per product, before the percentage is added"
@@ -2492,6 +2524,10 @@ msgstr "選擇活動日期在票券上的顯示方式"
 msgid "Choose the default setting for new events. This can be overridden for individual events."
 msgstr "為新活動選擇預設設置。這可以針對單個活動進行覆蓋。"
 
+#: src/components/modals/SendMessageModal/index.tsx:219
+msgid "Choose whether this is service information or marketing"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:51
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "選擇誰支付平台費用。這不會影響您在帳戶設置中配置的額外費用。"
@@ -2688,7 +2724,7 @@ msgstr "完成您的個人資料以加入團隊。"
 
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
-#: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SendMessageModal/index.tsx:473
 #: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
 #: src/components/routes/event/orders.tsx:29
@@ -2709,8 +2745,8 @@ msgstr "已完成訂單"
 msgid "Component Code"
 msgstr "組件代碼"
 
-#: src/components/routes/event/messages.tsx:237
-#: src/components/routes/event/messages.tsx:282
+#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:288
 msgid "Compose"
 msgstr "撰寫"
 
@@ -2833,7 +2869,7 @@ msgstr "連結銀行"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
 #: src/components/modals/PublishEventModal/index.tsx:79
-#: src/components/modals/SendMessageModal/index.tsx:298
+#: src/components/modals/SendMessageModal/index.tsx:347
 msgid "Connect Stripe"
 msgstr "連接條紋"
 
@@ -2845,7 +2881,7 @@ msgstr "連接 Stripe 以接受付款"
 msgid "Connect Stripe to enable email template editing"
 msgstr "連接 Stripe 以啟用電子郵件範本編輯"
 
-#: src/components/modals/SendMessageModal/index.tsx:287
+#: src/components/modals/SendMessageModal/index.tsx:336
 msgid "Connect Stripe to enable messaging"
 msgstr "連接 Stripe 以啟用消息功能"
 
@@ -3389,7 +3425,7 @@ msgstr "目前可供購買"
 #~ msgid "Custom branding"
 #~ msgstr "自訂品牌形象"
 
-#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:612
 msgid "Custom date and time"
 msgstr "自訂日期和時間"
 
@@ -4028,7 +4064,7 @@ msgstr "下拉選擇"
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "由於垃圾郵件風險高，您必須先連接 Stripe 帳戶才能修改電子郵件範本。這是為了確保所有活動主辦方都經過驗證並負責。"
 
-#: src/components/modals/SendMessageModal/index.tsx:288
+#: src/components/modals/SendMessageModal/index.tsx:337
 msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
@@ -4097,7 +4133,7 @@ msgstr "例如：本星期六 UTC 凌晨 2 時至 4 時計劃維護"
 msgid "e.g., Get Tickets, Register Now"
 msgstr "例如：取得門票，立即註冊"
 
-#: src/components/modals/SendMessageModal/index.tsx:439
+#: src/components/modals/SendMessageModal/index.tsx:538
 msgid "e.g., Important update about your tickets"
 msgstr "例如：關於您門票的重要更新"
 
@@ -4293,6 +4329,8 @@ msgstr "符合條件的簽到列表"
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
 #: src/components/modals/ManageAttendeeModal/index.tsx:152
 #: src/components/modals/ManageOrderModal/index.tsx:136
+#: src/components/modals/SendMessageModal/index.tsx:511
+#: src/components/modals/SendMessageModal/index.tsx:654
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:120
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -4319,6 +4357,10 @@ msgstr "電子郵件和通知設置"
 msgid "Email & Templates"
 msgstr "電子郵件和模板"
 
+#: src/components/routes/event/messages.tsx:73
+msgid "Email + SMS"
+msgstr ""
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:223
 #: src/components/modals/ManageAttendeeModal/index.tsx:208
 #: src/components/modals/ManageOrderModal/index.tsx:242
@@ -4342,6 +4384,10 @@ msgstr "郵箱地址已複製到剪貼板"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:129
 msgid "Email addresses do not match"
 msgstr "電子郵件地址不匹配"
+
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Email and SMS"
+msgstr ""
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
 msgid "Email Body"
@@ -4403,6 +4449,11 @@ msgstr "電郵已驗證"
 #: src/components/routes/welcome/index.tsx:99
 msgid "Email verified successfully!"
 msgstr "電郵驗證成功！"
+
+#: src/components/modals/SendMessageModal/index.tsx:524
+#: src/components/modals/SendMessageModal/index.tsx:656
+msgid "Email: {0} recipients"
+msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:246
 #: src/components/common/WidgetEditor/index.tsx:275
@@ -5814,6 +5865,10 @@ msgstr "你好 {0} 👋"
 msgid "Hi,"
 msgstr "你好，"
 
+#: src/components/modals/SendMessageModal/index.tsx:560
+msgid "Hi! Doors open at 19:00. Bring your ticket QR code."
+msgstr ""
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:75
 msgid "Hi.Events Fee"
 msgstr "Hi.Events 費用"
@@ -6031,9 +6086,13 @@ msgstr "我同意接收與此活動相關的電子郵件通知"
 msgid "I agree to the <0>terms and conditions</0>"
 msgstr "我同意<0>條款和條件</0>。"
 
-#: src/components/modals/SendMessageModal/index.tsx:530
+#: src/components/modals/SendMessageModal/index.tsx:648
 msgid "I confirm this is a transactional message related to this event"
 msgstr "我確認這是與此活動相關的交易訊息"
+
+#: src/components/modals/SendMessageModal/index.tsx:647
+msgid "I confirm this is marketing and will only reach buyers who have consented"
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1032
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6419,6 +6478,10 @@ msgstr "繼續編輯"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "請保持簡短 — 橫幅只顯示一行。{0}/200"
 
+#: src/components/modals/SendMessageModal/index.tsx:559
+msgid "Keep it short. Links are optional."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:621
 msgid "Keep me updated on news and events from {0}"
 msgstr "讓我隨時了解來自 {0} 的新聞和活動"
@@ -6608,6 +6671,10 @@ msgstr "淺色"
 #: src/components/routes/my-tickets/index.tsx:177
 msgid "Link Expired or Invalid"
 msgstr "連結已過期或無效"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:28
+msgid "Link not valid"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:61
 msgid "LinkedIn"
@@ -6878,6 +6945,16 @@ msgstr "標記為已支付"
 msgid "Mark as validated (admin override)"
 msgstr "標示為已核實（管理員特批）"
 
+#: src/components/modals/SendMessageModal/index.tsx:491
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:76
+msgid "Marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:501
+msgid "Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:177
 msgid "Mass refund #{0}"
 msgstr ""
@@ -6921,7 +6998,7 @@ msgstr "媒介"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:156
-#: src/components/modals/SendMessageModal/index.tsx:444
+#: src/components/modals/SendMessageModal/index.tsx:543
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
 msgstr "訊息"
@@ -6938,7 +7015,7 @@ msgstr "與會者留言"
 msgid "Message Attendees"
 msgstr "留言參與者"
 
-#: src/components/modals/SendMessageModal/index.tsx:401
+#: src/components/modals/SendMessageModal/index.tsx:450
 msgid "Message attendees with specific tickets"
 msgstr "向與會者發送特定門票的信息"
 
@@ -6962,7 +7039,7 @@ msgstr "訊息內容"
 msgid "Message Details"
 msgstr "訊息詳情"
 
-#: src/components/modals/SendMessageModal/index.tsx:101
+#: src/components/modals/SendMessageModal/index.tsx:108
 msgid "Message individual attendees"
 msgstr "給個別與會者留言"
 
@@ -6970,21 +7047,25 @@ msgstr "給個別與會者留言"
 msgid "Message is required"
 msgstr "必須填寫訊息"
 
-#: src/components/modals/SendMessageModal/index.tsx:413
+#: src/components/modals/SendMessageModal/index.tsx:462
 msgid "Message order owners with specific products"
 msgstr "向具有特定產品的訂單所有者發送消息"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Scheduled"
 msgstr "訊息已排程"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Sent"
 msgstr "發送的信息"
 
+#: src/components/modals/SendMessageModal/index.tsx:486
+msgid "Message type"
+msgstr ""
+
 #: src/components/layouts/Admin/index.tsx:18
 #: src/components/layouts/Event/index.tsx:133
-#: src/components/routes/event/messages.tsx:225
+#: src/components/routes/event/messages.tsx:231
 msgid "Messages"
 msgstr "信息"
 
@@ -7460,7 +7541,7 @@ msgstr "沒有匹配的字體"
 msgid "No messages found"
 msgstr "未找到訊息"
 
-#: src/components/routes/event/messages.tsx:322
+#: src/components/routes/event/messages.tsx:328
 msgid "No messages to show"
 msgstr "無信息顯示"
 
@@ -7725,7 +7806,7 @@ msgstr "號碼前綴"
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:253
 #: src/components/modals/ManageOrderModal/index.tsx:140
-#: src/components/modals/SendMessageModal/index.tsx:357
+#: src/components/modals/SendMessageModal/index.tsx:406
 msgid "Occurrence"
 msgstr "場次"
 
@@ -7959,7 +8040,7 @@ msgstr "只作附加產品提供"
 msgid "Only published announcements are shown to users"
 msgstr "只有已發佈的公告才會向用戶顯示"
 
-#: src/components/modals/SendMessageModal/index.tsx:421
+#: src/components/modals/SendMessageModal/index.tsx:470
 msgid "Only send to orders with these statuses"
 msgstr "僅發送給具有這些狀態的訂單"
 
@@ -8177,7 +8258,7 @@ msgstr "訂單編號、購買日期、買家電郵"
 msgid "Order owner"
 msgstr "訂單所有者"
 
-#: src/components/modals/SendMessageModal/index.tsx:385
+#: src/components/modals/SendMessageModal/index.tsx:434
 msgid "Order owners with a specific product"
 msgstr "具有特定產品的訂單所有者"
 
@@ -8201,7 +8282,7 @@ msgstr "訂單已退款"
 msgid "Order Status"
 msgstr "訂單狀態"
 
-#: src/components/modals/SendMessageModal/index.tsx:422
+#: src/components/modals/SendMessageModal/index.tsx:471
 msgid "Order statuses"
 msgstr "訂單狀態"
 
@@ -9271,7 +9352,7 @@ msgstr "促銷代碼報告"
 msgid "Promo Only"
 msgstr "僅限促銷"
 
-#: src/components/modals/SendMessageModal/index.tsx:575
+#: src/components/modals/SendMessageModal/index.tsx:720
 msgid "Promotional emails may result in account suspension"
 msgstr "促銷電子郵件可能導致帳戶被暫停"
 
@@ -9473,7 +9554,7 @@ msgstr "最近訂單"
 msgid "recipient"
 msgstr "位收件人"
 
-#: src/components/modals/SendMessageModal/index.tsx:67
+#: src/components/modals/SendMessageModal/index.tsx:74
 msgid "Recipient"
 msgstr "受援國"
 
@@ -9482,13 +9563,13 @@ msgid "recipients"
 msgstr "位收件人"
 
 #: src/components/modals/MessageRecipientsModal/index.tsx:38
-#: src/components/modals/SendMessageModal/index.tsx:388
+#: src/components/modals/SendMessageModal/index.tsx:437
 #: src/components/routes/admin/Messages/index.tsx:166
 #: src/components/routes/admin/Messages/index.tsx:300
 msgid "Recipients"
 msgstr "收件人"
 
-#: src/components/routes/event/messages.tsx:96
+#: src/components/routes/event/messages.tsx:102
 msgid "Recipients are available after the message is sent"
 msgstr "收件人在訊息發送後可用"
 
@@ -9890,6 +9971,14 @@ msgstr "收入"
 msgid "Revenue Summary"
 msgstr "收入摘要"
 
+#: src/components/modals/SendMessageModal/index.tsx:682
+msgid "Review and send"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:652
+msgid "Review before sending"
+msgstr ""
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
 msgid "Revoke invitation"
 msgstr "撤銷邀請"
@@ -10137,11 +10226,11 @@ msgstr "排程已成功建立"
 msgid "Schedule ends on"
 msgstr "排程結束於"
 
-#: src/components/modals/SendMessageModal/index.tsx:472
+#: src/components/modals/SendMessageModal/index.tsx:588
 msgid "Schedule for later"
 msgstr "稍後發送"
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Schedule Message"
 msgstr "排程訊息"
 
@@ -10163,7 +10252,7 @@ msgstr "已排程"
 msgid "Scheduled deletion"
 msgstr "計劃刪除時間"
 
-#: src/components/modals/SendMessageModal/index.tsx:502
+#: src/components/modals/SendMessageModal/index.tsx:618
 msgid "Scheduled time"
 msgstr "排程時間"
 
@@ -10261,7 +10350,7 @@ msgstr "搜尋日期…"
 msgid "Search for an address"
 msgstr "搜尋地址"
 
-#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:249
 msgid "Search messages..."
 msgstr "搜尋訊息..."
 
@@ -10335,7 +10424,7 @@ msgstr "選擇日期和時間"
 msgid "Select a date to see available times"
 msgstr "先選擇日期，即可查看可選時間"
 
-#: src/components/routes/event/messages.tsx:341
+#: src/components/routes/event/messages.tsx:347
 msgid "Select a message to view its contents"
 msgstr "選擇一則訊息查看其內容"
 
@@ -10371,7 +10460,7 @@ msgstr "請至少選擇一個帳戶"
 msgid "Select at least one user"
 msgstr "請至少選擇一個用戶"
 
-#: src/components/modals/SendMessageModal/index.tsx:390
+#: src/components/modals/SendMessageModal/index.tsx:439
 msgid "Select attendee group"
 msgstr "選擇參加者群組"
 
@@ -10427,7 +10516,7 @@ msgstr "選擇產品等級"
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:49
 #: src/components/forms/PromoCodeForm/index.tsx:158
 #: src/components/forms/QuestionForm/index.tsx:160
-#: src/components/modals/SendMessageModal/index.tsx:414
+#: src/components/modals/SendMessageModal/index.tsx:463
 msgid "Select products"
 msgstr "選擇產品"
 
@@ -10456,7 +10545,7 @@ msgid "Select Ticket"
 msgstr "選擇機票"
 
 #: src/components/forms/CheckInListForm/index.tsx:120
-#: src/components/modals/SendMessageModal/index.tsx:402
+#: src/components/modals/SendMessageModal/index.tsx:451
 msgid "Select tickets"
 msgstr "選擇票"
 
@@ -10470,7 +10559,7 @@ msgstr "選擇時間段"
 msgid "Select timezone"
 msgstr "選擇時區"
 
-#: src/components/modals/SendMessageModal/index.tsx:389
+#: src/components/modals/SendMessageModal/index.tsx:438
 msgid "Select which attendees should receive this message"
 msgstr "選擇哪些參加者應該收到此訊息"
 
@@ -10509,11 +10598,11 @@ msgstr "熱賣中 🔥"
 msgid "Send"
 msgstr "發送"
 
-#: src/components/modals/SendMessageModal/index.tsx:270
+#: src/components/modals/SendMessageModal/index.tsx:319
 msgid "Send a message"
 msgstr "發送信息"
 
-#: src/components/modals/SendMessageModal/index.tsx:560
+#: src/components/modals/SendMessageModal/index.tsx:705
 msgid "Send as test"
 msgstr "作為測試發送"
 
@@ -10521,20 +10610,20 @@ msgstr "作為測試發送"
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr ""
 
-#: src/components/routes/event/messages.tsx:325
+#: src/components/routes/event/messages.tsx:331
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "向參與者、持票人或訂單擁有者發送電子郵件。訊息可以立即發送或安排稍後發送。"
 
-#: src/components/modals/SendMessageModal/index.tsx:568
+#: src/components/modals/SendMessageModal/index.tsx:713
 msgid "Send me a copy"
 msgstr "發送副本給我"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Message"
 msgstr "發送消息"
 
-#: src/components/modals/SendMessageModal/index.tsx:464
+#: src/components/modals/SendMessageModal/index.tsx:580
 msgid "Send now"
 msgstr "立即發送"
 
@@ -10558,7 +10647,7 @@ msgstr "發送重置連結"
 msgid "Send Swish request for {amountLabel}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Test"
 msgstr "發送測試"
 
@@ -10566,13 +10655,17 @@ msgstr "發送測試"
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:358
+#: src/components/modals/SendMessageModal/index.tsx:407
 msgid "Send to all occurrences, or choose a specific one"
 msgstr "傳送至所有場次，或指定其中一個"
 
-#: src/components/routes/event/messages.tsx:335
+#: src/components/routes/event/messages.tsx:341
 msgid "Send your first message"
 msgstr "發送您的第一則訊息"
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "Sender"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
@@ -10643,6 +10736,15 @@ msgstr "服務費"
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:41
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:490
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Service information"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:502
+msgid "Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket."
 msgstr ""
 
 #: src/components/layouts/CheckIn/index.tsx:498
@@ -10857,7 +10959,7 @@ msgstr "正在顯示第 {0}–{1} 個，共 {2} 個"
 msgid "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgstr "正在顯示 {totalAvailable} 個日期中的 {MAX_VISIBLE} 個。輸入即可搜尋。"
 
-#: src/components/modals/SendMessageModal/index.tsx:349
+#: src/components/modals/SendMessageModal/index.tsx:398
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "只顯示首 {0} 個 — 傳送訊息時仍會涵蓋其餘 {1} 個場次。"
 
@@ -10928,6 +11030,12 @@ msgstr "斯洛伐克語"
 msgid "Smith"
 msgstr "史密斯"
 
+#: src/components/modals/SendMessageModal/index.tsx:512
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:73
+msgid "SMS"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/index.tsx:87
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
@@ -10945,8 +11053,24 @@ msgstr ""
 msgid "SMS delivery settings saved."
 msgstr ""
 
+#: src/components/modals/SendMessageModal/index.tsx:520
+msgid "SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:556
+msgid "SMS text"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:526
+msgid "SMS: {0} recipients"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:658
+msgid "SMS: {0} recipients, {1} part(s), approx. {2} each ≈ {3}"
 msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:73
@@ -11042,6 +11166,7 @@ msgstr "出了點問題。請稍後再試。"
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
+#: src/components/routes/public/MarketingOptOut/index.tsx:63
 msgid "Something went wrong. Please try again."
 msgstr "出錯了。請重試。"
 
@@ -11209,6 +11334,10 @@ msgstr "仍需提供"
 msgid "Stop Impersonating"
 msgstr "停止模擬"
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:52
+msgid "Stop receiving marketing messages from {organizer} by SMS and email. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
+
 #: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11261,7 +11390,7 @@ msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe 會透過幾條簡單問題引導你完成設定。"
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
-#: src/components/modals/SendMessageModal/index.tsx:438
+#: src/components/modals/SendMessageModal/index.tsx:537
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
@@ -11567,7 +11696,7 @@ msgstr "目標帳戶"
 msgid "Target users"
 msgstr "目標用戶"
 
-#: src/components/modals/SendMessageModal/index.tsx:335
+#: src/components/modals/SendMessageModal/index.tsx:384
 msgid "Targeting attendees across {0} selected sessions."
 msgstr "會針對所選 {0} 個場次的參加者。"
 
@@ -11842,17 +11971,21 @@ msgstr "敏捷的棕色狐狸跳過懶狗。"
 msgid "The request will be sent to {0}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:208
+#: src/components/modals/SendMessageModal/index.tsx:225
 msgid "The scheduled time is required"
 msgstr "排程時間為必填項"
 
-#: src/components/modals/SendMessageModal/index.tsx:209
+#: src/components/modals/SendMessageModal/index.tsx:226
 msgid "The scheduled time must be in the future"
 msgstr "排程時間必須是將來的時間"
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "「{title}」原定於 {0} 的場次已改期。"
+
+#: src/components/modals/SendMessageModal/index.tsx:221
+msgid "The subject is required"
+msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
 msgid "The Swish payment request expired before it was approved."
@@ -12244,6 +12377,10 @@ msgstr "此門票已失效"
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "此門票剛剛被掃描。請等待後再次掃描。"
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:29
+msgid "This unsubscribe link is not valid. It may have been copied incompletely."
+msgstr ""
+
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "該用户未激活，因為他們沒有接受邀請。"
@@ -12486,11 +12623,11 @@ msgstr "標題為必填"
 msgid "to"
 msgstr "至"
 
-#: src/components/routes/event/messages.tsx:93
+#: src/components/routes/event/messages.tsx:99
 msgid "To"
 msgstr "收件人"
 
-#: src/components/modals/SendMessageModal/index.tsx:315
+#: src/components/modals/SendMessageModal/index.tsx:364
 msgid "To increase your limits, contact us at"
 msgstr "要提高您的限制，請聯繫我們"
 
@@ -12696,6 +12833,10 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "類型"
 
+#: src/components/modals/SendMessageModal/index.tsx:664
+msgid "Type \"{0}\" exactly to enable sending to more than 100 recipients."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:398
 msgid "Type \"{eventTitle}\" exactly to enable the refund button."
 msgstr ""
@@ -12705,6 +12846,7 @@ msgstr ""
 msgid "Type \"delete\" to confirm"
 msgstr "輸入\"刪除\"以確認"
 
+#: src/components/modals/SendMessageModal/index.tsx:663
 #: src/components/modals/SwishMassRefundModal/index.tsx:397
 msgid "Type the event name to confirm"
 msgstr ""
@@ -12836,6 +12978,18 @@ msgstr "未付款"
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:32
 msgid "Unpaid Order"
 msgstr "未付款訂單"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:51
+msgid "Unsubscribe from marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "unsubscribe link is added automatically"
+msgstr ""
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:60
+msgid "Unsubscribe me"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1075
 msgid "until"
@@ -13869,6 +14023,10 @@ msgstr "工作..."
 msgid "Workshop"
 msgstr "工作坊"
 
+#: src/components/modals/SendMessageModal/index.tsx:220
+msgid "Write the SMS text"
+msgstr ""
+
 #: src/components/common/ContactOrganizerModal/index.tsx:89
 msgid "Write your message here..."
 msgstr "請在此輸入您的訊息..."
@@ -13928,6 +14086,10 @@ msgstr "您正在發出部分退款。客戶將獲得 {0} {1} 的退款。"
 #: src/components/layouts/CheckIn/index.tsx:292
 msgid "You are offline"
 msgstr "您處於離線狀態"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:46
+msgid "You are unsubscribed"
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:259
 msgid "You can configure additional service fees and taxes in your account settings."
@@ -13990,7 +14152,7 @@ msgstr "您沒有待處理的電子郵件更改。"
 msgid "You have paid tickets, but Stripe isn't connected yet, so you can't take payments."
 msgstr "您有付費門票，但尚未連接 Stripe，因此無法收款。"
 
-#: src/components/modals/SendMessageModal/index.tsx:248
+#: src/components/modals/SendMessageModal/index.tsx:277
 msgid "You have reached your messaging limit."
 msgstr "您已達到訊息限制。"
 
@@ -14012,8 +14174,8 @@ msgid "You have unsaved changes. Publishing the page does not save them."
 msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
-msgid "You must acknowledge that this email is not promotional"
-msgstr "您必須確認此電子郵件並非促銷郵件"
+#~ msgid "You must acknowledge that this email is not promotional"
+#~ msgstr "您必須確認此電子郵件並非促銷郵件"
 
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:145
 msgid "You must acknowledge your responsibilities before saving"
@@ -14026,6 +14188,10 @@ msgstr "您必須同意接收訊息"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:34
 msgid "You must agree to the terms and conditions"
 msgstr "您必須同意條款和條件"
+
+#: src/components/modals/SendMessageModal/index.tsx:218
+msgid "You must confirm the message type before sending"
+msgstr ""
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:163
 msgid "You must create a ticket before you can manually add an attendee."
@@ -14047,7 +14213,7 @@ msgstr "你需要先建立至少一個場次，才可以為這個重複活動新
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "您需要驗證您的帳戶電子郵件才能修改電子郵件範本。"
 
-#: src/components/modals/SendMessageModal/index.tsx:281
+#: src/components/modals/SendMessageModal/index.tsx:330
 msgid "You need to verify your account email before you can send messages."
 msgstr "您需要驗證您的帳户電子郵件才能發送消息。"
 
@@ -14058,6 +14224,10 @@ msgstr "您收到"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "您必須手動將訂單標記為已支付。這可以在訂單管理頁面上完成。"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:47
+msgid "You will no longer receive marketing messages from {organizer}. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
 
 #: src/components/modals/CreateEventModal/index.tsx:253
 msgid "You'll be able to set up dates, schedules, and recurrence rules in the next step."
@@ -14103,7 +14273,7 @@ msgstr "你已更改場次時間"
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."
 msgstr "您的帳戶已停用，將於 <0>{0}</0> 永久刪除。"
 
-#: src/components/modals/SendMessageModal/index.tsx:324
+#: src/components/modals/SendMessageModal/index.tsx:373
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "您的帳戶有訊息限制。要提高您的限制，請聯繫我們"
 
@@ -14167,7 +14337,7 @@ msgstr "您的信息已發送"
 msgid "Your message has been sent successfully!"
 msgstr "你嘅訊息已經成功發送！"
 
-#: src/components/routes/event/messages.tsx:275
+#: src/components/routes/event/messages.tsx:281
 msgid "Your messages will appear here"
 msgstr "您的訊息將顯示在此處"
 

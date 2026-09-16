@@ -126,6 +126,15 @@ export class ApiClient {
     return check(this.request.put(`organizers/${organizerId}/status`, { headers: jsonHeaders, data: { status } }));
   }
 
+  enableSms(organizerId: number, senderName: string): Promise<void> {
+    return check(
+      this.request.put(`organizers/${organizerId}/billing-settings`, {
+        headers: jsonHeaders,
+        data: { sms_enabled: true, sms_sender_name: senderName, sms_lead_hours: null },
+      }),
+    );
+  }
+
   createEvent(payload: CreateEventPayload): Promise<EventRecord> {
     return unwrap<EventRecord>(this.request.post('events', { headers: jsonHeaders, data: payload }));
   }

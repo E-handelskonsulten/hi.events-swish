@@ -72,6 +72,10 @@ msgstr "{0} tillgängliga"
 msgid "{0} created successfully"
 msgstr "{0} skapades"
 
+#: src/components/modals/SendMessageModal/index.tsx:534
+msgid "{0} excluded without marketing consent"
+msgstr "{0} exkluderade utan samtycke till marknadsföring"
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:437
 msgid "{0} left"
 msgstr "{0} kvar"
@@ -94,6 +98,14 @@ msgstr "{0} av {1} platser är tagna."
 msgid "{0} organizers"
 msgstr "{0} arrangörer"
 
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "{0} part(s)"
+msgstr "{0} del(ar)"
+
+#: src/components/routes/event/messages.tsx:110
+msgid "{0} recipients"
+msgstr "{0} mottagare"
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:650
 msgid "{0} tickets"
 msgstr "{0} biljetter"
@@ -101,6 +113,10 @@ msgstr "{0} biljetter"
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} uppdaterades"
+
+#: src/components/modals/SendMessageModal/index.tsx:533
+msgid "{0} without a mobile number"
+msgstr "{0} utan mobilnummer"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:417
 msgid "{activeCount} enabled"
@@ -285,15 +301,15 @@ msgstr "1 deltagare är anmäld till de berörda tillfällena."
 msgid "1 attendee is registered for this session."
 msgstr "1 deltagare är anmäld till det här tillfället."
 
-#: src/components/modals/SendMessageModal/index.tsx:128
+#: src/components/modals/SendMessageModal/index.tsx:135
 msgid "1 day after end date"
 msgstr "1 dag efter slutdatum"
 
-#: src/components/modals/SendMessageModal/index.tsx:122
+#: src/components/modals/SendMessageModal/index.tsx:129
 msgid "1 day after start date"
 msgstr "1 dag efter startdatum"
 
-#: src/components/modals/SendMessageModal/index.tsx:120
+#: src/components/modals/SendMessageModal/index.tsx:127
 msgid "1 day before event"
 msgstr "1 dag före evenemanget"
 
@@ -301,7 +317,7 @@ msgstr "1 dag före evenemanget"
 msgid "1 hour before"
 msgstr "1 timme före"
 
-#: src/components/modals/SendMessageModal/index.tsx:121
+#: src/components/modals/SendMessageModal/index.tsx:128
 msgid "1 hour before event"
 msgstr "1 timme före evenemanget"
 
@@ -322,7 +338,7 @@ msgstr "1 biljettyp konfigurerad"
 msgid "1 time available"
 msgstr "1 tid tillgänglig"
 
-#: src/components/modals/SendMessageModal/index.tsx:119
+#: src/components/modals/SendMessageModal/index.tsx:126
 msgid "1 week before event"
 msgstr "1 vecka före evenemanget"
 
@@ -967,15 +983,15 @@ msgstr "Alla arkiverade evenemang"
 msgid "All attendees"
 msgstr "Alla deltagare"
 
-#: src/components/modals/SendMessageModal/index.tsx:378
+#: src/components/modals/SendMessageModal/index.tsx:433
 msgid "All attendees of the selected sessions"
 msgstr "Alla deltagare på de valda tillfällena"
 
-#: src/components/modals/SendMessageModal/index.tsx:381
+#: src/components/modals/SendMessageModal/index.tsx:436
 msgid "All attendees of this event"
 msgstr "Alla deltagare för detta evenemang"
 
-#: src/components/modals/SendMessageModal/index.tsx:380
+#: src/components/modals/SendMessageModal/index.tsx:435
 msgid "All attendees of this occurrence"
 msgstr "Alla deltagare på det här datumet"
 
@@ -1020,7 +1036,7 @@ msgid "All matching dates"
 msgstr "Alla matchande datum"
 
 #: src/components/forms/CheckInListForm/index.tsx:132
-#: src/components/modals/SendMessageModal/index.tsx:359
+#: src/components/modals/SendMessageModal/index.tsx:414
 msgid "All occurrences"
 msgstr "Alla datum"
 
@@ -1283,6 +1299,10 @@ msgstr "Godkänn meddelande"
 msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
 msgstr "Godkänn betalningen på {amountLabel} i Swish-appen och kom sedan tillbaka hit. Sidan uppdateras automatiskt."
 
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "approx. {0} per recipient"
+msgstr "ca {0} per mottagare"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
 msgid "April"
 msgstr "April"
@@ -1353,7 +1373,7 @@ msgstr "Är du säker på att du vill avboka denna deltagare? Detta ogiltigförk
 msgid "Are you sure you want to cancel this date? Affected attendees will be notified by email."
 msgstr "Är du säker på att du vill ställa in det här datumet? Berörda deltagare meddelas via e-post."
 
-#: src/components/routes/event/messages.tsx:33
+#: src/components/routes/event/messages.tsx:34
 msgid "Are you sure you want to cancel this scheduled message?"
 msgstr "Är du säker på att du vill avbryta detta schemalagda meddelande?"
 
@@ -1646,7 +1666,7 @@ msgstr "Deltagare registrerade"
 msgid "Attendees Registered"
 msgstr "Registrerade deltagare"
 
-#: src/components/modals/SendMessageModal/index.tsx:373
+#: src/components/modals/SendMessageModal/index.tsx:428
 msgid "Attendees with a specific ticket"
 msgstr "Deltagare med en specifik biljett"
 
@@ -1724,7 +1744,7 @@ msgid "Awaiting"
 msgstr "Väntar"
 
 #: src/components/common/OrderStatusBadge/index.tsx:11
-#: src/components/modals/SendMessageModal/index.tsx:425
+#: src/components/modals/SendMessageModal/index.tsx:480
 msgid "Awaiting offline payment"
 msgstr "Väntar på offlinebetalning"
 
@@ -1766,6 +1786,10 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
+#: src/components/modals/SendMessageModal/index.tsx:694
+msgid "Back"
+msgstr "Tillbaka"
+
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:106
 msgid "Back to Accounts"
 msgstr "Tillbaka till konton"
@@ -1788,7 +1812,7 @@ msgstr "Tillbaka till evenemangssidan"
 msgid "Back to login"
 msgstr "Tillbaka till inloggning"
 
-#: src/components/routes/event/messages.tsx:54
+#: src/components/routes/event/messages.tsx:55
 msgid "Back to messages"
 msgstr "Tillbaka till meddelanden"
 
@@ -1878,6 +1902,10 @@ msgstr "Meddelandet är obligatoriskt"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:206
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Bokmärk denna sida för att hantera din order när som helst."
+
+#: src/components/modals/SendMessageModal/index.tsx:519
+msgid "Both"
+msgstr "Båda"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:112
 msgid "Brand your tickets with a custom logo, colors, and footer message."
@@ -2041,7 +2069,7 @@ msgstr "Kan inte checka in"
 #: src/components/modals/PublishEventModal/index.tsx:208
 #: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
-#: src/components/routes/event/messages.tsx:80
+#: src/components/routes/event/messages.tsx:87
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:272
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:306
@@ -2246,6 +2274,14 @@ msgstr "Ändra väntlistinställningar"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Längden ändrad för {count} datum"
+
+#: src/components/modals/SendMessageModal/index.tsx:513
+msgid "Channel"
+msgstr "Kanal"
+
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "characters"
+msgstr "tecken"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:84
 msgid "Charged once per product, before the percentage is added"
@@ -2492,6 +2528,10 @@ msgstr "Välj hur evenemangsdatumet visas på biljetten"
 msgid "Choose the default setting for new events. This can be overridden for individual events."
 msgstr "Välj standardinställningen för nya evenemang. Detta kan åsidosättas för enskilda evenemang."
 
+#: src/components/modals/SendMessageModal/index.tsx:225
+msgid "Choose whether this is service information or marketing"
+msgstr "Välj om detta är serviceinformation eller marknadsföring"
+
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:51
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "Välj vem som betalar plattformsavgiften. Detta påverkar inte ytterligare avgifter som du har konfigurerat i dina kontoinställningar."
@@ -2688,7 +2728,7 @@ msgstr "Slutför din profil för att gå med i laget."
 
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
-#: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SendMessageModal/index.tsx:479
 #: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
 #: src/components/routes/event/orders.tsx:29
@@ -2709,8 +2749,8 @@ msgstr "Slutförda ordrar"
 msgid "Component Code"
 msgstr "Komponentkod"
 
-#: src/components/routes/event/messages.tsx:237
-#: src/components/routes/event/messages.tsx:282
+#: src/components/routes/event/messages.tsx:259
+#: src/components/routes/event/messages.tsx:304
 msgid "Compose"
 msgstr "Skriv"
 
@@ -2833,7 +2873,7 @@ msgstr "Koppla bank"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
 #: src/components/modals/PublishEventModal/index.tsx:79
-#: src/components/modals/SendMessageModal/index.tsx:298
+#: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Connect Stripe"
 msgstr "Anslut Stripe"
 
@@ -2845,7 +2885,7 @@ msgstr "Anslut Stripe för att ta emot betalningar"
 msgid "Connect Stripe to enable email template editing"
 msgstr "Anslut Stripe för att aktivera redigering av e-postmallar"
 
-#: src/components/modals/SendMessageModal/index.tsx:287
+#: src/components/modals/SendMessageModal/index.tsx:342
 msgid "Connect Stripe to enable messaging"
 msgstr "Anslut Stripe för att aktivera meddelanden"
 
@@ -2900,6 +2940,10 @@ msgstr "Kontakt-e-post"
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:56
 msgid "Container ID"
 msgstr "Container-ID"
+
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "contains characters outside the SMS alphabet (e.g. – or emoji), so each part holds only 70"
+msgstr "innehåller tecken utanför SMS-alfabetet (t.ex. – eller emoji), så varje del rymmer bara 70"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
@@ -3389,7 +3433,7 @@ msgstr "För närvarande tillgänglig för köp"
 #~ msgid "Custom branding"
 #~ msgstr "Egen varumärkesprofil"
 
-#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:618
 msgid "Custom date and time"
 msgstr "Anpassat datum och tid"
 
@@ -4028,7 +4072,7 @@ msgstr "Rullgardinsval"
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "På grund av hög risk för spam måste du ansluta ett Stripe-konto innan du kan ändra e-postmallar. Detta säkerställer att alla evenemangsarrangörer är verifierade och ansvariga."
 
-#: src/components/modals/SendMessageModal/index.tsx:288
+#: src/components/modals/SendMessageModal/index.tsx:343
 msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
@@ -4097,7 +4141,7 @@ msgstr "t.ex. Planerat underhåll nu på lördag kl. 2–4 UTC"
 msgid "e.g., Get Tickets, Register Now"
 msgstr "t.ex. Köp biljetter, Registrera dig nu"
 
-#: src/components/modals/SendMessageModal/index.tsx:439
+#: src/components/modals/SendMessageModal/index.tsx:544
 msgid "e.g., Important update about your tickets"
 msgstr "t.ex., viktiga uppdateringar gällande dina biljetter"
 
@@ -4293,6 +4337,8 @@ msgstr "Giltiga incheckningslistor"
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
 #: src/components/modals/ManageAttendeeModal/index.tsx:152
 #: src/components/modals/ManageOrderModal/index.tsx:136
+#: src/components/modals/SendMessageModal/index.tsx:517
+#: src/components/modals/SendMessageModal/index.tsx:661
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:120
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -4319,6 +4365,10 @@ msgstr "E-post- och aviseringsinställningar"
 msgid "Email & Templates"
 msgstr "E-post och mallar"
 
+#: src/components/routes/event/messages.tsx:74
+msgid "Email + SMS"
+msgstr "E-post + SMS"
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:223
 #: src/components/modals/ManageAttendeeModal/index.tsx:208
 #: src/components/modals/ManageOrderModal/index.tsx:242
@@ -4342,6 +4392,10 @@ msgstr "E-postadress kopierad till urklipp"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:129
 msgid "Email addresses do not match"
 msgstr "E-postadresserna matchar inte"
+
+#: src/components/modals/SendMessageModal/index.tsx:661
+msgid "Email and SMS"
+msgstr "E-post och SMS"
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
 msgid "Email Body"
@@ -4403,6 +4457,11 @@ msgstr "E-post verifierad"
 #: src/components/routes/welcome/index.tsx:99
 msgid "Email verified successfully!"
 msgstr "E-post verifierad"
+
+#: src/components/modals/SendMessageModal/index.tsx:530
+#: src/components/modals/SendMessageModal/index.tsx:663
+msgid "Email: {0} recipients"
+msgstr "E-post: {0} mottagare"
 
 #: src/components/common/WidgetEditor/index.tsx:246
 #: src/components/common/WidgetEditor/index.tsx:275
@@ -5027,7 +5086,7 @@ msgstr "Datumet kunde inte ställas in"
 msgid "Failed to cancel dates"
 msgstr "Datumen kunde inte ställas in"
 
-#: src/components/routes/event/messages.tsx:41
+#: src/components/routes/event/messages.tsx:42
 msgid "Failed to cancel message"
 msgstr "Det gick inte att avbryta meddelandet"
 
@@ -5814,6 +5873,10 @@ msgstr "Hej {0} 👋"
 msgid "Hi,"
 msgstr "Hej,"
 
+#: src/components/modals/SendMessageModal/index.tsx:566
+msgid "Hi! Doors open at 19:00. Bring your ticket QR code."
+msgstr "Hej! Dörrarna öppnar 19:00. Ta med QR-koden på din biljett."
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:75
 msgid "Hi.Events Fee"
 msgstr "Hi.Events-avgift"
@@ -6031,9 +6094,13 @@ msgstr "Jag godkänner att ta emot e-postmeddelanden relaterade till detta evene
 msgid "I agree to the <0>terms and conditions</0>"
 msgstr "Jag godkänner <0>villkoren</0>"
 
-#: src/components/modals/SendMessageModal/index.tsx:530
+#: src/components/modals/SendMessageModal/index.tsx:654
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Jag bekräftar att detta är ett transaktionsmeddelande relaterat till detta evenemang"
+
+#: src/components/modals/SendMessageModal/index.tsx:653
+msgid "I confirm this is marketing and will only reach buyers who have consented"
+msgstr "Jag bekräftar att detta är marknadsföring och att det endast går till köpare som har samtyckt"
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1032
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6419,6 +6486,10 @@ msgstr "Fortsätt redigera"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "Håll det kort — banners visar en enda rad. {0}/200"
 
+#: src/components/modals/SendMessageModal/index.tsx:565
+msgid "Keep it short. Links are optional."
+msgstr "Håll det kort. Länkar är valfria."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:621
 msgid "Keep me updated on news and events from {0}"
 msgstr "Håll mig uppdaterad om nyheter och evenemang från {0}"
@@ -6608,6 +6679,10 @@ msgstr "Ljus"
 #: src/components/routes/my-tickets/index.tsx:177
 msgid "Link Expired or Invalid"
 msgstr "Länken har gått ut eller är ogiltig"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:28
+msgid "Link not valid"
+msgstr "Länken är ogiltig"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:61
 msgid "LinkedIn"
@@ -6878,6 +6953,16 @@ msgstr "Markera som betald"
 msgid "Mark as validated (admin override)"
 msgstr "Markera som validerad (administratörsbeslut)"
 
+#: src/components/modals/SendMessageModal/index.tsx:497
+#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/routes/event/messages.tsx:77
+msgid "Marketing"
+msgstr "Marknadsföring"
+
+#: src/components/modals/SendMessageModal/index.tsx:507
+msgid "Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link."
+msgstr "Marknadsföring: erbjudanden, nyheter och andra evenemang. Går bara till köpare som kryssade i marknadsföringsrutan i kassan, och varje SMS avslutas med en avregistreringslänk."
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:177
 msgid "Mass refund #{0}"
 msgstr "Massåterbetalning #{0}"
@@ -6921,7 +7006,7 @@ msgstr "Medium"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:156
-#: src/components/modals/SendMessageModal/index.tsx:444
+#: src/components/modals/SendMessageModal/index.tsx:549
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
 msgstr "Meddelande"
@@ -6938,7 +7023,7 @@ msgstr "Meddela deltagare"
 msgid "Message Attendees"
 msgstr "Meddela deltagare"
 
-#: src/components/modals/SendMessageModal/index.tsx:401
+#: src/components/modals/SendMessageModal/index.tsx:456
 msgid "Message attendees with specific tickets"
 msgstr "Meddela deltagare med specifika biljetter"
 
@@ -6946,7 +7031,7 @@ msgstr "Meddela deltagare med specifika biljetter"
 msgid "Message buyer"
 msgstr "Meddela köpare"
 
-#: src/components/routes/event/messages.tsx:40
+#: src/components/routes/event/messages.tsx:41
 msgid "Message cancelled"
 msgstr "Meddelande avbrutet"
 
@@ -6962,7 +7047,7 @@ msgstr "Meddelandeinnehåll"
 msgid "Message Details"
 msgstr "Meddelandedetaljer"
 
-#: src/components/modals/SendMessageModal/index.tsx:101
+#: src/components/modals/SendMessageModal/index.tsx:108
 msgid "Message individual attendees"
 msgstr "Meddela enskilda deltagare"
 
@@ -6970,21 +7055,25 @@ msgstr "Meddela enskilda deltagare"
 msgid "Message is required"
 msgstr "Meddelande krävs"
 
-#: src/components/modals/SendMessageModal/index.tsx:413
+#: src/components/modals/SendMessageModal/index.tsx:468
 msgid "Message order owners with specific products"
 msgstr "Meddela orderägare med specifika produkter"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:276
 msgid "Message Scheduled"
 msgstr "Meddelande schemalagt"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:276
 msgid "Message Sent"
 msgstr "Meddelande skickat"
 
+#: src/components/modals/SendMessageModal/index.tsx:492
+msgid "Message type"
+msgstr "Typ av meddelande"
+
 #: src/components/layouts/Admin/index.tsx:18
 #: src/components/layouts/Event/index.tsx:133
-#: src/components/routes/event/messages.tsx:225
+#: src/components/routes/event/messages.tsx:247
 msgid "Messages"
 msgstr "Meddelanden"
 
@@ -7460,7 +7549,7 @@ msgstr "Inga matchande teckensnitt"
 msgid "No messages found"
 msgstr "Inga meddelanden hittades"
 
-#: src/components/routes/event/messages.tsx:322
+#: src/components/routes/event/messages.tsx:344
 msgid "No messages to show"
 msgstr "Inga meddelanden att visa"
 
@@ -7725,7 +7814,7 @@ msgstr "Nummerprefix"
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:253
 #: src/components/modals/ManageOrderModal/index.tsx:140
-#: src/components/modals/SendMessageModal/index.tsx:357
+#: src/components/modals/SendMessageModal/index.tsx:412
 msgid "Occurrence"
 msgstr "Datum"
 
@@ -7959,7 +8048,7 @@ msgstr "Tillgänglig endast som tillägg"
 msgid "Only published announcements are shown to users"
 msgstr "Endast publicerade meddelanden visas för användare"
 
-#: src/components/modals/SendMessageModal/index.tsx:421
+#: src/components/modals/SendMessageModal/index.tsx:476
 msgid "Only send to orders with these statuses"
 msgstr "Skicka endast till ordrar med dessa statusar"
 
@@ -8177,7 +8266,7 @@ msgstr "Ordernummer, köpdatum, köparens e-post"
 msgid "Order owner"
 msgstr "Orderägare"
 
-#: src/components/modals/SendMessageModal/index.tsx:385
+#: src/components/modals/SendMessageModal/index.tsx:440
 msgid "Order owners with a specific product"
 msgstr "Orderägare med en specifik produkt"
 
@@ -8201,7 +8290,7 @@ msgstr "Order återbetalad"
 msgid "Order Status"
 msgstr "Orderstatus"
 
-#: src/components/modals/SendMessageModal/index.tsx:422
+#: src/components/modals/SendMessageModal/index.tsx:477
 msgid "Order statuses"
 msgstr "Orderstatusar"
 
@@ -9271,7 +9360,7 @@ msgstr "Rapport för kampanjkoder"
 msgid "Promo Only"
 msgstr "Endast kampanj"
 
-#: src/components/modals/SendMessageModal/index.tsx:575
+#: src/components/modals/SendMessageModal/index.tsx:728
 msgid "Promotional emails may result in account suspension"
 msgstr "Marknadsföringsmejl kan leda till att kontot stängs av"
 
@@ -9473,7 +9562,7 @@ msgstr "Senaste ordrar"
 msgid "recipient"
 msgstr "mottagare"
 
-#: src/components/modals/SendMessageModal/index.tsx:67
+#: src/components/modals/SendMessageModal/index.tsx:74
 msgid "Recipient"
 msgstr "Mottagare"
 
@@ -9482,13 +9571,13 @@ msgid "recipients"
 msgstr "mottagare"
 
 #: src/components/modals/MessageRecipientsModal/index.tsx:38
-#: src/components/modals/SendMessageModal/index.tsx:388
+#: src/components/modals/SendMessageModal/index.tsx:443
 #: src/components/routes/admin/Messages/index.tsx:166
 #: src/components/routes/admin/Messages/index.tsx:300
 msgid "Recipients"
 msgstr "Mottagare"
 
-#: src/components/routes/event/messages.tsx:96
+#: src/components/routes/event/messages.tsx:103
 msgid "Recipients are available after the message is sent"
 msgstr "Mottagare är tillgängliga efter att meddelandet har skickats"
 
@@ -9890,6 +9979,14 @@ msgstr "Intäkter"
 msgid "Revenue Summary"
 msgstr "Sammanfattning av intäkter"
 
+#: src/components/modals/SendMessageModal/index.tsx:690
+msgid "Review and send"
+msgstr "Granska och skicka"
+
+#: src/components/modals/SendMessageModal/index.tsx:659
+msgid "Review before sending"
+msgstr "Granska innan du skickar"
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
 msgid "Revoke invitation"
 msgstr "Återkalla inbjudan"
@@ -10137,11 +10234,11 @@ msgstr "Schemat har skapats"
 msgid "Schedule ends on"
 msgstr "Schemat slutar"
 
-#: src/components/modals/SendMessageModal/index.tsx:472
+#: src/components/modals/SendMessageModal/index.tsx:594
 msgid "Schedule for later"
 msgstr "Schemalägg för senare"
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:690
 msgid "Schedule Message"
 msgstr "Schemalägg meddelande"
 
@@ -10155,7 +10252,7 @@ msgstr "Schemat börjar"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:92
 #: src/components/routes/admin/Messages/index.tsx:125
-#: src/components/routes/event/messages.tsx:62
+#: src/components/routes/event/messages.tsx:63
 msgid "Scheduled"
 msgstr "Schemalagd"
 
@@ -10163,7 +10260,7 @@ msgstr "Schemalagd"
 msgid "Scheduled deletion"
 msgstr "Schemalagd radering"
 
-#: src/components/modals/SendMessageModal/index.tsx:502
+#: src/components/modals/SendMessageModal/index.tsx:624
 msgid "Scheduled time"
 msgstr "Schemalagd tid"
 
@@ -10261,7 +10358,7 @@ msgstr "Sök datum…"
 msgid "Search for an address"
 msgstr "Sök efter en adress"
 
-#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:265
 msgid "Search messages..."
 msgstr "Sök meddelanden..."
 
@@ -10335,7 +10432,7 @@ msgstr "Välj datum och tid"
 msgid "Select a date to see available times"
 msgstr "Välj ett datum för att se lediga tider"
 
-#: src/components/routes/event/messages.tsx:341
+#: src/components/routes/event/messages.tsx:363
 msgid "Select a message to view its contents"
 msgstr "Välj ett meddelande för att visa dess innehåll"
 
@@ -10371,7 +10468,7 @@ msgstr "Välj minst ett konto"
 msgid "Select at least one user"
 msgstr "Välj minst en användare"
 
-#: src/components/modals/SendMessageModal/index.tsx:390
+#: src/components/modals/SendMessageModal/index.tsx:445
 msgid "Select attendee group"
 msgstr "Välj deltagargrupp"
 
@@ -10427,7 +10524,7 @@ msgstr "Välj produktnivå"
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:49
 #: src/components/forms/PromoCodeForm/index.tsx:158
 #: src/components/forms/QuestionForm/index.tsx:160
-#: src/components/modals/SendMessageModal/index.tsx:414
+#: src/components/modals/SendMessageModal/index.tsx:469
 msgid "Select products"
 msgstr "Välj produkter"
 
@@ -10456,7 +10553,7 @@ msgid "Select Ticket"
 msgstr "Välj biljett"
 
 #: src/components/forms/CheckInListForm/index.tsx:120
-#: src/components/modals/SendMessageModal/index.tsx:402
+#: src/components/modals/SendMessageModal/index.tsx:457
 msgid "Select tickets"
 msgstr "Välj biljetter"
 
@@ -10470,7 +10567,7 @@ msgstr "Välj tidsperiod"
 msgid "Select timezone"
 msgstr "Välj tidszon"
 
-#: src/components/modals/SendMessageModal/index.tsx:389
+#: src/components/modals/SendMessageModal/index.tsx:444
 msgid "Select which attendees should receive this message"
 msgstr "Välj vilka deltagare som ska få detta meddelande"
 
@@ -10509,11 +10606,11 @@ msgstr "Säljer snabbt 🔥"
 msgid "Send"
 msgstr "Skicka"
 
-#: src/components/modals/SendMessageModal/index.tsx:270
+#: src/components/modals/SendMessageModal/index.tsx:325
 msgid "Send a message"
 msgstr "Skicka ett meddelande"
 
-#: src/components/modals/SendMessageModal/index.tsx:560
+#: src/components/modals/SendMessageModal/index.tsx:713
 msgid "Send as test"
 msgstr "Skicka som test"
 
@@ -10521,20 +10618,20 @@ msgstr "Skicka som test"
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr "Skicka ett SMS till köparen med länk till biljetterna när en order är slutförd, samt ett meddelande om ordern återbetalas i sin helhet."
 
-#: src/components/routes/event/messages.tsx:325
+#: src/components/routes/event/messages.tsx:347
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "Skicka e-post till deltagare, biljettinnehavare eller orderägare. Meddelanden kan skickas omedelbart eller schemaläggas för senare."
 
-#: src/components/modals/SendMessageModal/index.tsx:568
+#: src/components/modals/SendMessageModal/index.tsx:721
 msgid "Send me a copy"
 msgstr "Skicka en kopia till mig"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:690
 msgid "Send Message"
 msgstr "Skicka meddelande"
 
-#: src/components/modals/SendMessageModal/index.tsx:464
+#: src/components/modals/SendMessageModal/index.tsx:586
 msgid "Send now"
 msgstr "Skicka nu"
 
@@ -10558,7 +10655,7 @@ msgstr "Skicka återställningslänk"
 msgid "Send Swish request for {amountLabel}"
 msgstr "Skicka Swish-förfrågan på {amountLabel}"
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:690
 msgid "Send Test"
 msgstr "Skicka test"
 
@@ -10566,13 +10663,17 @@ msgstr "Skicka test"
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr "Skicka biljett-SMS så här många timmar före evenemangets start"
 
-#: src/components/modals/SendMessageModal/index.tsx:358
+#: src/components/modals/SendMessageModal/index.tsx:413
 msgid "Send to all occurrences, or choose a specific one"
 msgstr "Skicka till alla datum, eller välj ett specifikt"
 
-#: src/components/routes/event/messages.tsx:335
+#: src/components/routes/event/messages.tsx:357
 msgid "Send your first message"
 msgstr "Skicka ditt första meddelande"
+
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "Sender"
+msgstr "Avsändare"
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
@@ -10644,6 +10745,15 @@ msgstr "Serviceavgift"
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
 msgstr "Serviceavgifter"
+
+#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:661
+msgid "Service information"
+msgstr "Serviceinformation"
+
+#: src/components/modals/SendMessageModal/index.tsx:508
+msgid "Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket."
+msgstr "Serviceinformation: praktiska uppgifter om evenemanget mottagarna har biljett till, t.ex. tider, insläpp och ändringar. Går till alla med biljett."
 
 #: src/components/layouts/CheckIn/index.tsx:498
 msgid "Session cancelled"
@@ -10857,7 +10967,7 @@ msgstr "Visar {0}–{1} av {2}"
 msgid "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgstr "Visar {MAX_VISIBLE} av {totalAvailable} datum. Skriv för att söka."
 
-#: src/components/modals/SendMessageModal/index.tsx:349
+#: src/components/modals/SendMessageModal/index.tsx:404
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Visar de {0} första – de återstående {1} tillfällena omfattas ändå när meddelandet skickas."
 
@@ -10928,6 +11038,16 @@ msgstr "Slovakiska"
 msgid "Smith"
 msgstr "Smith"
 
+#: src/components/modals/SendMessageModal/index.tsx:518
+#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/routes/event/messages.tsx:74
+msgid "SMS"
+msgstr "SMS"
+
+#: src/components/routes/event/messages.tsx:112
+msgid "SMS cost approx. {0}"
+msgstr "SMS-kostnad ca {0}"
+
 #: src/components/routes/organizer/Settings/index.tsx:87
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
@@ -10945,9 +11065,26 @@ msgstr "SMS-leverans är inte tillgänglig ännu"
 msgid "SMS delivery settings saved."
 msgstr "Inställningarna för SMS-leverans har sparats."
 
+#: src/components/modals/SendMessageModal/index.tsx:526
+msgid "SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages."
+msgstr "SMS är ett betalt tillägg. Aktivera SMS-utskick i arrangörsinställningarna för att skicka textmeddelanden."
+
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 msgstr "SMS-utskick är inte aktiverat på plattformen ännu. Dina inställningar sparas, men inga meddelanden skickas förrän det är aktiverat."
+
+#: src/components/modals/SendMessageModal/index.tsx:562
+#: src/components/routes/event/messages.tsx:121
+msgid "SMS text"
+msgstr "SMS-text"
+
+#: src/components/modals/SendMessageModal/index.tsx:532
+msgid "SMS: {0} recipients"
+msgstr "SMS: {0} mottagare"
+
+#: src/components/modals/SendMessageModal/index.tsx:665
+msgid "SMS: {0} recipients, {1} part(s), approx. {2} each ≈ {3}"
+msgstr "SMS: {0} mottagare, {1} del(ar), ca {2} per mottagare ≈ {3}"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:73
 msgid "Snapchat"
@@ -11042,6 +11179,7 @@ msgstr "Något gick fel. Försök igen senare."
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
+#: src/components/routes/public/MarketingOptOut/index.tsx:63
 msgid "Something went wrong. Please try again."
 msgstr "Något gick fel. Försök igen."
 
@@ -11209,6 +11347,10 @@ msgstr "Behövs fortfarande"
 msgid "Stop Impersonating"
 msgstr "Sluta impersonera"
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:52
+msgid "Stop receiving marketing messages from {organizer} by SMS and email. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr "Sluta ta emot marknadsföring från {organizer} via SMS och e-post. Biljettbekräftelser och praktisk information om evenemang du har biljett till skickas fortfarande."
+
 #: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11261,7 +11403,7 @@ msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe guidar dig genom några snabba frågor för att slutföra inställningen."
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
-#: src/components/modals/SendMessageModal/index.tsx:438
+#: src/components/modals/SendMessageModal/index.tsx:543
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
@@ -11567,7 +11709,7 @@ msgstr "Målkonton"
 msgid "Target users"
 msgstr "Målanvändare"
 
-#: src/components/modals/SendMessageModal/index.tsx:335
+#: src/components/modals/SendMessageModal/index.tsx:390
 msgid "Targeting attendees across {0} selected sessions."
 msgstr "Riktar sig till deltagare på {0} valda tillfällen."
 
@@ -11842,17 +11984,21 @@ msgstr "Den snabba bruna räven hoppar över den lata hunden."
 msgid "The request will be sent to {0}"
 msgstr "Förfrågan skickas till {0}"
 
-#: src/components/modals/SendMessageModal/index.tsx:208
+#: src/components/modals/SendMessageModal/index.tsx:231
 msgid "The scheduled time is required"
 msgstr "Den schemalagda tiden är obligatorisk"
 
-#: src/components/modals/SendMessageModal/index.tsx:209
+#: src/components/modals/SendMessageModal/index.tsx:232
 msgid "The scheduled time must be in the future"
 msgstr "Den schemalagda tiden måste vara i framtiden"
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "Tillfället för ”{title}”, ursprungligen planerat till {0}, har flyttats."
+
+#: src/components/modals/SendMessageModal/index.tsx:227
+msgid "The subject is required"
+msgstr "Ämne måste anges"
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
 msgid "The Swish payment request expired before it was approved."
@@ -12244,6 +12390,10 @@ msgstr "Denna biljett är inte längre giltig"
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "Den här biljetten skannades nyss. Vänta innan du skannar igen."
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:29
+msgid "This unsubscribe link is not valid. It may have been copied incompletely."
+msgstr "Den här avregistreringslänken är ogiltig. Den kan ha kopierats ofullständigt."
+
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Den här användaren är inte aktiv eftersom hen inte har accepterat sin inbjudan."
@@ -12486,11 +12636,11 @@ msgstr "Titel krävs"
 msgid "to"
 msgstr "till"
 
-#: src/components/routes/event/messages.tsx:93
+#: src/components/routes/event/messages.tsx:100
 msgid "To"
 msgstr "Till"
 
-#: src/components/modals/SendMessageModal/index.tsx:315
+#: src/components/modals/SendMessageModal/index.tsx:370
 msgid "To increase your limits, contact us at"
 msgstr "För att öka dina gränser, kontakta oss på"
 
@@ -12696,6 +12846,10 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "Typ"
 
+#: src/components/modals/SendMessageModal/index.tsx:671
+msgid "Type \"{0}\" exactly to enable sending to more than 100 recipients."
+msgstr "Skriv \"{0}\" exakt för att kunna skicka till fler än 100 mottagare."
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:398
 msgid "Type \"{eventTitle}\" exactly to enable the refund button."
 msgstr "Skriv \"{eventTitle}\" exakt för att aktivera återbetalningsknappen."
@@ -12705,6 +12859,7 @@ msgstr "Skriv \"{eventTitle}\" exakt för att aktivera återbetalningsknappen."
 msgid "Type \"delete\" to confirm"
 msgstr "Skriv \"ta bort\" för att bekräfta"
 
+#: src/components/modals/SendMessageModal/index.tsx:670
 #: src/components/modals/SwishMassRefundModal/index.tsx:397
 msgid "Type the event name to confirm"
 msgstr "Skriv evenemangets namn för att bekräfta"
@@ -12790,8 +12945,8 @@ msgstr "Sålda enheter"
 
 #: src/components/common/MessageList/index.tsx:44
 #: src/components/common/MessageList/index.tsx:49
-#: src/components/routes/event/messages.tsx:27
-#: src/components/routes/event/messages.tsx:66
+#: src/components/routes/event/messages.tsx:28
+#: src/components/routes/event/messages.tsx:67
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:439
 msgid "Unknown"
 msgstr "Okänd"
@@ -12836,6 +12991,18 @@ msgstr "Obetald"
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:32
 msgid "Unpaid Order"
 msgstr "Obetald order"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:51
+msgid "Unsubscribe from marketing"
+msgstr "Avregistrera dig från marknadsföring"
+
+#: src/components/modals/SendMessageModal/index.tsx:564
+msgid "unsubscribe link is added automatically"
+msgstr "avregistreringslänk läggs till automatiskt"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:60
+msgid "Unsubscribe me"
+msgstr "Avregistrera mig"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1075
 msgid "until"
@@ -13869,6 +14036,10 @@ msgstr "Arbetar..."
 msgid "Workshop"
 msgstr "Workshop"
 
+#: src/components/modals/SendMessageModal/index.tsx:226
+msgid "Write the SMS text"
+msgstr "Skriv SMS-texten"
+
 #: src/components/common/ContactOrganizerModal/index.tsx:89
 msgid "Write your message here..."
 msgstr "Skriv ditt meddelande här..."
@@ -13928,6 +14099,10 @@ msgstr "Du gör en delåterbetalning. Kunden kommer att få {0} {1} återbetalat
 #: src/components/layouts/CheckIn/index.tsx:292
 msgid "You are offline"
 msgstr "Du är offline"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:46
+msgid "You are unsubscribed"
+msgstr "Du är avregistrerad"
 
 #: src/components/common/PlatformFeesSettings/index.tsx:259
 msgid "You can configure additional service fees and taxes in your account settings."
@@ -13990,7 +14165,7 @@ msgstr "Du har ingen väntande ändring av e-postadress."
 msgid "You have paid tickets, but Stripe isn't connected yet, so you can't take payments."
 msgstr "Du har betalbiljetter, men Stripe är inte anslutet ännu, så du kan inte ta emot betalningar."
 
-#: src/components/modals/SendMessageModal/index.tsx:248
+#: src/components/modals/SendMessageModal/index.tsx:283
 msgid "You have reached your messaging limit."
 msgstr "Du har nått din meddelandegräns."
 
@@ -14012,8 +14187,8 @@ msgid "You have unsaved changes. Publishing the page does not save them."
 msgstr "Du har osparade ändringar. Att publicera sidan sparar dem inte."
 
 #: src/components/modals/SendMessageModal/index.tsx:204
-msgid "You must acknowledge that this email is not promotional"
-msgstr "Du måste bekräfta att det här e-postmeddelandet inte är reklam"
+#~ msgid "You must acknowledge that this email is not promotional"
+#~ msgstr "Du måste bekräfta att det här e-postmeddelandet inte är reklam"
 
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:145
 msgid "You must acknowledge your responsibilities before saving"
@@ -14026,6 +14201,10 @@ msgstr "Du måste godkänna att ta emot meddelanden"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:34
 msgid "You must agree to the terms and conditions"
 msgstr "Du måste godkänna villkoren"
+
+#: src/components/modals/SendMessageModal/index.tsx:224
+msgid "You must confirm the message type before sending"
+msgstr "Du måste bekräfta typen av meddelande innan du skickar"
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:163
 msgid "You must create a ticket before you can manually add an attendee."
@@ -14047,7 +14226,7 @@ msgstr "Du behöver skapa minst ett datum innan du kan lägga till deltagare i d
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "Du behöver verifiera kontots e-postadress innan du kan ändra e-postmallar."
 
-#: src/components/modals/SendMessageModal/index.tsx:281
+#: src/components/modals/SendMessageModal/index.tsx:336
 msgid "You need to verify your account email before you can send messages."
 msgstr "Du behöver verifiera kontots e-postadress innan du kan skicka meddelanden."
 
@@ -14058,6 +14237,10 @@ msgstr "Du får"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Du behöver markera en order som betald manuellt. Det kan göras på sidan för att hantera ordern."
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:47
+msgid "You will no longer receive marketing messages from {organizer}. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr "Du får inte längre marknadsföring från {organizer}. Biljettbekräftelser och praktisk information om evenemang du har biljett till skickas fortfarande."
 
 #: src/components/modals/CreateEventModal/index.tsx:253
 msgid "You'll be able to set up dates, schedules, and recurrence rules in the next step."
@@ -14103,7 +14286,7 @@ msgstr "Du har ändrat tiden för tillfället"
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."
 msgstr "Ditt konto har inaktiverats och raderas permanent den <0>{0}</0>."
 
-#: src/components/modals/SendMessageModal/index.tsx:324
+#: src/components/modals/SendMessageModal/index.tsx:379
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "Ditt konto har meddelandebegränsningar. För att öka dina gränser, kontakta oss på"
 
@@ -14167,7 +14350,7 @@ msgstr "Ditt meddelande har skickats"
 msgid "Your message has been sent successfully!"
 msgstr "Ditt meddelande har skickats!"
 
-#: src/components/routes/event/messages.tsx:275
+#: src/components/routes/event/messages.tsx:297
 msgid "Your messages will appear here"
 msgstr "Dina meddelanden visas här"
 

@@ -23,6 +23,7 @@ const ALLOWED_UNAUTHENTICATED_PATHS = [
     'widget',
     '/product/',
     '/t/',
+    '/u/',
     'check-in',
     '/events/',
     'my-tickets',

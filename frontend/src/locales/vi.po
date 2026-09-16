@@ -72,6 +72,10 @@ msgstr "{0} Có sẵn"
 msgid "{0} created successfully"
 msgstr "{0} đã tạo thành công"
 
+#: src/components/modals/SendMessageModal/index.tsx:528
+msgid "{0} excluded without marketing consent"
+msgstr ""
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:437
 msgid "{0} left"
 msgstr "Còn {0}"
@@ -94,6 +98,10 @@ msgstr "Đã kín {0} trong số {1} chỗ."
 msgid "{0} organizers"
 msgstr "{0} nhà tổ chức"
 
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "{0} part(s)"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:650
 msgid "{0} tickets"
 msgstr "{0} vé"
@@ -101,6 +109,10 @@ msgstr "{0} vé"
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} cập nhật thành công"
+
+#: src/components/modals/SendMessageModal/index.tsx:527
+msgid "{0} without a mobile number"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:417
 msgid "{activeCount} enabled"
@@ -285,15 +297,15 @@ msgstr "Có 1 người tham dự đã đăng ký cho các buổi bị ảnh hư�
 msgid "1 attendee is registered for this session."
 msgstr "Có 1 người tham dự đã đăng ký cho buổi này."
 
-#: src/components/modals/SendMessageModal/index.tsx:128
+#: src/components/modals/SendMessageModal/index.tsx:135
 msgid "1 day after end date"
 msgstr "1 ngày sau ngày kết thúc"
 
-#: src/components/modals/SendMessageModal/index.tsx:122
+#: src/components/modals/SendMessageModal/index.tsx:129
 msgid "1 day after start date"
 msgstr "1 ngày sau ngày bắt đầu"
 
-#: src/components/modals/SendMessageModal/index.tsx:120
+#: src/components/modals/SendMessageModal/index.tsx:127
 msgid "1 day before event"
 msgstr "1 ngày trước sự kiện"
 
@@ -301,7 +313,7 @@ msgstr "1 ngày trước sự kiện"
 msgid "1 hour before"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:121
+#: src/components/modals/SendMessageModal/index.tsx:128
 msgid "1 hour before event"
 msgstr "1 giờ trước sự kiện"
 
@@ -322,7 +334,7 @@ msgstr "Đã thiết lập 1 loại vé"
 msgid "1 time available"
 msgstr "1 giờ khả dụng"
 
-#: src/components/modals/SendMessageModal/index.tsx:119
+#: src/components/modals/SendMessageModal/index.tsx:126
 msgid "1 week before event"
 msgstr "1 tuần trước sự kiện"
 
@@ -967,15 +979,15 @@ msgstr "Tất cả sự kiện đã lưu trữ"
 msgid "All attendees"
 msgstr "Tất cả người tham dự"
 
-#: src/components/modals/SendMessageModal/index.tsx:378
+#: src/components/modals/SendMessageModal/index.tsx:427
 msgid "All attendees of the selected sessions"
 msgstr "Toàn bộ người tham dự của các buổi đã chọn"
 
-#: src/components/modals/SendMessageModal/index.tsx:381
+#: src/components/modals/SendMessageModal/index.tsx:430
 msgid "All attendees of this event"
 msgstr "Tất cả những người tham dự sự kiện này"
 
-#: src/components/modals/SendMessageModal/index.tsx:380
+#: src/components/modals/SendMessageModal/index.tsx:429
 msgid "All attendees of this occurrence"
 msgstr "Toàn bộ người tham dự của ngày này"
 
@@ -1020,7 +1032,7 @@ msgid "All matching dates"
 msgstr "Tất cả các ngày phù hợp"
 
 #: src/components/forms/CheckInListForm/index.tsx:132
-#: src/components/modals/SendMessageModal/index.tsx:359
+#: src/components/modals/SendMessageModal/index.tsx:408
 msgid "All occurrences"
 msgstr "Tất cả các ngày"
 
@@ -1281,6 +1293,10 @@ msgstr "Phê duyệt tin nhắn"
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:220
 msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "approx. {0} per recipient"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
@@ -1646,7 +1662,7 @@ msgstr "Người tham dự đã đăng ký"
 msgid "Attendees Registered"
 msgstr "Người tham dự đã đăng ký"
 
-#: src/components/modals/SendMessageModal/index.tsx:373
+#: src/components/modals/SendMessageModal/index.tsx:422
 msgid "Attendees with a specific ticket"
 msgstr "Người tham dự có vé cụ thể"
 
@@ -1724,7 +1740,7 @@ msgid "Awaiting"
 msgstr "Đang chờ"
 
 #: src/components/common/OrderStatusBadge/index.tsx:11
-#: src/components/modals/SendMessageModal/index.tsx:425
+#: src/components/modals/SendMessageModal/index.tsx:474
 msgid "Awaiting offline payment"
 msgstr "Đang chờ thanh toán offline"
 
@@ -1765,6 +1781,10 @@ msgstr "Công ty TNHH Awesome Events"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Nhà tổ chức tuyệt vời Ltd."
+
+#: src/components/modals/SendMessageModal/index.tsx:686
+msgid "Back"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:106
 msgid "Back to Accounts"
@@ -1878,6 +1898,10 @@ msgstr "Nội dung là bắt buộc"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:206
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Đánh dấu trang này để quản lý đơn hàng của bạn bất cứ lúc nào."
+
+#: src/components/modals/SendMessageModal/index.tsx:513
+msgid "Both"
+msgstr ""
 
 #: src/components/routes/event/TicketDesigner/index.tsx:112
 msgid "Brand your tickets with a custom logo, colors, and footer message."
@@ -2041,7 +2065,7 @@ msgstr "Không thể check-in"
 #: src/components/modals/PublishEventModal/index.tsx:208
 #: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
-#: src/components/routes/event/messages.tsx:80
+#: src/components/routes/event/messages.tsx:86
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:272
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:306
@@ -2246,6 +2270,14 @@ msgstr "Thay đổi cài đặt danh sách chờ"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Đã đổi thời lượng cho {count} ngày"
+
+#: src/components/modals/SendMessageModal/index.tsx:507
+msgid "Channel"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "characters"
+msgstr ""
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:84
 msgid "Charged once per product, before the percentage is added"
@@ -2492,6 +2524,10 @@ msgstr "Chọn cách hiển thị ngày sự kiện trên vé"
 msgid "Choose the default setting for new events. This can be overridden for individual events."
 msgstr "Chọn cài đặt mặc định cho các sự kiện mới. Điều này có thể được ghi đè cho từng sự kiện riêng lẻ."
 
+#: src/components/modals/SendMessageModal/index.tsx:219
+msgid "Choose whether this is service information or marketing"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:51
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "Chọn ai trả phí nền tảng. Điều này không ảnh hưởng đến các khoản phí bổ sung mà bạn đã cấu hình trong cài đặt tài khoản."
@@ -2688,7 +2724,7 @@ msgstr "Hoàn thành hồ sơ của bạn để tham gia nhóm."
 
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
-#: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SendMessageModal/index.tsx:473
 #: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
 #: src/components/routes/event/orders.tsx:29
@@ -2709,8 +2745,8 @@ msgstr "Đơn hàng đã hoàn thành"
 msgid "Component Code"
 msgstr "Mã component"
 
-#: src/components/routes/event/messages.tsx:237
-#: src/components/routes/event/messages.tsx:282
+#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:288
 msgid "Compose"
 msgstr "Soạn"
 
@@ -2833,7 +2869,7 @@ msgstr "Kết nối ngân hàng"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
 #: src/components/modals/PublishEventModal/index.tsx:79
-#: src/components/modals/SendMessageModal/index.tsx:298
+#: src/components/modals/SendMessageModal/index.tsx:347
 msgid "Connect Stripe"
 msgstr "Kết nối Stripe"
 
@@ -2845,7 +2881,7 @@ msgstr "Kết nối Stripe để nhận thanh toán"
 msgid "Connect Stripe to enable email template editing"
 msgstr "Kết nối Stripe để bật chỉnh sửa mẫu email"
 
-#: src/components/modals/SendMessageModal/index.tsx:287
+#: src/components/modals/SendMessageModal/index.tsx:336
 msgid "Connect Stripe to enable messaging"
 msgstr "Kết nối Stripe để bật tính năng nhắn tin"
 
@@ -3389,7 +3425,7 @@ msgstr "Hiện có sẵn để mua"
 #~ msgid "Custom branding"
 #~ msgstr "Thương hiệu riêng"
 
-#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:612
 msgid "Custom date and time"
 msgstr "Ngày và giờ tùy chỉnh"
 
@@ -4028,7 +4064,7 @@ msgstr "Lựa chọn thả xuống"
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "Do nguy cơ spam cao, bạn phải kết nối tài khoản Stripe trước khi có thể chỉnh sửa mẫu email. Điều này để đảm bảo tất cả các nhà tổ chức sự kiện được xác minh và có trách nhiệm."
 
-#: src/components/modals/SendMessageModal/index.tsx:288
+#: src/components/modals/SendMessageModal/index.tsx:337
 msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
@@ -4097,7 +4133,7 @@ msgstr "VD: Bảo trì định kỳ thứ Bảy này từ 2-4 giờ sáng UTC"
 msgid "e.g., Get Tickets, Register Now"
 msgstr "ví dụ: Mua vé, Đăng ký ngay"
 
-#: src/components/modals/SendMessageModal/index.tsx:439
+#: src/components/modals/SendMessageModal/index.tsx:538
 msgid "e.g., Important update about your tickets"
 msgstr "ví dụ: Cập nhật quan trọng về vé của bạn"
 
@@ -4293,6 +4329,8 @@ msgstr "Danh Sách Đăng Ký Đủ Điều Kiện"
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
 #: src/components/modals/ManageAttendeeModal/index.tsx:152
 #: src/components/modals/ManageOrderModal/index.tsx:136
+#: src/components/modals/SendMessageModal/index.tsx:511
+#: src/components/modals/SendMessageModal/index.tsx:654
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:120
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -4319,6 +4357,10 @@ msgstr "Cài đặt email & thông báo"
 msgid "Email & Templates"
 msgstr "Email & Mẫu"
 
+#: src/components/routes/event/messages.tsx:73
+msgid "Email + SMS"
+msgstr ""
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:223
 #: src/components/modals/ManageAttendeeModal/index.tsx:208
 #: src/components/modals/ManageOrderModal/index.tsx:242
@@ -4342,6 +4384,10 @@ msgstr "Đã sao chép địa chỉ email vào clipboard"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:129
 msgid "Email addresses do not match"
 msgstr "Địa chỉ email không khớp"
+
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Email and SMS"
+msgstr ""
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
 msgid "Email Body"
@@ -4403,6 +4449,11 @@ msgstr "Đã xác minh email"
 #: src/components/routes/welcome/index.tsx:99
 msgid "Email verified successfully!"
 msgstr "Xác thực email thành công!"
+
+#: src/components/modals/SendMessageModal/index.tsx:524
+#: src/components/modals/SendMessageModal/index.tsx:656
+msgid "Email: {0} recipients"
+msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:246
 #: src/components/common/WidgetEditor/index.tsx:275
@@ -5814,6 +5865,10 @@ msgstr "Chào {0} 👋"
 msgid "Hi,"
 msgstr "Xin chào,"
 
+#: src/components/modals/SendMessageModal/index.tsx:560
+msgid "Hi! Doors open at 19:00. Bring your ticket QR code."
+msgstr ""
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:75
 msgid "Hi.Events Fee"
 msgstr "Phí Hi.Events"
@@ -6031,9 +6086,13 @@ msgstr "Tôi đồng ý nhận thông báo qua email liên quan đến sự ki�
 msgid "I agree to the <0>terms and conditions</0>"
 msgstr "Tôi đồng ý với <0>các điều khoản và điều kiện</0>"
 
-#: src/components/modals/SendMessageModal/index.tsx:530
+#: src/components/modals/SendMessageModal/index.tsx:648
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Tôi xác nhận đây là tin nhắn giao dịch liên quan đến sự kiện này"
+
+#: src/components/modals/SendMessageModal/index.tsx:647
+msgid "I confirm this is marketing and will only reach buyers who have consented"
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1032
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6419,6 +6478,10 @@ msgstr "Tiếp tục sửa"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "Hãy ngắn gọn — banner chỉ hiển thị một dòng. {0}/200"
 
+#: src/components/modals/SendMessageModal/index.tsx:559
+msgid "Keep it short. Links are optional."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:621
 msgid "Keep me updated on news and events from {0}"
 msgstr "Giữ cho tôi cập nhật tin tức và sự kiện từ {0}"
@@ -6608,6 +6671,10 @@ msgstr "Sáng"
 #: src/components/routes/my-tickets/index.tsx:177
 msgid "Link Expired or Invalid"
 msgstr "Liên kết hết hạn hoặc không hợp lệ"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:28
+msgid "Link not valid"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:61
 msgid "LinkedIn"
@@ -6878,6 +6945,16 @@ msgstr "Đánh dấu đã trả tiền"
 msgid "Mark as validated (admin override)"
 msgstr "Đánh dấu là đã xác thực (quản trị viên phê duyệt)"
 
+#: src/components/modals/SendMessageModal/index.tsx:491
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:76
+msgid "Marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:501
+msgid "Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:177
 msgid "Mass refund #{0}"
 msgstr ""
@@ -6921,7 +6998,7 @@ msgstr "Phương tiện"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:156
-#: src/components/modals/SendMessageModal/index.tsx:444
+#: src/components/modals/SendMessageModal/index.tsx:543
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
 msgstr "Tin nhắn"
@@ -6938,7 +7015,7 @@ msgstr "Tin nhắn cho người tham dự"
 msgid "Message Attendees"
 msgstr "Tin nhắn cho người tham dự"
 
-#: src/components/modals/SendMessageModal/index.tsx:401
+#: src/components/modals/SendMessageModal/index.tsx:450
 msgid "Message attendees with specific tickets"
 msgstr "Nhắn tin cho người tham dự có vé cụ thể"
 
@@ -6962,7 +7039,7 @@ msgstr "Nội dung tin nhắn"
 msgid "Message Details"
 msgstr "Chi tiết tin nhắn"
 
-#: src/components/modals/SendMessageModal/index.tsx:101
+#: src/components/modals/SendMessageModal/index.tsx:108
 msgid "Message individual attendees"
 msgstr "Tin nhắn cho những người tham dự cá nhân"
 
@@ -6970,21 +7047,25 @@ msgstr "Tin nhắn cho những người tham dự cá nhân"
 msgid "Message is required"
 msgstr "Tin nhắn là bắt buộc"
 
-#: src/components/modals/SendMessageModal/index.tsx:413
+#: src/components/modals/SendMessageModal/index.tsx:462
 msgid "Message order owners with specific products"
 msgstr "Nhắn tin cho chủ đơn hàng có sản phẩm cụ thể"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Scheduled"
 msgstr "Tin nhắn đã được lên lịch"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Sent"
 msgstr "Tin nhắn được gửi"
 
+#: src/components/modals/SendMessageModal/index.tsx:486
+msgid "Message type"
+msgstr ""
+
 #: src/components/layouts/Admin/index.tsx:18
 #: src/components/layouts/Event/index.tsx:133
-#: src/components/routes/event/messages.tsx:225
+#: src/components/routes/event/messages.tsx:231
 msgid "Messages"
 msgstr "Tin nhắn"
 
@@ -7460,7 +7541,7 @@ msgstr "Không tìm thấy phông chữ phù hợp"
 msgid "No messages found"
 msgstr "Không tìm thấy tin nhắn"
 
-#: src/components/routes/event/messages.tsx:322
+#: src/components/routes/event/messages.tsx:328
 msgid "No messages to show"
 msgstr "Không có tin nhắn nào hiển thị"
 
@@ -7725,7 +7806,7 @@ msgstr "Tiền tố số"
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:253
 #: src/components/modals/ManageOrderModal/index.tsx:140
-#: src/components/modals/SendMessageModal/index.tsx:357
+#: src/components/modals/SendMessageModal/index.tsx:406
 msgid "Occurrence"
 msgstr "Ngày"
 
@@ -7959,7 +8040,7 @@ msgstr "Chỉ có sẵn dưới dạng bổ sung"
 msgid "Only published announcements are shown to users"
 msgstr "Chỉ những thông báo đã xuất bản mới hiển thị cho người dùng"
 
-#: src/components/modals/SendMessageModal/index.tsx:421
+#: src/components/modals/SendMessageModal/index.tsx:470
 msgid "Only send to orders with these statuses"
 msgstr "Chỉ gửi đến các đơn hàng có trạng thái này"
 
@@ -8177,7 +8258,7 @@ msgstr "Số đơn hàng, ngày mua, email người mua"
 msgid "Order owner"
 msgstr "Chủ sở hữu đơn hàng"
 
-#: src/components/modals/SendMessageModal/index.tsx:385
+#: src/components/modals/SendMessageModal/index.tsx:434
 msgid "Order owners with a specific product"
 msgstr "Chủ đơn hàng có sản phẩm cụ thể"
 
@@ -8201,7 +8282,7 @@ msgstr "Đơn hàng đã hoàn lại"
 msgid "Order Status"
 msgstr "Trạng thái đơn hàng"
 
-#: src/components/modals/SendMessageModal/index.tsx:422
+#: src/components/modals/SendMessageModal/index.tsx:471
 msgid "Order statuses"
 msgstr "Trạng thái đơn hàng"
 
@@ -9271,7 +9352,7 @@ msgstr "Báo cáo mã khuyến mãi"
 msgid "Promo Only"
 msgstr "Chỉ khuyến mãi"
 
-#: src/components/modals/SendMessageModal/index.tsx:575
+#: src/components/modals/SendMessageModal/index.tsx:720
 msgid "Promotional emails may result in account suspension"
 msgstr "Email quảng cáo có thể dẫn đến đình chỉ tài khoản"
 
@@ -9473,7 +9554,7 @@ msgstr "Đơn hàng gần đây"
 msgid "recipient"
 msgstr "người nhận"
 
-#: src/components/modals/SendMessageModal/index.tsx:67
+#: src/components/modals/SendMessageModal/index.tsx:74
 msgid "Recipient"
 msgstr "Người nhận"
 
@@ -9482,13 +9563,13 @@ msgid "recipients"
 msgstr "người nhận"
 
 #: src/components/modals/MessageRecipientsModal/index.tsx:38
-#: src/components/modals/SendMessageModal/index.tsx:388
+#: src/components/modals/SendMessageModal/index.tsx:437
 #: src/components/routes/admin/Messages/index.tsx:166
 #: src/components/routes/admin/Messages/index.tsx:300
 msgid "Recipients"
 msgstr "Người nhận"
 
-#: src/components/routes/event/messages.tsx:96
+#: src/components/routes/event/messages.tsx:102
 msgid "Recipients are available after the message is sent"
 msgstr "Người nhận sẽ có sau khi tin nhắn được gửi"
 
@@ -9890,6 +9971,14 @@ msgstr "Doanh thu"
 msgid "Revenue Summary"
 msgstr "Tóm tắt doanh thu"
 
+#: src/components/modals/SendMessageModal/index.tsx:682
+msgid "Review and send"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:652
+msgid "Review before sending"
+msgstr ""
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
 msgid "Revoke invitation"
 msgstr "Thu hồi lời mời"
@@ -10137,11 +10226,11 @@ msgstr "Đã tạo lịch thành công"
 msgid "Schedule ends on"
 msgstr "Lịch kết thúc vào"
 
-#: src/components/modals/SendMessageModal/index.tsx:472
+#: src/components/modals/SendMessageModal/index.tsx:588
 msgid "Schedule for later"
 msgstr "Lên lịch gửi sau"
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Schedule Message"
 msgstr "Lên lịch tin nhắn"
 
@@ -10163,7 +10252,7 @@ msgstr "Đã lên lịch"
 msgid "Scheduled deletion"
 msgstr "Xóa theo lịch"
 
-#: src/components/modals/SendMessageModal/index.tsx:502
+#: src/components/modals/SendMessageModal/index.tsx:618
 msgid "Scheduled time"
 msgstr "Thời gian đã lên lịch"
 
@@ -10261,7 +10350,7 @@ msgstr "Tìm ngày…"
 msgid "Search for an address"
 msgstr "Tìm địa chỉ"
 
-#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:249
 msgid "Search messages..."
 msgstr "Tìm kiếm tin nhắn..."
 
@@ -10335,7 +10424,7 @@ msgstr "Chọn ngày và giờ"
 msgid "Select a date to see available times"
 msgstr "Chọn một ngày để xem các giờ còn trống"
 
-#: src/components/routes/event/messages.tsx:341
+#: src/components/routes/event/messages.tsx:347
 msgid "Select a message to view its contents"
 msgstr "Chọn một tin nhắn để xem nội dung"
 
@@ -10371,7 +10460,7 @@ msgstr "Chọn ít nhất một tài khoản"
 msgid "Select at least one user"
 msgstr "Chọn ít nhất một người dùng"
 
-#: src/components/modals/SendMessageModal/index.tsx:390
+#: src/components/modals/SendMessageModal/index.tsx:439
 msgid "Select attendee group"
 msgstr "Chọn nhóm người tham dự"
 
@@ -10427,7 +10516,7 @@ msgstr "Chọn bậc sản phẩm"
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:49
 #: src/components/forms/PromoCodeForm/index.tsx:158
 #: src/components/forms/QuestionForm/index.tsx:160
-#: src/components/modals/SendMessageModal/index.tsx:414
+#: src/components/modals/SendMessageModal/index.tsx:463
 msgid "Select products"
 msgstr "Chọn sản phẩm"
 
@@ -10456,7 +10545,7 @@ msgid "Select Ticket"
 msgstr "Chọn Vé"
 
 #: src/components/forms/CheckInListForm/index.tsx:120
-#: src/components/modals/SendMessageModal/index.tsx:402
+#: src/components/modals/SendMessageModal/index.tsx:451
 msgid "Select tickets"
 msgstr "Chọn Vé"
 
@@ -10470,7 +10559,7 @@ msgstr "Chọn khoảng thời gian"
 msgid "Select timezone"
 msgstr "Chọn múi giờ"
 
-#: src/components/modals/SendMessageModal/index.tsx:389
+#: src/components/modals/SendMessageModal/index.tsx:438
 msgid "Select which attendees should receive this message"
 msgstr "Chọn người tham dự nào sẽ nhận tin nhắn này"
 
@@ -10509,11 +10598,11 @@ msgstr "Bán chạy 🔥"
 msgid "Send"
 msgstr "Gửi"
 
-#: src/components/modals/SendMessageModal/index.tsx:270
+#: src/components/modals/SendMessageModal/index.tsx:319
 msgid "Send a message"
 msgstr "Gửi tin nhắn"
 
-#: src/components/modals/SendMessageModal/index.tsx:560
+#: src/components/modals/SendMessageModal/index.tsx:705
 msgid "Send as test"
 msgstr "Gửi thử"
 
@@ -10521,20 +10610,20 @@ msgstr "Gửi thử"
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr ""
 
-#: src/components/routes/event/messages.tsx:325
+#: src/components/routes/event/messages.tsx:331
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "Gửi email cho người tham dự, chủ vé hoặc chủ đơn hàng. Tin nhắn có thể được gửi ngay hoặc lên lịch gửi sau."
 
-#: src/components/modals/SendMessageModal/index.tsx:568
+#: src/components/modals/SendMessageModal/index.tsx:713
 msgid "Send me a copy"
 msgstr "Gửi cho tôi một bản sao"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Message"
 msgstr "Gửi tin nhắn"
 
-#: src/components/modals/SendMessageModal/index.tsx:464
+#: src/components/modals/SendMessageModal/index.tsx:580
 msgid "Send now"
 msgstr "Gửi ngay"
 
@@ -10558,7 +10647,7 @@ msgstr "Gửi liên kết đặt lại"
 msgid "Send Swish request for {amountLabel}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Test"
 msgstr "Gửi Test"
 
@@ -10566,13 +10655,17 @@ msgstr "Gửi Test"
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:358
+#: src/components/modals/SendMessageModal/index.tsx:407
 msgid "Send to all occurrences, or choose a specific one"
 msgstr "Gửi tới tất cả các ngày, hoặc chọn một ngày cụ thể"
 
-#: src/components/routes/event/messages.tsx:335
+#: src/components/routes/event/messages.tsx:341
 msgid "Send your first message"
 msgstr "Gửi tin nhắn đầu tiên của bạn"
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "Sender"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
@@ -10643,6 +10736,15 @@ msgstr "Phí dịch vụ"
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:41
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:490
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Service information"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:502
+msgid "Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket."
 msgstr ""
 
 #: src/components/layouts/CheckIn/index.tsx:498
@@ -10857,7 +10959,7 @@ msgstr "Đang hiển thị {0}–{1} trong số {2}"
 msgid "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgstr "Đang hiển thị {MAX_VISIBLE} trong số {totalAvailable} ngày. Nhập để tìm kiếm."
 
-#: src/components/modals/SendMessageModal/index.tsx:349
+#: src/components/modals/SendMessageModal/index.tsx:398
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Đang hiển thị {0} mục đầu — {1} buổi còn lại vẫn nằm trong phạm vi khi tin nhắn được gửi."
 
@@ -10928,6 +11030,12 @@ msgstr "Tiếng Slovak"
 msgid "Smith"
 msgstr "Smith"
 
+#: src/components/modals/SendMessageModal/index.tsx:512
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:73
+msgid "SMS"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/index.tsx:87
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
@@ -10945,8 +11053,24 @@ msgstr ""
 msgid "SMS delivery settings saved."
 msgstr ""
 
+#: src/components/modals/SendMessageModal/index.tsx:520
+msgid "SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:556
+msgid "SMS text"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:526
+msgid "SMS: {0} recipients"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:658
+msgid "SMS: {0} recipients, {1} part(s), approx. {2} each ≈ {3}"
 msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:73
@@ -11042,6 +11166,7 @@ msgstr "Đã xảy ra lỗi. Vui lòng thử lại sau."
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
+#: src/components/routes/public/MarketingOptOut/index.tsx:63
 msgid "Something went wrong. Please try again."
 msgstr "Có gì đó không ổn. Vui lòng thử lại"
 
@@ -11209,6 +11334,10 @@ msgstr "Vẫn cần"
 msgid "Stop Impersonating"
 msgstr "Dừng Mạo Danh"
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:52
+msgid "Stop receiving marketing messages from {organizer} by SMS and email. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
+
 #: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11261,7 +11390,7 @@ msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe sẽ hướng dẫn bạn qua vài câu hỏi nhanh để hoàn tất thiết lập."
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
-#: src/components/modals/SendMessageModal/index.tsx:438
+#: src/components/modals/SendMessageModal/index.tsx:537
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
@@ -11567,7 +11696,7 @@ msgstr "Tài khoản mục tiêu"
 msgid "Target users"
 msgstr "Người dùng mục tiêu"
 
-#: src/components/modals/SendMessageModal/index.tsx:335
+#: src/components/modals/SendMessageModal/index.tsx:384
 msgid "Targeting attendees across {0} selected sessions."
 msgstr "Nhắm tới người tham dự thuộc {0} buổi đã chọn."
 
@@ -11842,17 +11971,21 @@ msgstr "Con cáo nâu nhanh nhẹn nhảy qua con chó lười."
 msgid "The request will be sent to {0}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:208
+#: src/components/modals/SendMessageModal/index.tsx:225
 msgid "The scheduled time is required"
 msgstr "Thời gian lên lịch là bắt buộc"
 
-#: src/components/modals/SendMessageModal/index.tsx:209
+#: src/components/modals/SendMessageModal/index.tsx:226
 msgid "The scheduled time must be in the future"
 msgstr "Thời gian lên lịch phải ở trong tương lai"
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "Buổi của “{title}”, ban đầu dự kiến vào {0}, đã được dời lịch."
+
+#: src/components/modals/SendMessageModal/index.tsx:221
+msgid "The subject is required"
+msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
 msgid "The Swish payment request expired before it was approved."
@@ -12244,6 +12377,10 @@ msgstr "Vé này không còn hiệu lực"
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "Vé này vừa được quét. Vui lòng chờ trước khi quét lại."
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:29
+msgid "This unsubscribe link is not valid. It may have been copied incompletely."
+msgstr ""
+
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Người dùng này không hoạt động, vì họ chưa chấp nhận lời mời của họ."
@@ -12486,11 +12623,11 @@ msgstr "Tiêu đề là bắt buộc"
 msgid "to"
 msgstr "đến"
 
-#: src/components/routes/event/messages.tsx:93
+#: src/components/routes/event/messages.tsx:99
 msgid "To"
 msgstr "Đến"
 
-#: src/components/modals/SendMessageModal/index.tsx:315
+#: src/components/modals/SendMessageModal/index.tsx:364
 msgid "To increase your limits, contact us at"
 msgstr "Để tăng giới hạn của bạn, hãy liên hệ với chúng tôi tại"
 
@@ -12696,6 +12833,10 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "Loại"
 
+#: src/components/modals/SendMessageModal/index.tsx:664
+msgid "Type \"{0}\" exactly to enable sending to more than 100 recipients."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:398
 msgid "Type \"{eventTitle}\" exactly to enable the refund button."
 msgstr ""
@@ -12705,6 +12846,7 @@ msgstr ""
 msgid "Type \"delete\" to confirm"
 msgstr "Nhập \"xóa\" để xác nhận"
 
+#: src/components/modals/SendMessageModal/index.tsx:663
 #: src/components/modals/SwishMassRefundModal/index.tsx:397
 msgid "Type the event name to confirm"
 msgstr ""
@@ -12836,6 +12978,18 @@ msgstr "Chưa thanh toán"
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:32
 msgid "Unpaid Order"
 msgstr "Đơn hàng chưa thanh toán"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:51
+msgid "Unsubscribe from marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "unsubscribe link is added automatically"
+msgstr ""
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:60
+msgid "Unsubscribe me"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1075
 msgid "until"
@@ -13869,6 +14023,10 @@ msgstr "Làm việc ..."
 msgid "Workshop"
 msgstr "Hội thảo"
 
+#: src/components/modals/SendMessageModal/index.tsx:220
+msgid "Write the SMS text"
+msgstr ""
+
 #: src/components/common/ContactOrganizerModal/index.tsx:89
 msgid "Write your message here..."
 msgstr "Viết tin nhắn của bạn tại đây..."
@@ -13928,6 +14086,10 @@ msgstr "Bạn đang thực hiện hoàn tiền một phần. Khách hàng sẽ �
 #: src/components/layouts/CheckIn/index.tsx:292
 msgid "You are offline"
 msgstr "Bạn đang ngoại tuyến"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:46
+msgid "You are unsubscribed"
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:259
 msgid "You can configure additional service fees and taxes in your account settings."
@@ -13990,7 +14152,7 @@ msgstr "Bạn không có thay đổi email đang chờ xử lý."
 msgid "You have paid tickets, but Stripe isn't connected yet, so you can't take payments."
 msgstr "Bạn có vé trả phí nhưng Stripe chưa được kết nối, vì vậy bạn không thể nhận thanh toán."
 
-#: src/components/modals/SendMessageModal/index.tsx:248
+#: src/components/modals/SendMessageModal/index.tsx:277
 msgid "You have reached your messaging limit."
 msgstr "Bạn đã đạt đến giới hạn nhắn tin."
 
@@ -14012,8 +14174,8 @@ msgid "You have unsaved changes. Publishing the page does not save them."
 msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
-msgid "You must acknowledge that this email is not promotional"
-msgstr "Bạn phải hiểu rằng email này không phải là email quảng cáo"
+#~ msgid "You must acknowledge that this email is not promotional"
+#~ msgstr "Bạn phải hiểu rằng email này không phải là email quảng cáo"
 
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:145
 msgid "You must acknowledge your responsibilities before saving"
@@ -14026,6 +14188,10 @@ msgstr "Bạn phải đồng ý nhận tin nhắn"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:34
 msgid "You must agree to the terms and conditions"
 msgstr "Bạn phải đồng ý với các điều khoản và điều kiện"
+
+#: src/components/modals/SendMessageModal/index.tsx:218
+msgid "You must confirm the message type before sending"
+msgstr ""
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:163
 msgid "You must create a ticket before you can manually add an attendee."
@@ -14047,7 +14213,7 @@ msgstr "Bạn cần tạo ít nhất một ngày trước khi thêm người tha
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "Bạn cần xác minh email tài khoản trước khi có thể chỉnh sửa mẫu email."
 
-#: src/components/modals/SendMessageModal/index.tsx:281
+#: src/components/modals/SendMessageModal/index.tsx:330
 msgid "You need to verify your account email before you can send messages."
 msgstr "Bạn cần xác minh email tài khoản trước khi có thể gửi tin nhắn."
 
@@ -14058,6 +14224,10 @@ msgstr "Bạn nhận được"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Bạn sẽ phải đánh dấu một đơn hàng theo cách thủ công. Được thực hiện trong trang quản lý đơn hàng."
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:47
+msgid "You will no longer receive marketing messages from {organizer}. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
 
 #: src/components/modals/CreateEventModal/index.tsx:253
 msgid "You'll be able to set up dates, schedules, and recurrence rules in the next step."
@@ -14103,7 +14273,7 @@ msgstr "Bạn đã thay đổi giờ của buổi"
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."
 msgstr "Tài khoản của bạn đã bị vô hiệu hóa và sẽ bị xóa vĩnh viễn vào <0>{0}</0>."
 
-#: src/components/modals/SendMessageModal/index.tsx:324
+#: src/components/modals/SendMessageModal/index.tsx:373
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "Tài khoản của bạn có giới hạn nhắn tin. Để tăng giới hạn của bạn, hãy liên hệ với chúng tôi tại"
 
@@ -14167,7 +14337,7 @@ msgstr "Tin nhắn của bạn đã được gửi"
 msgid "Your message has been sent successfully!"
 msgstr "Tin nhắn của bạn đã được gửi thành công!"
 
-#: src/components/routes/event/messages.tsx:275
+#: src/components/routes/event/messages.tsx:281
 msgid "Your messages will appear here"
 msgstr "Tin nhắn của bạn sẽ xuất hiện ở đây"
 

@@ -646,6 +646,14 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />
     },
     {
+        path: "/u/:token",
+        async lazy() {
+            const MarketingOptOut = await import("./components/routes/public/MarketingOptOut");
+            return { Component: MarketingOptOut.default };
+        },
+        errorElement: <ErrorPage />
+    },
+    {
         path: "/t/:orderShortId",
         async lazy() {
             const OrderTickets = await import("./components/routes/product-widget/OrderTickets");

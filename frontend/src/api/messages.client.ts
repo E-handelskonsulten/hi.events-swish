@@ -1,9 +1,45 @@
 import {api} from "./client";
-import {GenericPaginatedResponse, IdParam, Message, OutgoingMessage, QueryFilters,} from "../types";
+import {GenericPaginatedResponse, IdParam, Message, MessageChannel, MessagePurpose, OutgoingMessage, QueryFilters,} from "../types";
 import {queryParamsHelper} from "../utilites/queryParamsHelper.ts";
 import {AxiosResponse} from "axios";
 
+export interface MessagePreviewRequest {
+    message_type: string;
+    channel: MessageChannel;
+    purpose: MessagePurpose;
+    sms_body?: string;
+    attendee_ids?: IdParam[];
+    product_ids?: IdParam[];
+    order_id?: IdParam;
+    order_statuses?: string[];
+    event_occurrence_id?: number | null;
+    event_occurrence_ids?: number[] | null;
+}
+
+export interface MessagePreview {
+    email_recipients: number;
+    sms_recipients: number;
+    excluded_without_consent: number;
+    excluded_without_phone: number;
+    sms_available: boolean;
+    sms_sender: string;
+    sms_characters: number;
+    sms_encoding: 'GSM-7' | 'UCS-2';
+    sms_parts: number;
+    sms_single_part_limit: number;
+    sms_opt_out_suffix_length: number;
+    sms_cost_per_recipient: number;
+    sms_total_cost: number;
+    currency: string;
+    requires_confirmation: boolean;
+    confirmation_word: string;
+}
+
 export const messagesClient = {
+    preview: async (eventId: IdParam, request: MessagePreviewRequest) => {
+        const response = await api.post<{data: MessagePreview}>(`events/${eventId}/messages/preview`, request);
+        return response.data;
+    },
     send: async (eventId: IdParam, messagesRequest: Message) => {
         return await api.post(`events/${eventId}/messages`, messagesRequest);
     },

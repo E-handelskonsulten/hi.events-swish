@@ -72,6 +72,10 @@ msgstr "{0} disponibili"
 msgid "{0} created successfully"
 msgstr "{0} creato con successo"
 
+#: src/components/modals/SendMessageModal/index.tsx:528
+msgid "{0} excluded without marketing consent"
+msgstr ""
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:437
 msgid "{0} left"
 msgstr "{0} rimasti"
@@ -94,6 +98,10 @@ msgstr "{0} posti su {1} sono occupati."
 msgid "{0} organizers"
 msgstr "{0} organizzatori"
 
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "{0} part(s)"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:650
 msgid "{0} tickets"
 msgstr "{0} biglietti"
@@ -101,6 +109,10 @@ msgstr "{0} biglietti"
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} aggiornato con successo"
+
+#: src/components/modals/SendMessageModal/index.tsx:527
+msgid "{0} without a mobile number"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:417
 msgid "{activeCount} enabled"
@@ -285,15 +297,15 @@ msgstr "1 partecipante è registrato nelle sessioni interessate."
 msgid "1 attendee is registered for this session."
 msgstr "1 partecipante è registrato per questa sessione."
 
-#: src/components/modals/SendMessageModal/index.tsx:128
+#: src/components/modals/SendMessageModal/index.tsx:135
 msgid "1 day after end date"
 msgstr "1 giorno dopo la data di fine"
 
-#: src/components/modals/SendMessageModal/index.tsx:122
+#: src/components/modals/SendMessageModal/index.tsx:129
 msgid "1 day after start date"
 msgstr "1 giorno dopo la data di inizio"
 
-#: src/components/modals/SendMessageModal/index.tsx:120
+#: src/components/modals/SendMessageModal/index.tsx:127
 msgid "1 day before event"
 msgstr "1 giorno prima dell'evento"
 
@@ -301,7 +313,7 @@ msgstr "1 giorno prima dell'evento"
 msgid "1 hour before"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:121
+#: src/components/modals/SendMessageModal/index.tsx:128
 msgid "1 hour before event"
 msgstr "1 ora prima dell'evento"
 
@@ -322,7 +334,7 @@ msgstr "1 tipo di biglietto configurato"
 msgid "1 time available"
 msgstr "1 orario disponibile"
 
-#: src/components/modals/SendMessageModal/index.tsx:119
+#: src/components/modals/SendMessageModal/index.tsx:126
 msgid "1 week before event"
 msgstr "1 settimana prima dell'evento"
 
@@ -967,15 +979,15 @@ msgstr "Tutti gli eventi archiviati"
 msgid "All attendees"
 msgstr "Tutti i partecipanti"
 
-#: src/components/modals/SendMessageModal/index.tsx:378
+#: src/components/modals/SendMessageModal/index.tsx:427
 msgid "All attendees of the selected sessions"
 msgstr "Tutti i partecipanti delle sessioni selezionate"
 
-#: src/components/modals/SendMessageModal/index.tsx:381
+#: src/components/modals/SendMessageModal/index.tsx:430
 msgid "All attendees of this event"
 msgstr "Tutti i partecipanti di questo evento"
 
-#: src/components/modals/SendMessageModal/index.tsx:380
+#: src/components/modals/SendMessageModal/index.tsx:429
 msgid "All attendees of this occurrence"
 msgstr "Tutti i partecipanti di questa data"
 
@@ -1020,7 +1032,7 @@ msgid "All matching dates"
 msgstr "Tutte le date corrispondenti"
 
 #: src/components/forms/CheckInListForm/index.tsx:132
-#: src/components/modals/SendMessageModal/index.tsx:359
+#: src/components/modals/SendMessageModal/index.tsx:408
 msgid "All occurrences"
 msgstr "Tutte le date"
 
@@ -1281,6 +1293,10 @@ msgstr "Approva messaggio"
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:220
 msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "approx. {0} per recipient"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:68
@@ -1646,7 +1662,7 @@ msgstr "Partecipanti registrati"
 msgid "Attendees Registered"
 msgstr "Partecipanti Registrati"
 
-#: src/components/modals/SendMessageModal/index.tsx:373
+#: src/components/modals/SendMessageModal/index.tsx:422
 msgid "Attendees with a specific ticket"
 msgstr "Partecipanti con un biglietto specifico"
 
@@ -1724,7 +1740,7 @@ msgid "Awaiting"
 msgstr "In attesa"
 
 #: src/components/common/OrderStatusBadge/index.tsx:11
-#: src/components/modals/SendMessageModal/index.tsx:425
+#: src/components/modals/SendMessageModal/index.tsx:474
 msgid "Awaiting offline payment"
 msgstr "In attesa di pagamento offline"
 
@@ -1765,6 +1781,10 @@ msgstr "Awesome Events S.r.l."
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:74
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Srl."
+
+#: src/components/modals/SendMessageModal/index.tsx:686
+msgid "Back"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:106
 msgid "Back to Accounts"
@@ -1878,6 +1898,10 @@ msgstr "Il corpo è obbligatorio"
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:206
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Aggiungi questa pagina ai preferiti per gestire il tuo ordine in qualsiasi momento."
+
+#: src/components/modals/SendMessageModal/index.tsx:513
+msgid "Both"
+msgstr ""
 
 #: src/components/routes/event/TicketDesigner/index.tsx:112
 msgid "Brand your tickets with a custom logo, colors, and footer message."
@@ -2041,7 +2065,7 @@ msgstr "Check-in non possibile"
 #: src/components/modals/PublishEventModal/index.tsx:208
 #: src/components/modals/SwishMassRefundModal/index.tsx:405
 #: src/components/routes/admin/DeletionRequests/index.tsx:178
-#: src/components/routes/event/messages.tsx:80
+#: src/components/routes/event/messages.tsx:86
 #: src/components/routes/event/OccurrencesTab/index.tsx:504
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:272
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:306
@@ -2246,6 +2270,14 @@ msgstr "Modifica impostazioni lista di attesa"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Durata modificata per {count} data/e"
+
+#: src/components/modals/SendMessageModal/index.tsx:507
+msgid "Channel"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "characters"
+msgstr ""
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:84
 msgid "Charged once per product, before the percentage is added"
@@ -2492,6 +2524,10 @@ msgstr "Scegli come viene mostrata la data dell'evento sul biglietto"
 msgid "Choose the default setting for new events. This can be overridden for individual events."
 msgstr "Scegli l'impostazione predefinita per i nuovi eventi. Questa può essere modificata per i singoli eventi."
 
+#: src/components/modals/SendMessageModal/index.tsx:219
+msgid "Choose whether this is service information or marketing"
+msgstr ""
+
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:51
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "Scegli chi paga la commissione della piattaforma. Questo non influisce sulle commissioni aggiuntive che hai configurato nelle impostazioni del tuo account."
@@ -2688,7 +2724,7 @@ msgstr "Completa il tuo profilo per unirti al team."
 
 #: src/components/common/OrdersTable/index.tsx:329
 #: src/components/common/OrderStatusBadge/index.tsx:8
-#: src/components/modals/SendMessageModal/index.tsx:424
+#: src/components/modals/SendMessageModal/index.tsx:473
 #: src/components/modals/SwishMassRefundModal/index.tsx:110
 #: src/components/routes/admin/DeletionRequests/index.tsx:86
 #: src/components/routes/event/orders.tsx:29
@@ -2709,8 +2745,8 @@ msgstr "Ordini Completati"
 msgid "Component Code"
 msgstr "Codice componente"
 
-#: src/components/routes/event/messages.tsx:237
-#: src/components/routes/event/messages.tsx:282
+#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:288
 msgid "Compose"
 msgstr "Componi"
 
@@ -2833,7 +2869,7 @@ msgstr "Collega la banca"
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
 #: src/components/modals/PublishEventModal/index.tsx:79
-#: src/components/modals/SendMessageModal/index.tsx:298
+#: src/components/modals/SendMessageModal/index.tsx:347
 msgid "Connect Stripe"
 msgstr "Connect Stripe"
 
@@ -2845,7 +2881,7 @@ msgstr "Collega Stripe per accettare pagamenti"
 msgid "Connect Stripe to enable email template editing"
 msgstr "Connetti Stripe per abilitare la modifica dei modelli di email"
 
-#: src/components/modals/SendMessageModal/index.tsx:287
+#: src/components/modals/SendMessageModal/index.tsx:336
 msgid "Connect Stripe to enable messaging"
 msgstr "Connetti Stripe per abilitare la messaggistica"
 
@@ -3389,7 +3425,7 @@ msgstr "Attualmente disponibile per l'acquisto"
 #~ msgid "Custom branding"
 #~ msgstr "Personalizzazione del brand"
 
-#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:612
 msgid "Custom date and time"
 msgstr "Data e ora personalizzate"
 
@@ -4028,7 +4064,7 @@ msgstr "Selezione a tendina"
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "A causa dell'alto rischio di spam, è necessario collegare un account Stripe prima di poter modificare i modelli di email. Questo è per garantire che tutti gli organizzatori di eventi siano verificati e responsabili."
 
-#: src/components/modals/SendMessageModal/index.tsx:288
+#: src/components/modals/SendMessageModal/index.tsx:337
 msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
@@ -4097,7 +4133,7 @@ msgstr "es. Manutenzione programmata questo sabato dalle 2 alle 4 UTC"
 msgid "e.g., Get Tickets, Register Now"
 msgstr "es., Acquista biglietti, Registrati ora"
 
-#: src/components/modals/SendMessageModal/index.tsx:439
+#: src/components/modals/SendMessageModal/index.tsx:538
 msgid "e.g., Important update about your tickets"
 msgstr "ad esempio, Aggiornamento importante sui tuoi biglietti"
 
@@ -4293,6 +4329,8 @@ msgstr "Liste Check-In Idonee"
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
 #: src/components/modals/ManageAttendeeModal/index.tsx:152
 #: src/components/modals/ManageOrderModal/index.tsx:136
+#: src/components/modals/SendMessageModal/index.tsx:511
+#: src/components/modals/SendMessageModal/index.tsx:654
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:120
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -4319,6 +4357,10 @@ msgstr "Impostazioni Email e Notifiche"
 msgid "Email & Templates"
 msgstr "Email e Modelli"
 
+#: src/components/routes/event/messages.tsx:73
+msgid "Email + SMS"
+msgstr ""
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:223
 #: src/components/modals/ManageAttendeeModal/index.tsx:208
 #: src/components/modals/ManageOrderModal/index.tsx:242
@@ -4342,6 +4384,10 @@ msgstr "Indirizzo email copiato negli appunti"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:129
 msgid "Email addresses do not match"
 msgstr "Gli indirizzi email non corrispondono"
+
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Email and SMS"
+msgstr ""
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
 msgid "Email Body"
@@ -4403,6 +4449,11 @@ msgstr "Email verificata"
 #: src/components/routes/welcome/index.tsx:99
 msgid "Email verified successfully!"
 msgstr "Email verificata con successo!"
+
+#: src/components/modals/SendMessageModal/index.tsx:524
+#: src/components/modals/SendMessageModal/index.tsx:656
+msgid "Email: {0} recipients"
+msgstr ""
 
 #: src/components/common/WidgetEditor/index.tsx:246
 #: src/components/common/WidgetEditor/index.tsx:275
@@ -5814,6 +5865,10 @@ msgstr "Ciao {0} 👋"
 msgid "Hi,"
 msgstr "Ciao,"
 
+#: src/components/modals/SendMessageModal/index.tsx:560
+msgid "Hi! Doors open at 19:00. Bring your ticket QR code."
+msgstr ""
+
 #: src/components/routes/organizer/Reports/PlatformFeesReport/index.tsx:75
 msgid "Hi.Events Fee"
 msgstr "Commissione Hi.Events"
@@ -6031,9 +6086,13 @@ msgstr "Accetto di ricevere notifiche via email relative a questo evento"
 msgid "I agree to the <0>terms and conditions</0>"
 msgstr "Accetto i <0>termini e condizioni</0>"
 
-#: src/components/modals/SendMessageModal/index.tsx:530
+#: src/components/modals/SendMessageModal/index.tsx:648
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Confermo che questo è un messaggio transazionale relativo a questo evento"
+
+#: src/components/modals/SendMessageModal/index.tsx:647
+msgid "I confirm this is marketing and will only reach buyers who have consented"
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1032
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6419,6 +6478,10 @@ msgstr "Continua a modificare"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "Sii breve — i banner mostrano una sola riga. {0}/200"
 
+#: src/components/modals/SendMessageModal/index.tsx:559
+msgid "Keep it short. Links are optional."
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:621
 msgid "Keep me updated on news and events from {0}"
 msgstr "Tienimi aggiornato sulle novità e gli eventi di {0}"
@@ -6608,6 +6671,10 @@ msgstr "Chiaro"
 #: src/components/routes/my-tickets/index.tsx:177
 msgid "Link Expired or Invalid"
 msgstr "Link scaduto o non valido"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:28
+msgid "Link not valid"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:61
 msgid "LinkedIn"
@@ -6878,6 +6945,16 @@ msgstr "Segna come pagato"
 msgid "Mark as validated (admin override)"
 msgstr "Segna come convalidato (forzatura da amministratore)"
 
+#: src/components/modals/SendMessageModal/index.tsx:491
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:76
+msgid "Marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:501
+msgid "Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:177
 msgid "Mass refund #{0}"
 msgstr ""
@@ -6921,7 +6998,7 @@ msgstr "Mezzo"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:156
-#: src/components/modals/SendMessageModal/index.tsx:444
+#: src/components/modals/SendMessageModal/index.tsx:543
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
 msgstr "Messaggio"
@@ -6938,7 +7015,7 @@ msgstr "Messaggio al partecipante"
 msgid "Message Attendees"
 msgstr "Messaggio ai Partecipanti"
 
-#: src/components/modals/SendMessageModal/index.tsx:401
+#: src/components/modals/SendMessageModal/index.tsx:450
 msgid "Message attendees with specific tickets"
 msgstr "Invia messaggio ai partecipanti con biglietti specifici"
 
@@ -6962,7 +7039,7 @@ msgstr "Contenuto del messaggio"
 msgid "Message Details"
 msgstr "Dettagli del messaggio"
 
-#: src/components/modals/SendMessageModal/index.tsx:101
+#: src/components/modals/SendMessageModal/index.tsx:108
 msgid "Message individual attendees"
 msgstr "Invia messaggio ai singoli partecipanti"
 
@@ -6970,21 +7047,25 @@ msgstr "Invia messaggio ai singoli partecipanti"
 msgid "Message is required"
 msgstr "Il messaggio è obbligatorio"
 
-#: src/components/modals/SendMessageModal/index.tsx:413
+#: src/components/modals/SendMessageModal/index.tsx:462
 msgid "Message order owners with specific products"
 msgstr "Invia messaggio ai proprietari degli ordini con prodotti specifici"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Scheduled"
 msgstr "Messaggio programmato"
 
-#: src/components/modals/SendMessageModal/index.tsx:242
+#: src/components/modals/SendMessageModal/index.tsx:270
 msgid "Message Sent"
 msgstr "Messaggio Inviato"
 
+#: src/components/modals/SendMessageModal/index.tsx:486
+msgid "Message type"
+msgstr ""
+
 #: src/components/layouts/Admin/index.tsx:18
 #: src/components/layouts/Event/index.tsx:133
-#: src/components/routes/event/messages.tsx:225
+#: src/components/routes/event/messages.tsx:231
 msgid "Messages"
 msgstr "Messaggi"
 
@@ -7460,7 +7541,7 @@ msgstr "Nessun carattere corrispondente"
 msgid "No messages found"
 msgstr "Nessun messaggio trovato"
 
-#: src/components/routes/event/messages.tsx:322
+#: src/components/routes/event/messages.tsx:328
 msgid "No messages to show"
 msgstr "Nessun messaggio da mostrare"
 
@@ -7725,7 +7806,7 @@ msgstr "Prefisso Numero"
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:253
 #: src/components/modals/ManageOrderModal/index.tsx:140
-#: src/components/modals/SendMessageModal/index.tsx:357
+#: src/components/modals/SendMessageModal/index.tsx:406
 msgid "Occurrence"
 msgstr "Data"
 
@@ -7959,7 +8040,7 @@ msgstr "Disponibile solo come prodotto aggiuntivo"
 msgid "Only published announcements are shown to users"
 msgstr "Solo gli annunci pubblicati vengono mostrati agli utenti"
 
-#: src/components/modals/SendMessageModal/index.tsx:421
+#: src/components/modals/SendMessageModal/index.tsx:470
 msgid "Only send to orders with these statuses"
 msgstr "Invia solo agli ordini con questi stati"
 
@@ -8177,7 +8258,7 @@ msgstr "Numero d'ordine, data di acquisto, email dell'acquirente"
 msgid "Order owner"
 msgstr "Proprietario ordine"
 
-#: src/components/modals/SendMessageModal/index.tsx:385
+#: src/components/modals/SendMessageModal/index.tsx:434
 msgid "Order owners with a specific product"
 msgstr "Proprietari di ordini con un prodotto specifico"
 
@@ -8201,7 +8282,7 @@ msgstr "Ordine Rimborsato"
 msgid "Order Status"
 msgstr "Stato Ordine"
 
-#: src/components/modals/SendMessageModal/index.tsx:422
+#: src/components/modals/SendMessageModal/index.tsx:471
 msgid "Order statuses"
 msgstr "Stati ordine"
 
@@ -9271,7 +9352,7 @@ msgstr "Report Codici Promo"
 msgid "Promo Only"
 msgstr "Solo promo"
 
-#: src/components/modals/SendMessageModal/index.tsx:575
+#: src/components/modals/SendMessageModal/index.tsx:720
 msgid "Promotional emails may result in account suspension"
 msgstr "Le email promozionali potrebbero comportare la sospensione dell'account"
 
@@ -9473,7 +9554,7 @@ msgstr "Ordini recenti"
 msgid "recipient"
 msgstr "destinatario"
 
-#: src/components/modals/SendMessageModal/index.tsx:67
+#: src/components/modals/SendMessageModal/index.tsx:74
 msgid "Recipient"
 msgstr "Destinatario"
 
@@ -9482,13 +9563,13 @@ msgid "recipients"
 msgstr "destinatari"
 
 #: src/components/modals/MessageRecipientsModal/index.tsx:38
-#: src/components/modals/SendMessageModal/index.tsx:388
+#: src/components/modals/SendMessageModal/index.tsx:437
 #: src/components/routes/admin/Messages/index.tsx:166
 #: src/components/routes/admin/Messages/index.tsx:300
 msgid "Recipients"
 msgstr "Destinatari"
 
-#: src/components/routes/event/messages.tsx:96
+#: src/components/routes/event/messages.tsx:102
 msgid "Recipients are available after the message is sent"
 msgstr "I destinatari sono disponibili dopo l'invio del messaggio"
 
@@ -9890,6 +9971,14 @@ msgstr "Ricavi"
 msgid "Revenue Summary"
 msgstr "Riepilogo Ricavi"
 
+#: src/components/modals/SendMessageModal/index.tsx:682
+msgid "Review and send"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:652
+msgid "Review before sending"
+msgstr ""
+
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
 msgid "Revoke invitation"
 msgstr "Revoca invito"
@@ -10137,11 +10226,11 @@ msgstr "Programmazione creata correttamente"
 msgid "Schedule ends on"
 msgstr "La programmazione termina il"
 
-#: src/components/modals/SendMessageModal/index.tsx:472
+#: src/components/modals/SendMessageModal/index.tsx:588
 msgid "Schedule for later"
 msgstr "Programma per dopo"
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Schedule Message"
 msgstr "Programma messaggio"
 
@@ -10163,7 +10252,7 @@ msgstr "Programmata"
 msgid "Scheduled deletion"
 msgstr "Eliminazione pianificata"
 
-#: src/components/modals/SendMessageModal/index.tsx:502
+#: src/components/modals/SendMessageModal/index.tsx:618
 msgid "Scheduled time"
 msgstr "Orario programmato"
 
@@ -10261,7 +10350,7 @@ msgstr "Cerca date…"
 msgid "Search for an address"
 msgstr "Cerca un indirizzo"
 
-#: src/components/routes/event/messages.tsx:243
+#: src/components/routes/event/messages.tsx:249
 msgid "Search messages..."
 msgstr "Cerca messaggi..."
 
@@ -10335,7 +10424,7 @@ msgstr "Seleziona data e ora"
 msgid "Select a date to see available times"
 msgstr "Seleziona una data per vedere gli orari disponibili"
 
-#: src/components/routes/event/messages.tsx:341
+#: src/components/routes/event/messages.tsx:347
 msgid "Select a message to view its contents"
 msgstr "Seleziona un messaggio per visualizzarne il contenuto"
 
@@ -10371,7 +10460,7 @@ msgstr "Seleziona almeno un account"
 msgid "Select at least one user"
 msgstr "Seleziona almeno un utente"
 
-#: src/components/modals/SendMessageModal/index.tsx:390
+#: src/components/modals/SendMessageModal/index.tsx:439
 msgid "Select attendee group"
 msgstr "Seleziona il gruppo di partecipanti"
 
@@ -10427,7 +10516,7 @@ msgstr "Seleziona Livello Prodotto"
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:49
 #: src/components/forms/PromoCodeForm/index.tsx:158
 #: src/components/forms/QuestionForm/index.tsx:160
-#: src/components/modals/SendMessageModal/index.tsx:414
+#: src/components/modals/SendMessageModal/index.tsx:463
 msgid "Select products"
 msgstr "Seleziona prodotti"
 
@@ -10456,7 +10545,7 @@ msgid "Select Ticket"
 msgstr "Seleziona Biglietto"
 
 #: src/components/forms/CheckInListForm/index.tsx:120
-#: src/components/modals/SendMessageModal/index.tsx:402
+#: src/components/modals/SendMessageModal/index.tsx:451
 msgid "Select tickets"
 msgstr "Seleziona biglietti"
 
@@ -10470,7 +10559,7 @@ msgstr "Seleziona periodo di tempo"
 msgid "Select timezone"
 msgstr "Seleziona fuso orario"
 
-#: src/components/modals/SendMessageModal/index.tsx:389
+#: src/components/modals/SendMessageModal/index.tsx:438
 msgid "Select which attendees should receive this message"
 msgstr "Seleziona quali partecipanti devono ricevere questo messaggio"
 
@@ -10509,11 +10598,11 @@ msgstr "Si vende velocemente 🔥"
 msgid "Send"
 msgstr "Invia"
 
-#: src/components/modals/SendMessageModal/index.tsx:270
+#: src/components/modals/SendMessageModal/index.tsx:319
 msgid "Send a message"
 msgstr "Invia un messaggio"
 
-#: src/components/modals/SendMessageModal/index.tsx:560
+#: src/components/modals/SendMessageModal/index.tsx:705
 msgid "Send as test"
 msgstr "Invia come prova"
 
@@ -10521,20 +10610,20 @@ msgstr "Invia come prova"
 msgid "Send buyers a text message with a link to their tickets when an order is completed, and a notice if the order is fully refunded."
 msgstr ""
 
-#: src/components/routes/event/messages.tsx:325
+#: src/components/routes/event/messages.tsx:331
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "Invia email ai partecipanti, ai possessori di biglietti o ai titolari di ordini. I messaggi possono essere inviati immediatamente o programmati per un secondo momento."
 
-#: src/components/modals/SendMessageModal/index.tsx:568
+#: src/components/modals/SendMessageModal/index.tsx:713
 msgid "Send me a copy"
 msgstr "Inviami una copia"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Message"
 msgstr "Invia Messaggio"
 
-#: src/components/modals/SendMessageModal/index.tsx:464
+#: src/components/modals/SendMessageModal/index.tsx:580
 msgid "Send now"
 msgstr "Invia ora"
 
@@ -10558,7 +10647,7 @@ msgstr "Invia link di reimpostazione"
 msgid "Send Swish request for {amountLabel}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:542
+#: src/components/modals/SendMessageModal/index.tsx:682
 msgid "Send Test"
 msgstr "Invia Test"
 
@@ -10566,13 +10655,17 @@ msgstr "Invia Test"
 msgid "Send ticket SMS this many hours before the event starts"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:358
+#: src/components/modals/SendMessageModal/index.tsx:407
 msgid "Send to all occurrences, or choose a specific one"
 msgstr "Invia a tutte le date, oppure scegline una specifica"
 
-#: src/components/routes/event/messages.tsx:335
+#: src/components/routes/event/messages.tsx:341
 msgid "Send your first message"
 msgstr "Invia il tuo primo messaggio"
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "Sender"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:103
 msgid "Sender name"
@@ -10643,6 +10736,15 @@ msgstr "Commissione di Servizio"
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:41
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:490
+#: src/components/modals/SendMessageModal/index.tsx:654
+msgid "Service information"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:502
+msgid "Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket."
 msgstr ""
 
 #: src/components/layouts/CheckIn/index.tsx:498
@@ -10857,7 +10959,7 @@ msgstr "{0}–{1} di {2}"
 msgid "Showing {MAX_VISIBLE} of {totalAvailable} dates. Type to search."
 msgstr "Sono mostrate {MAX_VISIBLE} date su {totalAvailable}. Scrivi per cercare."
 
-#: src/components/modals/SendMessageModal/index.tsx:349
+#: src/components/modals/SendMessageModal/index.tsx:398
 msgid "Showing the first {0} — the remaining {1} session(s) will still be targeted when the message is sent."
 msgstr "Sono mostrate le prime {0}: le restanti {1} sessione/i verranno comunque incluse all'invio del messaggio."
 
@@ -10928,6 +11030,12 @@ msgstr "Slovacco"
 msgid "Smith"
 msgstr "Smith"
 
+#: src/components/modals/SendMessageModal/index.tsx:512
+#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/routes/event/messages.tsx:73
+msgid "SMS"
+msgstr ""
+
 #: src/components/routes/organizer/Settings/index.tsx:87
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:75
 msgid "SMS delivery"
@@ -10945,8 +11053,24 @@ msgstr ""
 msgid "SMS delivery settings saved."
 msgstr ""
 
+#: src/components/modals/SendMessageModal/index.tsx:520
+msgid "SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages."
+msgstr ""
+
 #: src/components/routes/organizer/Settings/Sections/SmsSettings/index.tsx:81
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:556
+msgid "SMS text"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:526
+msgid "SMS: {0} recipients"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:658
+msgid "SMS: {0} recipients, {1} part(s), approx. {2} each ≈ {3}"
 msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:73
@@ -11042,6 +11166,7 @@ msgstr "Qualcosa è andato storto. Riprova più tardi."
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
+#: src/components/routes/public/MarketingOptOut/index.tsx:63
 msgid "Something went wrong. Please try again."
 msgstr "Qualcosa è andato storto. Riprova."
 
@@ -11209,6 +11334,10 @@ msgstr "Ancora necessario"
 msgid "Stop Impersonating"
 msgstr "Interrompi Impersonificazione"
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:52
+msgid "Stop receiving marketing messages from {organizer} by SMS and email. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
+
 #: src/components/common/OrdersTable/index.tsx:296
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11261,7 +11390,7 @@ msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe ti guiderà con qualche domanda veloce per completare la configurazione."
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
-#: src/components/modals/SendMessageModal/index.tsx:438
+#: src/components/modals/SendMessageModal/index.tsx:537
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
@@ -11567,7 +11696,7 @@ msgstr "Account di destinazione"
 msgid "Target users"
 msgstr "Utenti di destinazione"
 
-#: src/components/modals/SendMessageModal/index.tsx:335
+#: src/components/modals/SendMessageModal/index.tsx:384
 msgid "Targeting attendees across {0} selected sessions."
 msgstr "Verranno raggiunti i partecipanti di {0} sessioni selezionate."
 
@@ -11842,17 +11971,21 @@ msgstr "La rapida volpe marrone salta sopra il cane pigro."
 msgid "The request will be sent to {0}"
 msgstr ""
 
-#: src/components/modals/SendMessageModal/index.tsx:208
+#: src/components/modals/SendMessageModal/index.tsx:225
 msgid "The scheduled time is required"
 msgstr "L'orario programmato è obbligatorio"
 
-#: src/components/modals/SendMessageModal/index.tsx:209
+#: src/components/modals/SendMessageModal/index.tsx:226
 msgid "The scheduled time must be in the future"
 msgstr "L'orario programmato deve essere nel futuro"
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:52
 msgid "The session for \"{title}\" originally scheduled for {0} has been rescheduled."
 msgstr "La sessione di «{title}», inizialmente prevista per il {0}, è stata riprogrammata."
+
+#: src/components/modals/SendMessageModal/index.tsx:221
+msgid "The subject is required"
+msgstr ""
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:38
 msgid "The Swish payment request expired before it was approved."
@@ -12244,6 +12377,10 @@ msgstr "Questo biglietto non è più valido"
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "Questo biglietto è stato appena scansionato. Attendi prima di scansionare di nuovo."
 
+#: src/components/routes/public/MarketingOptOut/index.tsx:29
+msgid "This unsubscribe link is not valid. It may have been copied incompletely."
+msgstr ""
+
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Questo utente non è attivo, poiché non ha accettato il suo invito."
@@ -12486,11 +12623,11 @@ msgstr "Il titolo è obbligatorio"
 msgid "to"
 msgstr "al"
 
-#: src/components/routes/event/messages.tsx:93
+#: src/components/routes/event/messages.tsx:99
 msgid "To"
 msgstr "A"
 
-#: src/components/modals/SendMessageModal/index.tsx:315
+#: src/components/modals/SendMessageModal/index.tsx:364
 msgid "To increase your limits, contact us at"
 msgstr "Per aumentare i tuoi limiti, contattaci a"
 
@@ -12696,6 +12833,10 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "Tipo"
 
+#: src/components/modals/SendMessageModal/index.tsx:664
+msgid "Type \"{0}\" exactly to enable sending to more than 100 recipients."
+msgstr ""
+
 #: src/components/modals/SwishMassRefundModal/index.tsx:398
 msgid "Type \"{eventTitle}\" exactly to enable the refund button."
 msgstr ""
@@ -12705,6 +12846,7 @@ msgstr ""
 msgid "Type \"delete\" to confirm"
 msgstr "Digita \"elimina\" per confermare"
 
+#: src/components/modals/SendMessageModal/index.tsx:663
 #: src/components/modals/SwishMassRefundModal/index.tsx:397
 msgid "Type the event name to confirm"
 msgstr ""
@@ -12836,6 +12978,18 @@ msgstr "Non pagato"
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:32
 msgid "Unpaid Order"
 msgstr "Ordine non pagato"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:51
+msgid "Unsubscribe from marketing"
+msgstr ""
+
+#: src/components/modals/SendMessageModal/index.tsx:558
+msgid "unsubscribe link is added automatically"
+msgstr ""
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:60
+msgid "Unsubscribe me"
+msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1075
 msgid "until"
@@ -13869,6 +14023,10 @@ msgstr "In corso..."
 msgid "Workshop"
 msgstr "Workshop"
 
+#: src/components/modals/SendMessageModal/index.tsx:220
+msgid "Write the SMS text"
+msgstr ""
+
 #: src/components/common/ContactOrganizerModal/index.tsx:89
 msgid "Write your message here..."
 msgstr "Scrivi qui il tuo messaggio..."
@@ -13928,6 +14086,10 @@ msgstr "Stai emettendo un rimborso parziale. Il cliente sarà rimborsato di {0} 
 #: src/components/layouts/CheckIn/index.tsx:292
 msgid "You are offline"
 msgstr "Sei offline"
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:46
+msgid "You are unsubscribed"
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:259
 msgid "You can configure additional service fees and taxes in your account settings."
@@ -13990,7 +14152,7 @@ msgstr "Non hai modifiche di email in sospeso."
 msgid "You have paid tickets, but Stripe isn't connected yet, so you can't take payments."
 msgstr "Hai biglietti a pagamento, ma Stripe non è ancora collegato, quindi non puoi accettare pagamenti."
 
-#: src/components/modals/SendMessageModal/index.tsx:248
+#: src/components/modals/SendMessageModal/index.tsx:277
 msgid "You have reached your messaging limit."
 msgstr "Hai raggiunto il tuo limite di messaggistica."
 
@@ -14012,8 +14174,8 @@ msgid "You have unsaved changes. Publishing the page does not save them."
 msgstr ""
 
 #: src/components/modals/SendMessageModal/index.tsx:204
-msgid "You must acknowledge that this email is not promotional"
-msgstr "Devi riconoscere che questa email non è promozionale"
+#~ msgid "You must acknowledge that this email is not promotional"
+#~ msgstr "Devi riconoscere che questa email non è promozionale"
 
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:145
 msgid "You must acknowledge your responsibilities before saving"
@@ -14026,6 +14188,10 @@ msgstr "Devi accettare di ricevere messaggi"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:34
 msgid "You must agree to the terms and conditions"
 msgstr "Devi accettare i termini e le condizioni"
+
+#: src/components/modals/SendMessageModal/index.tsx:218
+msgid "You must confirm the message type before sending"
+msgstr ""
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:163
 msgid "You must create a ticket before you can manually add an attendee."
@@ -14047,7 +14213,7 @@ msgstr "Devi creare almeno una data prima di poter aggiungere partecipanti a que
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "Devi verificare l'email del tuo account prima di poter modificare i modelli di email."
 
-#: src/components/modals/SendMessageModal/index.tsx:281
+#: src/components/modals/SendMessageModal/index.tsx:330
 msgid "You need to verify your account email before you can send messages."
 msgstr "Devi verificare l'email del tuo account prima di poter inviare messaggi."
 
@@ -14058,6 +14224,10 @@ msgstr "Ricevi"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:149
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
 msgstr "Dovrai contrassegnare un ordine come pagato manualmente. Questo può essere fatto nella pagina di gestione dell'ordine."
+
+#: src/components/routes/public/MarketingOptOut/index.tsx:47
+msgid "You will no longer receive marketing messages from {organizer}. Ticket confirmations and practical information about events you have tickets for are still sent."
+msgstr ""
 
 #: src/components/modals/CreateEventModal/index.tsx:253
 msgid "You'll be able to set up dates, schedules, and recurrence rules in the next step."
@@ -14103,7 +14273,7 @@ msgstr "Hai cambiato l'orario della sessione"
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."
 msgstr "Il tuo account è stato disattivato e sarà eliminato definitivamente il <0>{0}</0>."
 
-#: src/components/modals/SendMessageModal/index.tsx:324
+#: src/components/modals/SendMessageModal/index.tsx:373
 msgid "Your account has messaging limits. To increase your limits, contact us at"
 msgstr "Il tuo account ha limiti di messaggistica. Per aumentare i tuoi limiti, contattaci a"
 
@@ -14167,7 +14337,7 @@ msgstr "Il tuo messaggio è stato inviato"
 msgid "Your message has been sent successfully!"
 msgstr "Il tuo messaggio è stato inviato con successo!"
 
-#: src/components/routes/event/messages.tsx:275
+#: src/components/routes/event/messages.tsx:281
 msgid "Your messages will appear here"
 msgstr "I tuoi messaggi appariranno qui"
 

@@ -18,6 +18,7 @@ import {getInitials} from "../../../utilites/helpers.ts";
 import {useCancelMessage} from "../../../mutations/useCancelMessage.ts";
 import {showError, showSuccess} from "../../../utilites/notifications.tsx";
 import classes from "./messages.module.scss";
+import {formatCurrency} from "../../../utilites/currency.ts";
 
 const MessagePreview = ({message, eventId, onBack, eventTimezone}: { message: Message; eventId: string; onBack: () => void; eventTimezone: string }) => {
     const [recipientsOpen, {open: openRecipients, close: closeRecipients}] = useDisclosure(false);
@@ -69,6 +70,12 @@ const MessagePreview = ({message, eventId, onBack, eventTimezone}: { message: Me
                         <Badge size="sm" color={statusBadgeColor(message.status)} variant="outline">
                             {message.status}
                         </Badge>
+                        {message.channel && message.channel !== 'EMAIL' && (
+                            <Badge size="sm" color="blue" variant="light">{message.channel === 'BOTH' ? t`Email + SMS` : t`SMS`}</Badge>
+                        )}
+                        {message.purpose === 'MARKETING' && (
+                            <Badge size="sm" color="grape" variant="light">{t`Marketing`}</Badge>
+                        )}
                         {message.status === 'SCHEDULED' && (
                             <Button
                                 variant="light"
@@ -98,16 +105,31 @@ const MessagePreview = ({message, eventId, onBack, eventTimezone}: { message: Me
                                 </Tooltip>
                             )}
                         </div>
+                        {(message.recipient_count != null || message.sms_cost != null) && (
+                            <div className={classes.previewRecipientType} data-testid="message-send-log">
+                                {message.recipient_count != null && t`${message.recipient_count} recipients`}
+                                {message.recipient_count != null && message.sms_cost != null && ' · '}
+                                {message.sms_cost != null && t`SMS cost approx. ${formatCurrency(message.sms_cost, message.sms_currency || 'SEK')}`}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
             <div className={classes.previewBody}>
-                <div className={classes.previewCard}>
-                    <div
-                        className={classes.previewContent}
-                        dangerouslySetInnerHTML={{__html: message.message}}
-                    />
-                </div>
+                {message.sms_body && (
+                    <div className={classes.previewCard} data-testid="message-sms-preview">
+                        <div className={classes.previewSmsLabel}>{t`SMS text`}</div>
+                        <div className={classes.previewSms}>{message.sms_body}</div>
+                    </div>
+                )}
+                {message.channel !== 'SMS' && (
+                    <div className={classes.previewCard}>
+                        <div
+                            className={classes.previewContent}
+                            dangerouslySetInnerHTML={{__html: message.message}}
+                        />
+                    </div>
+                )}
             </div>
             {recipientsOpen && (
                 <MessageRecipientsModal

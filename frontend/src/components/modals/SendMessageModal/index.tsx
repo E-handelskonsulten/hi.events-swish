@@ -13,8 +13,10 @@ import {
     LoadingOverlay,
     Menu,
     MultiSelect,
+    SegmentedControl,
     Select,
     Text,
+    Textarea,
     TextInput
 } from "@mantine/core";
 import {
@@ -36,13 +38,18 @@ import {t} from "@lingui/macro";
 import {Editor} from "../../common/Editor";
 import {useSendEventMessage} from "../../../mutations/useSendEventMessage.ts";
 import {ProductSelector} from "../../common/ProductSelector";
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import {useGetAccount} from "../../../queries/useGetAccount.ts";
 import {getConfig} from "../../../utilites/config";
 import {utcToTz, prettyDate} from "../../../utilites/dates.ts";
 import {useGetEventOccurrences} from "../../../queries/useGetEventOccurrences.ts";
 import dayjs from "dayjs";
 import classes from "./SendMessageModal.module.scss";
+import {useDebouncedValue} from "@mantine/hooks";
+import {useGetMessagePreview} from "../../../queries/useGetMessagePreview.ts";
+import {useGetOrganizerBillingSettings} from "../../../queries/useGetOrganizerBillingSettings.ts";
+import {formatCurrency} from "../../../utilites/currency.ts";
+import {MessagePreviewRequest} from "../../../api/messages.client.ts";
 
 interface EventMessageModalProps extends GenericModalProps {
     orderId?: IdParam,
@@ -180,6 +187,15 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
     const [selectedPreset, setSelectedPreset] = useState<string | null>(null);
 
     const sendMessageMutation = useSendEventMessage();
+    const [reviewing, setReviewing] = useState(false);
+    const reviewRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (reviewing) {
+            reviewRef.current?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        }
+    }, [reviewing]);
+    const billingSettingsQuery = useGetOrganizerBillingSettings(event?.organizer_id);
+    const smsAvailable = !!billingSettingsQuery.data?.data?.sms_enabled && !!billingSettingsQuery.data?.meta?.sms_configured;
 
     const form = useForm({
         initialValues: {
@@ -193,6 +209,10 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
             send_copy_to_current_user: false,
             type: 'EVENT',
             acknowledgement: false,
+            channel: 'EMAIL' as 'EMAIL' | 'SMS' | 'BOTH',
+            purpose: '' as '' | 'SERVICE' | 'MARKETING',
+            sms_body: '',
+            confirmation: '',
             order_statuses: ['COMPLETED'],
             scheduled_at: '',
             event_occurrence_id: eventOccurrenceId ? Number(eventOccurrenceId) : null as number | null,
@@ -201,7 +221,10 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
                 : null as number[] | null,
         },
         validate: {
-            acknowledgement: (value) => value === true ? null : t`You must acknowledge that this email is not promotional`,
+            acknowledgement: (value) => value === true ? null : t`You must confirm the message type before sending`,
+            purpose: (value) => value ? null : t`Choose whether this is service information or marketing`,
+            sms_body: (value, values) => values.channel !== 'EMAIL' && !String(value).trim() ? t`Write the SMS text` : null,
+            subject: (value, values) => values.channel !== 'SMS' && !String(value).trim() ? t`The subject is required` : null,
             scheduled_at: (value) => {
                 if (!isScheduled) return null;
                 if (selectedPreset && selectedPreset !== CUSTOM_PRESET) return null;
@@ -226,7 +249,18 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
 
     const handleSend = (values: any) => {
         setTierLimitError(null);
+        if (!reviewing) {
+            setReviewing(true);
+            return;
+        }
         const submitData = {...values};
+        if (submitData.channel === 'SMS') {
+            delete submitData.subject;
+            delete submitData.message;
+        }
+        if (submitData.channel === 'EMAIL') {
+            delete submitData.sms_body;
+        }
         if (isScheduled) {
             if (selectedPreset && selectedPreset !== CUSTOM_PRESET && resolvedPreset && event) {
                 submitData.scheduled_at = resolvedPreset.utcDate.tz(event.timezone).format('YYYY-MM-DDTHH:mm');
@@ -244,6 +278,7 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
                 onClose();
             },
             onError: (error: any) => {
+                setReviewing(false);
                 if (error?.response?.status === 429) {
                     const message = error?.response?.data?.message || t`You have reached your messaging limit.`;
                     setTierLimitError(message);
@@ -257,6 +292,26 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
     useEffect(() => {
         form.setFieldValue('product_ids', []);
     }, [form.values.message_type]);
+
+    const previewRequest: MessagePreviewRequest = {
+        message_type: form.values.message_type,
+        channel: form.values.channel,
+        purpose: form.values.purpose || 'SERVICE',
+        sms_body: form.values.sms_body,
+        attendee_ids: form.values.attendee_ids,
+        product_ids: form.values.product_ids,
+        order_id: form.values.order_id,
+        order_statuses: form.values.order_statuses,
+        event_occurrence_id: form.values.event_occurrence_id,
+        event_occurrence_ids: form.values.event_occurrence_ids,
+    };
+    const [debouncedPreviewRequest] = useDebouncedValue(previewRequest, 400);
+    const {data: preview} = useGetMessagePreview(eventId, debouncedPreviewRequest, !formIsDisabled && !!event);
+    const currency = preview?.currency || 'SEK';
+    const includesSms = form.values.channel !== 'EMAIL';
+    const includesEmail = form.values.channel !== 'SMS';
+    const smsCharacters = form.values.sms_body.length + (form.values.purpose === 'MARKETING' ? (preview?.sms_opt_out_suffix_length ?? 0) : 0);
+    const isConfirmed = !preview?.requires_confirmation || form.values.confirmation.trim() === (preview?.confirmation_word ?? '').trim();
 
     if (!event || !me || !product_categories) {
         return <LoadingOverlay visible/>;
@@ -433,19 +488,86 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
                                 <OrderField orderId={orderId} eventId={eventId}/>
                             )}
 
-                            <TextInput
-                                required
-                                label={t`Subject`}
-                                placeholder={t`e.g., Important update about your tickets`}
-                                {...form.getInputProps('subject')}
-                            />
+                            <div>
+                                <Text size="sm" fw={500} mb={4}>{t`Message type`}</Text>
+                                <SegmentedControl
+                                    fullWidth
+                                    data={[
+                                        {value: 'SERVICE', label: t`Service information`},
+                                        {value: 'MARKETING', label: t`Marketing`},
+                                    ]}
+                                    value={form.values.purpose || undefined}
+                                    onChange={(value) => form.setFieldValue('purpose', value as 'SERVICE' | 'MARKETING')}
+                                    data-testid="message-purpose"
+                                />
+                                <Text size="xs" c={form.errors.purpose ? 'red' : 'dimmed'} mt={4}>
+                                    {form.errors.purpose
+                                        ? form.errors.purpose
+                                        : form.values.purpose === 'MARKETING'
+                                            ? t`Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link.`
+                                            : t`Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket.`}
+                                </Text>
+                            </div>
 
-                            <Editor
-                                label={t`Message`}
-                                value={form.values.message || ''}
-                                onChange={(value) => form.setFieldValue('message', value)}
-                                error={form.errors.message as string}
-                            />
+                            <div>
+                                <Text size="sm" fw={500} mb={4}>{t`Channel`}</Text>
+                                <SegmentedControl
+                                    fullWidth
+                                    data={[
+                                        {value: 'EMAIL', label: t`Email`},
+                                        {value: 'SMS', label: t`SMS`, disabled: !smsAvailable},
+                                        {value: 'BOTH', label: t`Both`, disabled: !smsAvailable},
+                                    ]}
+                                    value={form.values.channel}
+                                    onChange={(value) => form.setFieldValue('channel', value as 'EMAIL' | 'SMS' | 'BOTH')}
+                                    data-testid="message-channel"
+                                />
+                                {!smsAvailable && (
+                                    <Text size="xs" c="dimmed" mt={4}>{t`SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages.`}</Text>
+                                )}
+                                {preview && (
+                                    <Text size="xs" c="dimmed" mt={4} data-testid="message-recipient-summary">
+                                        {includesEmail && t`Email: ${preview.email_recipients} recipients`}
+                                        {includesEmail && includesSms && ' · '}
+                                        {includesSms && t`SMS: ${preview.sms_recipients} recipients`}
+                                        {includesSms && preview.excluded_without_phone > 0 && ` (${t`${preview.excluded_without_phone} without a mobile number`})`}
+                                        {form.values.purpose === 'MARKETING' && preview.excluded_without_consent > 0 && ` · ${t`${preview.excluded_without_consent} excluded without marketing consent`}`}
+                                    </Text>
+                                )}
+                            </div>
+
+                            {includesEmail && (
+                                <>
+                                    <TextInput
+                                        required
+                                        label={t`Subject`}
+                                        placeholder={t`e.g., Important update about your tickets`}
+                                        {...form.getInputProps('subject')}
+                                    />
+
+                                    <Editor
+                                        label={t`Message`}
+                                        value={form.values.message || ''}
+                                        onChange={(value) => form.setFieldValue('message', value)}
+                                        error={form.errors.message as string}
+                                    />
+                                </>
+                            )}
+
+                            {includesSms && (
+                                <Textarea
+                                    required
+                                    autosize
+                                    minRows={3}
+                                    label={t`SMS text`}
+                                    description={preview
+                                        ? `${t`Sender`}: ${preview.sms_sender} · ${smsCharacters}/${preview.sms_single_part_limit} ${t`characters`} · ${t`${preview.sms_parts} part(s)`} · ${t`approx. ${formatCurrency(preview.sms_cost_per_recipient, currency)} per recipient`}${form.values.purpose === 'MARKETING' ? ` · ${t`unsubscribe link is added automatically`}` : ''}${preview.sms_encoding === 'UCS-2' ? ` · ${t`contains characters outside the SMS alphabet (e.g. – or emoji), so each part holds only 70`}` : ''}`
+                                        : t`Keep it short. Links are optional.`}
+                                    placeholder={t`Hi! Doors open at 19:00. Bring your ticket QR code.`}
+                                    {...form.getInputProps('sms_body')}
+                                    data-testid="message-sms-body"
+                                />
+                            )}
                         </div>
 
                         <div className={classes.footerSection}>
@@ -527,8 +649,34 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
 
                             <Checkbox
                                 {...form.getInputProps('acknowledgement', {type: 'checkbox'})}
-                                label={t`I confirm this is a transactional message related to this event`}
+                                label={form.values.purpose === 'MARKETING'
+                                    ? t`I confirm this is marketing and will only reach buyers who have consented`
+                                    : t`I confirm this is a transactional message related to this event`}
                             />
+
+                            {reviewing && preview && (
+                                <div ref={reviewRef}>
+                                <Callout variant="warning" title={t`Review before sending`}>
+                                    <Text size="sm" data-testid="message-review-summary">
+                                        {form.values.purpose === 'MARKETING' ? t`Marketing` : t`Service information`} · {form.values.channel === 'BOTH' ? t`Email and SMS` : form.values.channel === 'SMS' ? t`SMS` : t`Email`}
+                                        <br/>
+                                        {includesEmail && t`Email: ${preview.email_recipients} recipients`}
+                                        {includesEmail && includesSms && ' · '}
+                                        {includesSms && t`SMS: ${preview.sms_recipients} recipients, ${preview.sms_parts} part(s), approx. ${formatCurrency(preview.sms_cost_per_recipient, currency)} each ≈ ${formatCurrency(preview.sms_total_cost, currency)}`}
+                                    </Text>
+                                    {preview.requires_confirmation && !form.values.is_test && (
+                                        <TextInput
+                                            mt="sm"
+                                            label={t`Type the event name to confirm`}
+                                            description={t`Type "${preview.confirmation_word}" exactly to enable sending to more than 100 recipients.`}
+                                            autoComplete="off"
+                                            {...form.getInputProps('confirmation')}
+                                            data-testid="message-confirmation-input"
+                                        />
+                                    )}
+                                </Callout>
+                                </div>
+                            )}
 
                             <Group gap={0}>
                                 <Button
@@ -536,11 +684,16 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
                                     loading={sendMessageMutation.isPending}
                                     type={'submit'}
                                     leftSection={isScheduled ? <IconClock size={16}/> : <IconSend size={16}/>}
-                                    disabled={!form.values.acknowledgement || !isAccountVerified || accountRequiresManualVerification}
+                                    disabled={!form.values.acknowledgement || !isAccountVerified || accountRequiresManualVerification || (reviewing && !isConfirmed)}
                                     data-testid="message-send-button"
                                 >
-                                    {isScheduled ? t`Schedule Message` : (form.values.is_test ? t`Send Test` : t`Send Message`)}
+                                    {!reviewing ? t`Review and send` : isScheduled ? t`Schedule Message` : (form.values.is_test ? t`Send Test` : t`Send Message`)}
                                 </Button>
+                                {reviewing && (
+                                    <Button type="button" variant="default" ml="xs" onClick={() => setReviewing(false)} data-testid="message-review-back">
+                                        {t`Back`}
+                                    </Button>
+                                )}
                                 <Menu shadow="md" width={220} position="bottom-end">
                                     <Menu.Target>
                                         <Button
@@ -571,9 +724,11 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
                                 </Menu>
                             </Group>
 
-                            <p className={classes.warningText}>
-                                {t`Promotional emails may result in account suspension`}
-                            </p>
+                            {form.values.purpose !== 'MARKETING' && (
+                                <p className={classes.warningText}>
+                                    {t`Promotional emails may result in account suspension`}
+                                </p>
+                            )}
                         </div>
                     </fieldset>
                 )}
