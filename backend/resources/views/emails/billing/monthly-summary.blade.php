@@ -25,6 +25,9 @@
 @endif
 @if ($line->smsEnabled)
 | {{ __('SMS sent') }} | {{ $line->smsSent }} × {{ $money($line->smsFeePerMessage) }} | {{ $money($line->smsTotal) }} |
+@foreach ($line->smsSentByType as $smsType => $count)
+| {{ __('of which :type', ['type' => __('sms_type.'.$smsType)]) }} | {{ $count }} | |
+@endforeach
 @endif
 | **{{ __('Organizer total') }}** | | **{{ $money($line->total) }}** |
 </x-mail::table>

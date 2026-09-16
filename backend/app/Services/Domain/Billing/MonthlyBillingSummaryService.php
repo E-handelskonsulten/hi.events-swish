@@ -49,7 +49,7 @@ class MonthlyBillingSummaryService
                 $organizer,
                 $periodStart,
                 $periodEnd,
-                $smsCounts[$organizer->getId()] ?? 0,
+                $smsCounts[$organizer->getId()] ?? [],
                 $currency,
             ))
             ->filter(fn (OrganizerBillingLineDTO $line) => $line->soldTickets > 0 || $line->smsSent > 0)
@@ -69,9 +69,10 @@ class MonthlyBillingSummaryService
         OrganizerDomainObject $organizer,
         CarbonImmutable $periodStart,
         CarbonImmutable $periodEnd,
-        int $smsSent,
+        array $smsSentByType,
         string $currency,
     ): OrganizerBillingLineDTO {
+        $smsSent = array_sum($smsSentByType);
         $settings = $this->organizerBillingSettingsRepository->findFirstWhere([
             OrganizerBillingSettingDomainObjectAbstract::ORGANIZER_ID => $organizer->getId(),
         ]);
@@ -96,6 +97,7 @@ class MonthlyBillingSummaryService
             platformFeeTotal: $platformFeeTotal,
             smsEnabled: $smsEnabled,
             smsSent: $smsEnabled ? $smsSent : 0,
+            smsSentByType: $smsEnabled ? $smsSentByType : [],
             smsFeePerMessage: $smsFee,
             smsTotal: $smsTotal,
             total: Currency::round($platformFeeTotal + $smsTotal),

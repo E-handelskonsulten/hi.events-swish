@@ -18,6 +18,8 @@ class OrganizerBillingLineDTO extends BaseDataObject
         public readonly float $platformFeeTotal,
         public readonly bool $smsEnabled,
         public readonly int $smsSent,
+        /** @var array<string, int> sent SMS per message type */
+        public readonly array $smsSentByType,
         public readonly float $smsFeePerMessage,
         public readonly float $smsTotal,
         public readonly float $total,

@@ -1085,5 +1085,13 @@
     "Total to invoice": "Totalt att fakturera",
     "The full basis is attached as CSV.": "Hela underlaget bifogas som CSV.",
     "Fee per sold ticket, refunds do not affect it. SMS are charged per sent message.": "Avgift per såld biljett, återköp påverkar ej. SMS debiteras per skickat meddelande.",
-    "Your tickets for :event: :url": "Dina biljetter till :event: :url"
+    "Your tickets for :event: :url": "Dina biljetter till :event: :url",
+    "Unsubscribe: :url": "Avregistrera: :url",
+    "SMS delivery is not enabled for this organizer.": "SMS-leverans är inte aktiverad för den här arrangören.",
+    "Type the event name exactly as shown to confirm sending to more than :count recipients.": "Skriv evenemangets namn exakt som det visas för att bekräfta utskick till fler än :count mottagare.",
+    "of which :type": "varav :type",
+    "sms_type.TICKET": "biljett-SMS",
+    "sms_type.REFUND_NOTICE": "återbetalningsbesked",
+    "sms_type.SERVICE": "servicemeddelanden",
+    "sms_type.MARKETING": "marknadsföring"
 }

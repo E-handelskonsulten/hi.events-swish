@@ -233,7 +233,7 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         $counts = app(SmsMessagesRepositoryInterface::class)
             ->countSentPerOrganizerBetween(now()->startOfMonth(), now()->addMonth()->startOfMonth());
 
-        $this->assertSame(1, $counts[$this->organizerId]);
+        $this->assertSame(['REFUND_NOTICE' => 1], $counts[$this->organizerId]);
     }
 
     private function enableSms(bool $enabled = true, ?string $sender = null): void

@@ -30,6 +30,7 @@ class BillingSummaryCsvBuilderTest extends TestCase
                     platformFeeTotal: 72.0,
                     smsEnabled: true,
                     smsSent: 8,
+                    smsSentByType: ['TICKET' => 5, 'MARKETING' => 3],
                     smsFeePerMessage: 0.5,
                     smsTotal: 4.0,
                     total: 76.0,
@@ -43,8 +44,8 @@ class BillingSummaryCsvBuilderTest extends TestCase
 
         $this->assertStringStartsWith("\xEF\xBB\xBF", $csv);
         $lines = explode("\n", trim(substr($csv, 3)));
-        $this->assertSame('organizer_id;organizer;period;sold_orders;sold_tickets;refunded_tickets;platform_fee_per_ticket;platform_fee_total;sms_enabled;sms_sent;sms_fee_per_message;sms_total;organizer_total;gross_sales;currency', $lines[0]);
-        $this->assertSame('7;"Lördagsklubben; Demo";2026-08;9;12;1;6,00;72,00;yes;8;0,50;4,00;76,00;1234,50;SEK', $lines[1]);
-        $this->assertSame(';TOTAL;2026-08;;;;;;;;;;76,00;;SEK', $lines[2]);
+        $this->assertSame('organizer_id;organizer;period;sold_orders;sold_tickets;refunded_tickets;platform_fee_per_ticket;platform_fee_total;sms_enabled;sms_sent;sms_ticket;sms_refund_notice;sms_service;sms_marketing;sms_fee_per_message;sms_total;organizer_total;gross_sales;currency', $lines[0]);
+        $this->assertSame('7;"Lördagsklubben; Demo";2026-08;9;12;1;6,00;72,00;yes;8;5;0;0;3;0,50;4,00;76,00;1234,50;SEK', $lines[1]);
+        $this->assertSame(';TOTAL;2026-08;;;;;;;;;;;;;;76,00;;SEK', $lines[2]);
     }
 }

@@ -25,6 +25,10 @@ class BillingSummaryCsvBuilder
             'platform_fee_total',
             'sms_enabled',
             'sms_sent',
+            'sms_ticket',
+            'sms_refund_notice',
+            'sms_service',
+            'sms_marketing',
             'sms_fee_per_message',
             'sms_total',
             'organizer_total',
@@ -45,6 +49,10 @@ class BillingSummaryCsvBuilder
                 $this->amount($line->platformFeeTotal),
                 $line->smsEnabled ? 'yes' : 'no',
                 $line->smsSent,
+                $line->smsSentByType['TICKET'] ?? 0,
+                $line->smsSentByType['REFUND_NOTICE'] ?? 0,
+                $line->smsSentByType['SERVICE'] ?? 0,
+                $line->smsSentByType['MARKETING'] ?? 0,
                 $this->amount($line->smsFeePerMessage),
                 $this->amount($line->smsTotal),
                 $this->amount($line->total),
@@ -53,7 +61,7 @@ class BillingSummaryCsvBuilder
             ];
         }
 
-        $rows[] = ['', 'TOTAL', $period, '', '', '', '', '', '', '', '', '', $this->amount($summary->grandTotal), '', $summary->currency];
+        $rows[] = ['', 'TOTAL', $period, '', '', '', '', '', '', '', '', '', '', '', '', '', $this->amount($summary->grandTotal), '', $summary->currency];
 
         $handle = fopen('php://temp', 'r+');
         fwrite($handle, "\xEF\xBB\xBF");

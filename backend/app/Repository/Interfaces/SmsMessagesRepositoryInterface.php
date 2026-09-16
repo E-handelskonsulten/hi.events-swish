@@ -14,7 +14,7 @@ use Illuminate\Support\Collection;
 interface SmsMessagesRepositoryInterface extends RepositoryInterface
 {
     /**
-     * @return array<int, int> sent message count keyed by organizer id
+     * @return array<int, array<string, int>> sent message counts keyed by organizer id, then by message type
      */
     public function countSentPerOrganizerBetween(CarbonInterface $from, CarbonInterface $to): array;
 

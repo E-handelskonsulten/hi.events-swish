@@ -30,13 +30,14 @@ class SmsMessagesRepository extends BaseRepository implements SmsMessagesReposit
     {
         return $this->runQuery(fn () => $this->model
             ->query()
-            ->selectRaw('organizer_id, count(*) as sent_count')
+            ->selectRaw('organizer_id, type, count(*) as sent_count')
             ->where('status', SmsMessageStatus::SENT->value)
             ->where('sent_at', '>=', $from)
             ->where('sent_at', '<', $to)
+            ->groupBy('organizer_id', 'type')
+            ->get()
             ->groupBy('organizer_id')
-            ->pluck('sent_count', 'organizer_id')
-            ->map(static fn ($count) => (int) $count)
+            ->map(static fn (Collection $rows) => $rows->pluck('sent_count', 'type')->map(static fn ($count) => (int) $count)->all())
             ->all());
     }
 
