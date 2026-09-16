@@ -20,6 +20,9 @@ const sumForType = (taxesAndFees: TaxAndFee[], type: TaxAndFeeType, basePrice: n
             if (item.calculation_type === TaxAndFeeCalculationType.Percentage) {
                 return total + (basePrice * Number(item.rate || 0)) / 100;
             }
+            if (item.calculation_type === TaxAndFeeCalculationType.FixedPlusPercentage) {
+                return total + Math.round((Number(item.fixed_amount || 0) + (basePrice * Number(item.rate || 0)) / 100) * 100) / 100;
+            }
             return total + Number(item.rate || 0);
         }, 0);
 };

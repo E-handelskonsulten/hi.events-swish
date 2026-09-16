@@ -68,7 +68,7 @@ msgstr "{0} aktívnych webhookov"
 msgid "{0} available"
 msgstr "{0} dostupných"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
 msgid "{0} created successfully"
 msgstr "{0} úspešne vytvorené"
 
@@ -98,7 +98,7 @@ msgstr "{0} organizátorov"
 msgid "{0} tickets"
 msgstr "{0} lístkov"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} úspešne aktualizované"
 
@@ -139,7 +139,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr "Dokončených {completedCount} z {totalCount} krokov"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "{count} add-ons"
 msgstr "Doplnky: {count}"
 
@@ -164,7 +164,7 @@ msgstr "pred {diffSec} s"
 msgid "{eventCount} events"
 msgstr "{eventCount} udalostí"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:103
+#: src/components/forms/ProductForm/ledgerSummaries.ts:102
 msgid "{first} + {additionalCount} more"
 msgstr "{first} + ďalších {additionalCount}"
 
@@ -176,7 +176,7 @@ msgstr "{hours} hodín, {minutes} minút a {seconds} sekúnd"
 msgid "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 msgstr "Na dotknuté termíny je prihlásených {loadedAffectedAttendees} účastníkov."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:112
+#: src/components/forms/ProductForm/ledgerSummaries.ts:111
 msgid "{min}–{max} per order"
 msgstr "{min}–{max} na objednávku"
 
@@ -269,7 +269,7 @@ msgid "1 Active Webhook"
 msgstr "1 aktívny webhook"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "1 add-on"
 msgstr "1 doplnok"
 
@@ -347,7 +347,7 @@ msgstr "zmena dĺžky"
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Vstup dátumu. Ideálne na otázky o dátume narodenia atď."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:88
+#: src/components/forms/TaxAndFeeForm/index.tsx:113
 msgid "A default {type} is automaticaly applied to all new products. You can override this on a per product basis."
 msgstr "Predvolený {type} sa automaticky aplikuje na všetky nové produkty. Môžete to zmeniť pre každý produkt zvlášť."
 
@@ -366,6 +366,10 @@ msgstr "Ešte pár krokov a môžete začať predávať."
 #: src/components/forms/TaxAndFeeForm/index.tsx:35
 msgid "A fixed amount per product. E.g, $0.50 per product"
 msgstr "Pevná suma za produkt. Napr. 0,50 € za produkt"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:41
+msgid "A fixed amount plus a percentage of the product price, shown to the buyer as one amount. E.g. $0.50 + 1%"
+msgstr ""
 
 #: src/components/forms/ProductCategoryForm/index.tsx:24
 msgid "A message to display when there are no products in this category."
@@ -798,7 +802,7 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr "Pridajte svoje sociálne médiá a URL webstránky. Tieto sa zobrazia na vašej verejnej stránke organizátora."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:344
-#: src/components/forms/ProductForm/ledgerSummaries.ts:128
+#: src/components/forms/ProductForm/ledgerSummaries.ts:127
 msgid "Add-on only"
 msgstr "Len ako doplnok"
 
@@ -1099,7 +1103,7 @@ msgstr "Tiež vrátiť platbu za túto objednávku"
 msgid "Always available"
 msgstr "Vždy dostupné"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:53
+#: src/components/forms/ProductForm/ledgerSummaries.ts:54
 msgid "Always on sale"
 msgstr "Vždy v predaji"
 
@@ -1109,7 +1113,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "Úžasné, Udalosť, Kľúčové slová..."
 
 #: src/components/common/OrdersTable/index.tsx:260
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 #: src/components/modals/SwishMassRefundModal/index.tsx:68
 #: src/components/modals/SwishMassRefundModal/index.tsx:121
 #: src/components/modals/SwishMassRefundModal/index.tsx:357
@@ -1251,7 +1255,7 @@ msgstr "Použiť"
 msgid "Apply Changes"
 msgstr "Použiť zmeny"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:86
+#: src/components/forms/TaxAndFeeForm/index.tsx:111
 msgid "Apply this {type} to all new products"
 msgstr "Použiť tento {type} na všetky nové produkty"
 
@@ -1986,7 +1990,7 @@ msgstr "Podľa typu lístka"
 msgid "Bypass Application Fees"
 msgstr "Obísť poplatky aplikácie"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:52
+#: src/components/forms/TaxAndFeeForm/index.tsx:61
 msgid "Calculation Type"
 msgstr "Typ výpočtu"
 
@@ -2234,6 +2238,10 @@ msgstr "Zmeniť nastavenia zoznamu čakateľov"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Dĺžka zmenená pre {count} termín(ov)"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:84
+msgid "Charged once per product, before the percentage is added"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -3115,7 +3123,7 @@ msgstr "Zahŕňa všetky lístky"
 msgid "Create"
 msgstr "Vytvoriť"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
 msgid "Create {0}"
 msgstr "Vytvoriť {0}"
 
@@ -3278,7 +3286,7 @@ msgid "Create schedule"
 msgstr "Vytvoriť harmonogram"
 
 #: src/components/forms/ProductForm/index.tsx:501
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:53
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:54
 msgid "Create Tax or Fee"
 msgstr "Vytvoriť daň alebo poplatok"
 
@@ -3670,7 +3678,7 @@ msgstr "Predvolené spracovanie poplatkov"
 msgid "Default template will be used"
 msgstr "Bude použitá predvolená šablóna"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:66
+#: src/components/forms/ProductForm/ledgerSummaries.ts:67
 msgid "Defaults"
 msgstr "Predvolené hodnoty"
 
@@ -3810,7 +3818,7 @@ msgstr "Žiadosti o vymazanie"
 #: src/components/forms/ProductCategoryForm/index.tsx:29
 #: src/components/forms/ProductForm/index.tsx:397
 #: src/components/forms/ProductForm/index.tsx:403
-#: src/components/forms/TaxAndFeeForm/index.tsx:81
+#: src/components/forms/TaxAndFeeForm/index.tsx:106
 #: src/components/modals/DuplicateEventModal/index.tsx:118
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
@@ -4117,7 +4125,7 @@ msgid "Edit"
 msgstr "Upraviť"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:522
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
 msgid "Edit {0}"
 msgstr "Upraviť {0}"
 
@@ -4253,11 +4261,11 @@ msgstr "Editor"
 msgid "Education"
 msgstr "Vzdelávanie"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 2.50 for $2.50"
 msgstr "napr. 2.50 pre $2.50"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 23.5 for 23.5%"
 msgstr "napr. 23.5 pre 23.5%"
 
@@ -5289,12 +5297,12 @@ msgid "February"
 msgstr "Február"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:18
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Fee"
 msgstr "Poplatok"
 
@@ -5448,9 +5456,17 @@ msgstr "Na zverejnenie opravte problémy"
 msgid "Fixed"
 msgstr "Pevná"
 
+#: src/components/forms/TaxAndFeeForm/index.tsx:39
+msgid "Fixed + percentage"
+msgstr ""
+
 #: src/components/forms/PromoCodeForm/index.tsx:102
 msgid "Fixed amount"
 msgstr "Pevná suma"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:82
+msgid "Fixed Amount"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:145
 msgid "Fixed fee"
@@ -5544,7 +5560,7 @@ msgstr "Od"
 msgid "From {0}"
 msgstr "Od {0}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:46
+#: src/components/forms/ProductForm/ledgerSummaries.ts:47
 msgid "From {start}"
 msgstr "Od {start}"
 
@@ -5811,7 +5827,7 @@ msgstr "Skryté — predaj skončil {end}."
 msgid "Hidden from attendees - only visible to organizers"
 msgstr "Skryté pred účastníkmi – viditeľné iba pre organizátorov"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:151
+#: src/components/forms/ProductForm/ledgerSummaries.ts:150
 msgid "Hidden from everyone"
 msgstr "Skryté pre všetkých"
 
@@ -5889,7 +5905,7 @@ msgstr "Skryť túto otázku"
 msgid "Hide this tier from users"
 msgstr "Skryť túto úroveň pred používateľmi"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:61
+#: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Hides sold out"
 msgstr "Skrýva vypredané"
 
@@ -5910,7 +5926,7 @@ msgid "Highlight this product"
 msgstr "Zvýrazniť tento produkt"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:374
-#: src/components/forms/ProductForm/ledgerSummaries.ts:144
+#: src/components/forms/ProductForm/ledgerSummaries.ts:143
 msgid "Highlighted"
 msgstr "Zvýraznené"
 
@@ -6969,7 +6985,7 @@ msgstr "Úroveň správ"
 msgid "Messaging tier updated successfully"
 msgstr "Úroveň správ bola úspešne aktualizovaná"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:115
+#: src/components/forms/ProductForm/ledgerSummaries.ts:114
 msgid "Min {min} per order"
 msgstr "Min. {min} na objednávku"
 
@@ -7130,7 +7146,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:15
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:182
-#: src/components/forms/TaxAndFeeForm/index.tsx:61
+#: src/components/forms/TaxAndFeeForm/index.tsx:70
 #: src/components/modals/DuplicateEventModal/index.tsx:112
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:220
@@ -7415,7 +7431,7 @@ msgstr "Žiadne dostupné filtre"
 msgid "No invoice"
 msgstr "Žiadna faktúra"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:121
+#: src/components/forms/ProductForm/ledgerSummaries.ts:120
 msgid "No limits"
 msgstr "Žiadne limity"
 
@@ -7573,7 +7589,7 @@ msgstr "Žiadne výsledky vyhľadávania."
 msgid "No suggestions"
 msgstr "Žiadne návrhy"
 
-#: src/components/common/TaxAndFeeList/index.tsx:108
+#: src/components/common/TaxAndFeeList/index.tsx:106
 msgid "No Taxes or Fees have been added."
 msgstr "Neboli pridané žiadne dane ani poplatky."
 
@@ -7624,13 +7640,13 @@ msgid "non-edited"
 msgstr "neupravené"
 
 #: src/components/common/PromoCodeTable/index.tsx:82
-#: src/components/forms/ProductForm/ledgerSummaries.ts:92
-#: src/components/forms/ProductForm/ledgerSummaries.ts:132
+#: src/components/forms/ProductForm/ledgerSummaries.ts:91
+#: src/components/forms/ProductForm/ledgerSummaries.ts:131
 #: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "Žiadne"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:29
+#: src/components/forms/ProductForm/ledgerSummaries.ts:30
 msgid "None yet"
 msgstr "Zatiaľ žiadne"
 
@@ -7740,8 +7756,8 @@ msgstr "z"
 msgid "of every month"
 msgstr "každého mesiaca"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:77
-#: src/components/forms/ProductForm/ledgerSummaries.ts:140
+#: src/components/forms/ProductForm/ledgerSummaries.ts:78
+#: src/components/forms/ProductForm/ledgerSummaries.ts:139
 msgid "Off"
 msgstr "Vyp."
 
@@ -7812,7 +7828,7 @@ msgstr "Nastavenia offline platieb"
 msgid "on"
 msgstr "v"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:74
+#: src/components/forms/ProductForm/ledgerSummaries.ts:75
 msgid "On"
 msgstr "Zap."
 
@@ -8657,7 +8673,7 @@ msgstr ""
 msgid "Percentage"
 msgstr "Percentuálne"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 msgid "Percentage Amount"
 msgstr "Percentuálna suma"
 
@@ -8673,6 +8689,10 @@ msgstr "Percentuálny poplatok (%)"
 #: src/components/routes/admin/Configurations/index.tsx:175
 msgid "Percentage must be between 0 and 100"
 msgstr "Percento musí byť medzi 0 a 100"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:98
+msgid "Percentage of the product price, added to the fixed amount"
+msgstr ""
 
 #: src/components/routes/admin/Configurations/index.tsx:248
 msgid "Percentage of transaction amount"
@@ -9204,7 +9224,7 @@ msgstr "Promo kód"
 msgid "Promo Code page"
 msgstr "Stránka promo kódu"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:154
+#: src/components/forms/ProductForm/ledgerSummaries.ts:153
 msgid "Promo code required"
 msgstr "Vyžaduje sa promo kód"
 
@@ -9259,7 +9279,7 @@ msgstr "Zadajte aspoň jedno pole adresy (miesto, ulica, mesto alebo krajina)."
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "Doplňte nasledujúce údaje pred ďalšou kontrolou zo strany Stripe, aby výplaty pokračovali."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:157
+#: src/components/forms/ProductForm/ledgerSummaries.ts:156
 msgid "Public"
 msgstr "Verejné"
 
@@ -10604,7 +10624,7 @@ msgstr ""
 msgid "September"
 msgstr "September"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 msgid "Service Fee"
 msgstr "Servisný poplatok"
 
@@ -10853,7 +10873,7 @@ msgstr "Zobrazené zákazníkovi pred pokladňou"
 msgid "Shows common address fields, including country"
 msgstr "Zobrazuje bežné polia adresy vrátane krajiny"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:60
+#: src/components/forms/ProductForm/ledgerSummaries.ts:61
 msgid "Shows remaining"
 msgstr "Zobrazuje zostávajúce"
 
@@ -11093,7 +11113,7 @@ msgstr "Začnite písať miesto alebo adresu..."
 msgid "Started by {0} on {1}"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:62
+#: src/components/forms/ProductForm/ledgerSummaries.ts:63
 msgid "Starts collapsed"
 msgstr "Na začiatku zbalené"
 
@@ -11542,12 +11562,12 @@ msgstr "Cielené na účastníkov z {0} vybraných termínov."
 #: src/components/common/AdminOrdersTable/index.tsx:84
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
@@ -12353,7 +12373,7 @@ msgstr "Predaj lístkov"
 msgid "tickets"
 msgstr "lístky"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:131
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:134
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 #: src/components/routes/product-widget/OrderTickets/index.tsx:80
@@ -12381,7 +12401,7 @@ msgstr ""
 msgid "Tickets Sold"
 msgstr "Predané lístky"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:57
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:60
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:52
 msgid "Tier {0}"
 msgstr "Úroveň {0}"
@@ -12650,7 +12670,7 @@ msgstr "Zapnúť zvuk"
 msgid "Twitch"
 msgstr "Twitch"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:44
+#: src/components/forms/TaxAndFeeForm/index.tsx:53
 #: src/components/routes/admin/Announcements/index.tsx:158
 #: src/components/routes/admin/Attribution/index.tsx:109
 #: src/components/routes/admin/Messages/index.tsx:134
@@ -12805,7 +12825,7 @@ msgstr "Nezaplatená objednávka"
 msgid "until"
 msgstr "do"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:49
+#: src/components/forms/ProductForm/ledgerSummaries.ts:50
 msgid "Until {end}"
 msgstr "Do {end}"
 
@@ -12813,11 +12833,11 @@ msgstr "Do {end}"
 msgid "Until a date"
 msgstr "Do dátumu"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled product"
 msgstr "Produkt bez názvu"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled ticket"
 msgstr "Lístok bez názvu"
 
@@ -12829,7 +12849,7 @@ msgstr "Nedôveryhodné"
 msgid "Unverified"
 msgstr "Neoverené"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:118
+#: src/components/forms/ProductForm/ledgerSummaries.ts:117
 msgid "Up to {max} per order"
 msgstr "Najviac {max} na objednávku"
 
@@ -12849,7 +12869,7 @@ msgstr "Nadchádzajúce podujatia"
 msgid "Upcoming Events"
 msgstr "Nadchádzajúce udalosti"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Update {0}"
 msgstr "Aktualizovať {0}"
 
@@ -13063,7 +13083,7 @@ msgstr "UUID"
 msgid "Validating your VAT number..."
 msgstr "Overovanie čísla DPH..."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:101
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:447
 msgid "VAT"

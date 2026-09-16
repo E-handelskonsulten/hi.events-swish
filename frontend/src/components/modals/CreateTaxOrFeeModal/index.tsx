@@ -22,6 +22,7 @@ export const CreateTaxOrFeeModal = ({ onClose, onCreated }: CreateTaxOrFeeModalP
             type: TaxAndFeeType.Tax,
             calculation_type: TaxAndFeeCalculationType.Percentage,
             rate: undefined,
+            fixed_amount: undefined,
             description: '',
             is_default: true,
             is_active: true,

@@ -69,7 +69,7 @@ msgstr "{0} Actieve webhooks"
 msgid "{0} available"
 msgstr "{0} beschikbaar"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
 msgid "{0} created successfully"
 msgstr "{0} succesvol aangemaakt"
 
@@ -99,7 +99,7 @@ msgstr "{0} organisatoren"
 msgid "{0} tickets"
 msgstr "{0} tickets"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} succesvol bijgewerkt"
 
@@ -140,7 +140,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr "{completedCount} van {totalCount} stappen voltooid"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "{count} add-ons"
 msgstr "{count} add-ons"
 
@@ -165,7 +165,7 @@ msgstr "{diffSec} s geleden"
 msgid "{eventCount} events"
 msgstr "{eventCount} evenementen"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:103
+#: src/components/forms/ProductForm/ledgerSummaries.ts:102
 msgid "{first} + {additionalCount} more"
 msgstr "{first} + nog {additionalCount}"
 
@@ -177,7 +177,7 @@ msgstr "{hours} uren, {minutes} minuten en {seconds} seconden"
 msgid "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 msgstr "{loadedAffectedAttendees} deelnemers zijn aangemeld voor de betrokken sessies."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:112
+#: src/components/forms/ProductForm/ledgerSummaries.ts:111
 msgid "{min}–{max} per order"
 msgstr "{min}–{max} per bestelling"
 
@@ -270,7 +270,7 @@ msgid "1 Active Webhook"
 msgstr "1 Actieve webhook"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "1 add-on"
 msgstr "1 add-on"
 
@@ -348,7 +348,7 @@ msgstr "een wijziging in de duur"
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Een datuminvoer. Perfect voor het vragen naar een geboortedatum enz."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:88
+#: src/components/forms/TaxAndFeeForm/index.tsx:113
 msgid "A default {type} is automaticaly applied to all new products. You can override this on a per product basis."
 msgstr "Een standaard {type} wordt automatisch toegepast op alle nieuwe producten. Je kunt dit opheffen per product."
 
@@ -367,6 +367,10 @@ msgstr "Nog een paar stappen en je kunt beginnen met verkopen."
 #: src/components/forms/TaxAndFeeForm/index.tsx:35
 msgid "A fixed amount per product. E.g, $0.50 per product"
 msgstr "Een vast bedrag per product. Bijv. $0,50 per product"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:41
+msgid "A fixed amount plus a percentage of the product price, shown to the buyer as one amount. E.g. $0.50 + 1%"
+msgstr ""
 
 #: src/components/forms/ProductCategoryForm/index.tsx:24
 msgid "A message to display when there are no products in this category."
@@ -799,7 +803,7 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr "Voeg je sociale media en website-URL toe. Deze worden weergegeven op je openbare organisatorpagina."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:344
-#: src/components/forms/ProductForm/ledgerSummaries.ts:128
+#: src/components/forms/ProductForm/ledgerSummaries.ts:127
 msgid "Add-on only"
 msgstr "Alleen als add-on"
 
@@ -1100,7 +1104,7 @@ msgstr "Deze bestelling ook terugbetalen"
 msgid "Always available"
 msgstr "Altijd beschikbaar"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:53
+#: src/components/forms/ProductForm/ledgerSummaries.ts:54
 msgid "Always on sale"
 msgstr "Altijd in de verkoop"
 
@@ -1110,7 +1114,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "Verbazingwekkend, evenement, trefwoorden..."
 
 #: src/components/common/OrdersTable/index.tsx:260
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 #: src/components/modals/SwishMassRefundModal/index.tsx:68
 #: src/components/modals/SwishMassRefundModal/index.tsx:121
 #: src/components/modals/SwishMassRefundModal/index.tsx:357
@@ -1252,7 +1256,7 @@ msgstr "Toepassen"
 msgid "Apply Changes"
 msgstr "Wijzigingen toepassen"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:86
+#: src/components/forms/TaxAndFeeForm/index.tsx:111
 msgid "Apply this {type} to all new products"
 msgstr "Pas dit {type} toe op alle nieuwe producten"
 
@@ -1987,7 +1991,7 @@ msgstr "Per tickettype"
 msgid "Bypass Application Fees"
 msgstr "Applicatiekosten omzeilen"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:52
+#: src/components/forms/TaxAndFeeForm/index.tsx:61
 msgid "Calculation Type"
 msgstr "Type berekening"
 
@@ -2235,6 +2239,10 @@ msgstr "Wachtlijstinstellingen wijzigen"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Duur gewijzigd voor {count} datum(s)"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:84
+msgid "Charged once per product, before the percentage is added"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -3116,7 +3124,7 @@ msgstr "Geldt voor alle tickets"
 msgid "Create"
 msgstr "Maak"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
 msgid "Create {0}"
 msgstr "Maak {0}"
 
@@ -3279,7 +3287,7 @@ msgid "Create schedule"
 msgstr "Schema aanmaken"
 
 #: src/components/forms/ProductForm/index.tsx:501
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:53
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:54
 msgid "Create Tax or Fee"
 msgstr "Creëer belasting of heffing"
 
@@ -3671,7 +3679,7 @@ msgstr "Standaard kostenafhandeling"
 msgid "Default template will be used"
 msgstr "Standaardsjabloon wordt gebruikt"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:66
+#: src/components/forms/ProductForm/ledgerSummaries.ts:67
 msgid "Defaults"
 msgstr "Standaardwaarden"
 
@@ -3811,7 +3819,7 @@ msgstr "Verwijderingsverzoeken"
 #: src/components/forms/ProductCategoryForm/index.tsx:29
 #: src/components/forms/ProductForm/index.tsx:397
 #: src/components/forms/ProductForm/index.tsx:403
-#: src/components/forms/TaxAndFeeForm/index.tsx:81
+#: src/components/forms/TaxAndFeeForm/index.tsx:106
 #: src/components/modals/DuplicateEventModal/index.tsx:118
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
@@ -4118,7 +4126,7 @@ msgid "Edit"
 msgstr "Bewerk"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:522
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
 msgid "Edit {0}"
 msgstr "Bewerk {0}"
 
@@ -4254,11 +4262,11 @@ msgstr "Editor"
 msgid "Education"
 msgstr "Educatie"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 2.50 for $2.50"
 msgstr "bijv. 2,50 voor $2,50"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 23.5 for 23.5%"
 msgstr "bijv. 23,5 voor 23,5%"
 
@@ -5290,12 +5298,12 @@ msgid "February"
 msgstr "Februari"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:18
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Fee"
 msgstr "Tarief"
 
@@ -5449,9 +5457,17 @@ msgstr "Los de problemen op om te publiceren"
 msgid "Fixed"
 msgstr "Vast"
 
+#: src/components/forms/TaxAndFeeForm/index.tsx:39
+msgid "Fixed + percentage"
+msgstr ""
+
 #: src/components/forms/PromoCodeForm/index.tsx:102
 msgid "Fixed amount"
 msgstr "Vast bedrag"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:82
+msgid "Fixed Amount"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:145
 msgid "Fixed fee"
@@ -5545,7 +5561,7 @@ msgstr "Van"
 msgid "From {0}"
 msgstr "Vanaf {0}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:46
+#: src/components/forms/ProductForm/ledgerSummaries.ts:47
 msgid "From {start}"
 msgstr "Vanaf {start}"
 
@@ -5812,7 +5828,7 @@ msgstr "Verborgen — verkoop geëindigd op {end}."
 msgid "Hidden from attendees - only visible to organizers"
 msgstr "Verborgen voor deelnemers - alleen zichtbaar voor organisatoren"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:151
+#: src/components/forms/ProductForm/ledgerSummaries.ts:150
 msgid "Hidden from everyone"
 msgstr "Voor iedereen verborgen"
 
@@ -5890,7 +5906,7 @@ msgstr "Verberg deze vraag"
 msgid "Hide this tier from users"
 msgstr "Verberg dit niveau voor gebruikers"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:61
+#: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Hides sold out"
 msgstr "Verbergt uitverkocht"
 
@@ -5911,7 +5927,7 @@ msgid "Highlight this product"
 msgstr "Dit product markeren"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:374
-#: src/components/forms/ProductForm/ledgerSummaries.ts:144
+#: src/components/forms/ProductForm/ledgerSummaries.ts:143
 msgid "Highlighted"
 msgstr "Uitgelicht"
 
@@ -6970,7 +6986,7 @@ msgstr "Berichtenniveau"
 msgid "Messaging tier updated successfully"
 msgstr "Berichtenniveau succesvol bijgewerkt"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:115
+#: src/components/forms/ProductForm/ledgerSummaries.ts:114
 msgid "Min {min} per order"
 msgstr "Min. {min} per bestelling"
 
@@ -7131,7 +7147,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:15
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:182
-#: src/components/forms/TaxAndFeeForm/index.tsx:61
+#: src/components/forms/TaxAndFeeForm/index.tsx:70
 #: src/components/modals/DuplicateEventModal/index.tsx:112
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:220
@@ -7416,7 +7432,7 @@ msgstr "Geen filters beschikbaar"
 msgid "No invoice"
 msgstr "Geen factuur"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:121
+#: src/components/forms/ProductForm/ledgerSummaries.ts:120
 msgid "No limits"
 msgstr "Geen limieten"
 
@@ -7574,7 +7590,7 @@ msgstr "Geen zoekresultaten."
 msgid "No suggestions"
 msgstr "Geen suggesties"
 
-#: src/components/common/TaxAndFeeList/index.tsx:108
+#: src/components/common/TaxAndFeeList/index.tsx:106
 msgid "No Taxes or Fees have been added."
 msgstr "Er zijn geen belastingen of toeslagen toegevoegd."
 
@@ -7625,13 +7641,13 @@ msgid "non-edited"
 msgstr "niet bewerkt"
 
 #: src/components/common/PromoCodeTable/index.tsx:82
-#: src/components/forms/ProductForm/ledgerSummaries.ts:92
-#: src/components/forms/ProductForm/ledgerSummaries.ts:132
+#: src/components/forms/ProductForm/ledgerSummaries.ts:91
+#: src/components/forms/ProductForm/ledgerSummaries.ts:131
 #: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "Geen"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:29
+#: src/components/forms/ProductForm/ledgerSummaries.ts:30
 msgid "None yet"
 msgstr "Nog geen"
 
@@ -7741,8 +7757,8 @@ msgstr "van"
 msgid "of every month"
 msgstr "van elke maand"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:77
-#: src/components/forms/ProductForm/ledgerSummaries.ts:140
+#: src/components/forms/ProductForm/ledgerSummaries.ts:78
+#: src/components/forms/ProductForm/ledgerSummaries.ts:139
 msgid "Off"
 msgstr "Uit"
 
@@ -7813,7 +7829,7 @@ msgstr "Instellingen voor offline betalingen"
 msgid "on"
 msgstr "op"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:74
+#: src/components/forms/ProductForm/ledgerSummaries.ts:75
 msgid "On"
 msgstr "Aan"
 
@@ -8658,7 +8674,7 @@ msgstr ""
 msgid "Percentage"
 msgstr "Percentage"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 msgid "Percentage Amount"
 msgstr "Percentage Bedrag"
 
@@ -8674,6 +8690,10 @@ msgstr "Procentuele kosten (%)"
 #: src/components/routes/admin/Configurations/index.tsx:175
 msgid "Percentage must be between 0 and 100"
 msgstr "Percentage moet tussen 0 en 100 liggen"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:98
+msgid "Percentage of the product price, added to the fixed amount"
+msgstr ""
 
 #: src/components/routes/admin/Configurations/index.tsx:248
 msgid "Percentage of transaction amount"
@@ -9205,7 +9225,7 @@ msgstr "Kortingscode"
 msgid "Promo Code page"
 msgstr "Promo Code pagina"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:154
+#: src/components/forms/ProductForm/ledgerSummaries.ts:153
 msgid "Promo code required"
 msgstr "Kortingscode vereist"
 
@@ -9260,7 +9280,7 @@ msgstr "Vul minimaal één adresveld in (locatie, straat, stad of land)."
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "Lever het volgende aan vóór de volgende controle van Stripe, zodat de uitbetalingen doorlopen."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:157
+#: src/components/forms/ProductForm/ledgerSummaries.ts:156
 msgid "Public"
 msgstr "Openbaar"
 
@@ -10605,7 +10625,7 @@ msgstr ""
 msgid "September"
 msgstr "September"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 msgid "Service Fee"
 msgstr "Servicevergoeding"
 
@@ -10854,7 +10874,7 @@ msgstr "Aan de klant getoond voordat hij afrekent"
 msgid "Shows common address fields, including country"
 msgstr "Toont algemene adresvelden, inclusief land"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:60
+#: src/components/forms/ProductForm/ledgerSummaries.ts:61
 msgid "Shows remaining"
 msgstr "Toont resterend"
 
@@ -11094,7 +11114,7 @@ msgstr "Begin met het typen van een locatie of adres..."
 msgid "Started by {0} on {1}"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:62
+#: src/components/forms/ProductForm/ledgerSummaries.ts:63
 msgid "Starts collapsed"
 msgstr "Start ingeklapt"
 
@@ -11543,12 +11563,12 @@ msgstr "Er worden deelnemers uit {0} geselecteerde sessies benaderd."
 #: src/components/common/AdminOrdersTable/index.tsx:84
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
@@ -12354,7 +12374,7 @@ msgstr "Ticketing & verkoop"
 msgid "tickets"
 msgstr "tickets"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:131
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:134
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 #: src/components/routes/product-widget/OrderTickets/index.tsx:80
@@ -12382,7 +12402,7 @@ msgstr ""
 msgid "Tickets Sold"
 msgstr "Verkochte Tickets"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:57
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:60
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:52
 msgid "Tier {0}"
 msgstr "Niveau {0}"
@@ -12651,7 +12671,7 @@ msgstr "Geluid inschakelen"
 msgid "Twitch"
 msgstr "Twitch"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:44
+#: src/components/forms/TaxAndFeeForm/index.tsx:53
 #: src/components/routes/admin/Announcements/index.tsx:158
 #: src/components/routes/admin/Attribution/index.tsx:109
 #: src/components/routes/admin/Messages/index.tsx:134
@@ -12806,7 +12826,7 @@ msgstr "Onbetaalde bestelling"
 msgid "until"
 msgstr "tot"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:49
+#: src/components/forms/ProductForm/ledgerSummaries.ts:50
 msgid "Until {end}"
 msgstr "Tot {end}"
 
@@ -12814,11 +12834,11 @@ msgstr "Tot {end}"
 msgid "Until a date"
 msgstr "Tot een datum"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled product"
 msgstr "Naamloos product"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled ticket"
 msgstr "Naamloos ticket"
 
@@ -12830,7 +12850,7 @@ msgstr "Niet vertrouwd"
 msgid "Unverified"
 msgstr "Niet geverifieerd"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:118
+#: src/components/forms/ProductForm/ledgerSummaries.ts:117
 msgid "Up to {max} per order"
 msgstr "Maximaal {max} per bestelling"
 
@@ -12850,7 +12870,7 @@ msgstr "Komende evenementen"
 msgid "Upcoming Events"
 msgstr "Komende evenementen"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Update {0}"
 msgstr "Update {0}"
 
@@ -13064,7 +13084,7 @@ msgstr "UUID"
 msgid "Validating your VAT number..."
 msgstr "Uw BTW-nummer valideren..."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:101
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:447
 msgid "VAT"

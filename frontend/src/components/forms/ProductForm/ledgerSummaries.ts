@@ -1,7 +1,7 @@
 import {t} from "@lingui/macro";
 import dayjs from "dayjs";
-import {Product, TaxAndFee, TaxAndFeeCalculationType} from "../../../types.ts";
-import {formatCurrency} from "../../../utilites/currency.ts";
+import {Product, TaxAndFee} from "../../../types.ts";
+import {taxAndFeeRateLabel} from "../../../utilites/taxAndFeeLabel.ts";
 import {getSafeLocale} from "../../../utilites/dates.ts";
 import {getClientLocale} from "../../../locales.ts";
 import {localeFormats} from "../../../utilites/dateLocales.ts";
@@ -78,9 +78,7 @@ export const waitlistSummary = (values: Product): RowSummary => {
 };
 
 export const taxAndFeeLabel = (item: TaxAndFee, currency?: string): string => {
-    return item.name + ' - ' + (item.calculation_type === TaxAndFeeCalculationType.Percentage
-        ? item.rate + '%'
-        : formatCurrency(Number(item.rate), currency || 'USD'));
+    return item.name + ' - ' + taxAndFeeRateLabel(item, currency);
 };
 
 export const taxesSummary = (values: Product, taxesAndFees?: TaxAndFee[], currency?: string): RowSummary => {

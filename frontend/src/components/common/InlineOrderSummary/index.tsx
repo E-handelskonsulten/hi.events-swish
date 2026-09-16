@@ -153,7 +153,7 @@ export const InlineOrderSummary = ({
 
                         <div className={classes.totalsRow}>
                             <span className={classes.totalsLabelWithInfo}>
-                                <span>{t`Fees`}</span>
+                                <span>{order.taxes_and_fees_rollup?.fees?.length === 1 ? order.taxes_and_fees_rollup.fees[0].name : t`Fees`}</span>
                                 {order.taxes_and_fees_rollup?.fees && order.taxes_and_fees_rollup.fees.length > 0 && (
                                     <Popover position="top" withArrow shadow="sm" width={220}>
                                         <Popover.Target>

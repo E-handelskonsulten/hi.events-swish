@@ -1,8 +1,8 @@
 import {Badge, Button, Menu} from "@mantine/core";
 import classes from './TaxAndFeeList.module.scss';
 import {useGetTaxesAndFees} from "../../../queries/useGetTaxesAndFees.ts";
-import {TaxAndFee, TaxAndFeeCalculationType, TaxAndFeeType} from "../../../types.ts";
-import {formatCurrency} from "../../../utilites/currency.ts";
+import {TaxAndFee, TaxAndFeeType} from "../../../types.ts";
+import {taxAndFeeRateLabel} from "../../../utilites/taxAndFeeLabel.ts";
 import {useGetAccount} from "../../../queries/useGetAccount.ts";
 import {IconDotsVertical, IconPencil, IconPercentage, IconReceipt, IconTrash} from "@tabler/icons-react";
 import {useDisclosure} from "@mantine/hooks";
@@ -90,9 +90,7 @@ export const TaxAndFeeList = () => {
                             </div>
                             <div className={classes.value}>
                                 <Badge variant={'light'} size="lg" className={classes.rateBadge}>
-                                    {tax.calculation_type === TaxAndFeeCalculationType.Percentage
-                                        ? tax.rate + '%'
-                                        : formatCurrency(Number(tax.rate), account?.currency_code)}
+                                    {taxAndFeeRateLabel(tax, account?.currency_code)}
                                 </Badge>
                             </div>
                         </div>

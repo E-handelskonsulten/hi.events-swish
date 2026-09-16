@@ -250,9 +250,10 @@ export interface CreateQuestionPayload {
 
 export interface CreateTaxOrFeePayload {
   name: string;
-  calculation_type: 'PERCENTAGE' | 'FIXED';
+  calculation_type: 'PERCENTAGE' | 'FIXED' | 'FIXED_PLUS_PERCENTAGE';
   type: 'TAX' | 'FEE';
   rate: number;
+  fixed_amount?: number;
   is_active: boolean;
   is_default: boolean;
   description?: string;

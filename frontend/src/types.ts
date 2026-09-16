@@ -1235,13 +1235,15 @@ export enum TaxAndFeeType {
 
 export enum TaxAndFeeCalculationType {
     Percentage = 'PERCENTAGE',
-    Fixed = 'FIXED'
+    Fixed = 'FIXED',
+    FixedPlusPercentage = 'FIXED_PLUS_PERCENTAGE',
 }
 
 export interface TaxAndFee {
     id?: number;
     name: string;
     rate: number | undefined;
+    fixed_amount?: number | null;
     type: TaxAndFeeType;
     calculation_type: TaxAndFeeCalculationType;
     is_default: boolean;

@@ -2,7 +2,7 @@ import {UseFormReturnType} from "@mantine/form";
 import {TaxAndFee, TaxAndFeeCalculationType, TaxAndFeeType} from "../../../types.ts";
 import {NumberInput, Switch, TextInput} from "@mantine/core";
 import {CustomSelect, ItemProps} from "../../common/CustomSelect";
-import {IconCash, IconPercentage, IconReceiptTax} from "@tabler/icons-react";
+import {IconCash, IconPercentage, IconPlus, IconReceiptTax} from "@tabler/icons-react";
 import {t} from "@lingui/macro";
 
 export const TaxAndFeeForm = ({form}: { form: UseFormReturnType<TaxAndFee> }) => {
@@ -34,7 +34,16 @@ export const TaxAndFeeForm = ({form}: { form: UseFormReturnType<TaxAndFee> }) =>
             value: 'FIXED',
             description: t`A fixed amount per product. E.g, $0.50 per product`,
         },
+        {
+            icon: <IconPlus/>,
+            label: t`Fixed + percentage`,
+            value: 'FIXED_PLUS_PERCENTAGE',
+            description: t`A fixed amount plus a percentage of the product price, shown to the buyer as one amount. E.g. $0.50 + 1%`,
+        },
     ];
+
+    const isPercentage = form.values.calculation_type === TaxAndFeeCalculationType.Percentage;
+    const isCombined = form.values.calculation_type === TaxAndFeeCalculationType.FixedPlusPercentage;
 
     const type = (form.values.type === TaxAndFeeType.Tax ? t`Tax` : t`Fee`).toLowerCase();
 
@@ -63,17 +72,33 @@ export const TaxAndFeeForm = ({form}: { form: UseFormReturnType<TaxAndFee> }) =>
                 required
             />
 
+            {isCombined && (
+                <NumberInput
+                    decimalScale={2}
+                    fixedDecimalScale
+                    step={0.50}
+                    min={0}
+                    {...form.getInputProps('fixed_amount')}
+                    label={t`Fixed Amount`}
+                    placeholder="4.00"
+                    description={t`Charged once per product, before the percentage is added`}
+                    required
+                />
+            )}
+
             <NumberInput
                 decimalScale={2}
                 fixedDecimalScale
                 step={0.50}
                 {...form.getInputProps('rate')}
-                label={form.values.calculation_type === TaxAndFeeCalculationType.Percentage ? t`Percentage Amount` : t`Amount`}
-                placeholder={form.values.calculation_type === TaxAndFeeCalculationType.Percentage ? '23' : '2.50'}
-                leftSection={form.values.calculation_type === TaxAndFeeCalculationType.Percentage ? '%' : ''}
-                description={form.values.calculation_type === TaxAndFeeCalculationType.Percentage ? t`eg. 23.5 for 23.5%` : t`eg. 2.50 for $2.50`}
+                label={isPercentage || isCombined ? t`Percentage Amount` : t`Amount`}
+                placeholder={isPercentage || isCombined ? '23' : '2.50'}
+                leftSection={isPercentage || isCombined ? '%' : ''}
+                description={isCombined
+                    ? t`Percentage of the product price, added to the fixed amount`
+                    : (isPercentage ? t`eg. 23.5 for 23.5%` : t`eg. 2.50 for $2.50`)}
                 required
-                max={form.values.calculation_type === TaxAndFeeCalculationType.Percentage ? 100 : undefined}
+                max={isPercentage || isCombined ? 100 : undefined}
             />
 
             <TextInput

@@ -68,7 +68,7 @@ msgstr "{0} Webhook đang hoạt động"
 msgid "{0} available"
 msgstr "{0} Có sẵn"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
 msgid "{0} created successfully"
 msgstr "{0} đã tạo thành công"
 
@@ -98,7 +98,7 @@ msgstr "{0} nhà tổ chức"
 msgid "{0} tickets"
 msgstr "{0} vé"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
 msgid "{0} updated successfully"
 msgstr "{0} cập nhật thành công"
 
@@ -139,7 +139,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr "Hoàn tất {completedCount} trong số {totalCount} bước"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "{count} add-ons"
 msgstr "{count} sản phẩm bổ sung"
 
@@ -164,7 +164,7 @@ msgstr "{diffSec} giây trước"
 msgid "{eventCount} events"
 msgstr "{EventCount} Sự kiện"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:103
+#: src/components/forms/ProductForm/ledgerSummaries.ts:102
 msgid "{first} + {additionalCount} more"
 msgstr "{first} + {additionalCount} mục nữa"
 
@@ -176,7 +176,7 @@ msgstr "{giờ} giờ, {phút} phút và {giây} giây"
 msgid "{loadedAffectedAttendees} attendees are registered across the affected sessions."
 msgstr "Có {loadedAffectedAttendees} người tham dự đã đăng ký cho các buổi bị ảnh hưởng."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:112
+#: src/components/forms/ProductForm/ledgerSummaries.ts:111
 msgid "{min}–{max} per order"
 msgstr "{min}–{max} mỗi đơn"
 
@@ -269,7 +269,7 @@ msgid "1 Active Webhook"
 msgstr "1 Webhook đang hoạt động"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:51
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:126
 msgid "1 add-on"
 msgstr "1 sản phẩm bổ sung"
 
@@ -347,7 +347,7 @@ msgstr "thay đổi thời lượng"
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Trường nhập ngày. Hoàn hảo để hỏi ngày sinh, v.v."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:88
+#: src/components/forms/TaxAndFeeForm/index.tsx:113
 msgid "A default {type} is automaticaly applied to all new products. You can override this on a per product basis."
 msgstr "Một mặc định {type} là tự động được áp dụng cho tất cả các sản phẩm mới. "
 
@@ -366,6 +366,10 @@ msgstr "Chỉ vài bước nhanh là bạn có thể bắt đầu bán."
 #: src/components/forms/TaxAndFeeForm/index.tsx:35
 msgid "A fixed amount per product. E.g, $0.50 per product"
 msgstr "Một lượng cố định cho mỗi sản phẩm. Vd, $0.5 cho mỗi sản phẩm "
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:41
+msgid "A fixed amount plus a percentage of the product price, shown to the buyer as one amount. E.g. $0.50 + 1%"
+msgstr ""
 
 #: src/components/forms/ProductCategoryForm/index.tsx:24
 msgid "A message to display when there are no products in this category."
@@ -798,7 +802,7 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr "Thêm tài khoản mạng xã hội và URL trang web của bạn. Chúng sẽ được hiển thị trên trang công khai của nhà tổ chức."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:344
-#: src/components/forms/ProductForm/ledgerSummaries.ts:128
+#: src/components/forms/ProductForm/ledgerSummaries.ts:127
 msgid "Add-on only"
 msgstr "Chỉ dưới dạng bổ sung"
 
@@ -1099,7 +1103,7 @@ msgstr "Cũng hoàn tiền đơn hàng này"
 msgid "Always available"
 msgstr "Luôn có sẵn"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:53
+#: src/components/forms/ProductForm/ledgerSummaries.ts:54
 msgid "Always on sale"
 msgstr "Luôn mở bán"
 
@@ -1109,7 +1113,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "Tuyệt vời, sự kiện, từ khóa ..."
 
 #: src/components/common/OrdersTable/index.tsx:260
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 #: src/components/modals/SwishMassRefundModal/index.tsx:68
 #: src/components/modals/SwishMassRefundModal/index.tsx:121
 #: src/components/modals/SwishMassRefundModal/index.tsx:357
@@ -1251,7 +1255,7 @@ msgstr "Áp dụng"
 msgid "Apply Changes"
 msgstr "Áp dụng thay đổi"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:86
+#: src/components/forms/TaxAndFeeForm/index.tsx:111
 msgid "Apply this {type} to all new products"
 msgstr "Áp dụng {type} này cho tất cả các sản phẩm mới"
 
@@ -1986,7 +1990,7 @@ msgstr "Theo loại vé"
 msgid "Bypass Application Fees"
 msgstr "Bỏ qua phí ứng dụng"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:52
+#: src/components/forms/TaxAndFeeForm/index.tsx:61
 msgid "Calculation Type"
 msgstr "Loại tính toán"
 
@@ -2234,6 +2238,10 @@ msgstr "Thay đổi cài đặt danh sách chờ"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:212
 msgid "Changed duration for {count} date(s)"
 msgstr "Đã đổi thời lượng cho {count} ngày"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:84
+msgid "Charged once per product, before the percentage is added"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -3115,7 +3123,7 @@ msgstr "Bao gồm mọi vé"
 msgid "Create"
 msgstr "Tạo"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
 msgid "Create {0}"
 msgstr "Tạo {0}"
 
@@ -3278,7 +3286,7 @@ msgid "Create schedule"
 msgstr "Tạo lịch trình"
 
 #: src/components/forms/ProductForm/index.tsx:501
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:53
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:54
 msgid "Create Tax or Fee"
 msgstr "Tạo thuế hoặc phí"
 
@@ -3670,7 +3678,7 @@ msgstr "Xử lý phí mặc định"
 msgid "Default template will be used"
 msgstr "Mẫu mặc định sẽ được sử dụng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:66
+#: src/components/forms/ProductForm/ledgerSummaries.ts:67
 msgid "Defaults"
 msgstr "Giá trị mặc định"
 
@@ -3810,7 +3818,7 @@ msgstr "Yêu cầu xóa"
 #: src/components/forms/ProductCategoryForm/index.tsx:29
 #: src/components/forms/ProductForm/index.tsx:397
 #: src/components/forms/ProductForm/index.tsx:403
-#: src/components/forms/TaxAndFeeForm/index.tsx:81
+#: src/components/forms/TaxAndFeeForm/index.tsx:106
 #: src/components/modals/DuplicateEventModal/index.tsx:118
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
@@ -4117,7 +4125,7 @@ msgid "Edit"
 msgstr "Chỉnh sửa"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:522
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
 msgid "Edit {0}"
 msgstr "chỉnh sửa {0}"
 
@@ -4253,11 +4261,11 @@ msgstr "Trình chỉnh sửa"
 msgid "Education"
 msgstr "Giáo dục"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 2.50 for $2.50"
 msgstr "ví dụ: 2.50 cho $2.50"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:74
+#: src/components/forms/TaxAndFeeForm/index.tsx:99
 msgid "eg. 23.5 for 23.5%"
 msgstr "ví dụ: 23.5 cho 23.5%"
 
@@ -5289,12 +5297,12 @@ msgid "February"
 msgstr "Tháng 2"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:18
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Fee"
 msgstr "Phí"
 
@@ -5448,9 +5456,17 @@ msgstr "Khắc phục sự cố để xuất bản"
 msgid "Fixed"
 msgstr "Đã sửa"
 
+#: src/components/forms/TaxAndFeeForm/index.tsx:39
+msgid "Fixed + percentage"
+msgstr ""
+
 #: src/components/forms/PromoCodeForm/index.tsx:102
 msgid "Fixed amount"
 msgstr "Số tiền cố định"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:82
+msgid "Fixed Amount"
+msgstr ""
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:145
 msgid "Fixed fee"
@@ -5544,7 +5560,7 @@ msgstr "Từ"
 msgid "From {0}"
 msgstr "Từ {0}"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:46
+#: src/components/forms/ProductForm/ledgerSummaries.ts:47
 msgid "From {start}"
 msgstr "Từ {start}"
 
@@ -5811,7 +5827,7 @@ msgstr "Đã ẩn — việc bán kết thúc vào {end}."
 msgid "Hidden from attendees - only visible to organizers"
 msgstr "Ẩn với người tham dự - chỉ hiển thị với người tổ chức"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:151
+#: src/components/forms/ProductForm/ledgerSummaries.ts:150
 msgid "Hidden from everyone"
 msgstr "Ẩn với mọi người"
 
@@ -5889,7 +5905,7 @@ msgstr "Ẩn câu hỏi này"
 msgid "Hide this tier from users"
 msgstr "Ẩn tầng này khỏi người dùng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:61
+#: src/components/forms/ProductForm/ledgerSummaries.ts:62
 msgid "Hides sold out"
 msgstr "Ẩn các mục đã bán hết"
 
@@ -5910,7 +5926,7 @@ msgid "Highlight this product"
 msgstr "Làm nổi bật sản phẩm này"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:374
-#: src/components/forms/ProductForm/ledgerSummaries.ts:144
+#: src/components/forms/ProductForm/ledgerSummaries.ts:143
 msgid "Highlighted"
 msgstr "Nổi bật"
 
@@ -6969,7 +6985,7 @@ msgstr "Cấp độ nhắn tin"
 msgid "Messaging tier updated successfully"
 msgstr "Cấp độ nhắn tin cập nhật thành công"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:115
+#: src/components/forms/ProductForm/ledgerSummaries.ts:114
 msgid "Min {min} per order"
 msgstr "Tối thiểu {min} mỗi đơn"
 
@@ -7130,7 +7146,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:15
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:182
-#: src/components/forms/TaxAndFeeForm/index.tsx:61
+#: src/components/forms/TaxAndFeeForm/index.tsx:70
 #: src/components/modals/DuplicateEventModal/index.tsx:112
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:220
@@ -7415,7 +7431,7 @@ msgstr "Không có bộ lọc có sẵn"
 msgid "No invoice"
 msgstr "Không có hóa đơn"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:121
+#: src/components/forms/ProductForm/ledgerSummaries.ts:120
 msgid "No limits"
 msgstr "Không giới hạn"
 
@@ -7573,7 +7589,7 @@ msgstr "Không có kết quả tìm kiếm."
 msgid "No suggestions"
 msgstr "Không có gợi ý"
 
-#: src/components/common/TaxAndFeeList/index.tsx:108
+#: src/components/common/TaxAndFeeList/index.tsx:106
 msgid "No Taxes or Fees have been added."
 msgstr "Không có thuế hoặc phí đã được thêm vào."
 
@@ -7624,13 +7640,13 @@ msgid "non-edited"
 msgstr "chưa sửa"
 
 #: src/components/common/PromoCodeTable/index.tsx:82
-#: src/components/forms/ProductForm/ledgerSummaries.ts:92
-#: src/components/forms/ProductForm/ledgerSummaries.ts:132
+#: src/components/forms/ProductForm/ledgerSummaries.ts:91
+#: src/components/forms/ProductForm/ledgerSummaries.ts:131
 #: src/components/routes/product-widget/CollectInformation/index.tsx:553
 msgid "None"
 msgstr "Không"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:29
+#: src/components/forms/ProductForm/ledgerSummaries.ts:30
 msgid "None yet"
 msgstr "Chưa có"
 
@@ -7740,8 +7756,8 @@ msgstr "của"
 msgid "of every month"
 msgstr "của mỗi tháng"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:77
-#: src/components/forms/ProductForm/ledgerSummaries.ts:140
+#: src/components/forms/ProductForm/ledgerSummaries.ts:78
+#: src/components/forms/ProductForm/ledgerSummaries.ts:139
 msgid "Off"
 msgstr "Tắt"
 
@@ -7812,7 +7828,7 @@ msgstr "Cài đặt thanh toán offline"
 msgid "on"
 msgstr "vào"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:74
+#: src/components/forms/ProductForm/ledgerSummaries.ts:75
 msgid "On"
 msgstr "Bật"
 
@@ -8657,7 +8673,7 @@ msgstr ""
 msgid "Percentage"
 msgstr "Tỷ lệ phần trăm"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:71
+#: src/components/forms/TaxAndFeeForm/index.tsx:94
 msgid "Percentage Amount"
 msgstr "Tỷ lệ phần trăm"
 
@@ -8673,6 +8689,10 @@ msgstr "Phí theo phần trăm (%)"
 #: src/components/routes/admin/Configurations/index.tsx:175
 msgid "Percentage must be between 0 and 100"
 msgstr "Phần trăm phải từ 0 đến 100"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:98
+msgid "Percentage of the product price, added to the fixed amount"
+msgstr ""
 
 #: src/components/routes/admin/Configurations/index.tsx:248
 msgid "Percentage of transaction amount"
@@ -9204,7 +9224,7 @@ msgstr "Mã khuyến mãi"
 msgid "Promo Code page"
 msgstr "Trang mã khuyến mãi"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:154
+#: src/components/forms/ProductForm/ledgerSummaries.ts:153
 msgid "Promo code required"
 msgstr "Cần mã khuyến mãi"
 
@@ -9259,7 +9279,7 @@ msgstr "Cung cấp ít nhất một trường địa chỉ (địa điểm, đư
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "Hãy cung cấp những mục sau trước lần rà soát tiếp theo của Stripe để việc chi trả không bị gián đoạn."
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:157
+#: src/components/forms/ProductForm/ledgerSummaries.ts:156
 msgid "Public"
 msgstr "Công khai"
 
@@ -10604,7 +10624,7 @@ msgstr ""
 msgid "September"
 msgstr "Tháng 9"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 msgid "Service Fee"
 msgstr "Phí dịch vụ"
 
@@ -10853,7 +10873,7 @@ msgstr "Hiển thị cho khách hàng trước khi họ thanh toán"
 msgid "Shows common address fields, including country"
 msgstr "Hiển thị các trường địa chỉ chung, bao gồm quốc gia"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:60
+#: src/components/forms/ProductForm/ledgerSummaries.ts:61
 msgid "Shows remaining"
 msgstr "Hiển thị số chỗ còn lại"
 
@@ -11093,7 +11113,7 @@ msgstr "Bắt đầu nhập địa điểm hoặc địa chỉ..."
 msgid "Started by {0} on {1}"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:62
+#: src/components/forms/ProductForm/ledgerSummaries.ts:63
 msgid "Starts collapsed"
 msgstr "Mặc định thu gọn"
 
@@ -11542,12 +11562,12 @@ msgstr "Nhắm tới người tham dự thuộc {0} buổi đã chọn."
 #: src/components/common/AdminOrdersTable/index.tsx:84
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
-#: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:42
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:52
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/forms/TaxAndFeeForm/index.tsx:48
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
@@ -12353,7 +12373,7 @@ msgstr "Bán vé"
 msgid "tickets"
 msgstr "vé"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:131
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:134
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 #: src/components/routes/product-widget/OrderTickets/index.tsx:80
@@ -12381,7 +12401,7 @@ msgstr ""
 msgid "Tickets Sold"
 msgstr "Vé Đã Bán"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:57
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:60
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:52
 msgid "Tier {0}"
 msgstr "Cấp {0}"
@@ -12650,7 +12670,7 @@ msgstr "Bật âm thanh"
 msgid "Twitch"
 msgstr "Twitch"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:44
+#: src/components/forms/TaxAndFeeForm/index.tsx:53
 #: src/components/routes/admin/Announcements/index.tsx:158
 #: src/components/routes/admin/Attribution/index.tsx:109
 #: src/components/routes/admin/Messages/index.tsx:134
@@ -12805,7 +12825,7 @@ msgstr "Đơn hàng chưa thanh toán"
 msgid "until"
 msgstr "đến"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:49
+#: src/components/forms/ProductForm/ledgerSummaries.ts:50
 msgid "Until {end}"
 msgstr "Đến {end}"
 
@@ -12813,11 +12833,11 @@ msgstr "Đến {end}"
 msgid "Until a date"
 msgstr "Đến một ngày"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled product"
 msgstr "Sản phẩm chưa đặt tên"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:101
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
 msgid "Untitled ticket"
 msgstr "Vé chưa đặt tên"
 
@@ -12829,7 +12849,7 @@ msgstr "Không đáng tin cậy"
 msgid "Unverified"
 msgstr "Chưa xác minh"
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:118
+#: src/components/forms/ProductForm/ledgerSummaries.ts:117
 msgid "Up to {max} per order"
 msgstr "Tối đa {max} mỗi đơn"
 
@@ -12849,7 +12869,7 @@ msgstr "Sự kiện sắp tới"
 msgid "Upcoming Events"
 msgstr "Các sự kiện sắp tới"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:59
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 msgid "Update {0}"
 msgstr "Cập nhật {0}"
 
@@ -13063,7 +13083,7 @@ msgstr "UUID"
 msgid "Validating your VAT number..."
 msgstr "Đang xác thực số VAT của bạn..."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:62
+#: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:101
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:447
 msgid "VAT"
