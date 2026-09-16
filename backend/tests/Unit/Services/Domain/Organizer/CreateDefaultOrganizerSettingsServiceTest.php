@@ -22,6 +22,13 @@ class CreateDefaultOrganizerSettingsServiceTest extends TestCase
                 static fn (array $attributes) => $attributes['organizer_id'] === 55
                     && $attributes['default_attendee_details_collection_method'] === 'PER_ORDER'
                     && $attributes['default_pass_platform_fee_to_buyer'] === true
+                    && $attributes['homepage_theme_settings'] === [
+                        'accent' => '#8b5cf6',
+                        'background' => '#f5f3ff',
+                        'mode' => 'light',
+                        'background_type' => 'COLOR',
+                        'font_family' => 'Outfit',
+                    ]
             ));
 
         $service = new CreateDefaultOrganizerSettingsService($repository);

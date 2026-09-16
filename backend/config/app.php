@@ -1,6 +1,5 @@
 <?php
 
-use HiEvents\DomainObjects\Enums\ColorTheme;
 use HiEvents\Providers\AppServiceProvider;
 use HiEvents\Providers\AuthServiceProvider;
 use HiEvents\Providers\EventServiceProvider;
@@ -72,11 +71,6 @@ return [
     'email_logo_url' => env('APP_EMAIL_LOGO_URL'),
     'email_logo_link_url' => env('APP_EMAIL_LOGO_LINK_URL', env('APP_FRONTEND_URL', 'http://localhost')),
     'email_footer_text' => env('APP_EMAIL_FOOTER_TEXT'),
-
-    /**
-     * Default color theme for organizer homepages
-     */
-    'organizer_homepage_default_theme' => ColorTheme::MIDNIGHT,
 
     /**
      * Path to default event category cover images
