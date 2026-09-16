@@ -23,6 +23,7 @@ class TaxAndFeeOrderRollupService
                             'name' => $taxOrFee['name'],
                             'value' => $taxOrFee['value'],
                             'rate' => $taxOrFee['rate'],
+                            'fixed_amount' => $taxOrFee['fixed_amount'] ?? null,
                             'type' => $taxOrFee['type'],
                         ];
                     } else {

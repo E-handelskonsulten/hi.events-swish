@@ -8,4 +8,5 @@ enum TaxCalculationType
 
     case PERCENTAGE;
     case FIXED;
+    case FIXED_PLUS_PERCENTAGE;
 }

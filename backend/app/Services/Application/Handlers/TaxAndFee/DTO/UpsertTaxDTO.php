@@ -18,5 +18,6 @@ class UpsertTaxDTO extends BaseDTO
         public readonly bool $is_default,
         public readonly int $account_id,
         public readonly ?int $id = null,
+        public readonly ?float $fixed_amount = null,
     ) {}
 }

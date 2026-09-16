@@ -44,6 +44,7 @@ class CreateTaxOrFeeHandler
             'description' => $data->description,
             'calculation_type' => $data->calculation_type->name,
             'rate' => $data->rate,
+            'fixed_amount' => $data->fixed_amount,
             'is_active' => $data->is_active,
             'is_default' => $data->is_default,
             'account_id' => $data->account_id,

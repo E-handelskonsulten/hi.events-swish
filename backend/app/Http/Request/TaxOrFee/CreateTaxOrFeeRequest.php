@@ -17,6 +17,12 @@ class CreateTaxOrFeeRequest extends BaseRequest
             'type' => ['required', Rule::in(TaxType::valuesArray())],
             // @todo - add a sane max value for rate.
             'rate' => 'required|numeric:gt:0',
+            'fixed_amount' => [
+                'exclude_unless:calculation_type,'.TaxCalculationType::FIXED_PLUS_PERCENTAGE->name,
+                'required_if:calculation_type,'.TaxCalculationType::FIXED_PLUS_PERCENTAGE->name,
+                'numeric',
+                'min:0',
+            ],
             'is_active' => 'required|boolean',
             'is_default' => 'required|boolean',
             'description' => 'nullable|string',

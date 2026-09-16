@@ -48,6 +48,7 @@ class TaxAndFeeRollupService
             $this->rollUp[$type][] = [
                 'name' => $name,
                 'rate' => $taxOrFee->getRate(),
+                'fixed_amount' => $taxOrFee->getFixedAmount(),
                 'type' => $taxOrFee->getCalculationType(),
                 'value' => $amount,
             ];

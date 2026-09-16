@@ -22,6 +22,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const ACCOUNT_ID = 'account_id';
     final public const IS_DEFAULT = 'is_default';
     final public const TYPE = 'type';
+    final public const FIXED_AMOUNT = 'fixed_amount';
 
     protected int $id;
     protected string $name;
@@ -35,6 +36,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected int $account_id;
     protected bool $is_default = false;
     protected string $type;
+    protected ?float $fixed_amount = null;
 
     public function toArray(): array
     {
@@ -51,6 +53,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'account_id' => $this->account_id ?? null,
                     'is_default' => $this->is_default ?? null,
                     'type' => $this->type ?? null,
+                    'fixed_amount' => $this->fixed_amount ?? null,
                 ];
     }
 
@@ -184,5 +187,16 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getType(): string
     {
         return $this->type;
+    }
+
+    public function setFixedAmount(?float $fixed_amount): self
+    {
+        $this->fixed_amount = $fixed_amount;
+        return $this;
+    }
+
+    public function getFixedAmount(): ?float
+    {
+        return $this->fixed_amount;
     }
 }

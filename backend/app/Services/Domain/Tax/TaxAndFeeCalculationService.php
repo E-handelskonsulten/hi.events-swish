@@ -57,6 +57,10 @@ class TaxAndFeeCalculationService
         $amount = match ($taxOrFee->getCalculationType()) {
             TaxCalculationType::FIXED->name => $taxOrFee->getRate(),
             TaxCalculationType::PERCENTAGE->name => ($price * $taxOrFee->getRate()) / 100,
+            TaxCalculationType::FIXED_PLUS_PERCENTAGE->name => round(
+                (float) $taxOrFee->getFixedAmount() + ($price * $taxOrFee->getRate()) / 100,
+                2,
+            ),
             default => throw new InvalidArgumentException(__('Invalid calculation type')),
         };
 

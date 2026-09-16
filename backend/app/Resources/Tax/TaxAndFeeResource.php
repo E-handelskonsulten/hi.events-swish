@@ -17,8 +17,10 @@ class TaxAndFeeResource extends BaseResource
             'account_id' => $this->getAccountId(),
             'name' => $this->getName(),
             'description' => $this->getDescription(),
+            /** @var 'PERCENTAGE'|'FIXED'|'FIXED_PLUS_PERCENTAGE' */
             'calculation_type' => $this->getCalculationType(),
             'rate' => $this->getRate(),
+            'fixed_amount' => $this->getFixedAmount(),
             'is_active' => $this->getIsActive(),
             'is_default' => $this->getIsDefault(),
             'type' => $this->getType(),

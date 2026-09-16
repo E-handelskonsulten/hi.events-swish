@@ -20,6 +20,7 @@ class TaxAndFee extends BaseModel
     {
         return [
             'rate' => 'float',
+            'fixed_amount' => 'float',
         ];
     }
 }

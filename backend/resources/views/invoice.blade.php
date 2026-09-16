@@ -442,10 +442,14 @@
     @if($order->getHasFees())
         @foreach($order->getTaxesAndFeesRollup()['fees'] as $fee)
             <tr class="breakdown">
-                <td>{{ $fee['name'] }} ({{ $fee['rate'] }}@if($fee['type'] === 'PERCENTAGE')
-                        %
+                <td>{{ $fee['name'] }} (@if($fee['type'] === 'FIXED_PLUS_PERCENTAGE')
+                        {{ Currency::format((float) ($fee['fixed_amount'] ?? 0), $order->getCurrency()) }} + {{ $fee['rate'] }}%
                     @else
-                        {{ $order->getCurrency() }}
+                        {{ $fee['rate'] }}@if($fee['type'] === 'PERCENTAGE')
+                            %
+                        @else
+                            {{ $order->getCurrency() }}
+                        @endif
                     @endif)</td>
                 <td>{{ Currency::format($fee['value'], $order->getCurrency()) }}</td>
             </tr>
