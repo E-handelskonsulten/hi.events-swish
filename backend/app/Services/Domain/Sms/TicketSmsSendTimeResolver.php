@@ -20,11 +20,13 @@ class TicketSmsSendTimeResolver
         private readonly EventOccurrenceRepositoryInterface $eventOccurrenceRepository,
     ) {}
 
-    public function resolve(int $orderId, int $eventId, int $leadHours): ?CarbonImmutable
+    public function resolve(int $orderId, int $eventId, ?int $leadHours): ?CarbonImmutable
     {
-        $start = $this->firstStart($orderId, $eventId);
+        if ($leadHours === null) {
+            return null;
+        }
 
-        return $start?->subHours($leadHours);
+        return $this->firstStart($orderId, $eventId)?->subHours($leadHours);
     }
 
     private function firstStart(int $orderId, int $eventId): ?CarbonImmutable

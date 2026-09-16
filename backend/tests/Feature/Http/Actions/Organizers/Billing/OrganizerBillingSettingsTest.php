@@ -113,8 +113,23 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
             'zero' => [0],
             'too many' => [25],
             'fraction' => [2.5],
-            'missing' => [null],
         ];
+    }
+
+    public function test_immediate_delivery_is_stored_as_no_lead_time(): void
+    {
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
+            'sms_enabled' => true,
+            'sms_sender_name' => null,
+            'sms_lead_hours' => null,
+        ], $this->authHeaders())->assertOk()->assertJsonPath('data.sms_lead_hours', null);
+
+        $this->assertNull(DB::table('organizer_billing_settings')->where('organizer_id', $this->organizerId)->value('sms_lead_hours'));
+
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
+            'sms_enabled' => true,
+            'sms_sender_name' => null,
+        ], $this->authHeaders())->assertUnprocessable()->assertJsonValidationErrors(['sms_lead_hours']);
     }
 
     public function test_changing_the_lead_time_reschedules_pending_ticket_sms(): void
@@ -128,6 +143,9 @@ class OrganizerBillingSettingsTest extends SwishFeatureTestCase
 
         $this->putJson("/organizers/{$this->organizerId}/billing-settings", ['sms_lead_hours' => 8] + $payload, $this->authHeaders())->assertOk();
         Bus::assertDispatched(RescheduleTicketSmsJob::class, fn (RescheduleTicketSmsJob $job) => $job->where === ['organizer_id' => $this->organizerId]);
+
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", ['sms_lead_hours' => null] + $payload, $this->authHeaders())->assertOk();
+        Bus::assertDispatchedTimes(RescheduleTicketSmsJob::class, 2);
     }
 
     public function test_other_accounts_are_forbidden_from_reading_the_settings(): void

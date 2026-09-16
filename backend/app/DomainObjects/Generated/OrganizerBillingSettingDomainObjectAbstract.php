@@ -30,7 +30,7 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
     protected ?string $deleted_at = null;
-    protected int $sms_lead_hours = 3;
+    protected ?int $sms_lead_hours = 3;
 
     public function toArray(): array
     {
@@ -147,13 +147,13 @@ abstract class OrganizerBillingSettingDomainObjectAbstract extends \HiEvents\Dom
         return $this->deleted_at;
     }
 
-    public function setSmsLeadHours(int $sms_lead_hours): self
+    public function setSmsLeadHours(?int $sms_lead_hours): self
     {
         $this->sms_lead_hours = $sms_lead_hours;
         return $this;
     }
 
-    public function getSmsLeadHours(): int
+    public function getSmsLeadHours(): ?int
     {
         return $this->sms_lead_hours;
     }

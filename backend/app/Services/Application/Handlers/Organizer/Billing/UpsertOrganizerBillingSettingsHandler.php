@@ -57,7 +57,9 @@ class UpsertOrganizerBillingSettingsHandler
                 OrganizerBillingSettingDomainObjectAbstract::SMS_FEE_PER_MESSAGE => $this->config->get('billing.default_sms_fee_per_message'),
             ]);
 
-        if ($existing !== null && (int) $existing->getSmsLeadHours() !== $dto->smsLeadHours) {
+        $previousLeadHours = $existing?->getSmsLeadHours() === null ? null : (int) $existing->getSmsLeadHours();
+
+        if ($existing !== null && $previousLeadHours !== $dto->smsLeadHours) {
             dispatch(RescheduleTicketSmsJob::forOrganizer($dto->organizerId));
         }
 

@@ -93,7 +93,8 @@ class OrderSmsService
         $sender = $settings->getSmsSenderName() ?: $this->config->get('sms.default_sender');
 
         if ($type === SmsMessageType::TICKET) {
-            $sendAt = $this->sendTimeResolver->resolve($orderId, $event->getId(), (int) $settings->getSmsLeadHours());
+            $leadHours = $settings->getSmsLeadHours();
+            $sendAt = $this->sendTimeResolver->resolve($orderId, $event->getId(), $leadHours === null ? null : (int) $leadHours);
 
             if ($sendAt !== null && $sendAt->isFuture()) {
                 $this->record($existing, $event, $order, $type, [

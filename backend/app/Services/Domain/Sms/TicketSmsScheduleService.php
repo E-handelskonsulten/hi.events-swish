@@ -68,17 +68,16 @@ class TicketSmsScheduleService
         /** @var SmsMessageDomainObject $message */
         foreach ($pending as $message) {
             $organizerId = $message->getOrganizerId();
-            $leadHoursByOrganizer[$organizerId] ??= (int) $this->organizerBillingSettingsRepository->findFirstWhere([
-                OrganizerBillingSettingDomainObjectAbstract::ORGANIZER_ID => $organizerId,
-            ])?->getSmsLeadHours();
+            if (! array_key_exists($organizerId, $leadHoursByOrganizer)) {
+                $leadHours = $this->organizerBillingSettingsRepository->findFirstWhere([
+                    OrganizerBillingSettingDomainObjectAbstract::ORGANIZER_ID => $organizerId,
+                ])?->getSmsLeadHours();
+                $leadHoursByOrganizer[$organizerId] = $leadHours === null ? null : (int) $leadHours;
+            }
 
             $sendAt = $this->sendTimeResolver->resolve($message->getOrderId(), $message->getEventId(), $leadHoursByOrganizer[$organizerId]);
 
-            if ($sendAt === null) {
-                continue;
-            }
-
-            $scheduledFor = $sendAt->isFuture() ? $sendAt->toDateTimeString() : now()->toDateTimeString();
+            $scheduledFor = $sendAt?->isFuture() ? $sendAt->toDateTimeString() : now()->toDateTimeString();
 
             if ($scheduledFor === $message->getScheduledFor()) {
                 continue;
@@ -91,7 +90,7 @@ class TicketSmsScheduleService
         }
 
         if ($moved > 0) {
-            $this->logger->info('Scheduled ticket SMS moved after event time change', ['where' => $where, 'moved' => $moved]);
+            $this->logger->info('Scheduled ticket SMS moved', ['where' => $where, 'moved' => $moved]);
         }
 
         return $moved;

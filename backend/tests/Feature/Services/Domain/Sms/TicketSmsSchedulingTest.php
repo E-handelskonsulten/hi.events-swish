@@ -199,6 +199,66 @@ class TicketSmsSchedulingTest extends SwishFeatureTestCase
         $this->assertSame(SmsMessageStatus::SENT->name, $this->smsRow($orderId)->status);
     }
 
+    public function test_immediate_mode_sends_on_completion_no_matter_how_far_away_the_event_is(): void
+    {
+        $this->enableSms(leadHours: null);
+        Carbon::setTestNow('2026-09-01 10:00:00');
+        $this->createOccurrence(self::START_UTC);
+
+        $orderId = $this->completeOrderThroughSwishCallback();
+
+        Http::assertSentCount(1);
+        $row = $this->smsRow($orderId);
+        $this->assertSame(SmsMessageStatus::SENT->name, $row->status);
+        $this->assertNull($row->scheduled_for);
+    }
+
+    public function test_switching_an_organizer_to_immediate_releases_its_held_messages(): void
+    {
+        $this->enableSms();
+        Carbon::setTestNow('2026-10-10 10:00:00');
+        $this->createOccurrence(self::START_UTC);
+        $orderId = $this->completeOrderThroughSwishCallback();
+        $this->assertSame(SmsMessageStatus::SCHEDULED->name, $this->smsRow($orderId)->status);
+
+        $this->authToken = JWTAuth::claims(['account_id' => $this->accountId])->fromUser($this->user);
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
+            'sms_enabled' => true,
+            'sms_sender_name' => null,
+            'sms_lead_hours' => null,
+        ], $this->authHeaders())->assertOk()->assertJsonPath('data.sms_lead_hours', null);
+
+        $this->assertSame('2026-10-10 10:00:00', $this->smsRow($orderId)->scheduled_for);
+
+        app(TicketSmsScheduleService::class)->dispatchDue();
+
+        Http::assertSentCount(1);
+        $this->assertSame(SmsMessageStatus::SENT->name, $this->smsRow($orderId)->status);
+    }
+
+    public function test_switching_from_immediate_to_hours_only_affects_future_orders(): void
+    {
+        $this->enableSms(leadHours: null);
+        Carbon::setTestNow('2026-10-10 10:00:00');
+        $this->createOccurrence(self::START_UTC);
+        $sentOrderId = $this->completeOrderThroughSwishCallback();
+        Http::assertSentCount(1);
+
+        $this->authToken = JWTAuth::claims(['account_id' => $this->accountId])->fromUser($this->user);
+        $this->putJson("/organizers/{$this->organizerId}/billing-settings", [
+            'sms_enabled' => true,
+            'sms_sender_name' => null,
+            'sms_lead_hours' => 3,
+        ], $this->authHeaders())->assertOk()->assertJsonPath('data.sms_lead_hours', 3);
+
+        $laterOrderId = $this->completeOrderThroughSwishCallback();
+
+        Http::assertSentCount(1);
+        $this->assertSame(SmsMessageStatus::SENT->name, $this->smsRow($sentOrderId)->status);
+        $this->assertSame(SmsMessageStatus::SCHEDULED->name, $this->smsRow($laterOrderId)->status);
+        $this->assertSame('2026-10-10 15:00:00', $this->smsRow($laterOrderId)->scheduled_for);
+    }
+
     public function test_a_full_refund_cancels_the_pending_ticket_sms_and_sends_the_refund_notice(): void
     {
         $this->enableSms();
@@ -223,7 +283,7 @@ class TicketSmsSchedulingTest extends SwishFeatureTestCase
         Http::assertSentCount(1);
     }
 
-    private function enableSms(int $leadHours = 3): void
+    private function enableSms(?int $leadHours = 3): void
     {
         DB::table('organizer_billing_settings')->insert([
             'organizer_id' => $this->organizerId,
