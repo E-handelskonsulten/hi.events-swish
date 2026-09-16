@@ -54,7 +54,11 @@ export class MessagePage {
   }
 
   private async confirmAndSubmit(): Promise<void> {
+    await this.page.getByTestId('message-purpose').getByText('Service information').click();
     await this.page.getByRole('checkbox', { name: /I confirm this is a transactional message/ }).check();
+    // first click opens the review step, the second sends
+    await this.page.getByRole('button', { name: 'Review and send' }).click();
+    await this.page.getByTestId('message-review-summary').waitFor();
     await this.page.getByTestId('message-send-button').click();
   }
 }

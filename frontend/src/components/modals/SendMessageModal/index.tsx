@@ -490,22 +490,31 @@ export const SendMessageModal = (props: EventMessageModalProps) => {
 
                             <div>
                                 <Text size="sm" fw={500} mb={4}>{t`Message type`}</Text>
-                                <SegmentedControl
-                                    fullWidth
-                                    data={[
-                                        {value: 'SERVICE', label: t`Service information`},
-                                        {value: 'MARKETING', label: t`Marketing`},
-                                    ]}
-                                    value={form.values.purpose || undefined}
-                                    onChange={(value) => form.setFieldValue('purpose', value as 'SERVICE' | 'MARKETING')}
-                                    data-testid="message-purpose"
-                                />
+                                <Button.Group data-testid="message-purpose" className={classes.purposeGroup}>
+                                    {([
+                                        ['SERVICE', t`Service information`],
+                                        ['MARKETING', t`Marketing`],
+                                    ] as const).map(([value, label]) => (
+                                        <Button
+                                            key={value}
+                                            type="button"
+                                            variant={form.values.purpose === value ? 'filled' : 'default'}
+                                            className={classes.purposeButton}
+                                            aria-pressed={form.values.purpose === value}
+                                            onClick={() => form.setFieldValue('purpose', value)}
+                                        >
+                                            {label}
+                                        </Button>
+                                    ))}
+                                </Button.Group>
                                 <Text size="xs" c={form.errors.purpose ? 'red' : 'dimmed'} mt={4}>
                                     {form.errors.purpose
                                         ? form.errors.purpose
                                         : form.values.purpose === 'MARKETING'
                                             ? t`Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link.`
-                                            : t`Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket.`}
+                                            : form.values.purpose === 'SERVICE'
+                                                ? t`Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket.`
+                                                : t`Choose a type. Service information is practical details for ticket holders and reaches everyone. Marketing is offers and news and only reaches buyers who have consented.`}
                                 </Text>
                             </div>
 

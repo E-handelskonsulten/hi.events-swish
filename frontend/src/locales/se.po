@@ -72,7 +72,7 @@ msgstr "{0} tillgängliga"
 msgid "{0} created successfully"
 msgstr "{0} skapades"
 
-#: src/components/modals/SendMessageModal/index.tsx:534
+#: src/components/modals/SendMessageModal/index.tsx:543
 msgid "{0} excluded without marketing consent"
 msgstr "{0} exkluderade utan samtycke till marknadsföring"
 
@@ -98,7 +98,7 @@ msgstr "{0} av {1} platser är tagna."
 msgid "{0} organizers"
 msgstr "{0} arrangörer"
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "{0} part(s)"
 msgstr "{0} del(ar)"
 
@@ -114,7 +114,7 @@ msgstr "{0} biljetter"
 msgid "{0} updated successfully"
 msgstr "{0} uppdaterades"
 
-#: src/components/modals/SendMessageModal/index.tsx:533
+#: src/components/modals/SendMessageModal/index.tsx:542
 msgid "{0} without a mobile number"
 msgstr "{0} utan mobilnummer"
 
@@ -1299,7 +1299,7 @@ msgstr "Godkänn meddelande"
 msgid "Approve the payment of {amountLabel} in the Swish app, then return here. This page updates automatically."
 msgstr "Godkänn betalningen på {amountLabel} i Swish-appen och kom sedan tillbaka hit. Sidan uppdateras automatiskt."
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "approx. {0} per recipient"
 msgstr "ca {0} per mottagare"
 
@@ -1786,7 +1786,7 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
-#: src/components/modals/SendMessageModal/index.tsx:694
+#: src/components/modals/SendMessageModal/index.tsx:703
 msgid "Back"
 msgstr "Tillbaka"
 
@@ -1903,7 +1903,7 @@ msgstr "Meddelandet är obligatoriskt"
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Bokmärk denna sida för att hantera din order när som helst."
 
-#: src/components/modals/SendMessageModal/index.tsx:519
+#: src/components/modals/SendMessageModal/index.tsx:528
 msgid "Both"
 msgstr "Båda"
 
@@ -2275,11 +2275,11 @@ msgstr "Ändra väntlistinställningar"
 msgid "Changed duration for {count} date(s)"
 msgstr "Längden ändrad för {count} datum"
 
-#: src/components/modals/SendMessageModal/index.tsx:513
+#: src/components/modals/SendMessageModal/index.tsx:522
 msgid "Channel"
 msgstr "Kanal"
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "characters"
 msgstr "tecken"
 
@@ -2495,6 +2495,10 @@ msgstr "Välj en konfiguration"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:336
 msgid "Choose a different action"
 msgstr "Välj en annan åtgärd"
+
+#: src/components/modals/SendMessageModal/index.tsx:517
+msgid "Choose a type. Service information is practical details for ticket holders and reaches everyone. Marketing is offers and news and only reaches buyers who have consented."
+msgstr "Välj typ. Serviceinformation är praktisk information till biljettinnehavare och når alla. Marknadsföring är erbjudanden och nyheter och når bara köpare som har samtyckt."
 
 #: src/components/common/ThemeFontControl/index.tsx:66
 msgid "Choose a typeface that matches your brand. Fonts are self-hosted via Bunny Fonts."
@@ -2941,7 +2945,7 @@ msgstr "Kontakt-e-post"
 msgid "Container ID"
 msgstr "Container-ID"
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "contains characters outside the SMS alphabet (e.g. – or emoji), so each part holds only 70"
 msgstr "innehåller tecken utanför SMS-alfabetet (t.ex. – eller emoji), så varje del rymmer bara 70"
 
@@ -3433,7 +3437,7 @@ msgstr "För närvarande tillgänglig för köp"
 #~ msgid "Custom branding"
 #~ msgstr "Egen varumärkesprofil"
 
-#: src/components/modals/SendMessageModal/index.tsx:618
+#: src/components/modals/SendMessageModal/index.tsx:627
 msgid "Custom date and time"
 msgstr "Anpassat datum och tid"
 
@@ -4141,7 +4145,7 @@ msgstr "t.ex. Planerat underhåll nu på lördag kl. 2–4 UTC"
 msgid "e.g., Get Tickets, Register Now"
 msgstr "t.ex. Köp biljetter, Registrera dig nu"
 
-#: src/components/modals/SendMessageModal/index.tsx:544
+#: src/components/modals/SendMessageModal/index.tsx:553
 msgid "e.g., Important update about your tickets"
 msgstr "t.ex., viktiga uppdateringar gällande dina biljetter"
 
@@ -4337,8 +4341,8 @@ msgstr "Giltiga incheckningslistor"
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
 #: src/components/modals/ManageAttendeeModal/index.tsx:152
 #: src/components/modals/ManageOrderModal/index.tsx:136
-#: src/components/modals/SendMessageModal/index.tsx:517
-#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/modals/SendMessageModal/index.tsx:526
+#: src/components/modals/SendMessageModal/index.tsx:670
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:120
 #: src/components/routes/admin/Dashboard/index.tsx:401
 #: src/components/routes/auth/AcceptInvitation/index.tsx:112
@@ -4393,7 +4397,7 @@ msgstr "E-postadress kopierad till urklipp"
 msgid "Email addresses do not match"
 msgstr "E-postadresserna matchar inte"
 
-#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/modals/SendMessageModal/index.tsx:670
 msgid "Email and SMS"
 msgstr "E-post och SMS"
 
@@ -4458,8 +4462,8 @@ msgstr "E-post verifierad"
 msgid "Email verified successfully!"
 msgstr "E-post verifierad"
 
-#: src/components/modals/SendMessageModal/index.tsx:530
-#: src/components/modals/SendMessageModal/index.tsx:663
+#: src/components/modals/SendMessageModal/index.tsx:539
+#: src/components/modals/SendMessageModal/index.tsx:672
 msgid "Email: {0} recipients"
 msgstr "E-post: {0} mottagare"
 
@@ -5873,7 +5877,7 @@ msgstr "Hej {0} 👋"
 msgid "Hi,"
 msgstr "Hej,"
 
-#: src/components/modals/SendMessageModal/index.tsx:566
+#: src/components/modals/SendMessageModal/index.tsx:575
 msgid "Hi! Doors open at 19:00. Bring your ticket QR code."
 msgstr "Hej! Dörrarna öppnar 19:00. Ta med QR-koden på din biljett."
 
@@ -6094,11 +6098,11 @@ msgstr "Jag godkänner att ta emot e-postmeddelanden relaterade till detta evene
 msgid "I agree to the <0>terms and conditions</0>"
 msgstr "Jag godkänner <0>villkoren</0>"
 
-#: src/components/modals/SendMessageModal/index.tsx:654
+#: src/components/modals/SendMessageModal/index.tsx:663
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Jag bekräftar att detta är ett transaktionsmeddelande relaterat till detta evenemang"
 
-#: src/components/modals/SendMessageModal/index.tsx:653
+#: src/components/modals/SendMessageModal/index.tsx:662
 msgid "I confirm this is marketing and will only reach buyers who have consented"
 msgstr "Jag bekräftar att detta är marknadsföring och att det endast går till köpare som har samtyckt"
 
@@ -6486,7 +6490,7 @@ msgstr "Fortsätt redigera"
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "Håll det kort — banners visar en enda rad. {0}/200"
 
-#: src/components/modals/SendMessageModal/index.tsx:565
+#: src/components/modals/SendMessageModal/index.tsx:574
 msgid "Keep it short. Links are optional."
 msgstr "Håll det kort. Länkar är valfria."
 
@@ -6953,13 +6957,13 @@ msgstr "Markera som betald"
 msgid "Mark as validated (admin override)"
 msgstr "Markera som validerad (administratörsbeslut)"
 
-#: src/components/modals/SendMessageModal/index.tsx:497
-#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/modals/SendMessageModal/index.tsx:496
+#: src/components/modals/SendMessageModal/index.tsx:670
 #: src/components/routes/event/messages.tsx:77
 msgid "Marketing"
 msgstr "Marknadsföring"
 
-#: src/components/modals/SendMessageModal/index.tsx:507
+#: src/components/modals/SendMessageModal/index.tsx:514
 msgid "Marketing: offers, news and other events. Only buyers who ticked the marketing box at checkout receive it, and every SMS ends with an unsubscribe link."
 msgstr "Marknadsföring: erbjudanden, nyheter och andra evenemang. Går bara till köpare som kryssade i marknadsföringsrutan i kassan, och varje SMS avslutas med en avregistreringslänk."
 
@@ -7006,7 +7010,7 @@ msgstr "Medium"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:156
-#: src/components/modals/SendMessageModal/index.tsx:549
+#: src/components/modals/SendMessageModal/index.tsx:558
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 msgid "Message"
 msgstr "Meddelande"
@@ -9360,7 +9364,7 @@ msgstr "Rapport för kampanjkoder"
 msgid "Promo Only"
 msgstr "Endast kampanj"
 
-#: src/components/modals/SendMessageModal/index.tsx:728
+#: src/components/modals/SendMessageModal/index.tsx:738
 msgid "Promotional emails may result in account suspension"
 msgstr "Marknadsföringsmejl kan leda till att kontot stängs av"
 
@@ -9979,11 +9983,11 @@ msgstr "Intäkter"
 msgid "Revenue Summary"
 msgstr "Sammanfattning av intäkter"
 
-#: src/components/modals/SendMessageModal/index.tsx:690
+#: src/components/modals/SendMessageModal/index.tsx:699
 msgid "Review and send"
 msgstr "Granska och skicka"
 
-#: src/components/modals/SendMessageModal/index.tsx:659
+#: src/components/modals/SendMessageModal/index.tsx:668
 msgid "Review before sending"
 msgstr "Granska innan du skickar"
 
@@ -10234,11 +10238,11 @@ msgstr "Schemat har skapats"
 msgid "Schedule ends on"
 msgstr "Schemat slutar"
 
-#: src/components/modals/SendMessageModal/index.tsx:594
+#: src/components/modals/SendMessageModal/index.tsx:603
 msgid "Schedule for later"
 msgstr "Schemalägg för senare"
 
-#: src/components/modals/SendMessageModal/index.tsx:690
+#: src/components/modals/SendMessageModal/index.tsx:699
 msgid "Schedule Message"
 msgstr "Schemalägg meddelande"
 
@@ -10260,7 +10264,7 @@ msgstr "Schemalagd"
 msgid "Scheduled deletion"
 msgstr "Schemalagd radering"
 
-#: src/components/modals/SendMessageModal/index.tsx:624
+#: src/components/modals/SendMessageModal/index.tsx:633
 msgid "Scheduled time"
 msgstr "Schemalagd tid"
 
@@ -10610,7 +10614,7 @@ msgstr "Skicka"
 msgid "Send a message"
 msgstr "Skicka ett meddelande"
 
-#: src/components/modals/SendMessageModal/index.tsx:713
+#: src/components/modals/SendMessageModal/index.tsx:722
 msgid "Send as test"
 msgstr "Skicka som test"
 
@@ -10622,16 +10626,16 @@ msgstr "Skicka ett SMS till köparen med länk till biljetterna när en order ä
 msgid "Send emails to attendees, ticket holders, or order owners. Messages can be sent immediately or scheduled for later."
 msgstr "Skicka e-post till deltagare, biljettinnehavare eller orderägare. Meddelanden kan skickas omedelbart eller schemaläggas för senare."
 
-#: src/components/modals/SendMessageModal/index.tsx:721
+#: src/components/modals/SendMessageModal/index.tsx:730
 msgid "Send me a copy"
 msgstr "Skicka en kopia till mig"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
-#: src/components/modals/SendMessageModal/index.tsx:690
+#: src/components/modals/SendMessageModal/index.tsx:699
 msgid "Send Message"
 msgstr "Skicka meddelande"
 
-#: src/components/modals/SendMessageModal/index.tsx:586
+#: src/components/modals/SendMessageModal/index.tsx:595
 msgid "Send now"
 msgstr "Skicka nu"
 
@@ -10655,7 +10659,7 @@ msgstr "Skicka återställningslänk"
 msgid "Send Swish request for {amountLabel}"
 msgstr "Skicka Swish-förfrågan på {amountLabel}"
 
-#: src/components/modals/SendMessageModal/index.tsx:690
+#: src/components/modals/SendMessageModal/index.tsx:699
 msgid "Send Test"
 msgstr "Skicka test"
 
@@ -10671,7 +10675,7 @@ msgstr "Skicka till alla datum, eller välj ett specifikt"
 msgid "Send your first message"
 msgstr "Skicka ditt första meddelande"
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "Sender"
 msgstr "Avsändare"
 
@@ -10746,12 +10750,12 @@ msgstr "Serviceavgift"
 msgid "Service Fees"
 msgstr "Serviceavgifter"
 
-#: src/components/modals/SendMessageModal/index.tsx:496
-#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/modals/SendMessageModal/index.tsx:495
+#: src/components/modals/SendMessageModal/index.tsx:670
 msgid "Service information"
 msgstr "Serviceinformation"
 
-#: src/components/modals/SendMessageModal/index.tsx:508
+#: src/components/modals/SendMessageModal/index.tsx:516
 msgid "Service information: practical details about the event the recipients hold tickets for, such as times, entrance and changes. Goes to everyone with a ticket."
 msgstr "Serviceinformation: praktiska uppgifter om evenemanget mottagarna har biljett till, t.ex. tider, insläpp och ändringar. Går till alla med biljett."
 
@@ -11038,8 +11042,8 @@ msgstr "Slovakiska"
 msgid "Smith"
 msgstr "Smith"
 
-#: src/components/modals/SendMessageModal/index.tsx:518
-#: src/components/modals/SendMessageModal/index.tsx:661
+#: src/components/modals/SendMessageModal/index.tsx:527
+#: src/components/modals/SendMessageModal/index.tsx:670
 #: src/components/routes/event/messages.tsx:74
 msgid "SMS"
 msgstr "SMS"
@@ -11065,7 +11069,7 @@ msgstr "SMS-leverans är inte tillgänglig ännu"
 msgid "SMS delivery settings saved."
 msgstr "Inställningarna för SMS-leverans har sparats."
 
-#: src/components/modals/SendMessageModal/index.tsx:526
+#: src/components/modals/SendMessageModal/index.tsx:535
 msgid "SMS is a paid add-on. Enable SMS delivery in the organizer settings to send text messages."
 msgstr "SMS är ett betalt tillägg. Aktivera SMS-utskick i arrangörsinställningarna för att skicka textmeddelanden."
 
@@ -11073,16 +11077,16 @@ msgstr "SMS är ett betalt tillägg. Aktivera SMS-utskick i arrangörsinställni
 msgid "SMS sending has not been activated on this platform. Your settings are saved but no messages will be sent until it is."
 msgstr "SMS-utskick är inte aktiverat på plattformen ännu. Dina inställningar sparas, men inga meddelanden skickas förrän det är aktiverat."
 
-#: src/components/modals/SendMessageModal/index.tsx:562
+#: src/components/modals/SendMessageModal/index.tsx:571
 #: src/components/routes/event/messages.tsx:121
 msgid "SMS text"
 msgstr "SMS-text"
 
-#: src/components/modals/SendMessageModal/index.tsx:532
+#: src/components/modals/SendMessageModal/index.tsx:541
 msgid "SMS: {0} recipients"
 msgstr "SMS: {0} mottagare"
 
-#: src/components/modals/SendMessageModal/index.tsx:665
+#: src/components/modals/SendMessageModal/index.tsx:674
 msgid "SMS: {0} recipients, {1} part(s), approx. {2} each ≈ {3}"
 msgstr "SMS: {0} mottagare, {1} del(ar), ca {2} per mottagare ≈ {3}"
 
@@ -11403,7 +11407,7 @@ msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe guidar dig genom några snabba frågor för att slutföra inställningen."
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
-#: src/components/modals/SendMessageModal/index.tsx:543
+#: src/components/modals/SendMessageModal/index.tsx:552
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
@@ -12846,7 +12850,7 @@ msgstr "Twitch"
 msgid "Type"
 msgstr "Typ"
 
-#: src/components/modals/SendMessageModal/index.tsx:671
+#: src/components/modals/SendMessageModal/index.tsx:680
 msgid "Type \"{0}\" exactly to enable sending to more than 100 recipients."
 msgstr "Skriv \"{0}\" exakt för att kunna skicka till fler än 100 mottagare."
 
@@ -12859,7 +12863,7 @@ msgstr "Skriv \"{eventTitle}\" exakt för att aktivera återbetalningsknappen."
 msgid "Type \"delete\" to confirm"
 msgstr "Skriv \"ta bort\" för att bekräfta"
 
-#: src/components/modals/SendMessageModal/index.tsx:670
+#: src/components/modals/SendMessageModal/index.tsx:679
 #: src/components/modals/SwishMassRefundModal/index.tsx:397
 msgid "Type the event name to confirm"
 msgstr "Skriv evenemangets namn för att bekräfta"
@@ -12996,7 +13000,7 @@ msgstr "Obetald order"
 msgid "Unsubscribe from marketing"
 msgstr "Avregistrera dig från marknadsföring"
 
-#: src/components/modals/SendMessageModal/index.tsx:564
+#: src/components/modals/SendMessageModal/index.tsx:573
 msgid "unsubscribe link is added automatically"
 msgstr "avregistreringslänk läggs till automatiskt"
 
