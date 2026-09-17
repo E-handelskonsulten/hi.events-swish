@@ -9323,7 +9323,7 @@ msgstr "Produkter"
 #: src/components/common/StatBoxes/index.tsx:80
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:272
 msgid "Products sold"
-msgstr "Sålda produkter"
+msgstr "Sålda biljetter"
 
 #: src/components/common/StatsCharts/index.tsx:54
 #: src/components/routes/admin/Dashboard/index.tsx:258
@@ -9332,7 +9332,7 @@ msgstr "Sålda produkter"
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:73
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:68
 msgid "Products Sold"
-msgstr "Sålda produkter"
+msgstr "Sålda biljetter"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:236
 msgid "Products sorted successfully"
