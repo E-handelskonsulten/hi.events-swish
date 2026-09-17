@@ -88,7 +88,10 @@ return [
     */
 
     'batching' => [
-        'database' => env('DB_CONNECTION', 'mysql'),
+        // Must follow the default database connection: the occurrence
+        // generator runs as a job batch, and a stray 'mysql' fallback sends
+        // that insert to a connection that cannot talk to Postgres.
+        'database' => env('DB_CONNECTION', 'pgsql'),
         'table' => 'job_batches',
     ],
 
