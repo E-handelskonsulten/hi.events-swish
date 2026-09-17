@@ -37,6 +37,8 @@ class CombinedServiceFeeOrderTest extends SwishFeatureTestCase
         ]);
 
         DB::table('product_prices')->where('id', $this->productPriceId)->update(['price' => 100.00]);
+        // Display mode is presentation only: fees must land in totals, Swish amounts and refunds regardless.
+        DB::table('event_settings')->where('event_id', $this->eventId)->update(['price_display_mode' => 'CHECKOUT']);
 
         $this->expensiveProductId = DB::table('products')->insertGetId([
             'title' => 'VIP ticket',

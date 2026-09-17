@@ -11,7 +11,7 @@ import {useUpdateEventSettings} from "../../../../../../mutations/useUpdateEvent
 import {useGetEventSettings} from "../../../../../../queries/useGetEventSettings.ts";
 import {HeadingWithDescription} from "../../../../../common/Card/CardHeading";
 import {CustomSelect, ItemProps} from "../../../../../common/CustomSelect";
-import {IconCoin, IconCoins} from "@tabler/icons-react";
+import {IconCoin, IconCoins, IconReceipt} from "@tabler/icons-react";
 import {SelfServiceSettings} from "../../../../../common/SelfServiceSettings";
 
 export const MiscSettings = () => {
@@ -61,6 +61,12 @@ export const MiscSettings = () => {
             label: t`Show tax and fees separately`,
             value: 'EXCLUSIVE',
             description: t`The price displayed to the customer will not include taxes and fees. They will be shown separately`,
+        },
+        {
+            icon: <IconReceipt/>,
+            label: t`Show fees at checkout only`,
+            value: 'CHECKOUT',
+            description: t`The event page shows the ticket price only. Fees and tax appear as their own lines, with the total, in checkout before payment`,
         },
     ];
 

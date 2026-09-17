@@ -55,6 +55,9 @@ export const TieredPricing = ({
 
     const priceDisplayMode = event?.settings?.price_display_mode;
     const isInclusive = priceDisplayMode === 'INCLUSIVE';
+    // CHECKOUT mode: the event page shows the ticket price alone; fees and tax
+    // get their own lines with the total in checkout, before payment.
+    const showFeeNote = priceDisplayMode !== 'CHECKOUT';
 
     const getQuantityCap = (price: ProductPrice): number =>
         Math.min(price.quantity_remaining ?? 50, product.max_per_order ?? 50);
@@ -168,7 +171,7 @@ export const TieredPricing = ({
                     </div>
                     {renderQuantityControl(price, 0)}
                 </div>
-                {feesAndTax > 0 && isPriceAvailable && (
+                {showFeeNote && feesAndTax > 0 && isPriceAvailable && (
                     <FeeBreakdown
                         toggleLabel={isInclusive
                             ? getInclusiveFeeNote((price.fee_total || 0) > 0, (price.tax_total || 0) > 0)
@@ -232,7 +235,7 @@ export const TieredPricing = ({
                             {renderQuantityControl(price, index)}
                         </div>
 
-                        {product.type !== 'DONATION' && feesAndTax > 0 && isPriceAvailable && (
+                        {showFeeNote && product.type !== 'DONATION' && feesAndTax > 0 && isPriceAvailable && (
                             <FeeBreakdown
                                 toggleLabel={isInclusive
                                     ? getInclusiveFeeNote((price.fee_total || 0) > 0, (price.tax_total || 0) > 0)

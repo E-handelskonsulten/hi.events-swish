@@ -118,7 +118,7 @@ class UpdateEventSettingsRequest extends BaseRequest
             'homepage_link_color' => $colorMessage,
             'homepage_product_widget_background_color' => $colorMessage,
             'homepage_product_widget_text_color' => $colorMessage,
-            'price_display_mode.in' => __('The price display mode must be either inclusive or exclusive.'),
+            'price_display_mode.in' => __('The price display mode must be inclusive, exclusive or checkout.'),
 
             // Payment messages
             'payment_providers.*.in' => __('Invalid payment provider selected.'),

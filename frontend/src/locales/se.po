@@ -591,7 +591,7 @@ msgid "Account verification revoked"
 msgstr "Kontoverifiering återkallad"
 
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:103
-#: src/components/routes/organizer/Reports/index.tsx:47
+#: src/components/routes/organizer/Reports/index.tsx:50
 msgid "Accounting Report"
 msgstr "Bokföringsrapport"
 
@@ -839,7 +839,7 @@ msgstr "Tilläggsprodukter"
 msgid "Add-ons"
 msgstr "Tillägg"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:78
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:81
 msgid "Added at checkout"
 msgstr "Läggs till i kassan"
 
@@ -1141,7 +1141,7 @@ msgstr "Fantastiskt, Evenemang, Nyckelord..."
 #: src/components/modals/SwishMassRefundModal/index.tsx:68
 #: src/components/modals/SwishMassRefundModal/index.tsx:121
 #: src/components/modals/SwishMassRefundModal/index.tsx:357
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:209
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:212
 msgid "Amount"
 msgstr "Belopp"
 
@@ -1551,7 +1551,7 @@ msgstr "Minst en produkt måste förbli tillgänglig för det här datumet. Vill
 msgid "Attempts"
 msgstr "Försök"
 
-#: src/components/routes/organizer/Reports/index.tsx:36
+#: src/components/routes/organizer/Reports/index.tsx:39
 msgid "Attendance and check-in rates across all events"
 msgstr "Närvaro och incheckningsfrekvens för alla evenemang"
 
@@ -1821,7 +1821,7 @@ msgid "Back to payment"
 msgstr "Tillbaka till betalning"
 
 #: src/components/routes/event/Reports/ReportLayout/index.tsx:39
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:45
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:47
 msgid "Back to Reports"
 msgstr "Tillbaka till rapporter"
 
@@ -1860,7 +1860,7 @@ msgstr "Banner"
 msgid "Banner content must be 200 characters or less"
 msgstr "Bannerinnehållet får vara högst 200 tecken"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:84
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
 msgid "Base price"
 msgstr "Grundpris"
 
@@ -2427,7 +2427,7 @@ msgid "Check-In Status"
 msgstr "Incheckningsstatus"
 
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:58
-#: src/components/routes/organizer/Reports/index.tsx:35
+#: src/components/routes/organizer/Reports/index.tsx:38
 msgid "Check-in Summary"
 msgstr "Incheckningssammanfattning"
 
@@ -3503,7 +3503,7 @@ msgstr "Anpassa evenemangets startsida och kassameddelanden"
 msgid "Customize the layout, colors, and branding of your event homepage."
 msgstr "Anpassa layout, färger och varumärkesprofil för ditt evenemangs startsida."
 
-#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:71
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:77
 msgid "Customize the miscellaneous settings for this event"
 msgstr "Anpassa övriga inställningar för detta evenemang"
 
@@ -3541,11 +3541,11 @@ msgstr "Anpassa utseendet på din arrangörssida"
 msgid "Daily"
 msgstr "Dagligen"
 
-#: src/components/routes/organizer/Reports/index.tsx:18
+#: src/components/routes/organizer/Reports/index.tsx:21
 msgid "Daily revenue, taxes, fees, and refunds across all events"
 msgstr "Dagliga intäkter, skatter, avgifter och återbetalningar för alla evenemang"
 
-#: src/components/routes/organizer/Reports/index.tsx:48
+#: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Daily sales and refunds per event and payment method with VAT split by rate, for bank reconciliation"
 msgstr "Daglig försäljning och återbetalningar per evenemang och betalsätt med moms uppdelad per skattesats, för avstämning mot bankkontot"
 
@@ -4893,7 +4893,7 @@ msgid "Events"
 msgstr "Evenemang"
 
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
-#: src/components/routes/organizer/Reports/index.tsx:23
+#: src/components/routes/organizer/Reports/index.tsx:26
 msgid "Events Performance"
 msgstr "Evenemangens resultat"
 
@@ -5393,7 +5393,7 @@ msgstr "Avgiftsanpassning sparad"
 #: src/components/common/OrdersTable/index.tsx:271
 #: src/components/forms/ProductForm/index.tsx:490
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:86
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
 msgid "Fees"
 msgstr "Avgifter"
 
@@ -5605,8 +5605,8 @@ msgstr "Fjärde"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:131
 #: src/components/forms/ProductForm/index.tsx:275
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:188
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:154
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:225
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
 msgstr "Gratis"
 
@@ -5885,7 +5885,7 @@ msgstr "Hej! Dörrarna öppnar 19:00. Ta med QR-koden på din biljett."
 msgid "Hi.Events Fee"
 msgstr "Hi.Events-avgift"
 
-#: src/components/routes/organizer/Reports/index.tsx:42
+#: src/components/routes/organizer/Reports/index.tsx:45
 msgid "Hi.Events platform fees and VAT breakdown by transaction"
 msgstr "Hi.Events plattformsavgifter och momsfördelning per transaktion"
 
@@ -6066,7 +6066,7 @@ msgstr "Så läser du rapporten"
 msgid "How VAT is applied to the platform fees we charge you."
 msgstr "Så tillämpas moms på plattformsavgifterna vi tar ut av dig."
 
-#: src/components/common/Editor/Editor.tsx:90
+#: src/components/common/Editor/Editor.tsx:121
 msgid "HTML character limit exceeded: {htmlLength}/{maxLength}"
 msgstr "HTML-teckengränsen har överskridits: {htmlLength}/{maxLength}"
 
@@ -6987,7 +6987,7 @@ msgstr "Max meddelanden / 24h"
 msgid "Max Recipients / Message"
 msgstr "Max mottagare / meddelande"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:65
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Maximum {cap} per order"
 msgstr "Max {cap} per order"
 
@@ -7115,7 +7115,7 @@ msgstr "Minuter"
 msgid "Miscellaneous"
 msgstr "Övrigt"
 
-#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:70
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:76
 msgid "Miscellaneous Settings"
 msgstr "Övriga inställningar"
 
@@ -8024,7 +8024,7 @@ msgstr "Onlineevenemang"
 msgid "Online Event Details"
 msgstr "Information om onlineevenemang"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:65
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
 msgstr "Endast {cap} tillgängliga"
 
@@ -8638,7 +8638,7 @@ msgstr "Betala {amountLabel} med Swish"
 msgid "Pay securely with the Swish app"
 msgstr "Betala tryggt med Swish-appen"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:208
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:211
 msgid "Pay what you want"
 msgstr "Betala vad du vill"
 
@@ -8908,7 +8908,7 @@ msgstr "Plattformsavgift på {0} dras från din utbetalning"
 
 #: src/components/routes/event/Settings/index.tsx:112
 #: src/components/routes/event/Settings/Sections/PlatformFeesSettings/index.tsx:48
-#: src/components/routes/organizer/Reports/index.tsx:41
+#: src/components/routes/organizer/Reports/index.tsx:44
 #: src/components/routes/organizer/Settings/index.tsx:110
 #: src/components/routes/organizer/Settings/Sections/PlatformFeesSettings/index.tsx:42
 msgid "Platform Fees"
@@ -9114,7 +9114,7 @@ msgstr "Föregående biljett"
 msgid "Price"
 msgstr "Pris"
 
-#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:79
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:85
 msgid "Price display mode"
 msgstr "Visningsläge för pris"
 
@@ -9784,14 +9784,15 @@ msgid "Replace Image"
 msgstr "Byt bild"
 
 #: src/components/routes/event/Reports/ReportLayout/index.tsx:23
-#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:29
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:26
+#: src/components/routes/organizer/Reports/ReportLayout/index.tsx:30
 msgid "Report not found"
 msgstr "Rapporten hittades inte"
 
 #: src/components/layouts/Event/index.tsx:104
 #: src/components/layouts/OrganizerLayout/index.tsx:99
 #: src/components/routes/event/Reports/index.tsx:47
-#: src/components/routes/organizer/Reports/index.tsx:57
+#: src/components/routes/organizer/Reports/index.tsx:60
 msgid "Reports"
 msgstr "Rapporter"
 
@@ -9978,7 +9979,7 @@ msgstr "Återanvänd en Stripe-koppling från en annan arrangör i det här kont
 msgid "Revenue"
 msgstr "Intäkter"
 
-#: src/components/routes/organizer/Reports/index.tsx:17
+#: src/components/routes/organizer/Reports/index.tsx:20
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:67
 msgid "Revenue Summary"
 msgstr "Sammanfattning av intäkter"
@@ -10086,7 +10087,7 @@ msgstr "Total försäljning brutto"
 msgid "Sales, attendance, and check-in breakdown per occurrence"
 msgstr "Uppdelning av försäljning, närvaro och incheckning per datum"
 
-#: src/components/routes/organizer/Reports/index.tsx:24
+#: src/components/routes/organizer/Reports/index.tsx:27
 msgid "Sales, orders, and performance metrics for all events"
 msgstr "Försäljning, ordrar och prestandamått för alla evenemang"
 
@@ -10124,7 +10125,7 @@ msgstr "Lördag"
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:151
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:141
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:193
-#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:94
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:100
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:280
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
@@ -10917,6 +10918,10 @@ msgstr "Visa tillgängligt produktantal"
 #: src/components/routes/event/TicketDesigner/index.tsx:193
 msgid "Show entire date range"
 msgstr "Visa hela datumintervallet"
+
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:67
+msgid "Show fees at checkout only"
+msgstr "Visa avgifter endast i kassan"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:230
 msgid "Show fewer platforms"
@@ -11728,7 +11733,7 @@ msgstr "Riktar sig till deltagare på {0} valda tillfällen."
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:60
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:92
 msgid "Tax"
 msgstr "Moms"
 
@@ -11737,7 +11742,7 @@ msgstr "Moms"
 msgid "Tax & Fees"
 msgstr "Moms och avgifter"
 
-#: src/components/routes/organizer/Reports/index.tsx:30
+#: src/components/routes/organizer/Reports/index.tsx:33
 msgid "Tax collected grouped by tax type and event"
 msgstr "Insamlad moms grupperad efter momstyp och evenemang"
 
@@ -11757,7 +11762,7 @@ msgstr "Momsnamn"
 msgid "Tax or Fee deleted successfully"
 msgstr "Moms eller avgift togs bort"
 
-#: src/components/routes/organizer/Reports/index.tsx:29
+#: src/components/routes/organizer/Reports/index.tsx:32
 #: src/components/routes/organizer/Reports/TaxSummaryReport/index.tsx:62
 msgid "Tax Summary"
 msgstr "Momssammanfattning"
@@ -11912,6 +11917,10 @@ msgstr "Rabatten dras av en gång från orderns totalbelopp."
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:77
 msgid "The email address has been changed. The attendee will receive a new ticket at the updated email address."
 msgstr "E-postadressen har ändrats. Deltagaren kommer att få en ny biljett till den uppdaterade e-postadressen."
+
+#: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:69
+msgid "The event page shows the ticket price only. Fees and tax appear as their own lines, with the total, in checkout before payment"
+msgstr "Evenemangssidan visar bara biljettpriset. Avgifter och moms visas som egna rader, med totalsumman, i kassan innan betalning"
 
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:10
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
@@ -12681,7 +12690,7 @@ msgstr "Topparrangörer (Senaste 14 dagarna)"
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:91
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:94
 msgid "Total"
 msgstr "Totalt"
 
@@ -13446,7 +13455,7 @@ msgstr "Visa alla incheckningslistor"
 msgid "View all messages sent across the platform"
 msgstr "Visa alla meddelanden skickade på plattformen"
 
-#: src/components/routes/organizer/Reports/index.tsx:56
+#: src/components/routes/organizer/Reports/index.tsx:59
 msgid "View and download reports across all your events. Only completed orders are included."
 msgstr "Visa och ladda ner rapporter för alla dina evenemang. Endast slutförda ordrar ingår."
 

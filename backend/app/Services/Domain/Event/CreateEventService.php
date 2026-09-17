@@ -7,6 +7,7 @@ use HiEvents\DomainObjects\Enums\EventType;
 use HiEvents\DomainObjects\Enums\HomepageBackgroundType;
 use HiEvents\DomainObjects\Enums\ImageType;
 use HiEvents\DomainObjects\Enums\PaymentProviders;
+use HiEvents\DomainObjects\Enums\PriceDisplayMode;
 use HiEvents\DomainObjects\Enums\ProductTerminology;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
@@ -248,6 +249,7 @@ class CreateEventService
             'support_email' => $organizer->getEmail(),
 
             'payment_providers' => $this->defaultPaymentProviders((int) $event->getOrganizerId()),
+            'price_display_mode' => PriceDisplayMode::CHECKOUT->name,
             'offline_payment_instructions' => null,
 
             'enable_invoicing' => false,

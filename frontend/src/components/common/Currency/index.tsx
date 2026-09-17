@@ -65,7 +65,7 @@ interface ProductPriceProps {
     currency?: string;
     className?: string;
     freeLabel?: string | null;
-    taxAndServiceFeeDisplayType?: 'INCLUSIVE' | 'EXCLUSIVE';
+    taxAndServiceFeeDisplayType?: 'INCLUSIVE' | 'EXCLUSIVE' | 'CHECKOUT';
     feeDisplay?: 'popover' | 'none';
 }
 

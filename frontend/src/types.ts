@@ -247,7 +247,7 @@ export interface EventSettings {
     seo_description?: string;
     seo_keywords?: string;
     allow_search_engine_indexing?: boolean;
-    price_display_mode?: 'INCLUSIVE' | 'EXCLUSIVE';
+    price_display_mode?: 'INCLUSIVE' | 'EXCLUSIVE' | 'CHECKOUT';
     attendee_details_collection_method?: AttendeeDetailsCollectionMethod;
 
     // Payment settings
