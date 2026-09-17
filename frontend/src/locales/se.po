@@ -154,7 +154,7 @@ msgstr "{chipTime}, slutsålt"
 msgid "{chipTime}, Sold Out, waitlist available"
 msgstr "{chipTime}, Slutsålt, väntelista tillgänglig"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:210
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:211
 msgid "{completedCount} of {totalCount} steps complete"
 msgstr "{completedCount} av {totalCount} steg klara"
 
@@ -216,7 +216,7 @@ msgstr "{minutes} minuter och {seconds} sekunder"
 msgid "{organizerName}'s first event"
 msgstr "{organizerName}s första evenemang"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:95
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:96
 msgid "{productCount} ticket types configured"
 msgstr "{productCount} biljettyper konfigurerade"
 
@@ -337,7 +337,7 @@ msgstr "1 biljett"
 msgid "1 ticket type"
 msgstr "1 biljettyp"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:94
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:95
 msgid "1 ticket type configured"
 msgstr "1 biljettyp konfigurerad"
 
@@ -391,7 +391,7 @@ msgstr "En rullgardinsmeny tillåter endast ett val"
 msgid "A fee, like a booking fee or a service fee"
 msgstr "En avgift, som en bokningsavgift eller serviceavgift"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:199
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:200
 msgid "A few quick steps and you're ready to start selling."
 msgstr "Några snabba steg så är du redo att börja sälja."
 
@@ -674,7 +674,7 @@ msgstr "Aktivitet"
 msgid "Add {0} first"
 msgstr "Lägg till {0} först"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:147
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:148
 msgid "Add a cover image and theme to match your brand"
 msgstr "Lägg till en omslagsbild och ett tema som matchar ditt varumärke"
 
@@ -683,12 +683,16 @@ msgid "Add a date"
 msgstr "Lägg till ett datum"
 
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:137
-msgid "Add a description and venue so attendees know what to expect"
-msgstr "Lägg till en beskrivning och en plats så att deltagarna vet vad de kan förvänta sig"
+#~ msgid "Add a description and venue so attendees know what to expect"
+#~ msgstr "Lägg till en beskrivning och en plats så att deltagarna vet vad de kan förvänta sig"
 
 #: src/components/forms/CheckInListForm/index.tsx:144
 msgid "Add a description for this check-in list"
 msgstr "Lägg till en beskrivning för denna incheckningslista"
+
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:138
+msgid "Add a description so attendees know what to expect"
+msgstr "Lägg till en beskrivning så att deltagarna vet vad de kan förvänta sig"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:556
 msgid "Add a Single Date"
@@ -738,7 +742,7 @@ msgstr "Lägg till datum"
 msgid "Add Dates"
 msgstr "Lägg till datum"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:104
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:105
 msgid "Add dates and times for your recurring event"
 msgstr "Lägg till datum och tider för ditt återkommande evenemang"
 
@@ -746,11 +750,11 @@ msgstr "Lägg till datum och tider för ditt återkommande evenemang"
 msgid "Add description"
 msgstr "Lägg till beskrivning"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:140
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:141
 msgid "Add details"
 msgstr "Lägg till detaljer"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:136
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:137
 msgid "Add event details"
 msgstr "Lägg till evenemangsdetaljer"
 
@@ -803,8 +807,8 @@ msgid "Add this event to your calendar"
 msgstr "Lägg till detta evenemang i din kalender"
 
 #: src/components/modals/PublishEventModal/index.tsx:93
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:91
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:97
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:92
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:98
 msgid "Add tickets"
 msgstr "Lägg till biljetter"
 
@@ -1860,7 +1864,7 @@ msgstr "Bacs-autogiro"
 msgid "Bank account"
 msgstr "Bankkonto"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:128
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:129
 msgid "Bank account connected"
 msgstr "Bankkonto kopplat"
 
@@ -2888,7 +2892,7 @@ msgstr "Bekräftar e-postadress..."
 msgid "Congratulations! Your event is now visible to the public."
 msgstr "Grattis! Ditt evenemang är nu synligt för allmänheten."
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:71
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:72
 msgid "Connect bank"
 msgstr "Koppla bank"
 
@@ -2918,7 +2922,7 @@ msgstr "Koppla Stripe för att få biljettbetalningar direkt till ditt bankkonto
 msgid "Connect with Stripe"
 msgstr "Anslut med Stripe"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:127
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:128
 msgid "Connect your bank to receive ticket sales straight to your account"
 msgstr "Koppla din bank för att få biljettintäkterna direkt till ditt konto"
 
@@ -3148,7 +3152,7 @@ msgstr "Datumet kunde inte sparas"
 msgid "Could not start the mass refund."
 msgstr "Kunde inte starta massåterbetalningen."
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:78
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:79
 msgid "Couldn't send verification email. Please try again."
 msgstr "Verifieringsmejlet kunde inte skickas. Försök igen."
 
@@ -3174,7 +3178,7 @@ msgstr "Omslag"
 msgid "Cover Image"
 msgstr "Omslagsbild"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:148
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:149
 msgid "Cover image added"
 msgstr "Omslagsbild tillagd"
 
@@ -3500,7 +3504,7 @@ msgstr "Kunden kommer att få ett e-postmeddelande som bekräftar återbetalning
 msgid "Customers"
 msgstr "Kunder"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:150
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:151
 msgid "Customize page"
 msgstr "Anpassa sidan"
 
@@ -3545,7 +3549,7 @@ msgstr "Anpassa texten på den flytande knappen som skrollar till biljettsektion
 msgid "Customize your email template using Liquid templating"
 msgstr "Anpassa din e-postmall med Liquid-mallar"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:146
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:147
 msgid "Customize your event page"
 msgstr "Anpassa din evenemangssida"
 
@@ -3899,9 +3903,13 @@ msgstr "Raderingsbegäranden"
 msgid "Description"
 msgstr "Beskrivning"
 
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:139
+msgid "Description added"
+msgstr "Beskrivning tillagd"
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:138
-msgid "Description and venue added"
-msgstr "Beskrivning och plats tillagda"
+#~ msgid "Description and venue added"
+#~ msgstr "Beskrivning och plats tillagda"
 
 #: src/components/forms/CheckInListForm/index.tsx:143
 msgid "Description for check-in staff"
@@ -3989,7 +3997,7 @@ msgstr "Stäng"
 msgid "Dismiss announcement"
 msgstr "Stäng meddelande"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:186
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:187
 msgid "Dismiss setup checklist"
 msgstr "Dölj checklistan för uppstart"
 
@@ -4471,7 +4479,7 @@ msgstr "E-postmallar"
 msgid "Email Verification Required"
 msgstr "E-postverifiering krävs"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:160
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:161
 msgid "Email verified"
 msgstr "E-post verifierad"
 
@@ -4771,7 +4779,7 @@ msgstr "Evenemangskategori"
 msgid "Event Cover Image"
 msgstr "Omslagsbild för evenemang"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:196
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:197
 msgid "Event created"
 msgstr "Evenemang skapat"
 
@@ -5471,7 +5479,7 @@ msgstr "Filter ({activeFilterCount})"
 msgid "Finish setting up Stripe"
 msgstr "Slutför inställningen av Stripe"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:70
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:71
 msgid "Finish setup"
 msgstr "Slutför inställningen"
 
@@ -5734,7 +5742,7 @@ msgstr "Köp biljetter"
 msgid "Get Tickets Button Text"
 msgstr "Text på köp biljetter-knapp"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:207
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:208
 msgid "Get your event ready"
 msgstr "Gör ditt evenemang redo"
 
@@ -6724,7 +6732,7 @@ msgstr "Lista"
 #: src/components/common/EventCard/index.tsx:91
 #: src/components/layouts/Event/index.tsx:218
 #: src/components/layouts/OrganizerLayout/index.tsx:219
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:116
 msgid "Live"
 msgstr "Live"
 
@@ -6861,7 +6869,7 @@ msgstr "Huvudkontor"
 msgid "Make billing address mandatory during checkout"
 msgstr "Gör faktureringsadress obligatorisk i kassan"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:114
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Make it visible so people can buy tickets"
 msgstr "Gör det synligt så att folk kan köpa biljetter"
 
@@ -6915,7 +6923,7 @@ msgstr "Hantera betalnings- och fakturainställningar för detta evenemang."
 msgid "Manage Profile"
 msgstr "Hantera profil"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:107
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:108
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:114
 msgid "Manage schedule"
 msgstr "Hantera schema"
@@ -9419,7 +9427,7 @@ msgid "Public"
 msgstr "Offentlig"
 
 #: src/components/common/StatusToggle/index.tsx:97
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:117
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:118
 msgid "Publish"
 msgstr "Publicera"
 
@@ -9431,7 +9439,7 @@ msgstr "Publicera ändå"
 msgid "Publish Event"
 msgstr "Publicera evenemang"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:113
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:114
 msgid "Publish your event"
 msgstr "Publicera ditt evenemang"
 
@@ -9864,7 +9872,7 @@ msgid "Resend Confirmation Email"
 msgstr "Skicka bekräftelsemejl igen"
 
 #: src/components/layouts/Event/index.tsx:296
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:162
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:163
 msgid "Resend email"
 msgstr "Skicka e-post igen"
 
@@ -10257,7 +10265,7 @@ msgstr "Skannerläge"
 msgid "Schedule"
 msgstr "Schema"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:105
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:106
 msgid "Schedule added"
 msgstr "Schema tillagt"
 
@@ -10840,11 +10848,11 @@ msgid "Set up check-in lists for different entrances, sessions, or days."
 msgstr "Skapa incheckningslistor för olika entréer, pass eller dagar."
 
 #: src/components/layouts/OrganizerLayout/index.tsx:85
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:127
 msgid "Set up payouts"
 msgstr "Ställ in utbetalningar"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:107
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:108
 msgid "Set up schedule"
 msgstr "Ställ in schema"
 
@@ -10853,7 +10861,7 @@ msgstr "Ställ in schema"
 msgid "Set Up Schedule"
 msgstr "Ställ in schema"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:92
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:93
 msgid "Set up the tickets you'll sell and their prices"
 msgstr "Ange biljetterna du ska sälja och deras priser"
 
@@ -10861,7 +10869,7 @@ msgstr "Ange biljetterna du ska sälja och deras priser"
 msgid "Set up your organization"
 msgstr "Konfigurera din organisation"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:103
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:104
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:866
 msgid "Set up your schedule"
 msgstr "Ställ in ditt schema"
@@ -13452,7 +13460,7 @@ msgstr "Verifiering"
 msgid "Verification code"
 msgstr "Verifieringskod"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:77
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:78
 msgid "Verification email sent. Check your inbox."
 msgstr "Verifieringsmejl skickat. Kolla inkorgen."
 
@@ -13471,11 +13479,11 @@ msgid "Verify Email"
 msgstr "Verifiera e-postadress"
 
 #: src/components/layouts/Event/index.tsx:293
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:156
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:157
 msgid "Verify your email"
 msgstr "Verifiera din e-postadress"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:159
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:160
 msgid "Verify your email so attendees can receive tickets"
 msgstr "Verifiera din e-post så att deltagarna kan få sina biljetter"
 
@@ -13749,7 +13757,7 @@ msgstr "Vi rekommenderar 1950×650 px, bildförhållande 3:1 och maximal filstor
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Vi rekommenderar 400×400 px och maximal filstorlek 5 MB"
 
-#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
+#: src/components/routes/event/EventDashboard/SetupChecklist.tsx:159
 msgid "We sent a verification link to {0}"
 msgstr "Vi har skickat en verifieringslänk till {0}"
 

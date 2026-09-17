@@ -30,7 +30,8 @@ interface SetupChecklistProps {
 export const hasEventDetails = (event: Event): boolean => {
     const description = event.description?.trim() ?? '';
 
-    return description.length > 0 && !!event.event_location;
+    // A description is enough: a club night at the organizer's own venue has no per-event location.
+    return description.length > 0;
 };
 
 type ActionStyle = 'primary' | 'secondary';
@@ -134,8 +135,8 @@ export const SetupChecklist = ({
         {
             key: 'details',
             title: t`Add event details`,
-            helperIncomplete: t`Add a description and venue so attendees know what to expect`,
-            helperComplete: t`Description and venue added`,
+            helperIncomplete: t`Add a description so attendees know what to expect`,
+            helperComplete: t`Description added`,
             complete: hasEventDetails(event),
             actionLabel: t`Add details`,
             actionStyle: 'secondary',
