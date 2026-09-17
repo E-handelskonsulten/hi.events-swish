@@ -11,7 +11,6 @@ import {
     IconCalendar,
     IconCalendarOff,
     IconCalendarPlus,
-    IconCalendarRepeat,
     IconExternalLink,
     IconMail,
     IconMapPin,
@@ -362,12 +361,6 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                                                 <div className={classes.metaPrimary}>
                                                     <EventDateRange event={event} occurrence={selectedOccurrence}/>
                                                 </div>
-                                                {event.type === EventType.RECURRING && (
-                                                    <div className={classes.metaSecondary}>
-                                                        <IconCalendarRepeat size={14} style={{verticalAlign: 'middle', marginRight: 4}}/>
-                                                        {t`Recurring Event`}
-                                                    </div>
-                                                )}
                                             </div>
                                             {(() => {
                                                 if (event.type === EventType.RECURRING && !selectedOccurrence) return null;

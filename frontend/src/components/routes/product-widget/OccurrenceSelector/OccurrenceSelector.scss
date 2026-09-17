@@ -618,3 +618,104 @@
   border-radius: 50%;
   background: var(--widget-primary-color, #228be6);
 }
+
+// Compact list view: a row of date pills above the tickets, no calendar.
+.hi-occurrence-body-list {
+  flex-direction: column;
+  gap: 14px;
+
+  .hi-slot-panel {
+    order: 0;
+    width: 100%;
+  }
+}
+
+.hi-date-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.hi-date-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  min-width: 84px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--widget-primary-color, #888) 28%, transparent);
+  color: var(--widget-primary-text-color, inherit);
+  background: transparent;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    border-color: var(--widget-primary-color, #228be6);
+    background: color-mix(in srgb, var(--widget-primary-color, #228be6) 8%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--widget-primary-color, #228be6);
+    outline-offset: 2px;
+  }
+
+  &.hi-date-pill-active {
+    background: var(--widget-primary-color, #228be6);
+    border-color: var(--widget-primary-color, #228be6);
+    color: var(--widget-secondary-text-color, #fff);
+
+    .hi-date-pill-weekday,
+    .hi-date-pill-time {
+      color: inherit;
+      opacity: 0.85;
+    }
+  }
+
+  &.hi-date-pill-sold-out {
+    opacity: 0.6;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &.hi-date-pill-more {
+    border-style: dashed;
+  }
+}
+
+.hi-date-pill-weekday {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.hi-date-pill-date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hi-date-pill-time {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.hi-date-pill-sold-out-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e03131;
+}
+
+.hi-occurrence-view-toggle {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--widget-primary-color, #228be6);
+  text-decoration: underline;
+}

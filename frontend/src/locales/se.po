@@ -134,7 +134,7 @@ msgstr "{attendeeCount} deltagare är anmälda till det här tillfället."
 msgid "{availableCount} of {totalCount} available"
 msgstr "{availableCount} av {totalCount} tillgängliga"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:91
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:99
 msgid "{capacity} spots left"
 msgstr "{capacity} platser kvar"
 
@@ -142,11 +142,11 @@ msgstr "{capacity} platser kvar"
 msgid "{checkedIn} / {total} checked in"
 msgstr "{checkedIn} / {total} incheckade"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:378
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:388
 msgid "{chipTime}, Sold Out"
 msgstr "{chipTime}, slutsålt"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:378
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:388
 msgid "{chipTime}, Sold Out, waitlist available"
 msgstr "{chipTime}, Slutsålt, väntelista tillgänglig"
 
@@ -158,6 +158,10 @@ msgstr "{completedCount} av {totalCount} steg klara"
 #: src/components/forms/ProductForm/ledgerSummaries.ts:125
 msgid "{count} add-ons"
 msgstr "{count} tillägg"
+
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:664
+msgid "{dayName} {time}, Sold Out"
+msgstr "{dayName} {time}, slutsålt"
 
 #: src/components/common/Countdown/index.tsx:68
 msgid "{days} days, {hours} hours, {minutes} minutes, and {seconds} seconds"
@@ -212,8 +216,8 @@ msgstr "{organizerName}s första evenemang"
 msgid "{productCount} ticket types configured"
 msgstr "{productCount} biljettyper konfigurerade"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:242
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:581
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:250
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:597
 msgid "{slotCount} times available"
 msgstr "{slotCount} tider tillgängliga"
 
@@ -333,8 +337,8 @@ msgstr "1 biljettyp"
 msgid "1 ticket type configured"
 msgstr "1 biljettyp konfigurerad"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:242
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:581
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:250
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:597
 msgid "1 time available"
 msgstr "1 tid tillgänglig"
 
@@ -464,7 +468,7 @@ msgstr "Ett veckodagsmönster"
 msgid "Abandoned"
 msgstr "Övergiven"
 
-#: src/components/layouts/EventHomepage/index.tsx:475
+#: src/components/layouts/EventHomepage/index.tsx:468
 #: src/components/modals/AboutModal/index.tsx:13
 msgid "About"
 msgstr "Om"
@@ -806,7 +810,7 @@ msgstr "Lägg till prisnivå"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:378
+#: src/components/layouts/EventHomepage/index.tsx:371
 msgid "Add to Calendar"
 msgstr "Lägg till i kalendern"
 
@@ -1727,7 +1731,7 @@ msgstr "Tillgängligt"
 msgid "Available once payment completes"
 msgstr "Tillgänglig när betalningen har slutförts"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:265
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:273
 msgid "Available times on {dayName}"
 msgstr "Lediga tider på {dayName}"
 
@@ -2158,8 +2162,8 @@ msgstr "Avbrytande kommer att avbryta alla deltagare som är kopplade till denna
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:21
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:120
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:425
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:126
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:171
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:134
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:179
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:100
 msgid "Cancelled"
 msgstr "Avbokad"
@@ -2263,7 +2267,7 @@ msgstr "Ändra lösenord"
 msgid "Change the attendee limit"
 msgstr "Ändra deltagargränsen"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:365
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:375
 msgid "Change time"
 msgstr "Ändra tid"
 
@@ -2321,8 +2325,8 @@ msgstr "Endast checka in"
 msgid "Check out"
 msgstr "Checka ut"
 
+#: src/components/layouts/EventHomepage/index.tsx:336
 #: src/components/layouts/EventHomepage/index.tsx:337
-#: src/components/layouts/EventHomepage/index.tsx:338
 msgid "Check out this event: {0}"
 msgstr "Kolla in det här evenemanget: {0}"
 
@@ -2491,6 +2495,10 @@ msgstr "Välj en färg för din bakgrund"
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:123
 msgid "Choose a configuration"
 msgstr "Välj en konfiguration"
+
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:650
+msgid "Choose a date"
+msgstr "Välj datum"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:336
 msgid "Choose a different action"
@@ -2928,7 +2936,7 @@ msgid "Connection verified"
 msgstr "Anslutningen verifierad"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:677
+#: src/components/layouts/EventHomepage/index.tsx:670
 #: src/components/layouts/OrganizerHomepage/index.tsx:258
 msgid "Contact"
 msgstr "Kontakt"
@@ -2960,7 +2968,7 @@ msgstr "Innehåll krävs"
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
-#: src/components/layouts/EventHomepage/index.tsx:203
+#: src/components/layouts/EventHomepage/index.tsx:202
 #: src/components/layouts/ProductWidget/index.tsx:38
 #: src/components/routes/product-widget/SelectProducts/index.tsx:890
 msgid "Continue"
@@ -3661,6 +3669,7 @@ msgstr "Datumet har uppdaterats"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:808
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1093
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:687
 msgid "dates"
 msgstr "datum"
 
@@ -3668,7 +3677,7 @@ msgstr "datum"
 msgid "Dates are managed per occurrence"
 msgstr "Datum hanteras ett i taget"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:674
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:757
 msgid "Dates with sessions"
 msgstr "Dagar med tillfällen"
 
@@ -5692,7 +5701,7 @@ msgstr "Generera kod"
 msgid "German"
 msgstr "Tyska"
 
-#: src/components/layouts/EventHomepage/index.tsx:510
+#: src/components/layouts/EventHomepage/index.tsx:503
 msgid "Get Directions"
 msgstr "Få vägbeskrivning"
 
@@ -5708,7 +5717,7 @@ msgstr "Få betalt med Stripe"
 msgid "Get started"
 msgstr "Sätt igång"
 
-#: src/components/layouts/EventHomepage/index.tsx:202
+#: src/components/layouts/EventHomepage/index.tsx:201
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Köp biljetter"
@@ -6207,8 +6216,8 @@ msgstr "senaste {0} min"
 msgid "In person — set a venue"
 msgstr "På plats – ange en plats"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:132
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:168
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:140
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:176
 msgid "In progress"
 msgstr "Pågår"
 
@@ -6440,7 +6449,7 @@ msgstr "John"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:406
+#: src/components/layouts/EventHomepage/index.tsx:399
 msgid "Join from anywhere"
 msgstr "Delta varifrån som helst"
 
@@ -6754,7 +6763,7 @@ msgstr "Laddar..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:488
+#: src/components/layouts/EventHomepage/index.tsx:481
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:465
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -7174,6 +7183,10 @@ msgstr "månader"
 msgid "more"
 msgstr "till"
 
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:686
+msgid "More"
+msgstr "Fler"
+
 #: src/components/common/EntityActions/index.tsx:159
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:171
 msgid "More actions"
@@ -7192,7 +7205,7 @@ msgid "Multi line text box"
 msgstr "Flerradigt textfält"
 
 #: src/components/common/EventCard/index.tsx:100
-#: src/components/layouts/EventHomepage/index.tsx:180
+#: src/components/layouts/EventHomepage/index.tsx:179
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:46
 msgid "Multiple locations"
 msgstr "Flera platser"
@@ -7467,7 +7480,7 @@ msgstr "Ingen data att visa. Välj ett datumintervall"
 msgid "No date added"
 msgstr "Inget datum tillagt"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:668
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:751
 msgid "No dates available this month. Try navigating to another month."
 msgstr "Inga datum tillgängliga den här månaden. Prova en annan månad."
 
@@ -7990,9 +8003,9 @@ msgstr "Pågående"
 #: src/components/routes/event/OccurrencesTab/index.tsx:318
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:473
 #: src/components/routes/my-tickets/index.tsx:56
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:122
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:248
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:346
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:130
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:256
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:356
 #: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "Online"
 msgstr "Online"
@@ -8006,7 +8019,7 @@ msgstr "Digitalt – ange anslutningsuppgifter"
 msgid "Online & in-person"
 msgstr "Digitalt och på plats"
 
-#: src/components/layouts/EventHomepage/index.tsx:181
+#: src/components/layouts/EventHomepage/index.tsx:180
 msgid "Online & in-person — see schedule"
 msgstr "Digitalt och på plats – se schemat"
 
@@ -8015,7 +8028,7 @@ msgstr "Digitalt och på plats – se schemat"
 msgid "Online event"
 msgstr "Digitalt evenemang"
 
-#: src/components/layouts/EventHomepage/index.tsx:404
+#: src/components/layouts/EventHomepage/index.tsx:397
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:175
 msgid "Online Event"
 msgstr "Onlineevenemang"
@@ -8028,7 +8041,7 @@ msgstr "Information om onlineevenemang"
 msgid "Only {cap} available"
 msgstr "Endast {cap} tillgängliga"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:91
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:99
 msgid "Only {capacity} left"
 msgstr "Endast {capacity} kvar"
 
@@ -8384,7 +8397,7 @@ msgid "Organization Name"
 msgstr "Organisationsnamn"
 
 #: src/components/common/AdminEventsTable/index.tsx:87
-#: src/components/layouts/EventHomepage/index.tsx:589
+#: src/components/layouts/EventHomepage/index.tsx:582
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -9164,7 +9177,7 @@ msgid "Print to PDF"
 msgstr "Skriv ut till PDF"
 
 #: src/components/common/CookieConsentBanner/index.tsx:51
-#: src/components/layouts/EventHomepage/index.tsx:693
+#: src/components/layouts/EventHomepage/index.tsx:686
 #: src/components/layouts/OrganizerHomepage/index.tsx:341
 msgid "Privacy Policy"
 msgstr "Integritetspolicy"
@@ -9598,7 +9611,6 @@ msgstr "Registrera återbetalning"
 msgid "Recurring"
 msgstr "Återkommande"
 
-#: src/components/layouts/EventHomepage/index.tsx:368
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -10407,7 +10419,7 @@ msgstr "Sekundär textfärg"
 msgid "Secure Checkout"
 msgstr "Säker kassa"
 
-#: src/components/layouts/EventHomepage/index.tsx:431
+#: src/components/layouts/EventHomepage/index.tsx:424
 msgid "See schedule"
 msgstr "Se schemat"
 
@@ -10429,11 +10441,11 @@ msgstr "Välj {0}"
 msgid "Select a category"
 msgstr "Välj en kategori"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:717
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:804
 msgid "Select a Date & Time"
 msgstr "Välj datum och tid"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:215
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:223
 msgid "Select a date to see available times"
 msgstr "Välj ett datum för att se lediga tider"
 
@@ -10590,7 +10602,7 @@ msgstr "valda"
 
 #: src/components/common/PlatformFeesSettings/index.tsx:208
 #: src/components/common/PlatformFeesSettings/index.tsx:231
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:136
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:144
 msgid "Selected"
 msgstr "Vald"
 
@@ -10857,7 +10869,7 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "Det tar bara några minuter att komma igång – du behöver inget befintligt Stripe-konto. Stripe sköter kort, plånböcker, regionala betalsätt och bedrägeriskydd så att du kan fokusera på ditt evenemang."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:342
+#: src/components/layouts/EventHomepage/index.tsx:341
 #: src/components/layouts/OrganizerLayout/index.tsx:239
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
@@ -10915,6 +10927,10 @@ msgstr "Visa deltagaranteckningar för personal som inte är inloggad"
 msgid "Show available product quantity"
 msgstr "Visa tillgängligt produktantal"
 
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:688
+msgid "Show calendar"
+msgstr "Visa kalender"
+
 #: src/components/routes/event/TicketDesigner/index.tsx:193
 msgid "Show entire date range"
 msgstr "Visa hela datumintervallet"
@@ -10962,6 +10978,10 @@ msgstr "Visa återstående kapacitet för köpare"
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:61
 msgid "Show tax and fees separately"
 msgstr "Visa moms och avgifter separat"
+
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:760
+msgid "Show upcoming dates as a list"
+msgstr "Visa kommande datum som lista"
 
 #: src/components/common/OrganizerReportTable/index.tsx:355
 msgid "Showing {0} of {totalRows} records"
@@ -11117,7 +11137,7 @@ msgstr "Sociala länkar och webbplats"
 msgid "Sold"
 msgstr "Sålda"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:579
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:595
 msgid "sold out"
 msgstr "slutsålt"
 
@@ -11125,22 +11145,23 @@ msgstr "slutsålt"
 #: src/components/common/EventDateRange/index.tsx:65
 #: src/components/common/ProductPriceAvailability/index.tsx:20
 #: src/components/common/ProductPriceAvailability/index.tsx:52
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:241
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:249
 msgid "Sold out"
 msgstr "Slutsålt"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:195
+#: src/components/layouts/EventHomepage/index.tsx:194
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:212
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:22
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:174
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:339
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:384
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:136
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:182
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:349
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:394
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:677
 msgid "Sold Out"
 msgstr "Slutsålt"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:136
 msgid "Sold Out, waitlist available"
 msgstr "Slutsålt, väntelista tillgänglig"
 
@@ -11833,7 +11854,7 @@ msgstr "Mallen togs bort"
 msgid "Template saved successfully"
 msgstr "Mallen sparades"
 
-#: src/components/layouts/EventHomepage/index.tsx:699
+#: src/components/layouts/EventHomepage/index.tsx:692
 #: src/components/layouts/OrganizerHomepage/index.tsx:348
 msgid "Terms of Service"
 msgstr "Användarvillkor"
@@ -12222,7 +12243,7 @@ msgstr "Endast det här datumet"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "Detta kopplar från {stripeAccountId} från den här arrangören. Försäljning av betalbiljetter slutar fungera tills du ansluter ett Stripe-konto igen."
 
-#: src/components/layouts/EventHomepage/index.tsx:392
+#: src/components/layouts/EventHomepage/index.tsx:385
 msgid "This event has ended"
 msgstr "Det här evenemanget har avslutats"
 
@@ -12613,7 +12634,7 @@ msgstr "Återstående tid"
 msgid "Times"
 msgstr "Tider"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:725
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:812
 msgid "Times shown in {timezoneAbbr}"
 msgstr "Tider visas i {timezoneAbbr}"
 
@@ -13496,7 +13517,7 @@ msgstr "Visa evenemangsida"
 msgid "View logs"
 msgstr "Visa loggar"
 
-#: src/components/layouts/EventHomepage/index.tsx:551
+#: src/components/layouts/EventHomepage/index.tsx:544
 msgid "View Map"
 msgstr "Visa karta"
 
@@ -13504,7 +13525,7 @@ msgstr "Visa karta"
 msgid "View Message"
 msgstr "Visa meddelande"
 
-#: src/components/layouts/EventHomepage/index.tsx:460
+#: src/components/layouts/EventHomepage/index.tsx:453
 msgid "View on Google Maps"
 msgstr "Visa på Google Maps"
 
@@ -13592,7 +13613,7 @@ msgstr "Väntar på att Swish ska bekräfta din betalning…"
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:73
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:177
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:185
 msgid "Waitlist"
 msgstr "Väntelista"
 

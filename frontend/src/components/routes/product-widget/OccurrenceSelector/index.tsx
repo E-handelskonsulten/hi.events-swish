@@ -63,6 +63,14 @@ interface OccurrenceSelectorProps {
     waitlistAvailable?: boolean;
 }
 
+/**
+ * 'list' shows the next dates as a row of pills and looks like a single
+ * event page; 'calendar' is upstream's month picker, reachable via
+ * "More dates" for events with many sessions.
+ */
+type OccurrenceView = 'list' | 'calendar';
+const LIST_VIEW_MAX_DATES = 8;
+
 const dateKey = (occ: EventOccurrence, tz: string): string =>
     dayjs.utc(occ.start_date).tz(tz).format('YYYY-MM-DD');
 
@@ -289,6 +297,7 @@ const ProductsPane = ({
     onSelect,
     isLoading,
     waitlistAvailable,
+    hideHeader,
     children,
 }: {
     event: Event;
@@ -299,6 +308,7 @@ const ProductsPane = ({
     onSelect: (occurrenceId: IdParam, occurrence?: EventOccurrence) => void;
     isLoading?: boolean;
     waitlistAvailable?: boolean;
+    hideHeader?: boolean;
     children?: ReactNode;
 }) => {
     const switcherSlots = daySlots.filter(
@@ -317,7 +327,7 @@ const ProductsPane = ({
 
     return (
         <div className="hi-products-pane">
-            <div className="hi-slot-header">
+            {!hideHeader && <div className="hi-slot-header">
                 <div className="hi-slot-date-badge" aria-hidden="true">
                     <span className="hi-slot-badge-month">{monthShort}</span>
                     <span className="hi-slot-badge-day">{dayOfMonth}</span>
@@ -359,9 +369,9 @@ const ProductsPane = ({
                         </div>
                     )}
                 </div>
-            </div>
+            </div>}
 
-            {switcherSlots.length > 1 && (
+            {!hideHeader && switcherSlots.length > 1 && (
                 <div className="hi-time-switcher" role="group" aria-label={t`Change time`}>
                     {switcherSlots.map(occ => {
                         const isSelected = sameId(occ.id, selectedOccurrence.id);
@@ -410,7 +420,13 @@ const OccurrencePicker = ({
     productSlot,
     isProductsLoading,
     waitlistAvailable,
-}: OccurrenceSelectorProps & {activeOccurrences: EventOccurrence[]}) => {
+    view,
+    onViewChange,
+}: OccurrenceSelectorProps & {
+    activeOccurrences: EventOccurrence[];
+    view: OccurrenceView;
+    onViewChange: (view: OccurrenceView) => void;
+}) => {
     const tz = event.timezone;
     const locale = getSafeLocale(getClientLocale());
     const embeddedOccurrences = event.occurrences || [];
@@ -581,39 +597,106 @@ const OccurrencePicker = ({
         return `${baseLabel}, ${slotCount === 1 ? t`1 time available` : t`${slotCount} times available`}`;
     };
 
+    const upcoming = useMemo(() => {
+        const list = occurrences
+            .filter(occ => !occ.is_past && (isBookable(occ) || occ.status === EventOccurrenceStatus.SOLD_OUT))
+            .sort(byStartDate);
+        const selectedIndex = selectedOccurrenceId ? list.findIndex(o => sameId(o.id, selectedOccurrenceId)) : -1;
+        // Keep the selected date visible even when it sits beyond the first page.
+        const limit = Math.max(LIST_VIEW_MAX_DATES, selectedIndex + 1);
+        return {items: list.slice(0, limit), hasMore: list.length > limit};
+    }, [occurrences, selectedOccurrenceId]);
+
+    const hasFurtherMonths = !!event.last_occurrence_date
+        && dayjs.utc(event.last_occurrence_date).tz(tz).format('YYYY-MM') > nextMonthKey;
+
+    const slotPanel = (
+        <div className="hi-slot-panel" ref={slotPanelRef}>
+            {showingProducts ? (
+                <ProductsPane
+                    event={event}
+                    daySlots={focusedSlots}
+                    selectedOccurrence={selectedOccurrence!}
+                    tz={tz}
+                    locale={locale}
+                    onSelect={onSelect}
+                    isLoading={isProductsLoading}
+                    waitlistAvailable={waitlistAvailable}
+                    hideHeader={view === 'list'}
+                >
+                    {productSlot}
+                </ProductsPane>
+            ) : pendingAutoSelect ? (
+                <div className="hi-slot-loading">
+                    <Loader size="sm" color="var(--widget-primary-color, #228be6)"/>
+                </div>
+            ) : (
+                <TimeSlotList
+                    event={event}
+                    slots={focusedSlots}
+                    tz={tz}
+                    locale={locale}
+                    selectedOccurrenceId={selectedOccurrenceId}
+                    onSelect={onSelect}
+                    waitlistAvailable={waitlistAvailable}
+                />
+            )}
+        </div>
+    );
+
+    if (view === 'list') {
+        return (
+            <div className="hi-occurrence-body hi-occurrence-body-list">
+                <div className="hi-date-pills" role="group" aria-label={t`Choose a date`}>
+                    {upcoming.items.map(occ => {
+                        const isSelected = sameId(occ.id, selectedOccurrenceId);
+                        const soldOut = occ.status === EventOccurrenceStatus.SOLD_OUT;
+                        const disabled = soldOut && !waitlistAvailable;
+                        const start = dayjs.utc(occ.start_date).tz(tz).locale(locale);
+                        const time = formatDateWithLocale(occ.start_date, 'timeOnly', tz, locale);
+                        const dayName = formatDateWithLocale(occ.start_date, 'dayName', tz, locale);
+                        return (
+                            <UnstyledButton
+                                key={occ.id}
+                                className={`hi-date-pill${isSelected ? ' hi-date-pill-active' : ''}${soldOut ? ' hi-date-pill-sold-out' : ''}`}
+                                disabled={disabled}
+                                aria-pressed={disabled ? undefined : isSelected}
+                                aria-label={soldOut ? t`${dayName} ${time}, Sold Out` : `${dayName} ${time}`}
+                                onClick={() => {
+                                    if (!occ.id) return;
+                                    setFocusedDate(dateKey(occ, tz));
+                                    onSelect(occ.id, occ);
+                                }}
+                            >
+                                <span className="hi-date-pill-weekday">{start.format('ddd')}</span>
+                                <span className="hi-date-pill-date">{start.format('D MMM')}</span>
+                                <span className="hi-date-pill-time">
+                                    {time}
+                                    {occ.label && <span className="hi-date-pill-label"> · {occ.label}</span>}
+                                </span>
+                                {soldOut && <span className="hi-date-pill-sold-out-label">{t`Sold Out`}</span>}
+                            </UnstyledButton>
+                        );
+                    })}
+                    {(upcoming.hasMore || hasFurtherMonths) && (
+                        <UnstyledButton
+                            className="hi-date-pill hi-date-pill-more"
+                            onClick={() => onViewChange('calendar')}
+                        >
+                            <span className="hi-date-pill-weekday">{t`More`}</span>
+                            <span className="hi-date-pill-date">{t`dates`}</span>
+                            <span className="hi-date-pill-time">{t`Show calendar`}</span>
+                        </UnstyledButton>
+                    )}
+                </div>
+                {slotPanel}
+            </div>
+        );
+    }
+
     return (
         <div className="hi-occurrence-body">
-            <div className="hi-slot-panel" ref={slotPanelRef}>
-                {showingProducts ? (
-                    <ProductsPane
-                        event={event}
-                        daySlots={focusedSlots}
-                        selectedOccurrence={selectedOccurrence!}
-                        tz={tz}
-                        locale={locale}
-                        onSelect={onSelect}
-                        isLoading={isProductsLoading}
-                        waitlistAvailable={waitlistAvailable}
-                    >
-                        {productSlot}
-                    </ProductsPane>
-                ) : pendingAutoSelect ? (
-                    <div className="hi-slot-loading">
-                        <Loader size="sm" color="var(--widget-primary-color, #228be6)"/>
-                    </div>
-                ) : (
-                    <TimeSlotList
-                        event={event}
-                        slots={focusedSlots}
-                        tz={tz}
-                        locale={locale}
-                        selectedOccurrenceId={selectedOccurrenceId}
-                        onSelect={onSelect}
-                        waitlistAvailable={waitlistAvailable}
-                    />
-                )}
-            </div>
-
+            {slotPanel}
             <div className="hi-calendar-panel" aria-busy={displayedMonthLoading || undefined}>
                 {displayedMonthLoading && (
                     <div className="hi-calendar-month-loading">
@@ -673,6 +756,9 @@ const OccurrencePicker = ({
                     <span className="hi-calendar-legend-dot" aria-hidden="true"/>
                     <span>{t`Dates with sessions`}</span>
                 </div>
+                <UnstyledButton className="hi-occurrence-view-toggle" onClick={() => onViewChange('list')}>
+                    {t`Show upcoming dates as a list`}
+                </UnstyledButton>
             </div>
         </div>
     );
@@ -699,6 +785,7 @@ export const OccurrenceSelector = ({
     const locale = getSafeLocale(getClientLocale());
     const timezoneAbbr = formatDateWithLocale(activeOccurrences[0].start_date, 'timezone', tz, locale);
     const recurrenceSummary = buildRecurrenceSummary(event.recurrence_rule);
+    const [view, setView] = useState<OccurrenceView>('list');
 
     return (
         <div
@@ -711,7 +798,7 @@ export const OccurrenceSelector = ({
                 '--widget-background-color': colors?.background,
             } as React.CSSProperties}
         >
-            <div className="hi-occurrence-selector-header">
+            {view === 'calendar' && <div className="hi-occurrence-selector-header">
                 <div className="hi-occurrence-selector-heading">
                     <h2 className="hi-occurrence-selector-title">
                         {t`Select a Date & Time`}
@@ -725,9 +812,11 @@ export const OccurrenceSelector = ({
                         {t`Times shown in ${timezoneAbbr}`}
                     </span>
                 )}
-            </div>
+            </div>}
 
             <OccurrencePicker
+                view={view}
+                onViewChange={setView}
                 event={event}
                 selectedOccurrenceId={selectedOccurrenceId}
                 pendingInitialOccurrenceId={pendingInitialOccurrenceId}
