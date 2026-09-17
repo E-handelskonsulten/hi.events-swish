@@ -7,6 +7,7 @@ import {eventCoverImage, eventHomepageUrl, imageUrl, organizerHomepageUrl} from 
 import {Event, EventOccurrence, EventType, OrganizerStatus} from "../../../types.ts";
 import {EventNotAvailable} from "./EventNotAvailable";
 import {
+    IconChevronLeft,
     IconArrowUpRight,
     IconCalendar,
     IconCalendarOff,
@@ -295,8 +296,11 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                                         {organizer && organizer.status === OrganizerStatus.LIVE ? (
                                             <a
                                                 href={organizerHomepageUrl(organizer)}
-                                                className={classes.organizerPill}
+                                                className={`${classes.organizerPill} ${classes.organizerPillBack}`}
+                                                title={t`Back to ${organizer.name}`}
+                                                aria-label={t`Back to ${organizer.name}`}
                                             >
+                                                <IconChevronLeft size={18} className={classes.organizerPillChevron}/>
                                                 {organizerLogo ? (
                                                     <img
                                                         src={organizerLogo}

@@ -242,6 +242,18 @@ $transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
+  // Linked variant reads as a back button to the organizer page.
+  &.organizerPillBack {
+    padding-left: 8px;
+    gap: 6px;
+  }
+
+  .organizerPillChevron {
+    flex-shrink: 0;
+    opacity: 0.8;
+    margin-right: 2px;
+  }
   background: var(--accent-soft);
   border-radius: 100px;
   padding: 6px 14px 6px 6px;
