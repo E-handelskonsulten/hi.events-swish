@@ -27,15 +27,23 @@ export const EventCard: React.FC<EventCardProps> = ({event, primaryColor = '#8b5
     const emojiIndex = event.id ? Number(event.id) % placeholderEmojis.length : 0;
     const placeholderEmoji = placeholderEmojis[emojiIndex];
 
-    const startMonth = formatDateWithLocale(event.start_date, "monthShort", event.timezone);
-    const startDay = formatDateWithLocale(event.start_date, "dayOfMonth", event.timezone);
-    const startTime = formatDateWithLocale(event.start_date, "timeOnly", event.timezone);
-    const endTime = event.end_date ? formatDateWithLocale(event.end_date, "timeOnly", event.timezone) : null;
-    const prettyTimezone = formatDateWithLocale(event.start_date, "timezone", event.timezone);
+    // For a recurring event the API's start_date/end_date span every loaded
+    // occurrence, so a weekly club night would read "23:00 - Sep 12, 03:00"
+    // a year later. Show the next occurrence's own start and end instead.
+    const nextStart = event.next_occurrence_start_date || event.start_date;
+    const nextOccurrence = event.occurrences?.find(o => o.start_date === nextStart);
+    const displayStart = nextOccurrence?.start_date ?? nextStart;
+    const displayEnd = nextOccurrence ? (nextOccurrence.end_date ?? null) : event.end_date;
 
-    const isSameDay = !!event.end_date && isSameDayInTimezone(event.start_date, event.end_date, event.timezone);
-    const endMonth = event.end_date ? formatDateWithLocale(event.end_date, "monthShort", event.timezone) : null;
-    const endDay = event.end_date ? formatDateWithLocale(event.end_date, "dayOfMonth", event.timezone) : null;
+    const startMonth = formatDateWithLocale(displayStart, "monthShort", event.timezone);
+    const startDay = formatDateWithLocale(displayStart, "dayOfMonth", event.timezone);
+    const startTime = formatDateWithLocale(displayStart, "timeOnly", event.timezone);
+    const endTime = displayEnd ? formatDateWithLocale(displayEnd, "timeOnly", event.timezone) : null;
+    const prettyTimezone = formatDateWithLocale(displayStart, "timezone", event.timezone);
+
+    const isSameDay = !!displayEnd && isSameDayInTimezone(displayStart, displayEnd, event.timezone);
+    const endMonth = displayEnd ? formatDateWithLocale(displayEnd, "monthShort", event.timezone) : null;
+    const endDay = displayEnd ? formatDateWithLocale(displayEnd, "dayOfMonth", event.timezone) : null;
 
     const coverImage = event.images?.find(img => img.type === 'EVENT_COVER');
     const locationSummary = summariseEventLocations(event);
@@ -55,8 +63,8 @@ export const EventCard: React.FC<EventCardProps> = ({event, primaryColor = '#8b5
     const location = !isOnlineEvent ? locationLabel : null;
 
     const now = dayjs();
-    const startDate = dayjs(event.start_date);
-    const endDate = event.end_date ? dayjs(event.end_date) : startDate.add(2, 'hour');
+    const startDate = dayjs(displayStart);
+    const endDate = displayEnd ? dayjs(displayEnd) : startDate.add(2, 'hour');
     const isLive = now.isAfter(startDate) && now.isBefore(endDate);
 
     const products = getProductsFromEvent(event) || [];
