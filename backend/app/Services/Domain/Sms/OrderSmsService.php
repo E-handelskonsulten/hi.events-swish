@@ -180,13 +180,19 @@ class OrderSmsService
 
     private function resolveRecipient(OrderDomainObject $order): ?string
     {
+        // The number the buyer typed in checkout wins: the Swish payer may be a
+        // friend paying, or a sandbox alias. Fall back to the payer alias.
+        if ($order->getPhone()) {
+            return '+'.$order->getPhone();
+        }
+
         $payment = $this->swishPaymentsRepository->findLatestForOrder($order->getId());
 
         if ($payment !== null && $payment->getStatus() === SwishPaymentStatus::PAID->value && $payment->getPayerAlias()) {
             return '+'.$payment->getPayerAlias();
         }
 
-        return $order->getPhone() ? '+'.$order->getPhone() : null;
+        return null;
     }
 
     private function record(

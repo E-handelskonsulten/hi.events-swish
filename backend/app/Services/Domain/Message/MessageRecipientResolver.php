@@ -148,7 +148,7 @@ class MessageRecipientResolver
         $phones = [];
 
         foreach ($orders as $order) {
-            $alias = $paidAliases->get($order->getId())?->getPayerAlias() ?: $order->getPhone();
+            $alias = $order->getPhone() ?: $paidAliases->get($order->getId())?->getPayerAlias();
 
             if ($alias) {
                 $phones[$order->getId()] = '+'.$alias;

@@ -157,6 +157,20 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         Http::assertSent(fn (Request $request) => $request['to'] === '+46701234567');
     }
 
+    public function test_the_mobile_number_entered_in_checkout_wins_over_the_swish_payer(): void
+    {
+        $this->enableSms();
+        $orderId = $this->createReservedOrder();
+        DB::table('orders')->where('id', $orderId)->update(['phone' => '46760000000']);
+        [, $instructionUuid] = $this->createPendingSwishPayment($orderId);
+        $paid = $this->swishPaymentPayload($instructionUuid, $orderId, 'PAID');
+        $this->queueSwishJson($paid);
+        $this->postPaymentCallback($paid)->assertOk();
+
+        Http::assertSent(fn (Request $request) => $request['to'] === '+46760000000');
+        $this->assertSame('+46760000000', DB::table('sms_messages')->where('order_id', $orderId)->value('recipient'));
+    }
+
     public function test_no_sms_when_the_organizer_never_saved_settings(): void
     {
         $this->completeOrderThroughSwishCallback();

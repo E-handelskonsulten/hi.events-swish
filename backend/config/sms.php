@@ -10,7 +10,7 @@ return [
     // Enforced in production by default; other environments opt in.
     'blocked_recipients' => array_values(array_filter(array_map(
         'trim',
-        explode(',', (string) env('SMS_BLOCKED_RECIPIENTS', '+46701234567')),
+        explode(',', (string) env('SMS_BLOCKED_RECIPIENTS', '+46701234567,+46464646464')),
     ))),
     'blocklist_enforced' => (bool) env('SMS_BLOCKLIST_ENFORCED', env('APP_ENV') === 'production'),
 
