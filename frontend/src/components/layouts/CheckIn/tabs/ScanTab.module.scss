@@ -6,7 +6,12 @@
   flex-direction: column;
   background: var(--hi-color-gray);
   min-height: 0;
-  overflow: hidden;
+  // The tab scrolls as a whole: on a phone the scan area plus toolbar fill the
+  // viewport, so an inner-only scrolling list ends up with no visible height
+  // and "Recent check-ins" can never be reached.
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  @include mixins.scrollbar();
 }
 
 .scanArea {
@@ -152,8 +157,7 @@
 }
 
 .recentSection {
-  flex: 1;
-  min-height: 0;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   padding: 14px 16px 0;
@@ -178,17 +182,15 @@
   border: 1px dashed var(--hi-color-gray-2);
   border-radius: 12px;
   flex-shrink: 0;
+  margin-bottom: calc(110px + env(safe-area-inset-bottom));
 }
 
 .recentList {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding-bottom: calc(110px + env(safe-area-inset-bottom));
-  @include mixins.scrollbar();
 }
 
 .recentItem {
