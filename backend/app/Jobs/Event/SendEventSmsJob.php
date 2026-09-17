@@ -12,6 +12,7 @@ use HiEvents\DomainObjects\Status\SmsMessageStatus;
 use HiEvents\Exceptions\Sms\SmsDeliveryException;
 use HiEvents\Repository\Interfaces\OutgoingMessageRepositoryInterface;
 use HiEvents\Repository\Interfaces\SmsMessagesRepositoryInterface;
+use HiEvents\Services\Domain\Sms\SmsRecipientGuard;
 use HiEvents\Services\Infrastructure\Sms\ElksSmsClient;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -48,6 +49,7 @@ class SendEventSmsJob implements ShouldQueue
         ElksSmsClient $client,
         SmsMessagesRepositoryInterface $smsMessagesRepository,
         OutgoingMessageRepositoryInterface $outgoingMessageRepository,
+        SmsRecipientGuard $recipientGuard,
     ): void {
         $existing = $smsMessagesRepository->findFirstWhere([
             SmsMessageDomainObjectAbstract::MESSAGE_ID => $this->messageId,
@@ -55,6 +57,15 @@ class SendEventSmsJob implements ShouldQueue
         ]);
 
         if ($existing?->getStatus() === SmsMessageStatus::SENT->name) {
+            return;
+        }
+
+        if ($recipientGuard->refuse($this->recipient, ['message_id' => $this->messageId, 'order_id' => $this->orderId])) {
+            $this->record($smsMessagesRepository, $existing?->getId(), [
+                SmsMessageDomainObjectAbstract::STATUS => SmsMessageStatus::CANCELLED->name,
+                SmsMessageDomainObjectAbstract::ERROR_MESSAGE => SmsRecipientGuard::reason(),
+            ]);
+
             return;
         }
 

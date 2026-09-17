@@ -19,6 +19,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Mockery;
 use Mockery\MockInterface;
 use Tests\Feature\Services\Domain\Payment\Swish\SwishFeatureTestCase;
@@ -38,6 +39,7 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         Config::set('sms.enabled', true);
         Config::set('sms.dry_run', false);
         Config::set('sms.default_sender', 'Biljettera');
+        Config::set('sms.elks.base_url', 'https://api.46elks.com/a1');
         Config::set('sms.elks.username', 'u-test');
         Config::set('sms.elks.password', 'p-test');
         Config::set('app.frontend_url', 'https://demo.test');
@@ -124,6 +126,35 @@ class OrderSmsDeliveryTest extends SwishFeatureTestCase
         Http::assertNothingSent();
         $this->assertSame(0, DB::table('sms_messages')->where('order_id', $orderId)->count());
         $this->assertSame(OrderStatus::COMPLETED->name, $this->orderRow($orderId)->status);
+    }
+
+    public function test_a_blocklisted_number_is_never_texted_when_the_blocklist_is_enforced(): void
+    {
+        Config::set('sms.blocklist_enforced', true);
+        Config::set('sms.blocked_recipients', ['0701234567']);
+        Log::spy();
+        $this->enableSms();
+
+        $orderId = $this->completeOrderThroughSwishCallback();
+
+        Http::assertNothingSent();
+        $row = DB::table('sms_messages')->where('order_id', $orderId)->first();
+        $this->assertSame(SmsMessageStatus::CANCELLED->name, $row->status);
+        $this->assertSame('+46701234567', $row->recipient);
+        $this->assertStringContainsString('blocklist', $row->error_message);
+        $this->assertSame(OrderStatus::COMPLETED->name, $this->orderRow($orderId)->status);
+        Log::shouldHaveReceived('warning')->withArgs(fn (string $message) => str_contains($message, 'blocklist'))->once();
+    }
+
+    public function test_the_blocklist_is_ignored_outside_production_unless_enforced(): void
+    {
+        Config::set('sms.blocklist_enforced', false);
+        Config::set('sms.blocked_recipients', ['+46701234567']);
+        $this->enableSms();
+
+        $this->completeOrderThroughSwishCallback();
+
+        Http::assertSent(fn (Request $request) => $request['to'] === '+46701234567');
     }
 
     public function test_no_sms_when_the_organizer_never_saved_settings(): void

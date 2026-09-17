@@ -27,6 +27,7 @@ class SmsMessagingTest extends SwishFeatureTestCase
         Config::set('sms.enabled', true);
         Config::set('sms.dry_run', false);
         Config::set('sms.default_sender', 'Biljettera');
+        Config::set('sms.elks.base_url', 'https://api.46elks.com/a1');
         Config::set('sms.elks.username', 'u-test');
         Config::set('sms.elks.password', 'p-test');
         Config::set('app.frontend_url', 'https://demo.test');
@@ -121,6 +122,28 @@ class SmsMessagingTest extends SwishFeatureTestCase
 
         $counts = app(SmsMessagesRepositoryInterface::class)->countSentPerOrganizerBetween(now()->subHour(), now()->addHour());
         $this->assertSame(['SERVICE' => 2], $counts[$this->organizerId]);
+    }
+
+    public function test_a_service_sms_skips_blocklisted_numbers_and_records_why(): void
+    {
+        Config::set('sms.blocklist_enforced', true);
+        Config::set('sms.blocked_recipients', ['+46701234567']);
+        $this->paidOrder('mss@example.test', '46701234567', consented: true);
+        $this->paidOrder('erik@example.test', '46700000002', consented: true);
+
+        $message = $this->send(['channel' => 'SMS', 'purpose' => 'SERVICE', 'sms_body' => 'Dörrarna öppnar 19.00.'])
+            ->assertOk()->json('data');
+
+        Http::assertSentCount(1);
+        Http::assertSent(fn (Request $request) => $request['to'] === '+46700000002');
+
+        $rows = DB::table('sms_messages')->where('message_id', $message['id'])->get()->keyBy('recipient');
+        $this->assertSame('CANCELLED', $rows['+46701234567']->status);
+        $this->assertStringContainsString('blocklist', $rows['+46701234567']->error_message);
+        $this->assertSame('SENT', $rows['+46700000002']->status);
+
+        $counts = app(SmsMessagesRepositoryInterface::class)->countSentPerOrganizerBetween(now()->subHour(), now()->addHour());
+        $this->assertSame(['SERVICE' => 1], $counts[$this->organizerId]);
     }
 
     public function test_a_marketing_sms_never_reaches_buyers_without_consent_and_carries_the_opt_out_link(): void

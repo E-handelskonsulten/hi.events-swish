@@ -40,6 +40,7 @@ class OrderSmsService
         private readonly SmsMessageBuilder $messageBuilder,
         private readonly TicketSmsSendTimeResolver $sendTimeResolver,
         private readonly TicketSmsScheduleService $scheduleService,
+        private readonly SmsRecipientGuard $recipientGuard,
         private readonly Repository $config,
         private readonly LoggerInterface $logger,
     ) {}
@@ -91,6 +92,17 @@ class OrderSmsService
         }
 
         $sender = $settings->getSmsSenderName() ?: $this->config->get('sms.default_sender');
+
+        if ($this->recipientGuard->refuse($recipient, ['order_id' => $orderId, 'type' => $type->name])) {
+            $this->record($existing, $event, $order, $type, [
+                SmsMessageDomainObjectAbstract::STATUS => SmsMessageStatus::CANCELLED->name,
+                SmsMessageDomainObjectAbstract::RECIPIENT => $recipient,
+                SmsMessageDomainObjectAbstract::SENDER => $sender,
+                SmsMessageDomainObjectAbstract::ERROR_MESSAGE => SmsRecipientGuard::reason(),
+            ]);
+
+            return;
+        }
 
         if ($type === SmsMessageType::TICKET) {
             $leadHours = $settings->getSmsLeadHours();
