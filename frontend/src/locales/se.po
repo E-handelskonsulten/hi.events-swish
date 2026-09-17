@@ -4275,7 +4275,6 @@ msgid "Edit Organizer"
 msgstr "Redigera arrangör"
 
 #: src/components/modals/EditProductModal/index.tsx:110
-#: src/components/modals/EditProductModal/index.tsx:114
 msgid "Edit Product"
 msgstr "Redigera produkt"
 
@@ -5618,7 +5617,7 @@ msgstr "Fjärde"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:121
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:131
 #: src/components/forms/ProductForm/index.tsx:275
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:188
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:196
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -6721,7 +6720,7 @@ msgstr "Lista"
 msgid "Live"
 msgstr "Live"
 
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:120
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:128
 msgid "LIVE"
 msgstr "LIVE"
 
@@ -7211,7 +7210,7 @@ msgstr "Flerradigt textfält"
 
 #: src/components/common/EventCard/index.tsx:100
 #: src/components/layouts/EventHomepage/index.tsx:180
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:46
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:54
 msgid "Multiple locations"
 msgstr "Flera platser"
 
@@ -8004,7 +8003,7 @@ msgid "Ongoing"
 msgstr "Pågående"
 
 #: src/components/common/EventCard/index.tsx:103
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:49
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:57
 #: src/components/routes/event/OccurrencesTab/index.tsx:318
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:473
 #: src/components/routes/my-tickets/index.tsx:56
@@ -8020,7 +8019,7 @@ msgid "Online — provide connection details"
 msgstr "Digitalt – ange anslutningsuppgifter"
 
 #: src/components/common/EventCard/index.tsx:100
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:46
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:54
 msgid "Online & in-person"
 msgstr "Digitalt och på plats"
 
@@ -8034,7 +8033,7 @@ msgid "Online event"
 msgstr "Digitalt evenemang"
 
 #: src/components/layouts/EventHomepage/index.tsx:401
-#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:175
+#: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:183
 msgid "Online Event"
 msgstr "Onlineevenemang"
 
@@ -10159,6 +10158,7 @@ msgstr "Lördag"
 msgid "Save"
 msgstr "Spara"
 
+#: src/components/modals/EditProductModal/index.tsx:114
 #: src/components/modals/LocationEditModal/index.tsx:162
 #: src/components/modals/ManageAttendeeModal/index.tsx:187
 #: src/components/modals/ManageOrderModal/index.tsx:212
