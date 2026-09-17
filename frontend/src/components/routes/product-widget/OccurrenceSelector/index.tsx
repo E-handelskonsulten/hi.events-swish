@@ -609,6 +609,10 @@ const OccurrencePicker = ({
 
     const hasFurtherMonths = !!event.last_occurrence_date
         && dayjs.utc(event.last_occurrence_date).tz(tz).format('YYYY-MM') > nextMonthKey;
+    // The page reads as "the next night": other dates stay hidden behind a
+    // small link until the buyer asks for them.
+    const [showDates, setShowDates] = useState(false);
+    const otherDatesAvailable = upcoming.items.length > 1 || upcoming.hasMore || hasFurtherMonths;
 
     const slotPanel = (
         <div className="hi-slot-panel" ref={slotPanelRef}>
@@ -647,7 +651,12 @@ const OccurrencePicker = ({
     if (view === 'list') {
         return (
             <div className="hi-occurrence-body hi-occurrence-body-list">
-                <div className="hi-date-pills" role="group" aria-label={t`Choose a date`}>
+                {!showDates && otherDatesAvailable && (
+                    <UnstyledButton className="hi-date-reveal" onClick={() => setShowDates(true)}>
+                        {t`Want another date? Show upcoming dates`}
+                    </UnstyledButton>
+                )}
+                {showDates && <div className="hi-date-pills" role="group" aria-label={t`Choose a date`}>
                     {upcoming.items.map(occ => {
                         const isSelected = sameId(occ.id, selectedOccurrenceId);
                         const soldOut = occ.status === EventOccurrenceStatus.SOLD_OUT;
@@ -688,7 +697,7 @@ const OccurrencePicker = ({
                             <span className="hi-date-pill-time">{t`Show calendar`}</span>
                         </UnstyledButton>
                     )}
-                </div>
+                </div>}
                 {slotPanel}
             </div>
         );

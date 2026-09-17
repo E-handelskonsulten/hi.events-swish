@@ -719,3 +719,12 @@
   color: var(--widget-primary-color, #228be6);
   text-decoration: underline;
 }
+
+.hi-date-reveal {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--widget-primary-color, #228be6);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

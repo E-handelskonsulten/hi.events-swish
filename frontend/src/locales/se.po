@@ -159,7 +159,7 @@ msgstr "{completedCount} av {totalCount} steg klara"
 msgid "{count} add-ons"
 msgstr "{count} tillägg"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:664
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:673
 msgid "{dayName} {time}, Sold Out"
 msgstr "{dayName} {time}, slutsålt"
 
@@ -2496,7 +2496,7 @@ msgstr "Välj en färg för din bakgrund"
 msgid "Choose a configuration"
 msgstr "Välj en konfiguration"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:650
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:659
 msgid "Choose a date"
 msgstr "Välj datum"
 
@@ -3669,7 +3669,7 @@ msgstr "Datumet har uppdaterats"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:808
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1093
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:687
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:696
 msgid "dates"
 msgstr "datum"
 
@@ -3677,7 +3677,7 @@ msgstr "datum"
 msgid "Dates are managed per occurrence"
 msgstr "Datum hanteras ett i taget"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:757
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:766
 msgid "Dates with sessions"
 msgstr "Dagar med tillfällen"
 
@@ -7183,7 +7183,7 @@ msgstr "månader"
 msgid "more"
 msgstr "till"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:686
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:695
 msgid "More"
 msgstr "Fler"
 
@@ -7480,7 +7480,7 @@ msgstr "Ingen data att visa. Välj ett datumintervall"
 msgid "No date added"
 msgstr "Inget datum tillagt"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:751
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:760
 msgid "No dates available this month. Try navigating to another month."
 msgstr "Inga datum tillgängliga den här månaden. Prova en annan månad."
 
@@ -10441,7 +10441,7 @@ msgstr "Välj {0}"
 msgid "Select a category"
 msgstr "Välj en kategori"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:804
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:813
 msgid "Select a Date & Time"
 msgstr "Välj datum och tid"
 
@@ -10927,7 +10927,7 @@ msgstr "Visa deltagaranteckningar för personal som inte är inloggad"
 msgid "Show available product quantity"
 msgstr "Visa tillgängligt produktantal"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:688
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:697
 msgid "Show calendar"
 msgstr "Visa kalender"
 
@@ -10979,7 +10979,7 @@ msgstr "Visa återstående kapacitet för köpare"
 msgid "Show tax and fees separately"
 msgstr "Visa moms och avgifter separat"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:760
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:769
 msgid "Show upcoming dates as a list"
 msgstr "Visa kommande datum som lista"
 
@@ -11157,7 +11157,7 @@ msgstr "Slutsålt"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:182
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:349
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:394
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:677
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:686
 msgid "Sold Out"
 msgstr "Slutsålt"
 
@@ -12634,7 +12634,7 @@ msgstr "Återstående tid"
 msgid "Times"
 msgstr "Tider"
 
-#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:812
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:821
 msgid "Times shown in {timezoneAbbr}"
 msgstr "Tider visas i {timezoneAbbr}"
 
@@ -13624,6 +13624,10 @@ msgstr "Väntelista aktiverad"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:403
 msgid "Waitlist offer expired"
 msgstr "Väntelisteerbjudandet har gått ut"
+
+#: src/components/routes/product-widget/OccurrenceSelector/index.tsx:656
+msgid "Want another date? Show upcoming dates"
+msgstr "Vill du gå en annan kväll? Visa fler datum"
 
 #: src/components/routes/admin/Configurations/index.tsx:213
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
