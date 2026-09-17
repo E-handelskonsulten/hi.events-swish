@@ -24,6 +24,7 @@ class CreateTaxOrFeeRequest extends BaseRequest
                 'min:0',
             ],
             'is_active' => 'required|boolean',
+            'is_inclusive' => 'sometimes|boolean',
             'is_default' => 'required|boolean',
             'description' => 'nullable|string',
         ];

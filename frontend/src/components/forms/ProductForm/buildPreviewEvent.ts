@@ -15,6 +15,7 @@ import {Constants} from "../../../constants.ts";
 
 const sumForType = (taxesAndFees: TaxAndFee[], type: TaxAndFeeType, basePrice: number): number => {
     return taxesAndFees
+        .filter(item => !(type === TaxAndFeeType.Tax && item.is_inclusive))
         .filter((item) => item.type === type)
         .reduce((total, item) => {
             if (item.calculation_type === TaxAndFeeCalculationType.Percentage) {

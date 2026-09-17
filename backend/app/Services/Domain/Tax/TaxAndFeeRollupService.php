@@ -21,9 +21,22 @@ class TaxAndFeeRollupService
         $this->rollUp = [];
     }
 
+    /**
+     * Taxes added on top of the price. Inclusive taxes (Swedish VAT) are
+     * already inside the price and are reported separately.
+     */
     public function getTotalTaxes(): float
     {
-        return collect($this->rollUp['taxes'] ?? [])->sum('value');
+        return collect($this->rollUp['taxes'] ?? [])
+            ->reject(fn (array $tax) => ! empty($tax['inclusive']))
+            ->sum('value');
+    }
+
+    public function getTotalInclusiveTaxes(): float
+    {
+        return collect($this->rollUp['taxes'] ?? [])
+            ->filter(fn (array $tax) => ! empty($tax['inclusive']))
+            ->sum('value');
     }
 
     public function getTotalFees(): float
@@ -36,7 +49,7 @@ class TaxAndFeeRollupService
         return $this->getTotalTaxes() + $this->getTotalFees();
     }
 
-    public function addToRollUp(TaxAndFeesDomainObject $taxOrFee, float $amount): void
+    public function addToRollUp(TaxAndFeesDomainObject $taxOrFee, float $amount, bool $inclusive = false): void
     {
         $type = strtolower(Str::plural($taxOrFee->getType()));
         $name = $taxOrFee->getName();
@@ -51,6 +64,7 @@ class TaxAndFeeRollupService
                 'fixed_amount' => $taxOrFee->getFixedAmount(),
                 'type' => $taxOrFee->getCalculationType(),
                 'value' => $amount,
+                'inclusive' => $inclusive,
             ];
         } else {
             $this->rollUp[$type][$foundIndex]['value'] += $amount;

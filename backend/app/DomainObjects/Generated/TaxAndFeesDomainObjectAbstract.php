@@ -23,6 +23,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const IS_DEFAULT = 'is_default';
     final public const TYPE = 'type';
     final public const FIXED_AMOUNT = 'fixed_amount';
+    final public const IS_INCLUSIVE = 'is_inclusive';
 
     protected int $id;
     protected string $name;
@@ -37,6 +38,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected bool $is_default = false;
     protected string $type;
     protected ?float $fixed_amount = null;
+    protected bool $is_inclusive = false;
 
     public function toArray(): array
     {
@@ -54,6 +56,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'is_default' => $this->is_default ?? null,
                     'type' => $this->type ?? null,
                     'fixed_amount' => $this->fixed_amount ?? null,
+                    'is_inclusive' => $this->is_inclusive ?? null,
                 ];
     }
 
@@ -198,5 +201,16 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getFixedAmount(): ?float
     {
         return $this->fixed_amount;
+    }
+
+    public function setIsInclusive(bool $is_inclusive): self
+    {
+        $this->is_inclusive = $is_inclusive;
+        return $this;
+    }
+
+    public function getIsInclusive(): bool
+    {
+        return $this->is_inclusive;
     }
 }

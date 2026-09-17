@@ -74,6 +74,27 @@ class TaxAndFeeCalculationServiceTest extends TestCase
         $this->assertSame(26.25, $result->taxTotal);
     }
 
+    public function test_inclusive_vat_is_carved_out_of_the_price_and_never_added(): void
+    {
+        $vat = (new TaxAndFeesDomainObject)
+            ->setName('Moms')
+            ->setType(TaxType::TAX->name)
+            ->setCalculationType(TaxCalculationType::PERCENTAGE->name)
+            ->setRate(25)
+            ->setIsInclusive(true);
+
+        $result = $this->service()->calculateTaxAndFeesForProduct($this->product([$this->serviceFee(), $vat]), 200.00, 2);
+
+        // 4 kr + 1 % of 200 kr = 6 kr per ticket, two tickets.
+        $this->assertSame(12.0, $result->feeTotal);
+        $this->assertSame(0.0, $result->taxTotal);
+        $this->assertSame(80.0, $result->inclusiveTaxTotal);
+
+        $rolledVat = collect($result->rollUp['taxes'])->firstWhere('name', 'Moms');
+        $this->assertTrue($rolledVat['inclusive']);
+        $this->assertSame(80.0, $rolledVat['value']);
+    }
+
     public function test_a_free_ticket_carries_no_combined_fee(): void
     {
         $result = $this->service()->calculateTaxAndFeesForProduct($this->product([$this->serviceFee()]), 0.00);

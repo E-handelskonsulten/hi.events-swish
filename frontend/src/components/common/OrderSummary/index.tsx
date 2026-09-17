@@ -72,7 +72,7 @@ export const OrderSummary = ({event, order, showFreeWhenZeroTotal = true}: Order
                         </div>
                     )
                 })}
-                {order?.taxes_and_fees_rollup?.taxes?.map(tax => {
+                {order?.taxes_and_fees_rollup?.taxes?.filter(tax => !tax.inclusive).map(tax => {
                     return (
                         <div key={tax.name} className={classes.itemRow}>
                             <div className={classes.itemName}>{tax.name}</div>
@@ -112,6 +112,14 @@ export const OrderSummary = ({event, order, showFreeWhenZeroTotal = true}: Order
                         />
                     </div>
                 </div>
+                {order?.taxes_and_fees_rollup?.taxes?.filter(tax => tax.inclusive && tax.value > 0).map(tax => (
+                    <div key={`incl-${tax.name}`} className={`${classes.itemRow} ${classes.inclusiveTaxRow}`}>
+                        <div className={classes.itemName}>{t`of which ${tax.name}`}</div>
+                        <div className={classes.itemValue}>
+                            <Currency currency={event.currency} price={tax.value}/>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

@@ -168,6 +168,41 @@ class CombinedServiceFeeOrderTest extends SwishFeatureTestCase
         $this->assertCount(2, $order['taxes_and_fees_rollup']['fees']);
     }
 
+    public function test_inclusive_vat_is_reported_but_never_changes_what_the_buyer_pays(): void
+    {
+        $this->createServiceFee();
+        $vat = $this->postJson("/accounts/{$this->accountId}/taxes-and-fees", [
+            'name' => 'Moms', 'type' => 'TAX', 'calculation_type' => 'PERCENTAGE', 'rate' => 25,
+            'description' => null, 'is_active' => true, 'is_default' => false, 'is_inclusive' => true,
+        ], $this->authHeaders())->assertOk()->json('data');
+        $this->assertTrue($vat['is_inclusive']);
+        $this->attachFee($vat['id']);
+
+        $order = $this->createOrder();
+        $orderId = $this->payOrder($order);
+        $row = $this->orderRow($orderId);
+
+        // 2 x 100 + 350 = 550 tickets, 17,50 fee, VAT is inside the 550.
+        $this->assertSame('567.50', $row->total_gross);
+        $this->assertSame('0.00', $row->total_tax);
+        $rollup = json_decode($row->taxes_and_fees_rollup, true);
+        $vatLine = collect($rollup['taxes'])->firstWhere('name', 'Moms');
+        $this->assertTrue($vatLine['inclusive']);
+        $this->assertSame(110.0, round((float) $vatLine['value'], 2));
+
+        $report = app(AccountingReport::class)->generateReport(
+            organizerId: $this->organizerId,
+            currency: 'SEK',
+            startDate: Carbon::now()->subDay(),
+            endDate: Carbon::now()->addDay(),
+        );
+        $sale = $report->firstWhere('line_type', AccountingReport::LINE_TYPE_SALE);
+        $this->assertSame(567.5, (float) $sale->gross_amount);
+        $this->assertSame(110.0, (float) $sale->vat_25_amount);
+        $this->assertSame(110.0, (float) $sale->vat_total_amount);
+        $this->assertSame(457.5, (float) $sale->net_amount);
+    }
+
     private function feePayload(): array
     {
         return [

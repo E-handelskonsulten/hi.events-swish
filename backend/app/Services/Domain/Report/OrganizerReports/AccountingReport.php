@@ -32,7 +32,8 @@ class AccountingReport extends AbstractOrganizerReportService
                     COALESCE(SUM(CASE WHEN v.rate_pct = 25 THEN v.amount END), 0) AS vat_25,
                     COALESCE(SUM(CASE WHEN v.rate_pct = 12 THEN v.amount END), 0) AS vat_12,
                     COALESCE(SUM(CASE WHEN v.rate_pct = 6 THEN v.amount END), 0) AS vat_6,
-                    COALESCE(SUM(CASE WHEN v.rate_pct NOT IN (25, 12, 6) THEN v.amount END), 0) AS vat_other
+                    COALESCE(SUM(CASE WHEN v.rate_pct NOT IN (25, 12, 6) THEN v.amount END), 0) AS vat_other,
+                    COALESCE(SUM(v.amount), 0) AS vat_total
                 FROM orders o
                 INNER JOIN events e ON e.id = o.event_id
                 LEFT JOIN LATERAL (
@@ -69,7 +70,7 @@ class AccountingReport extends AbstractOrganizerReportService
                     SUM(ov.vat_12) AS vat_12_amount,
                     SUM(ov.vat_6) AS vat_6_amount,
                     SUM(ov.vat_other) AS vat_other_amount,
-                    SUM(o.total_tax) AS vat_total_amount
+                    SUM(ov.vat_total) AS vat_total_amount
                 FROM orders o
                 INNER JOIN events e ON e.id = o.event_id
                 INNER JOIN order_vat ov ON ov.order_id = o.id
@@ -91,7 +92,7 @@ class AccountingReport extends AbstractOrganizerReportService
                     -SUM(r.amount * ov.vat_12 / NULLIF(o.total_gross, 0)) AS vat_12_amount,
                     -SUM(r.amount * ov.vat_6 / NULLIF(o.total_gross, 0)) AS vat_6_amount,
                     -SUM(r.amount * ov.vat_other / NULLIF(o.total_gross, 0)) AS vat_other_amount,
-                    -SUM(r.amount * o.total_tax / NULLIF(o.total_gross, 0)) AS vat_total_amount
+                    -SUM(r.amount * ov.vat_total / NULLIF(o.total_gross, 0)) AS vat_total_amount
                 FROM order_refunds r
                 INNER JOIN orders o ON o.id = r.order_id
                 INNER JOIN events e ON e.id = o.event_id

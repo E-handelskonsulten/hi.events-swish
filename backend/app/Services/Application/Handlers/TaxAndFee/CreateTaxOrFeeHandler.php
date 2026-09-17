@@ -45,6 +45,7 @@ class CreateTaxOrFeeHandler
             'calculation_type' => $data->calculation_type->name,
             'rate' => $data->rate,
             'fixed_amount' => $data->fixed_amount,
+            'is_inclusive' => $data->is_inclusive && $data->type->name === 'TAX' && $data->calculation_type->name === 'PERCENTAGE',
             'is_active' => $data->is_active,
             'is_default' => $data->is_default,
             'account_id' => $data->account_id,

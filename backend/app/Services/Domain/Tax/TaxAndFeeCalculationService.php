@@ -35,14 +35,39 @@ class TaxAndFeeCalculationService
         $fees = $product->getFees()
             ?->sum(fn ($taxOrFee) => $this->calculateFee($taxOrFee, $price, $quantity)) ?: 0.00;
 
-        $taxFees = $product->getTaxRates()
-            ?->sum(fn ($taxOrFee) => $this->calculateFee($taxOrFee, $price + $fees, $quantity));
+        $taxRates = $product->getTaxRates() ?? collect();
+
+        $taxFees = $taxRates
+            ->reject(fn (TaxAndFeesDomainObject $tax) => $tax->getIsInclusive())
+            ->sum(fn ($taxOrFee) => $this->calculateFee($taxOrFee, $price + $fees, $quantity));
+
+        // Inclusive taxes (Swedish VAT) are carved out of the ticket price for
+        // reporting only; they never change what the buyer pays.
+        $inclusiveTaxes = $taxRates
+            ->filter(fn (TaxAndFeesDomainObject $tax) => $tax->getIsInclusive())
+            ->sum(fn (TaxAndFeesDomainObject $tax) => $this->calculateInclusiveTax($tax, $price, $quantity));
 
         return new TaxCalculationResponse(
             feeTotal: $fees ? ($fees * $quantity) : 0.00,
             taxTotal: $taxFees ? ($taxFees * $quantity) : 0.00,
-            rollUp: $this->taxRollupService->getRollUp()
+            rollUp: $this->taxRollupService->getRollUp(),
+            inclusiveTaxTotal: $inclusiveTaxes ? ($inclusiveTaxes * $quantity) : 0.00,
         );
+    }
+
+    private function calculateInclusiveTax(TaxAndFeesDomainObject $tax, float $price, int $quantity): float
+    {
+        if ($price === 0.00 || $tax->getCalculationType() !== TaxCalculationType::PERCENTAGE->name) {
+            $this->taxRollupService->addToRollUp($tax, 0, inclusive: true);
+
+            return 0.00;
+        }
+
+        $amount = round($price - $price / (1 + $tax->getRate() / 100), 2);
+
+        $this->taxRollupService->addToRollUp($tax, $amount * $quantity, inclusive: true);
+
+        return $amount;
     }
 
     private function calculateFee(TaxAndFeesDomainObject $taxOrFee, float $price, int $quantity): float

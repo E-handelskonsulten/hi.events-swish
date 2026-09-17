@@ -106,6 +106,15 @@ export const TaxAndFeeForm = ({form}: { form: UseFormReturnType<TaxAndFee> }) =>
                 label={t`Description`}
             />
 
+            {form.values.type === TaxAndFeeType.Tax && isPercentage && (
+                <Switch
+                    {...form.getInputProps('is_inclusive', {type: 'checkbox'})}
+                    label={t`Included in the price`}
+                    value={1}
+                    description={t`The tax is carved out of the ticket price and shown as "of which VAT". The price the buyer sees does not change. This is the Swedish standard.`}
+                />
+            )}
+
             <Switch
                 {...form.getInputProps('is_default', {type: 'checkbox'})}
                 label={t`Apply this ${type} to all new products`}

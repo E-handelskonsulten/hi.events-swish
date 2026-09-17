@@ -21,6 +21,7 @@ class TaxAndFeeResource extends BaseResource
             'calculation_type' => $this->getCalculationType(),
             'rate' => $this->getRate(),
             'fixed_amount' => $this->getFixedAmount(),
+            'is_inclusive' => $this->getIsInclusive(),
             'is_active' => $this->getIsActive(),
             'is_default' => $this->getIsDefault(),
             'type' => $this->getType(),

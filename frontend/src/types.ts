@@ -878,6 +878,7 @@ export interface Address {
 interface TaxOrFee {
     name: string;
     value: number;
+    inclusive?: boolean;
 }
 
 interface TaxesAndFeesRollup {
@@ -1253,6 +1254,7 @@ export interface TaxAndFee {
     name: string;
     rate: number | undefined;
     fixed_amount?: number | null;
+    is_inclusive?: boolean;
     type: TaxAndFeeType;
     calculation_type: TaxAndFeeCalculationType;
     is_default: boolean;

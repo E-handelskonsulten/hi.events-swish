@@ -24,6 +24,7 @@ export const EditTaxOrFeeModal = ({onClose, taxOrFee}: EditTaxOrFeeModalProps) =
             calculation_type: TaxAndFeeCalculationType.Percentage,
             rate: undefined,
             fixed_amount: undefined,
+            is_inclusive: true,
             description: undefined,
             is_default: true,
             is_active: true,

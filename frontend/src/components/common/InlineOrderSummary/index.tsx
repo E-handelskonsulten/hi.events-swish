@@ -40,7 +40,8 @@ export const InlineOrderSummary = ({
     const location = city || venueName || null;
 
     const totalFee = order.taxes_and_fees_rollup?.fees?.reduce((sum, fee) => sum + fee.value, 0) || 0;
-    const totalTax = order.taxes_and_fees_rollup?.taxes?.reduce((sum, tax) => sum + tax.value, 0) || 0;
+    const totalTax = order.taxes_and_fees_rollup?.taxes?.filter(tax => !tax.inclusive).reduce((sum, tax) => sum + tax.value, 0) || 0;
+    const inclusiveTaxes = order.taxes_and_fees_rollup?.taxes?.filter(tax => tax.inclusive && tax.value > 0) || [];
     const totalDiscount = order.order_items?.reduce((sum, item) => {
         if (item.total_before_discount && item.total_before_additions) {
             return sum + (item.total_before_discount - item.total_before_additions);
@@ -196,7 +197,7 @@ export const InlineOrderSummary = ({
                                             </Popover.Target>
                                             <Popover.Dropdown>
                                                 <div className={classes.breakdownList}>
-                                                    {order.taxes_and_fees_rollup.taxes.map((tax, index) => (
+                                                    {order.taxes_and_fees_rollup.taxes.filter(tax => !tax.inclusive).map((tax, index) => (
                                                         <div key={index} className={classes.breakdownItem}>
                                                             <span className={classes.breakdownName}>{tax.name}</span>
                                                             <span className={classes.breakdownValue}>
@@ -222,6 +223,12 @@ export const InlineOrderSummary = ({
                                 <span className={classes.totalsCurrency}>{order.currency}</span>
                             </span>
                         </div>
+                        {inclusiveTaxes.map((tax, index) => (
+                            <div key={`incl-${index}`} className={classes.totalsRow}>
+                                <span className={classes.totalsLabel}>{t`of which ${tax.name}`}</span>
+                                <span className={classes.totalsValue}>{formatCurrency(tax.value, order.currency)}</span>
+                            </div>
+                        ))}
                     </div>
 
                     {showBuyerProtection && order.is_payment_required && (

@@ -425,7 +425,7 @@
     @if($order->getHasTaxes())
         @foreach($order->getTaxesAndFeesRollup()['taxes'] as $tax)
             <tr class="breakdown">
-                <td>{{ $tax['name'] }} ({{ $tax['rate'] }}@if($tax['type'] === 'PERCENTAGE')
+                <td>@if(!empty($tax['inclusive'])){{ __('of which') }} @endif{{ $tax['name'] }} ({{ $tax['rate'] }}@if($tax['type'] === 'PERCENTAGE')
                         %
                     @else
                         {{ $order->getCurrency() }}

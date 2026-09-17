@@ -31,6 +31,10 @@ msgstr "'Det finns inget att visa ännu'"
 msgid "(empty)"
 msgstr "(tom)"
 
+#: src/utilites/taxAndFeeLabel.ts:10
+msgid "(included)"
+msgstr "(ingår)"
+
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:110
 msgid "(none)"
 msgstr "(inget)"
@@ -68,7 +72,7 @@ msgstr "{0} aktiva webhooks"
 msgid "{0} available"
 msgstr "{0} tillgängliga"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
 msgid "{0} created successfully"
 msgstr "{0} skapades"
 
@@ -110,7 +114,7 @@ msgstr "{0} mottagare"
 msgid "{0} tickets"
 msgstr "{0} biljetter"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
 msgid "{0} updated successfully"
 msgstr "{0} uppdaterades"
 
@@ -375,7 +379,7 @@ msgstr "en ändrad längd"
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Ett datumfält. Perfekt för att fråga efter födelsedatum osv."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:113
+#: src/components/forms/TaxAndFeeForm/index.tsx:122
 msgid "A default {type} is automaticaly applied to all new products. You can override this on a per product basis."
 msgstr "Ett standardvärde för {type} tillämpas automatiskt på alla nya produkter. Du kan åsidosätta detta per produkt."
 
@@ -1283,7 +1287,7 @@ msgstr "Använd"
 msgid "Apply Changes"
 msgstr "Tillämpa ändringar"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:111
+#: src/components/forms/TaxAndFeeForm/index.tsx:120
 msgid "Apply this {type} to all new products"
 msgstr "Tillämpa denna {type} på alla nya produkter"
 
@@ -3192,7 +3196,7 @@ msgstr "Omfattar alla biljetter"
 msgid "Create"
 msgstr "Skapa"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
 msgid "Create {0}"
 msgstr "Skapa {0}"
 
@@ -3355,7 +3359,7 @@ msgid "Create schedule"
 msgstr "Skapa schema"
 
 #: src/components/forms/ProductForm/index.tsx:501
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:54
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:55
 msgid "Create Tax or Fee"
 msgstr "Skapa skatt eller avgift"
 
@@ -4195,7 +4199,7 @@ msgid "Edit"
 msgstr "Redigera"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:522
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
 msgid "Edit {0}"
 msgstr "Redigera {0}"
 
@@ -5382,11 +5386,11 @@ msgstr "Februari"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:18
 #: src/components/forms/TaxAndFeeForm/index.tsx:48
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
 msgid "Fee"
 msgstr "Avgift"
 
@@ -5402,7 +5406,7 @@ msgstr "Hantering av avgifter"
 msgid "Fee override saved"
 msgstr "Avgiftsanpassning sparad"
 
-#: src/components/common/InlineOrderSummary/index.tsx:156
+#: src/components/common/InlineOrderSummary/index.tsx:157
 #: src/components/common/OrdersTable/index.tsx:271
 #: src/components/forms/ProductForm/index.tsx:490
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
@@ -6260,6 +6264,10 @@ msgstr "Inkludera anslutningsinformation för ditt onlineevenemang. Dessa uppgif
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:55
 msgid "Include tax and fees in the price"
 msgstr "Inkludera skatt och avgifter i priset"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:112
+msgid "Included in the price"
+msgstr "Ingår i priset"
 
 #: src/components/common/CheckInListList/index.tsx:101
 #: src/components/common/CheckInListTable/index.tsx:86
@@ -7878,6 +7886,11 @@ msgstr "av"
 msgid "of every month"
 msgstr "varje månad"
 
+#: src/components/common/InlineOrderSummary/index.tsx:228
+#: src/components/common/OrderSummary/index.tsx:117
+msgid "of which {0}"
+msgstr "varav {0}"
+
 #: src/components/forms/ProductForm/ledgerSummaries.ts:77
 #: src/components/forms/ProductForm/ledgerSummaries.ts:138
 msgid "Off"
@@ -8315,7 +8328,7 @@ msgstr "Orderstatus"
 msgid "Order statuses"
 msgstr "Orderstatusar"
 
-#: src/components/common/InlineOrderSummary/index.tsx:61
+#: src/components/common/InlineOrderSummary/index.tsx:62
 #: src/components/modals/ManageOrderModal/index.tsx:272
 msgid "Order Summary"
 msgstr "Ordersammanfattning"
@@ -10420,7 +10433,7 @@ msgstr "Sekundär färg"
 msgid "Secondary Text Color"
 msgstr "Sekundär textfärg"
 
-#: src/components/common/InlineOrderSummary/index.tsx:231
+#: src/components/common/InlineOrderSummary/index.tsx:238
 msgid "Secure Checkout"
 msgstr "Säker kassa"
 
@@ -11456,7 +11469,7 @@ msgstr "Ämnet visas här"
 msgid "Subject:"
 msgstr "Ämne:"
 
-#: src/components/common/InlineOrderSummary/index.tsx:148
+#: src/components/common/InlineOrderSummary/index.tsx:149
 #: src/components/common/OrderSummary/index.tsx:53
 msgid "Subtotal"
 msgstr "Delsumma"
@@ -11752,11 +11765,11 @@ msgstr "Riktar sig till deltagare på {0} valda tillfällen."
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:48
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:37
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:60
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:43
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:53
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:92
@@ -11793,7 +11806,7 @@ msgstr "Moms eller avgift togs bort"
 msgid "Tax Summary"
 msgstr "Momssammanfattning"
 
-#: src/components/common/InlineOrderSummary/index.tsx:189
+#: src/components/common/InlineOrderSummary/index.tsx:190
 #: src/components/forms/ProductForm/index.tsx:487
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:48
 msgid "Taxes"
@@ -12050,6 +12063,10 @@ msgstr "Swish-betalningen avbröts."
 #: src/components/routes/product-widget/Payment/PaymentMethods/Swish/index.tsx:167
 msgid "The Swish request could not be cancelled. Please try again."
 msgstr "Swish-förfrågan kunde inte avbrytas. Försök igen."
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:114
+msgid "The tax is carved out of the ticket price and shown as \"of which VAT\". The price the buyer sees does not change. This is the Swedish standard."
+msgstr "Momsen räknas ut ur biljettpriset och visas som \"varav moms\". Priset kunden ser ändras inte. Detta är svensk standard."
 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:155
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:186
@@ -12578,7 +12595,7 @@ msgstr "Biljetter och försäljning"
 msgid "tickets"
 msgstr "biljetter"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:134
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:135
 #: src/components/modals/SwishMassRefundModal/index.tsx:356
 #: src/components/routes/my-tickets/index.tsx:101
 #: src/components/routes/product-widget/OrderTickets/index.tsx:80
@@ -12606,7 +12623,7 @@ msgstr "Biljetterna hittades inte"
 msgid "Tickets Sold"
 msgstr "Sålda biljetter"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:60
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:61
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:52
 msgid "Tier {0}"
 msgstr "Nivå {0}"
@@ -12711,7 +12728,7 @@ msgid "Top Organizers (Last 14 Days)"
 msgstr "Topparrangörer (Senaste 14 dagarna)"
 
 #: src/components/common/AdminOrdersTable/index.tsx:81
-#: src/components/common/InlineOrderSummary/index.tsx:219
+#: src/components/common/InlineOrderSummary/index.tsx:220
 #: src/components/common/OrderSummary/index.tsx:104
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
@@ -13055,11 +13072,11 @@ msgstr "Till {end}"
 msgid "Until a date"
 msgstr "Till ett datum"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:105
 msgid "Untitled product"
 msgstr "Namnlös produkt"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:104
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:105
 msgid "Untitled ticket"
 msgstr "Namnlös biljett"
 
@@ -13091,7 +13108,7 @@ msgstr "Kommande evenemang"
 msgid "Upcoming Events"
 msgstr "Kommande evenemang"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:60
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
 msgid "Update {0}"
 msgstr "Uppdatera {0}"
 
@@ -14442,7 +14459,7 @@ msgstr "Ditt lösenord"
 msgid "Your payment is processing."
 msgstr "Din betalning behandlas."
 
-#: src/components/common/InlineOrderSummary/index.tsx:233
+#: src/components/common/InlineOrderSummary/index.tsx:240
 msgid "Your payment is protected with bank-level encryption"
 msgstr "Din betalning skyddas med banknivå-kryptering"
 
