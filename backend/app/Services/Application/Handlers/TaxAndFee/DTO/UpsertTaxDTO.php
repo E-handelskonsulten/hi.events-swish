@@ -20,5 +20,6 @@ class UpsertTaxDTO extends BaseDTO
         public readonly ?int $id = null,
         public readonly ?float $fixed_amount = null,
         public readonly bool $is_inclusive = false,
+        public readonly bool $inherits_ticket_vat = false,
     ) {}
 }

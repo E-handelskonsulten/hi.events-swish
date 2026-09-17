@@ -22,6 +22,7 @@ class TaxAndFeeResource extends BaseResource
             'rate' => $this->getRate(),
             'fixed_amount' => $this->getFixedAmount(),
             'is_inclusive' => $this->getIsInclusive(),
+            'inherits_ticket_vat' => $this->getInheritsTicketVat(),
             'is_active' => $this->getIsActive(),
             'is_default' => $this->getIsDefault(),
             'type' => $this->getType(),

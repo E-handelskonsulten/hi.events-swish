@@ -115,6 +115,15 @@ export const TaxAndFeeForm = ({form}: { form: UseFormReturnType<TaxAndFee> }) =>
                 />
             )}
 
+            {form.values.type === TaxAndFeeType.Fee && (
+                <Switch
+                    {...form.getInputProps('inherits_ticket_vat', {type: 'checkbox'})}
+                    label={t`VAT follows the ticket's VAT rate`}
+                    value={1}
+                    description={t`The fee carries the same VAT rate as the ticket it is charged on, as part of the fee price (an 8 kr fee on a 6 % ticket contains 0,45 kr VAT). Applies to orders placed after you enable it.`}
+                />
+            )}
+
             <Switch
                 {...form.getInputProps('is_default', {type: 'checkbox'})}
                 label={t`Apply this ${type} to all new products`}

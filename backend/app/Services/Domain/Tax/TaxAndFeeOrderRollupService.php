@@ -26,9 +26,11 @@ class TaxAndFeeOrderRollupService
                             'fixed_amount' => $taxOrFee['fixed_amount'] ?? null,
                             'type' => $taxOrFee['type'],
                             'inclusive' => ! empty($taxOrFee['inclusive']),
+                            'fee_value' => (float) ($taxOrFee['fee_value'] ?? 0),
                         ];
                     } else {
                         $orderRollup[$type][$foundIndex]['value'] += $taxOrFee['value'];
+                        $orderRollup[$type][$foundIndex]['fee_value'] = ($orderRollup[$type][$foundIndex]['fee_value'] ?? 0) + (float) ($taxOrFee['fee_value'] ?? 0);
                     }
                 }
             }

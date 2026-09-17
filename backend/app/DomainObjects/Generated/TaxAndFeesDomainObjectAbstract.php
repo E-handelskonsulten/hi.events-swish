@@ -24,6 +24,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const TYPE = 'type';
     final public const FIXED_AMOUNT = 'fixed_amount';
     final public const IS_INCLUSIVE = 'is_inclusive';
+    final public const INHERITS_TICKET_VAT = 'inherits_ticket_vat';
 
     protected int $id;
     protected string $name;
@@ -39,6 +40,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected string $type;
     protected ?float $fixed_amount = null;
     protected bool $is_inclusive = false;
+    protected bool $inherits_ticket_vat = false;
 
     public function toArray(): array
     {
@@ -57,6 +59,7 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'type' => $this->type ?? null,
                     'fixed_amount' => $this->fixed_amount ?? null,
                     'is_inclusive' => $this->is_inclusive ?? null,
+                    'inherits_ticket_vat' => $this->inherits_ticket_vat ?? null,
                 ];
     }
 
@@ -212,5 +215,16 @@ abstract class TaxAndFeesDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getIsInclusive(): bool
     {
         return $this->is_inclusive;
+    }
+
+    public function setInheritsTicketVat(bool $inherits_ticket_vat): self
+    {
+        $this->inherits_ticket_vat = $inherits_ticket_vat;
+        return $this;
+    }
+
+    public function getInheritsTicketVat(): bool
+    {
+        return $this->inherits_ticket_vat;
     }
 }

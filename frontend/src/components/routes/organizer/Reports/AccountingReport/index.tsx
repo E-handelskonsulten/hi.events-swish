@@ -97,6 +97,8 @@ const AccountingReport = () => {
         <>
             <Callout variant="info" title={t`How to read this report`} style={{marginBottom: 24}}>
                 {t`One line per day, event and payment method. Sales are positive and refunds are separate negative lines, so the sum of the Gross column equals the amount settled to your bank account before payment provider fees. VAT is split by Swedish rate; service fees are included in Gross.`}
+                {' '}
+                {t`Service fee VAT is included in the rate columns for orders placed after "VAT follows the ticket's VAT rate" was enabled on the fee; earlier orders carry no fee VAT.`}
             </Callout>
 
             <OrganizerReportTable<AccountingReportRow>

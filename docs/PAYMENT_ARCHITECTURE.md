@@ -382,3 +382,16 @@ Rules:
 - **When to start the tunnel:** it is *not* needed for the automated test suites (Swish HTTP is mocked). Start it right before the first manual `POST …/swish/payment` in the Phase A verification — MSS fires the callback a few seconds after creation, so the tunnel must already be up. Order of operations: `start-dev.sh` (stack + queue worker + scheduler) → migrations → start ngrok → create order → create Swish payment → watch `docker compose … logs -f backend` / `queue:work` output.
 - **Real-device m-commerce test (Phase B):** the phone must reach the frontend through the same tunnel, so additionally set `APP_FRONTEND_URL`, `VITE_FRONTEND_URL` and `VITE_API_URL_CLIENT` to the ngrok domain and restart the `frontend` container. Expect ngrok's free-tier browser interstitial once per device; API callbacks from Swish are not affected by it.
 - MSS callback source: Swish's test environment calls back over HTTPS from Swish-owned IPs; our endpoint does not rely on the callback's authenticity (it re-fetches status over mTLS before acting), so no IP allow-listing is needed for the tunnel.
+
+
+## VAT on tickets and service fees (Swedish model)
+
+- A tax marked `is_inclusive` (admin: "Ingår i priset") is carved out of the ticket price and reported as
+  "varav moms"; it never changes what the buyer pays.
+- A fee marked `inherits_ticket_vat` (admin: "Moms följer biljettens momssats", on by default for new fees)
+  carries the VAT rate of the ticket line it is charged on, included in the fee price and rounded per
+  ticket. Mixed orders get each line's own rate; nothing is averaged. The amount lands in the tax
+  rollup as `fee_value` inside the ticket's VAT entry, so the accounting report's rate columns and the
+  order "Moms" figure include it and refunds carry it proportionally.
+- Both flags apply from the moment they are enabled: orders placed earlier keep the VAT they were
+  recorded with. Which rate applies to which event is the organizer's decision.

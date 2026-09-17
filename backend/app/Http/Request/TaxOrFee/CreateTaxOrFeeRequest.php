@@ -25,6 +25,7 @@ class CreateTaxOrFeeRequest extends BaseRequest
             ],
             'is_active' => 'required|boolean',
             'is_inclusive' => 'sometimes|boolean',
+            'inherits_ticket_vat' => 'sometimes|boolean',
             'is_default' => 'required|boolean',
             'description' => 'nullable|string',
         ];

@@ -95,6 +95,54 @@ class TaxAndFeeCalculationServiceTest extends TestCase
         $this->assertSame(80.0, $rolledVat['value']);
     }
 
+    #[DataProvider('inheritedFeeVatProvider')]
+    public function test_a_fee_inherits_the_tickets_included_vat_rate(float $rate, float $ticketVat, float $feeVat): void
+    {
+        $vat = (new TaxAndFeesDomainObject)
+            ->setName('Moms')
+            ->setType(TaxType::TAX->name)
+            ->setCalculationType(TaxCalculationType::PERCENTAGE->name)
+            ->setRate($rate)
+            ->setIsInclusive(true);
+        $fee = $this->serviceFee()->setInheritsTicketVat(true);
+
+        // 200 kr ticket, fee 4 + 1 % = 6,00 kr, two tickets.
+        $result = $this->service()->calculateTaxAndFeesForProduct($this->product([$fee, $vat]), 200.00, 2);
+
+        $this->assertSame(12.0, $result->feeTotal);
+        $this->assertSame(0.0, $result->taxTotal);
+        $this->assertSame(round(($ticketVat + $feeVat) * 2, 2), round($result->inclusiveTaxTotal, 2));
+
+        $moms = collect($result->rollUp['taxes'])->firstWhere('name', 'Moms');
+        $this->assertTrue($moms['inclusive']);
+        $this->assertSame(round(($ticketVat + $feeVat) * 2, 2), round($moms['value'], 2));
+        $this->assertSame(round($feeVat * 2, 2), round($moms['fee_value'], 2));
+    }
+
+    public static function inheritedFeeVatProvider(): array
+    {
+        return [
+            '6 % (concert rate)' => [6.0, 11.32, 0.34],
+            '25 % (club entry)' => [25.0, 40.00, 1.20],
+        ];
+    }
+
+    public function test_a_fee_that_does_not_inherit_carries_no_vat(): void
+    {
+        $vat = (new TaxAndFeesDomainObject)
+            ->setName('Moms')
+            ->setType(TaxType::TAX->name)
+            ->setCalculationType(TaxCalculationType::PERCENTAGE->name)
+            ->setRate(6)
+            ->setIsInclusive(true);
+
+        $result = $this->service()->calculateTaxAndFeesForProduct($this->product([$this->serviceFee(), $vat]), 200.00, 2);
+
+        $moms = collect($result->rollUp['taxes'])->firstWhere('name', 'Moms');
+        $this->assertSame(22.64, round($moms['value'], 2));
+        $this->assertSame(0.0, round($moms['fee_value'], 2));
+    }
+
     public function test_a_free_ticket_carries_no_combined_fee(): void
     {
         $result = $this->service()->calculateTaxAndFeesForProduct($this->product([$this->serviceFee()]), 0.00);

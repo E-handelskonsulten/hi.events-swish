@@ -1255,6 +1255,7 @@ export interface TaxAndFee {
     rate: number | undefined;
     fixed_amount?: number | null;
     is_inclusive?: boolean;
+    inherits_ticket_vat?: boolean;
     type: TaxAndFeeType;
     calculation_type: TaxAndFeeCalculationType;
     is_default: boolean;

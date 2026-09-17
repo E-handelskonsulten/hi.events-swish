@@ -32,8 +32,17 @@ class TaxAndFeeCalculationService
     ): TaxCalculationResponse {
         $this->taxRollupService->resetRollUp();
 
-        $fees = $product->getFees()
-            ?->sum(fn ($taxOrFee) => $this->calculateFee($taxOrFee, $price, $quantity)) ?: 0.00;
+        $fees = 0.00;
+        $feesInheritingVat = 0.00;
+
+        foreach ($product->getFees() ?? collect() as $fee) {
+            $amount = $this->calculateFee($fee, $price, $quantity);
+            $fees += $amount;
+
+            if ($fee->getInheritsTicketVat()) {
+                $feesInheritingVat += $amount;
+            }
+        }
 
         $taxRates = $product->getTaxRates() ?? collect();
 
@@ -45,7 +54,8 @@ class TaxAndFeeCalculationService
         // reporting only; they never change what the buyer pays.
         $inclusiveTaxes = $taxRates
             ->filter(fn (TaxAndFeesDomainObject $tax) => $tax->getIsInclusive())
-            ->sum(fn (TaxAndFeesDomainObject $tax) => $this->calculateInclusiveTax($tax, $price, $quantity));
+            ->sum(fn (TaxAndFeesDomainObject $tax) => $this->calculateInclusiveTax($tax, $price, $quantity)
+                + $this->calculateInheritedFeeVat($tax, $feesInheritingVat, $quantity));
 
         return new TaxCalculationResponse(
             feeTotal: $fees ? ($fees * $quantity) : 0.00,
@@ -66,6 +76,24 @@ class TaxAndFeeCalculationService
         $amount = round($price - $price / (1 + $tax->getRate() / 100), 2);
 
         $this->taxRollupService->addToRollUp($tax, $amount * $quantity, inclusive: true);
+
+        return $amount;
+    }
+
+    /**
+     * Swedish rule: a service fee is subordinate to the ticket and carries the
+     * ticket's VAT rate. The fee price stays what the buyer sees; the VAT is the
+     * portion inside it (8,00 kr at 6 % contains 0,45 kr), rounded per ticket.
+     */
+    private function calculateInheritedFeeVat(TaxAndFeesDomainObject $tax, float $feePerUnit, int $quantity): float
+    {
+        if ($feePerUnit <= 0.00 || $tax->getCalculationType() !== TaxCalculationType::PERCENTAGE->name) {
+            return 0.00;
+        }
+
+        $amount = round($feePerUnit - $feePerUnit / (1 + $tax->getRate() / 100), 2);
+
+        $this->taxRollupService->addToRollUp($tax, $amount * $quantity, inclusive: true, feePortion: true);
 
         return $amount;
     }

@@ -24,6 +24,7 @@ export const CreateTaxOrFeeModal = ({ onClose, onCreated }: CreateTaxOrFeeModalP
             rate: undefined,
             fixed_amount: undefined,
             is_inclusive: true,
+            inherits_ticket_vat: true,
             description: '',
             is_default: true,
             is_active: true,

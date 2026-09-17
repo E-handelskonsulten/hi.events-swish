@@ -49,7 +49,7 @@ class TaxAndFeeRollupService
         return $this->getTotalTaxes() + $this->getTotalFees();
     }
 
-    public function addToRollUp(TaxAndFeesDomainObject $taxOrFee, float $amount, bool $inclusive = false): void
+    public function addToRollUp(TaxAndFeesDomainObject $taxOrFee, float $amount, bool $inclusive = false, bool $feePortion = false): void
     {
         $type = strtolower(Str::plural($taxOrFee->getType()));
         $name = $taxOrFee->getName();
@@ -65,9 +65,13 @@ class TaxAndFeeRollupService
                 'type' => $taxOrFee->getCalculationType(),
                 'value' => $amount,
                 'inclusive' => $inclusive,
+                'fee_value' => $feePortion ? $amount : 0.0,
             ];
         } else {
             $this->rollUp[$type][$foundIndex]['value'] += $amount;
+            if ($feePortion) {
+                $this->rollUp[$type][$foundIndex]['fee_value'] = ($this->rollUp[$type][$foundIndex]['fee_value'] ?? 0.0) + $amount;
+            }
         }
     }
 }

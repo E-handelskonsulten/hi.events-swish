@@ -11,6 +11,7 @@ use HiEvents\Services\Domain\Billing\DTO\OrganizerBillingLineDTO;
 use HiEvents\Services\Domain\Billing\MonthlyBillingSummaryService;
 use HiEvents\Services\Domain\Report\OrganizerReports\AccountingReport;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Tests\Feature\Services\Domain\Payment\Swish\SwishFeatureTestCase;
 
@@ -211,6 +212,64 @@ class CombinedServiceFeeOrderTest extends SwishFeatureTestCase
         $this->assertSame(110.0, (float) $sale->vat_25_amount);
         $this->assertSame(110.0, (float) $sale->vat_total_amount);
         $this->assertSame(457.5, (float) $sale->net_amount);
+    }
+
+    public function test_fee_vat_follows_each_tickets_rate_in_a_mixed_order_and_through_a_refund(): void
+    {
+        $this->createServiceFee();
+        DB::table('taxes_and_fees')->where('name', 'Serviceavgift')->update(['inherits_ticket_vat' => true]);
+
+        $vat6 = DB::table('taxes_and_fees')->insertGetId(['account_id' => $this->accountId, 'name' => 'Moms 6', 'type' => 'TAX', 'calculation_type' => 'PERCENTAGE', 'rate' => 6, 'is_inclusive' => true, 'is_active' => true, 'is_default' => false, 'created_at' => now(), 'updated_at' => now()]);
+        $vat25 = DB::table('taxes_and_fees')->insertGetId(['account_id' => $this->accountId, 'name' => 'Moms 25', 'type' => 'TAX', 'calculation_type' => 'PERCENTAGE', 'rate' => 25, 'is_inclusive' => true, 'is_active' => true, 'is_default' => false, 'created_at' => now(), 'updated_at' => now()]);
+        DB::table('product_taxes_and_fees')->insert([
+            ['product_id' => $this->productId, 'tax_and_fee_id' => $vat6],
+            ['product_id' => $this->expensiveProductId, 'tax_and_fee_id' => $vat25],
+        ]);
+
+        $order = $this->createOrder();
+        $orderId = $this->payOrder($order);
+        $row = $this->orderRow($orderId);
+        $this->assertSame('567.50', $row->total_gross);
+
+        // 2 x 100 kr @ 6 %: ticket VAT 5,66 each, fee 5,00 contains 0,28 each -> 11,88.
+        // 1 x 350 kr @ 25 %: ticket VAT 70,00, fee 7,50 contains 1,50 -> 71,50.
+        $rollup = collect(json_decode($row->taxes_and_fees_rollup, true)['taxes'])->keyBy('name');
+        $this->assertSame(11.88, round($rollup['Moms 6']['value'], 2));
+        $this->assertSame(0.56, round($rollup['Moms 6']['fee_value'], 2));
+        $this->assertSame(71.5, round($rollup['Moms 25']['value'], 2));
+        $this->assertSame(1.5, round($rollup['Moms 25']['fee_value'], 2));
+
+        $report = app(AccountingReport::class)->generateReport(
+            organizerId: $this->organizerId,
+            currency: 'SEK',
+            startDate: Carbon::now()->subDay(),
+            endDate: Carbon::now()->addDay(),
+        );
+        $sale = $report->firstWhere('line_type', AccountingReport::LINE_TYPE_SALE);
+        $this->assertSame(11.88, (float) $sale->vat_6_amount);
+        $this->assertSame(71.5, (float) $sale->vat_25_amount);
+        $this->assertSame(83.38, (float) $sale->vat_total_amount);
+        $this->assertSame(484.12, (float) $sale->net_amount);
+
+        // A 100 kr refund carries its share of the VAT per rate.
+        $this->queueSwishResponse(201, ['Location' => 'https://swish.test/swish-cpcapi/api/v1/refunds/Y']);
+        $this->postJson("/events/{$this->eventId}/orders/{$orderId}/refund", ['amount' => 100, 'notify_buyer' => false, 'cancel_order' => false], $this->authHeaders())->assertOk();
+        $refund = DB::table('swish_refunds')->where('order_id', $orderId)->first();
+        $paid = $this->refundPayload($refund->instruction_uuid, $orderId, '100.00');
+        $this->queueSwishJson($paid);
+        $this->postJson('/public/webhooks/swish/refunds', $paid)->assertOk();
+        Cache::flush(); // the report is cached for 30 s
+
+        $report = app(AccountingReport::class)->generateReport(
+            organizerId: $this->organizerId,
+            currency: 'SEK',
+            startDate: Carbon::now()->subDay(),
+            endDate: Carbon::now()->addDay(),
+        );
+        $refundLine = $report->firstWhere('line_type', AccountingReport::LINE_TYPE_REFUND);
+        $this->assertSame(-100.0, (float) $refundLine->gross_amount);
+        $this->assertSame(round(-100 * 11.88 / 567.5, 2), (float) $refundLine->vat_6_amount);
+        $this->assertSame(round(-100 * 71.5 / 567.5, 2), (float) $refundLine->vat_25_amount);
     }
 
     private function feePayload(): array

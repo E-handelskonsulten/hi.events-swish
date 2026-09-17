@@ -25,6 +25,7 @@ export const EditTaxOrFeeModal = ({onClose, taxOrFee}: EditTaxOrFeeModalProps) =
             rate: undefined,
             fixed_amount: undefined,
             is_inclusive: true,
+            inherits_ticket_vat: true,
             description: undefined,
             is_default: true,
             is_active: true,

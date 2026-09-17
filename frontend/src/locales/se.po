@@ -72,7 +72,7 @@ msgstr "{0} aktiva webhooks"
 msgid "{0} available"
 msgstr "{0} tillgängliga"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:39
 msgid "{0} created successfully"
 msgstr "{0} skapades"
 
@@ -114,7 +114,7 @@ msgstr "{0} mottagare"
 msgid "{0} tickets"
 msgstr "{0} biljetter"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:45
 msgid "{0} updated successfully"
 msgstr "{0} uppdaterades"
 
@@ -379,7 +379,7 @@ msgstr "en ändrad längd"
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Ett datumfält. Perfekt för att fråga efter födelsedatum osv."
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:122
+#: src/components/forms/TaxAndFeeForm/index.tsx:131
 msgid "A default {type} is automaticaly applied to all new products. You can override this on a per product basis."
 msgstr "Ett standardvärde för {type} tillämpas automatiskt på alla nya produkter. Du kan åsidosätta detta per produkt."
 
@@ -598,7 +598,7 @@ msgstr "Kontot uppdaterades"
 msgid "Account verification revoked"
 msgstr "Kontoverifiering återkallad"
 
-#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:103
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:105
 #: src/components/routes/organizer/Reports/index.tsx:50
 msgid "Accounting Report"
 msgstr "Bokföringsrapport"
@@ -1287,7 +1287,7 @@ msgstr "Använd"
 msgid "Apply Changes"
 msgstr "Tillämpa ändringar"
 
-#: src/components/forms/TaxAndFeeForm/index.tsx:120
+#: src/components/forms/TaxAndFeeForm/index.tsx:129
 msgid "Apply this {type} to all new products"
 msgstr "Tillämpa denna {type} på alla nya produkter"
 
@@ -3196,7 +3196,7 @@ msgstr "Omfattar alla biljetter"
 msgid "Create"
 msgstr "Skapa"
 
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:62
 msgid "Create {0}"
 msgstr "Skapa {0}"
 
@@ -3359,7 +3359,7 @@ msgid "Create schedule"
 msgstr "Skapa schema"
 
 #: src/components/forms/ProductForm/index.tsx:501
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:55
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:56
 msgid "Create Tax or Fee"
 msgstr "Skapa skatt eller avgift"
 
@@ -4199,7 +4199,7 @@ msgid "Edit"
 msgstr "Redigera"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:522
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:55
 msgid "Edit {0}"
 msgstr "Redigera {0}"
 
@@ -5386,11 +5386,11 @@ msgstr "Februari"
 
 #: src/components/forms/TaxAndFeeForm/index.tsx:18
 #: src/components/forms/TaxAndFeeForm/index.tsx:48
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:39
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:62
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:45
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:55
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:62
 msgid "Fee"
 msgstr "Avgift"
 
@@ -10777,6 +10777,10 @@ msgstr "September"
 msgid "Service Fee"
 msgstr "Serviceavgift"
 
+#: src/components/routes/organizer/Reports/AccountingReport/index.tsx:101
+msgid "Service fee VAT is included in the rate columns for orders placed after \"VAT follows the ticket's VAT rate\" was enabled on the fee; earlier orders carry no fee VAT."
+msgstr "Moms på serviceavgifter ingår i momskolumnerna för ordrar som lagts efter att \"Moms följer biljettens momssats\" slogs på för avgiften; tidigare ordrar har ingen moms på avgiften."
+
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:41
 #: src/components/routes/organizer/Reports/AccountingReport/index.tsx:87
 msgid "Service Fees"
@@ -11766,11 +11770,11 @@ msgstr "Riktar sig till deltagare på {0} valda tillfällen."
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:48
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:38
-#: src/components/modals/CreateTaxOrFeeModal/index.tsx:61
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:44
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:54
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:39
+#: src/components/modals/CreateTaxOrFeeModal/index.tsx:62
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:45
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:55
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:62
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
 #: src/components/routes/event/Reports/ProductSalesReport/index.tsx:35
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:92
@@ -11966,6 +11970,10 @@ msgstr "Evenemangssidan visar bara biljettpriset. Avgifter och moms visas som eg
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "Evenemanget du letar efter är inte tillgängligt just nu. Det kan ha tagits bort, löpt ut eller så kan webbadressen vara felaktig."
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:123
+msgid "The fee carries the same VAT rate as the ticket it is charged on, as part of the fee price (an 8 kr fee on a 6 % ticket contains 0,45 kr VAT). Applies to orders placed after you enable it."
+msgstr "Avgiften får samma momssats som biljetten den tas ut på, som en del av avgiftens pris (en avgift på 8 kr på en 6 %-biljett innehåller 0,45 kr moms). Gäller ordrar som läggs efter att du slagit på det."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -13109,7 +13117,7 @@ msgstr "Kommande evenemang"
 msgid "Upcoming Events"
 msgstr "Kommande evenemang"
 
-#: src/components/modals/EditTaxOrFeeModal/index.tsx:61
+#: src/components/modals/EditTaxOrFeeModal/index.tsx:62
 msgid "Update {0}"
 msgstr "Uppdatera {0}"
 
@@ -13344,6 +13352,10 @@ msgstr "Moms 6 %"
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:195
 msgid "VAT country code"
 msgstr "Momslandskod"
+
+#: src/components/forms/TaxAndFeeForm/index.tsx:121
+msgid "VAT follows the ticket's VAT rate"
+msgstr "Moms följer biljettens momssats"
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:173
 msgid "VAT number"
