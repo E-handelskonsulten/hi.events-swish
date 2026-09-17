@@ -12,6 +12,34 @@ import {InsertImageControl} from "./Controls/InsertImageControl";
 import {ImageResize} from "./Extensions/ImageResizeExtension";
 import {Extension} from '@tiptap/core';
 
+/**
+ * Pasted rich text (Word, Google Docs, web pages) carries hard-coded text and
+ * background colours that override the event page theme, so light text on a
+ * dark theme or vice versa becomes unreadable. Drop those on paste; a colour
+ * chosen with the toolbar picker afterwards is still kept.
+ */
+export const stripPastedColors = (html: string): string => {
+    if (typeof DOMParser === 'undefined') {
+        return html;
+    }
+
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+
+    doc.body.querySelectorAll<HTMLElement>('[style]').forEach((element) => {
+        element.style.removeProperty('color');
+        element.style.removeProperty('background-color');
+        element.style.removeProperty('background');
+
+        if (!element.getAttribute('style')?.trim()) {
+            element.removeAttribute('style');
+        }
+    });
+
+    doc.body.querySelectorAll('font[color]').forEach((element) => element.removeAttribute('color'));
+
+    return doc.body.innerHTML;
+};
+
 export interface EditorProps {
     onChange: (value: string) => void;
     value: string;
@@ -65,6 +93,9 @@ export const Editor = ({
             Color,
             ...additionalExtensions
         ],
+        editorProps: {
+            transformPastedHTML: stripPastedColors,
+        },
         onUpdate: ({editor}) => {
             const html = editor.getHTML();
             const htmlLength = html.length;
