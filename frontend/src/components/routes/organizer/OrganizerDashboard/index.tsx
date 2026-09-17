@@ -296,9 +296,9 @@ export const OrganizerDashboard = () => {
                     isLoading={isStatsLoading || isPreviousLoading}
                 />
                 <KpiCell
-                    label={t`Total fees`}
-                    value={stats ? formatCurrency(stats.total_fees, selectedCurrency) : ''}
-                    delta={computeDelta(stats?.total_fees, previousStats?.total_fees)}
+                    label={t`Refunded`}
+                    value={stats ? formatCurrency(stats.total_refunded, selectedCurrency) : ''}
+                    delta={computeDelta(stats?.total_refunded, previousStats?.total_refunded)}
                     isLoading={isStatsLoading || isPreviousLoading}
                 />
             </KpiGrid>

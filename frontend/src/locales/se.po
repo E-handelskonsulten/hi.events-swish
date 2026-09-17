@@ -9731,6 +9731,7 @@ msgstr "Återbetalningsbara ordrar"
 #: src/components/modals/SwishMassRefundModal/index.tsx:95
 #: src/components/modals/SwishMassRefundModal/index.tsx:202
 #: src/components/routes/event/orders.tsx:35
+#: src/components/routes/organizer/OrganizerDashboard/index.tsx:299
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:428
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
 msgid "Refunded"
@@ -12767,8 +12768,8 @@ msgid "Total Fee"
 msgstr "Total avgift"
 
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:299
-msgid "Total fees"
-msgstr "Totala avgifter"
+#~ msgid "Total fees"
+#~ msgstr "Totala avgifter"
 
 #: src/components/common/StatsCharts/index.tsx:78
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:97
