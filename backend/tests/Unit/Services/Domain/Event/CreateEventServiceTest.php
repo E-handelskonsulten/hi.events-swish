@@ -19,6 +19,8 @@ use HiEvents\Repository\Interfaces\ImageRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerRepositoryInterface;
 use HiEvents\Services\Domain\Event\CreateEventService;
 use HiEvents\Services\Infrastructure\HtmlPurifier\HtmlPurifierService;
+use HiEvents\Services\Infrastructure\Stripe\StripeConfigurationService;
+use HiEvents\Services\Infrastructure\Swish\SwishConfigurationService;
 use Illuminate\Config\Repository;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Filesystem\FilesystemManager;
@@ -51,6 +53,10 @@ class CreateEventServiceTest extends TestCase
 
     private CheckInListRepositoryInterface $checkInListRepository;
 
+    private SwishConfigurationService $swishConfiguration;
+
+    private StripeConfigurationService $stripeConfiguration;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -66,6 +72,10 @@ class CreateEventServiceTest extends TestCase
         $this->filesystemManager = Mockery::mock(FilesystemManager::class);
         $this->occurrenceRepository = Mockery::mock(EventOccurrenceRepositoryInterface::class);
         $this->checkInListRepository = Mockery::mock(CheckInListRepositoryInterface::class);
+        $this->swishConfiguration = Mockery::mock(SwishConfigurationService::class);
+        $this->stripeConfiguration = Mockery::mock(StripeConfigurationService::class);
+        $this->swishConfiguration->shouldReceive('isEnabledForOrganizer')->andReturn(false)->byDefault();
+        $this->stripeConfiguration->shouldReceive('getSecretKey')->andReturn('sk_test')->byDefault();
 
         $this->createEventService = new CreateEventService(
             $this->eventRepository,
@@ -79,6 +89,8 @@ class CreateEventServiceTest extends TestCase
             $this->filesystemManager,
             $this->occurrenceRepository,
             $this->checkInListRepository,
+            $this->swishConfiguration,
+            $this->stripeConfiguration,
         );
     }
 

@@ -24,6 +24,8 @@ use HiEvents\Repository\Interfaces\EventStatisticRepositoryInterface;
 use HiEvents\Repository\Interfaces\ImageRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrganizerRepositoryInterface;
 use HiEvents\Services\Infrastructure\HtmlPurifier\HtmlPurifierService;
+use HiEvents\Services\Infrastructure\Stripe\StripeConfigurationService;
+use HiEvents\Services\Infrastructure\Swish\SwishConfigurationService;
 use Illuminate\Config\Repository;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Filesystem\FilesystemManager;
@@ -43,6 +45,8 @@ class CreateEventService
         private readonly FilesystemManager $filesystemManager,
         private readonly EventOccurrenceRepositoryInterface $occurrenceRepository,
         private readonly CheckInListRepositoryInterface $checkInListRepository,
+        private readonly SwishConfigurationService $swishConfiguration,
+        private readonly StripeConfigurationService $stripeConfiguration,
     ) {}
 
     /**
@@ -243,7 +247,7 @@ class CreateEventService
             'get_tickets_button_text' => $terminology->defaultGetTicketsButtonText(),
             'support_email' => $organizer->getEmail(),
 
-            'payment_providers' => [PaymentProviders::STRIPE->value],
+            'payment_providers' => $this->defaultPaymentProviders((int) $event->getOrganizerId()),
             'offline_payment_instructions' => null,
 
             'enable_invoicing' => false,
@@ -269,5 +273,22 @@ class CreateEventService
             'waitlist_auto_process' => true,
             'waitlist_offer_timeout_minutes' => 120,
         ]);
+    }
+
+    /**
+     * Upstream always starts a new event on Stripe. On an installation where
+     * Swish is the configured gateway and Stripe is not, that sends the first
+     * checkout straight into a 500 from the Stripe client, so prefer Swish.
+     *
+     * @return string[]
+     */
+    private function defaultPaymentProviders(int $organizerId): array
+    {
+        if ($this->swishConfiguration->isEnabledForOrganizer($organizerId)
+            && empty($this->stripeConfiguration->getSecretKey())) {
+            return [PaymentProviders::SWISH->value];
+        }
+
+        return [PaymentProviders::STRIPE->value];
     }
 }
