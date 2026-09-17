@@ -24,7 +24,8 @@ class AdminOrderResource extends BaseResource
             'last_name' => $this->getLastName(),
             'email' => $this->getEmail(),
             'total_gross' => $this->getTotalGross(),
-            'total_tax' => $this->getTotalTax(),
+            // Added tax plus VAT included in the price: what the back office calls "Moms".
+            'total_tax' => $this->getReportedTax(),
             'total_fee' => $this->getTotalFee(),
             'currency' => $this->getCurrency(),
             'status' => $this->getStatus(),

@@ -21,7 +21,8 @@ class OrderResource extends BaseResource
             'short_id' => $this->getShortId(),
             'total_before_additions' => $this->getTotalBeforeAdditions(),
             'total_gross' => $this->getTotalGross(),
-            'total_tax' => $this->getTotalTax(),
+            // Added tax plus VAT included in the price: what the back office calls "Moms".
+            'total_tax' => $this->getReportedTax(),
             'total_fee' => $this->getTotalFee(),
             'total_refunded' => $this->getTotalRefunded(),
             /** @var 'RESERVED'|'CANCELLED'|'COMPLETED'|'AWAITING_OFFLINE_PAYMENT'|'ABANDONED' */
