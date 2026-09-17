@@ -101,7 +101,7 @@ class OrdersExport implements FromCollection, WithHeadings, WithMapping, WithSty
             $order->getEmail(),
             $order->getTotalBeforeAdditions(),
             $order->getTotalGross(),
-            $order->getTotalTax(),
+            $order->getReportedTax(),
             $order->getTotalFee(),
             $order->getTotalRefunded(),
             $order->getStatus(),

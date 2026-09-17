@@ -208,7 +208,30 @@ class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements I
 
     public function getHasTaxes(): bool
     {
-        return $this->getTotalTax() > 0;
+        return $this->getReportedTax() > 0;
+    }
+
+    /**
+     * VAT that sits inside the price (Swedish "varav moms"): reported, never added.
+     */
+    public function getInclusiveTax(): float
+    {
+        $rollup = $this->getTaxesAndFeesRollup();
+        if (is_string($rollup)) {
+            $rollup = json_decode($rollup, true) ?: [];
+        }
+
+        return (float) collect($rollup['taxes'] ?? [])
+            ->filter(fn (array $tax) => ! empty($tax['inclusive']))
+            ->sum('value');
+    }
+
+    /**
+     * Tax to show in statistics, exports and reports: added tax plus inclusive VAT.
+     */
+    public function getReportedTax(): float
+    {
+        return (float) $this->getTotalTax() + $this->getInclusiveTax();
     }
 
     public function getHasFees(): bool

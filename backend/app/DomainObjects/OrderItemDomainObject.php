@@ -66,4 +66,21 @@ class OrderItemDomainObject extends Generated\OrderItemDomainObjectAbstract
 
         return $this;
     }
+
+    public function getInclusiveTax(): float
+    {
+        $rollup = $this->getTaxesAndFeesRollup();
+        if (is_string($rollup)) {
+            $rollup = json_decode($rollup, true) ?: [];
+        }
+
+        return (float) collect($rollup['taxes'] ?? [])
+            ->filter(fn (array $tax) => ! empty($tax['inclusive']))
+            ->sum('value');
+    }
+
+    public function getReportedTax(): float
+    {
+        return (float) ($this->getTotalTax() ?? 0) + $this->getInclusiveTax();
+    }
 }

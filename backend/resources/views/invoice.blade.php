@@ -435,7 +435,7 @@
         @endforeach
         <tr class="subtotal">
             <td>{{ __('Total Tax') }}</td>
-            <td>{{ Currency::format($order->getTotalTax(), $order->getCurrency()) }}</td>
+            <td>{{ Currency::format($order->getReportedTax(), $order->getCurrency()) }}</td>
         </tr>
     @endif
 

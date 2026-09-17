@@ -190,6 +190,10 @@ class CombinedServiceFeeOrderTest extends SwishFeatureTestCase
         $this->assertTrue($vatLine['inclusive']);
         $this->assertSame(110.0, round((float) $vatLine['value'], 2));
 
+        // Dashboards and exports still see the VAT even though it was never added on top.
+        $this->assertSame(110.0, (float) DB::table('event_statistics')->where('event_id', $this->eventId)->value('total_tax'));
+        $this->assertSame(110.0, (float) DB::table('event_daily_statistics')->where('event_id', $this->eventId)->sum('total_tax'));
+
         $report = app(AccountingReport::class)->generateReport(
             organizerId: $this->organizerId,
             currency: 'SEK',

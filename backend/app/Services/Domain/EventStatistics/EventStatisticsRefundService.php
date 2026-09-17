@@ -72,7 +72,7 @@ class EventStatisticsRefundService
         $refundProportion = $refundAmount->toFloat() / $order->getTotalGross();
 
         // Adjust the total_tax and total_fee based on the refund proportion
-        $adjustedTotalTax = $eventStatistics->getTotalTax() - ($order->getTotalTax() * $refundProportion);
+        $adjustedTotalTax = $eventStatistics->getTotalTax() - ($order->getReportedTax() * $refundProportion);
         $adjustedTotalFee = $eventStatistics->getTotalFee() - ($order->getTotalFee() * $refundProportion);
 
         $updates = [
@@ -98,7 +98,7 @@ class EventStatisticsRefundService
                 'refund_proportion' => $refundProportion,
                 'original_total_gross' => $eventStatistics->getSalesTotalGross(),
                 'original_total_refunded' => $eventStatistics->getTotalRefunded(),
-                'tax_adjustment' => $order->getTotalTax() * $refundProportion,
+                'tax_adjustment' => $order->getReportedTax() * $refundProportion,
                 'fee_adjustment' => $order->getTotalFee() * $refundProportion,
             ]
         );
@@ -137,7 +137,7 @@ class EventStatisticsRefundService
         $refundProportion = $refundAmount->toFloat() / $order->getTotalGross();
 
         // Adjust the total_tax and total_fee based on the refund proportion
-        $adjustedTotalTax = $eventDailyStatistic->getTotalTax() - ($order->getTotalTax() * $refundProportion);
+        $adjustedTotalTax = $eventDailyStatistic->getTotalTax() - ($order->getReportedTax() * $refundProportion);
         $adjustedTotalFee = $eventDailyStatistic->getTotalFee() - ($order->getTotalFee() * $refundProportion);
 
         $updates = [
@@ -165,7 +165,7 @@ class EventStatisticsRefundService
                 'refund_proportion' => $refundProportion,
                 'original_total_gross' => $eventDailyStatistic->getSalesTotalGross(),
                 'original_total_refunded' => $eventDailyStatistic->getTotalRefunded(),
-                'tax_adjustment' => $order->getTotalTax() * $refundProportion,
+                'tax_adjustment' => $order->getReportedTax() * $refundProportion,
                 'fee_adjustment' => $order->getTotalFee() * $refundProportion,
             ]
         );
@@ -178,7 +178,7 @@ class EventStatisticsRefundService
     {
         foreach ($itemsByOccurrence as $occurrenceId => $items) {
             $occurrenceGross = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalGross() ?? 0, $items));
-            $occurrenceTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalTax() ?? 0, $items));
+            $occurrenceTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getReportedTax(), $items));
             $occurrenceFee = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalServiceFee() ?? 0, $items));
 
             $grossDelta = $this->formatDelta($occurrenceGross * $refundProportion);
@@ -207,7 +207,7 @@ class EventStatisticsRefundService
     {
         foreach ($itemsByOccurrence as $occurrenceId => $items) {
             $occurrenceGross = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalGross() ?? 0, $items));
-            $occurrenceTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalTax() ?? 0, $items));
+            $occurrenceTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getReportedTax(), $items));
             $occurrenceFee = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalServiceFee() ?? 0, $items));
 
             $grossRefund = $occurrenceGross * $refundProportion;

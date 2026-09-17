@@ -101,7 +101,7 @@ class EventStatisticsIncrementService
                 'attendees_registered' => $attendeesRegistered,
                 'sales_total_gross' => $order->getTotalGross(),
                 'sales_total_before_additions' => $order->getTotalBeforeAdditions(),
-                'total_tax' => $order->getTotalTax(),
+                'total_tax' => $order->getReportedTax(),
                 'total_fee' => $order->getTotalFee(),
                 'orders_created' => 1,
                 'orders_cancelled' => 0,
@@ -125,7 +125,7 @@ class EventStatisticsIncrementService
             'attendees_registered' => $eventStatistics->getAttendeesRegistered() + $attendeesRegistered,
             'sales_total_gross' => $eventStatistics->getSalesTotalGross() + $order->getTotalGross(),
             'sales_total_before_additions' => $eventStatistics->getSalesTotalBeforeAdditions() + $order->getTotalBeforeAdditions(),
-            'total_tax' => $eventStatistics->getTotalTax() + $order->getTotalTax(),
+            'total_tax' => $eventStatistics->getTotalTax() + $order->getReportedTax(),
             'total_fee' => $eventStatistics->getTotalFee() + $order->getTotalFee(),
             'orders_created' => $eventStatistics->getOrdersCreated() + 1,
             'version' => $eventStatistics->getVersion() + 1,
@@ -186,7 +186,7 @@ class EventStatisticsIncrementService
                 'attendees_registered' => $attendeesRegistered,
                 'sales_total_gross' => $order->getTotalGross(),
                 'sales_total_before_additions' => $order->getTotalBeforeAdditions(),
-                'total_tax' => $order->getTotalTax(),
+                'total_tax' => $order->getReportedTax(),
                 'total_fee' => $order->getTotalFee(),
                 'orders_created' => 1,
                 'orders_cancelled' => 0,
@@ -211,7 +211,7 @@ class EventStatisticsIncrementService
             'attendees_registered' => $eventDailyStatistic->getAttendeesRegistered() + $attendeesRegistered,
             'sales_total_gross' => $eventDailyStatistic->getSalesTotalGross() + $order->getTotalGross(),
             'sales_total_before_additions' => $eventDailyStatistic->getSalesTotalBeforeAdditions() + $order->getTotalBeforeAdditions(),
-            'total_tax' => $eventDailyStatistic->getTotalTax() + $order->getTotalTax(),
+            'total_tax' => $eventDailyStatistic->getTotalTax() + $order->getReportedTax(),
             'total_fee' => $eventDailyStatistic->getTotalFee() + $order->getTotalFee(),
             'orders_created' => $eventDailyStatistic->getOrdersCreated() + 1,
             'version' => $eventDailyStatistic->getVersion() + 1,
@@ -268,7 +268,7 @@ class EventStatisticsIncrementService
             ));
             $totalGross = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalGross(), $items));
             $totalBeforeAdditions = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalBeforeAdditions(), $items));
-            $totalTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalTax() ?? 0, $items));
+            $totalTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getReportedTax(), $items));
             $totalFee = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalServiceFee() ?? 0, $items));
 
             $existing = $this->eventOccurrenceStatisticRepository->findFirstWhere([
@@ -344,7 +344,7 @@ class EventStatisticsIncrementService
             ));
             $totalGross = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalGross(), $items));
             $totalBeforeAdditions = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalBeforeAdditions(), $items));
-            $totalTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalTax() ?? 0, $items));
+            $totalTax = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getReportedTax(), $items));
             $totalFee = array_sum(array_map(fn (OrderItemDomainObject $i) => $i->getTotalServiceFee() ?? 0, $items));
 
             $existing = $this->eventOccurrenceDailyStatisticRepository->findFirstWhere([
