@@ -30,6 +30,15 @@ class CreateEventDefaultPaymentProvidersTest extends SwishFeatureTestCase
         $this->assertSame(['SWISH'], $this->providersOf($eventId));
     }
 
+    public function test_a_new_event_shows_fees_in_checkout_and_does_not_mail_the_organizer_per_order(): void
+    {
+        $eventId = $this->createEvent();
+
+        $settings = DB::table('event_settings')->where('event_id', $eventId)->first();
+        $this->assertSame('CHECKOUT', $settings->price_display_mode);
+        $this->assertFalse((bool) $settings->notify_organizer_of_new_orders);
+    }
+
     public function test_a_new_event_still_defaults_to_stripe_when_stripe_is_configured(): void
     {
         Config::set('services.stripe.secret_key', 'sk_test_configured');

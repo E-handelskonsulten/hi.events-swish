@@ -250,6 +250,8 @@ class CreateEventService
 
             'payment_providers' => $this->defaultPaymentProviders((int) $event->getOrganizerId()),
             'price_display_mode' => PriceDisplayMode::CHECKOUT->name,
+            // Organizers get many orders; the per-order mail is opt-in under E-post och mallar.
+            'notify_organizer_of_new_orders' => false,
             'offline_payment_instructions' => null,
 
             'enable_invoicing' => false,
